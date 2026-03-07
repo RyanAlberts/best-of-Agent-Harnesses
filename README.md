@@ -1,6 +1,6 @@
 <!-- markdownlint-disable -->
 <h1 align="center">
-    best-of
+    Best of Agent Harnesses and harness Techniques.
     <br>
 </h1>
 
