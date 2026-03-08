@@ -21,6 +21,9 @@ categories:
   - category: "plugins-mcp-cli"
     title: "Plugins, MCPs, CLI tools"
     subtitle: "IDE plugins, specific MCP servers, and CLI tools that give agents tools and context."
+  - category: "progressive-disclosure"
+    title: "Progressive disclosure harnesses"
+    subtitle: "Harnesses and patterns that reveal context, tools, or instructions gradually to control tokens and improve agent focus."
   - category: "evaluation"
     title: "Evaluation and benchmarking harnesses"
     subtitle: "Agentic eval systems, reasoning benchmarks (e.g. ARC-AGI), and open agent benchmarks."
@@ -222,6 +225,30 @@ projects:
     github_id: modelcontextprotocol/inspector
     labels: ["javascript"]
     category: "plugins-mcp-cli"
+  # Progressive disclosure harnesses
+  - name: agents.md
+    github_id: agentsmd/agents.md
+    labels: ["javascript"]
+    category: "progressive-disclosure"
+  - name: mcp-metatool
+    github_id: dslh/mcp-metatool
+    category: "progressive-disclosure"
+  - name: spring-ai-tool-search-tool
+    github_id: spring-ai-community/spring-ai-tool-search-tool
+    category: "progressive-disclosure"
+  - name: MCP-Zero
+    github_id: xfey/MCP-Zero
+    category: "progressive-disclosure"
+  - name: claude-code-config
+    github_id: francesco-albanese/claude-code-config
+    category: "progressive-disclosure"
+  - name: mcp-tool-registry
+    github_id: mcp-tool-shop/mcp-tool-registry
+    category: "progressive-disclosure"
+  - name: mcp-server-metatool
+    github_id: metatool-ai/mcp-server-metatool
+    labels: ["javascript"]
+    category: "progressive-disclosure"
   - name: github-mcp-server
     github_id: cyanheads/github-mcp-server
     labels: ["javascript"]
