@@ -1,39 +1,45 @@
 <!-- markdownlint-disable -->
 <h1 align="center">
-    Best of Agent Harnesses and harness Techniques.
+    Best of Agent Harnesses and Harness Techniques
     <br>
 </h1>
 
 <p align="center">
-    <strong>🏆&nbsp; Discover best-of lists with awesome open-source projects on all kinds of topics.</strong>
+    <strong>🏆&nbsp; Curated list of AI agent harnesses, orchestration frameworks, and harness techniques for reliable agentic systems.</strong>
 </p>
 
 <p align="center">
     <a href="https://best-of.org" title="Best-of Badge"><img src="http://bit.ly/3o3EHNN"></a>
-    <a href="#Contents" title="Project Count"><img src="https://img.shields.io/badge/projects-25-blue.svg?color=5ac4bf"></a>
-    <a href="#Contribution" title="Contributions are welcome"><img src="https://img.shields.io/badge/contributions-welcome-green.svg"></a>
-    <a href="https://github.com/best-of-lists/best-of/releases" title="Best-of Updates"><img src="https://img.shields.io/github/release-date/best-of-lists/best-of?color=green&label=updated"></a>
+    <a href="#contents" title="Project Count"><img src="https://img.shields.io/badge/projects-55+-blue.svg?color=5ac4bf"></a>
+    <a href="#contribution" title="Contributions welcome"><img src="https://img.shields.io/badge/contributions-welcome-green.svg"></a>
+    <a href="https://github.com/RyanAlberts/best-of-Agent-Harnesses/releases" title="Updates"><img src="https://img.shields.io/github/release-date/RyanAlberts/best-of-Agent-Harnesses?color=green&label=updated"></a>
 </p>
 
-This curated list contains 25 best-of lists with a total of 42K stars grouped into 10 categories. All projects are ranked by a project-quality score, which is calculated based on various metrics automatically collected from Github and different package managers. If you like to add or update projects, feel free to open an [issue](https://github.com/best-of-lists/best-of/issues/new/choose), submit a [pull request](https://github.com/best-of-lists/best-of/pulls), or directly edit the [projects.yaml](https://github.com/best-of-lists/best-of/edit/main/projects.yaml). Contributions are very welcome!
+This list focuses on **agent harnesses**: the environments, scaffolding, and tooling that make AI agents reliable at long-running or complex tasks. It is for builders, platform engineers, and researchers who care about orchestration, context management, and guardrails—not just model choice.
 
-> 🧙‍♂️ Create your own best-of list in just 3 minutes with [this guide](https://github.com/best-of-lists/best-of/blob/main/create-best-of-list.md).
+## What is an agent harness?
+
+An **agent harness** is everything around the model that makes agentic systems work in practice: environment design, intent specification, feedback loops, and the repository (or knowledge base) as the system of record. Engineers design scaffolding and guardrails so agents can do reliable work; the model generates, the harness controls what’s allowed, when to ask humans, and how to recover from failure.
+
+- **OpenAI (harness engineering):** Harness = environment design, intent specification, feedback loops, and repository-as-system-of-record so agents (e.g. Codex) can execute reliably. Humans steer; agents execute.
+- **Anthropic (long-running agents):** Session bridging (initializer + coding agent), feature lists, progress files, incremental work, clean state, and explicit testing (e.g. browser automation) so agents don’t one-shot or declare “done” too early.
+- **Practitioners (e.g. Aakash Gupta):** Harness = human-in-the-loop, filesystem access, tool orchestration, sub-agent coordination, prompt presets, lifecycle hooks. “Model is commodity, harness is moat”—minimal intervention, progressive disclosure, fail-fast with recovery.
+
+## Why harnesses matter
+
+Better models make harnesses more important: more capabilities mean more failure modes, and production needs retry logic, fallbacks, and validation. Harness quality—not just model quality—determines whether agents actually ship. This list ranks projects by relevance to harness concerns (environment, orchestration, lifecycle, guardrails) and by stars/activity.
 
 ## Contents
 
-- [Machine Learning & Data Engineering](#machine-learning--data-engineering) _7 projects_
-- [Web Development](#web-development) _5 projects_
-- [Native Development](#native-development) _1 projects_
-- [Robot Development](#robot-development) _1 projects_
-- [Embedded Development](#embedded-development) _1 projects_
-- [Development Tools](#development-tools) _1 projects_
-- [Documentation](#documentation) _2 projects_
-- [Programming Languages](#programming-languages) _3 projects_
-- [Internet](#internet) _1 projects_
-- [Cryptocurrencies & Blockchain](#cryptocurrencies--blockchain) _1 projects_
-- [Others](#others) _2 projects_
+- [Full-stack and long-running coding harnesses](#full-stack-and-long-running-coding-harnesses) _9 projects_
+- [Multi-agent and orchestration frameworks](#multi-agent-and-orchestration-frameworks) _13 projects_
+- [IDE and CLI agent integrations](#ide-and-cli-agent-integrations) _9 projects_
+- [Evaluation and benchmarking harnesses](#evaluation-and-benchmarking-harnesses) _6 projects_
+- [Research and task-specific harnesses](#research-and-task-specific-harnesses) _1 projects_
+- [Libraries and SDKs](#libraries-and-sdks) _18 projects_
 
 ## Explanation
+
 - 🥇🥈🥉&nbsp; Combined project-quality score
 - ⭐️&nbsp; Star count from GitHub
 - 🐣&nbsp; New project _(less than 6 months old)_
@@ -45,293 +51,137 @@ This curated list contains 25 best-of lists with a total of 42K stars grouped in
 - 🔀&nbsp; Fork count from GitHub
 - 📋&nbsp; Issue count from GitHub
 - ⏱️&nbsp; Last update timestamp on package manager
-- 📥&nbsp; Download count from package manager
-- 📦&nbsp; Number of dependent projects
-- <img src="https://www.python.org/static/favicon.ico" style="display:inline;" width="13" height="13">&nbsp; Best-of list with Python projects
-- <img src="https://cdn.icon-icons.com/icons2/2108/PNG/512/javascript_icon_130900.png" style="display:inline;" width="13" height="13">&nbsp; Best-of list with JavaScript projects
+- <img src="https://www.python.org/static/favicon.ico" style="display:inline;" width="13" height="13">&nbsp; Python
+- <img src="https://cdn.icon-icons.com/icons2/2108/PNG/512/javascript_icon_130900.png" style="display:inline;" width="13" height="13">&nbsp; JavaScript/TypeScript
 
 <br>
 
-## Machine Learning & Data Engineering
+## Full-stack and long-running coding harnesses
 
 <a href="#contents"><img align="right" width="15" height="15" src="https://git.io/JtehR" alt="Back to top"></a>
 
-_Best-of lists about machine learning, data engieering, data science, or other topics related to big data._
+_Spec-driven, multi-session, repo-scoped coding harnesses (e.g. GSD, Claude Agent SDK, OpenCode)._
 
-<details><summary><b><a href="https://github.com/lukasmasuch/best-of-ml-python">best-of-ml-python</a></b> (🥇23 ·  ⭐ 23K) - A ranked list of awesome machine learning Python libraries... <code><img src="https://www.python.org/static/favicon.ico" style="display:inline;" width="13" height="13"></code></summary>
+| # | Project | Description |
+|---|---------|-------------|
+| 1 | [**get-shit-done**](https://github.com/gsd-build/get-shit-done) | Spec-driven meta-prompting and context engineering for Claude Code and others; goal-backward planning, wave-based execution, prevents context rot. |
+| 2 | [**claude-agent-sdk-python**](https://github.com/anthropics/claude-agent-sdk-python) | Official Claude Agent SDK for Python: tools, MCP, long-running coding agents. |
+| 3 | [**claude-agent-sdk-typescript**](https://github.com/anthropics/claude-agent-sdk-typescript) | Official Claude Agent SDK for TypeScript/Node. |
+| 4 | [**claude-agent-sdk-demos**](https://github.com/anthropics/claude-agent-sdk-demos) | Example agents (email, research, Excel, etc.) using the Claude Agent SDK. |
+| 5 | [**claude-quickstarts**](https://github.com/anthropics/claude-quickstarts) | Quickstarts including long-running autonomous coding with initializer + coding agent. |
+| 6 | [**RepoMaster**](https://github.com/QuantaAlpha/RepoMaster) | Autonomous exploration of GitHub repos for complex coding tasks; function-call and dependency graphs. |
+| 7 | [**coderClaw**](https://github.com/SeanHogg/coderClaw) | Multi-agent coding system (Creator, Reviewer, Test, Refactor, etc.); IDE-independent, self-hosted. |
+| 8 | [**opencode**](https://github.com/opencode-ai/opencode) | Open-source AI coding agent for the terminal; multi-session, multi-provider. |
+| 9 | [**crush**](https://github.com/charmbracelet/crush) | Successor to OpenCode; terminal-based AI coding agent (Charm). |
 
-- [GitHub](https://github.com/lukasmasuch/best-of-ml-python) (👨‍💻 56 · 🔀 3K · 📋 63 - 46% open · ⏱️ 07.11.2025):
+## Multi-agent and orchestration frameworks
 
-	```
-	git clone https://github.com/ml-tooling/best-of-ml-python
-	```
-</details>
-<details><summary><b><a href="https://github.com/ml-tooling/best-of-jupyter">best-of-jupyter</a></b> (🥈17 ·  ⭐ 1.2K) - A ranked list of awesome Jupyter Notebook, Hub and Lab.. <code><img src="https://www.python.org/static/favicon.ico" style="display:inline;" width="13" height="13"></code></summary>
+<a href="#contents"><img align="right" width="15" height="15" src="https://git.io/JtehR" alt="Back to top"></a>
 
-- [GitHub](https://github.com/ml-tooling/best-of-jupyter) (👨‍💻 14 · 🔀 90 · 📋 9 - 55% open · ⏱️ 05.03.2026):
+_Sub-agents, handoffs, crews, and graph-based orchestration._
 
-	```
-	git clone https://github.com/ml-tooling/best-of-jupyter
-	```
-</details>
-<details><summary><b><a href="https://github.com/e-tornike/best-of-ml-rust">best-of-ml-rust</a></b> (🥈13 ·  ⭐ 480) - A ranked list of awesome machine learning Rust libraries.</summary>
+| # | Project | Description |
+|---|---------|-------------|
+| 1 | [**langgraph**](https://github.com/langchain-ai/langgraph) | Graph-based state machine for multi-step agent workflows; checkpointing, human-in-the-loop. |
+| 2 | [**langchain**](https://github.com/langchain-ai/langchain) | Framework for LLM applications and agent chains; tools, memory, orchestration. |
+| 3 | [**openai-agents-python**](https://github.com/openai/openai-agents-python) | OpenAI Agents SDK: handoffs, guardrails, multi-LLM support. |
+| 4 | [**crewAI**](https://github.com/crewAIInc/crewAI) | Role-based autonomous agents; Crews and Flows for collaborative and event-driven workflows. |
+| 5 | [**autogen**](https://github.com/microsoft/autogen) | Conversable agents, group chats, and multi-agent patterns (Microsoft; AG2 ecosystem). |
+| 6 | [**mastra**](https://github.com/mastra-ai/mastra) | TypeScript framework for AI agents and workflows. |
+| 7 | [**phidata**](https://github.com/phidata-ai/phidata) | Python framework for production agents with memory, knowledge, and tools. |
+| 8 | [**agno**](https://github.com/agno-ai/agno) | Python agent framework with orchestration and tool use. |
+| 9 | [**langflow**](https://github.com/langchain-ai/langflow) | UI and runtime for building and deploying LangChain/LangGraph flows. |
+| 10 | [**letta**](https://github.com/letta/letta) | Python agent runtime and orchestration. |
+| 11 | [**semantic-kernel**](https://github.com/microsoft/semantic-kernel) | Microsoft SDK for integrating LLMs with apps; plugins, planning, memory. |
+| 12 | [**llama-index**](https://github.com/run-llama/llama_index) | Data framework and agents for LLM applications; RAG and tool use. |
+| 13 | [**PraisonAI**](https://github.com/PraisonAI/PraisonAI) | Multi-agent framework for autonomous AI teams. |
 
-- [GitHub](https://github.com/e-tornike/best-of-ml-rust) (👨‍💻 4 · 🔀 24 · ⏱️ 26.11.2025):
+## IDE and CLI agent integrations
 
-	```
-	git clone https://github.com/e-tornike/best-of-ml-rust
-	```
-</details>
-<details><summary><b><a href="https://github.com/tolkonepiu/best-of-mcp-servers">best-of-mcp-servers</a></b> (🥉12 ·  ⭐ 41) - A ranked list of MCP servers. Updated weekly.</summary>
+<a href="#contents"><img align="right" width="15" height="15" src="https://git.io/JtehR" alt="Back to top"></a>
 
-- [GitHub](https://github.com/tolkonepiu/best-of-mcp-servers) (👨‍💻 5 · 🔀 16 · ⏱️ 04.03.2026):
+_Cursor, MCP, Aider, OpenCode, and CLI wrappers that provide tools and context._
 
-	```
-	git clone https://github.com/tolkonepiu/best-of-mcp-servers
-	```
-</details>
-<details><summary>Show 3 hidden projects...</summary>
+| # | Project | Description |
+|---|---------|-------------|
+| 1 | [**aider**](https://github.com/Aider-AI/aider) | AI pair programming in the terminal; git-aware, multi-model, MCP support. |
+| 2 | [**mcp-servers**](https://github.com/modelcontextprotocol/servers) | Reference MCP servers and examples (Model Context Protocol). |
+| 3 | [**specification**](https://github.com/modelcontextprotocol/specification) | Model Context Protocol spec and documentation. |
+| 4 | [**best-of-mcp-servers**](https://github.com/tolkonepiu/best-of-mcp-servers) | Curated list of MCP servers. |
+| 5 | [**Better-OpenCodeMCP**](https://github.com/ajhcs/Better-OpenCodeMCP) | MCP server for OpenCode CLI; async tasks, multi-model bridge. |
+| 6 | [**python-sdk**](https://github.com/modelcontextprotocol/python-sdk) | Official MCP Python SDK for building servers and clients. |
+| 7 | [**typescript-sdk**](https://github.com/modelcontextprotocol/typescript-sdk) | Official MCP TypeScript SDK. |
+| 8 | [**continue**](https://github.com/continuedev/continue) | Open-source Copilot alternative; IDE extensions and context. |
 
-- <b><a href="https://github.com/jrieke/best-of-streamlit">best-of-streamlit</a></b> (🥈13 ·  ⭐ 1.4K · 💀) - A ranked gallery of awesome streamlit apps built by the.. <code><img src="https://www.python.org/static/favicon.ico" style="display:inline;" width="13" height="13"></code>
-- <b><a href="https://github.com/taranjeet/awesome-gpts">awesome-gpts</a></b> (🥈13 ·  ⭐ 1.4K · 💀) - Collection of all the GPTs created by the community. <code><img src="https://www.python.org/static/favicon.ico" style="display:inline;" width="13" height="13"></code>
-- <b><a href="https://github.com/e-tornike/best-of-ml-julia">best-of-ml-julia</a></b> (🥉7 ·  ⭐ 24 · 💀) - A ranked list of awesome machine learning Julia libraries.
-</details>
+## Evaluation and benchmarking harnesses
+
+<a href="#contents"><img align="right" width="15" height="15" src="https://git.io/JtehR" alt="Back to top"></a>
+
+_SWE-bench-style evals, agent benchmarks, and reproducibility._
+
+| # | Project | Description |
+|---|---------|-------------|
+| 1 | [**SWE-bench**](https://github.com/princeton-nlp/SWE-bench) | Benchmark for LMs on real GitHub issues; Docker-based evaluation harness. |
+| 2 | [**SWE-Gym**](https://github.com/SWE-Gym/SWE-Gym) | Training and evaluation for software engineering agents (ICML 2025). |
+| 3 | [**SWE-bench-fork**](https://github.com/METR/SWE-bench-fork) | Fork and variants of SWE-bench evaluation. |
+| 4 | [**swe-smith**](https://github.com/swe-bench/swe-smith) | Scaling data for SWE agents (NeurIPS 2025). |
+| 5 | [**SWE-agent**](https://github.com/princeton-nlp/SWE-agent) | Agent and evaluation for SWE-bench. |
+
+## Research and task-specific harnesses
+
+<a href="#contents"><img align="right" width="15" height="15" src="https://git.io/JtehR" alt="Back to top"></a>
+
+_Deep research, document QA, and domain-specific agent loops._
+
+| # | Project | Description |
+|---|---------|-------------|
+| 1 | [**openagents**](https://github.com/OpenAgentsInc/openagents) | Platform for AI agents; autopilot and agent network. |
+
+## Libraries and SDKs
+
+<a href="#contents"><img align="right" width="15" height="15" src="https://git.io/JtehR" alt="Back to top"></a>
+
+_Lightweight agent runtimes, tool loops, and provider-agnostic harness primitives._
+
+| # | Project | Description |
+|---|---------|-------------|
+| 1 | [**pydantic-ai**](https://github.com/pydantic/pydantic-ai) | Type-safe Python agent framework; multi-provider, MCP, observability. |
+| 2 | [**open-harness**](https://github.com/MaxGfeller/open-harness) | TypeScript agent SDK on Vercel AI SDK; tools, MCP, subagents. |
+| 3 | [**vercel/ai**](https://github.com/vercel/ai) | Vercel AI SDK: streaming, tools, and agent patterns. |
+| 4 | [**agent-harness**](https://github.com/haasonsaas/agent-harness) | Unified interface for swapping OpenAI and Anthropic agent SDKs. |
+| 5 | [**inspector**](https://github.com/modelcontextprotocol/inspector) | Visual testing and debugging for MCP servers. |
+| 6 | [**rasa**](https://github.com/rasa/rasa) | Conversational AI and agent framework. |
+| 7 | [**botpress**](https://github.com/botpress/botpress) | Open-source conversational AI platform. |
+| 8 | [**smolagents**](https://github.com/huggingface/smolagents) | Barebones library for code-first agents (Hugging Face). |
+| 9 | [**awesome-ai-agents**](https://github.com/awesomelistsio/awesome-ai-agents) | Curated list of AI agent frameworks and tools. |
+| 10 | [**awesome-ai-agents**](https://github.com/korchasa/awesome-ai-agents) | Auto-updated directory of AI agent resources. |
+| 11 | [**awesome-ai-agent-frameworks**](https://github.com/axioma-ai-labs/awesome-ai-agent-frameworks) | Battle-tested agent framework recommendations. |
+| 12 | [**awesome-ai-agents-frameworks**](https://github.com/mb-mal/awesome-ai-agents-frameworks) | Ranked list of AI agent frameworks. |
+| 13 | [**awesome-ai-agents**](https://github.com/Deep-Insight-Labs/awesome-ai-agents) | Practical AI agent resources and ecosystem. |
+| 14 | [**tinyclaw**](https://github.com/tinyclaw/tinyclaw) | Lightweight agent framework. |
+| 15 | [**openfang**](https://github.com/openfang-ai/openfang) | Agent and harness tooling. |
+
 <br>
-
-## Web Development
-
-<a href="#contents"><img align="right" width="15" height="15" src="https://git.io/JtehR" alt="Back to top"></a>
-
-_Best-of lists about react, vue, angular, html5, css, or other topics related to web development._
-
-<details><summary><b><a href="https://github.com/ml-tooling/best-of-web-python">best-of-web-python</a></b> (🥇18 ·  ⭐ 2.7K) - A ranked list of awesome python libraries for web.. <code><img src="https://www.python.org/static/favicon.ico" style="display:inline;" width="13" height="13"></code></summary>
-
-- [GitHub](https://github.com/ml-tooling/best-of-web-python) (👨‍💻 16 · 🔀 190 · 📋 7 - 42% open · ⏱️ 05.03.2026):
-
-	```
-	git clone https://github.com/ml-tooling/best-of-web-python
-	```
-</details>
-<details><summary><b><a href="https://github.com/lukasmasuch/best-of-react">best-of-react</a></b> (🥈11 ·  ⭐ 1K · 💤) - A ranked list of awesome React open-source libraries and tools... <code><img src="https://cdn.icon-icons.com/icons2/2108/PNG/512/javascript_icon_130900.png" style="display:inline;" width="13" height="13"></code></summary>
-
-- [GitHub](https://github.com/lukasmasuch/best-of-react) (👨‍💻 9 · 🔀 120 · 📋 4 - 50% open · ⏱️ 28.08.2025):
-
-	```
-	git clone https://github.com/lukasmasuch/best-of-react
-	```
-</details>
-<details><summary><b><a href="https://github.com/fkromer/best-of-django">best-of-django</a></b> (🥉9 ·  ⭐ 140) - A ranked list of awesome Django related Python packages. <code><img src="https://www.python.org/static/favicon.ico" style="display:inline;" width="13" height="13"></code></summary>
-
-- [GitHub](https://github.com/fkromer/best-of-django) (👨‍💻 3 · 🔀 14 · ⏱️ 01.03.2026):
-
-	```
-	git clone https://github.com/fkromer/best-of-django
-	```
-</details>
-<details><summary><b><a href="https://github.com/fkromer/best-of-fastapi">best-of-fastapi</a></b> (🥉9 ·  ⭐ 48) - List of automatically rated Python packages for FastAPI. <code><img src="https://www.python.org/static/favicon.ico" style="display:inline;" width="13" height="13"></code></summary>
-
-- [GitHub](https://github.com/fkromer/best-of-fastapi) (👨‍💻 3 · 🔀 1 · ⏱️ 26.02.2026):
-
-	```
-	git clone https://github.com/fkromer/best-of-fastapi
-	```
-</details>
-<details><summary><b><a href="https://github.com/fkromer/best-of-vue">best-of-vue</a></b> (🥉5 ·  ⭐ 6 · 💤) - List of automatically rated Vue projects. <code><img src="https://cdn.icon-icons.com/icons2/2108/PNG/512/javascript_icon_130900.png" style="display:inline;" width="13" height="13"></code></summary>
-
-- [GitHub](https://github.com/fkromer/best-of-vue) (👨‍💻 2 · ⏱️ 22.05.2025):
-
-	```
-	git clone https://github.com/fkromer/best-of-vue
-	```
-</details>
-<br>
-
-## Native Development
-
-<a href="#contents"><img align="right" width="15" height="15" src="https://git.io/JtehR" alt="Back to top"></a>
-
-_Best-of lists about iOS, Andnroid or other topics related to native development._
-
-<details><summary><b><a href="https://github.com/fkromer/best-of-react-native">best-of-react-native</a></b> (🥇5 ·  ⭐ 9 · 💤) - List of automatically rated React Native projects.</summary>
-
-- [GitHub](https://github.com/fkromer/best-of-react-native) (👨‍💻 2 · 🔀 2 · ⏱️ 22.05.2025):
-
-	```
-	git clone https://github.com/fkromer/best-of-react-native
-	```
-</details>
-<br>
-
-## Robot Development
-
-<a href="#contents"><img align="right" width="15" height="15" src="https://git.io/JtehR" alt="Back to top"></a>
-
-_Best-of lists about Robots or other topics related to robot development._
-
-<details><summary><b><a href="https://github.com/knmcguire/best-of-robot-simulators">best-of-robot-simulators</a></b> (🥇17 ·  ⭐ 1.2K) - A Best-of-list of Robot Simulators, re-generated weekly..</summary>
-
-- [GitHub](https://github.com/knmcguire/best-of-robot-simulators) (👨‍💻 12 · 🔀 86 · 📋 140 - 11% open · ⏱️ 04.03.2026):
-
-	```
-	git clone https://github.com/knmcguire/best-of-robot-simulators
-	```
-</details>
-<br>
-
-## Embedded Development
-
-<a href="#contents"><img align="right" width="15" height="15" src="https://git.io/JtehR" alt="Back to top"></a>
-
-_Best-of lists about Embedded Linux or other topics related to embedded development._
-
-<details><summary><b><a href="https://github.com/fkromer/best-of-rust-on-embedded-linux">best-of-rust-on-embedded-linux</a></b> (🥇8 ·  ⭐ 12) - A ranked list of awesome Rust crates and projects..</summary>
-
-- [GitHub](https://github.com/fkromer/best-of-rust-on-embedded-linux) (👨‍💻 4 · 🔀 2 · ⏱️ 26.02.2026):
-
-	```
-	git clone https://github.com/fkromer/best-of-rust-on-embedded-linux
-	```
-</details>
-<br>
-
-## Development Tools
-
-<a href="#contents"><img align="right" width="15" height="15" src="https://git.io/JtehR" alt="Back to top"></a>
-
-_Best-of lists about tools & libraries to help with software development._
-
-<details><summary><b><a href="https://github.com/ml-tooling/best-of-python-dev">best-of-python-dev</a></b> (🥇17 ·  ⭐ 1.2K) - A ranked list of awesome python developer tools and.. <code><img src="https://www.python.org/static/favicon.ico" style="display:inline;" width="13" height="13"></code></summary>
-
-- [GitHub](https://github.com/ml-tooling/best-of-python-dev) (👨‍💻 7 · 🔀 56 · 📋 11 - 54% open · ⏱️ 05.03.2026):
-
-	```
-	git clone https://github.com/ml-tooling/best-of-python-dev
-	```
-</details>
-<br>
-
-## Documentation
-
-<a href="#contents"><img align="right" width="15" height="15" src="https://git.io/JtehR" alt="Back to top"></a>
-
-_Best-of lists about documentations & tools to create documentations._
-
-<details><summary><b><a href="https://github.com/mkdocs/catalog">best-of-mkdocs</a></b> (🥇16 ·  ⭐ 1.7K) - A list of awesome MkDocs projects and plugins.</summary>
-
-- [GitHub](https://github.com/mkdocs/catalog) (👨‍💻 63 · 🔀 110 · 📋 39 - 5% open · ⏱️ 06.11.2025):
-
-	```
-	git clone https://github.com/mkdocs/catalog
-	```
-</details>
-<details><summary><b><a href="https://github.com/lyz-code/best-of-digital-gardens">best-of-digital-gardens</a></b> (🥉15 ·  ⭐ 520) - Ranked list of awesome digital gardens / second brains.</summary>
-
-- [GitHub](https://github.com/lyz-code/best-of-digital-gardens) (👨‍💻 23 · 🔀 28 · ⏱️ 05.03.2026):
-
-	```
-	git clone https://github.com/lyz-code/best-of-digital-gardens
-	```
-</details>
-<br>
-
-## Programming Languages
-
-<a href="#contents"><img align="right" width="15" height="15" src="https://git.io/JtehR" alt="Back to top"></a>
-
-_Best-of lists with general overviews on tools & libraries for a specific programming language._
-
-<details><summary><b><a href="https://github.com/lukasmasuch/best-of-python">best-of-python</a></b> (🥇18 ·  ⭐ 4.4K) - A ranked list of awesome Python open-source libraries and tools... <code><img src="https://www.python.org/static/favicon.ico" style="display:inline;" width="13" height="13"></code></summary>
-
-- [GitHub](https://github.com/lukasmasuch/best-of-python) (👨‍💻 16 · 🔀 300 · 📋 16 - 62% open · ⏱️ 26.02.2026):
-
-	```
-	git clone https://github.com/ml-tooling/best-of-python
-	```
-</details>
-<details><summary><b><a href="https://github.com/stkeky/best-of-scala">best-of-scala</a></b> (🥉15 ·  ⭐ 290) - A ranked list of awesome Scala projects. Updated weekly.</summary>
-
-- [GitHub](https://github.com/stkeky/best-of-scala) (👨‍💻 18 · 🔀 26 · 📋 12 - 25% open · ⏱️ 26.02.2026):
-
-	```
-	git clone https://github.com/stkeky/best-of-scala
-	```
-</details>
-<details><summary><b><a href="https://github.com/tolkonepiu/best-of-nix">best-of-nix</a></b> (🥉11 ·  ⭐ 42 · 📈) - A ranked list of the best resources in the Nix community. Updated weekly.</summary>
-
-- [GitHub](https://github.com/tolkonepiu/best-of-nix) (👨‍💻 5 · 🔀 2 · ⏱️ 04.03.2026):
-
-	```
-	git clone https://github.com/tolkonepiu/best-of-nix
-	```
-</details>
-<br>
-
-## Internet
-
-<a href="#contents"><img align="right" width="15" height="15" src="https://git.io/JtehR" alt="Back to top"></a>
-
-_Best-of lists about internet, browsers, services, standards, identity and digital interactions_
-
-<details><summary><b><a href="https://github.com/jruizaranguren/best-of-digital-identity">best-of-digital-identity</a></b> (🥇13 ·  ⭐ 170) - A ranked list of awesome Digital Identity open source..</summary>
-
-- [GitHub](https://github.com/jruizaranguren/best-of-digital-identity) (👨‍💻 6 · 🔀 13 · ⏱️ 27.02.2026):
-
-	```
-	git clone https://github.com/jruizaranguren/best-of-digital-identity
-	```
-</details>
-<br>
-
-## Cryptocurrencies & Blockchain
-
-<a href="#contents"><img align="right" width="15" height="15" src="https://git.io/JtehR" alt="Back to top"></a>
-
-_Best-of lists about cryptocurrencies, bitcoin, ethereum, or other topics related to blockchain._
-
-<details><summary>Show 1 hidden projects...</summary>
-
-- <b><a href="https://github.com/lukasmasuch/best-of-crypto">best-of-crypto</a></b> (🥇13 ·  ⭐ 540 · 💀) - A ranked list of awesome open-source crypto projects. Updated..
-</details>
-<br>
-
-## Others
-
-<a href="#contents"><img align="right" width="15" height="15" src="https://git.io/JtehR" alt="Back to top"></a>
-
-<details><summary><b><a href="https://github.com/thumbor/awesome-thumbor">thumbor/awesome-thumbor</a></b> (🥇13 ·  ⭐ 79) - Everything thumbor, awesomely curated & updated weekly.</summary>
-
-- [GitHub](https://github.com/thumbor/awesome-thumbor) (👨‍💻 5 · 🔀 4 · ⏱️ 01.03.2026):
-
-	```
-	git clone https://github.com/thumbor/awesome-thumbor
-	```
-</details>
-<details><summary><b><a href="https://github.com/jinningwang/best-of-ps">best-of-ps</a></b> (🥉7 ·  ⭐ 19 · 💤) - A weekly updated ranked list of popular open-source libraries and tools..</summary>
-
-- [GitHub](https://github.com/jinningwang/best-of-ps) (👨‍💻 7 · 🔀 1 · ⏱️ 28.08.2025):
-
-	```
-	git clone https://github.com/jinningwang/best-of-ps
-	```
-</details>
 
 ---
 
 ## Related Resources
 
-- [**Awesome**](https://github.com/sindresorhus/awesome): Awesome lists about all kinds of interesting topics
+- [**Awesome**](https://github.com/sindresorhus/awesome): Awesome lists on many topics
+- [**OpenAI – Harness engineering**](https://openai.com/index/harness-engineering/): Environment design, intent, feedback loops, repo-as-system-of-record
+- [**Anthropic – Effective harnesses for long-running agents**](https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents): Session bridging, feature lists, incremental progress, testing
+- [**Aakash Gupta (Medium) – 2026 is agent harnesses**](https://aakashgupta.medium.com/2025-was-agents-2026-is-agent-harnesses-heres-why-that-changes-everything-073e9877655e): Harness as moat, minimal intervention, progressive disclosure
+- [**LangChain**](https://python.langchain.com/), [**Anthropic**](https://docs.anthropic.com/), [**OpenAI**](https://platform.openai.com/docs): Official docs for major agent platforms
 
 ## Contribution
 
-Contributions are encouraged and always welcome! If you like to add or update projects, choose one of the following ways:
+Contributions are welcome. To add or suggest projects:
 
-- Open an issue by selecting one of the provided categories from the [issue page](https://github.com/best-of-lists/best-of/issues/new/choose) and fill in the requested information.
-- Modify the [projects.yaml](https://github.com/best-of-lists/best-of/blob/main/projects.yaml) with your additions or changes, and submit a pull request. This can also be done directly via the [Github UI](https://github.com/best-of-lists/best-of/edit/main/projects.yaml).
+- Open an [issue](https://github.com/RyanAlberts/best-of-Agent-Harnesses/issues) with the repo URL, category, and a short description.
+- Or submit a [pull request](https://github.com/RyanAlberts/best-of-Agent-Harnesses/pulls) editing [projects.yaml](https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/projects.yaml) (and optionally README.md).
 
-If you like to contribute to or share suggestions regarding the project metadata collection or markdown generation, please refer to the [best-of-generator](https://github.com/best-of-lists/best-of-generator) repository. If you like to create your own best-of list, we recommend to follow [this guide](https://github.com/best-of-lists/best-of/blob/main/create-best-of-list.md).
-
-For more information on how to add or update projects, please read the [contribution guidelines](https://github.com/best-of-lists/best-of/blob/main/CONTRIBUTING.md). By participating in this project, you agree to abide by its [Code of Conduct](https://github.com/best-of-lists/best-of/blob/main/.github/CODE_OF_CONDUCT.md).
+For contribution guidelines, see [CONTRIBUTING.md](https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/CONTRIBUTING.md) and the [Code of Conduct](https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/.github/CODE_OF_CONDUCT.md).
 
 ## License
 
-[![CC0](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-sa.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
+[![CC BY-SA 4.0](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-sa.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
