@@ -1,4 +1,5 @@
 # Based on https://github.com/best-of-lists/best-of-update-action/blob/v0.8.5/workflows/update-best-of-list.yml
+# Scheduled runs disabled: list is maintained manually in Cursor to preserve custom intro and Simplicity ↔ capability column.
 name: update-best-of-list
 
 on:
@@ -7,9 +8,8 @@ on:
       version:
         description: "Version to use for this update"
         required: false
-  schedule:
-    - cron: "0 18 * * 4" # Every thursday at 6pm
-
+  # schedule:
+  #   - cron: "0 18 * * 4" # Every thursday at 6pm — DISABLED
 env:
   BRANCH_PREFIX: "update/"
   DEFAULT_BRANCH: "main"
