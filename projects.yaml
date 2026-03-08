@@ -62,6 +62,19 @@ projects:
   - name: crush
     github_id: charmbracelet/crush
     category: "full-stack-coding"
+  - name: cline
+    github_id: cline/cline
+    labels: ["javascript"]
+    category: "full-stack-coding"
+  - name: codive
+    github_id: toliaqat/codive
+    category: "full-stack-coding"
+  - name: codex
+    github_id: openai/codex
+    category: "full-stack-coding"
+  - name: Hydra
+    github_id: PrimeLocus/Hydra
+    category: "full-stack-coding"
   # Frameworks (not harnesses)
   - name: langgraph
     github_id: langchain-ai/langgraph
@@ -107,6 +120,62 @@ projects:
     github_id: botpress/botpress
     labels: ["javascript"]
     category: "frameworks"
+  - name: dify
+    github_id: langgenius/dify
+    labels: ["python"]
+    category: "frameworks"
+  - name: n8n
+    github_id: n8n-io/n8n
+    labels: ["javascript"]
+    category: "frameworks"
+  - name: Auto-GPT
+    github_id: Significant-Gravitas/Auto-GPT
+    labels: ["python"]
+    category: "frameworks"
+  - name: Auto-GPT-Forge
+    github_id: Significant-Gravitas/Auto-GPT-Forge
+    labels: ["python"]
+    category: "frameworks"
+  - name: AIlice
+    github_id: myshell-ai/AIlice
+    labels: ["python"]
+    category: "frameworks"
+  - name: bee-agent-framework
+    github_id: i-am-bee/bee-agent-framework
+    category: "frameworks"
+  - name: agent-squad
+    github_id: awslabs/agent-squad
+    category: "frameworks"
+  - name: superagentx
+    github_id: superagentxai/superagentx
+    labels: ["python"]
+    category: "frameworks"
+  - name: agentverse
+    github_id: openbmb/agentverse
+    labels: ["python"]
+    category: "frameworks"
+  - name: R2R
+    github_id: SciPhi-AI/R2R
+    labels: ["python"]
+    category: "frameworks"
+  - name: liteswarm
+    github_id: GlyphyAI/liteswarm
+    labels: ["python"]
+    category: "frameworks"
+  - name: AgentStack
+    github_id: AgentOps-AI/AgentStack
+    category: "frameworks"
+  - name: agentsilex
+    github_id: howl-anderson/agentsilex
+    labels: ["python"]
+    category: "frameworks"
+  - name: Flowise
+    github_id: FlowiseAI/Flowise
+    labels: ["javascript"]
+    category: "frameworks"
+  - name: GraphFusionAI
+    github_id: GraphFusion/graphfusionai
+    category: "frameworks"
   # Multi-agent and orchestration
   - name: openai-agents-python
     github_id: openai/openai-agents-python
@@ -122,6 +191,10 @@ projects:
     category: "multi-agent"
   - name: PraisonAI
     github_id: PraisonAI/PraisonAI
+    labels: ["python"]
+    category: "multi-agent"
+  - name: AgentRL
+    github_id: THUDM/AgentRL
     labels: ["python"]
     category: "multi-agent"
   # Plugins, MCPs, CLI tools
@@ -147,6 +220,21 @@ projects:
     category: "plugins-mcp-cli"
   - name: mcp-inspector
     github_id: modelcontextprotocol/inspector
+    labels: ["javascript"]
+    category: "plugins-mcp-cli"
+  - name: github-mcp-server
+    github_id: cyanheads/github-mcp-server
+    labels: ["javascript"]
+    category: "plugins-mcp-cli"
+  - name: docker-mcp-servers
+    github_id: docker/mcp-servers
+    category: "plugins-mcp-cli"
+  - name: puppeteer-mcp-server
+    github_id: merajmehrabi/puppeteer-mcp-server
+    labels: ["javascript"]
+    category: "plugins-mcp-cli"
+  - name: puppeteer-real-browser-mcp
+    github_id: withLinda/puppeteer-real-browser-mcp-server
     labels: ["javascript"]
     category: "plugins-mcp-cli"
   # Evaluation and benchmarking (agentic evals)
@@ -184,9 +272,36 @@ projects:
     github_id: swe-bench/swe-smith
     labels: ["python"]
     category: "evaluation"
+  - name: super-benchmark
+    github_id: allenai/super-benchmark
+    labels: ["python"]
+    category: "evaluation"
+  - name: vitabench
+    github_id: meituan-longcat/vitabench
+    category: "evaluation"
+  - name: letta-evals
+    github_id: letta-ai/letta-evals
+    labels: ["python"]
+    category: "evaluation"
+  - name: gaia-agent
+    github_id: sassarini-marco/gaia-agent
+    category: "evaluation"
+  - name: WebVoyager
+    github_id: MinorJerry/WebVoyager
+    category: "evaluation"
+  - name: inspect-evals
+    github_id: UKGovernmentBEIS/inspect_evals
+    category: "evaluation"
   # Research and task-specific
   - name: openagents
     github_id: OpenAgentsInc/openagents
+    category: "research-task"
+  - name: multi-scale-agentic-rag-playbook
+    github_id: nvidia-ai-technology-center/multi-scale-agentic-rag-playbook
+    category: "research-task"
+  - name: Agentic_RAG_System
+    github_id: sriramE5/Agentic_RAG_System
+    labels: ["python"]
     category: "research-task"
   # Libraries and SDKs
   - name: pydantic-ai
@@ -211,4 +326,31 @@ projects:
     category: "libraries-sdks"
   - name: awesome-ai-agent-lists
     github_id: awesomelistsio/awesome-ai-agents
+    category: "libraries-sdks"
+  - name: agentic
+    github_id: transitive-bullshit/agentic
+    labels: ["javascript"]
+    category: "libraries-sdks"
+  - name: strands-agents
+    github_id: strands-agents/sdk-python
+    labels: ["python"]
+    category: "libraries-sdks"
+  - name: litellm
+    github_id: BerriAI/litellm
+    labels: ["python"]
+    category: "libraries-sdks"
+  - name: litellm2
+    github_id: markolofsen/litellm2
+    labels: ["python"]
+    category: "libraries-sdks"
+  - name: openai-agents-js
+    github_id: openai/openai-agents-js
+    labels: ["javascript"]
+    category: "libraries-sdks"
+  - name: agent-framework
+    github_id: maxmoundas/agent-framework
+    labels: ["python"]
+    category: "libraries-sdks"
+  - name: vorachet-agentic-ai
+    github_id: vorachet/agentic-ai
     category: "libraries-sdks"
