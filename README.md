@@ -46,13 +46,10 @@ Better models make harnesses more important: more capabilities mean more failure
 - 💤&nbsp; Inactive project _(6 months no activity)_
 - 💀&nbsp; Dead project _(12 months no activity)_
 - 📈📉&nbsp; Project is trending up or down
-- ➕&nbsp; Project was recently added
 - 👨‍💻&nbsp; Contributors count from GitHub
 - 🔀&nbsp; Fork count from GitHub
 - 📋&nbsp; Issue count from GitHub
 - ⏱️&nbsp; Last update timestamp on package manager
-- <img src="https://www.python.org/static/favicon.ico" style="display:inline;" width="13" height="13">&nbsp; Python
-- <img src="https://cdn.icon-icons.com/icons2/2108/PNG/512/javascript_icon_130900.png" style="display:inline;" width="13" height="13">&nbsp; JavaScript/TypeScript
 
 <br>
 
