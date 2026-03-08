@@ -1,0 +1,17 @@
+---
+description: Nuanced, non-repetitive project descriptions for the best-of list
+globs: README.md,projects.yaml,config/**/*.md
+alwaysApply: false
+---
+
+# Best-of list: project descriptions
+
+When adding or editing project entries in this repo (README, projects.yaml, or config):
+
+1. **Be specific about why the repo stands out.** Each description must state what is *distinct*—architecture, use case, tradeoff, or community—not generic "framework for agents" or "tools and orchestration."
+
+2. **Do not repeat yourself.** If multiple repos belong to the same author/org (e.g. Claude Agent SDK Python, TypeScript, demos, quickstarts), prefer a single consolidated entry with one nuanced description that covers all relevant repos or variants.
+
+3. **Avoid filler.** Cut phrases like "comprehensive," "powerful," "flexible" unless they are concretely justified. Prefer one sharp sentence over two vague ones.
+
+4. **Differentiate similar projects.** For overlapping tools (e.g. multiple awesome lists), describe what makes each list different (curation angle, update frequency, scope) instead of repeating "curated list of agent frameworks."

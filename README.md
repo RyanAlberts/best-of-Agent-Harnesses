@@ -10,7 +10,7 @@
 
 <p align="center">
     <a href="https://best-of.org" title="Best-of Badge"><img src="http://bit.ly/3o3EHNN"></a>
-    <a href="#contents" title="Project Count"><img src="https://img.shields.io/badge/projects-55+-blue.svg?color=5ac4bf"></a>
+    <a href="#contents" title="Project Count"><img src="https://img.shields.io/badge/projects-43+-blue.svg?color=5ac4bf"></a>
     <a href="#contribution" title="Contributions welcome"><img src="https://img.shields.io/badge/contributions-welcome-green.svg"></a>
     <a href="https://github.com/RyanAlberts/best-of-Agent-Harnesses/releases" title="Updates"><img src="https://img.shields.io/github/release-date/RyanAlberts/best-of-Agent-Harnesses?color=green&label=updated"></a>
 </p>
@@ -31,12 +31,13 @@ Better models make harnesses more important: more capabilities mean more failure
 
 ## Contents
 
-- [Full-stack and long-running coding harnesses](#full-stack-and-long-running-coding-harnesses) _9 projects_
-- [Multi-agent and orchestration frameworks](#multi-agent-and-orchestration-frameworks) _13 projects_
-- [IDE and CLI agent integrations](#ide-and-cli-agent-integrations) _9 projects_
-- [Evaluation and benchmarking harnesses](#evaluation-and-benchmarking-harnesses) _6 projects_
-- [Research and task-specific harnesses](#research-and-task-specific-harnesses) _1 projects_
-- [Libraries and SDKs](#libraries-and-sdks) _18 projects_
+- [Full-stack and long-running coding harnesses](#full-stack-and-long-running-coding-harnesses) _6 projects_
+- [Frameworks](#frameworks) _11 projects_
+- [Multi-agent and orchestration](#multi-agent-and-orchestration) _4 projects_
+- [Plugins, MCPs, CLI tools](#plugins-mcps-cli-tools) _6 projects_
+- [Evaluation and benchmarking harnesses](#evaluation-and-benchmarking-harnesses) _9 projects_
+- [Research and task-specific harnesses](#research-and-task-specific-harnesses) _1 project_
+- [Libraries and SDKs](#libraries-and-sdks) _6 projects_
 
 ## Explanation
 
@@ -57,72 +58,82 @@ Better models make harnesses more important: more capabilities mean more failure
 
 <a href="#contents"><img align="right" width="15" height="15" src="https://git.io/JtehR" alt="Back to top"></a>
 
-_Spec-driven, multi-session, repo-scoped coding harnesses (e.g. GSD, Claude Agent SDK, OpenCode)._
+_Spec-driven, multi-session, repo-scoped coding harnesses._
 
 | # | Project | Description |
 |---|---------|-------------|
-| 1 | [**get-shit-done**](https://github.com/gsd-build/get-shit-done) | Spec-driven meta-prompting and context engineering for Claude Code and others; goal-backward planning, wave-based execution, prevents context rot. |
-| 2 | [**claude-agent-sdk-python**](https://github.com/anthropics/claude-agent-sdk-python) | Official Claude Agent SDK for Python: tools, MCP, long-running coding agents. |
-| 3 | [**claude-agent-sdk-typescript**](https://github.com/anthropics/claude-agent-sdk-typescript) | Official Claude Agent SDK for TypeScript/Node. |
-| 4 | [**claude-agent-sdk-demos**](https://github.com/anthropics/claude-agent-sdk-demos) | Example agents (email, research, Excel, etc.) using the Claude Agent SDK. |
-| 5 | [**claude-quickstarts**](https://github.com/anthropics/claude-quickstarts) | Quickstarts including long-running autonomous coding with initializer + coding agent. |
-| 6 | [**RepoMaster**](https://github.com/QuantaAlpha/RepoMaster) | Autonomous exploration of GitHub repos for complex coding tasks; function-call and dependency graphs. |
-| 7 | [**coderClaw**](https://github.com/SeanHogg/coderClaw) | Multi-agent coding system (Creator, Reviewer, Test, Refactor, etc.); IDE-independent, self-hosted. |
-| 8 | [**opencode**](https://github.com/opencode-ai/opencode) | Open-source AI coding agent for the terminal; multi-session, multi-provider. |
-| 9 | [**crush**](https://github.com/charmbracelet/crush) | Successor to OpenCode; terminal-based AI coding agent (Charm). |
+| 1 | [**get-shit-done**](https://github.com/gsd-build/get-shit-done) | Goal-backward planning and wave-based execution over fresh context windows; avoids context rot by design. Python/JS meta-prompting for Claude Code, OpenCode, Gemini CLI. |
+| 2 | [**Claude Agent SDK**](https://github.com/anthropics/claude-agent-sdk-python) | Official SDK (Python + [TypeScript](https://github.com/anthropics/claude-agent-sdk-typescript), [demos](https://github.com/anthropics/claude-agent-sdk-demos), [quickstarts](https://github.com/anthropics/claude-quickstarts)): built-in tools, MCP, long-running coding agents with session bridging. |
+| 3 | [**RepoMaster**](https://github.com/QuantaAlpha/RepoMaster) | Repo-scoped agent that builds function-call and module-dependency graphs to explore only what’s needed; large relative gains on MLE-bench and GitTaskBench with lower token use. |
+| 4 | [**coderClaw**](https://github.com/SeanHogg/coderClaw) | Self-hosted multi-role coding system (Creator, Reviewer, Test, Refactor, etc.) with AST and semantic maps; IDE-agnostic, chat-channel triggers. |
+| 5 | [**opencode**](https://github.com/opencode-ai/opencode) | Terminal-first AI coding agent; multi-session, 75+ providers; archived in favor of Crush. |
+| 6 | [**crush**](https://github.com/charmbracelet/crush) | Charm’s terminal-based coding agent; successor to OpenCode, Bubble Tea TUI. |
 
-## Multi-agent and orchestration frameworks
+## Frameworks
 
 <a href="#contents"><img align="right" width="15" height="15" src="https://git.io/JtehR" alt="Back to top"></a>
 
-_Sub-agents, handoffs, crews, and graph-based orchestration._
+_General-purpose agent and LLM application frameworks (the app layer, not harnesses per se)._
 
 | # | Project | Description |
 |---|---------|-------------|
-| 1 | [**langgraph**](https://github.com/langchain-ai/langgraph) | Graph-based state machine for multi-step agent workflows; checkpointing, human-in-the-loop. |
-| 2 | [**langchain**](https://github.com/langchain-ai/langchain) | Framework for LLM applications and agent chains; tools, memory, orchestration. |
-| 3 | [**openai-agents-python**](https://github.com/openai/openai-agents-python) | OpenAI Agents SDK: handoffs, guardrails, multi-LLM support. |
-| 4 | [**crewAI**](https://github.com/crewAIInc/crewAI) | Role-based autonomous agents; Crews and Flows for collaborative and event-driven workflows. |
-| 5 | [**autogen**](https://github.com/microsoft/autogen) | Conversable agents, group chats, and multi-agent patterns (Microsoft; AG2 ecosystem). |
-| 6 | [**mastra**](https://github.com/mastra-ai/mastra) | TypeScript framework for AI agents and workflows. |
-| 7 | [**phidata**](https://github.com/phidata-ai/phidata) | Python framework for production agents with memory, knowledge, and tools. |
-| 8 | [**agno**](https://github.com/agno-ai/agno) | Python agent framework with orchestration and tool use. |
-| 9 | [**langflow**](https://github.com/langchain-ai/langflow) | UI and runtime for building and deploying LangChain/LangGraph flows. |
-| 10 | [**letta**](https://github.com/letta/letta) | Python agent runtime and orchestration. |
-| 11 | [**semantic-kernel**](https://github.com/microsoft/semantic-kernel) | Microsoft SDK for integrating LLMs with apps; plugins, planning, memory. |
-| 12 | [**llama-index**](https://github.com/run-llama/llama_index) | Data framework and agents for LLM applications; RAG and tool use. |
-| 13 | [**PraisonAI**](https://github.com/PraisonAI/PraisonAI) | Multi-agent framework for autonomous AI teams. |
+| 1 | [**langgraph**](https://github.com/langchain-ai/langgraph) | State-machine graphs over LLM steps; checkpointing, human-in-the-loop, and durable execution so workflows survive restarts. |
+| 2 | [**langchain**](https://github.com/langchain-ai/langchain) | Chains, tools, retrievers, and agents; the usual entry point for “add tools to an LLM” in Python/JS. |
+| 3 | [**llama-index**](https://github.com/run-llama/llama_index) | Data-centric: indexing, RAG, and query engines; agent abstractions sit on top of your data pipelines. |
+| 4 | [**semantic-kernel**](https://github.com/microsoft/semantic-kernel) | Microsoft’s plugin and planner layer for LLMs; C#, Python, Java; strong on enterprise auth and orchestration. |
+| 5 | [**mastra**](https://github.com/mastra-ai/mastra) | TypeScript-first; agents, tools, and workflows with a single runtime and minimal boilerplate. |
+| 6 | [**phidata**](https://github.com/phidata-ai/phidata) | Python agents with persistent memory, knowledge bases, and tools; targets production apps with minimal glue. |
+| 7 | [**agno**](https://github.com/agno-ai/agno) | Python framework focused on observability and structured outputs; good fit for eval and pipeline use cases. |
+| 8 | [**letta**](https://github.com/letta/letta) | Python agent runtime with tool use and control flow; lean API. |
+| 9 | [**langflow**](https://github.com/langchain-ai/langflow) | Low-code UI to build and deploy LangChain/LangGraph flows; visual DAG editor and one-click run. |
+| 10 | [**rasa**](https://github.com/rasa/rasa) | Conversational AI stack (NLU, dialogue, actions); long-standing OSS choice for chat and voice bots. |
+| 11 | [**botpress**](https://github.com/botpress/botpress) | Visual bot builder and runtime; multi-channel, open-source alternative to commercial bot platforms. |
 
-## IDE and CLI agent integrations
+## Multi-agent and orchestration
 
 <a href="#contents"><img align="right" width="15" height="15" src="https://git.io/JtehR" alt="Back to top"></a>
 
-_Cursor, MCP, Aider, OpenCode, and CLI wrappers that provide tools and context._
+_Harnesses and patterns for multi-agent coordination and handoffs._
 
 | # | Project | Description |
 |---|---------|-------------|
-| 1 | [**aider**](https://github.com/Aider-AI/aider) | AI pair programming in the terminal; git-aware, multi-model, MCP support. |
-| 2 | [**mcp-servers**](https://github.com/modelcontextprotocol/servers) | Reference MCP servers and examples (Model Context Protocol). |
-| 3 | [**specification**](https://github.com/modelcontextprotocol/specification) | Model Context Protocol spec and documentation. |
-| 4 | [**best-of-mcp-servers**](https://github.com/tolkonepiu/best-of-mcp-servers) | Curated list of MCP servers. |
-| 5 | [**Better-OpenCodeMCP**](https://github.com/ajhcs/Better-OpenCodeMCP) | MCP server for OpenCode CLI; async tasks, multi-model bridge. |
-| 6 | [**python-sdk**](https://github.com/modelcontextprotocol/python-sdk) | Official MCP Python SDK for building servers and clients. |
-| 7 | [**typescript-sdk**](https://github.com/modelcontextprotocol/typescript-sdk) | Official MCP TypeScript SDK. |
-| 8 | [**continue**](https://github.com/continuedev/continue) | Open-source Copilot alternative; IDE extensions and context. |
+| 1 | [**openai-agents-python**](https://github.com/openai/openai-agents-python) | Handoffs, guardrails, and multi-LLM routing; minimal surface so you own the loop. |
+| 2 | [**crewAI**](https://github.com/crewAIInc/crewAI) | Role-based agents (roles, goals, backstories) in Crews; Flows add event-driven and hierarchical control for production. |
+| 3 | [**autogen**](https://github.com/microsoft/autogen) | Conversable agents and group chats; code execution and human-in-the-loop; Microsoft origin, AG2 ecosystem. |
+| 4 | [**PraisonAI**](https://github.com/PraisonAI/PraisonAI) | Autonomous multi-agent teams with a single entry point; emphasis on minimal config. |
+
+## Plugins, MCPs, CLI tools
+
+<a href="#contents"><img align="right" width="15" height="15" src="https://git.io/JtehR" alt="Back to top"></a>
+
+_IDE plugins, concrete MCP servers, and CLI tools that give agents tools and context._
+
+| # | Project | Description |
+|---|---------|-------------|
+| 1 | [**aider**](https://github.com/Aider-AI/aider) | Git-aware CLI pair programmer; edits in-repo, supports multiple models and MCP so agents see version control and tools. |
+| 2 | [**Better-OpenCodeMCP**](https://github.com/ajhcs/Better-OpenCodeMCP) | MCP server for OpenCode/Crush: async task execution, model bridging (e.g. Claude→Gemini), process pooling. |
+| 3 | [**MCP Python SDK**](https://github.com/modelcontextprotocol/python-sdk) | Official SDK to build and consume MCP servers/clients in Python; stdio and SSE transports. |
+| 4 | [**MCP TypeScript SDK**](https://github.com/modelcontextprotocol/typescript-sdk) | Official MCP implementation for Node/TS; reference for the protocol. |
+| 5 | [**continue**](https://github.com/continuedev/continue) | Open-source IDE extension (VS Code, JetBrains); in-editor completion and chat with local or API models. |
+| 6 | [**MCP Inspector**](https://github.com/modelcontextprotocol/inspector) | GUI to test and debug MCP servers; inspect tools, resources, and prompts. |
 
 ## Evaluation and benchmarking harnesses
 
 <a href="#contents"><img align="right" width="15" height="15" src="https://git.io/JtehR" alt="Back to top"></a>
 
-_SWE-bench-style evals, agent benchmarks, and reproducibility._
+_Agentic eval systems, reasoning benchmarks, and open agent benchmarks._
 
 | # | Project | Description |
 |---|---------|-------------|
-| 1 | [**SWE-bench**](https://github.com/princeton-nlp/SWE-bench) | Benchmark for LMs on real GitHub issues; Docker-based evaluation harness. |
-| 2 | [**SWE-Gym**](https://github.com/SWE-Gym/SWE-Gym) | Training and evaluation for software engineering agents (ICML 2025). |
-| 3 | [**SWE-bench-fork**](https://github.com/METR/SWE-bench-fork) | Fork and variants of SWE-bench evaluation. |
-| 4 | [**swe-smith**](https://github.com/swe-bench/swe-smith) | Scaling data for SWE agents (NeurIPS 2025). |
-| 5 | [**SWE-agent**](https://github.com/princeton-nlp/SWE-agent) | Agent and evaluation for SWE-bench. |
+| 1 | [**ARC-AGI-2**](https://github.com/arcprize/ARC-AGI-2) | ARC Prize task set: grid-based abstraction/reasoning; public and private splits for generalization. |
+| 2 | [**arc-agi-benchmarking**](https://github.com/arcprize/arc-agi-benchmarking) | Runner for ARC-AGI: multi-provider (OpenAI, Anthropic, Gemini, etc.), rate limits, retries, and scoring. |
+| 3 | [**AgencyBench**](https://github.com/GAIR-NLP/AgencyBench) | Long-horizon agent benchmark: 32 scenarios, 138 tasks, ~1M tokens and ~90 tool calls; Docker sandbox and rubric-based + LLM judges. |
+| 4 | [**TRAIL**](https://github.com/patronus-ai/trail-benchmark) | Trace reasoning and agentic issue localization; 148 long-context traces, 841 errors, 20+ error types; Hugging Face dataset. |
+| 5 | [**AgentBench**](https://github.com/THUDM/AgentBench) | ICLR’24 benchmark: agents across AlfWorld, DB, knowledge graphs, OS, webshop; Docker Compose, function-calling interface. |
+| 6 | [**WebArena**](https://github.com/web-arena-x/webarena) | Realistic web env (e.g. e‑commerce, CMS, dev tools); 812 tasks; measures end-to-end web agent success. |
+| 7 | [**SWE-bench**](https://github.com/princeton-nlp/SWE-bench) | LMs resolve real GitHub issues; Docker harness, instance IDs; standard for code-agent evals. |
+| 8 | [**SWE-Gym**](https://github.com/SWE-Gym/SWE-Gym) | Training and evaluation for SWE agents and verifiers (ICML 2025). |
+| 9 | [**swe-smith**](https://github.com/swe-bench/swe-smith) | Data generation for SWE agents; 50k+ instances across 128 repos; used for SWE-agent-LM training. |
 
 ## Research and task-specific harnesses
 
@@ -132,31 +143,22 @@ _Deep research, document QA, and domain-specific agent loops._
 
 | # | Project | Description |
 |---|---------|-------------|
-| 1 | [**openagents**](https://github.com/OpenAgentsInc/openagents) | Platform for AI agents; autopilot and agent network. |
+| 1 | [**openagents**](https://github.com/OpenAgentsInc/openagents) | Platform for autonomous agents and autopilot-style workflows; decentralized/Nostr-oriented. |
 
 ## Libraries and SDKs
 
 <a href="#contents"><img align="right" width="15" height="15" src="https://git.io/JtehR" alt="Back to top"></a>
 
-_Lightweight agent runtimes, tool loops, and provider-agnostic harness primitives._
+_Lightweight runtimes, tool loops, and provider-agnostic harness primitives._
 
 | # | Project | Description |
 |---|---------|-------------|
-| 1 | [**pydantic-ai**](https://github.com/pydantic/pydantic-ai) | Type-safe Python agent framework; multi-provider, MCP, observability. |
-| 2 | [**open-harness**](https://github.com/MaxGfeller/open-harness) | TypeScript agent SDK on Vercel AI SDK; tools, MCP, subagents. |
-| 3 | [**vercel/ai**](https://github.com/vercel/ai) | Vercel AI SDK: streaming, tools, and agent patterns. |
-| 4 | [**agent-harness**](https://github.com/haasonsaas/agent-harness) | Unified interface for swapping OpenAI and Anthropic agent SDKs. |
-| 5 | [**inspector**](https://github.com/modelcontextprotocol/inspector) | Visual testing and debugging for MCP servers. |
-| 6 | [**rasa**](https://github.com/rasa/rasa) | Conversational AI and agent framework. |
-| 7 | [**botpress**](https://github.com/botpress/botpress) | Open-source conversational AI platform. |
-| 8 | [**smolagents**](https://github.com/huggingface/smolagents) | Barebones library for code-first agents (Hugging Face). |
-| 9 | [**awesome-ai-agents**](https://github.com/awesomelistsio/awesome-ai-agents) | Curated list of AI agent frameworks and tools. |
-| 10 | [**awesome-ai-agents**](https://github.com/korchasa/awesome-ai-agents) | Auto-updated directory of AI agent resources. |
-| 11 | [**awesome-ai-agent-frameworks**](https://github.com/axioma-ai-labs/awesome-ai-agent-frameworks) | Battle-tested agent framework recommendations. |
-| 12 | [**awesome-ai-agents-frameworks**](https://github.com/mb-mal/awesome-ai-agents-frameworks) | Ranked list of AI agent frameworks. |
-| 13 | [**awesome-ai-agents**](https://github.com/Deep-Insight-Labs/awesome-ai-agents) | Practical AI agent resources and ecosystem. |
-| 14 | [**tinyclaw**](https://github.com/tinyclaw/tinyclaw) | Lightweight agent framework. |
-| 15 | [**openfang**](https://github.com/openfang-ai/openfang) | Agent and harness tooling. |
+| 1 | [**pydantic-ai**](https://github.com/pydantic/pydantic-ai) | Type-safe Python agents with Pydantic I/O; multi-provider, MCP, Logfire observability, and human-in-the-loop. |
+| 2 | [**open-harness**](https://github.com/MaxGfeller/open-harness) | TypeScript Agent class on Vercel AI SDK; streaming events, filesystem/bash tools, MCP, and subagent delegation. |
+| 3 | [**vercel/ai**](https://github.com/vercel/ai) | React and Node SDK for streaming, tool calls, and agent-style UIs; provider-agnostic. |
+| 4 | [**agent-harness**](https://github.com/haasonsaas/agent-harness) | Thin Python shim to swap OpenAI vs Anthropic agent SDKs behind one interface. |
+| 5 | [**smolagents**](https://github.com/huggingface/smolagents) | Code-as-action agents: model outputs Python executed in sandbox (E2B, Modal, etc.); ~1k LOC core. |
+| 6 | [**Community-curated agent lists**](https://github.com/awesomelistsio/awesome-ai-agents) | Broader directories: e.g. [awesomelistsio/awesome-ai-agents](https://github.com/awesomelistsio/awesome-ai-agents), [axioma-ai-labs/awesome-ai-agent-frameworks](https://github.com/axioma-ai-labs/awesome-ai-agent-frameworks), [mb-mal/awesome-ai-agents-frameworks](https://github.com/mb-mal/awesome-ai-agents-frameworks)—differ by scope and update cadence. |
 
 <br>
 

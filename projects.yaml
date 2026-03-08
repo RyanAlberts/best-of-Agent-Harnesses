@@ -12,15 +12,18 @@ categories:
   - category: "full-stack-coding"
     title: "Full-stack and long-running coding harnesses"
     subtitle: "Spec-driven, multi-session, repo-scoped coding harnesses (e.g. GSD, Claude Agent SDK, OpenCode)."
+  - category: "frameworks"
+    title: "Frameworks"
+    subtitle: "General-purpose agent and LLM application frameworks (distinct from harnesses: they are the app layer)."
   - category: "multi-agent"
-    title: "Multi-agent and orchestration frameworks"
-    subtitle: "Sub-agents, handoffs, crews, and graph-based orchestration (e.g. LangGraph, CrewAI, AutoGen)."
-  - category: "ide-cli"
-    title: "IDE and CLI agent integrations"
-    subtitle: "Cursor, MCP, Aider, OpenCode, and CLI wrappers that provide tools and context for agents."
+    title: "Multi-agent and orchestration"
+    subtitle: "Harnesses and patterns for multi-agent coordination, handoffs, and orchestration."
+  - category: "plugins-mcp-cli"
+    title: "Plugins, MCPs, CLI tools"
+    subtitle: "IDE plugins, specific MCP servers, and CLI tools that give agents tools and context."
   - category: "evaluation"
     title: "Evaluation and benchmarking harnesses"
-    subtitle: "SWE-bench-style evals, agent benchmarks, and reproducibility tooling."
+    subtitle: "Agentic eval systems, reasoning benchmarks (e.g. ARC-AGI), and open agent benchmarks."
   - category: "research-task"
     title: "Research and task-specific harnesses"
     subtitle: "Deep research, document QA, and domain-specific agent loops."
@@ -41,20 +44,9 @@ projects:
   - name: get-shit-done
     github_id: gsd-build/get-shit-done
     category: "full-stack-coding"
-    description: "Spec-driven agent harness for Claude Code and others; goal-backward planning and wave-based execution."
-  - name: claude-agent-sdk-python
+  - name: claude-agent-sdk
     github_id: anthropics/claude-agent-sdk-python
     labels: ["python"]
-    category: "full-stack-coding"
-  - name: claude-agent-sdk-typescript
-    github_id: anthropics/claude-agent-sdk-typescript
-    labels: ["javascript"]
-    category: "full-stack-coding"
-  - name: claude-agent-sdk-demos
-    github_id: anthropics/claude-agent-sdk-demos
-    category: "full-stack-coding"
-  - name: claude-quickstarts
-    github_id: anthropics/claude-quickstarts
     category: "full-stack-coding"
   - name: RepoMaster
     github_id: QuantaAlpha/RepoMaster
@@ -70,15 +62,52 @@ projects:
   - name: crush
     github_id: charmbracelet/crush
     category: "full-stack-coding"
-  # Multi-agent and orchestration
+  # Frameworks (not harnesses)
   - name: langgraph
     github_id: langchain-ai/langgraph
     labels: ["python"]
-    category: "multi-agent"
+    category: "frameworks"
   - name: langchain
     github_id: langchain-ai/langchain
     labels: ["python"]
-    category: "multi-agent"
+    category: "frameworks"
+  - name: llama-index
+    github_id: run-llama/llama_index
+    labels: ["python"]
+    category: "frameworks"
+  - name: semantic-kernel
+    github_id: microsoft/semantic-kernel
+    labels: ["python"]
+    category: "frameworks"
+  - name: mastra
+    github_id: mastra-ai/mastra
+    labels: ["javascript"]
+    category: "frameworks"
+  - name: phidata
+    github_id: phidata-ai/phidata
+    labels: ["python"]
+    category: "frameworks"
+  - name: agno
+    github_id: agno-ai/agno
+    labels: ["python"]
+    category: "frameworks"
+  - name: letta
+    github_id: letta/letta
+    labels: ["python"]
+    category: "frameworks"
+  - name: langflow
+    github_id: langchain-ai/langflow
+    labels: ["python"]
+    category: "frameworks"
+  - name: rasa
+    github_id: rasa/rasa
+    labels: ["python"]
+    category: "frameworks"
+  - name: botpress
+    github_id: botpress/botpress
+    labels: ["javascript"]
+    category: "frameworks"
+  # Multi-agent and orchestration
   - name: openai-agents-python
     github_id: openai/openai-agents-python
     labels: ["python"]
@@ -91,65 +120,58 @@ projects:
     github_id: microsoft/autogen
     labels: ["python"]
     category: "multi-agent"
-  - name: mastra
-    github_id: mastra-ai/mastra
-    labels: ["javascript"]
-    category: "multi-agent"
-  - name: phidata
-    github_id: phidata-ai/phidata
+  - name: PraisonAI
+    github_id: PraisonAI/PraisonAI
     labels: ["python"]
     category: "multi-agent"
-  - name: agno
-    github_id: agno-ai/agno
-    labels: ["python"]
-    category: "multi-agent"
-  - name: langflow
-    github_id: langchain-ai/langflow
-    labels: ["python"]
-    category: "multi-agent"
-  - name: letta
-    github_id: letta/letta
-    labels: ["python"]
-    category: "multi-agent"
-  - name: semantic-kernel
-    github_id: microsoft/semantic-kernel
-    labels: ["python"]
-    category: "multi-agent"
-  - name: llama-index
-    github_id: run-llama/llama_index
-    labels: ["python"]
-    category: "multi-agent"
-  # IDE and CLI
+  # Plugins, MCPs, CLI tools
   - name: aider
     github_id: Aider-AI/aider
     labels: ["python"]
-    category: "ide-cli"
-  - name: mcp-servers
-    github_id: modelcontextprotocol/servers
-    category: "ide-cli"
-  - name: modelcontextprotocol
-    github_id: modelcontextprotocol/specification
-    category: "ide-cli"
-  - name: best-of-mcp-servers
-    github_id: tolkonepiu/best-of-mcp-servers
-    category: "ide-cli"
+    category: "plugins-mcp-cli"
   - name: Better-OpenCodeMCP
     github_id: ajhcs/Better-OpenCodeMCP
     labels: ["javascript"]
-    category: "ide-cli"
+    category: "plugins-mcp-cli"
   - name: mcp-python-sdk
     github_id: modelcontextprotocol/python-sdk
     labels: ["python"]
-    category: "ide-cli"
+    category: "plugins-mcp-cli"
   - name: mcp-typescript-sdk
     github_id: modelcontextprotocol/typescript-sdk
     labels: ["javascript"]
-    category: "ide-cli"
+    category: "plugins-mcp-cli"
   - name: continue
     github_id: continuedev/continue
     labels: ["javascript"]
-    category: "ide-cli"
-  # Evaluation and benchmarking
+    category: "plugins-mcp-cli"
+  - name: mcp-inspector
+    github_id: modelcontextprotocol/inspector
+    labels: ["javascript"]
+    category: "plugins-mcp-cli"
+  # Evaluation and benchmarking (agentic evals)
+  - name: ARC-AGI-2
+    github_id: arcprize/ARC-AGI-2
+    category: "evaluation"
+  - name: arc-agi-benchmarking
+    github_id: arcprize/arc-agi-benchmarking
+    labels: ["python"]
+    category: "evaluation"
+  - name: AgencyBench
+    github_id: GAIR-NLP/AgencyBench
+    labels: ["python"]
+    category: "evaluation"
+  - name: trail-benchmark
+    github_id: patronus-ai/trail-benchmark
+    category: "evaluation"
+  - name: AgentBench
+    github_id: THUDM/AgentBench
+    labels: ["python"]
+    category: "evaluation"
+  - name: webarena
+    github_id: web-arena-x/webarena
+    labels: ["python"]
+    category: "evaluation"
   - name: SWE-bench
     github_id: princeton-nlp/SWE-bench
     labels: ["python"]
@@ -158,8 +180,8 @@ projects:
     github_id: SWE-Gym/SWE-Gym
     labels: ["python"]
     category: "evaluation"
-  - name: SWE-bench-fork
-    github_id: METR/SWE-bench-fork
+  - name: swe-smith
+    github_id: swe-bench/swe-smith
     labels: ["python"]
     category: "evaluation"
   # Research and task-specific
@@ -183,53 +205,10 @@ projects:
     github_id: haasonsaas/agent-harness
     labels: ["python"]
     category: "libraries-sdks"
-  - name: mcp-inspector
-    github_id: modelcontextprotocol/inspector
-    labels: ["javascript"]
-    category: "libraries-sdks"
-  - name: rasa
-    github_id: rasa/rasa
-    labels: ["python"]
-    category: "libraries-sdks"
-  - name: botpress
-    github_id: botpress/botpress
-    labels: ["javascript"]
-    category: "libraries-sdks"
-  # Awesome / curated lists (agent harness ecosystem)
-  - name: awesome-ai-agents
-    github_id: awesomelistsio/awesome-ai-agents
-    category: "libraries-sdks"
-  - name: awesome-ai-agents-korchasa
-    github_id: korchasa/awesome-ai-agents
-    category: "libraries-sdks"
-  - name: awesome-ai-agent-frameworks
-    github_id: axioma-ai-labs/awesome-ai-agent-frameworks
-    category: "libraries-sdks"
-  - name: awesome-ai-agents-frameworks
-    github_id: mb-mal/awesome-ai-agents-frameworks
-    category: "libraries-sdks"
-  - name: awesome-ai-agents-deep-insight
-    github_id: Deep-Insight-Labs/awesome-ai-agents
-    category: "libraries-sdks"
   - name: smolagents
     github_id: huggingface/smolagents
     labels: ["python"]
     category: "libraries-sdks"
-  - name: tinyclaw
-    github_id: tinyclaw/tinyclaw
+  - name: awesome-ai-agent-lists
+    github_id: awesomelistsio/awesome-ai-agents
     category: "libraries-sdks"
-  - name: PraisonAI
-    github_id: PraisonAI/PraisonAI
-    labels: ["python"]
-    category: "multi-agent"
-  - name: openfang
-    github_id: openfang-ai/openfang
-    category: "libraries-sdks"
-  - name: SWE-smith
-    github_id: swe-bench/swe-smith
-    labels: ["python"]
-    category: "evaluation"
-  - name: SWE-agent
-    github_id: princeton-nlp/SWE-agent
-    labels: ["python"]
-    category: "evaluation"
