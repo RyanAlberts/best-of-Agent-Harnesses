@@ -10,7 +10,7 @@
 
 <p align="center">
     <a href="https://best-of.org" title="Best-of Badge"><img src="http://bit.ly/3o3EHNN"></a>
-    <a href="#contents" title="Project Count"><img src="https://img.shields.io/badge/projects-82+-blue.svg?color=5ac4bf"></a>
+    <a href="#contents" title="Project Count"><img src="https://img.shields.io/badge/projects-90+-blue.svg?color=5ac4bf"></a>
     <a href="#contribution" title="Contributions welcome"><img src="https://img.shields.io/badge/contributions-welcome-green.svg"></a>
     <a href="https://github.com/RyanAlberts/best-of-Agent-Harnesses/releases" title="Updates"><img src="https://img.shields.io/github/release-date/RyanAlberts/best-of-Agent-Harnesses?color=green&label=updated"></a>
 </p>
@@ -35,6 +35,7 @@ Better models make harnesses more important: more capabilities mean more failure
 - [Frameworks](#frameworks) _26 projects_
 - [Multi-agent and orchestration](#multi-agent-and-orchestration) _5 projects_
 - [Plugins, MCPs, CLI tools](#plugins-mcps-cli-tools) _10 projects_
+- [Progressive disclosure harnesses](#progressive-disclosure-harnesses) _7 projects_
 - [Evaluation and benchmarking harnesses](#evaluation-and-benchmarking-harnesses) _15 projects_
 - [Research and task-specific harnesses](#research-and-task-specific-harnesses) _3 projects_
 - [Libraries and SDKs](#libraries-and-sdks) _13 projects_
@@ -140,6 +141,22 @@ _IDE plugins, concrete MCP servers, and CLI tools that give agents tools and con
 | 8 | [**docker-mcp-servers**](https://github.com/docker/mcp-servers) | Docker’s official MCP servers; reference implementations for container-aware tooling and context. |
 | 9 | [**puppeteer-mcp-server**](https://github.com/merajmehrabi/puppeteer-mcp-server) | Browser automation via MCP: tabs, screenshots, forms, JS execution; the one that connects to existing Chrome for dev/debug. |
 | 10 | [**puppeteer-real-browser-mcp**](https://github.com/withLinda/puppeteer-real-browser-mcp-server) | Puppeteer MCP with real-browser and anti-detection; for agents that need to drive sites that block headless. |
+
+## Progressive disclosure harnesses
+
+<a href="#contents"><img align="right" width="15" height="15" src="https://git.io/JtehR" alt="Back to top"></a>
+
+_Harnesses and patterns that reveal context, tools, or instructions gradually to control tokens and improve agent focus._
+
+| # | Project | Description |
+|---|---------|-------------|
+| 1 | [**agents.md**](https://github.com/agentsmd/agents.md) | Open format for repo-scoped agent instructions; v1.1 proposal adds hierarchical scope and progressive disclosure so agents get a map, not an encyclopedia. |
+| 2 | [**mcp-metatool**](https://github.com/dslh/mcp-metatool) | Starlark-based tool composition: combine MCP servers and expose discovery + execution meta-tools so the model requests schemas on demand instead of loading everything. |
+| 3 | [**spring-ai-tool-search-tool**](https://github.com/spring-ai-community/spring-ai-tool-search-tool) | Dynamic tool discovery for Spring AI: model gets a search tool first, then pulls in definitions for relevant tools; 34–64% token reduction across providers. |
+| 4 | [**MCP-Zero**](https://github.com/xfey/MCP-Zero) | Active tool discovery: agent requests tools by requirement; hierarchical semantic routing over 308 servers / 2,797 tools with ~98% token reduction on APIBank. |
+| 5 | [**claude-code-config**](https://github.com/francesco-albanese/claude-code-config) | Minimal CLAUDE.md plus a Rules Index pointing to domain files; keeps core instructions ~60 lines so the agent loads only what it needs. |
+| 6 | [**mcp-tool-registry**](https://github.com/mcp-tool-shop/mcp-tool-registry) | Metadata-only registry for MCP tools with schema validation and bundles; supports discovery and on-demand loading without shipping full schemas upfront. |
+| 7 | [**mcp-server-metatool**](https://github.com/metatool-ai/mcp-server-metatool) | Proxy that aggregates multiple MCP servers behind discovery + execution meta-tools; early reference implementation (deprecated in favor of Node-based alternatives). |
 
 ## Evaluation and benchmarking harnesses
 
