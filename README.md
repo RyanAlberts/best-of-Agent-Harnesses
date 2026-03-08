@@ -142,17 +142,17 @@ _IDE plugins, concrete MCP servers, and CLI tools that give agents tools and con
 
 <a href="#contents"><img align="right" width="15" height="15" src="https://git.io/JtehR" alt="Back to top"></a>
 
-_Harnesses and patterns that reveal context, tools, or instructions gradually to control tokens and improve agent focus._
+_Formats, runtimes, and patterns that reveal context, tools, or instructions in layers—index first, details on demand—to control tokens and improve agent focus (the “map, not encyclopedia” principle)._
 
 | # | Project | Description |
 |---|---------|-------------|
-| 1 | [**agents.md**](https://github.com/agentsmd/agents.md) | Open format for repo-scoped agent instructions; v1.1 proposal adds hierarchical scope and progressive disclosure so agents get a map, not an encyclopedia. |
-| 2 | [**mcp-metatool**](https://github.com/dslh/mcp-metatool) | Starlark-based tool composition: combine MCP servers and expose discovery + execution meta-tools so the model requests schemas on demand instead of loading everything. |
-| 3 | [**spring-ai-tool-search-tool**](https://github.com/spring-ai-community/spring-ai-tool-search-tool) | Dynamic tool discovery for Spring AI: model gets a search tool first, then pulls in definitions for relevant tools; 34–64% token reduction across providers. |
-| 4 | [**MCP-Zero**](https://github.com/xfey/MCP-Zero) | Active tool discovery: agent requests tools by requirement; hierarchical semantic routing over 308 servers / 2,797 tools with ~98% token reduction on APIBank. |
-| 5 | [**claude-code-config**](https://github.com/francesco-albanese/claude-code-config) | Minimal CLAUDE.md plus a Rules Index pointing to domain files; keeps core instructions ~60 lines so the agent loads only what it needs. |
-| 6 | [**mcp-tool-registry**](https://github.com/mcp-tool-shop/mcp-tool-registry) | Metadata-only registry for MCP tools with schema validation and bundles; supports discovery and on-demand loading without shipping full schemas upfront. |
-| 7 | [**mcp-server-metatool**](https://github.com/metatool-ai/mcp-server-metatool) | Proxy that aggregates multiple MCP servers behind discovery + execution meta-tools; early reference implementation (deprecated in favor of Node-based alternatives). |
+| 1 | [**agents.md**](https://github.com/agentsmd/agents.md) | Open format for repo-scoped agent briefings; v1.1 adds hierarchical scope and progressive disclosure so agents get a map of what exists, then load only what’s relevant. |
+| 2 | [**awesome-cursorrules**](https://github.com/PatrickJS/awesome-cursorrules) | Curated .cursorrules and skills that leverage Cursor’s index-then-load model; the canonical collection for rules-as-progressive-disclosure in the IDE. |
+| 3 | [**MCP-Zero**](https://github.com/xfey/MCP-Zero) | Active tool discovery for autonomous agents: model requests tools by requirement; hierarchical semantic routing over 308 servers / 2,797 tools with ~98% token reduction (APIBank). |
+| 4 | [**langgraph-bigtool**](https://github.com/langchain-ai/langgraph-bigtool) | Build LangGraph agents with large tool sets; retrieval and on-demand tool loading so agents scale beyond context without stuffing every schema upfront. |
+| 5 | [**spring-ai-tool-search-tool**](https://github.com/spring-ai-community/spring-ai-tool-search-tool) | Dynamic tool discovery for Spring AI: model gets a search tool first, then pulls definitions for relevant tools; 34–64% token reduction across providers. |
+| 6 | [**ToolGen**](https://github.com/Reason-Wang/ToolGen) | ICLR 2025: unified tool retrieval and calling via generation; 47k+ tools without context stuffing—retrieval and invocation in one generative step. |
+| 7 | [**ToolRAG**](https://github.com/antl3x/Toolrag) | Semantic tool retrieval for LLMs; serves only the tools the user query demands (MCP-compatible), unlimited tool sets with zero context penalty. |
 
 ## Evaluation and benchmarking harnesses
 

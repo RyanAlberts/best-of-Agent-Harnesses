@@ -23,7 +23,7 @@ categories:
     subtitle: "IDE plugins, specific MCP servers, and CLI tools that give agents tools and context."
   - category: "progressive-disclosure"
     title: "Progressive disclosure harnesses"
-    subtitle: "Harnesses and patterns that reveal context, tools, or instructions gradually to control tokens and improve agent focus."
+    subtitle: "Formats, runtimes, and patterns that reveal context, tools, or instructions in layers (index first, details on demand) to control tokens and improve agent focus."
   - category: "evaluation"
     title: "Evaluation and benchmarking harnesses"
     subtitle: "Agentic eval systems, reasoning benchmarks (e.g. ARC-AGI), and open agent benchmarks."
@@ -230,24 +230,25 @@ projects:
     github_id: agentsmd/agents.md
     labels: ["javascript"]
     category: "progressive-disclosure"
-  - name: mcp-metatool
-    github_id: dslh/mcp-metatool
-    category: "progressive-disclosure"
-  - name: spring-ai-tool-search-tool
-    github_id: spring-ai-community/spring-ai-tool-search-tool
+  - name: awesome-cursorrules
+    github_id: PatrickJS/awesome-cursorrules
     category: "progressive-disclosure"
   - name: MCP-Zero
     github_id: xfey/MCP-Zero
     category: "progressive-disclosure"
-  - name: claude-code-config
-    github_id: francesco-albanese/claude-code-config
+  - name: langgraph-bigtool
+    github_id: langchain-ai/langgraph-bigtool
+    labels: ["python"]
     category: "progressive-disclosure"
-  - name: mcp-tool-registry
-    github_id: mcp-tool-shop/mcp-tool-registry
+  - name: spring-ai-tool-search-tool
+    github_id: spring-ai-community/spring-ai-tool-search-tool
     category: "progressive-disclosure"
-  - name: mcp-server-metatool
-    github_id: metatool-ai/mcp-server-metatool
-    labels: ["javascript"]
+  - name: ToolGen
+    github_id: Reason-Wang/ToolGen
+    labels: ["python"]
+    category: "progressive-disclosure"
+  - name: ToolRAG
+    github_id: antl3x/Toolrag
     category: "progressive-disclosure"
   - name: github-mcp-server
     github_id: cyanheads/github-mcp-server
