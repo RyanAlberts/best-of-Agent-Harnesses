@@ -9,127 +9,227 @@ configuration:
   projects_history_folder: "history"
 
 categories:
-  - category: "data-engineering"
-    title: "Machine Learning & Data Engineering"
-    subtitle: "Best-of lists about machine learning, data engieering, data science, or other topics related to big data."
-  - category: "web-dev"
-    title: "Web Development"
-    subtitle: "Best-of lists about react, vue, angular, html5, css, or other topics related to web development."
-  - category: "native-dev"
-    title: "Native Development"
-    subtitle: "Best-of lists about iOS, Andnroid or other topics related to native development."
-  - category: "robot-dev"
-    title: "Robot Development"
-    subtitle: "Best-of lists about Robots or other topics related to robot development."
-  - category: "embedded-dev"
-    title: "Embedded Development"
-    subtitle: "Best-of lists about Embedded Linux or other topics related to embedded development."
-  - category: "dev-tools"
-    title: "Development Tools"
-    subtitle: "Best-of lists about tools & libraries to help with software development."
-  - category: "documentation"
-    title: "Documentation"
-    subtitle: "Best-of lists about documentations & tools to create documentations."
-  - category: "programming-languages"
-    title: "Programming Languages"
-    subtitle: "Best-of lists with general overviews on tools & libraries for a specific programming language."
-  - category: "internet"
-    title: "Internet"
-    subtitle: "Best-of lists about internet, browsers, services, standards, identity and digital interactions"
-  - category: "blockchain"
-    title: "Cryptocurrencies & Blockchain"
-    subtitle: "Best-of lists about cryptocurrencies, bitcoin, ethereum, or other topics related to blockchain."
+  - category: "full-stack-coding"
+    title: "Full-stack and long-running coding harnesses"
+    subtitle: "Spec-driven, multi-session, repo-scoped coding harnesses (e.g. GSD, Claude Agent SDK, OpenCode)."
+  - category: "multi-agent"
+    title: "Multi-agent and orchestration frameworks"
+    subtitle: "Sub-agents, handoffs, crews, and graph-based orchestration (e.g. LangGraph, CrewAI, AutoGen)."
+  - category: "ide-cli"
+    title: "IDE and CLI agent integrations"
+    subtitle: "Cursor, MCP, Aider, OpenCode, and CLI wrappers that provide tools and context for agents."
+  - category: "evaluation"
+    title: "Evaluation and benchmarking harnesses"
+    subtitle: "SWE-bench-style evals, agent benchmarks, and reproducibility tooling."
+  - category: "research-task"
+    title: "Research and task-specific harnesses"
+    subtitle: "Deep research, document QA, and domain-specific agent loops."
+  - category: "libraries-sdks"
+    title: "Libraries and SDKs"
+    subtitle: "Lightweight agent runtimes, tool loops, and provider-agnostic harness primitives."
 
 labels:
   - label: "python"
     image: "https://www.python.org/static/favicon.ico"
-    description: "Best-of list with Python projects"
+    description: "Python-based"
   - label: "javascript"
     image: "https://cdn.icon-icons.com/icons2/2108/PNG/512/javascript_icon_130900.png"
-    description: "Best-of list with JavaScript projects"
- 
+    description: "JavaScript/TypeScript-based"
+
 projects:
-  - name: best-of-ml-python
-    github_id: ml-tooling/best-of-ml-python
+  # Full-stack and long-running coding harnesses
+  - name: get-shit-done
+    github_id: gsd-build/get-shit-done
+    category: "full-stack-coding"
+    description: "Spec-driven agent harness for Claude Code and others; goal-backward planning and wave-based execution."
+  - name: claude-agent-sdk-python
+    github_id: anthropics/claude-agent-sdk-python
     labels: ["python"]
-    category: "data-engineering"
-  - name: best-of-jupyter
-    github_id: ml-tooling/best-of-jupyter
-    labels: ["python"]
-    category: "data-engineering"
-  - name: best-of-web-python
-    github_id: ml-tooling/best-of-web-python
-    labels: ["python"]
-    category: "web-dev"
-  - name: best-of-streamlit
-    github_id: jrieke/best-of-streamlit
-    labels: ["python"]
-    category: "data-engineering"
-  - name: best-of-python
-    github_id: ml-tooling/best-of-python
-    labels: ["python"]
-    category: "programming-languages"
-  - name: best-of-python-dev
-    github_id: ml-tooling/best-of-python-dev
-    labels: ["python"]
-    category: "dev-tools"
-  - name: best-of-ml-julia
-    github_id: e-tornike/best-of-ml-julia
-    category: "data-engineering"
-  - name: best-of-ml-rust
-    github_id: e-tornike/best-of-ml-rust
-    category: "data-engineering"
-  - name: best-of-react
-    github_id: lukasmasuch/best-of-react
+    category: "full-stack-coding"
+  - name: claude-agent-sdk-typescript
+    github_id: anthropics/claude-agent-sdk-typescript
     labels: ["javascript"]
-    category: "web-dev"
-  - name: best-of-mkdocs
-    github_id: mkdocs/catalog
-    category: "documentation"
-  - name: best-of-digital-gardens
-    github_id: lyz-code/best-of-digital-gardens
-    category: "documentation"
-  - name: best-of-crypto
-    github_id: lukasmasuch/best-of-crypto
-    category: "blockchain"
-  - name: thumbor/awesome-thumbor
-    github_id: thumbor/awesome-thumbor
-  - name: best-of-fastapi
-    github_id: fkromer/best-of-fastapi
+    category: "full-stack-coding"
+  - name: claude-agent-sdk-demos
+    github_id: anthropics/claude-agent-sdk-demos
+    category: "full-stack-coding"
+  - name: claude-quickstarts
+    github_id: anthropics/claude-quickstarts
+    category: "full-stack-coding"
+  - name: RepoMaster
+    github_id: QuantaAlpha/RepoMaster
     labels: ["python"]
-    category: "web-dev"
-  - name: best-of-django
-    github_id: fkromer/best-of-django
-    labels: ["python"]
-    category: "web-dev"
-  - name: best-of-ps
-    github_id: jinningwang/best-of-ps
-  - name: best-of-vue
-    github_id: fkromer/best-of-vue
+    category: "full-stack-coding"
+  - name: coderClaw
+    github_id: SeanHogg/coderClaw
     labels: ["javascript"]
-    category: "web-dev"
-  - name: best-of-scala
-    github_id: stkeky/best-of-scala
-    category: "programming-languages"
-  - name: best-of-react-native
-    github_id: fkromer/best-of-react-native
-    category: "native-dev"
-  - name: best-of-robot-simulators
-    github_id: knmcguire/best-of-robot-simulators
-    category: "robot-dev"
-  - name: best-of-rust-on-embedded-linux
-    github_id: fkromer/best-of-rust-on-embedded-linux
-    category: "embedded-dev"
-  - name: best-of-digital-identity
-    github_id: jruizaranguren/best-of-digital-identity
-    category: "internet"
-  - name: awesome-gpts
-    github_id: taranjeet/awesome-gpts
+    category: "full-stack-coding"
+  - name: opencode
+    github_id: opencode-ai/opencode
+    category: "full-stack-coding"
+  - name: crush
+    github_id: charmbracelet/crush
+    category: "full-stack-coding"
+  # Multi-agent and orchestration
+  - name: langgraph
+    github_id: langchain-ai/langgraph
     labels: ["python"]
-    category: "data-engineering"
-  - name: best-of-nix
-    github_id: tolkonepiu/best-of-nix
-    category: "programming-languages"
+    category: "multi-agent"
+  - name: langchain
+    github_id: langchain-ai/langchain
+    labels: ["python"]
+    category: "multi-agent"
+  - name: openai-agents-python
+    github_id: openai/openai-agents-python
+    labels: ["python"]
+    category: "multi-agent"
+  - name: crewAI
+    github_id: crewAIInc/crewAI
+    labels: ["python"]
+    category: "multi-agent"
+  - name: autogen
+    github_id: microsoft/autogen
+    labels: ["python"]
+    category: "multi-agent"
+  - name: mastra
+    github_id: mastra-ai/mastra
+    labels: ["javascript"]
+    category: "multi-agent"
+  - name: phidata
+    github_id: phidata-ai/phidata
+    labels: ["python"]
+    category: "multi-agent"
+  - name: agno
+    github_id: agno-ai/agno
+    labels: ["python"]
+    category: "multi-agent"
+  - name: langflow
+    github_id: langchain-ai/langflow
+    labels: ["python"]
+    category: "multi-agent"
+  - name: letta
+    github_id: letta/letta
+    labels: ["python"]
+    category: "multi-agent"
+  - name: semantic-kernel
+    github_id: microsoft/semantic-kernel
+    labels: ["python"]
+    category: "multi-agent"
+  - name: llama-index
+    github_id: run-llama/llama_index
+    labels: ["python"]
+    category: "multi-agent"
+  # IDE and CLI
+  - name: aider
+    github_id: Aider-AI/aider
+    labels: ["python"]
+    category: "ide-cli"
+  - name: mcp-servers
+    github_id: modelcontextprotocol/servers
+    category: "ide-cli"
+  - name: modelcontextprotocol
+    github_id: modelcontextprotocol/specification
+    category: "ide-cli"
   - name: best-of-mcp-servers
     github_id: tolkonepiu/best-of-mcp-servers
-    category: "data-engineering"
+    category: "ide-cli"
+  - name: Better-OpenCodeMCP
+    github_id: ajhcs/Better-OpenCodeMCP
+    labels: ["javascript"]
+    category: "ide-cli"
+  - name: mcp-python-sdk
+    github_id: modelcontextprotocol/python-sdk
+    labels: ["python"]
+    category: "ide-cli"
+  - name: mcp-typescript-sdk
+    github_id: modelcontextprotocol/typescript-sdk
+    labels: ["javascript"]
+    category: "ide-cli"
+  - name: continue
+    github_id: continuedev/continue
+    labels: ["javascript"]
+    category: "ide-cli"
+  # Evaluation and benchmarking
+  - name: SWE-bench
+    github_id: princeton-nlp/SWE-bench
+    labels: ["python"]
+    category: "evaluation"
+  - name: SWE-Gym
+    github_id: SWE-Gym/SWE-Gym
+    labels: ["python"]
+    category: "evaluation"
+  - name: SWE-bench-fork
+    github_id: METR/SWE-bench-fork
+    labels: ["python"]
+    category: "evaluation"
+  # Research and task-specific
+  - name: openagents
+    github_id: OpenAgentsInc/openagents
+    category: "research-task"
+  # Libraries and SDKs
+  - name: pydantic-ai
+    github_id: pydantic/pydantic-ai
+    labels: ["python"]
+    category: "libraries-sdks"
+  - name: open-harness
+    github_id: MaxGfeller/open-harness
+    labels: ["javascript"]
+    category: "libraries-sdks"
+  - name: vercel-ai
+    github_id: vercel/ai
+    labels: ["javascript"]
+    category: "libraries-sdks"
+  - name: agent-harness
+    github_id: haasonsaas/agent-harness
+    labels: ["python"]
+    category: "libraries-sdks"
+  - name: mcp-inspector
+    github_id: modelcontextprotocol/inspector
+    labels: ["javascript"]
+    category: "libraries-sdks"
+  - name: rasa
+    github_id: rasa/rasa
+    labels: ["python"]
+    category: "libraries-sdks"
+  - name: botpress
+    github_id: botpress/botpress
+    labels: ["javascript"]
+    category: "libraries-sdks"
+  # Awesome / curated lists (agent harness ecosystem)
+  - name: awesome-ai-agents
+    github_id: awesomelistsio/awesome-ai-agents
+    category: "libraries-sdks"
+  - name: awesome-ai-agents-korchasa
+    github_id: korchasa/awesome-ai-agents
+    category: "libraries-sdks"
+  - name: awesome-ai-agent-frameworks
+    github_id: axioma-ai-labs/awesome-ai-agent-frameworks
+    category: "libraries-sdks"
+  - name: awesome-ai-agents-frameworks
+    github_id: mb-mal/awesome-ai-agents-frameworks
+    category: "libraries-sdks"
+  - name: awesome-ai-agents-deep-insight
+    github_id: Deep-Insight-Labs/awesome-ai-agents
+    category: "libraries-sdks"
+  - name: smolagents
+    github_id: huggingface/smolagents
+    labels: ["python"]
+    category: "libraries-sdks"
+  - name: tinyclaw
+    github_id: tinyclaw/tinyclaw
+    category: "libraries-sdks"
+  - name: PraisonAI
+    github_id: PraisonAI/PraisonAI
+    labels: ["python"]
+    category: "multi-agent"
+  - name: openfang
+    github_id: openfang-ai/openfang
+    category: "libraries-sdks"
+  - name: SWE-smith
+    github_id: swe-bench/swe-smith
+    labels: ["python"]
+    category: "evaluation"
+  - name: SWE-agent
+    github_id: princeton-nlp/SWE-agent
+    labels: ["python"]
+    category: "evaluation"
