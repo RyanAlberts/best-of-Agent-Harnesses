@@ -89,3 +89,12 @@ hs_err_pid*
 temp/*
 .DS_Store
 
+# Local / editor (do not publish)
+.cursor/
+claude.md
+PLAN.md
+history/
+.env
+.env.*
+!.env.example
+
