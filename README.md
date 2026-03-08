@@ -15,15 +15,11 @@
     <a href="https://github.com/RyanAlberts/best-of-Agent-Harnesses/releases" title="Updates"><img src="https://img.shields.io/github/release-date/RyanAlberts/best-of-Agent-Harnesses?color=green&label=updated"></a>
 </p>
 
-This list focuses on **agent harnesses**: the environments, scaffolding, and tooling that make AI agents reliable at long-running or complex tasks. It is for builders, platform engineers, and researchers who care about orchestration, context management, and guardrails—not just model choice.
-
 ## What is an agent harness?
 
-An **agent harness** is everything around the model that makes agentic systems work in practice: environment design, intent specification, feedback loops, and the repository (or knowledge base) as the system of record. Engineers design scaffolding and guardrails so agents can do reliable work; the model generates, the harness controls what’s allowed, when to ask humans, and how to recover from failure.
+An agent harness is the runtime that closes the loop between a stateless model and the outside world—managing perception, action, memory, and constraint enforcement—making it the de facto operating system of machine agency and, consequently, the layer where nearly all meaningful questions about AI autonomy, reliability, and control are actually resolved.
 
-- **OpenAI (harness engineering):** Harness = environment design, intent specification, feedback loops, and repository-as-system-of-record so agents (e.g. Codex) can execute reliably. Humans steer; agents execute.
-- **Anthropic (long-running agents):** Session bridging (initializer + coding agent), feature lists, progress files, incremental work, clean state, and explicit testing (e.g. browser automation) so agents don’t one-shot or declare “done” too early.
-- **Practitioners (e.g. Aakash Gupta):** Harness = human-in-the-loop, filesystem access, tool orchestration, sub-agent coordination, prompt presets, lifecycle hooks. “Model is commodity, harness is moat”—minimal intervention, progressive disclosure, fail-fast with recovery.
+Every prior wave of automation was constrained by brittleness: you scripted exact behavior, and when the world deviated, the system broke. Foundation models inverted that problem—they're flexible but directionless, stateless, and disconnected from anything real. The agent harness exists to bridge that gap: it is the orchestration infrastructure that converts a model's per-turn reasoning into sustained, tool-using, error-recovering, goal-directed behavior across time. Architecturally, it plays the role the kernel played in operating systems or the controller played in industrial robotics—mediating between raw capability and a messy environment—but with a critical difference: the "capability" it governs is general-purpose cognition, which means the harness is simultaneously a scheduler, a permission system, a memory manager, and a policy enforcement layer, all under-specified and evolving in real time. The term itself barely exists in formal literature yet, which should concern anyone who cares about AI governance, because the harness is where abstract alignment goals either get operationalized into concrete constraints or quietly don't.
 
 ## Why harnesses matter
 
