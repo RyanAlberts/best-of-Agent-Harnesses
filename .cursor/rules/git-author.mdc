@@ -1,0 +1,18 @@
+---
+description: Git author identity for commits so GitHub attributes contributions correctly
+globs: "**/*"
+alwaysApply: true
+---
+
+# Git commit identity (this workspace)
+
+When creating commits in this workspace (or when instructing the user to commit):
+
+1. **Author email must be `ryan.a.alberts@gmail.com`** so commits count on the GitHub contribution graph for [@RyanAlberts](https://github.com/RyanAlberts).
+2. **Author name:** `Ryan Alexander Alberts`
+3. **Before committing**, ensure the repo has:
+   - `git config user.email "ryan.a.alberts@gmail.com"`
+   - `git config user.name "Ryan Alexander Alberts"`  
+   (local repo config is fine; do not use university or other emails unless the user explicitly asks.)
+
+4. Do not amend or recommit solely to fix email unless the user requests it—**get it right on the first commit.**
