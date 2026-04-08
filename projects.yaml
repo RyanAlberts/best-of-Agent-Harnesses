@@ -72,6 +72,10 @@ projects:
   - name: get-shit-done
     github_id: gsd-build/get-shit-done
     category: "full-stack-coding"
+  - name: gstack
+    github_id: garrytan/gstack
+    labels: ["javascript"]
+    category: "full-stack-coding"
   - name: claude-agent-sdk
     github_id: anthropics/claude-agent-sdk-python
     labels: ["python"]
@@ -140,20 +144,16 @@ projects:
     github_id: mastra-ai/mastra
     labels: ["javascript"]
     category: "frameworks"
-  - name: phidata
-    github_id: phidata-ai/phidata
-    labels: ["python"]
-    category: "frameworks"
   - name: agno
-    github_id: agno-ai/agno
+    github_id: agno-agi/agno
     labels: ["python"]
     category: "frameworks"
   - name: letta
-    github_id: letta/letta
+    github_id: letta-ai/letta
     labels: ["python"]
     category: "frameworks"
   - name: langflow
-    github_id: langchain-ai/langflow
+    github_id: langflow-ai/langflow
     labels: ["python"]
     category: "frameworks"
   - name: rasa
@@ -238,7 +238,7 @@ projects:
     labels: ["python"]
     category: "multi-agent"
   - name: PraisonAI
-    github_id: PraisonAI/PraisonAI
+    github_id: MervinPraison/PraisonAI
     labels: ["python"]
     category: "multi-agent"
   - name: AgentRL
@@ -274,8 +274,8 @@ projects:
     github_id: cyanheads/github-mcp-server
     labels: ["javascript"]
     category: "plugins-mcp-cli"
-  - name: docker-mcp-servers
-    github_id: docker/mcp-servers
+  - name: docker-mcp-gateway
+    github_id: docker/mcp-gateway
     category: "plugins-mcp-cli"
   - name: puppeteer-mcp-server
     github_id: merajmehrabi/puppeteer-mcp-server
