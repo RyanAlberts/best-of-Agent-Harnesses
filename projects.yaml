@@ -9,9 +9,12 @@ configuration:
   projects_history_folder: "history"
 
 categories:
+  - category: "progressive-disclosure"
+    title: "Progressive disclosure harnesses"
+    subtitle: "Formats, runtimes, and patterns that reveal context, tools, or instructions in layers (index first, details on demand) to control tokens and improve agent focus."
   - category: "full-stack-coding"
     title: "Full-stack and long-running coding harnesses"
-    subtitle: "Spec-driven, multi-session, repo-scoped coding harnesses (e.g. GSD, Claude Agent SDK, OpenCode)."
+    subtitle: "Spec-driven, multi-session, repo-scoped coding harnesses (e.g. GSD, Claude Agent SDK, Crush)."
   - category: "frameworks"
     title: "Frameworks"
     subtitle: "General-purpose agent and LLM application frameworks (distinct from harnesses: they are the app layer)."
@@ -21,9 +24,6 @@ categories:
   - category: "plugins-mcp-cli"
     title: "Plugins, MCPs, CLI tools"
     subtitle: "IDE plugins, specific MCP servers, and CLI tools that give agents tools and context."
-  - category: "progressive-disclosure"
-    title: "Progressive disclosure harnesses"
-    subtitle: "Formats, runtimes, and patterns that reveal context, tools, or instructions in layers (index first, details on demand) to control tokens and improve agent focus."
   - category: "evaluation"
     title: "Evaluation and benchmarking harnesses"
     subtitle: "Agentic eval systems, reasoning benchmarks (e.g. ARC-AGI), and open agent benchmarks."
@@ -43,6 +43,31 @@ labels:
     description: "JavaScript/TypeScript-based"
 
 projects:
+  # Progressive disclosure harnesses
+  - name: agents.md
+    github_id: agentsmd/agents.md
+    labels: ["javascript"]
+    category: "progressive-disclosure"
+  - name: awesome-cursorrules
+    github_id: PatrickJS/awesome-cursorrules
+    category: "progressive-disclosure"
+  - name: MCP-Zero
+    github_id: xfey/MCP-Zero
+    category: "progressive-disclosure"
+  - name: langgraph-bigtool
+    github_id: langchain-ai/langgraph-bigtool
+    labels: ["python"]
+    category: "progressive-disclosure"
+  - name: spring-ai-tool-search-tool
+    github_id: spring-ai-community/spring-ai-tool-search-tool
+    category: "progressive-disclosure"
+  - name: ToolGen
+    github_id: Reason-Wang/ToolGen
+    labels: ["python"]
+    category: "progressive-disclosure"
+  - name: ToolRAG
+    github_id: antl3x/Toolrag
+    category: "progressive-disclosure"
   # Full-stack and long-running coding harnesses
   - name: get-shit-done
     github_id: gsd-build/get-shit-done
@@ -59,9 +84,6 @@ projects:
     github_id: SeanHogg/coderClaw
     labels: ["javascript"]
     category: "full-stack-coding"
-  - name: opencode
-    github_id: opencode-ai/opencode
-    category: "full-stack-coding"
   - name: crush
     github_id: charmbracelet/crush
     category: "full-stack-coding"
@@ -77,6 +99,25 @@ projects:
     category: "full-stack-coding"
   - name: Hydra
     github_id: PrimeLocus/Hydra
+    category: "full-stack-coding"
+  - name: OpenHands
+    github_id: All-Hands-AI/OpenHands
+    labels: ["python"]
+    category: "full-stack-coding"
+  - name: SWE-agent
+    github_id: princeton-nlp/swe-agent
+    labels: ["python"]
+    category: "full-stack-coding"
+  - name: goose
+    github_id: block/goose
+    category: "full-stack-coding"
+  - name: gemini-cli
+    github_id: google-gemini/gemini-cli
+    labels: ["javascript"]
+    category: "full-stack-coding"
+  - name: Roo-Code
+    github_id: RooVetGit/Roo-Code
+    labels: ["javascript"]
     category: "full-stack-coding"
   # Frameworks (not harnesses)
   - name: langgraph
@@ -179,6 +220,10 @@ projects:
   - name: GraphFusionAI
     github_id: GraphFusion/graphfusionai
     category: "frameworks"
+  - name: browser-use
+    github_id: browser-use/browser-use
+    labels: ["python"]
+    category: "frameworks"
   # Multi-agent and orchestration
   - name: openai-agents-python
     github_id: openai/openai-agents-python
@@ -225,31 +270,6 @@ projects:
     github_id: modelcontextprotocol/inspector
     labels: ["javascript"]
     category: "plugins-mcp-cli"
-  # Progressive disclosure harnesses
-  - name: agents.md
-    github_id: agentsmd/agents.md
-    labels: ["javascript"]
-    category: "progressive-disclosure"
-  - name: awesome-cursorrules
-    github_id: PatrickJS/awesome-cursorrules
-    category: "progressive-disclosure"
-  - name: MCP-Zero
-    github_id: xfey/MCP-Zero
-    category: "progressive-disclosure"
-  - name: langgraph-bigtool
-    github_id: langchain-ai/langgraph-bigtool
-    labels: ["python"]
-    category: "progressive-disclosure"
-  - name: spring-ai-tool-search-tool
-    github_id: spring-ai-community/spring-ai-tool-search-tool
-    category: "progressive-disclosure"
-  - name: ToolGen
-    github_id: Reason-Wang/ToolGen
-    labels: ["python"]
-    category: "progressive-disclosure"
-  - name: ToolRAG
-    github_id: antl3x/Toolrag
-    category: "progressive-disclosure"
   - name: github-mcp-server
     github_id: cyanheads/github-mcp-server
     labels: ["javascript"]
@@ -320,6 +340,14 @@ projects:
   - name: inspect-evals
     github_id: UKGovernmentBEIS/inspect_evals
     category: "evaluation"
+  - name: inspect_ai
+    github_id: UKGovernmentBEIS/inspect_ai
+    labels: ["python"]
+    category: "evaluation"
+  - name: agent-lightning
+    github_id: microsoft/agent-lightning
+    labels: ["python"]
+    category: "evaluation"
   # Research and task-specific
   - name: openagents
     github_id: OpenAgentsInc/openagents
@@ -381,4 +409,11 @@ projects:
     category: "libraries-sdks"
   - name: vorachet-agentic-ai
     github_id: vorachet/agentic-ai
+    category: "libraries-sdks"
+  - name: E2B
+    github_id: e2b-dev/E2B
+    labels: ["python"]
+    category: "libraries-sdks"
+  - name: daytona
+    github_id: daytonaio/daytona
     category: "libraries-sdks"

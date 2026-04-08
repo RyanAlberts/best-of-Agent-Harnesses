@@ -10,7 +10,7 @@
 
 <p align="center">
     <a href="https://best-of.org" title="Best-of Badge"><img src="http://bit.ly/3o3EHNN"></a>
-    <a href="#contents" title="Project Count"><img src="https://img.shields.io/badge/projects-89+-blue.svg?color=5ac4bf"></a>
+    <a href="#contents" title="Project Count"><img src="https://img.shields.io/badge/projects-98-blue.svg?color=5ac4bf"></a>
     <a href="#contribution" title="Contributions welcome"><img src="https://img.shields.io/badge/contributions-welcome-green.svg"></a>
     <a href="https://github.com/RyanAlberts/best-of-Agent-Harnesses/releases" title="Updates"><img src="https://img.shields.io/github/release-date/RyanAlberts/best-of-Agent-Harnesses?color=green&label=updated"></a>
 </p>
@@ -28,13 +28,13 @@ Better models make harnesses more important: more capabilities mean more failure
 ## Contents
 
 - [Progressive disclosure harnesses](#progressive-disclosure-harnesses) _7 projects_
-- [Full-stack and long-running coding harnesses](#full-stack-and-long-running-coding-harnesses) _9 projects_
-- [Frameworks](#frameworks) _26 projects_
+- [Full-stack and long-running coding harnesses](#full-stack-and-long-running-coding-harnesses) _14 projects_
+- [Frameworks](#frameworks) _27 projects_
 - [Multi-agent and orchestration](#multi-agent-and-orchestration) _5 projects_
 - [Plugins, MCPs, CLI tools](#plugins-mcps-cli-tools) _10 projects_
-- [Evaluation and benchmarking harnesses](#evaluation-and-benchmarking-harnesses) _15 projects_
+- [Evaluation and benchmarking harnesses](#evaluation-and-benchmarking-harnesses) _17 projects_
 - [Research and task-specific harnesses](#research-and-task-specific-harnesses) _3 projects_
-- [Libraries and SDKs](#libraries-and-sdks) _13 projects_
+- [Libraries and SDKs](#libraries-and-sdks) _15 projects_
 
 ## Explanation
 
@@ -85,6 +85,11 @@ _Spec-driven, multi-session, repo-scoped coding harnesses._
 | 7 | [**Codive**](https://github.com/toliaqat/codive) | Rust binary: CLI + TUI + web client, any LLM, voice input; single-binary speed and MCP so you're not tied to one IDE. | Capability (multi-interface, voice, MCP) |
 | 8 | [**Codex**](https://github.com/openai/codex) | OpenAI's own terminal coding agent; local run, sandboxed execution, multi-provider; the reference implementation for "CLI that writes code." | Mid (reference CLI, sandboxed) |
 | 9 | [**Hydra**](https://github.com/PrimeLocus/Hydra) | Multi-agent dispatcher: routes tasks across Claude, Gemini, Codex with queues and parallel runs; for teams that want one entry point. | Capability (multi-agent dispatch, queues) |
+| 10 | [**OpenHands**](https://github.com/All-Hands-AI/OpenHands) | Dockerized software-engineering agent: bash, editor, browser, micro-agents; the main OSS harness teams self-host when they need autonomous repo work outside a single vendor IDE. | Capability (Docker runtime, multi-surface agent) |
+| 11 | [**SWE-agent**](https://github.com/princeton-nlp/swe-agent) | LM-driven harness built for SWE-bench: edit state, command execution, and issue-focused loop—the reference agent stack next to the benchmark itself. | Capability (SWE-bench pairing, stateful edits) |
+| 12 | [**goose**](https://github.com/block/goose) | Block’s extensible Rust agent: MCP and ACP extensions, recipes, provider choice; a toolkit you bolt capabilities onto rather than a fixed IDE slot. | Mid (extensions, MCP/ACP) |
+| 13 | [**Gemini CLI**](https://github.com/google-gemini/gemini-cli) | Google’s first-party terminal agent for Gemini: plugins and MCP—Google’s parallel to “official CLI that ships code,” not only an API. | Mid (official CLI, plugins, MCP) |
+| 14 | [**Roo Code**](https://github.com/RooVetGit/Roo-Code) | VS Code/Cursor extension (Cline lineage): strong MCP story, custom modes, and a large community fork when you want that workflow without the upstream extension. | Mid (IDE extension, MCP-first) |
 
 ## Frameworks
 
@@ -120,6 +125,7 @@ _General-purpose agent and LLM application frameworks (the app layer, not harnes
 | 24 | [**AgentSilex**](https://github.com/howl-anderson/agentsilex) | ~300 lines of readable agent code on top of LiteLLM; the “I want to see the whole loop” option for learning or minimal production. | Simple (~300 LOC) |
 | 25 | [**Flowise**](https://github.com/FlowiseAI/Flowise) | Drag-and-drop LangChain UI; deploy flows without code. The low-code sibling to Langflow, with a different component and hosting story. | Capability (low-code, drag-drop) |
 | 26 | [**GraphFusionAI**](https://github.com/GraphFusion/graphfusionai) | Modular agent components and examples; small surface for when you want to compose your own graph without a big framework. | Simple (modular, small surface) |
+| 27 | [**browser-use**](https://github.com/browser-use/browser-use) | Python layer over Playwright: natural-language goals become browser actions—web-agent loop without hand-rolling MCP or a custom driver for every site. | Mid (LLM + browser, Playwright) |
 
 ## Multi-agent and orchestration
 
@@ -177,6 +183,8 @@ _Agentic eval systems, reasoning benchmarks, and open agent benchmarks._
 | 13 | [**gaia-agent**](https://github.com/sassarini-marco/gaia-agent) | Modular runner for the GAIA benchmark (450 real-world assistant questions); multi-agent evaluation without the Inspect AI lock-in. | Mid (GAIA runner, modular) |
 | 14 | [**WebVoyager**](https://github.com/MinorJerry/WebVoyager) | End-to-end web agent with LMMs: screenshots + actions on real sites; benchmark on 15 sites, GPT-4V for automatic eval. | Capability (LMMs, screenshots, 15 sites) |
 | 15 | [**inspect_evals**](https://github.com/UKGovernmentBEIS/inspect_evals) | UK AISI/Arcadia/Vector: GAIA and other evals in Inspect AI; level 1–3, sandboxed, tool-calling solvers. | Mid (Inspect AI, UK gov) |
+| 16 | [**inspect_ai**](https://github.com/UKGovernmentBEIS/inspect_ai) | Inspect AI core: composable eval tasks, sandboxes, scorers, and multi-model runs; the framework behind inspect_evals, not just the task bundle. | Capability (eval framework, AISI stack) |
+| 17 | [**Agent Lightning**](https://github.com/microsoft/agent-lightning) | Microsoft’s training-oriented harness: optimization loops for agent behavior—when you need to improve policies over rollouts, not only score a fixed prompt. | Capability (agent training, Microsoft stack) |
 
 ## Research and task-specific harnesses
 
@@ -211,6 +219,8 @@ _Lightweight runtimes, tool loops, and provider-agnostic harness primitives._
 | 11 | [**openai-agents-js**](https://github.com/openai/openai-agents-js) | Official OpenAI Agents SDK for Node/TS: handoffs, guardrails, voice; the JS counterpart to openai-agents-python. | Capability (handoffs, guardrails, voice) |
 | 12 | [**agent-framework**](https://github.com/maxmoundas/agent-framework) | LiteLLM-backed Python with dynamic tool registry, query routing, memory, and Streamlit UI; “full-stack agent app” in one repo. | Capability (tool registry, routing, Streamlit) |
 | 13 | [**agentic-ai**](https://github.com/vorachet/agentic-ai) | Agentic AI stdlib for TypeScript; any LLM, any TS AI SDK; another “thin layer so you own the rest” option. | Simple (thin layer) |
+| 14 | [**E2B**](https://github.com/e2b-dev/E2B) | Firecracker sandboxes for executing agent-generated code; the hosted isolation layer many tool-calling demos use instead of running arbitrary LLM output on your laptop. | Mid (sandbox API, code execution) |
+| 15 | [**Daytona**](https://github.com/daytonaio/daytona) | Elastic dev environments for AI-generated code: workspaces, Git, previews—infra harness between “the model wrote a patch” and “it ran in a real machine.” | Mid (dev env API, isolation) |
 
 <br>
 
