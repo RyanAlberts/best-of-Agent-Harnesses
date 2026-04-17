@@ -11,28 +11,31 @@ configuration:
 categories:
   - category: "progressive-disclosure"
     title: "Progressive disclosure harnesses"
-    subtitle: "Formats, runtimes, and patterns that reveal context, tools, or instructions in layers (index first, details on demand) to control tokens and improve agent focus."
-  - category: "full-stack-coding"
-    title: "Full-stack and long-running coding harnesses"
-    subtitle: "Spec-driven, multi-session, repo-scoped coding harnesses (e.g. GSD, Claude Agent SDK, Crush)."
+    subtitle: "Formats, runtimes, and patterns that reveal context, tools, or instructions in layers—index first, details on demand—to control tokens and improve agent focus (the \"map, not encyclopedia\" principle)."
+  - category: "coding-agent-products"
+    title: "Coding agent products (IDEs, CLIs, full suites)"
+    subtitle: "Turnkey coding agents you install and run: IDE extensions, terminal CLIs, Dockerized workspaces. Each entry notes which part is the harness (the agent loop, tool wiring, approval model) versus the UI shell (VS Code extension, TUI, browser client)."
+  - category: "coding-harness-configs"
+    title: "Coding harness configs and SDKs"
+    subtitle: "Skill packs, slash-command libraries, meta-prompting frameworks, and official SDKs that give you the harness (the agent loop, planning, memory, hooks) without bundling a specific IDE or CLI shell."
   - category: "frameworks"
     title: "Frameworks"
-    subtitle: "General-purpose agent and LLM application frameworks (distinct from harnesses: they are the app layer)."
+    subtitle: "General-purpose agent and LLM application frameworks (the app layer, not harnesses per se)."
   - category: "multi-agent"
     title: "Multi-agent and orchestration"
-    subtitle: "Harnesses and patterns for multi-agent coordination, handoffs, and orchestration."
+    subtitle: "Harnesses and patterns for multi-agent coordination and handoffs."
   - category: "plugins-mcp-cli"
     title: "Plugins, MCPs, CLI tools"
-    subtitle: "IDE plugins, specific MCP servers, and CLI tools that give agents tools and context."
+    subtitle: "IDE plugins, concrete MCP servers, and CLI tools that give agents tools and context."
   - category: "evaluation"
     title: "Evaluation and benchmarking harnesses"
-    subtitle: "Agentic eval systems, reasoning benchmarks (e.g. ARC-AGI), and open agent benchmarks."
+    subtitle: "Agentic eval systems, reasoning benchmarks, and open agent benchmarks."
   - category: "research-task"
     title: "Research and task-specific harnesses"
     subtitle: "Deep research, document QA, and domain-specific agent loops."
   - category: "libraries-sdks"
     title: "Libraries and SDKs"
-    subtitle: "Lightweight agent runtimes, tool loops, and provider-agnostic harness primitives."
+    subtitle: "Lightweight runtimes, tool loops, and provider-agnostic harness primitives."
 
 labels:
   - label: "python"
@@ -66,64 +69,79 @@ projects:
     labels: ["python"]
     category: "progressive-disclosure"
   - name: ToolRAG
-    github_id: antl3x/Toolrag
+    github_id: antl3x/ToolRAG
     category: "progressive-disclosure"
-  # Full-stack and long-running coding harnesses
-  - name: get-shit-done
-    github_id: gsd-build/get-shit-done
-    category: "full-stack-coding"
-  - name: gstack
-    github_id: garrytan/gstack
+  # Coding agent products (IDEs, CLIs, full suites)
+  - name: Cline
+    github_id: cline/cline
     labels: ["javascript"]
-    category: "full-stack-coding"
-  - name: claude-agent-sdk
-    github_id: anthropics/claude-agent-sdk-python
+    category: "coding-agent-products"
+  - name: Roo-Code
+    github_id: RooCodeInc/Roo-Code
+    labels: ["javascript"]
+    category: "coding-agent-products"
+  - name: Codex
+    github_id: openai/codex
+    category: "coding-agent-products"
+  - name: Gemini CLI
+    github_id: google-gemini/gemini-cli
+    labels: ["javascript"]
+    category: "coding-agent-products"
+  - name: crush
+    github_id: charmbracelet/crush
+    category: "coding-agent-products"
+  - name: OpenHands
+    github_id: OpenHands/OpenHands
     labels: ["python"]
-    category: "full-stack-coding"
-  - name: RepoMaster
-    github_id: QuantaAlpha/RepoMaster
+    category: "coding-agent-products"
+  - name: goose
+    github_id: block/goose
+    category: "coding-agent-products"
+  - name: claw-code-agent
+    github_id: HarnessLab/claw-code-agent
     labels: ["python"]
-    category: "full-stack-coding"
+    category: "coding-agent-products"
   - name: coderClaw
     github_id: SeanHogg/coderClaw
     labels: ["javascript"]
-    category: "full-stack-coding"
-  - name: crush
-    github_id: charmbracelet/crush
-    category: "full-stack-coding"
-  - name: cline
-    github_id: cline/cline
+    category: "coding-agent-products"
+  # Coding harness configs and SDKs
+  - name: get-shit-done
+    github_id: gsd-build/get-shit-done
+    category: "coding-harness-configs"
+  - name: GStack
+    github_id: garrytan/gstack
     labels: ["javascript"]
-    category: "full-stack-coding"
-  - name: codive
-    github_id: toliaqat/codive
-    category: "full-stack-coding"
-  - name: codex
-    github_id: openai/codex
-    category: "full-stack-coding"
-  - name: Hydra
-    github_id: PrimeLocus/Hydra
-    category: "full-stack-coding"
-  - name: OpenHands
-    github_id: All-Hands-AI/OpenHands
+    category: "coding-harness-configs"
+  - name: everything-claude-code
+    github_id: affaan-m/everything-claude-code
+    category: "coding-harness-configs"
+  - name: superpowers
+    github_id: obra/superpowers
+    category: "coding-harness-configs"
+  - name: pmstack
+    github_id: RyanAlberts/pmstack
+    category: "coding-harness-configs"
+  - name: Claude Agent SDK
+    github_id: anthropics/claude-agent-sdk-python
     labels: ["python"]
-    category: "full-stack-coding"
+    category: "coding-harness-configs"
+  - name: AutoHarness
+    github_id: aiming-lab/AutoHarness
+    labels: ["python"]
+    category: "coding-harness-configs"
+  - name: RepoMaster
+    github_id: QuantaAlpha/RepoMaster
+    labels: ["python"]
+    category: "coding-harness-configs"
   - name: SWE-agent
-    github_id: princeton-nlp/swe-agent
+    github_id: SWE-agent/SWE-agent
     labels: ["python"]
-    category: "full-stack-coding"
-  - name: goose
-    github_id: block/goose
-    category: "full-stack-coding"
-  - name: gemini-cli
-    github_id: google-gemini/gemini-cli
-    labels: ["javascript"]
-    category: "full-stack-coding"
-  - name: Roo-Code
-    github_id: RooVetGit/Roo-Code
-    labels: ["javascript"]
-    category: "full-stack-coding"
-  # Frameworks (not harnesses)
+    category: "coding-harness-configs"
+  - name: OpenHarness (HKUDS)
+    github_id: HKUDS/OpenHarness
+    category: "coding-harness-configs"
+  # Frameworks
   - name: langgraph
     github_id: langchain-ai/langgraph
     labels: ["python"]
@@ -164,7 +182,7 @@ projects:
     github_id: botpress/botpress
     labels: ["javascript"]
     category: "frameworks"
-  - name: dify
+  - name: Dify
     github_id: langgenius/dify
     labels: ["python"]
     category: "frameworks"
@@ -172,53 +190,46 @@ projects:
     github_id: n8n-io/n8n
     labels: ["javascript"]
     category: "frameworks"
-  - name: Auto-GPT
-    github_id: Significant-Gravitas/Auto-GPT
-    labels: ["python"]
-    category: "frameworks"
-  - name: Auto-GPT-Forge
-    github_id: Significant-Gravitas/Auto-GPT-Forge
+  - name: AutoGPT
+    github_id: Significant-Gravitas/AutoGPT
     labels: ["python"]
     category: "frameworks"
   - name: AIlice
     github_id: myshell-ai/AIlice
     labels: ["python"]
     category: "frameworks"
-  - name: bee-agent-framework
-    github_id: i-am-bee/bee-agent-framework
+  - name: Bee Agent Framework
+    github_id: i-am-bee/beeai-framework
     category: "frameworks"
   - name: agent-squad
-    github_id: awslabs/agent-squad
+    github_id: 2FastLabs/agent-squad
     category: "frameworks"
-  - name: superagentx
+  - name: SuperAgentX
     github_id: superagentxai/superagentx
     labels: ["python"]
     category: "frameworks"
-  - name: agentverse
-    github_id: openbmb/agentverse
+  - name: AgentVerse
+    github_id: OpenBMB/AgentVerse
     labels: ["python"]
     category: "frameworks"
   - name: R2R
     github_id: SciPhi-AI/R2R
     labels: ["python"]
     category: "frameworks"
-  - name: liteswarm
+  - name: LiteSwarm
     github_id: GlyphyAI/liteswarm
     labels: ["python"]
     category: "frameworks"
   - name: AgentStack
-    github_id: AgentOps-AI/AgentStack
+    github_id: agentstack-ai/AgentStack
     category: "frameworks"
-  - name: agentsilex
+  - name: AgentSilex
     github_id: howl-anderson/agentsilex
     labels: ["python"]
     category: "frameworks"
   - name: Flowise
     github_id: FlowiseAI/Flowise
     labels: ["javascript"]
-    category: "frameworks"
-  - name: GraphFusionAI
-    github_id: GraphFusion/graphfusionai
     category: "frameworks"
   - name: browser-use
     github_id: browser-use/browser-use
@@ -250,15 +261,22 @@ projects:
     github_id: Aider-AI/aider
     labels: ["python"]
     category: "plugins-mcp-cli"
+  - name: agentlog
+    github_id: RyanAlberts/agentlog
+    labels: ["python"]
+    category: "plugins-mcp-cli"
+  - name: claude-mem
+    github_id: thedotmack/claude-mem
+    category: "plugins-mcp-cli"
   - name: Better-OpenCodeMCP
     github_id: ajhcs/Better-OpenCodeMCP
     labels: ["javascript"]
     category: "plugins-mcp-cli"
-  - name: mcp-python-sdk
+  - name: MCP Python SDK
     github_id: modelcontextprotocol/python-sdk
     labels: ["python"]
     category: "plugins-mcp-cli"
-  - name: mcp-typescript-sdk
+  - name: MCP TypeScript SDK
     github_id: modelcontextprotocol/typescript-sdk
     labels: ["javascript"]
     category: "plugins-mcp-cli"
@@ -266,7 +284,7 @@ projects:
     github_id: continuedev/continue
     labels: ["javascript"]
     category: "plugins-mcp-cli"
-  - name: mcp-inspector
+  - name: MCP Inspector
     github_id: modelcontextprotocol/inspector
     labels: ["javascript"]
     category: "plugins-mcp-cli"
@@ -274,7 +292,7 @@ projects:
     github_id: cyanheads/github-mcp-server
     labels: ["javascript"]
     category: "plugins-mcp-cli"
-  - name: docker-mcp-gateway
+  - name: Docker MCP Gateway
     github_id: docker/mcp-gateway
     category: "plugins-mcp-cli"
   - name: puppeteer-mcp-server
@@ -285,7 +303,7 @@ projects:
     github_id: withLinda/puppeteer-real-browser-mcp-server
     labels: ["javascript"]
     category: "plugins-mcp-cli"
-  # Evaluation and benchmarking (agentic evals)
+  # Evaluation and benchmarking harnesses
   - name: ARC-AGI-2
     github_id: arcprize/ARC-AGI-2
     category: "evaluation"
@@ -297,19 +315,19 @@ projects:
     github_id: GAIR-NLP/AgencyBench
     labels: ["python"]
     category: "evaluation"
-  - name: trail-benchmark
+  - name: TRAIL
     github_id: patronus-ai/trail-benchmark
     category: "evaluation"
   - name: AgentBench
     github_id: THUDM/AgentBench
     labels: ["python"]
     category: "evaluation"
-  - name: webarena
+  - name: WebArena
     github_id: web-arena-x/webarena
     labels: ["python"]
     category: "evaluation"
   - name: SWE-bench
-    github_id: princeton-nlp/SWE-bench
+    github_id: SWE-bench/SWE-bench
     labels: ["python"]
     category: "evaluation"
   - name: SWE-Gym
@@ -317,14 +335,14 @@ projects:
     labels: ["python"]
     category: "evaluation"
   - name: swe-smith
-    github_id: swe-bench/swe-smith
+    github_id: SWE-bench/SWE-smith
     labels: ["python"]
     category: "evaluation"
-  - name: super-benchmark
+  - name: SUPER
     github_id: allenai/super-benchmark
     labels: ["python"]
     category: "evaluation"
-  - name: vitabench
+  - name: VitaBench
     github_id: meituan-longcat/vitabench
     category: "evaluation"
   - name: letta-evals
@@ -337,23 +355,23 @@ projects:
   - name: WebVoyager
     github_id: MinorJerry/WebVoyager
     category: "evaluation"
-  - name: inspect-evals
+  - name: inspect_evals
     github_id: UKGovernmentBEIS/inspect_evals
     category: "evaluation"
   - name: inspect_ai
     github_id: UKGovernmentBEIS/inspect_ai
     labels: ["python"]
     category: "evaluation"
-  - name: agent-lightning
+  - name: Agent Lightning
     github_id: microsoft/agent-lightning
     labels: ["python"]
     category: "evaluation"
-  # Research and task-specific
+  # Research and task-specific harnesses
   - name: openagents
     github_id: OpenAgentsInc/openagents
     category: "research-task"
   - name: multi-scale-agentic-rag-playbook
-    github_id: nvidia-ai-technology-center/multi-scale-agentic-rag-playbook
+    github_id: NVIDIA-AI-Technology-Center/multi-scale-agentic-rag-playbook
     category: "research-task"
   - name: Agentic_RAG_System
     github_id: sriramE5/Agentic_RAG_System
@@ -368,20 +386,20 @@ projects:
     github_id: MaxGfeller/open-harness
     labels: ["javascript"]
     category: "libraries-sdks"
-  - name: vercel-ai
+  - name: vercel/ai
     github_id: vercel/ai
     labels: ["javascript"]
     category: "libraries-sdks"
   - name: agent-harness
-    github_id: haasonsaas/agent-harness
+    github_id: evalops/agent-harness
     labels: ["python"]
     category: "libraries-sdks"
   - name: smolagents
     github_id: huggingface/smolagents
     labels: ["python"]
     category: "libraries-sdks"
-  - name: awesome-ai-agent-lists
-    github_id: awesomelistsio/awesome-ai-agents
+  - name: Community-curated agent lists
+    github_id: brandonhimpfen/awesome-ai-agents
     category: "libraries-sdks"
   - name: agentic
     github_id: transitive-bullshit/agentic
@@ -391,7 +409,7 @@ projects:
     github_id: strands-agents/sdk-python
     labels: ["python"]
     category: "libraries-sdks"
-  - name: litellm
+  - name: LiteLLM
     github_id: BerriAI/litellm
     labels: ["python"]
     category: "libraries-sdks"
@@ -414,6 +432,6 @@ projects:
     github_id: e2b-dev/E2B
     labels: ["python"]
     category: "libraries-sdks"
-  - name: daytona
+  - name: Daytona
     github_id: daytonaio/daytona
     category: "libraries-sdks"
