@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+title: "Best of Agent Harnesses and Harness Techniques"
+message: "If you reference this list in academic work, blog posts, or derivative rankings, please cite it as below."
+type: dataset
+authors:
+  - family-names: "Alberts"
+    given-names: "Ryan Alexander"
+    email: "25306145+RyanAlberts@users.noreply.github.com"
+    orcid: ""
+repository-code: "https://github.com/RyanAlberts/best-of-Agent-Harnesses"
+url: "https://github.com/RyanAlberts/best-of-Agent-Harnesses"
+abstract: >
+  A curated, scored, and weekly-updated list of AI agent harnesses, orchestration
+  frameworks, coding-agent products, meta-prompting/skill stacks, evaluation
+  harnesses, and SDKs. Projects are classified across nine categories and ranked
+  by relevance to harness concerns (environment, orchestration, lifecycle,
+  guardrails) alongside GitHub activity signals.
+keywords:
+  - agent-harness
+  - agentic-ai
+  - llm-agents
+  - ai-agents
+  - claude-code
+  - mcp
+  - best-of-list
+license: CC-BY-SA-4.0
