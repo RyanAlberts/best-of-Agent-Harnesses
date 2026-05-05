@@ -94,14 +94,14 @@ PROJECTS: dict[str, list[Project]] = {
         Project("crush", "charmbracelet/crush",
                 "Charm's terminal coding agent (Charm's fork of the original OpenCode). The **harness** is the tool-calling loop with session persistence; the Bubble Tea TUI is the shell.",
                 "Mid (terminal agent, TUI)", oss="⚠️ FSL-1.1-MIT"),
-        Project("opencode", "sst/opencode",
-                "SST's open-source terminal coding agent—the line of OpenCode that kept the name. The **harness** is a multi-provider tool-call loop (Claude, OpenAI, Gemini, local) with strong plugin and MCP support; the TUI is the shell. 100% OSS, very actively shipped.",
+        Project("opencode", "anomalyco/opencode",
+                "Open-source terminal coding agent (formerly `sst/opencode`; transferred to anomalyco). The **harness** is a multi-provider tool-call loop (Claude, OpenAI, Gemini, local) with strong plugin and MCP support; the TUI is the shell. 100% OSS, very actively shipped.",
                 "Mid (multi-provider, plugins, MCP)", labels=["javascript"]),
         Project("OpenHands", "OpenHands/OpenHands",
                 "Dockerized software-engineering agent. The **harness** is the bash/editor/browser toolset with micro-agents and event-stream session bridging; Docker is the sandbox. Main OSS choice for teams self-hosting autonomous repo work.",
                 "Capability (Docker runtime, multi-surface agent)", oss="⚠️ (multi-license)", labels=["python"]),
-        Project("goose", "block/goose",
-                "Block's extensible Rust agent. The **harness** is the MCP/ACP extension model with recipes and provider choice; there's no fixed UI slot—you bolt it into whatever shell you use.",
+        Project("goose", "aaif-goose/goose",
+                "Block-originated Rust agent, now stewarded by the Linux Foundation's Agentic AI Foundation (`aaif-goose/goose`). The **harness** is the MCP/ACP extension model with recipes and provider choice; there's no fixed UI slot—you bolt it into whatever shell you use.",
                 "Mid (extensions, MCP/ACP)"),
         Project("claw-code-agent", "HarnessLab/claw-code-agent",
                 "Python reimplementation of the Claude Code agent architecture with zero external dependencies; interactive chat, streaming, plugin runtime, nested agent delegation, cost tracking, MCP transport—portable harness without the Rust/TS toolchain.",
@@ -118,7 +118,7 @@ PROJECTS: dict[str, list[Project]] = {
                 "Garry Tan's Claude Code skill stack: 23 slash-command modes (CEO/eng/design review, QA, ship, browse, retro, …) that structure one assistant as a virtual engineering team. Daily driver while running YC.",
                 "Capability (multi-role slash-command harness)", labels=["javascript"]),
         Project("everything-claude-code", "affaan-m/everything-claude-code",
-                "The breakout 2026 harness pack for Claude Code (approaching 160k stars): 28 specialized subagents, 119 reusable skills, 60 slash commands, 34 rules, 20+ automated hooks. Ships a full \"AI engineering team\" as config.",
+                "The breakout 2026 harness pack for Claude Code: 28 specialized subagents, 119 reusable skills, 60 slash commands, 34 rules, 20+ automated hooks. Ships a full \"AI engineering team\" as config.",
                 "Capability (subagents + skills + hooks)"),
         Project("superpowers", "obra/superpowers",
                 "Performance-oriented harness pack for Claude Code, Codex, OpenCode, Cursor: skills, instincts, memory, security, research-first workflows. Treats harness engineering itself as the performance lever.",
@@ -170,7 +170,7 @@ PROJECTS: dict[str, list[Project]] = {
         Project("langflow", "langflow-ai/langflow",
                 "Low-code UI to build and deploy LangChain/LangGraph flows; visual DAG editor and one-click run.",
                 "Capability (low-code, visual)", labels=["python"]),
-        Project("rasa", "rasa/rasa",
+        Project("rasa", "RasaHQ/rasa",
                 "Conversational AI stack (NLU, dialogue, actions); long-standing OSS choice for chat and voice bots.",
                 "Capability (full stack)", labels=["python"]),
         Project("botpress", "botpress/botpress",
@@ -384,6 +384,141 @@ PROJECTS["coding-agent-products"][1].description = (
 )
 
 
+# Stars + examples link, keyed by github_id (post-move where applicable).
+# Star counts captured 2026-05-05 from the GitHub API; refresh by re-running
+# scripts/fetch_metadata.py (or the inline batched search_repositories calls).
+# Examples link: official docs, examples folder, leaderboard, or paper —
+# whichever is the most useful "show me it in action" link for that project.
+META: dict[str, tuple[int, str]] = {
+    # progressive-disclosure
+    "agentsmd/agents.md": (20970, "https://agents.md"),
+    "PatrickJS/awesome-cursorrules": (39379, "https://github.com/PatrickJS/awesome-cursorrules#rules"),
+    "xfey/MCP-Zero": (480, "https://arxiv.org/abs/2506.01056"),
+    "langchain-ai/langgraph-bigtool": (533, "https://github.com/langchain-ai/langgraph-bigtool#example-usage"),
+    "spring-ai-community/spring-ai-tool-search-tool": (66, "https://github.com/spring-ai-community/spring-ai-tool-search-tool#examples"),
+    "Reason-Wang/ToolGen": (177, "https://github.com/Reason-Wang/ToolGen#quick-start"),
+    "antl3x/ToolRAG": (22, "https://github.com/antl3x/ToolRAG#quick-start"),
+    # coding-agent-products
+    "cline/cline": (61360, "https://docs.cline.bot/"),
+    "RooCodeInc/Roo-Code": (23861, "https://docs.roocode.com/"),
+    "openai/codex": (79955, "https://developers.openai.com/codex"),
+    "google-gemini/gemini-cli": (103136, "https://github.com/google-gemini/gemini-cli/tree/main/docs"),
+    "charmbracelet/crush": (23853, "https://charm.land/blog/crush-launch/"),
+    "anomalyco/opencode": (154703, "https://opencode.ai/docs"),
+    "OpenHands/OpenHands": (72618, "https://docs.all-hands.dev/"),
+    "aaif-goose/goose": (43775, "https://block.github.io/goose/docs/quickstart"),
+    "HarnessLab/claw-code-agent": (453, "https://github.com/HarnessLab/claw-code-agent#getting-started"),
+    "SeanHogg/coderClaw": (3, "https://github.com/SeanHogg/coderClaw#readme"),
+    # coding-harness-configs
+    "gsd-build/get-shit-done": (59953, "https://get-shit-done.dev"),
+    "garrytan/gstack": (89197, "https://github.com/garrytan/gstack#getting-started"),
+    "affaan-m/everything-claude-code": (173319, "https://github.com/affaan-m/everything-claude-code#quickstart"),
+    "obra/superpowers": (178370, "https://github.com/obra/superpowers#quickstart"),
+    "RyanAlberts/pmstack": (0, "https://github.com/RyanAlberts/pmstack#quickstart"),
+    "anthropics/claude-agent-sdk-python": (6665, "https://github.com/anthropics/claude-agent-sdk-demos"),
+    "aiming-lab/AutoHarness": (266, "https://github.com/aiming-lab/AutoHarness#quickstart"),
+    "QuantaAlpha/RepoMaster": (521, "https://github.com/QuantaAlpha/RepoMaster#examples"),
+    "SWE-agent/SWE-agent": (19133, "https://swe-agent.com/latest/usage/"),
+    "HKUDS/OpenHarness": (11877, "https://github.com/HKUDS/OpenHarness#getting-started"),
+    "anthropics/skills": (128103, "https://github.com/anthropics/skills/tree/main"),
+    # frameworks
+    "langchain-ai/langgraph": (31187, "https://langchain-ai.github.io/langgraph/tutorials/"),
+    "langchain-ai/langchain": (135776, "https://python.langchain.com/docs/tutorials/"),
+    "run-llama/llama_index": (49127, "https://docs.llamaindex.ai/en/stable/examples/"),
+    "microsoft/semantic-kernel": (27833, "https://github.com/microsoft/semantic-kernel/tree/main/python/samples"),
+    "mastra-ai/mastra": (23570, "https://mastra.ai/examples"),
+    "agno-agi/agno": (39908, "https://docs.agno.com/examples/introduction"),
+    "letta-ai/letta": (22430, "https://docs.letta.com/quickstart"),
+    "langflow-ai/langflow": (147688, "https://docs.langflow.org/tutorials"),
+    "RasaHQ/rasa": (21147, "https://rasa.com/docs/learn/concepts/"),
+    "botpress/botpress": (14669, "https://botpress.com/docs"),
+    "langgenius/dify": (140080, "https://docs.dify.ai/"),
+    "n8n-io/n8n": (186698, "https://docs.n8n.io/advanced-ai/examples/"),
+    "Significant-Gravitas/AutoGPT": (183987, "https://docs.agpt.co/"),
+    "myshell-ai/AIlice": (1406, "https://github.com/myshell-ai/AIlice#examples"),
+    "i-am-bee/beeai-framework": (3242, "https://framework.beeai.dev/"),
+    "2FastLabs/agent-squad": (7606, "https://2fastlabs.github.io/agent-squad/"),
+    "superagentxai/superagentx": (191, "https://docs.superagentx.ai/"),
+    "OpenBMB/AgentVerse": (5030, "https://github.com/OpenBMB/AgentVerse#examples"),
+    "SciPhi-AI/R2R": (7799, "https://r2r-docs.sciphi.ai/"),
+    "google/adk-python": (19431, "https://google.github.io/adk-docs/"),
+    "agentstack-ai/AgentStack": (2137, "https://docs.agentstack.sh/"),
+    "howl-anderson/agentsilex": (450, "https://github.com/howl-anderson/agentsilex#examples"),
+    "FlowiseAI/Flowise": (52530, "https://docs.flowiseai.com/"),
+    "browser-use/browser-use": (92105, "https://docs.browser-use.com/examples/"),
+    # multi-agent
+    "openai/openai-agents-python": (25868, "https://github.com/openai/openai-agents-python/tree/main/examples"),
+    "crewAIInc/crewAI": (50619, "https://github.com/crewAIInc/crewAI-examples"),
+    "microsoft/autogen": (57703, "https://microsoft.github.io/autogen/dev/user-guide/"),
+    "MervinPraison/PraisonAI": (7046, "https://docs.praison.ai/cookbooks"),
+    "THUDM/AgentRL": (281, "https://github.com/THUDM/AgentRL#quick-start"),
+    # plugins-mcp-cli
+    "Aider-AI/aider": (44325, "https://aider.chat/docs/"),
+    "RyanAlberts/agentlog": (0, "https://github.com/RyanAlberts/agentlog#quickstart"),
+    "thedotmack/claude-mem": (72031, "https://github.com/thedotmack/claude-mem#quickstart"),
+    "ajhcs/Better-OpenCodeMCP": (6, "https://github.com/ajhcs/Better-OpenCodeMCP#readme"),
+    "modelcontextprotocol/python-sdk": (22878, "https://github.com/modelcontextprotocol/python-sdk/tree/main/examples"),
+    "modelcontextprotocol/typescript-sdk": (12341, "https://github.com/modelcontextprotocol/typescript-sdk/tree/main/examples"),
+    "continuedev/continue": (32965, "https://docs.continue.dev/"),
+    "modelcontextprotocol/inspector": (9654, "https://github.com/modelcontextprotocol/inspector#readme"),
+    "github/github-mcp-server": (29507, "https://github.com/github/github-mcp-server#tools"),
+    "modelcontextprotocol/registry": (6770, "https://registry.modelcontextprotocol.io"),
+    "docker/mcp-gateway": (1378, "https://docs.docker.com/ai/mcp-gateway/"),
+    "withLinda/puppeteer-real-browser-mcp-server": (21, "https://github.com/withLinda/puppeteer-real-browser-mcp-server#readme"),
+    # evaluation
+    "arcprize/ARC-AGI-2": (697, "https://arcprize.org/"),
+    "arcprize/arc-agi-benchmarking": (348, "https://github.com/arcprize/arc-agi-benchmarking#getting-started"),
+    "GAIR-NLP/AgencyBench": (80, "https://github.com/GAIR-NLP/AgencyBench#leaderboard"),
+    "patronus-ai/trail-benchmark": (18, "https://huggingface.co/datasets/PatronusAI/TRAIL"),
+    "THUDM/AgentBench": (3387, "https://github.com/THUDM/AgentBench#leaderboard"),
+    "web-arena-x/webarena": (1451, "https://webarena.dev/"),
+    "SWE-bench/SWE-bench": (4837, "https://www.swebench.com/"),
+    "SWE-Gym/SWE-Gym": (672, "https://github.com/SWE-Gym/SWE-Gym#quick-start"),
+    "SWE-bench/SWE-smith": (640, "https://swesmith.com/"),
+    "allenai/super-benchmark": (51, "https://huggingface.co/datasets/allenai/super"),
+    "meituan-longcat/vitabench": (124, "https://github.com/meituan-longcat/vitabench#tasks"),
+    "letta-ai/letta-evals": (70, "https://docs.letta.com/api-reference/evaluations"),
+    "MinorJerry/WebVoyager": (1079, "https://github.com/MinorJerry/WebVoyager#quick-start"),
+    "UKGovernmentBEIS/inspect_evals": (479, "https://ukgovernmentbeis.github.io/inspect_evals/"),
+    "UKGovernmentBEIS/inspect_ai": (1999, "https://inspect.aisi.org.uk/"),
+    "microsoft/agent-lightning": (17089, "https://github.com/microsoft/agent-lightning/tree/main/examples"),
+    # research-task
+    "assafelovic/gpt-researcher": (26857, "https://docs.gptr.dev/"),
+    "OpenAgentsInc/openagents": (414, "https://openagents.com/"),
+    # libraries-sdks
+    "langchain-ai/deepagents": (22246, "https://docs.langchain.com/labs/deep-agents/overview"),
+    "pydantic/pydantic-ai": (16838, "https://ai.pydantic.dev/examples/"),
+    "MaxGfeller/open-harness": (498, "https://github.com/MaxGfeller/open-harness#examples"),
+    "vercel/ai": (24009, "https://ai-sdk.dev/examples"),
+    "huggingface/smolagents": (27080, "https://huggingface.co/docs/smolagents/examples"),
+    "strands-agents/sdk-python": (5773, "https://strandsagents.com/latest/documentation/docs/examples/"),
+    "openai/openai-agents-js": (2931, "https://github.com/openai/openai-agents-js/tree/main/examples"),
+    "BerriAI/litellm": (45683, "https://docs.litellm.ai/docs/"),
+    "ComposioHQ/composio": (28055, "https://docs.composio.dev/"),
+    "mem0ai/mem0": (54764, "https://docs.mem0.ai/examples/overview"),
+    "cloudflare/agents": (4878, "https://developers.cloudflare.com/agents/getting-started/"),
+    "e2b-dev/E2B": (12049, "https://e2b.dev/docs"),
+    "daytonaio/daytona": (72379, "https://www.daytona.io/docs/"),
+    "brandonhimpfen/awesome-ai-agents": (10, "https://github.com/brandonhimpfen/awesome-ai-agents#readme"),
+}
+
+
+def stars_for(github_id: str) -> int:
+    return META.get(github_id, (0, ""))[0]
+
+
+def examples_for(github_id: str) -> str:
+    return META.get(github_id, (0, ""))[1] or f"https://github.com/{github_id}#readme"
+
+
+def format_stars(n: int) -> str:
+    if n >= 1000:
+        if n >= 100000:
+            return f"{round(n/1000)}k"
+        return f"{n/1000:.1f}k".replace(".0k", "k")
+    return str(n)
+
+
 def generate_yaml() -> str:
     lines = [
         "configuration:",
@@ -479,18 +614,10 @@ def generate_readme() -> str:
         "",
         "## Explanation",
         "",
+        "- **⭐ Stars:** GitHub star count, captured 2026-05-05. Each table is sorted by stars descending. Click a star count to jump to the GitHub repo's stargazers page.",
+        "- **Examples:** A link to the project in action — official docs, examples folder, leaderboard, or paper — whichever is the most useful \"show me how it works\" link.",
         "- **Simplicity ↔ capability:** Where each project sits on the axis from minimal/simple (lean API, format only, thin layer) to high capability (full platform, many features, kitchen-sink).",
-        "- **OSS:** ✅ = standard open-source license (MIT/Apache/BSD/GPL/MPL/AGPL/CC0). ⚠️ = source-available or restricted (e.g. n8n Fair-code, Elastic-2.0, Polyform). ❓ = no license file or unclear terms.",
-        "- 🥇🥈🥉&nbsp; Combined project-quality score",
-        "- ⭐️&nbsp; Star count from GitHub",
-        "- 🐣&nbsp; New project _(less than 6 months old)_",
-        "- 💤&nbsp; Inactive project _(6 months no activity)_",
-        "- 💀&nbsp; Dead project _(12 months no activity)_",
-        "- 📈📉&nbsp; Project is trending up or down",
-        "- 👨‍💻&nbsp; Contributors count from GitHub",
-        "- 🔀&nbsp; Fork count from GitHub",
-        "- 📋&nbsp; Issue count from GitHub",
-        "- ⏱️&nbsp; Last update timestamp on package manager",
+        "- **Open source:** ✅ = standard open-source license (MIT/Apache/BSD/GPL/MPL/AGPL/CC0). ⚠️ = source-available or restricted (e.g. n8n Fair-code, Elastic-2.0, Polyform). ❓ = no license file or unclear terms.",
         "",
         "<br>",
         "",
@@ -503,10 +630,14 @@ def generate_readme() -> str:
         body.append("")
         body.append(f"_{subtitle}_")
         body.append("")
-        body.append("| # | Project | Description | OSS | Simplicity ↔ capability |")
-        body.append("|---|---------|-------------|-----|-------------------------|")
-        for i, p in enumerate(PROJECTS[cat_id], 1):
-            row = f"| {i} | [**{p.display_name}**](https://github.com/{p.github_id}) | {p.description} | {p.oss} | {p.axis} |"
+        body.append("| # | Project | ⭐ Stars | Description | Open source | Simplicity ↔ capability | Examples |")
+        body.append("|---|---------|---------|-------------|-------------|-------------------------|----------|")
+        sorted_projects = sorted(PROJECTS[cat_id], key=lambda x: stars_for(x.github_id), reverse=True)
+        for i, p in enumerate(sorted_projects, 1):
+            stars = stars_for(p.github_id)
+            stars_cell = f"[{format_stars(stars)}](https://github.com/{p.github_id}/stargazers)"
+            examples_cell = f"[Examples]({examples_for(p.github_id)})"
+            row = f"| {i} | [**{p.display_name}**](https://github.com/{p.github_id}) | {stars_cell} | {p.description} | {p.oss} | {p.axis} | {examples_cell} |"
             body.append(row)
         body.append("")
     body += [
