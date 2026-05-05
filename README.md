@@ -10,7 +10,7 @@
 
 <p align="center">
     <a href="https://best-of.org" title="Best-of Badge"><img src="http://bit.ly/3o3EHNN"></a>
-    <a href="#contents" title="Project Count"><img src="https://img.shields.io/badge/projects-102-blue.svg?color=5ac4bf"></a>
+    <a href="#contents" title="Project Count"><img src="https://img.shields.io/badge/projects-101-blue.svg?color=5ac4bf"></a>
     <a href="#contribution" title="Contributions welcome"><img src="https://img.shields.io/badge/contributions-welcome-green.svg"></a>
     <a href="https://github.com/RyanAlberts/best-of-Agent-Harnesses/releases" title="Updates"><img src="https://img.shields.io/github/release-date/RyanAlberts/best-of-Agent-Harnesses?color=green&label=updated"></a>
 </p>
@@ -28,14 +28,14 @@ Better models make harnesses more important: more capabilities mean more failure
 ## Contents
 
 - [Progressive disclosure harnesses](#progressive-disclosure-harnesses) _7 projects_
-- [Coding agent products (IDEs, CLIs, full suites)](#coding-agent-products-ides-clis-full-suites) _9 projects_
-- [Coding harness configs and SDKs](#coding-harness-configs-and-sdks) _10 projects_
+- [Coding agent products (IDEs, CLIs, full suites)](#coding-agent-products-ides-clis-full-suites) _10 projects_
+- [Coding harness configs and SDKs](#coding-harness-configs-and-sdks) _11 projects_
 - [Frameworks](#frameworks) _24 projects_
 - [Multi-agent and orchestration](#multi-agent-and-orchestration) _5 projects_
 - [Plugins, MCPs, CLI tools](#plugins-mcps-cli-tools) _12 projects_
-- [Evaluation and benchmarking harnesses](#evaluation-and-benchmarking-harnesses) _17 projects_
-- [Research and task-specific harnesses](#research-and-task-specific-harnesses) _3 projects_
-- [Libraries and SDKs](#libraries-and-sdks) _15 projects_
+- [Evaluation and benchmarking harnesses](#evaluation-and-benchmarking-harnesses) _16 projects_
+- [Research and task-specific harnesses](#research-and-task-specific-harnesses) _2 projects_
+- [Libraries and SDKs](#libraries-and-sdks) _14 projects_
 
 ## Explanation
 
@@ -82,11 +82,12 @@ _Turnkey coding agents you install and run: IDE extensions, terminal CLIs, Docke
 | 2 | [**Roo Code**](https://github.com/RooCodeInc/Roo-Code) | VS Code/Cursor extension in the Cline lineage. The **harness** is the approval-gated agent with custom modes and a strong MCP story; the IDE is the UI. Popular community fork when you want that workflow without the upstream extension. | ✅ | Mid (IDE extension, MCP-first) |
 | 3 | [**Codex**](https://github.com/openai/codex) | OpenAI's terminal coding agent. The **harness** is the sandboxed tool-call loop with multi-provider support; the CLI is the shell. Reference implementation for "official CLI that ships code." | ✅ | Mid (reference CLI, sandboxed) |
 | 4 | [**Gemini CLI**](https://github.com/google-gemini/gemini-cli) | Google's first-party terminal agent for Gemini. The **harness** is the plugin/MCP tool-call loop; the terminal is the shell—Google's parallel to Claude Code / Codex, not just an API. | ✅ | Mid (official CLI, plugins, MCP) |
-| 5 | [**crush**](https://github.com/charmbracelet/crush) | Charm's terminal coding agent (successor to OpenCode). The **harness** is the tool-calling loop with session persistence; the Bubble Tea TUI is the shell. | ⚠️ FSL-1.1-MIT | Mid (terminal agent, TUI) |
-| 6 | [**OpenHands**](https://github.com/OpenHands/OpenHands) | Dockerized software-engineering agent. The **harness** is the bash/editor/browser toolset with micro-agents and event-stream session bridging; Docker is the sandbox. Main OSS choice for teams self-hosting autonomous repo work. | ⚠️ (multi-license) | Capability (Docker runtime, multi-surface agent) |
-| 7 | [**goose**](https://github.com/block/goose) | Block's extensible Rust agent. The **harness** is the MCP/ACP extension model with recipes and provider choice; there's no fixed UI slot—you bolt it into whatever shell you use. | ✅ | Mid (extensions, MCP/ACP) |
-| 8 | [**claw-code-agent**](https://github.com/HarnessLab/claw-code-agent) | Python reimplementation of the Claude Code agent architecture with zero external dependencies; interactive chat, streaming, plugin runtime, nested agent delegation, cost tracking, MCP transport—portable harness without the Rust/TS toolchain. | ❓ | Capability (pure Python, plugin runtime) |
-| 9 | [**coderClaw**](https://github.com/SeanHogg/coderClaw) | Self-hosted multi-role coding system (Creator, Reviewer, Test, Refactor, etc.) with AST and semantic maps; IDE-agnostic, chat-channel triggers. | ❓ | Capability (multi-role, AST/semantic) |
+| 5 | [**crush**](https://github.com/charmbracelet/crush) | Charm's terminal coding agent (Charm's fork of the original OpenCode). The **harness** is the tool-calling loop with session persistence; the Bubble Tea TUI is the shell. | ⚠️ FSL-1.1-MIT | Mid (terminal agent, TUI) |
+| 6 | [**opencode**](https://github.com/sst/opencode) | SST's open-source terminal coding agent—the line of OpenCode that kept the name. The **harness** is a multi-provider tool-call loop (Claude, OpenAI, Gemini, local) with strong plugin and MCP support; the TUI is the shell. 100% OSS, very actively shipped. | ✅ | Mid (multi-provider, plugins, MCP) |
+| 7 | [**OpenHands**](https://github.com/OpenHands/OpenHands) | Dockerized software-engineering agent. The **harness** is the bash/editor/browser toolset with micro-agents and event-stream session bridging; Docker is the sandbox. Main OSS choice for teams self-hosting autonomous repo work. | ⚠️ (multi-license) | Capability (Docker runtime, multi-surface agent) |
+| 8 | [**goose**](https://github.com/block/goose) | Block's extensible Rust agent. The **harness** is the MCP/ACP extension model with recipes and provider choice; there's no fixed UI slot—you bolt it into whatever shell you use. | ✅ | Mid (extensions, MCP/ACP) |
+| 9 | [**claw-code-agent**](https://github.com/HarnessLab/claw-code-agent) | Python reimplementation of the Claude Code agent architecture with zero external dependencies; interactive chat, streaming, plugin runtime, nested agent delegation, cost tracking, MCP transport—portable harness without the Rust/TS toolchain. | ❓ | Capability (pure Python, plugin runtime) |
+| 10 | [**coderClaw**](https://github.com/SeanHogg/coderClaw) | Self-hosted multi-role coding system (Creator, Reviewer, Test, Refactor, etc.) with AST and semantic maps; IDE-agnostic, chat-channel triggers. | ❓ | Capability (multi-role, AST/semantic) |
 
 ## Coding harness configs and SDKs
 
@@ -106,6 +107,7 @@ _Skill packs, slash-command libraries, meta-prompting frameworks, and official S
 | 8 | [**RepoMaster**](https://github.com/QuantaAlpha/RepoMaster) | Repo-scoped research harness: builds function-call and module-dependency graphs to explore only what's needed; large relative gains on MLE-bench and GitTaskBench with lower token use. | ❓ | Capability (graph-based exploration) |
 | 9 | [**SWE-agent**](https://github.com/SWE-agent/SWE-agent) | LM-driven harness built for SWE-bench: edit state, command execution, and issue-focused loop—the reference agent stack next to the benchmark itself. | ✅ | Capability (SWE-bench pairing, stateful edits) |
 | 10 | [**OpenHarness (HKUDS)**](https://github.com/HKUDS/OpenHarness) | Open agent harness with a built-in personal agent ("Ohmo") that runs across Feishu, Slack, Telegram, and Discord; core tool-use, skills, memory, multi-agent coordination with auto-compaction for multi-day sessions. | ✅ | Capability (personal agent + multi-channel) |
+| 11 | [**Anthropic Skills**](https://github.com/anthropics/skills) | Anthropic's official Agent Skills repository: SKILL.md-based folders (instructions, scripts, resources) Claude dynamically loads on Claude Code, Claude.ai, and the API. The reference for progressive-disclosure skill packs in 2026. | ✅ | Mid (official skills format) |
 
 ## Frameworks
 
@@ -134,7 +136,7 @@ _General-purpose agent and LLM application frameworks (the app layer, not harnes
 | 17 | [**SuperAgentX**](https://github.com/superagentxai/superagentx) | Lightweight multi-agent orchestrator with an AGI-angle; minimal surface, docs-first, for teams that want orchestration without the kitchen sink. | ✅ | Simple (minimal surface) |
 | 18 | [**AgentVerse**](https://github.com/OpenBMB/AgentVerse) | Task-solving and simulation envs for multi-LLM agents; deploy many agents in custom environments without building infra from scratch. | ✅ | Capability (simulation envs, multi-agent) |
 | 19 | [**R2R**](https://github.com/SciPhi-AI/R2R) | RAG-first: hybrid search, knowledge graphs, multimodal; the framework for "production RAG" when you care more about retrieval than chat UI. | ✅ | Capability (production RAG) |
-| 20 | [**LiteSwarm**](https://github.com/GlyphyAI/liteswarm) | Async-only, LiteLLM-backed Python; dynamic agent switching and type-safe context—for devs who want 100+ models without LangGraph's weight. | ✅ | Mid (100+ models, dynamic switching) |
+| 20 | [**Google ADK**](https://github.com/google/adk-python) | Google's official Agent Development Kit: code-first Python toolkit for building, evaluating, and deploying agents. Optimized for Gemini but model-agnostic; deploys to Cloud Run / Vertex AI; ships a dev UI with eval and a code-execution sandbox. | ✅ | Capability (official Google SDK, eval, deploy) |
 | 21 | [**AgentStack**](https://github.com/agentstack-ai/AgentStack) | Scaffolds full agent projects; plugs in CrewAI, LangGraph, OpenAI Swarm, LlamaStack and wires AgentOps observability from day one. | ✅ | Capability (scaffold, multi-backend) |
 | 22 | [**AgentSilex**](https://github.com/howl-anderson/agentsilex) | ~300 lines of readable agent code on top of LiteLLM; the "I want to see the whole loop" option for learning or minimal production. | ✅ | Simple (~300 LOC) |
 | 23 | [**Flowise**](https://github.com/FlowiseAI/Flowise) | Drag-and-drop LangChain UI; deploy flows without code. The low-code sibling to Langflow, with a different component and hosting story. | ⚠️ Apache+CLA | Capability (low-code, drag-drop) |
@@ -170,9 +172,9 @@ _IDE plugins, concrete MCP servers, and CLI tools that give agents tools and con
 | 6 | [**MCP TypeScript SDK**](https://github.com/modelcontextprotocol/typescript-sdk) | Official MCP implementation for Node/TS; reference for the protocol. | ✅ | Simple (protocol reference) |
 | 7 | [**continue**](https://github.com/continuedev/continue) | Open-source IDE extension (VS Code, JetBrains); in-editor completion and chat with local or API models. | ✅ | Capability (IDE extension, multi-editor) |
 | 8 | [**MCP Inspector**](https://github.com/modelcontextprotocol/inspector) | GUI to test and debug MCP servers; inspect tools, resources, and prompts. | ✅ | Simple (debug GUI) |
-| 9 | [**github-mcp-server**](https://github.com/cyanheads/github-mcp-server) | MCP server for GitHub: repos, issues, PRs, code search; so your agent can "use GitHub" without hand-rolled API glue. | ✅ | Mid (GitHub API surface) |
-| 10 | [**Docker MCP Gateway**](https://github.com/docker/mcp-gateway) | Docker's official MCP CLI plugin / gateway; container-aware MCP tooling from Docker (replaces deprecated `docker/mcp-servers` path). | ✅ | Mid (Docker-aware MCPs) |
-| 11 | [**puppeteer-mcp-server**](https://github.com/merajmehrabi/puppeteer-mcp-server) | Browser automation via MCP: tabs, screenshots, forms, JS execution; the one that connects to existing Chrome for dev/debug. | ✅ | Mid (browser automation) |
+| 9 | [**github-mcp-server**](https://github.com/github/github-mcp-server) | GitHub's official MCP server (Go): repos, issues, PRs, code search, Actions. Replaces the older community `cyanheads/github-mcp-server` as the canonical way to give agents GitHub access. | ✅ | Mid (official GitHub MCP) |
+| 10 | [**MCP Registry**](https://github.com/modelcontextprotocol/registry) | Official, community-driven registry for MCP servers—the "app store" MCP clients use to discover servers. Maintained by Anthropic + ecosystem maintainers; v0.1 API frozen, production-grade. | ✅ | Mid (official discovery layer) |
+| 11 | [**Docker MCP Gateway**](https://github.com/docker/mcp-gateway) | Docker's official MCP CLI plugin / gateway; container-aware MCP tooling from Docker (replaces deprecated `docker/mcp-servers` path). | ✅ | Mid (Docker-aware MCPs) |
 | 12 | [**puppeteer-real-browser-mcp**](https://github.com/withLinda/puppeteer-real-browser-mcp-server) | Puppeteer MCP with real-browser and anti-detection; for agents that need to drive sites that block headless. | ❓ | Mid (real browser, anti-detect) |
 
 ## Evaluation and benchmarking harnesses
@@ -195,11 +197,10 @@ _Agentic eval systems, reasoning benchmarks, and open agent benchmarks._
 | 10 | [**SUPER**](https://github.com/allenai/super-benchmark) | Agents that set up and run ML/NLP from GitHub repos; 45 expert problems, 152 masked tasks, 602 AutoGen tasks; Docker-based. | ✅ | Capability (ML/NLP repos, Docker) |
 | 11 | [**VitaBench**](https://github.com/meituan-longcat/vitabench) | ICLR'26: 66 tools, real-world apps (delivery, travel, retail); 100 cross-scenario + 300 single-scenario tasks; adopted by Qwen/Seed. | ✅ | Capability (66 tools, cross-scenario) |
 | 12 | [**letta-evals**](https://github.com/letta-ai/letta-evals) | Eval harness for stateful Letta agents; configurable suites and grading (LLM or rule-based) so you can measure what you ship. | ✅ | Mid (Letta-specific harness) |
-| 13 | [**gaia-agent**](https://github.com/sassarini-marco/gaia-agent) | Modular runner for the GAIA benchmark (450 real-world assistant questions); multi-agent evaluation without the Inspect AI lock-in. | ✅ | Mid (GAIA runner, modular) |
-| 14 | [**WebVoyager**](https://github.com/MinorJerry/WebVoyager) | End-to-end web agent with LMMs: screenshots + actions on real sites; benchmark on 15 sites, GPT-4V for automatic eval. | ✅ | Capability (LMMs, screenshots, 15 sites) |
-| 15 | [**inspect_evals**](https://github.com/UKGovernmentBEIS/inspect_evals) | UK AISI/Arcadia/Vector: GAIA and other evals in Inspect AI; level 1–3, sandboxed, tool-calling solvers. | ✅ | Mid (Inspect AI, UK gov) |
-| 16 | [**inspect_ai**](https://github.com/UKGovernmentBEIS/inspect_ai) | Inspect AI core: composable eval tasks, sandboxes, scorers, and multi-model runs; the framework behind inspect_evals, not just the task bundle. | ✅ | Capability (eval framework, AISI stack) |
-| 17 | [**Agent Lightning**](https://github.com/microsoft/agent-lightning) | Microsoft's training-oriented harness: optimization loops for agent behavior—when you need to improve policies over rollouts, not only score a fixed prompt. | ✅ | Capability (agent training, Microsoft stack) |
+| 13 | [**WebVoyager**](https://github.com/MinorJerry/WebVoyager) | End-to-end web agent with LMMs: screenshots + actions on real sites; benchmark on 15 sites, GPT-4V for automatic eval. | ✅ | Capability (LMMs, screenshots, 15 sites) |
+| 14 | [**inspect_evals**](https://github.com/UKGovernmentBEIS/inspect_evals) | UK AISI/Arcadia/Vector: GAIA and other evals in Inspect AI; level 1–3, sandboxed, tool-calling solvers. | ✅ | Mid (Inspect AI, UK gov) |
+| 15 | [**inspect_ai**](https://github.com/UKGovernmentBEIS/inspect_ai) | Inspect AI core: composable eval tasks, sandboxes, scorers, and multi-model runs; the framework behind inspect_evals, not just the task bundle. | ✅ | Capability (eval framework, AISI stack) |
+| 16 | [**Agent Lightning**](https://github.com/microsoft/agent-lightning) | Microsoft's training-oriented harness: optimization loops for agent behavior—when you need to improve policies over rollouts, not only score a fixed prompt. | ✅ | Capability (agent training, Microsoft stack) |
 
 ## Research and task-specific harnesses
 
@@ -209,9 +210,8 @@ _Deep research, document QA, and domain-specific agent loops._
 
 | # | Project | Description | OSS | Simplicity ↔ capability |
 |---|---------|-------------|-----|-------------------------|
-| 1 | [**openagents**](https://github.com/OpenAgentsInc/openagents) | Platform for autonomous agents and autopilot-style workflows; decentralized/Nostr-oriented. | ✅ | Capability (platform, decentralized) |
-| 2 | [**multi-scale-agentic-rag-playbook**](https://github.com/NVIDIA-AI-Technology-Center/multi-scale-agentic-rag-playbook) | NVIDIA's playbook: RAG at different scales with LangGraph agents, abstract search, and query routing—reference architecture, not a product. | ✅ | Mid (playbook, reference arch) |
-| 3 | [**Agentic_RAG_System**](https://github.com/sriramE5/Agentic_RAG_System) | Ollama + LangChain, FAISS/BM25/RRF retrieval and an agentic reasoning loop; one concrete stack for "RAG that corrects itself." | ❓ | Mid (Ollama + LangChain stack) |
+| 1 | [**gpt-researcher**](https://github.com/assafelovic/gpt-researcher) | Autonomous deep-research agent: web + local sources, citation-grounded reports, multi-agent and deep-research modes. The reference open-source research harness. | ✅ | Capability (deep research, multi-agent) |
+| 2 | [**openagents**](https://github.com/OpenAgentsInc/openagents) | Platform for autonomous agents and autopilot-style workflows; decentralized/Nostr-oriented (Pylon runtime, actively shipped in 2026). | ✅ | Capability (platform, decentralized) |
 
 ## Libraries and SDKs
 
@@ -221,21 +221,20 @@ _Lightweight runtimes, tool loops, and provider-agnostic harness primitives._
 
 | # | Project | Description | OSS | Simplicity ↔ capability |
 |---|---------|-------------|-----|-------------------------|
-| 1 | [**pydantic-ai**](https://github.com/pydantic/pydantic-ai) | Type-safe Python agents with Pydantic I/O; multi-provider, MCP, Logfire observability, and human-in-the-loop. | ✅ | Capability (type-safe, MCP, Logfire) |
-| 2 | [**open-harness**](https://github.com/MaxGfeller/open-harness) | TypeScript Agent class on Vercel AI SDK; streaming events, filesystem/bash tools, MCP, and subagent delegation. | ✅ | Capability (streaming, tools, subagents) |
-| 3 | [**vercel/ai**](https://github.com/vercel/ai) | React and Node SDK for streaming, tool calls, and agent-style UIs; provider-agnostic. | ✅ | Mid (React/Node SDK, provider-agnostic) |
-| 4 | [**agent-harness**](https://github.com/evalops/agent-harness) | Thin Python shim to swap OpenAI vs Anthropic agent SDKs behind one interface. | ✅ | Simple (thin shim) |
+| 1 | [**deepagents**](https://github.com/langchain-ai/deepagents) | LangChain's Python+TypeScript agent harness on top of LangGraph: planning tool, virtual filesystem, shell sandbox, sub-agent spawning—the "Claude Code-style" harness as a reusable library. | ✅ | Capability (planning, files, sub-agents) |
+| 2 | [**pydantic-ai**](https://github.com/pydantic/pydantic-ai) | Type-safe Python agents with Pydantic I/O; multi-provider, MCP, Logfire observability, and human-in-the-loop. | ✅ | Capability (type-safe, MCP, Logfire) |
+| 3 | [**open-harness**](https://github.com/MaxGfeller/open-harness) | TypeScript Agent class on Vercel AI SDK; streaming events, filesystem/bash tools, MCP, and subagent delegation. | ✅ | Capability (streaming, tools, subagents) |
+| 4 | [**vercel/ai**](https://github.com/vercel/ai) | React and Node SDK for streaming, tool calls, and agent-style UIs; provider-agnostic. | ✅ | Mid (React/Node SDK, provider-agnostic) |
 | 5 | [**smolagents**](https://github.com/huggingface/smolagents) | Code-as-action agents: model outputs Python executed in sandbox (E2B, Modal, etc.); ~1k LOC core. | ✅ | Mid (code-as-action, ~1k LOC) |
-| 6 | [**Community-curated agent lists**](https://github.com/brandonhimpfen/awesome-ai-agents) | Broader directories: e.g. [brandonhimpfen/awesome-ai-agents](https://github.com/brandonhimpfen/awesome-ai-agents), [axioma-ai-labs/awesome-ai-agent-frameworks](https://github.com/axioma-ai-labs/awesome-ai-agent-frameworks), [mb-mal/awesome-ai-agents-frameworks](https://github.com/mb-mal/awesome-ai-agents-frameworks)—differ by scope and update cadence. | ❓ | Simple (curated lists) |
-| 7 | [**agentic**](https://github.com/transitive-bullshit/agentic) | TypeScript agent stdlib: works with any LLM and the TS AI SDK; few abstractions, so you own the loop and the UI. (archived Feb 2026.) | ✅ | Simple (stdlib, you own loop) |
-| 8 | [**strands-agents**](https://github.com/strands-agents/sdk-python) | Model-driven Python SDK; decorators for tools, native MCP, multi-agent; "minimal code" without sacrificing provider choice. | ✅ | Mid (decorators, MCP, minimal code) |
-| 9 | [**LiteLLM**](https://github.com/BerriAI/litellm) | One interface to 100+ LLMs; routing, caching, budgets. Not an agent framework—the pipe every agent framework uses. | ✅ | Simple (LLM pipe only) |
-| 10 | [**litellm2**](https://github.com/markolofsen/litellm2) | LiteLLM plus structured Pydantic outputs, budget controls, and agent-style tool loops; OpenRouter-default option. | ✅ | Mid (LiteLLM + tool loops) |
-| 11 | [**openai-agents-js**](https://github.com/openai/openai-agents-js) | Official OpenAI Agents SDK for Node/TS: handoffs, guardrails, voice; the JS counterpart to openai-agents-python. | ✅ | Capability (handoffs, guardrails, voice) |
-| 12 | [**agent-framework**](https://github.com/maxmoundas/agent-framework) | LiteLLM-backed Python with dynamic tool registry, query routing, memory, and Streamlit UI; "full-stack agent app" in one repo. | ✅ | Capability (tool registry, routing, Streamlit) |
-| 13 | [**agentic-ai**](https://github.com/vorachet/agentic-ai) | Agentic AI stdlib for TypeScript; any LLM, any TS AI SDK; another "thin layer so you own the rest" option. | ✅ | Simple (thin layer) |
-| 14 | [**E2B**](https://github.com/e2b-dev/E2B) | Firecracker sandboxes for executing agent-generated code; the hosted isolation layer many tool-calling demos use instead of running arbitrary LLM output on your laptop. | ✅ | Mid (sandbox API, code execution) |
-| 15 | [**Daytona**](https://github.com/daytonaio/daytona) | Elastic dev environments for AI-generated code: workspaces, Git, previews—infra harness between "the model wrote a patch" and "it ran in a real machine." | ✅ | Mid (dev env API, isolation) |
+| 6 | [**strands-agents**](https://github.com/strands-agents/sdk-python) | Model-driven Python SDK; decorators for tools, native MCP, multi-agent; "minimal code" without sacrificing provider choice. | ✅ | Mid (decorators, MCP, minimal code) |
+| 7 | [**openai-agents-js**](https://github.com/openai/openai-agents-js) | Official OpenAI Agents SDK for Node/TS: handoffs, guardrails, voice; the JS counterpart to openai-agents-python. | ✅ | Capability (handoffs, guardrails, voice) |
+| 8 | [**LiteLLM**](https://github.com/BerriAI/litellm) | One interface to 100+ LLMs; routing, caching, budgets. Not an agent framework—the pipe every agent framework uses. | ✅ | Simple (LLM pipe only) |
+| 9 | [**Composio**](https://github.com/ComposioHQ/composio) | 1,000+ toolkits with auth, tool search, and a sandboxed workbench—drop-in tool layer so agents stop reinventing OAuth + integrations. Python and TypeScript. | ✅ | Capability (1k+ tools, auth, search) |
+| 10 | [**Mem0**](https://github.com/mem0ai/mem0) | Universal memory layer for AI agents: stores user/org/session memory, retrieves on demand. Apache-2.0; the de-facto memory primitive paired with most harnesses in 2026. | ✅ | Capability (memory layer, multi-platform) |
+| 11 | [**Cloudflare Agents**](https://github.com/cloudflare/agents) | Persistent, stateful agents on Durable Objects: state, websockets, scheduling, and AI chat baked in. The serverless answer to "where does the agent live?" | ✅ | Capability (Durable Objects, stateful) |
+| 12 | [**E2B**](https://github.com/e2b-dev/E2B) | Firecracker sandboxes for executing agent-generated code; the hosted isolation layer many tool-calling demos use instead of running arbitrary LLM output on your laptop. | ✅ | Mid (sandbox API, code execution) |
+| 13 | [**Daytona**](https://github.com/daytonaio/daytona) | Elastic dev environments for AI-generated code: workspaces, Git, previews—infra harness between "the model wrote a patch" and "it ran in a real machine." | ✅ | Mid (dev env API, isolation) |
+| 14 | [**Community-curated agent lists**](https://github.com/brandonhimpfen/awesome-ai-agents) | Broader directories: e.g. [brandonhimpfen/awesome-ai-agents](https://github.com/brandonhimpfen/awesome-ai-agents), [axioma-ai-labs/awesome-ai-agent-frameworks](https://github.com/axioma-ai-labs/awesome-ai-agent-frameworks), [mb-mal/awesome-ai-agents-frameworks](https://github.com/mb-mal/awesome-ai-agents-frameworks)—differ by scope and update cadence. | ❓ | Simple (curated lists) |
 
 <br>
 

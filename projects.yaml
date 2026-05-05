@@ -90,6 +90,10 @@ projects:
   - name: crush
     github_id: charmbracelet/crush
     category: "coding-agent-products"
+  - name: opencode
+    github_id: sst/opencode
+    labels: ["javascript"]
+    category: "coding-agent-products"
   - name: OpenHands
     github_id: OpenHands/OpenHands
     labels: ["python"]
@@ -140,6 +144,9 @@ projects:
     category: "coding-harness-configs"
   - name: OpenHarness (HKUDS)
     github_id: HKUDS/OpenHarness
+    category: "coding-harness-configs"
+  - name: Anthropic Skills
+    github_id: anthropics/skills
     category: "coding-harness-configs"
   # Frameworks
   - name: langgraph
@@ -216,8 +223,8 @@ projects:
     github_id: SciPhi-AI/R2R
     labels: ["python"]
     category: "frameworks"
-  - name: LiteSwarm
-    github_id: GlyphyAI/liteswarm
+  - name: Google ADK
+    github_id: google/adk-python
     labels: ["python"]
     category: "frameworks"
   - name: AgentStack
@@ -289,15 +296,13 @@ projects:
     labels: ["javascript"]
     category: "plugins-mcp-cli"
   - name: github-mcp-server
-    github_id: cyanheads/github-mcp-server
-    labels: ["javascript"]
+    github_id: github/github-mcp-server
+    category: "plugins-mcp-cli"
+  - name: MCP Registry
+    github_id: modelcontextprotocol/registry
     category: "plugins-mcp-cli"
   - name: Docker MCP Gateway
     github_id: docker/mcp-gateway
-    category: "plugins-mcp-cli"
-  - name: puppeteer-mcp-server
-    github_id: merajmehrabi/puppeteer-mcp-server
-    labels: ["javascript"]
     category: "plugins-mcp-cli"
   - name: puppeteer-real-browser-mcp
     github_id: withLinda/puppeteer-real-browser-mcp-server
@@ -349,9 +354,6 @@ projects:
     github_id: letta-ai/letta-evals
     labels: ["python"]
     category: "evaluation"
-  - name: gaia-agent
-    github_id: sassarini-marco/gaia-agent
-    category: "evaluation"
   - name: WebVoyager
     github_id: MinorJerry/WebVoyager
     category: "evaluation"
@@ -367,17 +369,18 @@ projects:
     labels: ["python"]
     category: "evaluation"
   # Research and task-specific harnesses
+  - name: gpt-researcher
+    github_id: assafelovic/gpt-researcher
+    labels: ["python"]
+    category: "research-task"
   - name: openagents
     github_id: OpenAgentsInc/openagents
     category: "research-task"
-  - name: multi-scale-agentic-rag-playbook
-    github_id: NVIDIA-AI-Technology-Center/multi-scale-agentic-rag-playbook
-    category: "research-task"
-  - name: Agentic_RAG_System
-    github_id: sriramE5/Agentic_RAG_System
-    labels: ["python"]
-    category: "research-task"
   # Libraries and SDKs
+  - name: deepagents
+    github_id: langchain-ai/deepagents
+    labels: ["python"]
+    category: "libraries-sdks"
   - name: pydantic-ai
     github_id: pydantic/pydantic-ai
     labels: ["python"]
@@ -390,43 +393,32 @@ projects:
     github_id: vercel/ai
     labels: ["javascript"]
     category: "libraries-sdks"
-  - name: agent-harness
-    github_id: evalops/agent-harness
-    labels: ["python"]
-    category: "libraries-sdks"
   - name: smolagents
     github_id: huggingface/smolagents
     labels: ["python"]
     category: "libraries-sdks"
-  - name: Community-curated agent lists
-    github_id: brandonhimpfen/awesome-ai-agents
-    category: "libraries-sdks"
-  - name: agentic
-    github_id: transitive-bullshit/agentic
-    labels: ["javascript"]
-    category: "libraries-sdks"
   - name: strands-agents
     github_id: strands-agents/sdk-python
-    labels: ["python"]
-    category: "libraries-sdks"
-  - name: LiteLLM
-    github_id: BerriAI/litellm
-    labels: ["python"]
-    category: "libraries-sdks"
-  - name: litellm2
-    github_id: markolofsen/litellm2
     labels: ["python"]
     category: "libraries-sdks"
   - name: openai-agents-js
     github_id: openai/openai-agents-js
     labels: ["javascript"]
     category: "libraries-sdks"
-  - name: agent-framework
-    github_id: maxmoundas/agent-framework
+  - name: LiteLLM
+    github_id: BerriAI/litellm
     labels: ["python"]
     category: "libraries-sdks"
-  - name: vorachet-agentic-ai
-    github_id: vorachet/agentic-ai
+  - name: Composio
+    github_id: ComposioHQ/composio
+    category: "libraries-sdks"
+  - name: Mem0
+    github_id: mem0ai/mem0
+    labels: ["python"]
+    category: "libraries-sdks"
+  - name: Cloudflare Agents
+    github_id: cloudflare/agents
+    labels: ["javascript"]
     category: "libraries-sdks"
   - name: E2B
     github_id: e2b-dev/E2B
@@ -434,4 +426,7 @@ projects:
     category: "libraries-sdks"
   - name: Daytona
     github_id: daytonaio/daytona
+    category: "libraries-sdks"
+  - name: Community-curated agent lists
+    github_id: brandonhimpfen/awesome-ai-agents
     category: "libraries-sdks"
