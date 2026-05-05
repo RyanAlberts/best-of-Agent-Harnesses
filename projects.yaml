@@ -91,7 +91,7 @@ projects:
     github_id: charmbracelet/crush
     category: "coding-agent-products"
   - name: opencode
-    github_id: sst/opencode
+    github_id: anomalyco/opencode
     labels: ["javascript"]
     category: "coding-agent-products"
   - name: OpenHands
@@ -99,7 +99,7 @@ projects:
     labels: ["python"]
     category: "coding-agent-products"
   - name: goose
-    github_id: block/goose
+    github_id: aaif-goose/goose
     category: "coding-agent-products"
   - name: claw-code-agent
     github_id: HarnessLab/claw-code-agent
@@ -182,7 +182,7 @@ projects:
     labels: ["python"]
     category: "frameworks"
   - name: rasa
-    github_id: rasa/rasa
+    github_id: RasaHQ/rasa
     labels: ["python"]
     category: "frameworks"
   - name: botpress
