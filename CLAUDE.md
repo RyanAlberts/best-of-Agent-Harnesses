@@ -20,6 +20,10 @@ git -c user.email='25306145+RyanAlberts@users.noreply.github.com' \
 
 Do not use `noreply@anthropic.com`, `@users.noreply.github.com`, or any university email unless explicitly requested. Get it right on the first commit; don't amend just to fix attribution unless asked.
 
+## Branching and pushing (required)
+
+Push changes directly to `main` unless the user explicitly asks for a feature branch or PR. No feature branches by default, no PR ceremony for routine updates — commit on `main` and push. If a session is started on a `claude/*` working branch, fast-forward `main` to it before pushing.
+
 ## How the list is generated
 
 `projects.yaml`, `README.md`, and `config/header.md` are all produced by `scripts/generate.py`. Edit the Python data structures in that script — never hand-edit the three output files — then run:
