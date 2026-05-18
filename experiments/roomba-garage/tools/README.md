@@ -1,5 +1,7 @@
 # reel_processor
 
+Companion tool for [`../BUILD.md`](../BUILD.md).
+
 A tiny CLI for turning a public Instagram (or TikTok / YouTube Short) reel into
 a Markdown report with scene-change stills and a Whisper transcript. Useful
 when you want an LLM to reason about a "show me how to build X" video without
