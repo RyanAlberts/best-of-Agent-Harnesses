@@ -12,11 +12,14 @@ so they count toward [@RyanAlberts](https://github.com/RyanAlberts)'s GitHub con
 If the local `git config` is wrong or unset, override per-commit instead of editing global config:
 
 ```sh
+TZ='America/Chicago' \
 git -c user.email='ryan.a.alberts@gmail.com' \
     -c user.name='Ryan Alexander Alberts' \
     commit --author='Ryan Alexander Alberts <ryan.a.alberts@gmail.com>' \
     -m "..."
 ```
+
+`TZ='America/Chicago'` is required on every commit. The user works from Dallas, TX (CST/CDT) and the contribution graph buckets commits by their local timezone; UTC-stamped commits land on the wrong calendar day. Do not rely on whatever timezone the sandbox happens to be in.
 
 Do not use `noreply@anthropic.com`, `@users.noreply.github.com`, or any university email unless explicitly requested. Get it right on the first commit; don't amend just to fix attribution unless asked.
 
