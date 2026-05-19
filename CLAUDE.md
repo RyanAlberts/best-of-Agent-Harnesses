@@ -24,6 +24,21 @@ Do not use `noreply@anthropic.com`, `@users.noreply.github.com`, or any universi
 
 Land changes on `main` by default — no review ceremony. If the working branch is a `claude/*` branch, fast-forward `main` to it and push. If branch protection rejects direct pushes to `main` (HTTP 403), open a PR from the working branch and immediately self-merge it via the GitHub API; don't wait for review unless the user explicitly asks. Only keep a separate feature branch when the user explicitly asks for a PR or review.
 
+## Verifying contribution credit (required)
+
+After every push, verify the new commits credit [@RyanAlberts](https://github.com/RyanAlberts) before reporting the work as done. For each newly pushed commit SHA on `main`:
+
+1. Call `mcp__github__get_commit` (or `list_commits`).
+2. Assert both:
+   - `author.login == "RyanAlberts"` (not `null`)
+   - `commit.author.email == "25306145+RyanAlberts@users.noreply.github.com"` (or `RyanAlberts@users.noreply.github.com` for merge commits the GitHub API itself authored)
+3. If `author.login` is `null`, the author email isn't a verified email on the account. Don't silently move on — stop, tell the user the SHA and the bad email, and offer to amend:
+   - On a `claude/*` working branch: amend with the canonical email and force-push the working branch.
+   - Already on `main`: amend locally, then re-land via the PR-then-self-merge fallback. Never force-push `main`.
+4. If `author.login` is correct but the contribution graph still shows nothing, suspect commit dates in the future relative to GitHub's real-world clock — the graph backfills retroactively when the calendar reaches that date. Surface this to the user; don't attempt to rewrite dates.
+
+Skip this check only if the user explicitly says "don't validate."
+
 ## How the list is generated
 
 `projects.yaml`, `README.md`, and `config/header.md` are all produced by `scripts/generate.py`. Edit the Python data structures in that script — never hand-edit the three output files — then run:
