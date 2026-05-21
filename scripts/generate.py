@@ -21,10 +21,92 @@ class Project:
     oss: str = "✅"
     labels: list = field(default_factory=list)
     link_name: str = ""  # If set, override display name in link
+    extra_tags: list = field(default_factory=list)  # manual tag overrides/additions
 
     @property
     def display_name(self) -> str:
         return self.link_name or self.name
+
+    @property
+    def tags(self) -> list:
+        return auto_tag(self)
+
+
+# Canonical tag vocabulary, ordered by discriminative value (most useful first).
+# Tags are auto-derived from each project's description + axis + labels via the
+# patterns below. Add to extra_tags=[...] on a Project to force a tag in.
+TAG_RULES: "list[tuple[str, list[str]]]" = [
+    ("mcp",            [r"\bMCP\b", r"Model Context Protocol", r"MCPs"]),
+    ("memory",         [r"\bmemory\b", r"session(?:\s+bridging|s| capture)", r"persist(?:ent|ence)", r"long-horizon", r"stateful"]),
+    ("multi-agent",    [r"multi[- ]agent", r"\bcrew\b", r"\bswarm\b", r"\bsquad\b", r"sub[- ]?agent", r"\bhandoffs?\b", r"group chat"]),
+    ("evals",          [r"\beval(?:s|uation)?\b", r"benchmark", r"SWE-bench", r"scor(?:e|ing)", r"trace reasoning", r"judges?\b"]),
+    ("voice",          [r"\bvoice\b"]),
+    ("vision",         [r"\bvision\b", r"screenshots?", r"\bLMM[Ss]?\b", r"GPT-4V", r"\bmultimodal\b"]),
+    ("browser",        [r"\bbrowser\b", r"Playwright", r"[Pp]uppeteer", r"headless"]),
+    ("sandbox",        [r"sandbox", r"\bDocker(?:ized)?\b", r"\bE2B\b", r"Firecracker", r"isolat(?:ed|ion)"]),
+    ("low-code",       [r"low-code", r"drag[- ]?drop", r"visual (?:DAG|workflow|bot|builder)", r"no-code", r"\bDAG\b"]),
+    ("rag",            [r"\bRAG\b", r"retrieval[- ](?:augmented|first)", r"hybrid search", r"knowledge graph"]),
+    ("tool-discovery", [r"tool (?:discovery|retrieval|routing|search)", r"on-demand tool", r"semantic routing"]),
+    ("training",       [r"\btraining\b", r"\bRL\b", r"reinforcement", r"rollout", r"train (?:agents|policies)"]),
+    ("workflow",       [r"\bworkflow\b", r"state[- ]machine", r"checkpointing", r"durable exec", r"graphs?\b"]),
+    ("typed",          [r"type-safe", r"\bPydantic\b", r"TypeScript-first", r"decorators? for tools"]),
+    ("local",          [r"self-hosted", r"\bOllama\b", r"on-prem", r"run (?:locally|on your laptop)"]),
+    ("provider-agnostic", [r"provider[- ]agnostic", r"multi-provider", r"100\+ (?:LLMs|models)", r"any LLM", r"swap OpenAI vs Anthropic"]),
+    ("cli",            [r"\bCLI\b", r"\bterminal\b"]),
+    ("ide",            [r"\bIDE\b", r"VS Code", r"\bCursor\b", r"JetBrains"]),
+    ("tui",            [r"\bTUI\b", r"Bubble Tea"]),
+    ("rust",           [r"\bRust\b"]),
+    ("python",         [r"\bPython\b"]),
+    ("typescript",     [r"TypeScript", r"\bNode(?:[/.]js|/TS)?\b", r"\bTS\b"]),
+]
+
+# Languages we also infer from the `labels` field on each Project.
+LABEL_TO_TAG = {"python": "python", "javascript": "typescript"}
+
+# Cap visible chips per row so descriptions stay scannable.
+MAX_TAG_CHIPS = 5
+
+
+def auto_tag(p: "Project") -> list:
+    """Derive sorted canonical tags for a project from its description, axis,
+    manual extras, and language labels.  TAG_RULES order is preserved so the
+    most discriminative tags render first; language tags trail.
+    """
+    text = f"{p.description}  {p.axis}"
+    matched: list = []
+    seen: set = set()
+    for tag, patterns in TAG_RULES:
+        if any(re.search(pat, text) for pat in patterns):
+            if tag not in seen:
+                matched.append(tag)
+                seen.add(tag)
+    for lbl in p.labels:
+        t = LABEL_TO_TAG.get(lbl)
+        if t and t not in seen:
+            matched.append(t)
+            seen.add(t)
+    for t in p.extra_tags:
+        if t not in seen:
+            matched.append(t)
+            seen.add(t)
+    return matched
+
+
+def tag_chips_md(tags: list) -> str:
+    """Render a project's tag list as small inline chips, capped at MAX_TAG_CHIPS."""
+    if not tags:
+        return ""
+    shown = tags[:MAX_TAG_CHIPS]
+    return " <sup>" + " · ".join(f"`{t}`" for t in shown) + "</sup>"
+
+
+def slug(s: str) -> str:
+    """Lowercase a heading and convert to a GitHub-style anchor slug."""
+    s = s.lower()
+    s = re.sub(r"[^\w\s-]", "", s, flags=re.UNICODE)
+    s = re.sub(r"\s+", "-", s)
+    s = re.sub(r"-+", "-", s).strip("-")
+    return s
 
 
 # OSS markers:
@@ -523,6 +605,104 @@ def format_stars(n: int) -> str:
     return str(n)
 
 
+# ---------------------------------------------------------------------------
+# "Pick by use case" reader-intent index.
+#
+# Each entry is (intent, [github_ids], category_title_for_See_link).
+# github_ids must reference projects that exist in PROJECTS — find_project()
+# raises so a typo cannot ship. Keep each intent's pick list to 3–7 items:
+# enough to compare, few enough to act on. Lead each list with the most
+# canonical / highest-leverage pick.
+# ---------------------------------------------------------------------------
+USE_CASES: "list[tuple[str, list[str], str]]" = [
+    ("I want a turnkey coding agent today",
+     ["anomalyco/opencode", "cline/cline", "openai/codex",
+      "google-gemini/gemini-cli", "OpenHands/OpenHands",
+      "charmbracelet/crush", "RooCodeInc/Roo-Code"],
+     "Coding agent products (IDEs, CLIs, full suites)"),
+    ("I want to extend Claude Code, Codex, or OpenCode with skills and slash commands",
+     ["anthropics/skills", "affaan-m/everything-claude-code",
+      "obra/superpowers", "garrytan/gstack", "RyanAlberts/pmstack"],
+     "Coding harness configs and SDKs"),
+    ("I want to build my own coding harness from scratch",
+     ["anthropics/claude-agent-sdk-python", "google/adk-python",
+      "aiming-lab/AutoHarness", "SWE-agent/SWE-agent",
+      "QuantaAlpha/RepoMaster", "HarnessLab/claw-code-agent"],
+     "Coding harness configs and SDKs"),
+    ("I want a drop-in memory layer for agents",
+     ["mem0ai/mem0", "thedotmack/claude-mem", "RyanAlberts/agentlog",
+      "agno-agi/agno", "letta-ai/letta"],
+     "Plugins, MCPs, CLI tools"),
+    ("I want to plug hundreds to thousands of tools without context bloat",
+     ["xfey/MCP-Zero", "Reason-Wang/ToolGen", "antl3x/ToolRAG",
+      "langchain-ai/langgraph-bigtool",
+      "spring-ai-community/spring-ai-tool-search-tool"],
+     "Progressive disclosure harnesses"),
+    ("I want multi-agent orchestration",
+     ["openai/openai-agents-python", "crewAIInc/crewAI",
+      "microsoft/autogen", "MervinPraison/PraisonAI",
+      "2FastLabs/agent-squad"],
+     "Multi-agent and orchestration"),
+    ("I want a general LLM app framework",
+     ["langchain-ai/langgraph", "langchain-ai/langchain",
+      "run-llama/llama_index", "pydantic/pydantic-ai",
+      "agno-agi/agno"],
+     "Frameworks"),
+    ("I want low-code / visual workflows",
+     ["langflow-ai/langflow", "FlowiseAI/Flowise",
+      "langgenius/dify", "n8n-io/n8n"],
+     "Frameworks"),
+    ("I want browser-using agents",
+     ["browser-use/browser-use", "MinorJerry/WebVoyager",
+      "withLinda/puppeteer-real-browser-mcp-server"],
+     "Plugins, MCPs, CLI tools"),
+    ("I want sandboxed code execution for agent-generated code",
+     ["e2b-dev/E2B", "daytonaio/daytona",
+      "huggingface/smolagents", "OpenHands/OpenHands"],
+     "Libraries and SDKs"),
+    ("I want to evaluate or benchmark agents",
+     ["SWE-bench/SWE-bench", "GAIR-NLP/AgencyBench",
+      "UKGovernmentBEIS/inspect_ai", "web-arena-x/webarena",
+      "arcprize/ARC-AGI-2", "meituan-longcat/vitabench"],
+     "Evaluation and benchmarking harnesses"),
+    ("I want a deep research / autonomous research agent",
+     ["langchain-ai/deepagents", "assafelovic/gpt-researcher",
+      "OpenAgentsInc/openagents"],
+     "Research and task-specific harnesses"),
+    ("I want a provider-agnostic LLM pipe (not a framework)",
+     ["BerriAI/litellm", "vercel/ai"],
+     "Libraries and SDKs"),
+]
+
+
+def find_project(github_id: str) -> "Project":
+    for plist in PROJECTS.values():
+        for p in plist:
+            if p.github_id == github_id:
+                return p
+    raise KeyError(f"USE_CASES references unknown github_id: {github_id}")
+
+
+def render_use_cases() -> list:
+    lines = [
+        "## Pick by use case",
+        "",
+        "_Reader's index: pick by what you want to do, not by category. Tag chips (e.g. <sup>`mcp` · `memory`</sup>) next to each row let you cross-filter by capability — see [TAGS.md](TAGS.md) for the full cross-reference._",
+        "",
+    ]
+    for intent, ids, cat_title in USE_CASES:
+        picks: list = []
+        for gid in ids:
+            p = find_project(gid)
+            picks.append(f"[{p.display_name}](https://github.com/{p.github_id})")
+        anchor = slug(cat_title)
+        lines.append(
+            f"- **{intent}** — {', '.join(picks)} · see [{cat_title}](#{anchor})"
+        )
+    lines.append("")
+    return lines
+
+
 def generate_yaml() -> str:
     lines = [
         "configuration:",
@@ -601,15 +781,13 @@ def generate_readme() -> str:
         "",
         "Better models make harnesses more important: more capabilities mean more failure modes, and production needs retry logic, fallbacks, and validation. Harness quality—not just model quality—determines whether agents actually ship. This list ranks projects by relevance to harness concerns (environment, orchestration, lifecycle, guardrails) and by stars/activity.",
         "",
+    ]
+    header += render_use_cases()
+    header += [
         "## Contents",
         "",
+        "- [Pick by use case](#pick-by-use-case)",
     ]
-    def slug(s: str) -> str:
-        s = s.lower()
-        s = re.sub(r"[^\w\s-]", "", s, flags=re.UNICODE)
-        s = re.sub(r"\s+", "-", s)
-        s = re.sub(r"-+", "-", s).strip("-")
-        return s
     for cat_id, title, _ in CATEGORIES:
         count = len(PROJECTS[cat_id])
         anchor = slug(title)
@@ -622,6 +800,7 @@ def generate_readme() -> str:
         "- **Examples:** One concrete instance of the harness in action — a specific skill file, demo script, sample agent, leaderboard with scores, or feature walkthrough — not a docs root or examples index. The link text names what's at the link.",
         "- **Simplicity ↔ capability:** Where each project sits on a 4-tier scale describing how much surface area you take on when adopting it: **super simple** (format-only, single file, one concept) → **mostly simple** (lean API, thin layer over a primitive) → **slightly complex** (multi-file SDK, several knobs, real abstractions) → **complex (product suite)** (platform with its own runtime, UI, ecosystem).",
         "- **Open source:** ✅ = standard open-source license (MIT/Apache/BSD/GPL/MPL/AGPL/CC0). ⚠️ = source-available or restricted (e.g. n8n Fair-code, Elastic-2.0, Polyform). ❓ = no license file or unclear terms.",
+        "- **Tags** (e.g. <sup>`mcp` · `memory` · `multi-agent`</sup>): canonical capability tags auto-derived from each project's description. Up to 5 chips per row; full cross-reference in [TAGS.md](TAGS.md).",
         "",
         "<br>",
         "",
@@ -641,7 +820,8 @@ def generate_readme() -> str:
             stars = stars_for(p.github_id)
             stars_cell = f"[{format_stars(stars)}](https://github.com/{p.github_id}/stargazers)"
             examples_cell = f"[{example_label_for(p.github_id)}]({examples_for(p.github_id)})"
-            row = f"| {i} | [**{p.display_name}**](https://github.com/{p.github_id}) | {stars_cell} | {p.description} | {p.oss} | {p.axis} | {examples_cell} |"
+            chips = tag_chips_md(p.tags)
+            row = f"| {i} | [**{p.display_name}**](https://github.com/{p.github_id}) | {stars_cell} | {p.description}{chips} | {p.oss} | {p.axis} | {examples_cell} |"
             body.append(row)
         body.append("")
     body += [
@@ -704,16 +884,98 @@ def generate_header_md() -> str:
     )
 
 
+def generate_tags_md() -> str:
+    """Cross-reference page: every canonical tag listed once, with the
+    projects that carry it grouped by category.  Auto-derived from PROJECTS
+    + TAG_RULES; do not hand-edit TAGS.md.
+    """
+    by_tag: dict = {tag: [] for tag, _ in TAG_RULES}
+    by_tag.setdefault("python", [])
+    by_tag.setdefault("typescript", [])
+    for cat_id, cat_title, _ in CATEGORIES:
+        for p in PROJECTS[cat_id]:
+            for t in p.tags:
+                by_tag.setdefault(t, []).append((p, cat_title))
+
+    total = count_projects()
+    lines = [
+        "<!-- markdownlint-disable -->",
+        "# Tags — cross-reference",
+        "",
+        f"_Auto-generated from `scripts/generate.py`. {total} projects across "
+        f"{sum(1 for v in by_tag.values() if v)} canonical tags. Edit projects "
+        f"in `generate.py` (not here) and rerun the script._",
+        "",
+        "Tag chips appear next to each project in [README.md](README.md). This "
+        "page lists every tag once with the projects that carry it, grouped "
+        "by category and sorted by GitHub stars within each category.",
+        "",
+        "## All tags",
+        "",
+    ]
+    tag_order = [t for t, _ in TAG_RULES] + ["python", "typescript"]
+    seen_tags: set = set()
+    chip_index: list = []
+    for t in tag_order:
+        if t in seen_tags:
+            continue
+        seen_tags.add(t)
+        count = len(by_tag.get(t, []))
+        if count == 0:
+            continue
+        chip_index.append(f"[`{t}`](#{slug(t)}) ({count})")
+    lines.append(" · ".join(chip_index))
+    lines.append("")
+
+    for t in tag_order:
+        entries = by_tag.get(t, [])
+        if not entries:
+            continue
+        lines.append("---")
+        lines.append("")
+        lines.append(f"## `{t}`")
+        lines.append("")
+        by_cat: dict = {ct: [] for _, ct, _ in CATEGORIES}
+        for p, ct in entries:
+            by_cat[ct].append(p)
+        for _, ct, _ in CATEGORIES:
+            picks = by_cat.get(ct) or []
+            if not picks:
+                continue
+            picks = sorted(picks, key=lambda x: stars_for(x.github_id), reverse=True)
+            lines.append(f"**{ct}**")
+            lines.append("")
+            for p in picks:
+                stars = stars_for(p.github_id)
+                star_str = f" — ⭐{format_stars(stars)}" if stars else ""
+                lines.append(
+                    f"- [{p.display_name}](https://github.com/{p.github_id}){star_str} — {p.description}"
+                )
+            lines.append("")
+    return "\n".join(lines)
+
+
 def main():
     yaml_content = generate_yaml()
     readme_content = generate_readme()
     header_content = generate_header_md()
+    tags_content = generate_tags_md()
     (REPO_ROOT / "projects.yaml").write_text(yaml_content)
     (REPO_ROOT / "README.md").write_text(readme_content)
     (REPO_ROOT / "config" / "header.md").write_text(header_content)
-    print(f"Wrote {count_projects()} projects across {len(CATEGORIES)} categories.")
+    (REPO_ROOT / "TAGS.md").write_text(tags_content)
+    total = count_projects()
+    print(f"Wrote {total} projects across {len(CATEGORIES)} categories.")
     for cat_id, title, _ in CATEGORIES:
         print(f"  {title}: {len(PROJECTS[cat_id])}")
+    tag_counts: dict = {}
+    for cat_id, _, _ in CATEGORIES:
+        for p in PROJECTS[cat_id]:
+            for t in p.tags:
+                tag_counts[t] = tag_counts.get(t, 0) + 1
+    print(f"Tag coverage: {len(tag_counts)} tags across {total} projects.")
+    for t in sorted(tag_counts, key=lambda x: (-tag_counts[x], x)):
+        print(f"  {t}: {tag_counts[t]}")
 
 
 if __name__ == "__main__":
