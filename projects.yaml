@@ -113,6 +113,9 @@ projects:
   - name: get-shit-done
     github_id: gsd-build/get-shit-done
     category: "coding-harness-configs"
+  - name: harness-starter-kit
+    github_id: baskduf/harness-starter-kit
+    category: "coding-harness-configs"
   - name: GStack
     github_id: garrytan/gstack
     labels: ["javascript"]
