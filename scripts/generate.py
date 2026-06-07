@@ -467,7 +467,7 @@ PROJECTS["coding-agent-products"][1].description = (
 
 
 # Stars + examples link, keyed by github_id (post-move where applicable).
-# Star counts captured 2026-06-04 from the GitHub API; refresh by re-running
+# Star counts captured 2026-06-07 from the GitHub API; refresh by re-running
 # scripts/fetch_metadata.py (or the inline batched search_repositories calls).
 # Examples link: official docs, examples folder, leaderboard, or paper —
 # whichever is the most useful "show me it in action" link for that project.
@@ -796,7 +796,7 @@ def generate_readme() -> str:
         "",
         "## Explanation",
         "",
-        "- **⭐ Stars:** GitHub star count, captured 2026-06-04. Each table is sorted by stars descending. Click a star count to jump to the GitHub repo's stargazers page.",
+        "- **⭐ Stars:** GitHub star count, captured 2026-06-07. Each table is sorted by stars descending. Click a star count to jump to the GitHub repo's stargazers page.",
         "- **Examples:** One concrete instance of the harness in action — a specific skill file, demo script, sample agent, leaderboard with scores, or feature walkthrough — not a docs root or examples index. The link text names what's at the link.",
         "- **Simplicity ↔ capability:** Where each project sits on a 4-tier scale describing how much surface area you take on when adopting it: **super simple** (format-only, single file, one concept) → **mostly simple** (lean API, thin layer over a primitive) → **slightly complex** (multi-file SDK, several knobs, real abstractions) → **complex (product suite)** (platform with its own runtime, UI, ecosystem).",
         "- **Open source:** ✅ = standard open-source license (MIT/Apache/BSD/GPL/MPL/AGPL/CC0). ⚠️ = source-available or restricted (e.g. n8n Fair-code, Elastic-2.0, Polyform). ❓ = no license file or unclear terms.",
