@@ -467,127 +467,127 @@ PROJECTS["coding-agent-products"][1].description = (
 
 
 # Stars + examples link, keyed by github_id (post-move where applicable).
-# Star counts captured 2026-06-07 from the GitHub API; refresh by re-running
-# scripts/fetch_metadata.py (or the inline batched search_repositories calls).
+# Star counts captured 2026-06-11 from the GitHub API; refresh by re-running
+# scripts/refresh_stars.py (rewrites the counts below and bumps STARS_CAPTURED).
 # Examples link: official docs, examples folder, leaderboard, or paper —
 # whichever is the most useful "show me it in action" link for that project.
 META: dict[str, tuple[int, str, str]] = {
     # progressive-disclosure
-    "agentsmd/agents.md": (21487, "https://github.com/agentsmd/agents.md/blob/main/AGENTS.md", "Self-hosting AGENTS.md"),
-    "PatrickJS/awesome-cursorrules": (39563, "https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/pytorch-scikit-learn-cursorrules-prompt-file.mdc", "PyTorch cursorrules"),
-    "xfey/MCP-Zero": (483, "https://github.com/xfey/MCP-Zero/blob/master/MCP-zero/experiment_apibank.py", "APIBank experiment"),
-    "langchain-ai/langgraph-bigtool": (537, "https://github.com/langchain-ai/langgraph-bigtool#quickstart", "Math-library tool agent"),
-    "spring-ai-community/spring-ai-tool-search-tool": (70, "https://github.com/spring-ai-community/spring-ai-tool-search-tool/tree/main/examples/tool-search-tool-demo", "Tool Search demo app"),
-    "Reason-Wang/ToolGen": (178, "https://github.com/Reason-Wang/ToolGen/blob/master/scripts/eval_full_pipeline.sh", "Full eval pipeline"),
-    "antl3x/ToolRAG": (25, "https://github.com/antl3x/ToolRAG/blob/main/packages/%40antl3x-toolrag/README.md", "MCP server retrieval"),
+    "agentsmd/agents.md": (22148, "https://github.com/agentsmd/agents.md/blob/main/AGENTS.md", "Self-hosting AGENTS.md"),
+    "PatrickJS/awesome-cursorrules": (39963, "https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/pytorch-scikit-learn-cursorrules-prompt-file.mdc", "PyTorch cursorrules"),
+    "xfey/MCP-Zero": (487, "https://github.com/xfey/MCP-Zero/blob/master/MCP-zero/experiment_apibank.py", "APIBank experiment"),
+    "langchain-ai/langgraph-bigtool": (542, "https://github.com/langchain-ai/langgraph-bigtool#quickstart", "Math-library tool agent"),
+    "spring-ai-community/spring-ai-tool-search-tool": (73, "https://github.com/spring-ai-community/spring-ai-tool-search-tool/tree/main/examples/tool-search-tool-demo", "Tool Search demo app"),
+    "Reason-Wang/ToolGen": (179, "https://github.com/Reason-Wang/ToolGen/blob/master/scripts/eval_full_pipeline.sh", "Full eval pipeline"),
+    "antl3x/ToolRAG": (28, "https://github.com/antl3x/ToolRAG/blob/main/packages/%40antl3x-toolrag/README.md", "MCP server retrieval"),
     # coding-agent-products
-    "cline/cline": (61982, "https://docs.cline.bot/features/plan-and-act", "Plan & Act mode"),
-    "RooCodeInc/Roo-Code": (24100, "https://docs.roocode.com/features/custom-modes", "Custom modes guide"),
-    "openai/codex": (83556, "https://developers.openai.com/codex/concepts/sandboxing", "Sandboxing concept"),
-    "google-gemini/gemini-cli": (104261, "https://github.com/google-gemini/gemini-cli/blob/main/docs/tools/mcp-server.md", "MCP server setup"),
-    "charmbracelet/crush": (24388, "https://charm.land/blog/crush-comes-home/", "Crush launch post"),
-    "anomalyco/opencode": (162190, "https://opencode.ai/docs/agents/", "Agent system page"),
-    "OpenHands/OpenHands": (74003, "https://docs.all-hands.dev/usage/prompting/microagents-repo", "Repository microagents"),
-    "aaif-goose/goose": (45481, "https://block.github.io/goose/docs/guides/recipes/", "Goose recipes guide"),
-    "HarnessLab/claw-code-agent": (482, "https://github.com/HarnessLab/claw-code-agent#-quick-start", "Quick Start guide"),
+    "cline/cline": (63055, "https://docs.cline.bot/features/plan-and-act", "Plan & Act mode"),
+    "RooCodeInc/Roo-Code": (24230, "https://docs.roocode.com/features/custom-modes", "Custom modes guide"),
+    "openai/codex": (90438, "https://developers.openai.com/codex/concepts/sandboxing", "Sandboxing concept"),
+    "google-gemini/gemini-cli": (105168, "https://github.com/google-gemini/gemini-cli/blob/main/docs/tools/mcp-server.md", "MCP server setup"),
+    "charmbracelet/crush": (25219, "https://charm.land/blog/crush-comes-home/", "Crush launch post"),
+    "anomalyco/opencode": (173115, "https://opencode.ai/docs/agents/", "Agent system page"),
+    "OpenHands/OpenHands": (76469, "https://docs.all-hands.dev/usage/prompting/microagents-repo", "Repository microagents"),
+    "aaif-goose/goose": (48843, "https://block.github.io/goose/docs/guides/recipes/", "Goose recipes guide"),
+    "HarnessLab/claw-code-agent": (505, "https://github.com/HarnessLab/claw-code-agent#-quick-start", "Quick Start guide"),
     "SeanHogg/coderClaw": (3, "https://github.com/SeanHogg/coderClaw#readme", "Multi-agent README"),
     # coding-harness-configs
-    "gsd-build/get-shit-done": (62931, "https://github.com/gsd-build/get-shit-done/blob/main/commands/gsd/ship.md", "gsd:ship command"),
-    "garrytan/gstack": (99093, "https://github.com/garrytan/gstack/blob/main/ship/SKILL.md", "/ship SKILL.md"),
-    "affaan-m/everything-claude-code": (186548, "https://github.com/affaan-m/everything-claude-code/blob/main/skills/autonomous-agent-harness/SKILL.md", "autonomous-agent-harness skill"),
-    "obra/superpowers": (196763, "https://github.com/obra/superpowers/blob/main/skills/test-driven-development/SKILL.md", "TDD skill"),
-    "RyanAlberts/pmstack": (1, "https://github.com/RyanAlberts/pmstack/blob/main/skills/prd-from-signal.md", "PRD-from-signal skill"),
-    "anthropics/claude-agent-sdk-python": (6932, "https://github.com/anthropics/claude-agent-sdk-demos/blob/main/research-agent/research_agent/agent.py", "Research agent demo"),
-    "aiming-lab/AutoHarness": (280, "https://github.com/aiming-lab/AutoHarness/blob/main/examples/full_pipeline_demo.py", "Full pipeline demo"),
-    "QuantaAlpha/RepoMaster": (522, "https://github.com/QuantaAlpha/RepoMaster/blob/main/example/pdf_parse.md", "PDF-parse case study"),
-    "SWE-agent/SWE-agent": (19241, "https://github.com/SWE-agent/SWE-agent/blob/main/config/default.yaml", "Default agent config"),
-    "HKUDS/OpenHarness": (12698, "https://github.com/HKUDS/OpenHarness/blob/main/.claude/skills/harness-eval/SKILL.md", "harness-eval skill"),
-    "anthropics/skills": (137005, "https://github.com/anthropics/skills/blob/main/skills/docx/SKILL.md", "docx skill"),
+    "gsd-build/get-shit-done": (64133, "https://github.com/gsd-build/get-shit-done/blob/main/commands/gsd/ship.md", "gsd:ship command"),
+    "garrytan/gstack": (109161, "https://github.com/garrytan/gstack/blob/main/ship/SKILL.md", "/ship SKILL.md"),
+    "affaan-m/everything-claude-code": (213284, "https://github.com/affaan-m/everything-claude-code/blob/main/skills/autonomous-agent-harness/SKILL.md", "autonomous-agent-harness skill"),
+    "obra/superpowers": (224579, "https://github.com/obra/superpowers/blob/main/skills/test-driven-development/SKILL.md", "TDD skill"),
+    "RyanAlberts/pmstack": (2, "https://github.com/RyanAlberts/pmstack/blob/main/skills/prd-from-signal.md", "PRD-from-signal skill"),
+    "anthropics/claude-agent-sdk-python": (7270, "https://github.com/anthropics/claude-agent-sdk-demos/blob/main/research-agent/research_agent/agent.py", "Research agent demo"),
+    "aiming-lab/AutoHarness": (312, "https://github.com/aiming-lab/AutoHarness/blob/main/examples/full_pipeline_demo.py", "Full pipeline demo"),
+    "QuantaAlpha/RepoMaster": (527, "https://github.com/QuantaAlpha/RepoMaster/blob/main/example/pdf_parse.md", "PDF-parse case study"),
+    "SWE-agent/SWE-agent": (19480, "https://github.com/SWE-agent/SWE-agent/blob/main/config/default.yaml", "Default agent config"),
+    "HKUDS/OpenHarness": (13759, "https://github.com/HKUDS/OpenHarness/blob/main/.claude/skills/harness-eval/SKILL.md", "harness-eval skill"),
+    "anthropics/skills": (149410, "https://github.com/anthropics/skills/blob/main/skills/docx/SKILL.md", "docx skill"),
     # frameworks
-    "langchain-ai/langgraph": (32357, "https://github.com/langchain-ai/langgraph/blob/main/examples/customer-support/customer-support.ipynb", "Customer support agent"),
-    "langchain-ai/langchain": (137048, "https://github.com/langchain-ai/langchain-academy/blob/main/module-1/agent.ipynb", "Build an agent notebook"),
-    "run-llama/llama_index": (49495, "https://github.com/run-llama/llama_index/blob/main/docs/examples/agent/agent_workflow_research_assistant.ipynb", "Research assistant workflow"),
-    "microsoft/semantic-kernel": (27933, "https://github.com/microsoft/semantic-kernel/blob/main/python/samples/getting_started_with_agents/chat_completion/step01_chat_completion_agent_simple.py", "Chat completion agent"),
-    "mastra-ai/mastra": (24010, "https://github.com/mastra-ai/mastra/tree/main/examples/durable-agents", "Durable research agent"),
-    "agno-agi/agno": (40187, "https://github.com/agno-agi/agno/blob/main/cookbook/02_agents/01_quickstart/agent_with_tools.py", "Agent with tools"),
-    "letta-ai/letta": (22791, "https://github.com/letta-ai/agent-file/tree/main/agents/%40letta-ai/loop", "Loop .af agent file"),
-    "langflow-ai/langflow": (148459, "https://github.com/langflow-ai/langflow/blob/main/docs/docs/Tutorials/chat-with-rag.mdx", "Chat with RAG flow"),
-    "RasaHQ/rasa": (21172, "https://github.com/RasaHQ/rasa-demo", "Sara conversational demo"),
-    "botpress/botpress": (14697, "https://github.com/botpress/v12/tree/master/examples/interbot", "Inter-bot delegation"),
-    "langgenius/dify": (141806, "https://github.com/langgenius/dify-docs/blob/main/en/use-dify/tutorials/customer-service-bot.mdx", "Customer-service bot"),
-    "n8n-io/n8n": (188586, "https://github.com/n8n-io/n8n-docs/blob/main/docs/advanced-ai/examples/agent-chain-comparison.md", "Agent vs chain workflow"),
-    "Significant-Gravitas/AutoGPT": (184401, "https://github.com/Significant-Gravitas/AutoGPT/blob/master/autogpt_platform/graph_templates/Medium%20Blogger_v28.json", "Medium blogger graph"),
-    "myshell-ai/AIlice": (1409, "https://github.com/myshell-ai/AIlice#cool-things-we-can-do", "Task showcase"),
-    "i-am-bee/beeai-framework": (3259, "https://github.com/i-am-bee/beeai-framework/blob/main/python/examples/agents/react.py", "ReAct agent example"),
-    "2FastLabs/agent-squad": (7630, "https://github.com/2FastLabs/agent-squad/tree/main/examples/ecommerce-support-simulator", "E-commerce support sim"),
-    "superagentxai/superagentx": (195, "https://github.com/superagentxai/superagentx/blob/master/examples/agents/parallel_agents.py", "Parallel marketing agents"),
-    "OpenBMB/AgentVerse": (5038, "https://github.com/OpenBMB/AgentVerse/blob/main/agentverse/tasks/simulation/nlp_classroom_9players/config.yaml", "NLP classroom sim"),
-    "SciPhi-AI/R2R": (7837, "https://github.com/SciPhi-AI/R2R/blob/main/py/core/examples/hello_r2r.py", "hello_r2r RAG example"),
-    "google/adk-python": (19706, "https://github.com/google/adk-samples/tree/main/python/agents/travel-concierge", "Travel concierge agent"),
-    "agentstack-ai/AgentStack": (2154, "https://github.com/agentstack-ai/AgentStack/tree/main/examples/research_assistant", "Research assistant crew"),
-    "howl-anderson/agentsilex": (450, "https://github.com/howl-anderson/agentsilex/blob/main/demo/simple_agent.py", "Simple weather agent"),
-    "FlowiseAI/Flowise": (52919, "https://github.com/FlowiseAI/Flowise/blob/main/packages/server/marketplaces/agentflowsv2/Agentic%20RAG.json", "Agentic RAG flow"),
-    "browser-use/browser-use": (94517, "https://github.com/browser-use/browser-use/blob/main/examples/use-cases/shopping.py", "Grocery shopping agent"),
+    "langchain-ai/langgraph": (34450, "https://github.com/langchain-ai/langgraph/blob/main/examples/customer-support/customer-support.ipynb", "Customer support agent"),
+    "langchain-ai/langchain": (139047, "https://github.com/langchain-ai/langchain-academy/blob/main/module-1/agent.ipynb", "Build an agent notebook"),
+    "run-llama/llama_index": (50081, "https://github.com/run-llama/llama_index/blob/main/docs/examples/agent/agent_workflow_research_assistant.ipynb", "Research assistant workflow"),
+    "microsoft/semantic-kernel": (28105, "https://github.com/microsoft/semantic-kernel/blob/main/python/samples/getting_started_with_agents/chat_completion/step01_chat_completion_agent_simple.py", "Chat completion agent"),
+    "mastra-ai/mastra": (24967, "https://github.com/mastra-ai/mastra/tree/main/examples/durable-agents", "Durable research agent"),
+    "agno-agi/agno": (40644, "https://github.com/agno-agi/agno/blob/main/cookbook/02_agents/01_quickstart/agent_with_tools.py", "Agent with tools"),
+    "letta-ai/letta": (23268, "https://github.com/letta-ai/agent-file/tree/main/agents/%40letta-ai/loop", "Loop .af agent file"),
+    "langflow-ai/langflow": (149546, "https://github.com/langflow-ai/langflow/blob/main/docs/docs/Tutorials/chat-with-rag.mdx", "Chat with RAG flow"),
+    "RasaHQ/rasa": (21209, "https://github.com/RasaHQ/rasa-demo", "Sara conversational demo"),
+    "botpress/botpress": (14737, "https://github.com/botpress/v12/tree/master/examples/interbot", "Inter-bot delegation"),
+    "langgenius/dify": (144860, "https://github.com/langgenius/dify-docs/blob/main/en/use-dify/tutorials/customer-service-bot.mdx", "Customer-service bot"),
+    "n8n-io/n8n": (192069, "https://github.com/n8n-io/n8n-docs/blob/main/docs/advanced-ai/examples/agent-chain-comparison.md", "Agent vs chain workflow"),
+    "Significant-Gravitas/AutoGPT": (184887, "https://github.com/Significant-Gravitas/AutoGPT/blob/master/autogpt_platform/graph_templates/Medium%20Blogger_v28.json", "Medium blogger graph"),
+    "myshell-ai/AIlice": (1407, "https://github.com/myshell-ai/AIlice#cool-things-we-can-do", "Task showcase"),
+    "i-am-bee/beeai-framework": (3288, "https://github.com/i-am-bee/beeai-framework/blob/main/python/examples/agents/react.py", "ReAct agent example"),
+    "2FastLabs/agent-squad": (7649, "https://github.com/2FastLabs/agent-squad/tree/main/examples/ecommerce-support-simulator", "E-commerce support sim"),
+    "superagentxai/superagentx": (200, "https://github.com/superagentxai/superagentx/blob/master/examples/agents/parallel_agents.py", "Parallel marketing agents"),
+    "OpenBMB/AgentVerse": (5053, "https://github.com/OpenBMB/AgentVerse/blob/main/agentverse/tasks/simulation/nlp_classroom_9players/config.yaml", "NLP classroom sim"),
+    "SciPhi-AI/R2R": (7884, "https://github.com/SciPhi-AI/R2R/blob/main/py/core/examples/hello_r2r.py", "hello_r2r RAG example"),
+    "google/adk-python": (20071, "https://github.com/google/adk-samples/tree/main/python/agents/travel-concierge", "Travel concierge agent"),
+    "agentstack-ai/AgentStack": (2164, "https://github.com/agentstack-ai/AgentStack/tree/main/examples/research_assistant", "Research assistant crew"),
+    "howl-anderson/agentsilex": (451, "https://github.com/howl-anderson/agentsilex/blob/main/demo/simple_agent.py", "Simple weather agent"),
+    "FlowiseAI/Flowise": (53484, "https://github.com/FlowiseAI/Flowise/blob/main/packages/server/marketplaces/agentflowsv2/Agentic%20RAG.json", "Agentic RAG flow"),
+    "browser-use/browser-use": (98299, "https://github.com/browser-use/browser-use/blob/main/examples/use-cases/shopping.py", "Grocery shopping agent"),
     # multi-agent
-    "openai/openai-agents-python": (26440, "https://github.com/openai/openai-agents-python/blob/main/examples/customer_service/main.py", "Airline customer service handoffs"),
-    "crewAIInc/crewAI": (51670, "https://github.com/crewAIInc/crewAI-examples/blob/main/crews/trip_planner/trip_agents.py", "Trip planner crew"),
-    "microsoft/autogen": (58149, "https://github.com/microsoft/autogen/tree/main/python/samples/core_distributed-group-chat", "Distributed group chat"),
-    "MervinPraison/PraisonAI": (7823, "https://github.com/MervinPraison/PraisonAI/blob/main/examples/python/general/orchestrator-workers.py", "Orchestrator-workers pattern"),
-    "THUDM/AgentRL": (286, "https://github.com/THUDM/AgentRL/blob/main/examples/training/async_trainer.py", "Async GRPO trainer"),
+    "openai/openai-agents-python": (27081, "https://github.com/openai/openai-agents-python/blob/main/examples/customer_service/main.py", "Airline customer service handoffs"),
+    "crewAIInc/crewAI": (53276, "https://github.com/crewAIInc/crewAI-examples/blob/main/crews/trip_planner/trip_agents.py", "Trip planner crew"),
+    "microsoft/autogen": (58875, "https://github.com/microsoft/autogen/tree/main/python/samples/core_distributed-group-chat", "Distributed group chat"),
+    "MervinPraison/PraisonAI": (8119, "https://github.com/MervinPraison/PraisonAI/blob/main/examples/python/general/orchestrator-workers.py", "Orchestrator-workers pattern"),
+    "THUDM/AgentRL": (297, "https://github.com/THUDM/AgentRL/blob/main/examples/training/async_trainer.py", "Async GRPO trainer"),
     # plugins-mcp-cli
-    "Aider-AI/aider": (44989, "https://github.com/Aider-AI/aider/blob/main/aider/repomap.py", "Repo map source"),
+    "Aider-AI/aider": (46003, "https://github.com/Aider-AI/aider/blob/main/aider/repomap.py", "Repo map source"),
     "RyanAlberts/agentlog": (0, "https://github.com/RyanAlberts/agentlog/blob/main/example-log/decisions.jsonl", "Sample decisions.jsonl"),
-    "thedotmack/claude-mem": (76591, "https://github.com/thedotmack/claude-mem/blob/main/plugin/hooks/hooks.json", "Lifecycle hooks config"),
-    "ajhcs/Better-OpenCodeMCP": (6, "https://github.com/ajhcs/Better-OpenCodeMCP/blob/main/src/tools/opencode.tool.ts", "opencode delegate tool"),
-    "modelcontextprotocol/python-sdk": (23053, "https://github.com/modelcontextprotocol/python-sdk/blob/main/examples/servers/simple-tool/mcp_simple_tool/server.py", "Website fetcher server"),
-    "modelcontextprotocol/typescript-sdk": (12460, "https://github.com/modelcontextprotocol/typescript-sdk/blob/main/examples/server/src/simpleStreamableHttp.ts", "Streamable HTTP server"),
-    "continuedev/continue": (33257, "https://github.com/continuedev/continue/blob/main/extensions/vscode/README.md", "VS Code extension demos"),
-    "modelcontextprotocol/inspector": (9799, "https://github.com/modelcontextprotocol/inspector/blob/main/README.md", "Inspector UI walkthrough"),
-    "github/github-mcp-server": (29957, "https://github.com/github/github-mcp-server/blob/main/docs/remote-server.md", "Remote server toolsets"),
-    "modelcontextprotocol/registry": (6830, "https://github.com/modelcontextprotocol/registry/blob/main/data/seed.json", "Registry seed entries"),
-    "docker/mcp-gateway": (1394, "https://github.com/docker/mcp-gateway/blob/main/docs/mcp-gateway.md", "Gateway usage walkthrough"),
-    "withLinda/puppeteer-real-browser-mcp-server": (22, "https://github.com/withLinda/puppeteer-real-browser-mcp-server/blob/main/README.md", "11 anti-detection tools"),
+    "thedotmack/claude-mem": (81780, "https://github.com/thedotmack/claude-mem/blob/main/plugin/hooks/hooks.json", "Lifecycle hooks config"),
+    "ajhcs/Better-OpenCodeMCP": (7, "https://github.com/ajhcs/Better-OpenCodeMCP/blob/main/src/tools/opencode.tool.ts", "opencode delegate tool"),
+    "modelcontextprotocol/python-sdk": (23290, "https://github.com/modelcontextprotocol/python-sdk/blob/main/examples/servers/simple-tool/mcp_simple_tool/server.py", "Website fetcher server"),
+    "modelcontextprotocol/typescript-sdk": (12645, "https://github.com/modelcontextprotocol/typescript-sdk/blob/main/examples/server/src/simpleStreamableHttp.ts", "Streamable HTTP server"),
+    "continuedev/continue": (33652, "https://github.com/continuedev/continue/blob/main/extensions/vscode/README.md", "VS Code extension demos"),
+    "modelcontextprotocol/inspector": (10051, "https://github.com/modelcontextprotocol/inspector/blob/main/README.md", "Inspector UI walkthrough"),
+    "github/github-mcp-server": (30579, "https://github.com/github/github-mcp-server/blob/main/docs/remote-server.md", "Remote server toolsets"),
+    "modelcontextprotocol/registry": (6915, "https://github.com/modelcontextprotocol/registry/blob/main/data/seed.json", "Registry seed entries"),
+    "docker/mcp-gateway": (1447, "https://github.com/docker/mcp-gateway/blob/main/docs/mcp-gateway.md", "Gateway usage walkthrough"),
+    "withLinda/puppeteer-real-browser-mcp-server": (23, "https://github.com/withLinda/puppeteer-real-browser-mcp-server/blob/main/README.md", "11 anti-detection tools"),
     # evaluation
-    "arcprize/ARC-AGI-2": (700, "https://arcprize.org/leaderboard", "ARC Prize leaderboard"),
+    "arcprize/ARC-AGI-2": (712, "https://arcprize.org/leaderboard", "ARC Prize leaderboard"),
     "arcprize/arc-agi-benchmarking": (350, "https://github.com/arcprize/arc-agi-benchmarking/blob/main/docs/examples/prompt_example_o3.md", "o3 prompt example"),
-    "GAIR-NLP/AgencyBench": (84, "https://github.com/GAIR-NLP/AgencyBench#leaderboard", "AgencyBench leaderboard"),
+    "GAIR-NLP/AgencyBench": (87, "https://github.com/GAIR-NLP/AgencyBench#leaderboard", "AgencyBench leaderboard"),
     "patronus-ai/trail-benchmark": (18, "https://huggingface.co/datasets/PatronusAI/TRAIL", "TRAIL dataset card"),
-    "THUDM/AgentBench": (3429, "https://arxiv.org/abs/2308.03688", "AgentBench ICLR'24 paper"),
-    "web-arena-x/webarena": (1475, "https://docs.google.com/spreadsheets/d/1M801lEpBbKSNwP-vDBkC_pF7LdyGU1f_ufZb_NWNBZQ/edit", "WebArena leaderboard"),
-    "SWE-bench/SWE-bench": (4968, "https://www.swebench.com/verified.html", "SWE-bench Verified leaderboard"),
-    "SWE-Gym/SWE-Gym": (678, "https://arxiv.org/abs/2412.21139", "SWE-Gym ICML 2025 paper"),
-    "SWE-bench/SWE-smith": (649, "https://huggingface.co/datasets/SWE-bench/SWE-smith-trajectories", "SWE-smith trajectories"),
-    "allenai/super-benchmark": (52, "https://arxiv.org/abs/2409.07440", "SUPER EMNLP paper"),
-    "meituan-longcat/vitabench": (132, "https://arxiv.org/abs/2509.26490", "VitaBench paper"),
-    "letta-ai/letta-evals": (71, "https://github.com/letta-ai/letta-leaderboard/blob/main/leaderboard/locomo/locomo_benchmark.py", "LoCoMo memory benchmark"),
-    "MinorJerry/WebVoyager": (1087, "https://github.com/MinorJerry/WebVoyager/blob/main/data/WebVoyager_data.jsonl", "643 web tasks dataset"),
-    "UKGovernmentBEIS/inspect_evals": (500, "https://github.com/UKGovernmentBEIS/inspect_evals/blob/main/src/inspect_evals/swe_bench/README.md", "inspect SWE-bench eval"),
-    "UKGovernmentBEIS/inspect_ai": (2076, "https://inspect.aisi.org.uk/tutorial.html", "Inspect tutorial example"),
-    "microsoft/agent-lightning": (17193, "https://github.com/microsoft/agent-lightning/blob/main/examples/apo/README.md", "APO room-booking example"),
+    "THUDM/AgentBench": (3488, "https://arxiv.org/abs/2308.03688", "AgentBench ICLR'24 paper"),
+    "web-arena-x/webarena": (1505, "https://docs.google.com/spreadsheets/d/1M801lEpBbKSNwP-vDBkC_pF7LdyGU1f_ufZb_NWNBZQ/edit", "WebArena leaderboard"),
+    "SWE-bench/SWE-bench": (5142, "https://www.swebench.com/verified.html", "SWE-bench Verified leaderboard"),
+    "SWE-Gym/SWE-Gym": (686, "https://arxiv.org/abs/2412.21139", "SWE-Gym ICML 2025 paper"),
+    "SWE-bench/SWE-smith": (673, "https://huggingface.co/datasets/SWE-bench/SWE-smith-trajectories", "SWE-smith trajectories"),
+    "allenai/super-benchmark": (53, "https://arxiv.org/abs/2409.07440", "SUPER EMNLP paper"),
+    "meituan-longcat/vitabench": (145, "https://arxiv.org/abs/2509.26490", "VitaBench paper"),
+    "letta-ai/letta-evals": (72, "https://github.com/letta-ai/letta-leaderboard/blob/main/leaderboard/locomo/locomo_benchmark.py", "LoCoMo memory benchmark"),
+    "MinorJerry/WebVoyager": (1096, "https://github.com/MinorJerry/WebVoyager/blob/main/data/WebVoyager_data.jsonl", "643 web tasks dataset"),
+    "UKGovernmentBEIS/inspect_evals": (534, "https://github.com/UKGovernmentBEIS/inspect_evals/blob/main/src/inspect_evals/swe_bench/README.md", "inspect SWE-bench eval"),
+    "UKGovernmentBEIS/inspect_ai": (2186, "https://inspect.aisi.org.uk/tutorial.html", "Inspect tutorial example"),
+    "microsoft/agent-lightning": (17301, "https://github.com/microsoft/agent-lightning/blob/main/examples/apo/README.md", "APO room-booking example"),
     # research-task
-    "assafelovic/gpt-researcher": (27131, "https://github.com/assafelovic/gpt-researcher/blob/master/docs/blog/2024-05-19-gptr-langgraph/index.md", "Multi-agent LangGraph walkthrough"),
-    "OpenAgentsInc/openagents": (419, "https://github.com/OpenAgentsInc/openagents/blob/main/docs/reports/nexus/2026-04-23-autopilot-pylon-production-earning-proof.md", "Production earning proof"),
+    "assafelovic/gpt-researcher": (27641, "https://github.com/assafelovic/gpt-researcher/blob/master/docs/blog/2024-05-19-gptr-langgraph/index.md", "Multi-agent LangGraph walkthrough"),
+    "OpenAgentsInc/openagents": (422, "https://github.com/OpenAgentsInc/openagents/blob/main/docs/reports/nexus/2026-04-23-autopilot-pylon-production-earning-proof.md", "Production earning proof"),
     # libraries-sdks
-    "langchain-ai/deepagents": (22954, "https://github.com/langchain-ai/deepagents/tree/main/examples/deep_research", "Deep research agent"),
-    "pydantic/pydantic-ai": (17131, "https://github.com/pydantic/pydantic-ai/blob/main/examples/pydantic_ai_examples/bank_support.py", "Bank support agent"),
-    "MaxGfeller/open-harness": (518, "https://github.com/MaxGfeller/open-harness/tree/main/examples/cli", "Terminal CLI agent"),
-    "vercel/ai": (24315, "https://github.com/vercel/ai/tree/main/examples/next-agent", "Next.js agent example"),
-    "huggingface/smolagents": (27377, "https://github.com/huggingface/smolagents/blob/main/examples/rag.py", "RAG code agent"),
-    "strands-agents/sdk-python": (5884, "https://github.com/strands-agents/samples/tree/main/python/01-learn/01-first-agent", "First agent tutorial"),
-    "openai/openai-agents-js": (3054, "https://github.com/openai/openai-agents-js/tree/main/examples/financial-research-agent", "Financial research agent"),
-    "BerriAI/litellm": (47469, "https://github.com/BerriAI/litellm/blob/main/cookbook/anthropic_agent_sdk/main.py", "Anthropic Agent SDK gateway"),
-    "ComposioHQ/composio": (28328, "https://github.com/ComposioHQ/composio#quick-start", "HackerNews agent quickstart"),
-    "mem0ai/mem0": (56055, "https://github.com/mem0ai/mem0/tree/main/examples/mem0-demo", "Next.js memory demo"),
-    "cloudflare/agents": (4928, "https://github.com/cloudflare/agents/tree/main/examples/playground", "SDK playground app"),
-    "e2b-dev/E2B": (12238, "https://github.com/e2b-dev/e2b-cookbook/tree/main/examples/anthropic-claude-code-in-sandbox-python", "Claude Code in sandbox"),
-    "daytonaio/daytona": (72441, "https://github.com/daytonaio/daytona/tree/main/examples/python/charts", "Charts in sandbox"),
+    "langchain-ai/deepagents": (24474, "https://github.com/langchain-ai/deepagents/tree/main/examples/deep_research", "Deep research agent"),
+    "pydantic/pydantic-ai": (17698, "https://github.com/pydantic/pydantic-ai/blob/main/examples/pydantic_ai_examples/bank_support.py", "Bank support agent"),
+    "MaxGfeller/open-harness": (564, "https://github.com/MaxGfeller/open-harness/tree/main/examples/cli", "Terminal CLI agent"),
+    "vercel/ai": (24799, "https://github.com/vercel/ai/tree/main/examples/next-agent", "Next.js agent example"),
+    "huggingface/smolagents": (27815, "https://github.com/huggingface/smolagents/blob/main/examples/rag.py", "RAG code agent"),
+    "strands-agents/sdk-python": (6103, "https://github.com/strands-agents/samples/tree/main/python/01-learn/01-first-agent", "First agent tutorial"),
+    "openai/openai-agents-js": (3195, "https://github.com/openai/openai-agents-js/tree/main/examples/financial-research-agent", "Financial research agent"),
+    "BerriAI/litellm": (50065, "https://github.com/BerriAI/litellm/blob/main/cookbook/anthropic_agent_sdk/main.py", "Anthropic Agent SDK gateway"),
+    "ComposioHQ/composio": (28723, "https://github.com/ComposioHQ/composio#quick-start", "HackerNews agent quickstart"),
+    "mem0ai/mem0": (58352, "https://github.com/mem0ai/mem0/tree/main/examples/mem0-demo", "Next.js memory demo"),
+    "cloudflare/agents": (5085, "https://github.com/cloudflare/agents/tree/main/examples/playground", "SDK playground app"),
+    "e2b-dev/E2B": (12552, "https://github.com/e2b-dev/e2b-cookbook/tree/main/examples/anthropic-claude-code-in-sandbox-python", "Claude Code in sandbox"),
+    "daytonaio/daytona": (72457, "https://github.com/daytonaio/daytona/tree/main/examples/python/charts", "Charts in sandbox"),
     "brandonhimpfen/awesome-ai-agents": (11, "https://github.com/brandonhimpfen/awesome-ai-agents#frameworks", "Frameworks section"),
 }
 
 
 # Date the star counts in META were last captured. Single source for the
 # README explanation line, harnesses.json, llms.txt, and the landscape SVG.
-STARS_CAPTURED = "2026-06-07"
+STARS_CAPTURED = "2026-06-11"
 
 # Canonical 4-tier order of the simplicity ↔ capability axis (least → most
 # adoption surface). Every Project.axis must start with one of these.
@@ -1201,6 +1201,37 @@ def generate_landscape_svg() -> str:
     return "\n".join(svg) + "\n"
 
 
+def refresh_comparisons() -> list:
+    """Patch the "⭐ Stars" row of each table in comparisons/*.md to current
+    META counts, matching columns by the github.com links in the table header.
+    The prose in those pages is hand-written; only the stars row is touched.
+    """
+    updated = []
+    for f in sorted((REPO_ROOT / "comparisons").glob("*.md")):
+        lines = f.read_text().split("\n")
+        header_ids: list = []
+        dirty = False
+        for i, line in enumerate(lines):
+            if not line.startswith("|"):
+                continue
+            if "github.com/" in line and not header_ids:
+                header_ids = re.findall(r"github\.com/([\w.-]+/[\w.-]+)\)", line)
+            elif line.startswith("| ⭐ Stars |") and header_ids:
+                if all(stars_for(g) > 0 for g in header_ids):
+                    cells = " | ".join(format_stars(stars_for(g)) for g in header_ids)
+                    new_line = f"| ⭐ Stars | {cells} |"
+                    if new_line != line:
+                        lines[i] = new_line
+                        dirty = True
+                else:
+                    print(f"WARNING: {f.name}: unknown github_id in table header, stars row left alone")
+                header_ids = []
+        if dirty:
+            f.write_text("\n".join(lines))
+            updated.append(f.name)
+    return updated
+
+
 def main():
     yaml_content = generate_yaml()
     readme_content = generate_readme()
@@ -1214,6 +1245,9 @@ def main():
     (REPO_ROOT / "llms.txt").write_text(generate_llms_txt())
     (REPO_ROOT / "assets").mkdir(exist_ok=True)
     (REPO_ROOT / "assets" / "landscape.svg").write_text(generate_landscape_svg())
+    refreshed = refresh_comparisons()
+    if refreshed:
+        print(f"Comparison star rows refreshed: {', '.join(refreshed)}")
     total = count_projects()
     print(f"Wrote {total} projects across {len(CATEGORIES)} categories.")
     for cat_id, title, _ in CATEGORIES:
