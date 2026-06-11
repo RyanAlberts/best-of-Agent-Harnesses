@@ -109,6 +109,10 @@ projects:
     github_id: SeanHogg/coderClaw
     labels: ["javascript"]
     category: "coding-agent-products"
+  - name: Open Interpreter
+    github_id: openinterpreter/openinterpreter
+    labels: ["python"]
+    category: "coding-agent-products"
   # Coding harness configs and SDKs
   - name: get-shit-done
     github_id: gsd-build/get-shit-done
@@ -223,6 +227,18 @@ projects:
     github_id: NousResearch/hermes-agent
     labels: ["python"]
     category: "frameworks"
+  - name: Khoj
+    github_id: khoj-ai/khoj
+    labels: ["python"]
+    category: "frameworks"
+  - name: Eliza
+    github_id: elizaOS/eliza
+    labels: ["javascript"]
+    category: "frameworks"
+  - name: Agent Zero
+    github_id: agent0ai/agent-zero
+    labels: ["python"]
+    category: "frameworks"
   - name: AgentVerse
     github_id: OpenBMB/AgentVerse
     labels: ["python"]
@@ -269,6 +285,18 @@ projects:
     category: "multi-agent"
   - name: AgentRL
     github_id: THUDM/AgentRL
+    labels: ["python"]
+    category: "multi-agent"
+  - name: MetaGPT
+    github_id: FoundationAgents/MetaGPT
+    labels: ["python"]
+    category: "multi-agent"
+  - name: ChatDev
+    github_id: OpenBMB/ChatDev
+    labels: ["python"]
+    category: "multi-agent"
+  - name: Microsoft Agent Framework
+    github_id: microsoft/agent-framework
     labels: ["python"]
     category: "multi-agent"
   # Plugins, MCPs, CLI tools

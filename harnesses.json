@@ -5,7 +5,7 @@
     "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses",
     "license": "CC-BY-SA-4.0",
     "stars_captured": "2026-06-11",
-    "project_count": 103,
+    "project_count": 110,
     "tiers": [
       "super simple",
       "mostly simple",
@@ -90,6 +90,17 @@
       "category_title": "Coding agent products (IDEs, CLIs, full suites)"
     },
     {
+      "intent": "I want an always-on personal agent that lives in my chat apps",
+      "picks": [
+        "openclaw/openclaw",
+        "NousResearch/hermes-agent",
+        "khoj-ai/khoj",
+        "agent0ai/agent-zero",
+        "HKUDS/OpenHarness"
+      ],
+      "category_title": "Frameworks"
+    },
+    {
       "intent": "I want to extend Claude Code, Codex, or OpenCode with skills and slash commands",
       "picks": [
         "anthropics/skills",
@@ -140,6 +151,7 @@
         "openai/openai-agents-python",
         "crewAIInc/crewAI",
         "microsoft/autogen",
+        "microsoft/agent-framework",
         "MervinPraison/PraisonAI",
         "2FastLabs/agent-squad"
       ],
@@ -153,15 +165,6 @@
         "run-llama/llama_index",
         "pydantic/pydantic-ai",
         "agno-agi/agno"
-      ],
-      "category_title": "Frameworks"
-    },
-    {
-      "intent": "I want an always-on personal agent that lives in my chat apps",
-      "picks": [
-        "openclaw/openclaw",
-        "NousResearch/hermes-agent",
-        "HKUDS/OpenHarness"
       ],
       "category_title": "Frameworks"
     },
@@ -501,6 +504,31 @@
       "example": {
         "label": "Repository microagents",
         "url": "https://docs.all-hands.dev/usage/prompting/microagents-repo"
+      }
+    },
+    {
+      "name": "Open Interpreter",
+      "github_id": "openinterpreter/openinterpreter",
+      "url": "https://github.com/openinterpreter/openinterpreter",
+      "description": "Lightweight terminal coding agent oriented to open models (DeepSeek, Kimi, Qwen). The **harness** is a code-execution loop — the model writes code, the harness executes it with confirmation gates; the CLI is the shell. The original \"let the LLM run code on my machine\" project, reborn for open weights.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 63858,
+      "tier": "mostly simple",
+      "tier_rank": 2,
+      "axis": "mostly simple (lean code-exec loop)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "open-source",
+      "tags": [
+        "cli",
+        "python"
+      ],
+      "example": {
+        "label": "Quick start",
+        "url": "https://github.com/openinterpreter/openinterpreter#readme"
       }
     },
     {
@@ -1213,6 +1241,30 @@
       }
     },
     {
+      "name": "Khoj",
+      "github_id": "khoj-ai/khoj",
+      "url": "https://github.com/khoj-ai/khoj",
+      "description": "Self-hostable \"AI second brain\": answers over your docs and the web, custom agents, scheduled automations, and multi-client reach (web, Obsidian, Emacs, WhatsApp). A personal-agent harness with retrieval at the core.",
+      "category": "frameworks",
+      "category_title": "Frameworks",
+      "stars": 35078,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (server + clients — product suite)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "open-source",
+      "tags": [
+        "python"
+      ],
+      "example": {
+        "label": "Feature tour",
+        "url": "https://github.com/khoj-ai/khoj#readme"
+      }
+    },
+    {
       "name": "langgraph",
       "github_id": "langchain-ai/langgraph",
       "url": "https://github.com/langchain-ai/langgraph",
@@ -1360,6 +1412,60 @@
       "example": {
         "label": "Travel concierge agent",
         "url": "https://github.com/google/adk-samples/tree/main/python/agents/travel-concierge"
+      }
+    },
+    {
+      "name": "Eliza",
+      "github_id": "elizaOS/eliza",
+      "url": "https://github.com/elizaOS/eliza",
+      "description": "Open \"agentic operating system\" (elizaOS): persistent multi-agent runtime with character files, a plugin ecosystem, and social/platform integrations — the harness behind a large share of autonomous social agents.",
+      "category": "frameworks",
+      "category_title": "Frameworks",
+      "stars": 18556,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (runtime + plugin ecosystem — product suite)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "open-source",
+      "tags": [
+        "memory",
+        "multi-agent",
+        "typescript"
+      ],
+      "example": {
+        "label": "Agent quickstart",
+        "url": "https://github.com/elizaOS/eliza#readme"
+      }
+    },
+    {
+      "name": "Agent Zero",
+      "github_id": "agent0ai/agent-zero",
+      "url": "https://github.com/agent0ai/agent-zero",
+      "description": "Organic, prompt-defined personal agent framework: hierarchical sub-agents, persistent memory, browser and code tools, and self-modifying behavior; runs in Docker with a web UI.",
+      "category": "frameworks",
+      "category_title": "Frameworks",
+      "stars": 18027,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (prompt-defined, Docker + web UI)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "unknown",
+      "tags": [
+        "memory",
+        "multi-agent",
+        "browser",
+        "sandbox",
+        "python"
+      ],
+      "example": {
+        "label": "Framework tour",
+        "url": "https://github.com/agent0ai/agent-zero#readme"
       }
     },
     {
@@ -1587,6 +1693,31 @@
       }
     },
     {
+      "name": "MetaGPT",
+      "github_id": "FoundationAgents/MetaGPT",
+      "url": "https://github.com/FoundationAgents/MetaGPT",
+      "description": "The \"AI software company\" multi-agent framework: role-played PM, architect, and engineer agents turn a one-line requirement into specs, designs, and code along an SOP assembly line. The landmark of the genre; development pace has slowed in 2026.",
+      "category": "multi-agent",
+      "category_title": "Multi-agent and orchestration",
+      "stars": 68725,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (role pipeline, SOPs — product suite)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "open-source",
+      "tags": [
+        "multi-agent",
+        "python"
+      ],
+      "example": {
+        "label": "Build a customized agent",
+        "url": "https://github.com/FoundationAgents/MetaGPT/blob/main/examples/build_customized_agent.py"
+      }
+    },
+    {
       "name": "autogen",
       "github_id": "microsoft/autogen",
       "url": "https://github.com/microsoft/autogen",
@@ -1636,6 +1767,30 @@
       }
     },
     {
+      "name": "ChatDev",
+      "github_id": "OpenBMB/ChatDev",
+      "url": "https://github.com/OpenBMB/ChatDev",
+      "description": "Multi-agent software-company simulation (CEO, CTO, programmer, tester) built on chat chains with communicative dehallucination; ChatDev 2.0 continues the line. MetaGPT's conversational sibling.",
+      "category": "multi-agent",
+      "category_title": "Multi-agent and orchestration",
+      "stars": 33370,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (chat-chain simulation)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "none",
+      "recovery_rank": 1,
+      "license_signal": "open-source",
+      "tags": [
+        "python"
+      ],
+      "example": {
+        "label": "Company simulation quickstart",
+        "url": "https://github.com/OpenBMB/ChatDev#readme"
+      }
+    },
+    {
       "name": "openai-agents-python",
       "github_id": "openai/openai-agents-python",
       "url": "https://github.com/openai/openai-agents-python",
@@ -1657,6 +1812,32 @@
       "example": {
         "label": "Airline customer service handoffs",
         "url": "https://github.com/openai/openai-agents-python/blob/main/examples/customer_service/main.py"
+      }
+    },
+    {
+      "name": "Microsoft Agent Framework",
+      "github_id": "microsoft/agent-framework",
+      "url": "https://github.com/microsoft/agent-framework",
+      "description": "Microsoft's convergence of AutoGen and Semantic Kernel: build, orchestrate, and deploy agents and multi-agent workflows in Python and .NET, with graph-based workflows and checkpointing — the designated successor harness for both lines.",
+      "category": "multi-agent",
+      "category_title": "Multi-agent and orchestration",
+      "stars": 11258,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (Python/.NET SDK, graph workflows)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "open-source",
+      "tags": [
+        "multi-agent",
+        "workflow",
+        "python"
+      ],
+      "example": {
+        "label": "Python samples",
+        "url": "https://github.com/microsoft/agent-framework/tree/main/python/samples"
       }
     },
     {
