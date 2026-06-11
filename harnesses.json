@@ -12,7 +12,21 @@
       "slightly complex",
       "complex"
     ],
-    "tier_help": "Adoption surface area, least to most: tier_rank 1 = format-only/single concept, 4 = platform with its own runtime and ecosystem."
+    "tier_help": "Adoption surface area, least to most: tier_rank 1 = format-only/single concept, 4 = platform with its own runtime and ecosystem.",
+    "autonomy_tiers": [
+      "step-gated",
+      "checkpoint-gated",
+      "bounded",
+      "headless"
+    ],
+    "autonomy_help": "Designed autonomy regime, least to most: rank 1 = human approves each action, 4 = built for unattended runs and fleets. rank 0 / 'n/a' = doesn't own an agent loop.",
+    "recovery_tiers": [
+      "none",
+      "retry",
+      "resumable",
+      "durable"
+    ],
+    "recovery_help": "Behavior when a run dies mid-task, weakest to strongest: rank 1 = start over, 4 = persisted execution state survives restarts. rank 0 / 'n/a' = doesn't execute."
   },
   "categories": [
     {
@@ -213,6 +227,10 @@
       "tier": "super simple",
       "tier_rank": 1,
       "axis": "super simple (content bundle)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
       "license_signal": "open-source",
       "tags": [
         "ide"
@@ -233,6 +251,10 @@
       "tier": "super simple",
       "tier_rank": 1,
       "axis": "super simple (format only)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
       "license_signal": "open-source",
       "tags": [
         "typescript"
@@ -253,6 +275,10 @@
       "tier": "slightly complex",
       "tier_rank": 3,
       "axis": "slightly complex (large tool sets)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "durable",
+      "recovery_rank": 4,
       "license_signal": "open-source",
       "tags": [
         "tool-discovery",
@@ -274,6 +300,10 @@
       "tier": "complex",
       "tier_rank": 4,
       "axis": "complex (3k tools, full routing)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "none",
+      "recovery_rank": 1,
       "license_signal": "open-source",
       "tags": [
         "tool-discovery"
@@ -294,6 +324,10 @@
       "tier": "complex",
       "tier_rank": 4,
       "axis": "complex (47k+ tools)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
       "license_signal": "unknown",
       "tags": [
         "tool-discovery",
@@ -315,6 +349,10 @@
       "tier": "mostly simple",
       "tier_rank": 2,
       "axis": "mostly simple (search-then-load)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
       "license_signal": "open-source",
       "tags": [
         "tool-discovery"
@@ -335,6 +373,10 @@
       "tier": "mostly simple",
       "tier_rank": 2,
       "axis": "mostly simple (query-driven retrieval)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
       "license_signal": "open-source",
       "tags": [
         "mcp",
@@ -356,6 +398,10 @@
       "tier": "slightly complex",
       "tier_rank": 3,
       "axis": "slightly complex (multi-provider, plugins, MCP)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "resumable",
+      "recovery_rank": 3,
       "license_signal": "open-source",
       "tags": [
         "mcp",
@@ -380,6 +426,10 @@
       "tier": "slightly complex",
       "tier_rank": 3,
       "axis": "slightly complex (official CLI, plugins, MCP)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "resumable",
+      "recovery_rank": 3,
       "license_signal": "open-source",
       "tags": [
         "mcp",
@@ -402,6 +452,10 @@
       "tier": "slightly complex",
       "tier_rank": 3,
       "axis": "slightly complex (reference CLI, sandboxed)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "resumable",
+      "recovery_rank": 3,
       "license_signal": "open-source",
       "tags": [
         "sandbox",
@@ -424,6 +478,10 @@
       "tier": "complex",
       "tier_rank": 4,
       "axis": "complex (Docker runtime, multi-surface agent — product suite)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "resumable",
+      "recovery_rank": 3,
       "license_signal": "restricted ((multi-license))",
       "tags": [
         "memory",
@@ -447,6 +505,10 @@
       "tier": "slightly complex",
       "tier_rank": 3,
       "axis": "slightly complex (plan-then-act, approval gates)",
+      "autonomy": "step-gated",
+      "autonomy_rank": 1,
+      "recovery": "resumable",
+      "recovery_rank": 3,
       "license_signal": "open-source",
       "tags": [
         "ide",
@@ -468,6 +530,10 @@
       "tier": "slightly complex",
       "tier_rank": 3,
       "axis": "slightly complex (extensions, MCP/ACP)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "resumable",
+      "recovery_rank": 3,
       "license_signal": "open-source",
       "tags": [
         "mcp",
@@ -489,6 +555,10 @@
       "tier": "slightly complex",
       "tier_rank": 3,
       "axis": "slightly complex (terminal agent, TUI)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "resumable",
+      "recovery_rank": 3,
       "license_signal": "restricted (FSL-1.1-MIT)",
       "tags": [
         "memory",
@@ -511,6 +581,10 @@
       "tier": "slightly complex",
       "tier_rank": 3,
       "axis": "slightly complex (IDE extension, MCP-first)",
+      "autonomy": "step-gated",
+      "autonomy_rank": 1,
+      "recovery": "resumable",
+      "recovery_rank": 3,
       "license_signal": "open-source",
       "tags": [
         "mcp",
@@ -534,6 +608,10 @@
       "tier": "slightly complex",
       "tier_rank": 3,
       "axis": "slightly complex (pure Python, plugin runtime)",
+      "autonomy": "checkpoint-gated",
+      "autonomy_rank": 2,
+      "recovery": "none",
+      "recovery_rank": 1,
       "license_signal": "unknown",
       "tags": [
         "mcp",
@@ -557,6 +635,10 @@
       "tier": "slightly complex",
       "tier_rank": 3,
       "axis": "slightly complex (multi-role, AST/semantic)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "none",
+      "recovery_rank": 1,
       "license_signal": "unknown",
       "tags": [
         "ide",
@@ -578,6 +660,10 @@
       "tier": "complex",
       "tier_rank": 4,
       "axis": "complex (multi-IDE skill stack — product suite)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
       "license_signal": "open-source",
       "tags": [
         "memory",
@@ -599,6 +685,10 @@
       "tier": "complex",
       "tier_rank": 4,
       "axis": "complex (subagents + skills + hooks — product suite)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
       "license_signal": "open-source",
       "tags": [
         "multi-agent"
@@ -619,6 +709,10 @@
       "tier": "mostly simple",
       "tier_rank": 2,
       "axis": "mostly simple (official skills format)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
       "license_signal": "open-source",
       "tags": [],
       "example": {
@@ -637,6 +731,10 @@
       "tier": "slightly complex",
       "tier_rank": 3,
       "axis": "slightly complex (multi-role slash-command harness)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
       "license_signal": "open-source",
       "tags": [
         "typescript"
@@ -657,6 +755,10 @@
       "tier": "mostly simple",
       "tier_rank": 2,
       "axis": "mostly simple (meta-prompting, you own stack)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "resumable",
+      "recovery_rank": 3,
       "license_signal": "open-source",
       "tags": [
         "cli",
@@ -678,6 +780,10 @@
       "tier": "slightly complex",
       "tier_rank": 3,
       "axis": "slightly complex (SWE-bench pairing, stateful edits)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "resumable",
+      "recovery_rank": 3,
       "license_signal": "open-source",
       "tags": [
         "memory",
@@ -700,6 +806,10 @@
       "tier": "complex",
       "tier_rank": 4,
       "axis": "complex (personal agent + multi-channel — product suite)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "resumable",
+      "recovery_rank": 3,
       "license_signal": "open-source",
       "tags": [
         "memory",
@@ -721,6 +831,10 @@
       "tier": "complex",
       "tier_rank": 4,
       "axis": "complex (full SDK, session bridging — product suite)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "resumable",
+      "recovery_rank": 3,
       "license_signal": "open-source",
       "tags": [
         "mcp",
@@ -744,6 +858,10 @@
       "tier": "slightly complex",
       "tier_rank": 3,
       "axis": "slightly complex (graph-based exploration)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "none",
+      "recovery_rank": 1,
       "license_signal": "unknown",
       "tags": [
         "workflow",
@@ -765,6 +883,10 @@
       "tier": "super simple",
       "tier_rank": 1,
       "axis": "super simple (2-line wrapper, YAML gov)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "none",
+      "recovery_rank": 1,
       "license_signal": "open-source",
       "tags": [
         "memory",
@@ -788,6 +910,10 @@
       "tier": "super simple",
       "tier_rank": 1,
       "axis": "super simple (skills bundle, PM-focused)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
       "license_signal": "open-source",
       "tags": [
         "evals"
@@ -808,6 +934,10 @@
       "tier": "complex",
       "tier_rank": 4,
       "axis": "complex (400+ nodes, workflow engine — product suite)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "durable",
+      "recovery_rank": 4,
       "license_signal": "restricted (Fair-code)",
       "tags": [
         "workflow",
@@ -830,6 +960,10 @@
       "tier": "complex",
       "tier_rank": 4,
       "axis": "complex (autonomous loop, tools, memory — product suite)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "resumable",
+      "recovery_rank": 3,
       "license_signal": "restricted (Polyform-SU)",
       "tags": [
         "memory",
@@ -852,6 +986,10 @@
       "tier": "complex",
       "tier_rank": 4,
       "axis": "complex (low-code, visual — product suite)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "retry",
+      "recovery_rank": 2,
       "license_signal": "open-source",
       "tags": [
         "low-code",
@@ -873,6 +1011,10 @@
       "tier": "complex",
       "tier_rank": 4,
       "axis": "complex (one-stop platform — product suite)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "retry",
+      "recovery_rank": 2,
       "license_signal": "restricted (Fair-code)",
       "tags": [
         "low-code",
@@ -895,6 +1037,10 @@
       "tier": "complex",
       "tier_rank": 4,
       "axis": "complex (kitchen-sink ecosystem — product suite)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "retry",
+      "recovery_rank": 2,
       "license_signal": "open-source",
       "tags": [
         "python"
@@ -915,6 +1061,10 @@
       "tier": "slightly complex",
       "tier_rank": 3,
       "axis": "slightly complex (LLM + browser, Playwright)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "retry",
+      "recovery_rank": 2,
       "license_signal": "open-source",
       "tags": [
         "mcp",
@@ -937,6 +1087,10 @@
       "tier": "complex",
       "tier_rank": 4,
       "axis": "complex (low-code, drag-drop — product suite)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "retry",
+      "recovery_rank": 2,
       "license_signal": "restricted (Apache+CLA)",
       "tags": [
         "low-code",
@@ -958,6 +1112,10 @@
       "tier": "complex",
       "tier_rank": 4,
       "axis": "complex (RAG + agents — product suite)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "retry",
+      "recovery_rank": 2,
       "license_signal": "open-source",
       "tags": [
         "rag",
@@ -979,6 +1137,10 @@
       "tier": "complex",
       "tier_rank": 4,
       "axis": "complex (memory, KB, observability — product suite)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "resumable",
+      "recovery_rank": 3,
       "license_signal": "open-source",
       "tags": [
         "memory",
@@ -1001,6 +1163,10 @@
       "tier": "slightly complex",
       "tier_rank": 3,
       "axis": "slightly complex (graphs, checkpointing, durable exec)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "durable",
+      "recovery_rank": 4,
       "license_signal": "open-source",
       "tags": [
         "workflow",
@@ -1022,6 +1188,10 @@
       "tier": "complex",
       "tier_rank": 4,
       "axis": "complex (enterprise, multi-language — product suite)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "retry",
+      "recovery_rank": 2,
       "license_signal": "open-source",
       "tags": [
         "python"
@@ -1042,6 +1212,10 @@
       "tier": "slightly complex",
       "tier_rank": 3,
       "axis": "slightly complex (TS-first, minimal boilerplate)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "durable",
+      "recovery_rank": 4,
       "license_signal": "restricted (Elastic-2.0)",
       "tags": [
         "typed",
@@ -1063,6 +1237,10 @@
       "tier": "mostly simple",
       "tier_rank": 2,
       "axis": "mostly simple (lean API)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "durable",
+      "recovery_rank": 4,
       "license_signal": "open-source",
       "tags": [
         "memory",
@@ -1084,6 +1262,10 @@
       "tier": "complex",
       "tier_rank": 4,
       "axis": "complex (full stack — product suite)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "resumable",
+      "recovery_rank": 3,
       "license_signal": "open-source",
       "tags": [
         "voice",
@@ -1105,6 +1287,10 @@
       "tier": "complex",
       "tier_rank": 4,
       "axis": "complex (official Google SDK, eval, deploy — product suite)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "resumable",
+      "recovery_rank": 3,
       "license_signal": "open-source",
       "tags": [
         "evals",
@@ -1127,6 +1313,10 @@
       "tier": "complex",
       "tier_rank": 4,
       "axis": "complex (visual builder, multi-channel — product suite)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "resumable",
+      "recovery_rank": 3,
       "license_signal": "open-source",
       "tags": [
         "low-code",
@@ -1148,6 +1338,10 @@
       "tier": "complex",
       "tier_rank": 4,
       "axis": "complex (production RAG — product suite)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "retry",
+      "recovery_rank": 2,
       "license_signal": "open-source",
       "tags": [
         "vision",
@@ -1171,6 +1365,10 @@
       "tier": "slightly complex",
       "tier_rank": 3,
       "axis": "slightly complex (squad orchestration)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "resumable",
+      "recovery_rank": 3,
       "license_signal": "open-source",
       "tags": [
         "multi-agent"
@@ -1191,6 +1389,10 @@
       "tier": "complex",
       "tier_rank": 4,
       "axis": "complex (simulation envs, multi-agent — product suite)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "none",
+      "recovery_rank": 1,
       "license_signal": "open-source",
       "tags": [
         "multi-agent",
@@ -1212,6 +1414,10 @@
       "tier": "complex",
       "tier_rank": 4,
       "axis": "complex (production multi-agent — product suite)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "resumable",
+      "recovery_rank": 3,
       "license_signal": "open-source",
       "tags": [
         "mcp",
@@ -1235,6 +1441,10 @@
       "tier": "slightly complex",
       "tier_rank": 3,
       "axis": "slightly complex (scaffold, multi-backend)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
       "license_signal": "open-source",
       "tags": [],
       "example": {
@@ -1253,6 +1463,10 @@
       "tier": "slightly complex",
       "tier_rank": 3,
       "axis": "slightly complex (autonomous, one binary)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "none",
+      "recovery_rank": 1,
       "license_signal": "open-source",
       "tags": [
         "sandbox",
@@ -1274,6 +1488,10 @@
       "tier": "super simple",
       "tier_rank": 1,
       "axis": "super simple (~300 LOC)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "none",
+      "recovery_rank": 1,
       "license_signal": "open-source",
       "tags": [
         "python"
@@ -1294,6 +1512,10 @@
       "tier": "mostly simple",
       "tier_rank": 2,
       "axis": "mostly simple (minimal surface)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "none",
+      "recovery_rank": 1,
       "license_signal": "open-source",
       "tags": [
         "multi-agent",
@@ -1315,6 +1537,10 @@
       "tier": "complex",
       "tier_rank": 4,
       "axis": "complex (group chat, code exec, AG2 — product suite)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "resumable",
+      "recovery_rank": 3,
       "license_signal": "open-source",
       "tags": [
         "multi-agent",
@@ -1336,6 +1562,10 @@
       "tier": "complex",
       "tier_rank": 4,
       "axis": "complex (roles, Flows, production — product suite)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "resumable",
+      "recovery_rank": 3,
       "license_signal": "open-source",
       "tags": [
         "python"
@@ -1356,6 +1586,10 @@
       "tier": "mostly simple",
       "tier_rank": 2,
       "axis": "mostly simple (minimal surface)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "resumable",
+      "recovery_rank": 3,
       "license_signal": "open-source",
       "tags": [
         "python"
@@ -1376,6 +1610,10 @@
       "tier": "mostly simple",
       "tier_rank": 2,
       "axis": "mostly simple (single entry, minimal config)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "none",
+      "recovery_rank": 1,
       "license_signal": "open-source",
       "tags": [
         "multi-agent",
@@ -1397,6 +1635,10 @@
       "tier": "complex",
       "tier_rank": 4,
       "axis": "complex (RL, Ray, train agents — product suite)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "resumable",
+      "recovery_rank": 3,
       "license_signal": "open-source",
       "tags": [
         "training",
@@ -1418,6 +1660,10 @@
       "tier": "slightly complex",
       "tier_rank": 3,
       "axis": "slightly complex (session capture + compression)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
       "license_signal": "open-source",
       "tags": [
         "memory"
@@ -1438,6 +1684,10 @@
       "tier": "slightly complex",
       "tier_rank": 3,
       "axis": "slightly complex (CLI, git-aware, MCP)",
+      "autonomy": "checkpoint-gated",
+      "autonomy_rank": 2,
+      "recovery": "resumable",
+      "recovery_rank": 3,
       "license_signal": "open-source",
       "tags": [
         "mcp",
@@ -1460,6 +1710,10 @@
       "tier": "complex",
       "tier_rank": 4,
       "axis": "complex (IDE extension, multi-editor — product suite)",
+      "autonomy": "checkpoint-gated",
+      "autonomy_rank": 2,
+      "recovery": "resumable",
+      "recovery_rank": 3,
       "license_signal": "open-source",
       "tags": [
         "ide",
@@ -1481,6 +1735,10 @@
       "tier": "slightly complex",
       "tier_rank": 3,
       "axis": "slightly complex (official GitHub MCP)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
       "license_signal": "open-source",
       "tags": [
         "mcp"
@@ -1501,6 +1759,10 @@
       "tier": "mostly simple",
       "tier_rank": 2,
       "axis": "mostly simple (SDK only)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
       "license_signal": "open-source",
       "tags": [
         "mcp",
@@ -1522,6 +1784,10 @@
       "tier": "mostly simple",
       "tier_rank": 2,
       "axis": "mostly simple (protocol reference)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
       "license_signal": "open-source",
       "tags": [
         "mcp",
@@ -1543,6 +1809,10 @@
       "tier": "super simple",
       "tier_rank": 1,
       "axis": "super simple (debug GUI)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
       "license_signal": "open-source",
       "tags": [
         "mcp",
@@ -1564,6 +1834,10 @@
       "tier": "slightly complex",
       "tier_rank": 3,
       "axis": "slightly complex (official discovery layer)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
       "license_signal": "open-source",
       "tags": [
         "mcp"
@@ -1584,6 +1858,10 @@
       "tier": "slightly complex",
       "tier_rank": 3,
       "axis": "slightly complex (Docker-aware MCPs)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
       "license_signal": "open-source",
       "tags": [
         "mcp",
@@ -1606,6 +1884,10 @@
       "tier": "mostly simple",
       "tier_rank": 2,
       "axis": "mostly simple (real browser, anti-detect)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
       "license_signal": "unknown",
       "tags": [
         "mcp",
@@ -1628,6 +1910,10 @@
       "tier": "mostly simple",
       "tier_rank": 2,
       "axis": "mostly simple (MCP server, model bridging)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
       "license_signal": "open-source",
       "tags": [
         "mcp",
@@ -1649,6 +1935,10 @@
       "tier": "super simple",
       "tier_rank": 1,
       "axis": "super simple (one file, three commands)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
       "license_signal": "open-source",
       "tags": [
         "memory",
@@ -1671,6 +1961,10 @@
       "tier": "complex",
       "tier_rank": 4,
       "axis": "complex (agent training, Microsoft stack — product suite)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "resumable",
+      "recovery_rank": 3,
       "license_signal": "open-source",
       "tags": [
         "evals",
@@ -1693,6 +1987,10 @@
       "tier": "slightly complex",
       "tier_rank": 3,
       "axis": "slightly complex (real GitHub issues, standard)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "resumable",
+      "recovery_rank": 3,
       "license_signal": "open-source",
       "tags": [
         "evals",
@@ -1715,6 +2013,10 @@
       "tier": "complex",
       "tier_rank": 4,
       "axis": "complex (multi-env, Docker Compose — product suite)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "none",
+      "recovery_rank": 1,
       "license_signal": "open-source",
       "tags": [
         "evals",
@@ -1739,6 +2041,10 @@
       "tier": "complex",
       "tier_rank": 4,
       "axis": "complex (eval framework, AISI stack — product suite)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "resumable",
+      "recovery_rank": 3,
       "license_signal": "open-source",
       "tags": [
         "evals",
@@ -1761,6 +2067,10 @@
       "tier": "complex",
       "tier_rank": 4,
       "axis": "complex (812 tasks, web env — product suite)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "none",
+      "recovery_rank": 1,
       "license_signal": "open-source",
       "tags": [
         "python"
@@ -1781,6 +2091,10 @@
       "tier": "slightly complex",
       "tier_rank": 3,
       "axis": "slightly complex (LMMs, screenshots, 15 sites)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "none",
+      "recovery_rank": 1,
       "license_signal": "open-source",
       "tags": [
         "evals",
@@ -1802,6 +2116,10 @@
       "tier": "super simple",
       "tier_rank": 1,
       "axis": "super simple (task set)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
       "license_signal": "open-source",
       "tags": [],
       "example": {
@@ -1820,6 +2138,10 @@
       "tier": "slightly complex",
       "tier_rank": 3,
       "axis": "slightly complex (training + eval, ICML)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "none",
+      "recovery_rank": 1,
       "license_signal": "open-source",
       "tags": [
         "evals",
@@ -1842,6 +2164,10 @@
       "tier": "slightly complex",
       "tier_rank": 3,
       "axis": "slightly complex (50k+ instances, data gen)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "none",
+      "recovery_rank": 1,
       "license_signal": "open-source",
       "tags": [
         "training",
@@ -1863,6 +2189,10 @@
       "tier": "slightly complex",
       "tier_rank": 3,
       "axis": "slightly complex (Inspect AI, UK gov)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "resumable",
+      "recovery_rank": 3,
       "license_signal": "open-source",
       "tags": [
         "evals",
@@ -1884,6 +2214,10 @@
       "tier": "mostly simple",
       "tier_rank": 2,
       "axis": "mostly simple (runner, multi-provider)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "retry",
+      "recovery_rank": 2,
       "license_signal": "open-source",
       "tags": [
         "evals",
@@ -1906,6 +2240,10 @@
       "tier": "complex",
       "tier_rank": 4,
       "axis": "complex (66 tools, cross-scenario — product suite)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "none",
+      "recovery_rank": 1,
       "license_signal": "open-source",
       "tags": [],
       "example": {
@@ -1924,6 +2262,10 @@
       "tier": "complex",
       "tier_rank": 4,
       "axis": "complex (32 scenarios, Docker, judges — product suite)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "none",
+      "recovery_rank": 1,
       "license_signal": "open-source",
       "tags": [
         "evals",
@@ -1946,6 +2288,10 @@
       "tier": "mostly simple",
       "tier_rank": 2,
       "axis": "mostly simple (Letta-specific harness)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "none",
+      "recovery_rank": 1,
       "license_signal": "open-source",
       "tags": [
         "memory",
@@ -1967,6 +2313,10 @@
       "tier": "slightly complex",
       "tier_rank": 3,
       "axis": "slightly complex (ML/NLP repos, Docker)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "none",
+      "recovery_rank": 1,
       "license_signal": "open-source",
       "tags": [
         "sandbox",
@@ -1988,6 +2338,10 @@
       "tier": "mostly simple",
       "tier_rank": 2,
       "axis": "mostly simple (traces, Hugging Face)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
       "license_signal": "open-source",
       "tags": [],
       "example": {
@@ -2006,6 +2360,10 @@
       "tier": "complex",
       "tier_rank": 4,
       "axis": "complex (deep research, multi-agent — product suite)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "retry",
+      "recovery_rank": 2,
       "license_signal": "open-source",
       "tags": [
         "multi-agent",
@@ -2027,6 +2385,10 @@
       "tier": "complex",
       "tier_rank": 4,
       "axis": "complex (platform, decentralized — product suite)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "resumable",
+      "recovery_rank": 3,
       "license_signal": "open-source",
       "tags": [],
       "example": {
@@ -2045,6 +2407,10 @@
       "tier": "slightly complex",
       "tier_rank": 3,
       "axis": "slightly complex (dev env API, isolation)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
       "license_signal": "open-source",
       "tags": [
         "sandbox"
@@ -2065,6 +2431,10 @@
       "tier": "slightly complex",
       "tier_rank": 3,
       "axis": "slightly complex (memory layer, multi-platform)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
       "license_signal": "open-source",
       "tags": [
         "memory",
@@ -2086,6 +2456,10 @@
       "tier": "mostly simple",
       "tier_rank": 2,
       "axis": "mostly simple (LLM pipe only)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "retry",
+      "recovery_rank": 2,
       "license_signal": "open-source",
       "tags": [
         "provider-agnostic",
@@ -2107,6 +2481,10 @@
       "tier": "complex",
       "tier_rank": 4,
       "axis": "complex (1k+ tools, auth, search — product suite)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
       "license_signal": "open-source",
       "tags": [
         "sandbox",
@@ -2130,6 +2508,10 @@
       "tier": "mostly simple",
       "tier_rank": 2,
       "axis": "mostly simple (code-as-action, ~1k LOC)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "none",
+      "recovery_rank": 1,
       "license_signal": "open-source",
       "tags": [
         "sandbox",
@@ -2151,6 +2533,10 @@
       "tier": "slightly complex",
       "tier_rank": 3,
       "axis": "slightly complex (React/Node SDK, provider-agnostic)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "retry",
+      "recovery_rank": 2,
       "license_signal": "open-source",
       "tags": [
         "provider-agnostic",
@@ -2172,6 +2558,10 @@
       "tier": "slightly complex",
       "tier_rank": 3,
       "axis": "slightly complex (planning, files, sub-agents)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "durable",
+      "recovery_rank": 4,
       "license_signal": "open-source",
       "tags": [
         "multi-agent",
@@ -2195,6 +2585,10 @@
       "tier": "slightly complex",
       "tier_rank": 3,
       "axis": "slightly complex (type-safe, MCP, Logfire)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "durable",
+      "recovery_rank": 4,
       "license_signal": "open-source",
       "tags": [
         "mcp",
@@ -2218,6 +2612,10 @@
       "tier": "slightly complex",
       "tier_rank": 3,
       "axis": "slightly complex (sandbox API, code execution)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
       "license_signal": "open-source",
       "tags": [
         "sandbox",
@@ -2239,6 +2637,10 @@
       "tier": "mostly simple",
       "tier_rank": 2,
       "axis": "mostly simple (decorators, MCP, minimal code)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "resumable",
+      "recovery_rank": 3,
       "license_signal": "open-source",
       "tags": [
         "mcp",
@@ -2262,6 +2664,10 @@
       "tier": "slightly complex",
       "tier_rank": 3,
       "axis": "slightly complex (Durable Objects, stateful)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "durable",
+      "recovery_rank": 4,
       "license_signal": "open-source",
       "tags": [
         "memory",
@@ -2283,6 +2689,10 @@
       "tier": "slightly complex",
       "tier_rank": 3,
       "axis": "slightly complex (handoffs, guardrails, voice)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "resumable",
+      "recovery_rank": 3,
       "license_signal": "open-source",
       "tags": [
         "multi-agent",
@@ -2305,6 +2715,10 @@
       "tier": "slightly complex",
       "tier_rank": 3,
       "axis": "slightly complex (streaming, tools, subagents)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "none",
+      "recovery_rank": 1,
       "license_signal": "open-source",
       "tags": [
         "mcp",
@@ -2327,6 +2741,10 @@
       "tier": "super simple",
       "tier_rank": 1,
       "axis": "super simple (curated lists)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
       "license_signal": "unknown",
       "tags": [],
       "example": {

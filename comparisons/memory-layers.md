@@ -9,6 +9,8 @@
 | Works with | Any agent or framework | Claude Code only | Agents you build *in* Letta |
 | Memory model | Extracted facts (user/org/session scoped), retrieved on demand | Session capture → AI compression → context injection on resume | Self-editing agent memory (the MemGPT lineage) |
 | Adoption surface (list tier) | slightly complex | slightly complex | mostly simple |
+| Autonomy (list axis) | n/a — memory layer, no loop | n/a — plugin, host owns the loop | headless |
+| Recovery (list axis) | n/a | n/a | durable |
 | License | open source (Apache-2.0) | open source | open source |
 
 _Stars as captured for the main list (see [README](../README.md#explanation) for the capture date)._

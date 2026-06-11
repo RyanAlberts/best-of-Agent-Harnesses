@@ -11,6 +11,8 @@ What actually differs between them is the **harness** — the agent loop, provid
 | License | open source | open source | open source | open source | ⚠️ FSL-1.1-MIT |
 | Core language | TypeScript | TypeScript | Rust | Rust | Go |
 | Model lock-in | None — Claude, OpenAI, Gemini, local | Gemini-first | OpenAI-first, multi-provider supported | None — provider choice by design | None — multi-provider |
+| Autonomy (list axis) | headless | bounded | bounded | headless | bounded |
+| Recovery (list axis) | resumable | resumable | resumable | resumable | resumable |
 | Distinctive harness bet | Plugins + MCP, client/server split | First-party Gemini integration, MCP | Sandboxed execution as the default posture | MCP/ACP extensions, recipes, no fixed UI | Session persistence, TUI polish |
 
 _Stars as captured for the main list (see [README](../README.md#explanation) for the capture date)._

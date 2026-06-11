@@ -9,6 +9,8 @@ Four very different answers to "how should multiple agents coordinate?" — and 
 | Adoption surface (list tier) | mostly simple | complex (product suite) | complex (product suite) | slightly complex |
 | Control flow visibility | Medium — emergent from handoff rules | Low-medium — declarative, framework decides | Low — emergent from dialogue | High — you drew the graph |
 | Production posture | Guardrails, tracing; you own the loop | Flows, hierarchical control | Code execution, human-in-the-loop | Checkpointing, durable execution, human-in-the-loop |
+| Autonomy (list axis) | bounded | bounded | bounded | headless |
+| Recovery (list axis) | resumable | resumable | resumable | durable |
 
 _Stars as captured for the main list (see [README](../README.md#explanation) for the capture date)._
 

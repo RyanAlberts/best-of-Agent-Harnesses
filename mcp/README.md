@@ -29,7 +29,7 @@ Any other MCP client (Cursor, Codex, Gemini CLI, ...):
 
 | Tool | What it does |
 |---|---|
-| `pick_harness(use_case, max_complexity?, open_source_only?, limit?)` | Ranked recommendations for a use case, seeded by the list's hand-curated use-case index. `max_complexity` caps adoption surface (`super simple` → `complex`). |
+| `pick_harness(use_case, max_complexity?, min_autonomy?, min_recovery?, open_source_only?, limit?)` | Ranked recommendations for a use case, seeded by the list's hand-curated use-case index. `max_complexity` caps adoption surface (`super simple` → `complex`); `min_autonomy` requires a designed autonomy regime (`step-gated` → `headless`); `min_recovery` requires a failure-recovery tier (`none` → `durable`). |
 | `search_harnesses(query, limit?)` | Keyword search across names, descriptions, tags, and categories. |
 | `get_harness(github_id)` | Full record for one project. |
 | `list_categories()` | The 9 categories, 13 use-case intents, and the 4-tier complexity scale. |

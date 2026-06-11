@@ -66,6 +66,8 @@ def _brief(p: dict, reason: str = "") -> dict:
         "url": p["url"],
         "stars": p["stars"],
         "tier": p["tier"],
+        "autonomy": p.get("autonomy", "n/a"),
+        "recovery": p.get("recovery", "n/a"),
         "license_signal": p["license_signal"],
         "category": p["category_title"],
         "description": p["description"],
@@ -78,6 +80,7 @@ def _brief(p: dict, reason: str = "") -> dict:
 
 @mcp.tool()
 def pick_harness(use_case: str, max_complexity: str = "complex",
+                 min_autonomy: str = "", min_recovery: str = "",
                  open_source_only: bool = False, limit: int = 5) -> str:
     """Recommend agent harnesses for a use case, ranked from a hand-curated list of 101.
 
@@ -85,12 +88,21 @@ def pick_harness(use_case: str, max_complexity: str = "complex",
     layer", "evaluate agents on coding benchmarks".
     max_complexity: cap on adoption surface — one of "super simple",
     "mostly simple", "slightly complex", "complex" (default: no cap).
+    min_autonomy: require at least this designed autonomy regime — one of
+    "step-gated", "checkpoint-gated", "bounded", "headless" (e.g. "bounded"
+    means "must be able to run a whole task unattended"; excludes n/a entries).
+    min_recovery: require at least this failure-recovery tier — one of "none",
+    "retry", "resumable", "durable" (excludes n/a entries).
     open_source_only: drop projects with restricted or unknown licenses.
     Returns JSON: ranked picks with a one-line reason each.
     """
     d = data()
     tiers: list = d["meta"]["tiers"]
     max_rank = tiers.index(max_complexity) + 1 if max_complexity in tiers else 4
+    a_tiers: list = d["meta"].get("autonomy_tiers", [])
+    r_tiers: list = d["meta"].get("recovery_tiers", [])
+    min_a = a_tiers.index(min_autonomy) + 1 if min_autonomy in a_tiers else 0
+    min_r = r_tiers.index(min_recovery) + 1 if min_recovery in r_tiers else 0
     q = _tokens(use_case)
 
     # Curated use-case intents are the strongest signal: best word-overlap intent
@@ -105,6 +117,10 @@ def pick_harness(use_case: str, max_complexity: str = "complex",
     scored = []
     for p in d["projects"]:
         if p["tier_rank"] > max_rank:
+            continue
+        if min_a and p.get("autonomy_rank", 0) < min_a:
+            continue
+        if min_r and p.get("recovery_rank", 0) < min_r:
             continue
         if open_source_only and p["license_signal"] != "open-source":
             continue
@@ -172,6 +188,8 @@ def list_categories() -> str:
         "categories": [dict(c, project_count=counts.get(c["id"], 0)) for c in d["categories"]],
         "use_cases": [u["intent"] for u in d["use_cases"]],
         "tiers": d["meta"]["tiers"],
+        "autonomy_tiers": d["meta"].get("autonomy_tiers", []),
+        "recovery_tiers": d["meta"].get("recovery_tiers", []),
     }, indent=2, ensure_ascii=False)
 
 

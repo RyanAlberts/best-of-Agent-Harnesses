@@ -601,6 +601,157 @@ def tier_of(p: "Project") -> str:
     raise ValueError(f"{p.github_id}: axis {p.axis!r} doesn't start with a canonical tier")
 
 
+# ---------------------------------------------------------------------------
+# Harness-behavior axes (editorial, assigned from public docs — corrections
+# from maintainers welcome via issue/PR).
+#
+# autonomy — the regime the project is DESIGNED to run agents at:
+#   step-gated (human approves each action) -> checkpoint-gated (human steers
+#   at plan/turn boundaries) -> bounded (full-task autonomy inside sandbox/
+#   guardrail walls) -> headless (built for unattended runs, batches, fleets).
+#   "n/a" = doesn't own an agent loop (formats, skill packs, components,
+#   datasets, infra).
+# recovery — what happens when a run dies mid-task:
+#   none (start over) -> retry (per-call retries/fallbacks) -> resumable
+#   (session/checkpoint resume after interruption) -> durable (persisted
+#   execution state survives restarts). "n/a" = doesn't execute.
+# ---------------------------------------------------------------------------
+AUTONOMY_TIERS = ["step-gated", "checkpoint-gated", "bounded", "headless"]
+RECOVERY_TIERS = ["none", "retry", "resumable", "durable"]
+
+AXES: "dict[str, tuple[str, str]]" = {
+    # progressive-disclosure
+    "PatrickJS/awesome-cursorrules": ("n/a", "n/a"),
+    "agentsmd/agents.md": ("n/a", "n/a"),
+    "langchain-ai/langgraph-bigtool": ("bounded", "durable"),
+    "xfey/MCP-Zero": ("bounded", "none"),
+    "Reason-Wang/ToolGen": ("n/a", "n/a"),
+    "spring-ai-community/spring-ai-tool-search-tool": ("n/a", "n/a"),
+    "antl3x/ToolRAG": ("n/a", "n/a"),
+    # coding-agent-products
+    "anomalyco/opencode": ("headless", "resumable"),
+    "google-gemini/gemini-cli": ("bounded", "resumable"),
+    "openai/codex": ("bounded", "resumable"),
+    "OpenHands/OpenHands": ("headless", "resumable"),
+    "cline/cline": ("step-gated", "resumable"),
+    "aaif-goose/goose": ("headless", "resumable"),
+    "charmbracelet/crush": ("bounded", "resumable"),
+    "RooCodeInc/Roo-Code": ("step-gated", "resumable"),
+    "HarnessLab/claw-code-agent": ("checkpoint-gated", "none"),
+    "SeanHogg/coderClaw": ("bounded", "none"),
+    # coding-harness-configs
+    "obra/superpowers": ("n/a", "n/a"),
+    "affaan-m/everything-claude-code": ("n/a", "n/a"),
+    "anthropics/skills": ("n/a", "n/a"),
+    "garrytan/gstack": ("n/a", "n/a"),
+    "gsd-build/get-shit-done": ("bounded", "resumable"),
+    "SWE-agent/SWE-agent": ("headless", "resumable"),
+    "HKUDS/OpenHarness": ("bounded", "resumable"),
+    "anthropics/claude-agent-sdk-python": ("headless", "resumable"),
+    "QuantaAlpha/RepoMaster": ("headless", "none"),
+    "aiming-lab/AutoHarness": ("bounded", "none"),
+    "RyanAlberts/pmstack": ("n/a", "n/a"),
+    # frameworks
+    "n8n-io/n8n": ("headless", "durable"),
+    "Significant-Gravitas/AutoGPT": ("headless", "resumable"),
+    "langflow-ai/langflow": ("headless", "retry"),
+    "langgenius/dify": ("headless", "retry"),
+    "langchain-ai/langchain": ("bounded", "retry"),
+    "browser-use/browser-use": ("bounded", "retry"),
+    "FlowiseAI/Flowise": ("headless", "retry"),
+    "run-llama/llama_index": ("bounded", "retry"),
+    "agno-agi/agno": ("bounded", "resumable"),
+    "langchain-ai/langgraph": ("headless", "durable"),
+    "microsoft/semantic-kernel": ("bounded", "retry"),
+    "mastra-ai/mastra": ("bounded", "durable"),
+    "letta-ai/letta": ("headless", "durable"),
+    "RasaHQ/rasa": ("headless", "resumable"),
+    "google/adk-python": ("headless", "resumable"),
+    "botpress/botpress": ("headless", "resumable"),
+    "SciPhi-AI/R2R": ("headless", "retry"),
+    "2FastLabs/agent-squad": ("bounded", "resumable"),
+    "OpenBMB/AgentVerse": ("headless", "none"),
+    "i-am-bee/beeai-framework": ("bounded", "resumable"),
+    "agentstack-ai/AgentStack": ("n/a", "n/a"),
+    "myshell-ai/AIlice": ("bounded", "none"),
+    "howl-anderson/agentsilex": ("bounded", "none"),
+    "superagentxai/superagentx": ("bounded", "none"),
+    # multi-agent
+    "microsoft/autogen": ("bounded", "resumable"),
+    "crewAIInc/crewAI": ("bounded", "resumable"),
+    "openai/openai-agents-python": ("bounded", "resumable"),
+    "MervinPraison/PraisonAI": ("bounded", "none"),
+    "THUDM/AgentRL": ("headless", "resumable"),
+    # plugins-mcp-cli
+    "thedotmack/claude-mem": ("n/a", "n/a"),
+    "Aider-AI/aider": ("checkpoint-gated", "resumable"),
+    "continuedev/continue": ("checkpoint-gated", "resumable"),
+    "github/github-mcp-server": ("n/a", "n/a"),
+    "modelcontextprotocol/python-sdk": ("n/a", "n/a"),
+    "modelcontextprotocol/typescript-sdk": ("n/a", "n/a"),
+    "modelcontextprotocol/inspector": ("n/a", "n/a"),
+    "modelcontextprotocol/registry": ("n/a", "n/a"),
+    "docker/mcp-gateway": ("n/a", "n/a"),
+    "withLinda/puppeteer-real-browser-mcp-server": ("n/a", "n/a"),
+    "ajhcs/Better-OpenCodeMCP": ("n/a", "n/a"),
+    "RyanAlberts/agentlog": ("n/a", "n/a"),
+    # evaluation
+    "microsoft/agent-lightning": ("headless", "resumable"),
+    "SWE-bench/SWE-bench": ("headless", "resumable"),
+    "THUDM/AgentBench": ("headless", "none"),
+    "UKGovernmentBEIS/inspect_ai": ("headless", "resumable"),
+    "web-arena-x/webarena": ("headless", "none"),
+    "MinorJerry/WebVoyager": ("headless", "none"),
+    "arcprize/ARC-AGI-2": ("n/a", "n/a"),
+    "SWE-Gym/SWE-Gym": ("headless", "none"),
+    "SWE-bench/SWE-smith": ("headless", "none"),
+    "UKGovernmentBEIS/inspect_evals": ("headless", "resumable"),
+    "arcprize/arc-agi-benchmarking": ("headless", "retry"),
+    "meituan-longcat/vitabench": ("headless", "none"),
+    "GAIR-NLP/AgencyBench": ("headless", "none"),
+    "letta-ai/letta-evals": ("headless", "none"),
+    "allenai/super-benchmark": ("headless", "none"),
+    "patronus-ai/trail-benchmark": ("n/a", "n/a"),
+    # research-task
+    "assafelovic/gpt-researcher": ("bounded", "retry"),
+    "OpenAgentsInc/openagents": ("headless", "resumable"),
+    # libraries-sdks
+    "daytonaio/daytona": ("n/a", "n/a"),
+    "mem0ai/mem0": ("n/a", "n/a"),
+    "BerriAI/litellm": ("n/a", "retry"),
+    "ComposioHQ/composio": ("n/a", "n/a"),
+    "huggingface/smolagents": ("bounded", "none"),
+    "vercel/ai": ("bounded", "retry"),
+    "langchain-ai/deepagents": ("bounded", "durable"),
+    "pydantic/pydantic-ai": ("bounded", "durable"),
+    "e2b-dev/E2B": ("n/a", "n/a"),
+    "strands-agents/sdk-python": ("bounded", "resumable"),
+    "cloudflare/agents": ("headless", "durable"),
+    "openai/openai-agents-js": ("bounded", "resumable"),
+    "MaxGfeller/open-harness": ("bounded", "none"),
+    "brandonhimpfen/awesome-ai-agents": ("n/a", "n/a"),
+}
+
+
+def axes_for(github_id: str) -> tuple:
+    if github_id not in AXES:
+        raise KeyError(f"AXES is missing an entry for {github_id} — score it before generating")
+    a, r = AXES[github_id]
+    if a != "n/a" and a not in AUTONOMY_TIERS:
+        raise ValueError(f"{github_id}: bad autonomy tier {a!r}")
+    if r != "n/a" and r not in RECOVERY_TIERS:
+        raise ValueError(f"{github_id}: bad recovery tier {r!r}")
+    return a, r
+
+
+def autonomy_rank(a: str) -> int:
+    return AUTONOMY_TIERS.index(a) + 1 if a in AUTONOMY_TIERS else 0
+
+
+def recovery_rank(r: str) -> int:
+    return RECOVERY_TIERS.index(r) + 1 if r in RECOVERY_TIERS else 0
+
+
 def stars_for(github_id: str) -> int:
     return META.get(github_id, (0, "", ""))[0]
 
@@ -789,7 +940,7 @@ def generate_readme() -> str:
         "",
         "## What is an agent harness?",
         "",
-        "An agent harness is the runtime that closes the loop between a stateless model and the outside world—managing perception, action, memory, and constraint enforcement—making it the de facto operating system of machine agency and, consequently, the layer where nearly all meaningful questions about AI autonomy, reliability, and control are actually resolved.",
+        "A model answers; an agent acts. An agent harness is the runtime that turns one into the other — the model thinks; the harness decides what that thinking is allowed to touch.",
         "",
         "Every prior wave of automation was constrained by brittleness: you scripted exact behavior, and when the world deviated, the system broke. Foundation models inverted that problem—they're flexible but directionless, stateless, and disconnected from anything real. The agent harness exists to bridge that gap: it is the orchestration infrastructure that converts a model's per-turn reasoning into sustained, tool-using, error-recovering, goal-directed behavior across time. Architecturally, it plays the role the kernel played in operating systems or the controller played in industrial robotics—mediating between raw capability and a messy environment—but with a critical difference: the \"capability\" it governs is general-purpose cognition, which means the harness is simultaneously a scheduler, a permission system, a memory manager, and a policy enforcement layer, all under-specified and evolving in real time. The term itself barely exists in formal literature yet, which should concern anyone who cares about AI governance, because the harness is where abstract alignment goals either get operationalized into concrete constraints or quietly don't.",
         "",
@@ -844,6 +995,8 @@ def generate_readme() -> str:
         f"- **⭐ Stars:** GitHub star count, captured {STARS_CAPTURED}. Each table is sorted by stars descending. Click a star count to jump to the GitHub repo's stargazers page.",
         "- **Examples:** One concrete instance of the harness in action — a specific skill file, demo script, sample agent, leaderboard with scores, or feature walkthrough — not a docs root or examples index. The link text names what's at the link.",
         "- **Simplicity ↔ capability:** Where each project sits on a 4-tier scale describing how much surface area you take on when adopting it: **super simple** (format-only, single file, one concept) → **mostly simple** (lean API, thin layer over a primitive) → **slightly complex** (multi-file SDK, several knobs, real abstractions) → **complex (product suite)** (platform with its own runtime, UI, ecosystem).",
+        "- **Autonomy:** the regime the harness is designed to run agents at: **step-gated** (human approves each action) → **checkpoint-gated** (human steers at plan/turn boundaries) → **bounded** (full-task autonomy inside sandbox/guardrail walls) → **headless** (built for unattended runs, batches, and fleets). _n/a_ = doesn't own an agent loop (formats, skill packs, components, datasets).",
+        "- **Recovery:** what happens when a run dies mid-task: **none** (start over) → **retry** (per-call retries/fallbacks) → **resumable** (session/checkpoint resume after interruption) → **durable** (persisted execution state survives restarts). _n/a_ = doesn't execute. Both axes are editorial, assigned from public docs — maintainer corrections via issue/PR are merged fast.",
         "- **Open source:** ✅ = standard open-source license (MIT/Apache/BSD/GPL/MPL/AGPL/CC0). ⚠️ = source-available or restricted (e.g. n8n Fair-code, Elastic-2.0, Polyform). ❓ = no license file or unclear terms.",
         "- **Tags** (e.g. <sup>`mcp` · `memory` · `multi-agent`</sup>): canonical capability tags auto-derived from each project's description. Up to 5 chips per row; full cross-reference in [TAGS.md](TAGS.md).",
         "",
@@ -858,15 +1011,16 @@ def generate_readme() -> str:
         body.append("")
         body.append(f"_{subtitle}_")
         body.append("")
-        body.append("| # | Project | ⭐ Stars | Description | Open source | Simplicity ↔ capability | Examples |")
-        body.append("|---|---------|---------|-------------|-------------|-------------------------|----------|")
+        body.append("| # | Project | ⭐ Stars | Description | Open source | Simplicity ↔ capability | Autonomy | Recovery | Examples |")
+        body.append("|---|---------|---------|-------------|-------------|-------------------------|----------|----------|----------|")
         sorted_projects = sorted(PROJECTS[cat_id], key=lambda x: stars_for(x.github_id), reverse=True)
         for i, p in enumerate(sorted_projects, 1):
             stars = stars_for(p.github_id)
             stars_cell = f"[{format_stars(stars)}](https://github.com/{p.github_id}/stargazers)"
             examples_cell = f"[{example_label_for(p.github_id)}]({examples_for(p.github_id)})"
             chips = tag_chips_md(p.tags)
-            row = f"| {i} | [**{p.display_name}**](https://github.com/{p.github_id}) | {stars_cell} | {p.description}{chips} | {p.oss} | {p.axis} | {examples_cell} |"
+            autonomy, recovery = axes_for(p.github_id)
+            row = f"| {i} | [**{p.display_name}**](https://github.com/{p.github_id}) | {stars_cell} | {p.description}{chips} | {p.oss} | {p.axis} | {autonomy} | {recovery} | {examples_cell} |"
             body.append(row)
         body.append("")
     body += [
@@ -931,7 +1085,7 @@ def generate_header_md() -> str:
         "\n"
         "## What is an agent harness?\n"
         "\n"
-        "An agent harness is the runtime that closes the loop between a stateless model and the outside world—managing perception, action, memory, and constraint enforcement—making it the de facto operating system of machine agency and, consequently, the layer where nearly all meaningful questions about AI autonomy, reliability, and control are actually resolved.\n"
+        "A model answers; an agent acts. An agent harness is the runtime that turns one into the other — the model thinks; the harness decides what that thinking is allowed to touch.\n"
         "\n"
         "Every prior wave of automation was constrained by brittleness: you scripted exact behavior, and when the world deviated, the system broke. Foundation models inverted that problem—they're flexible but directionless, stateless, and disconnected from anything real. The agent harness exists to bridge that gap: it is the orchestration infrastructure that converts a model's per-turn reasoning into sustained, tool-using, error-recovering, goal-directed behavior across time. Architecturally, it plays the role the kernel played in operating systems or the controller played in industrial robotics—mediating between raw capability and a messy environment—but with a critical difference: the \"capability\" it governs is general-purpose cognition, which means the harness is simultaneously a scheduler, a permission system, a memory manager, and a policy enforcement layer, all under-specified and evolving in real time. The term itself barely exists in formal literature yet, which should concern anyone who cares about AI governance, because the harness is where abstract alignment goals either get operationalized into concrete constraints or quietly don't.\n"
         "\n"
@@ -1025,6 +1179,7 @@ def generate_harnesses_json() -> str:
     for cat_id, cat_title, _ in CATEGORIES:
         for p in sorted(PROJECTS[cat_id], key=lambda x: stars_for(x.github_id), reverse=True):
             tier = tier_of(p)
+            autonomy, recovery = axes_for(p.github_id)
             projects.append({
                 "name": p.display_name,
                 "github_id": p.github_id,
@@ -1036,6 +1191,10 @@ def generate_harnesses_json() -> str:
                 "tier": tier,
                 "tier_rank": TIER_ORDER.index(tier) + 1,
                 "axis": p.axis,
+                "autonomy": autonomy,
+                "autonomy_rank": autonomy_rank(autonomy),
+                "recovery": recovery,
+                "recovery_rank": recovery_rank(recovery),
                 "license_signal": oss_signal(p.oss),
                 "tags": p.tags,
                 "example": {"label": example_label_for(p.github_id), "url": examples_for(p.github_id)},
@@ -1050,6 +1209,10 @@ def generate_harnesses_json() -> str:
             "project_count": count_projects(),
             "tiers": TIER_ORDER,
             "tier_help": "Adoption surface area, least to most: tier_rank 1 = format-only/single concept, 4 = platform with its own runtime and ecosystem.",
+            "autonomy_tiers": AUTONOMY_TIERS,
+            "autonomy_help": "Designed autonomy regime, least to most: rank 1 = human approves each action, 4 = built for unattended runs and fleets. rank 0 / 'n/a' = doesn't own an agent loop.",
+            "recovery_tiers": RECOVERY_TIERS,
+            "recovery_help": "Behavior when a run dies mid-task, weakest to strongest: rank 1 = start over, 4 = persisted execution state survives restarts. rank 0 / 'n/a' = doesn't execute.",
         },
         "categories": [{"id": c, "title": t, "subtitle": s} for c, t, s in CATEGORIES],
         "use_cases": [{"intent": intent, "picks": ids, "category_title": cat} for intent, ids, cat in USE_CASES],
@@ -1083,9 +1246,11 @@ def generate_llms_txt() -> str:
         lines.append("")
         for p in sorted(PROJECTS[cat_id], key=lambda x: stars_for(x.github_id), reverse=True):
             tags = (" [" + ", ".join(p.tags) + "]") if p.tags else ""
+            autonomy, recovery = axes_for(p.github_id)
             lines.append(
                 f"- [{p.display_name}](https://github.com/{p.github_id}) — "
-                f"⭐{format_stars(stars_for(p.github_id))}, {tier_of(p)}, {oss_signal(p.oss)}: {p.description}{tags}"
+                f"⭐{format_stars(stars_for(p.github_id))}, {tier_of(p)}, autonomy: {autonomy}, "
+                f"recovery: {recovery}, {oss_signal(p.oss)}: {p.description}{tags}"
             )
         lines.append("")
     return "\n".join(lines)
@@ -1233,6 +1398,10 @@ def refresh_comparisons() -> list:
 
 
 def main():
+    all_ids = {p.github_id for plist in PROJECTS.values() for p in plist}
+    orphans = set(AXES) - all_ids
+    if orphans:
+        raise KeyError(f"AXES has entries for unknown projects: {sorted(orphans)}")
     yaml_content = generate_yaml()
     readme_content = generate_readme()
     header_content = generate_header_md()
