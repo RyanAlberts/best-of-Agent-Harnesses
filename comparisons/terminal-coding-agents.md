@@ -15,7 +15,7 @@ What actually differs between them is the **harness** — the agent loop, provid
 | Recovery (list axis) | resumable | resumable | resumable | resumable | resumable |
 | Distinctive harness bet | Plugins + MCP, client/server split | First-party Gemini integration, MCP | Sandboxed execution as the default posture | MCP/ACP extensions, recipes, no fixed UI | Session persistence, TUI polish |
 
-_Stars as captured for the main list (see [README](../README.md#explanation) for the capture date)._
+_Stars as captured for the main list (see [README](../README.md#guide-to-rankings) for the capture date)._
 
 ## Pick by situation
 

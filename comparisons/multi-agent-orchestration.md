@@ -12,7 +12,7 @@ Four very different answers to "how should multiple agents coordinate?" — and 
 | Autonomy (list axis) | bounded | bounded | bounded | headless |
 | Recovery (list axis) | resumable | resumable | resumable | durable |
 
-_Stars as captured for the main list (see [README](../README.md#explanation) for the capture date)._
+_Stars as captured for the main list (see [README](../README.md#guide-to-rankings) for the capture date)._
 
 ## Pick by situation
 

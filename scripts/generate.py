@@ -942,7 +942,7 @@ def generate_readme() -> str:
         "",
         "A model answers; an agent acts. An agent harness is the runtime that turns one into the other — the model thinks; the harness decides what that thinking is allowed to touch.",
         "",
-        "Every prior wave of automation was constrained by brittleness: you scripted exact behavior, and when the world deviated, the system broke. Foundation models inverted that problem—they're flexible but directionless, stateless, and disconnected from anything real. The agent harness exists to bridge that gap: it is the orchestration infrastructure that converts a model's per-turn reasoning into sustained, tool-using, error-recovering, goal-directed behavior across time. Architecturally, it plays the role the kernel played in operating systems or the controller played in industrial robotics—mediating between raw capability and a messy environment—but with a critical difference: the \"capability\" it governs is general-purpose cognition, which means the harness is simultaneously a scheduler, a permission system, a memory manager, and a policy enforcement layer, all under-specified and evolving in real time. The term itself barely exists in formal literature yet, which should concern anyone who cares about AI governance, because the harness is where abstract alignment goals either get operationalized into concrete constraints or quietly don't.",
+        "Every prior wave of automation was constrained by brittleness: you scripted exact behavior, and when the world deviated, the system broke. Foundation models inverted that problem—they're flexible but directionless, stateless, and disconnected from anything real. The agent harness exists to bridge that gap: it is the orchestration infrastructure that converts a model's per-turn reasoning into sustained, tool-using, error-recovering, goal-directed behavior across time. Architecturally, it plays the role the kernel played in operating systems or the controller played in industrial robotics—mediating between raw capability and a messy environment—but with a critical difference: the \"capability\" it governs is general-purpose cognition, which means the harness is simultaneously a scheduler, a permission system, a memory manager, and a policy enforcement layer, all under-specified and evolving in real time.",
         "",
         "## Why harnesses matter",
         "",
@@ -952,7 +952,11 @@ def generate_readme() -> str:
         "",
         "[![The Agent Harness Landscape — all projects plotted by adoption surface area against GitHub stars](assets/landscape.svg)](assets/landscape.svg)",
         "",
-        f"_Every project in the list, plotted by adoption surface area (the [simplicity ↔ capability axis](#explanation)) against GitHub stars. Colors are categories; the largest projects in each tier are labeled. Regenerated from the list data by `scripts/generate.py` on every refresh._",
+        f"_Every project in the list, plotted by adoption surface area (the [simplicity ↔ capability axis](#guide-to-rankings)) against GitHub stars. Colors are categories; the largest projects in each tier are labeled._",
+        "",
+        "[![Autonomy × Recovery — every loop-owning project placed by designed autonomy regime and failure-recovery tier](assets/axes-grid.svg)](assets/axes-grid.svg)",
+        "",
+        "_The same projects placed by how much unsupervised rope they're designed to give (autonomy) and what happens when a run dies (recovery). In the tables below, ★ marks headless-ready projects and ✱ marks durable ones. Both charts regenerate from the list data on every refresh._",
         "",
     ]
     header += render_use_cases()
@@ -990,15 +994,17 @@ def generate_readme() -> str:
         header.append(f"- [{title}](#{anchor}) _{count} projects_")
     header += [
         "",
-        "## Explanation",
+        "## Guide to rankings",
         "",
-        f"- **⭐ Stars:** GitHub star count, captured {STARS_CAPTURED}. Each table is sorted by stars descending. Click a star count to jump to the GitHub repo's stargazers page.",
-        "- **Examples:** One concrete instance of the harness in action — a specific skill file, demo script, sample agent, leaderboard with scores, or feature walkthrough — not a docs root or examples index. The link text names what's at the link.",
-        "- **Simplicity ↔ capability:** Where each project sits on a 4-tier scale describing how much surface area you take on when adopting it: **super simple** (format-only, single file, one concept) → **mostly simple** (lean API, thin layer over a primitive) → **slightly complex** (multi-file SDK, several knobs, real abstractions) → **complex (product suite)** (platform with its own runtime, UI, ecosystem).",
-        "- **Autonomy:** the regime the harness is designed to run agents at: **step-gated** (human approves each action) → **checkpoint-gated** (human steers at plan/turn boundaries) → **bounded** (full-task autonomy inside sandbox/guardrail walls) → **headless** (built for unattended runs, batches, and fleets). _n/a_ = doesn't own an agent loop (formats, skill packs, components, datasets).",
-        "- **Recovery:** what happens when a run dies mid-task: **none** (start over) → **retry** (per-call retries/fallbacks) → **resumable** (session/checkpoint resume after interruption) → **durable** (persisted execution state survives restarts). _n/a_ = doesn't execute. Both axes are editorial, assigned from public docs — maintainer corrections via issue/PR are merged fast.",
-        "- **Open source:** ✅ = standard open-source license (MIT/Apache/BSD/GPL/MPL/AGPL/CC0). ⚠️ = source-available or restricted (e.g. n8n Fair-code, Elastic-2.0, Polyform). ❓ = no license file or unclear terms.",
-        "- **Tags** (e.g. <sup>`mcp` · `memory` · `multi-agent`</sup>): canonical capability tags auto-derived from each project's description. Up to 5 chips per row; full cross-reference in [TAGS.md](TAGS.md).",
+        f"- ⭐ **Stars** — GitHub star count, captured {STARS_CAPTURED}; tables sort by stars descending.",
+        "- ⚖️ **Simplicity ↔ capability** — adoption surface, 4 tiers: **super simple** (a format, one concept) → **mostly simple** (thin layer) → **slightly complex** (real SDK) → **complex** (product suite).",
+        "- ★ **Headless-ready** — designed for unattended runs, batches, and fleets (the top of the autonomy scale: step-gated → checkpoint-gated → bounded → headless).",
+        "- ✱ **Durable** — persisted execution state survives restarts mid-task (the top of the recovery scale: none → retry → resumable → durable).",
+        "- ✅ **Open source** — ✅ standard OSS license · ⚠️ source-available/restricted · ❓ no or unclear license.",
+        "- 🏷️ **Tags** — capability chips auto-derived from descriptions; full cross-reference in [TAGS.md](TAGS.md).",
+        "- 🎯 **Examples** — one concrete \"show me it in action\" link per project, not a docs root.",
+        "",
+        "Every project's full autonomy and recovery tier is plotted in the [grid above](#the-landscape-at-a-glance) and carried in [harnesses.json](harnesses.json) and [llms.txt](llms.txt); scores are editorial, from public docs — maintainer corrections via issue/PR are merged fast.",
         "",
         "<br>",
         "",
@@ -1011,8 +1017,8 @@ def generate_readme() -> str:
         body.append("")
         body.append(f"_{subtitle}_")
         body.append("")
-        body.append("| # | Project | ⭐ Stars | Description | Open source | Simplicity ↔ capability | Autonomy | Recovery | Examples |")
-        body.append("|---|---------|---------|-------------|-------------|-------------------------|----------|----------|----------|")
+        body.append("| # | Project | ⭐ Stars | Description | Open source | Simplicity ↔ capability | Examples |")
+        body.append("|---|---------|---------|-------------|-------------|-------------------------|----------|")
         sorted_projects = sorted(PROJECTS[cat_id], key=lambda x: stars_for(x.github_id), reverse=True)
         for i, p in enumerate(sorted_projects, 1):
             stars = stars_for(p.github_id)
@@ -1020,7 +1026,8 @@ def generate_readme() -> str:
             examples_cell = f"[{example_label_for(p.github_id)}]({examples_for(p.github_id)})"
             chips = tag_chips_md(p.tags)
             autonomy, recovery = axes_for(p.github_id)
-            row = f"| {i} | [**{p.display_name}**](https://github.com/{p.github_id}) | {stars_cell} | {p.description}{chips} | {p.oss} | {p.axis} | {autonomy} | {recovery} | {examples_cell} |"
+            marks = ("&#8202;★" if autonomy == "headless" else "") + ("&#8202;✱" if recovery == "durable" else "")
+            row = f"| {i} | [**{p.display_name}**](https://github.com/{p.github_id}){marks} | {stars_cell} | {p.description}{chips} | {p.oss} | {p.axis} | {examples_cell} |"
             body.append(row)
         body.append("")
     body += [
@@ -1087,7 +1094,7 @@ def generate_header_md() -> str:
         "\n"
         "A model answers; an agent acts. An agent harness is the runtime that turns one into the other — the model thinks; the harness decides what that thinking is allowed to touch.\n"
         "\n"
-        "Every prior wave of automation was constrained by brittleness: you scripted exact behavior, and when the world deviated, the system broke. Foundation models inverted that problem—they're flexible but directionless, stateless, and disconnected from anything real. The agent harness exists to bridge that gap: it is the orchestration infrastructure that converts a model's per-turn reasoning into sustained, tool-using, error-recovering, goal-directed behavior across time. Architecturally, it plays the role the kernel played in operating systems or the controller played in industrial robotics—mediating between raw capability and a messy environment—but with a critical difference: the \"capability\" it governs is general-purpose cognition, which means the harness is simultaneously a scheduler, a permission system, a memory manager, and a policy enforcement layer, all under-specified and evolving in real time. The term itself barely exists in formal literature yet, which should concern anyone who cares about AI governance, because the harness is where abstract alignment goals either get operationalized into concrete constraints or quietly don't.\n"
+        "Every prior wave of automation was constrained by brittleness: you scripted exact behavior, and when the world deviated, the system broke. Foundation models inverted that problem—they're flexible but directionless, stateless, and disconnected from anything real. The agent harness exists to bridge that gap: it is the orchestration infrastructure that converts a model's per-turn reasoning into sustained, tool-using, error-recovering, goal-directed behavior across time. Architecturally, it plays the role the kernel played in operating systems or the controller played in industrial robotics—mediating between raw capability and a messy environment—but with a critical difference: the \"capability\" it governs is general-purpose cognition, which means the harness is simultaneously a scheduler, a permission system, a memory manager, and a policy enforcement layer, all under-specified and evolving in real time.\n"
         "\n"
         "If you want to add or update projects, open an [issue](https://github.com/RyanAlberts/best-of-Agent-Harnesses/issues), submit a [pull request](https://github.com/RyanAlberts/best-of-Agent-Harnesses/pulls), or edit [projects.yaml](https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/projects.yaml). Contributions are welcome!\n"
     )
@@ -1397,6 +1404,89 @@ def refresh_comparisons() -> list:
     return updated
 
 
+def generate_axes_svg() -> str:
+    """Autonomy × Recovery grid: every loop-owning project as a dot in a 4×4
+    matrix; the top-starred project in each cell is labeled. n/a entries
+    (formats, components, datasets) are excluded and counted in the footer.
+    """
+    import hashlib
+    from xml.sax.saxutils import escape
+
+    W, H = 1100, 800
+    X0, X1, Y0, Y1 = 190, 1060, 130, 660
+    cw = (X1 - X0) / len(AUTONOMY_TIERS)
+    ch = (Y1 - Y0) / len(RECOVERY_TIERS)
+
+    pts, na = [], 0
+    for cat_id, _, _ in CATEGORIES:
+        for p in PROJECTS[cat_id]:
+            a, r = axes_for(p.github_id)
+            if a == "n/a" or r == "n/a":
+                na += 1
+                continue
+            ai, ri = AUTONOMY_TIERS.index(a), RECOVERY_TIERS.index(r)
+            h = int(hashlib.md5(p.github_id.encode()).hexdigest(), 16)
+            jx, jy = (h % 1000) / 1000, (h // 1000 % 1000) / 1000
+            x = X0 + cw * (ai + 0.15 + 0.70 * jx)
+            y = Y1 - ch * (ri + 0.20 + 0.60 * jy)
+            pts.append((p, cat_id, ai, ri, x, y))
+
+    svg = [
+        f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" font-family="-apple-system, \'Segoe UI\', Helvetica, Arial, sans-serif">',
+        f'<rect width="{W}" height="{H}" fill="#ffffff" rx="8"/>',
+        f'<text x="{W/2}" y="50" text-anchor="middle" font-size="28" font-weight="700" fill="#111827">Autonomy × Recovery</text>',
+        f'<text x="{W/2}" y="78" text-anchor="middle" font-size="14.5" fill="#6b7280">how much rope each harness is designed to give · what happens when a run dies mid-task</text>',
+        f'<text x="{W/2}" y="100" text-anchor="middle" font-size="12.5" fill="#9ca3af">★ headless column = unattended-ready &#160;·&#160; ✱ durable row = survives restarts &#160;·&#160; colors follow the landscape chart</text>',
+    ]
+
+    # grid + axis tier labels
+    for i in range(len(AUTONOMY_TIERS) + 1):
+        x = X0 + cw * i
+        svg.append(f'<line x1="{x:.1f}" y1="{Y0}" x2="{x:.1f}" y2="{Y1}" stroke="#e5e7eb" stroke-width="1"/>')
+    for i in range(len(RECOVERY_TIERS) + 1):
+        y = Y0 + ch * i
+        svg.append(f'<line x1="{X0}" y1="{y:.1f}" x2="{X1}" y2="{y:.1f}" stroke="#e5e7eb" stroke-width="1"/>')
+    for i, t in enumerate(AUTONOMY_TIERS):
+        cx = X0 + cw * (i + 0.5)
+        mark = " ★" if t == "headless" else ""
+        svg.append(f'<text x="{cx:.1f}" y="{Y1 + 28}" text-anchor="middle" font-size="14.5" font-weight="600" fill="#111827">{escape(t)}{mark}</text>')
+    svg.append(f'<text x="{(X0 + X1) / 2}" y="{Y1 + 56}" text-anchor="middle" font-size="13" fill="#6b7280">autonomy: human approves each step&#160;&#160;→&#160;&#160;built for unattended fleets</text>')
+    for i, t in enumerate(RECOVERY_TIERS):
+        cy = Y0 + ch * (len(RECOVERY_TIERS) - i - 0.5)
+        mark = " ✱" if t == "durable" else ""
+        svg.append(f'<text x="{X0 - 14}" y="{cy + 5:.1f}" text-anchor="end" font-size="14.5" font-weight="600" fill="#111827">{escape(t)}{mark}</text>')
+    svg.append(f'<text x="44" y="{(Y0 + Y1) / 2:.0f}" font-size="13" fill="#6b7280" transform="rotate(-90 44 {(Y0 + Y1) / 2:.0f})" text-anchor="middle">recovery: crash = start over&#160;&#160;→&#160;&#160;survives restarts</text>')
+
+    # faint per-cell counts
+    cells: dict = {}
+    for p, cat_id, ai, ri, x, y in pts:
+        cells.setdefault((ai, ri), []).append((p, cat_id, x, y))
+    for (ai, ri), members in cells.items():
+        bx = X0 + cw * (ai + 1) - 10
+        by = Y1 - ch * ri - 8
+        svg.append(f'<text x="{bx:.1f}" y="{by:.1f}" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">{len(members)}</text>')
+
+    # dots, biggest stars on top
+    for p, cat_id, ai, ri, x, y in sorted(pts, key=lambda q: stars_for(q[0].github_id)):
+        color, _ = LANDSCAPE_STYLE[cat_id]
+        svg.append(
+            f'<circle cx="{x:.1f}" cy="{y:.1f}" r="5.5" fill="{color}" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2">'
+            f'<title>{escape(p.display_name)} — ⭐{format_stars(stars_for(p.github_id))}</title></circle>'
+        )
+
+    # label the top-starred project per cell
+    for (ai, ri), members in cells.items():
+        p, cat_id, x, y = max(members, key=lambda m: stars_for(m[0].github_id))
+        anchor, tx = ("start", x + 9)
+        if x > X0 + cw * (ai + 0.6):
+            anchor, tx = ("end", x - 9)
+        svg.append(f'<text x="{tx:.1f}" y="{y + 4.5:.1f}" text-anchor="{anchor}" font-size="12.5" font-weight="600" fill="#1f2937">{escape(p.display_name)}</text>')
+
+    svg.append(f'<text x="{X1}" y="{H - 16}" text-anchor="end" font-size="12" fill="#9ca3af">{len(pts)} loop-owning projects shown · {na} format/component entries (n/a) omitted · full tiers in harnesses.json</text>')
+    svg.append('</svg>')
+    return "\n".join(svg) + "\n"
+
+
 def main():
     all_ids = {p.github_id for plist in PROJECTS.values() for p in plist}
     orphans = set(AXES) - all_ids
@@ -1414,6 +1504,7 @@ def main():
     (REPO_ROOT / "llms.txt").write_text(generate_llms_txt())
     (REPO_ROOT / "assets").mkdir(exist_ok=True)
     (REPO_ROOT / "assets" / "landscape.svg").write_text(generate_landscape_svg())
+    (REPO_ROOT / "assets" / "axes-grid.svg").write_text(generate_axes_svg())
     refreshed = refresh_comparisons()
     if refreshed:
         print(f"Comparison star rows refreshed: {', '.join(refreshed)}")

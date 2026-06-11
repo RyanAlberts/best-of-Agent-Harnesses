@@ -13,7 +13,7 @@
 | Recovery (list axis) | n/a | n/a | durable |
 | License | open source (Apache-2.0) | open source | open source |
 
-_Stars as captured for the main list (see [README](../README.md#explanation) for the capture date)._
+_Stars as captured for the main list (see [README](../README.md#guide-to-rankings) for the capture date)._
 
 ## Pick by situation
 
