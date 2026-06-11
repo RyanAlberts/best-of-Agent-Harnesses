@@ -54,7 +54,7 @@
 <circle cx="910.3" cy="622.1" r="5.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>swe-smith — ⭐673</title></circle>
 <circle cx="1012.9" cy="584.1" r="5.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>SWE-Gym — ⭐686</title></circle>
 <circle cx="1016.7" cy="582.5" r="5.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>WebVoyager — ⭐1.1k</title></circle>
-<circle cx="658.2" cy="622.8" r="5.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>AIlice — ⭐1.4k</title></circle>
+<circle cx="658.2" cy="622.8" r="5.5" fill="#0ea5e9" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>AIlice — ⭐1.4k</title></circle>
 <circle cx="1002.7" cy="580.0" r="5.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>WebArena — ⭐1.5k</title></circle>
 <circle cx="1000.1" cy="367.1" r="5.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>inspect_ai — ⭐2.2k</title></circle>
 <circle cx="678.2" cy="321.4" r="5.5" fill="#a16207" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>openai-agents-js — ⭐3.2k</title></circle>
@@ -69,12 +69,12 @@
 <circle cx="1015.8" cy="469.1" r="5.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>R2R — ⭐7.9k</title></circle>
 <circle cx="766.5" cy="609.7" r="5.5" fill="#ec4899" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>PraisonAI — ⭐8.1k</title></circle>
 <circle cx="717.6" cy="309.0" r="5.5" fill="#ec4899" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Microsoft Agent Framework — ⭐11.3k</title></circle>
-<circle cx="799.2" cy="350.0" r="5.5" fill="#f59e0b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>OpenHarness (HKUDS) — ⭐13.8k</title></circle>
+<circle cx="799.2" cy="350.0" r="5.5" fill="#0ea5e9" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>OpenHarness (HKUDS) — ⭐13.8k</title></circle>
 <circle cx="951.6" cy="357.8" r="5.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>botpress — ⭐14.7k</title></circle>
 <circle cx="944.9" cy="330.8" r="5.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Agent Lightning — ⭐17.3k</title></circle>
 <circle cx="693.4" cy="176.4" r="5.5" fill="#a16207" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>pydantic-ai — ⭐17.7k</title></circle>
-<circle cx="788.7" cy="302.8" r="5.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Agent Zero — ⭐18k</title></circle>
-<circle cx="990.4" cy="361.1" r="5.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Eliza — ⭐18.6k</title></circle>
+<circle cx="788.7" cy="302.8" r="5.5" fill="#0ea5e9" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Agent Zero — ⭐18k</title></circle>
+<circle cx="990.4" cy="361.1" r="5.5" fill="#0ea5e9" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Eliza — ⭐18.6k</title></circle>
 <circle cx="1008.5" cy="304.1" r="5.5" fill="#f59e0b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>SWE-agent — ⭐19.5k</title></circle>
 <circle cx="962.4" cy="327.4" r="5.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Google ADK — ⭐20.1k</title></circle>
 <circle cx="980.5" cy="362.4" r="5.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>rasa — ⭐21.2k</title></circle>
@@ -91,7 +91,7 @@
 <circle cx="996.6" cy="629.0" r="5.5" fill="#ec4899" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>ChatDev — ⭐33.4k</title></circle>
 <circle cx="534.4" cy="342.1" r="5.5" fill="#10b981" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>continue — ⭐33.7k</title></circle>
 <circle cx="1020.8" cy="204.5" r="5.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>langgraph — ⭐34.5k</title></circle>
-<circle cx="908.0" cy="316.9" r="5.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Khoj — ⭐35.1k</title></circle>
+<circle cx="908.0" cy="316.9" r="5.5" fill="#0ea5e9" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Khoj — ⭐35.1k</title></circle>
 <circle cx="787.0" cy="351.5" r="5.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>agno — ⭐40.6k</title></circle>
 <circle cx="525.2" cy="308.7" r="5.5" fill="#10b981" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>aider — ⭐46k</title></circle>
 <circle cx="1008.2" cy="292.6" r="5.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>goose — ⭐48.8k</title></circle>
@@ -112,9 +112,9 @@
 <circle cx="1013.2" cy="444.0" r="5.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>langflow — ⭐150k</title></circle>
 <circle cx="981.5" cy="304.7" r="5.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>opencode — ⭐173k</title></circle>
 <circle cx="900.2" cy="309.5" r="5.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>AutoGPT — ⭐185k</title></circle>
-<circle cx="910.6" cy="327.6" r="5.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Hermes — ⭐191k</title></circle>
+<circle cx="910.6" cy="327.6" r="5.5" fill="#0ea5e9" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Hermes — ⭐191k</title></circle>
 <circle cx="1002.7" cy="160.1" r="5.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>n8n — ⭐192k</title></circle>
-<circle cx="981.1" cy="357.9" r="5.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>OpenClaw — ⭐378k</title></circle>
+<circle cx="981.1" cy="357.9" r="5.5" fill="#0ea5e9" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>OpenClaw — ⭐378k</title></circle>
 <text x="760.5" y="614.4" text-anchor="end" font-size="12.5" font-weight="600" fill="#1f2937">smolagents</text>
 <text x="754.8" y="177.9" text-anchor="start" font-size="12.5" font-weight="600" fill="#1f2937">mastra</text>
 <text x="270.3" y="327.9" text-anchor="start" font-size="12.5" font-weight="600" fill="#1f2937">Cline</text>

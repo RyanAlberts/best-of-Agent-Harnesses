@@ -18,6 +18,9 @@ categories:
   - category: "coding-harness-configs"
     title: "Coding harness configs and SDKs"
     subtitle: "Skill packs, slash-command libraries, meta-prompting frameworks, and official SDKs that give you the harness (the agent loop, planning, memory, hooks) without bundling a specific IDE or CLI shell."
+  - category: "personal-agent-runtimes"
+    title: "Personal agent runtimes"
+    subtitle: "Always-on, self-hosted agents you run as a daemon and talk to from chat apps: gateway runtimes, second brains, and self-improving assistants. The agent as a product you operate, not a library you build with."
   - category: "frameworks"
     title: "Frameworks"
     subtitle: "General-purpose agent and LLM application frameworks (the app layer, not harnesses per se)."
@@ -146,12 +149,37 @@ projects:
     github_id: SWE-agent/SWE-agent
     labels: ["python"]
     category: "coding-harness-configs"
-  - name: OpenHarness (HKUDS)
-    github_id: HKUDS/OpenHarness
-    category: "coding-harness-configs"
   - name: Anthropic Skills
     github_id: anthropics/skills
     category: "coding-harness-configs"
+  # Personal agent runtimes
+  - name: OpenClaw
+    github_id: openclaw/openclaw
+    labels: ["javascript"]
+    category: "personal-agent-runtimes"
+  - name: Hermes
+    github_id: NousResearch/hermes-agent
+    labels: ["python"]
+    category: "personal-agent-runtimes"
+  - name: Khoj
+    github_id: khoj-ai/khoj
+    labels: ["python"]
+    category: "personal-agent-runtimes"
+  - name: Eliza
+    github_id: elizaOS/eliza
+    labels: ["javascript"]
+    category: "personal-agent-runtimes"
+  - name: Agent Zero
+    github_id: agent0ai/agent-zero
+    labels: ["python"]
+    category: "personal-agent-runtimes"
+  - name: OpenHarness (HKUDS)
+    github_id: HKUDS/OpenHarness
+    category: "personal-agent-runtimes"
+  - name: AIlice
+    github_id: myshell-ai/AIlice
+    labels: ["python"]
+    category: "personal-agent-runtimes"
   # Frameworks
   - name: langgraph
     github_id: langchain-ai/langgraph
@@ -205,10 +233,6 @@ projects:
     github_id: Significant-Gravitas/AutoGPT
     labels: ["python"]
     category: "frameworks"
-  - name: AIlice
-    github_id: myshell-ai/AIlice
-    labels: ["python"]
-    category: "frameworks"
   - name: Bee Agent Framework
     github_id: i-am-bee/beeai-framework
     category: "frameworks"
@@ -217,26 +241,6 @@ projects:
     category: "frameworks"
   - name: SuperAgentX
     github_id: superagentxai/superagentx
-    labels: ["python"]
-    category: "frameworks"
-  - name: OpenClaw
-    github_id: openclaw/openclaw
-    labels: ["javascript"]
-    category: "frameworks"
-  - name: Hermes
-    github_id: NousResearch/hermes-agent
-    labels: ["python"]
-    category: "frameworks"
-  - name: Khoj
-    github_id: khoj-ai/khoj
-    labels: ["python"]
-    category: "frameworks"
-  - name: Eliza
-    github_id: elizaOS/eliza
-    labels: ["javascript"]
-    category: "frameworks"
-  - name: Agent Zero
-    github_id: agent0ai/agent-zero
     labels: ["python"]
     category: "frameworks"
   - name: AgentVerse

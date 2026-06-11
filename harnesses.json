@@ -45,6 +45,11 @@
       "subtitle": "Skill packs, slash-command libraries, meta-prompting frameworks, and official SDKs that give you the harness (the agent loop, planning, memory, hooks) without bundling a specific IDE or CLI shell."
     },
     {
+      "id": "personal-agent-runtimes",
+      "title": "Personal agent runtimes",
+      "subtitle": "Always-on, self-hosted agents you run as a daemon and talk to from chat apps: gateway runtimes, second brains, and self-improving assistants. The agent as a product you operate, not a library you build with."
+    },
+    {
       "id": "frameworks",
       "title": "Frameworks",
       "subtitle": "General-purpose agent and LLM application frameworks (the app layer, not harnesses per se)."
@@ -98,7 +103,7 @@
         "agent0ai/agent-zero",
         "HKUDS/OpenHarness"
       ],
-      "category_title": "Frameworks"
+      "category_title": "Personal agent runtimes"
     },
     {
       "intent": "I want to extend Claude Code, Codex, or OpenCode with skills and slash commands",
@@ -833,31 +838,6 @@
       }
     },
     {
-      "name": "OpenHarness (HKUDS)",
-      "github_id": "HKUDS/OpenHarness",
-      "url": "https://github.com/HKUDS/OpenHarness",
-      "description": "Open agent harness with a built-in personal agent (\"Ohmo\") that runs across Feishu, Slack, Telegram, and Discord; core tool-use, skills, memory, multi-agent coordination with auto-compaction for multi-day sessions.",
-      "category": "coding-harness-configs",
-      "category_title": "Coding harness configs and SDKs",
-      "stars": 13759,
-      "tier": "complex",
-      "tier_rank": 4,
-      "axis": "complex (personal agent + multi-channel — product suite)",
-      "autonomy": "bounded",
-      "autonomy_rank": 3,
-      "recovery": "resumable",
-      "recovery_rank": 3,
-      "license_signal": "open-source",
-      "tags": [
-        "memory",
-        "multi-agent"
-      ],
-      "example": {
-        "label": "harness-eval skill",
-        "url": "https://github.com/HKUDS/OpenHarness/blob/main/.claude/skills/harness-eval/SKILL.md"
-      }
-    },
-    {
       "name": "Claude Agent SDK",
       "github_id": "anthropics/claude-agent-sdk-python",
       "url": "https://github.com/anthropics/claude-agent-sdk-python",
@@ -965,8 +945,8 @@
       "github_id": "openclaw/openclaw",
       "url": "https://github.com/openclaw/openclaw",
       "description": "Self-hosted, always-on personal agent (formerly Clawdbot/Moltbot): a gateway + event-loop runtime that treats messages, heartbeats, crons, and webhooks as one input queue, persists state to local files, and lives in your chat apps (WhatsApp, Telegram, Slack, Discord). 13,700+ community skills; the fastest-growing repo in GitHub history.",
-      "category": "frameworks",
-      "category_title": "Frameworks",
+      "category": "personal-agent-runtimes",
+      "category_title": "Personal agent runtimes",
       "stars": 378191,
       "tier": "complex",
       "tier_rank": 4,
@@ -983,6 +963,160 @@
       "example": {
         "label": "Agent runtime architecture",
         "url": "https://github.com/openclaw/openclaw/blob/main/docs/agent-runtime-architecture.md"
+      }
+    },
+    {
+      "name": "Hermes",
+      "github_id": "NousResearch/hermes-agent",
+      "url": "https://github.com/NousResearch/hermes-agent",
+      "description": "Nous Research's self-improving agent: a learning loop turns experience into reusable skills, builds a persistent user model across sessions, and checkpoints state to disk with rollback; lean enough for a $5 VPS, driven from chat, and model-agnostic (Nous Portal, OpenRouter, OpenAI, or any endpoint).",
+      "category": "personal-agent-runtimes",
+      "category_title": "Personal agent runtimes",
+      "stars": 190827,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (lean runtime, learning loop, disk-first memory)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "open-source",
+      "tags": [
+        "memory",
+        "python",
+        "provider-agnostic"
+      ],
+      "example": {
+        "label": "Built-in skills",
+        "url": "https://github.com/NousResearch/hermes-agent/tree/main/skills"
+      }
+    },
+    {
+      "name": "Khoj",
+      "github_id": "khoj-ai/khoj",
+      "url": "https://github.com/khoj-ai/khoj",
+      "description": "Self-hostable \"AI second brain\": answers over your docs and the web, custom agents, scheduled automations, and multi-client reach (web, Obsidian, Emacs, WhatsApp). A personal-agent harness with retrieval at the core.",
+      "category": "personal-agent-runtimes",
+      "category_title": "Personal agent runtimes",
+      "stars": 35078,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (server + clients — product suite)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "open-source",
+      "tags": [
+        "python"
+      ],
+      "example": {
+        "label": "Feature tour",
+        "url": "https://github.com/khoj-ai/khoj#readme"
+      }
+    },
+    {
+      "name": "Eliza",
+      "github_id": "elizaOS/eliza",
+      "url": "https://github.com/elizaOS/eliza",
+      "description": "Open \"agentic operating system\" (elizaOS): persistent multi-agent runtime with character files, a plugin ecosystem, and social/platform integrations — the harness behind a large share of autonomous social agents.",
+      "category": "personal-agent-runtimes",
+      "category_title": "Personal agent runtimes",
+      "stars": 18556,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (runtime + plugin ecosystem — product suite)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "open-source",
+      "tags": [
+        "memory",
+        "multi-agent",
+        "typescript"
+      ],
+      "example": {
+        "label": "Agent quickstart",
+        "url": "https://github.com/elizaOS/eliza#readme"
+      }
+    },
+    {
+      "name": "Agent Zero",
+      "github_id": "agent0ai/agent-zero",
+      "url": "https://github.com/agent0ai/agent-zero",
+      "description": "Organic, prompt-defined personal agent framework: hierarchical sub-agents, persistent memory, browser and code tools, and self-modifying behavior; runs in Docker with a web UI.",
+      "category": "personal-agent-runtimes",
+      "category_title": "Personal agent runtimes",
+      "stars": 18027,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (prompt-defined, Docker + web UI)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "unknown",
+      "tags": [
+        "memory",
+        "multi-agent",
+        "browser",
+        "sandbox",
+        "python"
+      ],
+      "example": {
+        "label": "Framework tour",
+        "url": "https://github.com/agent0ai/agent-zero#readme"
+      }
+    },
+    {
+      "name": "OpenHarness (HKUDS)",
+      "github_id": "HKUDS/OpenHarness",
+      "url": "https://github.com/HKUDS/OpenHarness",
+      "description": "Open agent harness with a built-in personal agent (\"Ohmo\") that runs across Feishu, Slack, Telegram, and Discord; core tool-use, skills, memory, multi-agent coordination with auto-compaction for multi-day sessions.",
+      "category": "personal-agent-runtimes",
+      "category_title": "Personal agent runtimes",
+      "stars": 13759,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (personal agent + multi-channel — product suite)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "open-source",
+      "tags": [
+        "memory",
+        "multi-agent"
+      ],
+      "example": {
+        "label": "harness-eval skill",
+        "url": "https://github.com/HKUDS/OpenHarness/blob/main/.claude/skills/harness-eval/SKILL.md"
+      }
+    },
+    {
+      "name": "AIlice",
+      "github_id": "myshell-ai/AIlice",
+      "url": "https://github.com/myshell-ai/AIlice",
+      "description": "Fully autonomous general-purpose agent; one binary, Docker-ready, for when you want \"set goal and walk away\" without a framework.",
+      "category": "personal-agent-runtimes",
+      "category_title": "Personal agent runtimes",
+      "stars": 1407,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (autonomous, one binary)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "none",
+      "recovery_rank": 1,
+      "license_signal": "open-source",
+      "tags": [
+        "sandbox",
+        "python"
+      ],
+      "example": {
+        "label": "Task showcase",
+        "url": "https://github.com/myshell-ai/AIlice#cool-things-we-can-do"
       }
     },
     {
@@ -1009,32 +1143,6 @@
       "example": {
         "label": "Agent vs chain workflow",
         "url": "https://github.com/n8n-io/n8n-docs/blob/main/docs/advanced-ai/examples/agent-chain-comparison.md"
-      }
-    },
-    {
-      "name": "Hermes",
-      "github_id": "NousResearch/hermes-agent",
-      "url": "https://github.com/NousResearch/hermes-agent",
-      "description": "Nous Research's self-improving agent: a learning loop turns experience into reusable skills, builds a persistent user model across sessions, and checkpoints state to disk with rollback; lean enough for a $5 VPS, driven from chat, and model-agnostic (Nous Portal, OpenRouter, OpenAI, or any endpoint).",
-      "category": "frameworks",
-      "category_title": "Frameworks",
-      "stars": 190827,
-      "tier": "slightly complex",
-      "tier_rank": 3,
-      "axis": "slightly complex (lean runtime, learning loop, disk-first memory)",
-      "autonomy": "headless",
-      "autonomy_rank": 4,
-      "recovery": "resumable",
-      "recovery_rank": 3,
-      "license_signal": "open-source",
-      "tags": [
-        "memory",
-        "python",
-        "provider-agnostic"
-      ],
-      "example": {
-        "label": "Built-in skills",
-        "url": "https://github.com/NousResearch/hermes-agent/tree/main/skills"
       }
     },
     {
@@ -1241,30 +1349,6 @@
       }
     },
     {
-      "name": "Khoj",
-      "github_id": "khoj-ai/khoj",
-      "url": "https://github.com/khoj-ai/khoj",
-      "description": "Self-hostable \"AI second brain\": answers over your docs and the web, custom agents, scheduled automations, and multi-client reach (web, Obsidian, Emacs, WhatsApp). A personal-agent harness with retrieval at the core.",
-      "category": "frameworks",
-      "category_title": "Frameworks",
-      "stars": 35078,
-      "tier": "complex",
-      "tier_rank": 4,
-      "axis": "complex (server + clients — product suite)",
-      "autonomy": "headless",
-      "autonomy_rank": 4,
-      "recovery": "resumable",
-      "recovery_rank": 3,
-      "license_signal": "open-source",
-      "tags": [
-        "python"
-      ],
-      "example": {
-        "label": "Feature tour",
-        "url": "https://github.com/khoj-ai/khoj#readme"
-      }
-    },
-    {
       "name": "langgraph",
       "github_id": "langchain-ai/langgraph",
       "url": "https://github.com/langchain-ai/langgraph",
@@ -1415,60 +1499,6 @@
       }
     },
     {
-      "name": "Eliza",
-      "github_id": "elizaOS/eliza",
-      "url": "https://github.com/elizaOS/eliza",
-      "description": "Open \"agentic operating system\" (elizaOS): persistent multi-agent runtime with character files, a plugin ecosystem, and social/platform integrations — the harness behind a large share of autonomous social agents.",
-      "category": "frameworks",
-      "category_title": "Frameworks",
-      "stars": 18556,
-      "tier": "complex",
-      "tier_rank": 4,
-      "axis": "complex (runtime + plugin ecosystem — product suite)",
-      "autonomy": "headless",
-      "autonomy_rank": 4,
-      "recovery": "resumable",
-      "recovery_rank": 3,
-      "license_signal": "open-source",
-      "tags": [
-        "memory",
-        "multi-agent",
-        "typescript"
-      ],
-      "example": {
-        "label": "Agent quickstart",
-        "url": "https://github.com/elizaOS/eliza#readme"
-      }
-    },
-    {
-      "name": "Agent Zero",
-      "github_id": "agent0ai/agent-zero",
-      "url": "https://github.com/agent0ai/agent-zero",
-      "description": "Organic, prompt-defined personal agent framework: hierarchical sub-agents, persistent memory, browser and code tools, and self-modifying behavior; runs in Docker with a web UI.",
-      "category": "frameworks",
-      "category_title": "Frameworks",
-      "stars": 18027,
-      "tier": "slightly complex",
-      "tier_rank": 3,
-      "axis": "slightly complex (prompt-defined, Docker + web UI)",
-      "autonomy": "bounded",
-      "autonomy_rank": 3,
-      "recovery": "resumable",
-      "recovery_rank": 3,
-      "license_signal": "unknown",
-      "tags": [
-        "memory",
-        "multi-agent",
-        "browser",
-        "sandbox",
-        "python"
-      ],
-      "example": {
-        "label": "Framework tour",
-        "url": "https://github.com/agent0ai/agent-zero#readme"
-      }
-    },
-    {
       "name": "botpress",
       "github_id": "botpress/botpress",
       "url": "https://github.com/botpress/botpress",
@@ -1616,31 +1646,6 @@
       "example": {
         "label": "Research assistant crew",
         "url": "https://github.com/agentstack-ai/AgentStack/tree/main/examples/research_assistant"
-      }
-    },
-    {
-      "name": "AIlice",
-      "github_id": "myshell-ai/AIlice",
-      "url": "https://github.com/myshell-ai/AIlice",
-      "description": "Fully autonomous general-purpose agent; one binary, Docker-ready, for when you want \"set goal and walk away\" without a framework.",
-      "category": "frameworks",
-      "category_title": "Frameworks",
-      "stars": 1407,
-      "tier": "slightly complex",
-      "tier_rank": 3,
-      "axis": "slightly complex (autonomous, one binary)",
-      "autonomy": "bounded",
-      "autonomy_rank": 3,
-      "recovery": "none",
-      "recovery_rank": 1,
-      "license_signal": "open-source",
-      "tags": [
-        "sandbox",
-        "python"
-      ],
-      "example": {
-        "label": "Task showcase",
-        "url": "https://github.com/myshell-ai/AIlice#cool-things-we-can-do"
       }
     },
     {

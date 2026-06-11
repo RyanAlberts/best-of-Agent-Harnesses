@@ -123,6 +123,8 @@ CATEGORIES = [
      "Turnkey coding agents you install and run: IDE extensions, terminal CLIs, Dockerized workspaces. Each entry notes which part is the harness (the agent loop, tool wiring, approval model) versus the UI shell (VS Code extension, TUI, browser client)."),
     ("coding-harness-configs", "Coding harness configs and SDKs",
      "Skill packs, slash-command libraries, meta-prompting frameworks, and official SDKs that give you the harness (the agent loop, planning, memory, hooks) without bundling a specific IDE or CLI shell."),
+    ("personal-agent-runtimes", "Personal agent runtimes",
+     "Always-on, self-hosted agents you run as a daemon and talk to from chat apps: gateway runtimes, second brains, and self-improving assistants. The agent as a product you operate, not a library you build with."),
     ("frameworks", "Frameworks",
      "General-purpose agent and LLM application frameworks (the app layer, not harnesses per se)."),
     ("multi-agent", "Multi-agent and orchestration",
@@ -223,12 +225,34 @@ PROJECTS: dict[str, list[Project]] = {
         Project("SWE-agent", "SWE-agent/SWE-agent",
                 "LM-driven harness built for SWE-bench: edit state, command execution, and issue-focused loop—the reference agent stack next to the benchmark itself.",
                 "slightly complex (SWE-bench pairing, stateful edits)", labels=["python"]),
-        Project("OpenHarness (HKUDS)", "HKUDS/OpenHarness",
-                "Open agent harness with a built-in personal agent (\"Ohmo\") that runs across Feishu, Slack, Telegram, and Discord; core tool-use, skills, memory, multi-agent coordination with auto-compaction for multi-day sessions.",
-                "complex (personal agent + multi-channel — product suite)"),
         Project("Anthropic Skills", "anthropics/skills",
                 "Anthropic's official Agent Skills repository: SKILL.md-based folders (instructions, scripts, resources) Claude dynamically loads on Claude Code, Claude.ai, and the API. The reference for progressive-disclosure skill packs in 2026.",
                 "mostly simple (official skills format)", link_name="Anthropic Skills"),
+    ],
+    "personal-agent-runtimes": [
+        Project("OpenClaw", "openclaw/openclaw",
+                "Self-hosted, always-on personal agent (formerly Clawdbot/Moltbot): a gateway + event-loop runtime that treats messages, heartbeats, crons, and webhooks as one input queue, persists state to local files, and lives in your chat apps (WhatsApp, Telegram, Slack, Discord). 13,700+ community skills; the fastest-growing repo in GitHub history.",
+                "complex (always-on runtime, channels, skill ecosystem — product suite)",
+                labels=["javascript"], extra_tags=["multi-agent"]),
+        Project("Hermes", "NousResearch/hermes-agent",
+                "Nous Research's self-improving agent: a learning loop turns experience into reusable skills, builds a persistent user model across sessions, and checkpoints state to disk with rollback; lean enough for a $5 VPS, driven from chat, and model-agnostic (Nous Portal, OpenRouter, OpenAI, or any endpoint).",
+                "slightly complex (lean runtime, learning loop, disk-first memory)",
+                labels=["python"], extra_tags=["provider-agnostic"]),
+        Project("Khoj", "khoj-ai/khoj",
+                "Self-hostable \"AI second brain\": answers over your docs and the web, custom agents, scheduled automations, and multi-client reach (web, Obsidian, Emacs, WhatsApp). A personal-agent harness with retrieval at the core.",
+                "complex (server + clients — product suite)", labels=["python"]),
+        Project("Eliza", "elizaOS/eliza",
+                "Open \"agentic operating system\" (elizaOS): persistent multi-agent runtime with character files, a plugin ecosystem, and social/platform integrations — the harness behind a large share of autonomous social agents.",
+                "complex (runtime + plugin ecosystem — product suite)", labels=["javascript"]),
+        Project("Agent Zero", "agent0ai/agent-zero",
+                "Organic, prompt-defined personal agent framework: hierarchical sub-agents, persistent memory, browser and code tools, and self-modifying behavior; runs in Docker with a web UI.",
+                "slightly complex (prompt-defined, Docker + web UI)", oss="❓", labels=["python"]),
+        Project("OpenHarness (HKUDS)", "HKUDS/OpenHarness",
+                "Open agent harness with a built-in personal agent (\"Ohmo\") that runs across Feishu, Slack, Telegram, and Discord; core tool-use, skills, memory, multi-agent coordination with auto-compaction for multi-day sessions.",
+                "complex (personal agent + multi-channel — product suite)"),
+        Project("AIlice", "myshell-ai/AIlice",
+                "Fully autonomous general-purpose agent; one binary, Docker-ready, for when you want \"set goal and walk away\" without a framework.",
+                "slightly complex (autonomous, one binary)", labels=["python"]),
     ],
     "frameworks": [
         Project("langgraph", "langchain-ai/langgraph",
@@ -270,9 +294,6 @@ PROJECTS: dict[str, list[Project]] = {
         Project("AutoGPT", "Significant-Gravitas/AutoGPT",
                 "The original autonomous loop: goal in, agent iterates with tools and memory; Forge is the dev framework, Benchmark the eval harness.",
                 "complex (autonomous loop, tools, memory — product suite)", oss="⚠️ Polyform-SU", labels=["python"]),
-        Project("AIlice", "myshell-ai/AIlice",
-                "Fully autonomous general-purpose agent; one binary, Docker-ready, for when you want \"set goal and walk away\" without a framework.",
-                "slightly complex (autonomous, one binary)", labels=["python"]),
         Project("Bee Agent Framework", "i-am-bee/beeai-framework",
                 "Python + TypeScript, LF AI–backed; MCP/ACP, workflows, Requirement Agent; the one that pushes \"production multi-agent\" without LangChain.",
                 "complex (production multi-agent — product suite)"),
@@ -282,23 +303,6 @@ PROJECTS: dict[str, list[Project]] = {
         Project("SuperAgentX", "superagentxai/superagentx",
                 "Lightweight multi-agent orchestrator with an AGI-angle; minimal surface, docs-first, for teams that want orchestration without the kitchen sink.",
                 "mostly simple (minimal surface)", labels=["python"]),
-        Project("OpenClaw", "openclaw/openclaw",
-                "Self-hosted, always-on personal agent (formerly Clawdbot/Moltbot): a gateway + event-loop runtime that treats messages, heartbeats, crons, and webhooks as one input queue, persists state to local files, and lives in your chat apps (WhatsApp, Telegram, Slack, Discord). 13,700+ community skills; the fastest-growing repo in GitHub history.",
-                "complex (always-on runtime, channels, skill ecosystem — product suite)",
-                labels=["javascript"], extra_tags=["multi-agent"]),
-        Project("Hermes", "NousResearch/hermes-agent",
-                "Nous Research's self-improving agent: a learning loop turns experience into reusable skills, builds a persistent user model across sessions, and checkpoints state to disk with rollback; lean enough for a $5 VPS, driven from chat, and model-agnostic (Nous Portal, OpenRouter, OpenAI, or any endpoint).",
-                "slightly complex (lean runtime, learning loop, disk-first memory)",
-                labels=["python"], extra_tags=["provider-agnostic"]),
-        Project("Khoj", "khoj-ai/khoj",
-                "Self-hostable \"AI second brain\": answers over your docs and the web, custom agents, scheduled automations, and multi-client reach (web, Obsidian, Emacs, WhatsApp). A personal-agent harness with retrieval at the core.",
-                "complex (server + clients — product suite)", labels=["python"]),
-        Project("Eliza", "elizaOS/eliza",
-                "Open \"agentic operating system\" (elizaOS): persistent multi-agent runtime with character files, a plugin ecosystem, and social/platform integrations — the harness behind a large share of autonomous social agents.",
-                "complex (runtime + plugin ecosystem — product suite)", labels=["javascript"]),
-        Project("Agent Zero", "agent0ai/agent-zero",
-                "Organic, prompt-defined personal agent framework: hierarchical sub-agents, persistent memory, browser and code tools, and self-modifying behavior; runs in Docker with a web UI.",
-                "slightly complex (prompt-defined, Docker + web UI)", oss="❓", labels=["python"]),
         Project("AgentVerse", "OpenBMB/AgentVerse",
                 "Task-solving and simulation envs for multi-LLM agents; deploy many agents in custom environments without building infra from scratch.",
                 "complex (simulation envs, multi-agent — product suite)", labels=["python"]),
@@ -837,7 +841,7 @@ USE_CASES: "list[tuple[str, list[str], str]]" = [
     ("I want an always-on personal agent that lives in my chat apps",
      ["openclaw/openclaw", "NousResearch/hermes-agent", "khoj-ai/khoj",
       "agent0ai/agent-zero", "HKUDS/OpenHarness"],
-     "Frameworks"),
+     "Personal agent runtimes"),
     ("I want to extend Claude Code, Codex, or OpenCode with skills and slash commands",
      ["anthropics/skills", "affaan-m/everything-claude-code",
       "obra/superpowers", "garrytan/gstack", "RyanAlberts/pmstack"],
@@ -1321,6 +1325,7 @@ LANDSCAPE_STYLE = {
     "progressive-disclosure": ("#8b5cf6", "Progressive disclosure"),
     "coding-agent-products": ("#ef4444", "Coding agents"),
     "coding-harness-configs": ("#f59e0b", "Configs & SDKs"),
+    "personal-agent-runtimes": ("#0ea5e9", "Personal agents"),
     "frameworks": ("#3b82f6", "Frameworks"),
     "multi-agent": ("#ec4899", "Multi-agent"),
     "plugins-mcp-cli": ("#10b981", "Plugins & MCP"),
@@ -1363,11 +1368,14 @@ def generate_landscape_svg() -> str:
         f'<text x="{W/2}" y="80" text-anchor="middle" font-size="15" fill="#6b7280">{count_projects()} hand-curated projects · GitHub stars vs. adoption surface area · stars captured {STARS_CAPTURED}</text>',
     ]
 
-    # legend (single row, evenly spaced groups)
+    # legend (wraps to a second row when categories overflow the width)
     lx = X0
-    ly = 116
+    ly = 110
     for cat_id, _, _ in CATEGORIES:
         color, label = LANDSCAPE_STYLE[cat_id]
+        if lx > X1 - 180:
+            lx = X0
+            ly += 22
         svg.append(f'<circle cx="{lx}" cy="{ly - 4}" r="6" fill="{color}"/>')
         svg.append(f'<text x="{lx + 11}" y="{ly}" font-size="12.5" fill="#374151">{escape(label)}</text>')
         lx += 11 + len(label) * 6.6 + 26
