@@ -1,0 +1,2338 @@
+{
+  "meta": {
+    "name": "best-of-Agent-Harnesses",
+    "description": "Hand-curated, ranked list of AI agent harnesses, orchestration frameworks, and harness techniques.",
+    "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses",
+    "license": "CC-BY-SA-4.0",
+    "stars_captured": "2026-06-07",
+    "project_count": 101,
+    "tiers": [
+      "super simple",
+      "mostly simple",
+      "slightly complex",
+      "complex"
+    ],
+    "tier_help": "Adoption surface area, least to most: tier_rank 1 = format-only/single concept, 4 = platform with its own runtime and ecosystem."
+  },
+  "categories": [
+    {
+      "id": "progressive-disclosure",
+      "title": "Progressive disclosure harnesses",
+      "subtitle": "Formats, runtimes, and patterns that reveal context, tools, or instructions in layers—index first, details on demand—to control tokens and improve agent focus (the \"map, not encyclopedia\" principle)."
+    },
+    {
+      "id": "coding-agent-products",
+      "title": "Coding agent products (IDEs, CLIs, full suites)",
+      "subtitle": "Turnkey coding agents you install and run: IDE extensions, terminal CLIs, Dockerized workspaces. Each entry notes which part is the harness (the agent loop, tool wiring, approval model) versus the UI shell (VS Code extension, TUI, browser client)."
+    },
+    {
+      "id": "coding-harness-configs",
+      "title": "Coding harness configs and SDKs",
+      "subtitle": "Skill packs, slash-command libraries, meta-prompting frameworks, and official SDKs that give you the harness (the agent loop, planning, memory, hooks) without bundling a specific IDE or CLI shell."
+    },
+    {
+      "id": "frameworks",
+      "title": "Frameworks",
+      "subtitle": "General-purpose agent and LLM application frameworks (the app layer, not harnesses per se)."
+    },
+    {
+      "id": "multi-agent",
+      "title": "Multi-agent and orchestration",
+      "subtitle": "Harnesses and patterns for multi-agent coordination and handoffs."
+    },
+    {
+      "id": "plugins-mcp-cli",
+      "title": "Plugins, MCPs, CLI tools",
+      "subtitle": "IDE plugins, concrete MCP servers, and CLI tools that give agents tools and context."
+    },
+    {
+      "id": "evaluation",
+      "title": "Evaluation and benchmarking harnesses",
+      "subtitle": "Agentic eval systems, reasoning benchmarks, and open agent benchmarks."
+    },
+    {
+      "id": "research-task",
+      "title": "Research and task-specific harnesses",
+      "subtitle": "Deep research, document QA, and domain-specific agent loops."
+    },
+    {
+      "id": "libraries-sdks",
+      "title": "Libraries and SDKs",
+      "subtitle": "Lightweight runtimes, tool loops, and provider-agnostic harness primitives."
+    }
+  ],
+  "use_cases": [
+    {
+      "intent": "I want a turnkey coding agent today",
+      "picks": [
+        "anomalyco/opencode",
+        "cline/cline",
+        "openai/codex",
+        "google-gemini/gemini-cli",
+        "OpenHands/OpenHands",
+        "charmbracelet/crush",
+        "RooCodeInc/Roo-Code"
+      ],
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)"
+    },
+    {
+      "intent": "I want to extend Claude Code, Codex, or OpenCode with skills and slash commands",
+      "picks": [
+        "anthropics/skills",
+        "affaan-m/everything-claude-code",
+        "obra/superpowers",
+        "garrytan/gstack",
+        "RyanAlberts/pmstack"
+      ],
+      "category_title": "Coding harness configs and SDKs"
+    },
+    {
+      "intent": "I want to build my own coding harness from scratch",
+      "picks": [
+        "anthropics/claude-agent-sdk-python",
+        "google/adk-python",
+        "aiming-lab/AutoHarness",
+        "SWE-agent/SWE-agent",
+        "QuantaAlpha/RepoMaster",
+        "HarnessLab/claw-code-agent"
+      ],
+      "category_title": "Coding harness configs and SDKs"
+    },
+    {
+      "intent": "I want a drop-in memory layer for agents",
+      "picks": [
+        "mem0ai/mem0",
+        "thedotmack/claude-mem",
+        "RyanAlberts/agentlog",
+        "agno-agi/agno",
+        "letta-ai/letta"
+      ],
+      "category_title": "Plugins, MCPs, CLI tools"
+    },
+    {
+      "intent": "I want to plug hundreds to thousands of tools without context bloat",
+      "picks": [
+        "xfey/MCP-Zero",
+        "Reason-Wang/ToolGen",
+        "antl3x/ToolRAG",
+        "langchain-ai/langgraph-bigtool",
+        "spring-ai-community/spring-ai-tool-search-tool"
+      ],
+      "category_title": "Progressive disclosure harnesses"
+    },
+    {
+      "intent": "I want multi-agent orchestration",
+      "picks": [
+        "openai/openai-agents-python",
+        "crewAIInc/crewAI",
+        "microsoft/autogen",
+        "MervinPraison/PraisonAI",
+        "2FastLabs/agent-squad"
+      ],
+      "category_title": "Multi-agent and orchestration"
+    },
+    {
+      "intent": "I want a general LLM app framework",
+      "picks": [
+        "langchain-ai/langgraph",
+        "langchain-ai/langchain",
+        "run-llama/llama_index",
+        "pydantic/pydantic-ai",
+        "agno-agi/agno"
+      ],
+      "category_title": "Frameworks"
+    },
+    {
+      "intent": "I want low-code / visual workflows",
+      "picks": [
+        "langflow-ai/langflow",
+        "FlowiseAI/Flowise",
+        "langgenius/dify",
+        "n8n-io/n8n"
+      ],
+      "category_title": "Frameworks"
+    },
+    {
+      "intent": "I want browser-using agents",
+      "picks": [
+        "browser-use/browser-use",
+        "MinorJerry/WebVoyager",
+        "withLinda/puppeteer-real-browser-mcp-server"
+      ],
+      "category_title": "Plugins, MCPs, CLI tools"
+    },
+    {
+      "intent": "I want sandboxed code execution for agent-generated code",
+      "picks": [
+        "e2b-dev/E2B",
+        "daytonaio/daytona",
+        "huggingface/smolagents",
+        "OpenHands/OpenHands"
+      ],
+      "category_title": "Libraries and SDKs"
+    },
+    {
+      "intent": "I want to evaluate or benchmark agents",
+      "picks": [
+        "SWE-bench/SWE-bench",
+        "GAIR-NLP/AgencyBench",
+        "UKGovernmentBEIS/inspect_ai",
+        "web-arena-x/webarena",
+        "arcprize/ARC-AGI-2",
+        "meituan-longcat/vitabench"
+      ],
+      "category_title": "Evaluation and benchmarking harnesses"
+    },
+    {
+      "intent": "I want a deep research / autonomous research agent",
+      "picks": [
+        "langchain-ai/deepagents",
+        "assafelovic/gpt-researcher",
+        "OpenAgentsInc/openagents"
+      ],
+      "category_title": "Research and task-specific harnesses"
+    },
+    {
+      "intent": "I want a provider-agnostic LLM pipe (not a framework)",
+      "picks": [
+        "BerriAI/litellm",
+        "vercel/ai"
+      ],
+      "category_title": "Libraries and SDKs"
+    }
+  ],
+  "projects": [
+    {
+      "name": "awesome-cursorrules",
+      "github_id": "PatrickJS/awesome-cursorrules",
+      "url": "https://github.com/PatrickJS/awesome-cursorrules",
+      "description": "Curated .cursorrules and skills that leverage Cursor's index-then-load model; the canonical collection for rules-as-progressive-disclosure in the IDE.",
+      "category": "progressive-disclosure",
+      "category_title": "Progressive disclosure harnesses",
+      "stars": 39563,
+      "tier": "super simple",
+      "tier_rank": 1,
+      "axis": "super simple (content bundle)",
+      "license_signal": "open-source",
+      "tags": [
+        "ide"
+      ],
+      "example": {
+        "label": "PyTorch cursorrules",
+        "url": "https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/pytorch-scikit-learn-cursorrules-prompt-file.mdc"
+      }
+    },
+    {
+      "name": "agents.md",
+      "github_id": "agentsmd/agents.md",
+      "url": "https://github.com/agentsmd/agents.md",
+      "description": "Open format for repo-scoped agent briefings; v1.1 adds hierarchical scope and progressive disclosure so agents get a map of what exists, then load only what's relevant.",
+      "category": "progressive-disclosure",
+      "category_title": "Progressive disclosure harnesses",
+      "stars": 21487,
+      "tier": "super simple",
+      "tier_rank": 1,
+      "axis": "super simple (format only)",
+      "license_signal": "open-source",
+      "tags": [
+        "typescript"
+      ],
+      "example": {
+        "label": "Self-hosting AGENTS.md",
+        "url": "https://github.com/agentsmd/agents.md/blob/main/AGENTS.md"
+      }
+    },
+    {
+      "name": "langgraph-bigtool",
+      "github_id": "langchain-ai/langgraph-bigtool",
+      "url": "https://github.com/langchain-ai/langgraph-bigtool",
+      "description": "Build LangGraph agents with large tool sets; retrieval and on-demand tool loading so agents scale beyond context without stuffing every schema upfront.",
+      "category": "progressive-disclosure",
+      "category_title": "Progressive disclosure harnesses",
+      "stars": 537,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (large tool sets)",
+      "license_signal": "open-source",
+      "tags": [
+        "tool-discovery",
+        "python"
+      ],
+      "example": {
+        "label": "Math-library tool agent",
+        "url": "https://github.com/langchain-ai/langgraph-bigtool#quickstart"
+      }
+    },
+    {
+      "name": "MCP-Zero",
+      "github_id": "xfey/MCP-Zero",
+      "url": "https://github.com/xfey/MCP-Zero",
+      "description": "Active tool discovery for autonomous agents: model requests tools by requirement; hierarchical semantic routing over 308 servers / 2,797 tools with ~98% token reduction (APIBank).",
+      "category": "progressive-disclosure",
+      "category_title": "Progressive disclosure harnesses",
+      "stars": 483,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (3k tools, full routing)",
+      "license_signal": "open-source",
+      "tags": [
+        "tool-discovery"
+      ],
+      "example": {
+        "label": "APIBank experiment",
+        "url": "https://github.com/xfey/MCP-Zero/blob/master/MCP-zero/experiment_apibank.py"
+      }
+    },
+    {
+      "name": "ToolGen",
+      "github_id": "Reason-Wang/ToolGen",
+      "url": "https://github.com/Reason-Wang/ToolGen",
+      "description": "ICLR 2025: unified tool retrieval and calling via generation; 47k+ tools without context stuffing—retrieval and invocation in one generative step.",
+      "category": "progressive-disclosure",
+      "category_title": "Progressive disclosure harnesses",
+      "stars": 178,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (47k+ tools)",
+      "license_signal": "unknown",
+      "tags": [
+        "tool-discovery",
+        "python"
+      ],
+      "example": {
+        "label": "Full eval pipeline",
+        "url": "https://github.com/Reason-Wang/ToolGen/blob/master/scripts/eval_full_pipeline.sh"
+      }
+    },
+    {
+      "name": "spring-ai-tool-search-tool",
+      "github_id": "spring-ai-community/spring-ai-tool-search-tool",
+      "url": "https://github.com/spring-ai-community/spring-ai-tool-search-tool",
+      "description": "Dynamic tool discovery for Spring AI: model gets a search tool first, then pulls definitions for relevant tools; 34–64% token reduction across providers.",
+      "category": "progressive-disclosure",
+      "category_title": "Progressive disclosure harnesses",
+      "stars": 70,
+      "tier": "mostly simple",
+      "tier_rank": 2,
+      "axis": "mostly simple (search-then-load)",
+      "license_signal": "open-source",
+      "tags": [
+        "tool-discovery"
+      ],
+      "example": {
+        "label": "Tool Search demo app",
+        "url": "https://github.com/spring-ai-community/spring-ai-tool-search-tool/tree/main/examples/tool-search-tool-demo"
+      }
+    },
+    {
+      "name": "ToolRAG",
+      "github_id": "antl3x/ToolRAG",
+      "url": "https://github.com/antl3x/ToolRAG",
+      "description": "Semantic tool retrieval for LLMs; serves only the tools the user query demands (MCP-compatible), unlimited tool sets with zero context penalty.",
+      "category": "progressive-disclosure",
+      "category_title": "Progressive disclosure harnesses",
+      "stars": 25,
+      "tier": "mostly simple",
+      "tier_rank": 2,
+      "axis": "mostly simple (query-driven retrieval)",
+      "license_signal": "open-source",
+      "tags": [
+        "mcp",
+        "tool-discovery"
+      ],
+      "example": {
+        "label": "MCP server retrieval",
+        "url": "https://github.com/antl3x/ToolRAG/blob/main/packages/%40antl3x-toolrag/README.md"
+      }
+    },
+    {
+      "name": "opencode",
+      "github_id": "anomalyco/opencode",
+      "url": "https://github.com/anomalyco/opencode",
+      "description": "Open-source terminal coding agent (formerly `sst/opencode`; transferred to anomalyco). The **harness** is a multi-provider tool-call loop (Claude, OpenAI, Gemini, local) with strong plugin and MCP support; the TUI is the shell. 100% OSS, very actively shipped.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 162190,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (multi-provider, plugins, MCP)",
+      "license_signal": "open-source",
+      "tags": [
+        "mcp",
+        "provider-agnostic",
+        "cli",
+        "tui",
+        "typescript"
+      ],
+      "example": {
+        "label": "Agent system page",
+        "url": "https://opencode.ai/docs/agents/"
+      }
+    },
+    {
+      "name": "Gemini CLI",
+      "github_id": "google-gemini/gemini-cli",
+      "url": "https://github.com/google-gemini/gemini-cli",
+      "description": "Google's first-party terminal agent for Gemini. The **harness** is the plugin/MCP tool-call loop; the terminal is the shell—Google's parallel to Claude Code / Codex, not just an API.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 104261,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (official CLI, plugins, MCP)",
+      "license_signal": "open-source",
+      "tags": [
+        "mcp",
+        "cli",
+        "typescript"
+      ],
+      "example": {
+        "label": "MCP server setup",
+        "url": "https://github.com/google-gemini/gemini-cli/blob/main/docs/tools/mcp-server.md"
+      }
+    },
+    {
+      "name": "Codex",
+      "github_id": "openai/codex",
+      "url": "https://github.com/openai/codex",
+      "description": "OpenAI's terminal coding agent. The **harness** is the sandboxed tool-call loop with multi-provider support; the CLI is the shell. Reference implementation for \"official CLI that ships code.\"",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 83556,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (reference CLI, sandboxed)",
+      "license_signal": "open-source",
+      "tags": [
+        "sandbox",
+        "provider-agnostic",
+        "cli"
+      ],
+      "example": {
+        "label": "Sandboxing concept",
+        "url": "https://developers.openai.com/codex/concepts/sandboxing"
+      }
+    },
+    {
+      "name": "OpenHands",
+      "github_id": "OpenHands/OpenHands",
+      "url": "https://github.com/OpenHands/OpenHands",
+      "description": "Dockerized software-engineering agent. The **harness** is the bash/editor/browser toolset with micro-agents and event-stream session bridging; Docker is the sandbox. Main OSS choice for teams self-hosting autonomous repo work.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 74003,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (Docker runtime, multi-surface agent — product suite)",
+      "license_signal": "restricted ((multi-license))",
+      "tags": [
+        "memory",
+        "browser",
+        "sandbox",
+        "python"
+      ],
+      "example": {
+        "label": "Repository microagents",
+        "url": "https://docs.all-hands.dev/usage/prompting/microagents-repo"
+      }
+    },
+    {
+      "name": "Cline",
+      "github_id": "cline/cline",
+      "url": "https://github.com/cline/cline",
+      "description": "VS Code extension whose **harness** is a plan-then-act loop with per-step human approval and cost transparency; the VS Code integration is the UI shell. Open-source counterweight to Cursor.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 61982,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (plan-then-act, approval gates)",
+      "license_signal": "open-source",
+      "tags": [
+        "ide",
+        "typescript"
+      ],
+      "example": {
+        "label": "Plan & Act mode",
+        "url": "https://docs.cline.bot/features/plan-and-act"
+      }
+    },
+    {
+      "name": "goose",
+      "github_id": "aaif-goose/goose",
+      "url": "https://github.com/aaif-goose/goose",
+      "description": "Block-originated Rust agent, now stewarded by the Linux Foundation's Agentic AI Foundation (`aaif-goose/goose`). The **harness** is the MCP/ACP extension model with recipes and provider choice; there's no fixed UI slot—you bolt it into whatever shell you use.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 45481,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (extensions, MCP/ACP)",
+      "license_signal": "open-source",
+      "tags": [
+        "mcp",
+        "rust"
+      ],
+      "example": {
+        "label": "Goose recipes guide",
+        "url": "https://block.github.io/goose/docs/guides/recipes/"
+      }
+    },
+    {
+      "name": "crush",
+      "github_id": "charmbracelet/crush",
+      "url": "https://github.com/charmbracelet/crush",
+      "description": "Charm's terminal coding agent (Charm's fork of the original OpenCode). The **harness** is the tool-calling loop with session persistence; the Bubble Tea TUI is the shell.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 24388,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (terminal agent, TUI)",
+      "license_signal": "restricted (FSL-1.1-MIT)",
+      "tags": [
+        "memory",
+        "cli",
+        "tui"
+      ],
+      "example": {
+        "label": "Crush launch post",
+        "url": "https://charm.land/blog/crush-comes-home/"
+      }
+    },
+    {
+      "name": "Roo Code",
+      "github_id": "RooCodeInc/Roo-Code",
+      "url": "https://github.com/RooCodeInc/Roo-Code",
+      "description": "VS Code/Cursor extension in the Cline lineage. The **harness** is the approval-gated agent with custom modes and a strong MCP story; the IDE is the UI. Popular community fork when you want that workflow without the upstream extension.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 24100,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (IDE extension, MCP-first)",
+      "license_signal": "open-source",
+      "tags": [
+        "mcp",
+        "workflow",
+        "ide",
+        "typescript"
+      ],
+      "example": {
+        "label": "Custom modes guide",
+        "url": "https://docs.roocode.com/features/custom-modes"
+      }
+    },
+    {
+      "name": "claw-code-agent",
+      "github_id": "HarnessLab/claw-code-agent",
+      "url": "https://github.com/HarnessLab/claw-code-agent",
+      "description": "Python reimplementation of the Claude Code agent architecture with zero external dependencies; interactive chat, streaming, plugin runtime, nested agent delegation, cost tracking, MCP transport—portable harness without the Rust/TS toolchain.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 482,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (pure Python, plugin runtime)",
+      "license_signal": "unknown",
+      "tags": [
+        "mcp",
+        "rust",
+        "python",
+        "typescript"
+      ],
+      "example": {
+        "label": "Quick Start guide",
+        "url": "https://github.com/HarnessLab/claw-code-agent#-quick-start"
+      }
+    },
+    {
+      "name": "coderClaw",
+      "github_id": "SeanHogg/coderClaw",
+      "url": "https://github.com/SeanHogg/coderClaw",
+      "description": "Self-hosted multi-role coding system (Creator, Reviewer, Test, Refactor, etc.) with AST and semantic maps; IDE-agnostic, chat-channel triggers.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 3,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (multi-role, AST/semantic)",
+      "license_signal": "unknown",
+      "tags": [
+        "ide",
+        "typescript"
+      ],
+      "example": {
+        "label": "Multi-agent README",
+        "url": "https://github.com/SeanHogg/coderClaw#readme"
+      }
+    },
+    {
+      "name": "superpowers",
+      "github_id": "obra/superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "description": "Performance-oriented harness pack for Claude Code, Codex, OpenCode, Cursor: skills, instincts, memory, security, research-first workflows. Treats harness engineering itself as the performance lever.",
+      "category": "coding-harness-configs",
+      "category_title": "Coding harness configs and SDKs",
+      "stars": 196763,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (multi-IDE skill stack — product suite)",
+      "license_signal": "open-source",
+      "tags": [
+        "memory",
+        "ide"
+      ],
+      "example": {
+        "label": "TDD skill",
+        "url": "https://github.com/obra/superpowers/blob/main/skills/test-driven-development/SKILL.md"
+      }
+    },
+    {
+      "name": "everything-claude-code",
+      "github_id": "affaan-m/everything-claude-code",
+      "url": "https://github.com/affaan-m/everything-claude-code",
+      "description": "The breakout 2026 harness pack for Claude Code: 28 specialized subagents, 119 reusable skills, 60 slash commands, 34 rules, 20+ automated hooks. Ships a full \"AI engineering team\" as config.",
+      "category": "coding-harness-configs",
+      "category_title": "Coding harness configs and SDKs",
+      "stars": 186548,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (subagents + skills + hooks — product suite)",
+      "license_signal": "open-source",
+      "tags": [
+        "multi-agent"
+      ],
+      "example": {
+        "label": "autonomous-agent-harness skill",
+        "url": "https://github.com/affaan-m/everything-claude-code/blob/main/skills/autonomous-agent-harness/SKILL.md"
+      }
+    },
+    {
+      "name": "Anthropic Skills",
+      "github_id": "anthropics/skills",
+      "url": "https://github.com/anthropics/skills",
+      "description": "Anthropic's official Agent Skills repository: SKILL.md-based folders (instructions, scripts, resources) Claude dynamically loads on Claude Code, Claude.ai, and the API. The reference for progressive-disclosure skill packs in 2026.",
+      "category": "coding-harness-configs",
+      "category_title": "Coding harness configs and SDKs",
+      "stars": 137005,
+      "tier": "mostly simple",
+      "tier_rank": 2,
+      "axis": "mostly simple (official skills format)",
+      "license_signal": "open-source",
+      "tags": [],
+      "example": {
+        "label": "docx skill",
+        "url": "https://github.com/anthropics/skills/blob/main/skills/docx/SKILL.md"
+      }
+    },
+    {
+      "name": "GStack",
+      "github_id": "garrytan/gstack",
+      "url": "https://github.com/garrytan/gstack",
+      "description": "Garry Tan's Claude Code skill stack: 23 slash-command modes (CEO/eng/design review, QA, ship, browse, retro, …) that structure one assistant as a virtual engineering team. Daily driver while running YC.",
+      "category": "coding-harness-configs",
+      "category_title": "Coding harness configs and SDKs",
+      "stars": 99093,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (multi-role slash-command harness)",
+      "license_signal": "open-source",
+      "tags": [
+        "typescript"
+      ],
+      "example": {
+        "label": "/ship SKILL.md",
+        "url": "https://github.com/garrytan/gstack/blob/main/ship/SKILL.md"
+      }
+    },
+    {
+      "name": "get-shit-done",
+      "github_id": "gsd-build/get-shit-done",
+      "url": "https://github.com/gsd-build/get-shit-done",
+      "description": "Goal-backward planning and wave-based execution over fresh context windows; avoids context rot by design. Python/JS meta-prompting for Claude Code, OpenCode, Gemini CLI.",
+      "category": "coding-harness-configs",
+      "category_title": "Coding harness configs and SDKs",
+      "stars": 62931,
+      "tier": "mostly simple",
+      "tier_rank": 2,
+      "axis": "mostly simple (meta-prompting, you own stack)",
+      "license_signal": "open-source",
+      "tags": [
+        "cli",
+        "python"
+      ],
+      "example": {
+        "label": "gsd:ship command",
+        "url": "https://github.com/gsd-build/get-shit-done/blob/main/commands/gsd/ship.md"
+      }
+    },
+    {
+      "name": "SWE-agent",
+      "github_id": "SWE-agent/SWE-agent",
+      "url": "https://github.com/SWE-agent/SWE-agent",
+      "description": "LM-driven harness built for SWE-bench: edit state, command execution, and issue-focused loop—the reference agent stack next to the benchmark itself.",
+      "category": "coding-harness-configs",
+      "category_title": "Coding harness configs and SDKs",
+      "stars": 19241,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (SWE-bench pairing, stateful edits)",
+      "license_signal": "open-source",
+      "tags": [
+        "memory",
+        "evals",
+        "python"
+      ],
+      "example": {
+        "label": "Default agent config",
+        "url": "https://github.com/SWE-agent/SWE-agent/blob/main/config/default.yaml"
+      }
+    },
+    {
+      "name": "OpenHarness (HKUDS)",
+      "github_id": "HKUDS/OpenHarness",
+      "url": "https://github.com/HKUDS/OpenHarness",
+      "description": "Open agent harness with a built-in personal agent (\"Ohmo\") that runs across Feishu, Slack, Telegram, and Discord; core tool-use, skills, memory, multi-agent coordination with auto-compaction for multi-day sessions.",
+      "category": "coding-harness-configs",
+      "category_title": "Coding harness configs and SDKs",
+      "stars": 12698,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (personal agent + multi-channel — product suite)",
+      "license_signal": "open-source",
+      "tags": [
+        "memory",
+        "multi-agent"
+      ],
+      "example": {
+        "label": "harness-eval skill",
+        "url": "https://github.com/HKUDS/OpenHarness/blob/main/.claude/skills/harness-eval/SKILL.md"
+      }
+    },
+    {
+      "name": "Claude Agent SDK",
+      "github_id": "anthropics/claude-agent-sdk-python",
+      "url": "https://github.com/anthropics/claude-agent-sdk-python",
+      "description": "Official Anthropic SDK (Python + [TypeScript](https://github.com/anthropics/claude-agent-sdk-typescript), [demos](https://github.com/anthropics/claude-agent-sdk-demos), [quickstarts](https://github.com/anthropics/claude-quickstarts)): built-in tools, MCP, long-running coding agents with session bridging.",
+      "category": "coding-harness-configs",
+      "category_title": "Coding harness configs and SDKs",
+      "stars": 6932,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (full SDK, session bridging — product suite)",
+      "license_signal": "open-source",
+      "tags": [
+        "mcp",
+        "memory",
+        "python",
+        "typescript"
+      ],
+      "example": {
+        "label": "Research agent demo",
+        "url": "https://github.com/anthropics/claude-agent-sdk-demos/blob/main/research-agent/research_agent/agent.py"
+      }
+    },
+    {
+      "name": "RepoMaster",
+      "github_id": "QuantaAlpha/RepoMaster",
+      "url": "https://github.com/QuantaAlpha/RepoMaster",
+      "description": "Repo-scoped research harness: builds function-call and module-dependency graphs to explore only what's needed; large relative gains on MLE-bench and GitTaskBench with lower token use.",
+      "category": "coding-harness-configs",
+      "category_title": "Coding harness configs and SDKs",
+      "stars": 522,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (graph-based exploration)",
+      "license_signal": "unknown",
+      "tags": [
+        "workflow",
+        "python"
+      ],
+      "example": {
+        "label": "PDF-parse case study",
+        "url": "https://github.com/QuantaAlpha/RepoMaster/blob/main/example/pdf_parse.md"
+      }
+    },
+    {
+      "name": "AutoHarness",
+      "github_id": "aiming-lab/AutoHarness",
+      "url": "https://github.com/aiming-lab/AutoHarness",
+      "description": "Lightweight governance harness: wraps any LLM client in ~2 lines for automated harness engineering—6–14 step pipeline, YAML constitution, risk-pattern matching, session persistence with cost tracking, multi-agent profiles.",
+      "category": "coding-harness-configs",
+      "category_title": "Coding harness configs and SDKs",
+      "stars": 280,
+      "tier": "super simple",
+      "tier_rank": 1,
+      "axis": "super simple (2-line wrapper, YAML gov)",
+      "license_signal": "open-source",
+      "tags": [
+        "memory",
+        "multi-agent",
+        "provider-agnostic",
+        "python"
+      ],
+      "example": {
+        "label": "Full pipeline demo",
+        "url": "https://github.com/aiming-lab/AutoHarness/blob/main/examples/full_pipeline_demo.py"
+      }
+    },
+    {
+      "name": "pmstack",
+      "github_id": "RyanAlberts/pmstack",
+      "url": "https://github.com/RyanAlberts/pmstack",
+      "description": "Claude Code config for AI product managers: CLAUDE.md plus skills for competitive analysis, PRD-from-signal, metric frameworks, stakeholder briefs, and agent eval design. \"GStack for PMs.\"",
+      "category": "coding-harness-configs",
+      "category_title": "Coding harness configs and SDKs",
+      "stars": 1,
+      "tier": "super simple",
+      "tier_rank": 1,
+      "axis": "super simple (skills bundle, PM-focused)",
+      "license_signal": "open-source",
+      "tags": [
+        "evals"
+      ],
+      "example": {
+        "label": "PRD-from-signal skill",
+        "url": "https://github.com/RyanAlberts/pmstack/blob/main/skills/prd-from-signal.md"
+      }
+    },
+    {
+      "name": "n8n",
+      "github_id": "n8n-io/n8n",
+      "url": "https://github.com/n8n-io/n8n",
+      "description": "Fair-code workflow engine with 400+ nodes and native AI nodes; the self-hosted Zapier that actually does agents and LangChain.",
+      "category": "frameworks",
+      "category_title": "Frameworks",
+      "stars": 188586,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (400+ nodes, workflow engine — product suite)",
+      "license_signal": "restricted (Fair-code)",
+      "tags": [
+        "workflow",
+        "local",
+        "typescript"
+      ],
+      "example": {
+        "label": "Agent vs chain workflow",
+        "url": "https://github.com/n8n-io/n8n-docs/blob/main/docs/advanced-ai/examples/agent-chain-comparison.md"
+      }
+    },
+    {
+      "name": "AutoGPT",
+      "github_id": "Significant-Gravitas/AutoGPT",
+      "url": "https://github.com/Significant-Gravitas/AutoGPT",
+      "description": "The original autonomous loop: goal in, agent iterates with tools and memory; Forge is the dev framework, Benchmark the eval harness.",
+      "category": "frameworks",
+      "category_title": "Frameworks",
+      "stars": 184401,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (autonomous loop, tools, memory — product suite)",
+      "license_signal": "restricted (Polyform-SU)",
+      "tags": [
+        "memory",
+        "evals",
+        "python"
+      ],
+      "example": {
+        "label": "Medium blogger graph",
+        "url": "https://github.com/Significant-Gravitas/AutoGPT/blob/master/autogpt_platform/graph_templates/Medium%20Blogger_v28.json"
+      }
+    },
+    {
+      "name": "langflow",
+      "github_id": "langflow-ai/langflow",
+      "url": "https://github.com/langflow-ai/langflow",
+      "description": "Low-code UI to build and deploy LangChain/LangGraph flows; visual DAG editor and one-click run.",
+      "category": "frameworks",
+      "category_title": "Frameworks",
+      "stars": 148459,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (low-code, visual — product suite)",
+      "license_signal": "open-source",
+      "tags": [
+        "low-code",
+        "python"
+      ],
+      "example": {
+        "label": "Chat with RAG flow",
+        "url": "https://github.com/langflow-ai/langflow/blob/main/docs/docs/Tutorials/chat-with-rag.mdx"
+      }
+    },
+    {
+      "name": "Dify",
+      "github_id": "langgenius/dify",
+      "url": "https://github.com/langgenius/dify",
+      "description": "One-stop LLM app platform: visual workflows, RAG pipeline, 50+ tools, model management; \"ship from prototype to prod\" in a single UI.",
+      "category": "frameworks",
+      "category_title": "Frameworks",
+      "stars": 141806,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (one-stop platform — product suite)",
+      "license_signal": "restricted (Fair-code)",
+      "tags": [
+        "low-code",
+        "rag",
+        "python"
+      ],
+      "example": {
+        "label": "Customer-service bot",
+        "url": "https://github.com/langgenius/dify-docs/blob/main/en/use-dify/tutorials/customer-service-bot.mdx"
+      }
+    },
+    {
+      "name": "langchain",
+      "github_id": "langchain-ai/langchain",
+      "url": "https://github.com/langchain-ai/langchain",
+      "description": "Chains, tools, retrievers, and agents; the usual entry point for \"add tools to an LLM\" in Python/JS.",
+      "category": "frameworks",
+      "category_title": "Frameworks",
+      "stars": 137048,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (kitchen-sink ecosystem — product suite)",
+      "license_signal": "open-source",
+      "tags": [
+        "python"
+      ],
+      "example": {
+        "label": "Build an agent notebook",
+        "url": "https://github.com/langchain-ai/langchain-academy/blob/main/module-1/agent.ipynb"
+      }
+    },
+    {
+      "name": "browser-use",
+      "github_id": "browser-use/browser-use",
+      "url": "https://github.com/browser-use/browser-use",
+      "description": "Python layer over Playwright: natural-language goals become browser actions—web-agent loop without hand-rolling MCP or a custom driver for every site.",
+      "category": "frameworks",
+      "category_title": "Frameworks",
+      "stars": 94517,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (LLM + browser, Playwright)",
+      "license_signal": "open-source",
+      "tags": [
+        "mcp",
+        "browser",
+        "python"
+      ],
+      "example": {
+        "label": "Grocery shopping agent",
+        "url": "https://github.com/browser-use/browser-use/blob/main/examples/use-cases/shopping.py"
+      }
+    },
+    {
+      "name": "Flowise",
+      "github_id": "FlowiseAI/Flowise",
+      "url": "https://github.com/FlowiseAI/Flowise",
+      "description": "Drag-and-drop LangChain UI; deploy flows without code. The low-code sibling to Langflow, with a different component and hosting story.",
+      "category": "frameworks",
+      "category_title": "Frameworks",
+      "stars": 52919,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (low-code, drag-drop — product suite)",
+      "license_signal": "restricted (Apache+CLA)",
+      "tags": [
+        "low-code",
+        "typescript"
+      ],
+      "example": {
+        "label": "Agentic RAG flow",
+        "url": "https://github.com/FlowiseAI/Flowise/blob/main/packages/server/marketplaces/agentflowsv2/Agentic%20RAG.json"
+      }
+    },
+    {
+      "name": "llama-index",
+      "github_id": "run-llama/llama_index",
+      "url": "https://github.com/run-llama/llama_index",
+      "description": "Data-centric: indexing, RAG, and query engines; agent abstractions sit on top of your data pipelines.",
+      "category": "frameworks",
+      "category_title": "Frameworks",
+      "stars": 49495,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (RAG + agents — product suite)",
+      "license_signal": "open-source",
+      "tags": [
+        "rag",
+        "python"
+      ],
+      "example": {
+        "label": "Research assistant workflow",
+        "url": "https://github.com/run-llama/llama_index/blob/main/docs/examples/agent/agent_workflow_research_assistant.ipynb"
+      }
+    },
+    {
+      "name": "agno",
+      "github_id": "agno-agi/agno",
+      "url": "https://github.com/agno-agi/agno",
+      "description": "Python agents with memory, knowledge bases, tools, and structured outputs; continues the PhiData-era product line under the Agno name—production apps, evals, and pipelines.",
+      "category": "frameworks",
+      "category_title": "Frameworks",
+      "stars": 40187,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (memory, KB, observability — product suite)",
+      "license_signal": "open-source",
+      "tags": [
+        "memory",
+        "evals",
+        "python"
+      ],
+      "example": {
+        "label": "Agent with tools",
+        "url": "https://github.com/agno-agi/agno/blob/main/cookbook/02_agents/01_quickstart/agent_with_tools.py"
+      }
+    },
+    {
+      "name": "langgraph",
+      "github_id": "langchain-ai/langgraph",
+      "url": "https://github.com/langchain-ai/langgraph",
+      "description": "State-machine graphs over LLM steps; checkpointing, human-in-the-loop, and durable execution so workflows survive restarts.",
+      "category": "frameworks",
+      "category_title": "Frameworks",
+      "stars": 32357,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (graphs, checkpointing, durable exec)",
+      "license_signal": "open-source",
+      "tags": [
+        "workflow",
+        "python"
+      ],
+      "example": {
+        "label": "Customer support agent",
+        "url": "https://github.com/langchain-ai/langgraph/blob/main/examples/customer-support/customer-support.ipynb"
+      }
+    },
+    {
+      "name": "semantic-kernel",
+      "github_id": "microsoft/semantic-kernel",
+      "url": "https://github.com/microsoft/semantic-kernel",
+      "description": "Microsoft's plugin and planner layer for LLMs; C#, Python, Java; strong on enterprise auth and orchestration.",
+      "category": "frameworks",
+      "category_title": "Frameworks",
+      "stars": 27933,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (enterprise, multi-language — product suite)",
+      "license_signal": "open-source",
+      "tags": [
+        "python"
+      ],
+      "example": {
+        "label": "Chat completion agent",
+        "url": "https://github.com/microsoft/semantic-kernel/blob/main/python/samples/getting_started_with_agents/chat_completion/step01_chat_completion_agent_simple.py"
+      }
+    },
+    {
+      "name": "mastra",
+      "github_id": "mastra-ai/mastra",
+      "url": "https://github.com/mastra-ai/mastra",
+      "description": "TypeScript-first; agents, tools, and workflows with a single runtime and minimal boilerplate.",
+      "category": "frameworks",
+      "category_title": "Frameworks",
+      "stars": 24010,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (TS-first, minimal boilerplate)",
+      "license_signal": "restricted (Elastic-2.0)",
+      "tags": [
+        "typed",
+        "typescript"
+      ],
+      "example": {
+        "label": "Durable research agent",
+        "url": "https://github.com/mastra-ai/mastra/tree/main/examples/durable-agents"
+      }
+    },
+    {
+      "name": "letta",
+      "github_id": "letta-ai/letta",
+      "url": "https://github.com/letta-ai/letta",
+      "description": "Python agent runtime with tool use and control flow; lean API; stateful agents with long-horizon memory.",
+      "category": "frameworks",
+      "category_title": "Frameworks",
+      "stars": 22791,
+      "tier": "mostly simple",
+      "tier_rank": 2,
+      "axis": "mostly simple (lean API)",
+      "license_signal": "open-source",
+      "tags": [
+        "memory",
+        "python"
+      ],
+      "example": {
+        "label": "Loop .af agent file",
+        "url": "https://github.com/letta-ai/agent-file/tree/main/agents/%40letta-ai/loop"
+      }
+    },
+    {
+      "name": "rasa",
+      "github_id": "RasaHQ/rasa",
+      "url": "https://github.com/RasaHQ/rasa",
+      "description": "Conversational AI stack (NLU, dialogue, actions); long-standing OSS choice for chat and voice bots.",
+      "category": "frameworks",
+      "category_title": "Frameworks",
+      "stars": 21172,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (full stack — product suite)",
+      "license_signal": "open-source",
+      "tags": [
+        "voice",
+        "python"
+      ],
+      "example": {
+        "label": "Sara conversational demo",
+        "url": "https://github.com/RasaHQ/rasa-demo"
+      }
+    },
+    {
+      "name": "Google ADK",
+      "github_id": "google/adk-python",
+      "url": "https://github.com/google/adk-python",
+      "description": "Google's official Agent Development Kit: code-first Python toolkit for building, evaluating, and deploying agents. Optimized for Gemini but model-agnostic; deploys to Cloud Run / Vertex AI; ships a dev UI with eval and a code-execution sandbox.",
+      "category": "frameworks",
+      "category_title": "Frameworks",
+      "stars": 19706,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (official Google SDK, eval, deploy — product suite)",
+      "license_signal": "open-source",
+      "tags": [
+        "evals",
+        "sandbox",
+        "python"
+      ],
+      "example": {
+        "label": "Travel concierge agent",
+        "url": "https://github.com/google/adk-samples/tree/main/python/agents/travel-concierge"
+      }
+    },
+    {
+      "name": "botpress",
+      "github_id": "botpress/botpress",
+      "url": "https://github.com/botpress/botpress",
+      "description": "Visual bot builder and runtime; multi-channel, open-source alternative to commercial bot platforms.",
+      "category": "frameworks",
+      "category_title": "Frameworks",
+      "stars": 14697,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (visual builder, multi-channel — product suite)",
+      "license_signal": "open-source",
+      "tags": [
+        "low-code",
+        "typescript"
+      ],
+      "example": {
+        "label": "Inter-bot delegation",
+        "url": "https://github.com/botpress/v12/tree/master/examples/interbot"
+      }
+    },
+    {
+      "name": "R2R",
+      "github_id": "SciPhi-AI/R2R",
+      "url": "https://github.com/SciPhi-AI/R2R",
+      "description": "RAG-first: hybrid search, knowledge graphs, multimodal; the framework for \"production RAG\" when you care more about retrieval than chat UI.",
+      "category": "frameworks",
+      "category_title": "Frameworks",
+      "stars": 7837,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (production RAG — product suite)",
+      "license_signal": "open-source",
+      "tags": [
+        "vision",
+        "rag",
+        "workflow",
+        "python"
+      ],
+      "example": {
+        "label": "hello_r2r RAG example",
+        "url": "https://github.com/SciPhi-AI/R2R/blob/main/py/core/examples/hello_r2r.py"
+      }
+    },
+    {
+      "name": "agent-squad",
+      "github_id": "2FastLabs/agent-squad",
+      "url": "https://github.com/2FastLabs/agent-squad",
+      "description": "AWS-originated orchestrator (now under 2FastLabs): intent classification, streaming, SupervisorAgent; \"agent-as-tools\" so one agent delegates to a squad.",
+      "category": "frameworks",
+      "category_title": "Frameworks",
+      "stars": 7630,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (squad orchestration)",
+      "license_signal": "open-source",
+      "tags": [
+        "multi-agent"
+      ],
+      "example": {
+        "label": "E-commerce support sim",
+        "url": "https://github.com/2FastLabs/agent-squad/tree/main/examples/ecommerce-support-simulator"
+      }
+    },
+    {
+      "name": "AgentVerse",
+      "github_id": "OpenBMB/AgentVerse",
+      "url": "https://github.com/OpenBMB/AgentVerse",
+      "description": "Task-solving and simulation envs for multi-LLM agents; deploy many agents in custom environments without building infra from scratch.",
+      "category": "frameworks",
+      "category_title": "Frameworks",
+      "stars": 5038,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (simulation envs, multi-agent — product suite)",
+      "license_signal": "open-source",
+      "tags": [
+        "multi-agent",
+        "python"
+      ],
+      "example": {
+        "label": "NLP classroom sim",
+        "url": "https://github.com/OpenBMB/AgentVerse/blob/main/agentverse/tasks/simulation/nlp_classroom_9players/config.yaml"
+      }
+    },
+    {
+      "name": "Bee Agent Framework",
+      "github_id": "i-am-bee/beeai-framework",
+      "url": "https://github.com/i-am-bee/beeai-framework",
+      "description": "Python + TypeScript, LF AI–backed; MCP/ACP, workflows, Requirement Agent; the one that pushes \"production multi-agent\" without LangChain.",
+      "category": "frameworks",
+      "category_title": "Frameworks",
+      "stars": 3259,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (production multi-agent — product suite)",
+      "license_signal": "open-source",
+      "tags": [
+        "mcp",
+        "multi-agent",
+        "python",
+        "typescript"
+      ],
+      "example": {
+        "label": "ReAct agent example",
+        "url": "https://github.com/i-am-bee/beeai-framework/blob/main/python/examples/agents/react.py"
+      }
+    },
+    {
+      "name": "AgentStack",
+      "github_id": "agentstack-ai/AgentStack",
+      "url": "https://github.com/agentstack-ai/AgentStack",
+      "description": "Scaffolds full agent projects; plugs in CrewAI, LangGraph, OpenAI Swarm, LlamaStack and wires AgentOps observability from day one.",
+      "category": "frameworks",
+      "category_title": "Frameworks",
+      "stars": 2154,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (scaffold, multi-backend)",
+      "license_signal": "open-source",
+      "tags": [],
+      "example": {
+        "label": "Research assistant crew",
+        "url": "https://github.com/agentstack-ai/AgentStack/tree/main/examples/research_assistant"
+      }
+    },
+    {
+      "name": "AIlice",
+      "github_id": "myshell-ai/AIlice",
+      "url": "https://github.com/myshell-ai/AIlice",
+      "description": "Fully autonomous general-purpose agent; one binary, Docker-ready, for when you want \"set goal and walk away\" without a framework.",
+      "category": "frameworks",
+      "category_title": "Frameworks",
+      "stars": 1409,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (autonomous, one binary)",
+      "license_signal": "open-source",
+      "tags": [
+        "sandbox",
+        "python"
+      ],
+      "example": {
+        "label": "Task showcase",
+        "url": "https://github.com/myshell-ai/AIlice#cool-things-we-can-do"
+      }
+    },
+    {
+      "name": "AgentSilex",
+      "github_id": "howl-anderson/agentsilex",
+      "url": "https://github.com/howl-anderson/agentsilex",
+      "description": "~300 lines of readable agent code on top of LiteLLM; the \"I want to see the whole loop\" option for learning or minimal production.",
+      "category": "frameworks",
+      "category_title": "Frameworks",
+      "stars": 450,
+      "tier": "super simple",
+      "tier_rank": 1,
+      "axis": "super simple (~300 LOC)",
+      "license_signal": "open-source",
+      "tags": [
+        "python"
+      ],
+      "example": {
+        "label": "Simple weather agent",
+        "url": "https://github.com/howl-anderson/agentsilex/blob/main/demo/simple_agent.py"
+      }
+    },
+    {
+      "name": "SuperAgentX",
+      "github_id": "superagentxai/superagentx",
+      "url": "https://github.com/superagentxai/superagentx",
+      "description": "Lightweight multi-agent orchestrator with an AGI-angle; minimal surface, docs-first, for teams that want orchestration without the kitchen sink.",
+      "category": "frameworks",
+      "category_title": "Frameworks",
+      "stars": 195,
+      "tier": "mostly simple",
+      "tier_rank": 2,
+      "axis": "mostly simple (minimal surface)",
+      "license_signal": "open-source",
+      "tags": [
+        "multi-agent",
+        "python"
+      ],
+      "example": {
+        "label": "Parallel marketing agents",
+        "url": "https://github.com/superagentxai/superagentx/blob/master/examples/agents/parallel_agents.py"
+      }
+    },
+    {
+      "name": "autogen",
+      "github_id": "microsoft/autogen",
+      "url": "https://github.com/microsoft/autogen",
+      "description": "Conversable agents and group chats; code execution and human-in-the-loop; Microsoft origin, AG2 ecosystem.",
+      "category": "multi-agent",
+      "category_title": "Multi-agent and orchestration",
+      "stars": 58149,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (group chat, code exec, AG2 — product suite)",
+      "license_signal": "open-source",
+      "tags": [
+        "multi-agent",
+        "python"
+      ],
+      "example": {
+        "label": "Distributed group chat",
+        "url": "https://github.com/microsoft/autogen/tree/main/python/samples/core_distributed-group-chat"
+      }
+    },
+    {
+      "name": "crewAI",
+      "github_id": "crewAIInc/crewAI",
+      "url": "https://github.com/crewAIInc/crewAI",
+      "description": "Role-based agents (roles, goals, backstories) in Crews; Flows add event-driven and hierarchical control for production.",
+      "category": "multi-agent",
+      "category_title": "Multi-agent and orchestration",
+      "stars": 51670,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (roles, Flows, production — product suite)",
+      "license_signal": "open-source",
+      "tags": [
+        "python"
+      ],
+      "example": {
+        "label": "Trip planner crew",
+        "url": "https://github.com/crewAIInc/crewAI-examples/blob/main/crews/trip_planner/trip_agents.py"
+      }
+    },
+    {
+      "name": "openai-agents-python",
+      "github_id": "openai/openai-agents-python",
+      "url": "https://github.com/openai/openai-agents-python",
+      "description": "Handoffs, guardrails, and multi-LLM routing; minimal surface so you own the loop.",
+      "category": "multi-agent",
+      "category_title": "Multi-agent and orchestration",
+      "stars": 26440,
+      "tier": "mostly simple",
+      "tier_rank": 2,
+      "axis": "mostly simple (minimal surface)",
+      "license_signal": "open-source",
+      "tags": [
+        "python"
+      ],
+      "example": {
+        "label": "Airline customer service handoffs",
+        "url": "https://github.com/openai/openai-agents-python/blob/main/examples/customer_service/main.py"
+      }
+    },
+    {
+      "name": "PraisonAI",
+      "github_id": "MervinPraison/PraisonAI",
+      "url": "https://github.com/MervinPraison/PraisonAI",
+      "description": "Autonomous multi-agent teams with a single entry point; emphasis on minimal config.",
+      "category": "multi-agent",
+      "category_title": "Multi-agent and orchestration",
+      "stars": 7823,
+      "tier": "mostly simple",
+      "tier_rank": 2,
+      "axis": "mostly simple (single entry, minimal config)",
+      "license_signal": "open-source",
+      "tags": [
+        "multi-agent",
+        "python"
+      ],
+      "example": {
+        "label": "Orchestrator-workers pattern",
+        "url": "https://github.com/MervinPraison/PraisonAI/blob/main/examples/python/general/orchestrator-workers.py"
+      }
+    },
+    {
+      "name": "AgentRL",
+      "github_id": "THUDM/AgentRL",
+      "url": "https://github.com/THUDM/AgentRL",
+      "description": "Multitask, multiturn RL for LLM agents; Ray-based scaling, rollout/actor workers—for teams that want to train agents, not just run them.",
+      "category": "multi-agent",
+      "category_title": "Multi-agent and orchestration",
+      "stars": 286,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (RL, Ray, train agents — product suite)",
+      "license_signal": "open-source",
+      "tags": [
+        "training",
+        "python"
+      ],
+      "example": {
+        "label": "Async GRPO trainer",
+        "url": "https://github.com/THUDM/AgentRL/blob/main/examples/training/async_trainer.py"
+      }
+    },
+    {
+      "name": "claude-mem",
+      "github_id": "thedotmack/claude-mem",
+      "url": "https://github.com/thedotmack/claude-mem",
+      "description": "Claude Code plugin that captures everything an agent does during a session, AI-compresses it (via claude-agent-sdk), and injects the relevant context into future sessions—session-to-session memory as a drop-in.",
+      "category": "plugins-mcp-cli",
+      "category_title": "Plugins, MCPs, CLI tools",
+      "stars": 76591,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (session capture + compression)",
+      "license_signal": "open-source",
+      "tags": [
+        "memory"
+      ],
+      "example": {
+        "label": "Lifecycle hooks config",
+        "url": "https://github.com/thedotmack/claude-mem/blob/main/plugin/hooks/hooks.json"
+      }
+    },
+    {
+      "name": "aider",
+      "github_id": "Aider-AI/aider",
+      "url": "https://github.com/Aider-AI/aider",
+      "description": "Git-aware CLI pair programmer; edits in-repo, supports multiple models and MCP so agents see version control and tools.",
+      "category": "plugins-mcp-cli",
+      "category_title": "Plugins, MCPs, CLI tools",
+      "stars": 44989,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (CLI, git-aware, MCP)",
+      "license_signal": "open-source",
+      "tags": [
+        "mcp",
+        "cli",
+        "python"
+      ],
+      "example": {
+        "label": "Repo map source",
+        "url": "https://github.com/Aider-AI/aider/blob/main/aider/repomap.py"
+      }
+    },
+    {
+      "name": "continue",
+      "github_id": "continuedev/continue",
+      "url": "https://github.com/continuedev/continue",
+      "description": "Open-source IDE extension (VS Code, JetBrains); in-editor completion and chat with local or API models.",
+      "category": "plugins-mcp-cli",
+      "category_title": "Plugins, MCPs, CLI tools",
+      "stars": 33257,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (IDE extension, multi-editor — product suite)",
+      "license_signal": "open-source",
+      "tags": [
+        "ide",
+        "typescript"
+      ],
+      "example": {
+        "label": "VS Code extension demos",
+        "url": "https://github.com/continuedev/continue/blob/main/extensions/vscode/README.md"
+      }
+    },
+    {
+      "name": "github-mcp-server",
+      "github_id": "github/github-mcp-server",
+      "url": "https://github.com/github/github-mcp-server",
+      "description": "GitHub's official MCP server (Go): repos, issues, PRs, code search, Actions. Replaces the older community `cyanheads/github-mcp-server` as the canonical way to give agents GitHub access.",
+      "category": "plugins-mcp-cli",
+      "category_title": "Plugins, MCPs, CLI tools",
+      "stars": 29957,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (official GitHub MCP)",
+      "license_signal": "open-source",
+      "tags": [
+        "mcp"
+      ],
+      "example": {
+        "label": "Remote server toolsets",
+        "url": "https://github.com/github/github-mcp-server/blob/main/docs/remote-server.md"
+      }
+    },
+    {
+      "name": "MCP Python SDK",
+      "github_id": "modelcontextprotocol/python-sdk",
+      "url": "https://github.com/modelcontextprotocol/python-sdk",
+      "description": "Official SDK to build and consume MCP servers/clients in Python; stdio and SSE transports.",
+      "category": "plugins-mcp-cli",
+      "category_title": "Plugins, MCPs, CLI tools",
+      "stars": 23053,
+      "tier": "mostly simple",
+      "tier_rank": 2,
+      "axis": "mostly simple (SDK only)",
+      "license_signal": "open-source",
+      "tags": [
+        "mcp",
+        "python"
+      ],
+      "example": {
+        "label": "Website fetcher server",
+        "url": "https://github.com/modelcontextprotocol/python-sdk/blob/main/examples/servers/simple-tool/mcp_simple_tool/server.py"
+      }
+    },
+    {
+      "name": "MCP TypeScript SDK",
+      "github_id": "modelcontextprotocol/typescript-sdk",
+      "url": "https://github.com/modelcontextprotocol/typescript-sdk",
+      "description": "Official MCP implementation for Node/TS; reference for the protocol.",
+      "category": "plugins-mcp-cli",
+      "category_title": "Plugins, MCPs, CLI tools",
+      "stars": 12460,
+      "tier": "mostly simple",
+      "tier_rank": 2,
+      "axis": "mostly simple (protocol reference)",
+      "license_signal": "open-source",
+      "tags": [
+        "mcp",
+        "typescript"
+      ],
+      "example": {
+        "label": "Streamable HTTP server",
+        "url": "https://github.com/modelcontextprotocol/typescript-sdk/blob/main/examples/server/src/simpleStreamableHttp.ts"
+      }
+    },
+    {
+      "name": "MCP Inspector",
+      "github_id": "modelcontextprotocol/inspector",
+      "url": "https://github.com/modelcontextprotocol/inspector",
+      "description": "GUI to test and debug MCP servers; inspect tools, resources, and prompts.",
+      "category": "plugins-mcp-cli",
+      "category_title": "Plugins, MCPs, CLI tools",
+      "stars": 9799,
+      "tier": "super simple",
+      "tier_rank": 1,
+      "axis": "super simple (debug GUI)",
+      "license_signal": "open-source",
+      "tags": [
+        "mcp",
+        "typescript"
+      ],
+      "example": {
+        "label": "Inspector UI walkthrough",
+        "url": "https://github.com/modelcontextprotocol/inspector/blob/main/README.md"
+      }
+    },
+    {
+      "name": "MCP Registry",
+      "github_id": "modelcontextprotocol/registry",
+      "url": "https://github.com/modelcontextprotocol/registry",
+      "description": "Official, community-driven registry for MCP servers—the \"app store\" MCP clients use to discover servers. Maintained by Anthropic + ecosystem maintainers; v0.1 API frozen, production-grade.",
+      "category": "plugins-mcp-cli",
+      "category_title": "Plugins, MCPs, CLI tools",
+      "stars": 6830,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (official discovery layer)",
+      "license_signal": "open-source",
+      "tags": [
+        "mcp"
+      ],
+      "example": {
+        "label": "Registry seed entries",
+        "url": "https://github.com/modelcontextprotocol/registry/blob/main/data/seed.json"
+      }
+    },
+    {
+      "name": "Docker MCP Gateway",
+      "github_id": "docker/mcp-gateway",
+      "url": "https://github.com/docker/mcp-gateway",
+      "description": "Docker's official MCP CLI plugin / gateway; container-aware MCP tooling from Docker (replaces deprecated `docker/mcp-servers` path).",
+      "category": "plugins-mcp-cli",
+      "category_title": "Plugins, MCPs, CLI tools",
+      "stars": 1394,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (Docker-aware MCPs)",
+      "license_signal": "open-source",
+      "tags": [
+        "mcp",
+        "sandbox",
+        "cli"
+      ],
+      "example": {
+        "label": "Gateway usage walkthrough",
+        "url": "https://github.com/docker/mcp-gateway/blob/main/docs/mcp-gateway.md"
+      }
+    },
+    {
+      "name": "puppeteer-real-browser-mcp",
+      "github_id": "withLinda/puppeteer-real-browser-mcp-server",
+      "url": "https://github.com/withLinda/puppeteer-real-browser-mcp-server",
+      "description": "Puppeteer MCP with real-browser and anti-detection; for agents that need to drive sites that block headless.",
+      "category": "plugins-mcp-cli",
+      "category_title": "Plugins, MCPs, CLI tools",
+      "stars": 22,
+      "tier": "mostly simple",
+      "tier_rank": 2,
+      "axis": "mostly simple (real browser, anti-detect)",
+      "license_signal": "unknown",
+      "tags": [
+        "mcp",
+        "browser",
+        "typescript"
+      ],
+      "example": {
+        "label": "11 anti-detection tools",
+        "url": "https://github.com/withLinda/puppeteer-real-browser-mcp-server/blob/main/README.md"
+      }
+    },
+    {
+      "name": "Better-OpenCodeMCP",
+      "github_id": "ajhcs/Better-OpenCodeMCP",
+      "url": "https://github.com/ajhcs/Better-OpenCodeMCP",
+      "description": "MCP server for OpenCode/Crush: async task execution, model bridging (e.g. Claude→Gemini), process pooling.",
+      "category": "plugins-mcp-cli",
+      "category_title": "Plugins, MCPs, CLI tools",
+      "stars": 6,
+      "tier": "mostly simple",
+      "tier_rank": 2,
+      "axis": "mostly simple (MCP server, model bridging)",
+      "license_signal": "open-source",
+      "tags": [
+        "mcp",
+        "typescript"
+      ],
+      "example": {
+        "label": "opencode delegate tool",
+        "url": "https://github.com/ajhcs/Better-OpenCodeMCP/blob/main/src/tools/opencode.tool.ts"
+      }
+    },
+    {
+      "name": "agentlog",
+      "github_id": "RyanAlberts/agentlog",
+      "url": "https://github.com/RyanAlberts/agentlog",
+      "description": "Persistent decision memory for any project: `remember`, `recall`, `reflect`. Single-file Python CLI that stores decisions as JSONL and uses Claude or Gemini to retrieve and synthesize patterns—Karpathy's LLM Wiki concept as a CLI.",
+      "category": "plugins-mcp-cli",
+      "category_title": "Plugins, MCPs, CLI tools",
+      "stars": 0,
+      "tier": "super simple",
+      "tier_rank": 1,
+      "axis": "super simple (one file, three commands)",
+      "license_signal": "open-source",
+      "tags": [
+        "memory",
+        "cli",
+        "python"
+      ],
+      "example": {
+        "label": "Sample decisions.jsonl",
+        "url": "https://github.com/RyanAlberts/agentlog/blob/main/example-log/decisions.jsonl"
+      }
+    },
+    {
+      "name": "Agent Lightning",
+      "github_id": "microsoft/agent-lightning",
+      "url": "https://github.com/microsoft/agent-lightning",
+      "description": "Microsoft's training-oriented harness: optimization loops for agent behavior—when you need to improve policies over rollouts, not only score a fixed prompt.",
+      "category": "evaluation",
+      "category_title": "Evaluation and benchmarking harnesses",
+      "stars": 17193,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (agent training, Microsoft stack — product suite)",
+      "license_signal": "open-source",
+      "tags": [
+        "evals",
+        "training",
+        "python"
+      ],
+      "example": {
+        "label": "APO room-booking example",
+        "url": "https://github.com/microsoft/agent-lightning/blob/main/examples/apo/README.md"
+      }
+    },
+    {
+      "name": "SWE-bench",
+      "github_id": "SWE-bench/SWE-bench",
+      "url": "https://github.com/SWE-bench/SWE-bench",
+      "description": "LMs resolve real GitHub issues; Docker harness, instance IDs; standard for code-agent evals.",
+      "category": "evaluation",
+      "category_title": "Evaluation and benchmarking harnesses",
+      "stars": 4968,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (real GitHub issues, standard)",
+      "license_signal": "open-source",
+      "tags": [
+        "evals",
+        "sandbox",
+        "python"
+      ],
+      "example": {
+        "label": "SWE-bench Verified leaderboard",
+        "url": "https://www.swebench.com/verified.html"
+      }
+    },
+    {
+      "name": "AgentBench",
+      "github_id": "THUDM/AgentBench",
+      "url": "https://github.com/THUDM/AgentBench",
+      "description": "ICLR'24 benchmark: agents across AlfWorld, DB, knowledge graphs, OS, webshop; Docker Compose, function-calling interface.",
+      "category": "evaluation",
+      "category_title": "Evaluation and benchmarking harnesses",
+      "stars": 3429,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (multi-env, Docker Compose — product suite)",
+      "license_signal": "open-source",
+      "tags": [
+        "evals",
+        "sandbox",
+        "rag",
+        "workflow",
+        "python"
+      ],
+      "example": {
+        "label": "AgentBench ICLR'24 paper",
+        "url": "https://arxiv.org/abs/2308.03688"
+      }
+    },
+    {
+      "name": "inspect_ai",
+      "github_id": "UKGovernmentBEIS/inspect_ai",
+      "url": "https://github.com/UKGovernmentBEIS/inspect_ai",
+      "description": "Inspect AI core: composable eval tasks, sandboxes, scorers, and multi-model runs; the framework behind inspect_evals, not just the task bundle.",
+      "category": "evaluation",
+      "category_title": "Evaluation and benchmarking harnesses",
+      "stars": 2076,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (eval framework, AISI stack — product suite)",
+      "license_signal": "open-source",
+      "tags": [
+        "evals",
+        "sandbox",
+        "python"
+      ],
+      "example": {
+        "label": "Inspect tutorial example",
+        "url": "https://inspect.aisi.org.uk/tutorial.html"
+      }
+    },
+    {
+      "name": "WebArena",
+      "github_id": "web-arena-x/webarena",
+      "url": "https://github.com/web-arena-x/webarena",
+      "description": "Realistic web env (e.g. e‑commerce, CMS, dev tools); 812 tasks; measures end-to-end web agent success.",
+      "category": "evaluation",
+      "category_title": "Evaluation and benchmarking harnesses",
+      "stars": 1475,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (812 tasks, web env — product suite)",
+      "license_signal": "open-source",
+      "tags": [
+        "python"
+      ],
+      "example": {
+        "label": "WebArena leaderboard",
+        "url": "https://docs.google.com/spreadsheets/d/1M801lEpBbKSNwP-vDBkC_pF7LdyGU1f_ufZb_NWNBZQ/edit"
+      }
+    },
+    {
+      "name": "WebVoyager",
+      "github_id": "MinorJerry/WebVoyager",
+      "url": "https://github.com/MinorJerry/WebVoyager",
+      "description": "End-to-end web agent with LMMs: screenshots + actions on real sites; benchmark on 15 sites, GPT-4V for automatic eval.",
+      "category": "evaluation",
+      "category_title": "Evaluation and benchmarking harnesses",
+      "stars": 1087,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (LMMs, screenshots, 15 sites)",
+      "license_signal": "open-source",
+      "tags": [
+        "evals",
+        "vision"
+      ],
+      "example": {
+        "label": "643 web tasks dataset",
+        "url": "https://github.com/MinorJerry/WebVoyager/blob/main/data/WebVoyager_data.jsonl"
+      }
+    },
+    {
+      "name": "ARC-AGI-2",
+      "github_id": "arcprize/ARC-AGI-2",
+      "url": "https://github.com/arcprize/ARC-AGI-2",
+      "description": "ARC Prize task set: grid-based abstraction/reasoning; public and private splits for generalization.",
+      "category": "evaluation",
+      "category_title": "Evaluation and benchmarking harnesses",
+      "stars": 700,
+      "tier": "super simple",
+      "tier_rank": 1,
+      "axis": "super simple (task set)",
+      "license_signal": "open-source",
+      "tags": [],
+      "example": {
+        "label": "ARC Prize leaderboard",
+        "url": "https://arcprize.org/leaderboard"
+      }
+    },
+    {
+      "name": "SWE-Gym",
+      "github_id": "SWE-Gym/SWE-Gym",
+      "url": "https://github.com/SWE-Gym/SWE-Gym",
+      "description": "Training and evaluation for SWE agents and verifiers (ICML 2025).",
+      "category": "evaluation",
+      "category_title": "Evaluation and benchmarking harnesses",
+      "stars": 678,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (training + eval, ICML)",
+      "license_signal": "open-source",
+      "tags": [
+        "evals",
+        "training",
+        "python"
+      ],
+      "example": {
+        "label": "SWE-Gym ICML 2025 paper",
+        "url": "https://arxiv.org/abs/2412.21139"
+      }
+    },
+    {
+      "name": "swe-smith",
+      "github_id": "SWE-bench/SWE-smith",
+      "url": "https://github.com/SWE-bench/SWE-smith",
+      "description": "Data generation for SWE agents; 50k+ instances across 128 repos; used for SWE-agent-LM training.",
+      "category": "evaluation",
+      "category_title": "Evaluation and benchmarking harnesses",
+      "stars": 649,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (50k+ instances, data gen)",
+      "license_signal": "open-source",
+      "tags": [
+        "training",
+        "python"
+      ],
+      "example": {
+        "label": "SWE-smith trajectories",
+        "url": "https://huggingface.co/datasets/SWE-bench/SWE-smith-trajectories"
+      }
+    },
+    {
+      "name": "inspect_evals",
+      "github_id": "UKGovernmentBEIS/inspect_evals",
+      "url": "https://github.com/UKGovernmentBEIS/inspect_evals",
+      "description": "UK AISI/Arcadia/Vector: GAIA and other evals in Inspect AI; level 1–3, sandboxed, tool-calling solvers.",
+      "category": "evaluation",
+      "category_title": "Evaluation and benchmarking harnesses",
+      "stars": 500,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (Inspect AI, UK gov)",
+      "license_signal": "open-source",
+      "tags": [
+        "evals",
+        "sandbox"
+      ],
+      "example": {
+        "label": "inspect SWE-bench eval",
+        "url": "https://github.com/UKGovernmentBEIS/inspect_evals/blob/main/src/inspect_evals/swe_bench/README.md"
+      }
+    },
+    {
+      "name": "arc-agi-benchmarking",
+      "github_id": "arcprize/arc-agi-benchmarking",
+      "url": "https://github.com/arcprize/arc-agi-benchmarking",
+      "description": "Runner for ARC-AGI: multi-provider (OpenAI, Anthropic, Gemini, etc.), rate limits, retries, and scoring.",
+      "category": "evaluation",
+      "category_title": "Evaluation and benchmarking harnesses",
+      "stars": 350,
+      "tier": "mostly simple",
+      "tier_rank": 2,
+      "axis": "mostly simple (runner, multi-provider)",
+      "license_signal": "open-source",
+      "tags": [
+        "evals",
+        "provider-agnostic",
+        "python"
+      ],
+      "example": {
+        "label": "o3 prompt example",
+        "url": "https://github.com/arcprize/arc-agi-benchmarking/blob/main/docs/examples/prompt_example_o3.md"
+      }
+    },
+    {
+      "name": "VitaBench",
+      "github_id": "meituan-longcat/vitabench",
+      "url": "https://github.com/meituan-longcat/vitabench",
+      "description": "ICLR'26: 66 tools, real-world apps (delivery, travel, retail); 100 cross-scenario + 300 single-scenario tasks; adopted by Qwen/Seed.",
+      "category": "evaluation",
+      "category_title": "Evaluation and benchmarking harnesses",
+      "stars": 132,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (66 tools, cross-scenario — product suite)",
+      "license_signal": "open-source",
+      "tags": [],
+      "example": {
+        "label": "VitaBench paper",
+        "url": "https://arxiv.org/abs/2509.26490"
+      }
+    },
+    {
+      "name": "AgencyBench",
+      "github_id": "GAIR-NLP/AgencyBench",
+      "url": "https://github.com/GAIR-NLP/AgencyBench",
+      "description": "Long-horizon agent benchmark: 32 scenarios, 138 tasks, ~1M tokens and ~90 tool calls; Docker sandbox and rubric-based + LLM judges.",
+      "category": "evaluation",
+      "category_title": "Evaluation and benchmarking harnesses",
+      "stars": 84,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (32 scenarios, Docker, judges — product suite)",
+      "license_signal": "open-source",
+      "tags": [
+        "evals",
+        "sandbox",
+        "python"
+      ],
+      "example": {
+        "label": "AgencyBench leaderboard",
+        "url": "https://github.com/GAIR-NLP/AgencyBench#leaderboard"
+      }
+    },
+    {
+      "name": "letta-evals",
+      "github_id": "letta-ai/letta-evals",
+      "url": "https://github.com/letta-ai/letta-evals",
+      "description": "Eval harness for stateful Letta agents; configurable suites and grading (LLM or rule-based) so you can measure what you ship.",
+      "category": "evaluation",
+      "category_title": "Evaluation and benchmarking harnesses",
+      "stars": 71,
+      "tier": "mostly simple",
+      "tier_rank": 2,
+      "axis": "mostly simple (Letta-specific harness)",
+      "license_signal": "open-source",
+      "tags": [
+        "memory",
+        "python"
+      ],
+      "example": {
+        "label": "LoCoMo memory benchmark",
+        "url": "https://github.com/letta-ai/letta-leaderboard/blob/main/leaderboard/locomo/locomo_benchmark.py"
+      }
+    },
+    {
+      "name": "SUPER",
+      "github_id": "allenai/super-benchmark",
+      "url": "https://github.com/allenai/super-benchmark",
+      "description": "Agents that set up and run ML/NLP from GitHub repos; 45 expert problems, 152 masked tasks, 602 AutoGen tasks; Docker-based.",
+      "category": "evaluation",
+      "category_title": "Evaluation and benchmarking harnesses",
+      "stars": 52,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (ML/NLP repos, Docker)",
+      "license_signal": "open-source",
+      "tags": [
+        "sandbox",
+        "python"
+      ],
+      "example": {
+        "label": "SUPER EMNLP paper",
+        "url": "https://arxiv.org/abs/2409.07440"
+      }
+    },
+    {
+      "name": "TRAIL",
+      "github_id": "patronus-ai/trail-benchmark",
+      "url": "https://github.com/patronus-ai/trail-benchmark",
+      "description": "Trace reasoning and agentic issue localization; 148 long-context traces, 841 errors, 20+ error types; Hugging Face dataset.",
+      "category": "evaluation",
+      "category_title": "Evaluation and benchmarking harnesses",
+      "stars": 18,
+      "tier": "mostly simple",
+      "tier_rank": 2,
+      "axis": "mostly simple (traces, Hugging Face)",
+      "license_signal": "open-source",
+      "tags": [],
+      "example": {
+        "label": "TRAIL dataset card",
+        "url": "https://huggingface.co/datasets/PatronusAI/TRAIL"
+      }
+    },
+    {
+      "name": "gpt-researcher",
+      "github_id": "assafelovic/gpt-researcher",
+      "url": "https://github.com/assafelovic/gpt-researcher",
+      "description": "Autonomous deep-research agent: web + local sources, citation-grounded reports, multi-agent and deep-research modes. The reference open-source research harness.",
+      "category": "research-task",
+      "category_title": "Research and task-specific harnesses",
+      "stars": 27131,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (deep research, multi-agent — product suite)",
+      "license_signal": "open-source",
+      "tags": [
+        "multi-agent",
+        "python"
+      ],
+      "example": {
+        "label": "Multi-agent LangGraph walkthrough",
+        "url": "https://github.com/assafelovic/gpt-researcher/blob/master/docs/blog/2024-05-19-gptr-langgraph/index.md"
+      }
+    },
+    {
+      "name": "openagents",
+      "github_id": "OpenAgentsInc/openagents",
+      "url": "https://github.com/OpenAgentsInc/openagents",
+      "description": "Platform for autonomous agents and autopilot-style workflows; decentralized/Nostr-oriented (Pylon runtime, actively shipped in 2026).",
+      "category": "research-task",
+      "category_title": "Research and task-specific harnesses",
+      "stars": 419,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (platform, decentralized — product suite)",
+      "license_signal": "open-source",
+      "tags": [],
+      "example": {
+        "label": "Production earning proof",
+        "url": "https://github.com/OpenAgentsInc/openagents/blob/main/docs/reports/nexus/2026-04-23-autopilot-pylon-production-earning-proof.md"
+      }
+    },
+    {
+      "name": "Daytona",
+      "github_id": "daytonaio/daytona",
+      "url": "https://github.com/daytonaio/daytona",
+      "description": "Elastic dev environments for AI-generated code: workspaces, Git, previews—infra harness between \"the model wrote a patch\" and \"it ran in a real machine.\"",
+      "category": "libraries-sdks",
+      "category_title": "Libraries and SDKs",
+      "stars": 72441,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (dev env API, isolation)",
+      "license_signal": "open-source",
+      "tags": [
+        "sandbox"
+      ],
+      "example": {
+        "label": "Charts in sandbox",
+        "url": "https://github.com/daytonaio/daytona/tree/main/examples/python/charts"
+      }
+    },
+    {
+      "name": "Mem0",
+      "github_id": "mem0ai/mem0",
+      "url": "https://github.com/mem0ai/mem0",
+      "description": "Universal memory layer for AI agents: stores user/org/session memory, retrieves on demand. Apache-2.0; the de-facto memory primitive paired with most harnesses in 2026.",
+      "category": "libraries-sdks",
+      "category_title": "Libraries and SDKs",
+      "stars": 56055,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (memory layer, multi-platform)",
+      "license_signal": "open-source",
+      "tags": [
+        "memory",
+        "python"
+      ],
+      "example": {
+        "label": "Next.js memory demo",
+        "url": "https://github.com/mem0ai/mem0/tree/main/examples/mem0-demo"
+      }
+    },
+    {
+      "name": "LiteLLM",
+      "github_id": "BerriAI/litellm",
+      "url": "https://github.com/BerriAI/litellm",
+      "description": "One interface to 100+ LLMs; routing, caching, budgets. Not an agent framework—the pipe every agent framework uses.",
+      "category": "libraries-sdks",
+      "category_title": "Libraries and SDKs",
+      "stars": 47469,
+      "tier": "mostly simple",
+      "tier_rank": 2,
+      "axis": "mostly simple (LLM pipe only)",
+      "license_signal": "open-source",
+      "tags": [
+        "provider-agnostic",
+        "python"
+      ],
+      "example": {
+        "label": "Anthropic Agent SDK gateway",
+        "url": "https://github.com/BerriAI/litellm/blob/main/cookbook/anthropic_agent_sdk/main.py"
+      }
+    },
+    {
+      "name": "Composio",
+      "github_id": "ComposioHQ/composio",
+      "url": "https://github.com/ComposioHQ/composio",
+      "description": "1,000+ toolkits with auth, tool search, and a sandboxed workbench—drop-in tool layer so agents stop reinventing OAuth + integrations. Python and TypeScript.",
+      "category": "libraries-sdks",
+      "category_title": "Libraries and SDKs",
+      "stars": 28328,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (1k+ tools, auth, search — product suite)",
+      "license_signal": "open-source",
+      "tags": [
+        "sandbox",
+        "tool-discovery",
+        "python",
+        "typescript"
+      ],
+      "example": {
+        "label": "HackerNews agent quickstart",
+        "url": "https://github.com/ComposioHQ/composio#quick-start"
+      }
+    },
+    {
+      "name": "smolagents",
+      "github_id": "huggingface/smolagents",
+      "url": "https://github.com/huggingface/smolagents",
+      "description": "Code-as-action agents: model outputs Python executed in sandbox (E2B, Modal, etc.); ~1k LOC core.",
+      "category": "libraries-sdks",
+      "category_title": "Libraries and SDKs",
+      "stars": 27377,
+      "tier": "mostly simple",
+      "tier_rank": 2,
+      "axis": "mostly simple (code-as-action, ~1k LOC)",
+      "license_signal": "open-source",
+      "tags": [
+        "sandbox",
+        "python"
+      ],
+      "example": {
+        "label": "RAG code agent",
+        "url": "https://github.com/huggingface/smolagents/blob/main/examples/rag.py"
+      }
+    },
+    {
+      "name": "vercel/ai",
+      "github_id": "vercel/ai",
+      "url": "https://github.com/vercel/ai",
+      "description": "React and Node SDK for streaming, tool calls, and agent-style UIs; provider-agnostic.",
+      "category": "libraries-sdks",
+      "category_title": "Libraries and SDKs",
+      "stars": 24315,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (React/Node SDK, provider-agnostic)",
+      "license_signal": "open-source",
+      "tags": [
+        "provider-agnostic",
+        "typescript"
+      ],
+      "example": {
+        "label": "Next.js agent example",
+        "url": "https://github.com/vercel/ai/tree/main/examples/next-agent"
+      }
+    },
+    {
+      "name": "deepagents",
+      "github_id": "langchain-ai/deepagents",
+      "url": "https://github.com/langchain-ai/deepagents",
+      "description": "LangChain's Python+TypeScript agent harness on top of LangGraph: planning tool, virtual filesystem, shell sandbox, sub-agent spawning—the \"Claude Code-style\" harness as a reusable library.",
+      "category": "libraries-sdks",
+      "category_title": "Libraries and SDKs",
+      "stars": 22954,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (planning, files, sub-agents)",
+      "license_signal": "open-source",
+      "tags": [
+        "multi-agent",
+        "sandbox",
+        "python",
+        "typescript"
+      ],
+      "example": {
+        "label": "Deep research agent",
+        "url": "https://github.com/langchain-ai/deepagents/tree/main/examples/deep_research"
+      }
+    },
+    {
+      "name": "pydantic-ai",
+      "github_id": "pydantic/pydantic-ai",
+      "url": "https://github.com/pydantic/pydantic-ai",
+      "description": "Type-safe Python agents with Pydantic I/O; multi-provider, MCP, Logfire observability, and human-in-the-loop.",
+      "category": "libraries-sdks",
+      "category_title": "Libraries and SDKs",
+      "stars": 17131,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (type-safe, MCP, Logfire)",
+      "license_signal": "open-source",
+      "tags": [
+        "mcp",
+        "typed",
+        "provider-agnostic",
+        "python"
+      ],
+      "example": {
+        "label": "Bank support agent",
+        "url": "https://github.com/pydantic/pydantic-ai/blob/main/examples/pydantic_ai_examples/bank_support.py"
+      }
+    },
+    {
+      "name": "E2B",
+      "github_id": "e2b-dev/E2B",
+      "url": "https://github.com/e2b-dev/E2B",
+      "description": "Firecracker sandboxes for executing agent-generated code; the hosted isolation layer many tool-calling demos use instead of running arbitrary LLM output on your laptop.",
+      "category": "libraries-sdks",
+      "category_title": "Libraries and SDKs",
+      "stars": 12238,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (sandbox API, code execution)",
+      "license_signal": "open-source",
+      "tags": [
+        "sandbox",
+        "python"
+      ],
+      "example": {
+        "label": "Claude Code in sandbox",
+        "url": "https://github.com/e2b-dev/e2b-cookbook/tree/main/examples/anthropic-claude-code-in-sandbox-python"
+      }
+    },
+    {
+      "name": "strands-agents",
+      "github_id": "strands-agents/sdk-python",
+      "url": "https://github.com/strands-agents/sdk-python",
+      "description": "Model-driven Python SDK; decorators for tools, native MCP, multi-agent; \"minimal code\" without sacrificing provider choice.",
+      "category": "libraries-sdks",
+      "category_title": "Libraries and SDKs",
+      "stars": 5884,
+      "tier": "mostly simple",
+      "tier_rank": 2,
+      "axis": "mostly simple (decorators, MCP, minimal code)",
+      "license_signal": "open-source",
+      "tags": [
+        "mcp",
+        "multi-agent",
+        "typed",
+        "python"
+      ],
+      "example": {
+        "label": "First agent tutorial",
+        "url": "https://github.com/strands-agents/samples/tree/main/python/01-learn/01-first-agent"
+      }
+    },
+    {
+      "name": "Cloudflare Agents",
+      "github_id": "cloudflare/agents",
+      "url": "https://github.com/cloudflare/agents",
+      "description": "Persistent, stateful agents on Durable Objects: state, websockets, scheduling, and AI chat baked in. The serverless answer to \"where does the agent live?\"",
+      "category": "libraries-sdks",
+      "category_title": "Libraries and SDKs",
+      "stars": 4928,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (Durable Objects, stateful)",
+      "license_signal": "open-source",
+      "tags": [
+        "memory",
+        "typescript"
+      ],
+      "example": {
+        "label": "SDK playground app",
+        "url": "https://github.com/cloudflare/agents/tree/main/examples/playground"
+      }
+    },
+    {
+      "name": "openai-agents-js",
+      "github_id": "openai/openai-agents-js",
+      "url": "https://github.com/openai/openai-agents-js",
+      "description": "Official OpenAI Agents SDK for Node/TS: handoffs, guardrails, voice; the JS counterpart to openai-agents-python.",
+      "category": "libraries-sdks",
+      "category_title": "Libraries and SDKs",
+      "stars": 3054,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (handoffs, guardrails, voice)",
+      "license_signal": "open-source",
+      "tags": [
+        "multi-agent",
+        "voice",
+        "typescript"
+      ],
+      "example": {
+        "label": "Financial research agent",
+        "url": "https://github.com/openai/openai-agents-js/tree/main/examples/financial-research-agent"
+      }
+    },
+    {
+      "name": "open-harness",
+      "github_id": "MaxGfeller/open-harness",
+      "url": "https://github.com/MaxGfeller/open-harness",
+      "description": "TypeScript Agent class on Vercel AI SDK; streaming events, filesystem/bash tools, MCP, and subagent delegation.",
+      "category": "libraries-sdks",
+      "category_title": "Libraries and SDKs",
+      "stars": 518,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (streaming, tools, subagents)",
+      "license_signal": "open-source",
+      "tags": [
+        "mcp",
+        "multi-agent",
+        "typescript"
+      ],
+      "example": {
+        "label": "Terminal CLI agent",
+        "url": "https://github.com/MaxGfeller/open-harness/tree/main/examples/cli"
+      }
+    },
+    {
+      "name": "Community-curated agent lists",
+      "github_id": "brandonhimpfen/awesome-ai-agents",
+      "url": "https://github.com/brandonhimpfen/awesome-ai-agents",
+      "description": "Broader directories: e.g. [brandonhimpfen/awesome-ai-agents](https://github.com/brandonhimpfen/awesome-ai-agents), [axioma-ai-labs/awesome-ai-agent-frameworks](https://github.com/axioma-ai-labs/awesome-ai-agent-frameworks), [mb-mal/awesome-ai-agents-frameworks](https://github.com/mb-mal/awesome-ai-agents-frameworks)—differ by scope and update cadence.",
+      "category": "libraries-sdks",
+      "category_title": "Libraries and SDKs",
+      "stars": 11,
+      "tier": "super simple",
+      "tier_rank": 1,
+      "axis": "super simple (curated lists)",
+      "license_signal": "unknown",
+      "tags": [],
+      "example": {
+        "label": "Frameworks section",
+        "url": "https://github.com/brandonhimpfen/awesome-ai-agents#frameworks"
+      }
+    }
+  ]
+}

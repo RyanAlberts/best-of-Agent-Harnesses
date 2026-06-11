@@ -585,6 +585,22 @@ META: dict[str, tuple[int, str, str]] = {
 }
 
 
+# Date the star counts in META were last captured. Single source for the
+# README explanation line, harnesses.json, llms.txt, and the landscape SVG.
+STARS_CAPTURED = "2026-06-07"
+
+# Canonical 4-tier order of the simplicity ↔ capability axis (least → most
+# adoption surface). Every Project.axis must start with one of these.
+TIER_ORDER = ["super simple", "mostly simple", "slightly complex", "complex"]
+
+
+def tier_of(p: "Project") -> str:
+    for t in sorted(TIER_ORDER, key=len, reverse=True):
+        if p.axis.startswith(t):
+            return t
+    raise ValueError(f"{p.github_id}: axis {p.axis!r} doesn't start with a canonical tier")
+
+
 def stars_for(github_id: str) -> int:
     return META.get(github_id, (0, "", ""))[0]
 
@@ -781,12 +797,41 @@ def generate_readme() -> str:
         "",
         "Better models make harnesses more important: more capabilities mean more failure modes, and production needs retry logic, fallbacks, and validation. Harness quality—not just model quality—determines whether agents actually ship. This list ranks projects by relevance to harness concerns (environment, orchestration, lifecycle, guardrails) and by stars/activity.",
         "",
+        "## The landscape at a glance",
+        "",
+        "[![The Agent Harness Landscape — all projects plotted by adoption surface area against GitHub stars](assets/landscape.svg)](assets/landscape.svg)",
+        "",
+        f"_Every project in the list, plotted by adoption surface area (the [simplicity ↔ capability axis](#explanation)) against GitHub stars. Colors are categories; the largest projects in each tier are labeled. Regenerated from the list data by `scripts/generate.py` on every refresh._",
+        "",
     ]
     header += render_use_cases()
     header += [
+        "## Head-to-head comparisons",
+        "",
+        "_Decision guides for the three most-asked picks, grounded in the same data as the tables below — what each project's harness actually is, where it shines, and who should choose it:_",
+        "",
+        "- [**Terminal coding agents** — opencode vs Codex vs Gemini CLI vs crush vs goose](comparisons/terminal-coding-agents.md)",
+        "- [**Multi-agent orchestration** — OpenAI Agents SDK vs CrewAI vs AutoGen vs LangGraph](comparisons/multi-agent-orchestration.md)",
+        "- [**Agent memory layers** — Mem0 vs Letta vs claude-mem](comparisons/memory-layers.md)",
+        "",
+        "## For agents",
+        "",
+        "This list is also published in machine-readable form, so coding agents and research agents can recommend harnesses — not just humans browsing GitHub:",
+        "",
+        "- [**harnesses.json**](harnesses.json) — every project with category, complexity tier, capability tags, stars, license signal, and a concrete example link, plus the full use-case index.",
+        "- [**llms.txt**](llms.txt) — the entire list in one agent-readable file. Point any agent at the [raw URL](https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/llms.txt).",
+        "- [**MCP server**](mcp/) — `pick_harness`, `search_harnesses`, `get_harness`, and `list_categories` as tools over this data. One-line install (needs [uv](https://docs.astral.sh/uv/)):",
+        "",
+        "```sh",
+        "claude mcp add agent-harnesses -- uv run https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/mcp/server.py",
+        "```",
+        "",
         "## Contents",
         "",
+        "- [The landscape at a glance](#the-landscape-at-a-glance)",
         "- [Pick by use case](#pick-by-use-case)",
+        "- [Head-to-head comparisons](#head-to-head-comparisons)",
+        "- [For agents: harnesses.json, llms.txt, MCP server](#for-agents)",
     ]
     for cat_id, title, _ in CATEGORIES:
         count = len(PROJECTS[cat_id])
@@ -796,7 +841,7 @@ def generate_readme() -> str:
         "",
         "## Explanation",
         "",
-        "- **⭐ Stars:** GitHub star count, captured 2026-06-07. Each table is sorted by stars descending. Click a star count to jump to the GitHub repo's stargazers page.",
+        f"- **⭐ Stars:** GitHub star count, captured {STARS_CAPTURED}. Each table is sorted by stars descending. Click a star count to jump to the GitHub repo's stargazers page.",
         "- **Examples:** One concrete instance of the harness in action — a specific skill file, demo script, sample agent, leaderboard with scores, or feature walkthrough — not a docs root or examples index. The link text names what's at the link.",
         "- **Simplicity ↔ capability:** Where each project sits on a 4-tier scale describing how much surface area you take on when adopting it: **super simple** (format-only, single file, one concept) → **mostly simple** (lean API, thin layer over a primitive) → **slightly complex** (multi-file SDK, several knobs, real abstractions) → **complex (product suite)** (platform with its own runtime, UI, ecosystem).",
         "- **Open source:** ✅ = standard open-source license (MIT/Apache/BSD/GPL/MPL/AGPL/CC0). ⚠️ = source-available or restricted (e.g. n8n Fair-code, Elastic-2.0, Polyform). ❓ = no license file or unclear terms.",
@@ -845,6 +890,16 @@ def generate_readme() -> str:
         "- Or submit a [pull request](https://github.com/RyanAlberts/best-of-Agent-Harnesses/pulls) editing [projects.yaml](https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/projects.yaml) (and optionally README.md).",
         "",
         "For contribution guidelines, see [CONTRIBUTING.md](https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/CONTRIBUTING.md) and the [Code of Conduct](https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/.github/CODE_OF_CONDUCT.md).",
+        "",
+        "### Show your listing",
+        "",
+        "If your project is in this list, you're welcome to show it in your README:",
+        "",
+        "[![Best of Agent Harnesses](https://img.shields.io/badge/%F0%9F%8F%86_Best_of-Agent_Harnesses-5ac4bf)](https://github.com/RyanAlberts/best-of-Agent-Harnesses)",
+        "",
+        "```md",
+        "[![Best of Agent Harnesses](https://img.shields.io/badge/%F0%9F%8F%86_Best_of-Agent_Harnesses-5ac4bf)](https://github.com/RyanAlberts/best-of-Agent-Harnesses)",
+        "```",
         "",
         "## License",
         "",
@@ -955,6 +1010,197 @@ def generate_tags_md() -> str:
     return "\n".join(lines)
 
 
+def oss_signal(marker: str) -> str:
+    if marker.startswith("✅"):
+        return "open-source"
+    if marker.startswith("⚠️"):
+        rest = marker.replace("⚠️", "").strip()
+        return f"restricted ({rest})" if rest else "restricted"
+    return "unknown"
+
+
+def generate_harnesses_json() -> str:
+    import json
+    projects = []
+    for cat_id, cat_title, _ in CATEGORIES:
+        for p in sorted(PROJECTS[cat_id], key=lambda x: stars_for(x.github_id), reverse=True):
+            tier = tier_of(p)
+            projects.append({
+                "name": p.display_name,
+                "github_id": p.github_id,
+                "url": f"https://github.com/{p.github_id}",
+                "description": p.description,
+                "category": cat_id,
+                "category_title": cat_title,
+                "stars": stars_for(p.github_id),
+                "tier": tier,
+                "tier_rank": TIER_ORDER.index(tier) + 1,
+                "axis": p.axis,
+                "license_signal": oss_signal(p.oss),
+                "tags": p.tags,
+                "example": {"label": example_label_for(p.github_id), "url": examples_for(p.github_id)},
+            })
+    doc = {
+        "meta": {
+            "name": "best-of-Agent-Harnesses",
+            "description": "Hand-curated, ranked list of AI agent harnesses, orchestration frameworks, and harness techniques.",
+            "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses",
+            "license": "CC-BY-SA-4.0",
+            "stars_captured": STARS_CAPTURED,
+            "project_count": count_projects(),
+            "tiers": TIER_ORDER,
+            "tier_help": "Adoption surface area, least to most: tier_rank 1 = format-only/single concept, 4 = platform with its own runtime and ecosystem.",
+        },
+        "categories": [{"id": c, "title": t, "subtitle": s} for c, t, s in CATEGORIES],
+        "use_cases": [{"intent": intent, "picks": ids, "category_title": cat} for intent, ids, cat in USE_CASES],
+        "projects": projects,
+    }
+    return json.dumps(doc, indent=2, ensure_ascii=False) + "\n"
+
+
+def generate_llms_txt() -> str:
+    total = count_projects()
+    lines = [
+        "# Best of Agent Harnesses",
+        "",
+        f"> Hand-curated, ranked list of {total} AI agent harnesses — the runtimes that close the loop between a stateless model and the outside world. 9 categories, a 4-tier adoption-surface rating (simplicity ↔ capability), capability tags, a license signal, and one concrete example link per project. Stars captured {STARS_CAPTURED}.",
+        "",
+        "Maintained at https://github.com/RyanAlberts/best-of-Agent-Harnesses (CC-BY-SA-4.0).",
+        "Structured data: https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/harnesses.json",
+        f"Tiers, least to most adoption surface: {' → '.join(TIER_ORDER)}.",
+        "",
+        "## Pick by use case",
+        "",
+    ]
+    for intent, ids, _ in USE_CASES:
+        picks = ", ".join(f"{find_project(g).display_name} (https://github.com/{g})" for g in ids)
+        lines.append(f"- {intent}: {picks}")
+    lines.append("")
+    for cat_id, title, subtitle in CATEGORIES:
+        lines.append(f"## {title} ({len(PROJECTS[cat_id])} projects)")
+        lines.append("")
+        lines.append(f"{subtitle}")
+        lines.append("")
+        for p in sorted(PROJECTS[cat_id], key=lambda x: stars_for(x.github_id), reverse=True):
+            tags = (" [" + ", ".join(p.tags) + "]") if p.tags else ""
+            lines.append(
+                f"- [{p.display_name}](https://github.com/{p.github_id}) — "
+                f"⭐{format_stars(stars_for(p.github_id))}, {tier_of(p)}, {oss_signal(p.oss)}: {p.description}{tags}"
+            )
+        lines.append("")
+    return "\n".join(lines)
+
+
+# Category colors + short legend labels for the landscape SVG.
+LANDSCAPE_STYLE = {
+    "progressive-disclosure": ("#8b5cf6", "Progressive disclosure"),
+    "coding-agent-products": ("#ef4444", "Coding agents"),
+    "coding-harness-configs": ("#f59e0b", "Configs & SDKs"),
+    "frameworks": ("#3b82f6", "Frameworks"),
+    "multi-agent": ("#ec4899", "Multi-agent"),
+    "plugins-mcp-cli": ("#10b981", "Plugins & MCP"),
+    "evaluation": ("#64748b", "Evals & benchmarks"),
+    "research-task": ("#14b8a6", "Research"),
+    "libraries-sdks": ("#a16207", "Libraries & SDKs"),
+}
+
+LABELS_PER_TIER = 6  # label the top-N starred projects in each tier column
+
+
+def generate_landscape_svg() -> str:
+    import hashlib
+    import math
+    from xml.sax.saxutils import escape
+
+    W, H = 1320, 880
+    X0, X1, Y0, Y1 = 80, 1290, 168, 750
+    colw = (X1 - X0) / len(TIER_ORDER)
+    lo, hi = 0.3, 5.4  # log10 star range: ~2 to ~250k
+
+    def ypos(stars: int) -> float:
+        return Y1 - (math.log10(max(stars, 2)) - lo) / (hi - lo) * (Y1 - Y0)
+
+    def xpos(tier: str, github_id: str) -> float:
+        col = TIER_ORDER.index(tier)
+        jitter = int(hashlib.md5(github_id.encode()).hexdigest(), 16) % 1000 / 1000
+        return X0 + colw * (col + 0.18 + 0.64 * jitter)
+
+    pts = []
+    for cat_id, _, _ in CATEGORIES:
+        for p in PROJECTS[cat_id]:
+            s = stars_for(p.github_id)
+            pts.append((p, cat_id, tier_of(p), s, xpos(tier_of(p), p.github_id), ypos(s)))
+
+    svg = [
+        f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" font-family="-apple-system, \'Segoe UI\', Helvetica, Arial, sans-serif">',
+        f'<rect width="{W}" height="{H}" fill="#ffffff" rx="8"/>',
+        f'<text x="{W/2}" y="52" text-anchor="middle" font-size="30" font-weight="700" fill="#111827">The Agent Harness Landscape</text>',
+        f'<text x="{W/2}" y="80" text-anchor="middle" font-size="15" fill="#6b7280">{count_projects()} hand-curated projects · GitHub stars vs. adoption surface area · stars captured {STARS_CAPTURED}</text>',
+    ]
+
+    # legend (single row, evenly spaced groups)
+    lx = X0
+    ly = 116
+    for cat_id, _, _ in CATEGORIES:
+        color, label = LANDSCAPE_STYLE[cat_id]
+        svg.append(f'<circle cx="{lx}" cy="{ly - 4}" r="6" fill="{color}"/>')
+        svg.append(f'<text x="{lx + 11}" y="{ly}" font-size="12.5" fill="#374151">{escape(label)}</text>')
+        lx += 11 + len(label) * 6.6 + 26
+
+    # horizontal gridlines at star decades
+    for decade, lab in [(10, "10"), (100, "100"), (1000, "1k"), (10000, "10k"), (100000, "100k")]:
+        y = ypos(decade)
+        svg.append(f'<line x1="{X0}" y1="{y:.1f}" x2="{X1}" y2="{y:.1f}" stroke="#e5e7eb" stroke-width="1"/>')
+        svg.append(f'<text x="{X0 - 10}" y="{y + 4:.1f}" text-anchor="end" font-size="12" fill="#9ca3af">{lab}</text>')
+    svg.append(f'<text x="30" y="{(Y0 + Y1) / 2:.0f}" font-size="13" fill="#6b7280" transform="rotate(-90 30 {(Y0 + Y1) / 2:.0f})" text-anchor="middle">GitHub stars (log scale)</text>')
+
+    # tier column separators + captions
+    tier_counts = {t: 0 for t in TIER_ORDER}
+    for _, _, t, _, _, _ in pts:
+        tier_counts[t] += 1
+    for i, t in enumerate(TIER_ORDER):
+        cx = X0 + colw * (i + 0.5)
+        if i:
+            x = X0 + colw * i
+            svg.append(f'<line x1="{x:.1f}" y1="{Y0}" x2="{x:.1f}" y2="{Y1}" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4 4"/>')
+        svg.append(f'<text x="{cx:.1f}" y="{Y1 + 30}" text-anchor="middle" font-size="15" font-weight="600" fill="#111827">{escape(t)}</text>')
+        svg.append(f'<text x="{cx:.1f}" y="{Y1 + 50}" text-anchor="middle" font-size="12" fill="#9ca3af">{tier_counts[t]} projects</text>')
+    svg.append(f'<line x1="{X0}" y1="{Y1}" x2="{X1}" y2="{Y1}" stroke="#d1d5db" stroke-width="1.5"/>')
+    svg.append(f'<text x="{(X0 + X1) / 2}" y="{Y1 + 80}" text-anchor="middle" font-size="13" fill="#6b7280">←  less to adopt: a file format, one concept&#160;&#160;·&#160;&#160;simplicity ↔ capability&#160;&#160;·&#160;&#160;full platforms with their own runtime: more to adopt  →</text>')
+
+    # pick label set: top-N starred per tier
+    labeled = set()
+    for t in TIER_ORDER:
+        col = sorted((q for q in pts if q[2] == t), key=lambda q: q[3], reverse=True)
+        labeled.update(q[0].github_id for q in col[:LABELS_PER_TIER])
+
+    # dots (small first so labeled big dots draw on top)
+    for p, cat_id, t, s, x, y in sorted(pts, key=lambda q: q[3]):
+        color, _ = LANDSCAPE_STYLE[cat_id]
+        big = p.github_id in labeled
+        r = 6.5 if big else 4.5
+        svg.append(
+            f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{r}" fill="{color}" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2">'
+            f'<title>{escape(p.display_name)} — ⭐{format_stars(s)}</title></circle>'
+        )
+
+    # labels with greedy vertical de-overlap per column
+    for i, t in enumerate(TIER_ORDER):
+        col = sorted((q for q in pts if q[2] == t and q[0].github_id in labeled), key=lambda q: q[5])
+        last_y = -1e9
+        for p, cat_id, _, s, x, y in col:
+            ty = max(y + 4.5, last_y + 16)
+            last_y = ty
+            anchor, tx = ("start", x + 10)
+            if x > X0 + colw * (i + 0.72):  # too close to the right edge of the column
+                anchor, tx = ("end", x - 10)
+            svg.append(f'<text x="{tx:.1f}" y="{ty:.1f}" text-anchor="{anchor}" font-size="13" font-weight="600" fill="#1f2937">{escape(p.display_name)}</text>')
+
+    svg.append(f'<text x="{X1}" y="{H - 18}" text-anchor="end" font-size="12" fill="#9ca3af">github.com/RyanAlberts/best-of-Agent-Harnesses · CC BY-SA 4.0 · regenerated by scripts/generate.py</text>')
+    svg.append('</svg>')
+    return "\n".join(svg) + "\n"
+
+
 def main():
     yaml_content = generate_yaml()
     readme_content = generate_readme()
@@ -964,6 +1210,10 @@ def main():
     (REPO_ROOT / "README.md").write_text(readme_content)
     (REPO_ROOT / "config" / "header.md").write_text(header_content)
     (REPO_ROOT / "TAGS.md").write_text(tags_content)
+    (REPO_ROOT / "harnesses.json").write_text(generate_harnesses_json())
+    (REPO_ROOT / "llms.txt").write_text(generate_llms_txt())
+    (REPO_ROOT / "assets").mkdir(exist_ok=True)
+    (REPO_ROOT / "assets" / "landscape.svg").write_text(generate_landscape_svg())
     total = count_projects()
     print(f"Wrote {total} projects across {len(CATEGORIES)} categories.")
     for cat_id, title, _ in CATEGORIES:

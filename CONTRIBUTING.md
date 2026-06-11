@@ -3,6 +3,18 @@
 
 Thanks for your interest in contributing to our project. This page will give you a quick overview of how things are organized and, most importantly, how to get involved. Everyone is welcome to contribute, and we value everybody's contribution.
 
+## Show your listing
+
+If your project is featured in this list, you're welcome to add the badge to your README:
+
+[![Best of Agent Harnesses](https://img.shields.io/badge/%F0%9F%8F%86_Best_of-Agent_Harnesses-5ac4bf)](https://github.com/RyanAlberts/best-of-Agent-Harnesses)
+
+```md
+[![Best of Agent Harnesses](https://img.shields.io/badge/%F0%9F%8F%86_Best_of-Agent_Harnesses-5ac4bf)](https://github.com/RyanAlberts/best-of-Agent-Harnesses)
+```
+
+If your project's description, example link, or complexity tier is wrong, open an issue or PR — corrections from maintainers are merged fast.
+
 ## Table of contents
 
 1. [Add a project](#add-a-project)

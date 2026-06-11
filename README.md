@@ -25,6 +25,12 @@ Every prior wave of automation was constrained by brittleness: you scripted exac
 
 Better models make harnesses more important: more capabilities mean more failure modes, and production needs retry logic, fallbacks, and validation. Harness quality—not just model quality—determines whether agents actually ship. This list ranks projects by relevance to harness concerns (environment, orchestration, lifecycle, guardrails) and by stars/activity.
 
+## The landscape at a glance
+
+[![The Agent Harness Landscape — all projects plotted by adoption surface area against GitHub stars](assets/landscape.svg)](assets/landscape.svg)
+
+_Every project in the list, plotted by adoption surface area (the [simplicity ↔ capability axis](#explanation)) against GitHub stars. Colors are categories; the largest projects in each tier are labeled. Regenerated from the list data by `scripts/generate.py` on every refresh._
+
 ## Pick by use case
 
 _Reader's index: pick by what you want to do, not by category. Tag chips (e.g. <sup>`mcp` · `memory`</sup>) next to each row let you cross-filter by capability — see [TAGS.md](TAGS.md) for the full cross-reference._
@@ -43,9 +49,32 @@ _Reader's index: pick by what you want to do, not by category. Tag chips (e.g. <
 - **I want a deep research / autonomous research agent** — [deepagents](https://github.com/langchain-ai/deepagents), [gpt-researcher](https://github.com/assafelovic/gpt-researcher), [openagents](https://github.com/OpenAgentsInc/openagents) · see [Research and task-specific harnesses](#research-and-task-specific-harnesses)
 - **I want a provider-agnostic LLM pipe (not a framework)** — [LiteLLM](https://github.com/BerriAI/litellm), [vercel/ai](https://github.com/vercel/ai) · see [Libraries and SDKs](#libraries-and-sdks)
 
+## Head-to-head comparisons
+
+_Decision guides for the three most-asked picks, grounded in the same data as the tables below — what each project's harness actually is, where it shines, and who should choose it:_
+
+- [**Terminal coding agents** — opencode vs Codex vs Gemini CLI vs crush vs goose](comparisons/terminal-coding-agents.md)
+- [**Multi-agent orchestration** — OpenAI Agents SDK vs CrewAI vs AutoGen vs LangGraph](comparisons/multi-agent-orchestration.md)
+- [**Agent memory layers** — Mem0 vs Letta vs claude-mem](comparisons/memory-layers.md)
+
+## For agents
+
+This list is also published in machine-readable form, so coding agents and research agents can recommend harnesses — not just humans browsing GitHub:
+
+- [**harnesses.json**](harnesses.json) — every project with category, complexity tier, capability tags, stars, license signal, and a concrete example link, plus the full use-case index.
+- [**llms.txt**](llms.txt) — the entire list in one agent-readable file. Point any agent at the [raw URL](https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/llms.txt).
+- [**MCP server**](mcp/) — `pick_harness`, `search_harnesses`, `get_harness`, and `list_categories` as tools over this data. One-line install (needs [uv](https://docs.astral.sh/uv/)):
+
+```sh
+claude mcp add agent-harnesses -- uv run https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/mcp/server.py
+```
+
 ## Contents
 
+- [The landscape at a glance](#the-landscape-at-a-glance)
 - [Pick by use case](#pick-by-use-case)
+- [Head-to-head comparisons](#head-to-head-comparisons)
+- [For agents: harnesses.json, llms.txt, MCP server](#for-agents)
 - [Progressive disclosure harnesses](#progressive-disclosure-harnesses) _7 projects_
 - [Coding agent products (IDEs, CLIs, full suites)](#coding-agent-products-ides-clis-full-suites) _10 projects_
 - [Coding harness configs and SDKs](#coding-harness-configs-and-sdks) _11 projects_
@@ -268,6 +297,16 @@ Contributions are welcome. To add or suggest projects:
 - Or submit a [pull request](https://github.com/RyanAlberts/best-of-Agent-Harnesses/pulls) editing [projects.yaml](https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/projects.yaml) (and optionally README.md).
 
 For contribution guidelines, see [CONTRIBUTING.md](https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/CONTRIBUTING.md) and the [Code of Conduct](https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/.github/CODE_OF_CONDUCT.md).
+
+### Show your listing
+
+If your project is in this list, you're welcome to show it in your README:
+
+[![Best of Agent Harnesses](https://img.shields.io/badge/%F0%9F%8F%86_Best_of-Agent_Harnesses-5ac4bf)](https://github.com/RyanAlberts/best-of-Agent-Harnesses)
+
+```md
+[![Best of Agent Harnesses](https://img.shields.io/badge/%F0%9F%8F%86_Best_of-Agent_Harnesses-5ac4bf)](https://github.com/RyanAlberts/best-of-Agent-Harnesses)
+```
 
 ## License
 
