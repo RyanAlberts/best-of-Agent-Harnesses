@@ -1,13 +1,13 @@
 <!-- markdownlint-disable -->
 # Tags — cross-reference
 
-_Auto-generated from `scripts/generate.py`. 101 projects across 22 canonical tags. Edit projects in `generate.py` (not here) and rerun the script._
+_Auto-generated from `scripts/generate.py`. 103 projects across 22 canonical tags. Edit projects in `generate.py` (not here) and rerun the script._
 
 Tag chips appear next to each project in [README.md](README.md). This page lists every tag once with the projects that carry it, grouped by category and sorted by GitHub stars within each category.
 
 ## All tags
 
-[`mcp`](#mcp) (21) · [`memory`](#memory) (15) · [`multi-agent`](#multi-agent) (14) · [`evals`](#evals) (14) · [`voice`](#voice) (2) · [`vision`](#vision) (2) · [`browser`](#browser) (3) · [`sandbox`](#sandbox) (16) · [`low-code`](#low-code) (4) · [`rag`](#rag) (4) · [`tool-discovery`](#tool-discovery) (6) · [`training`](#training) (4) · [`workflow`](#workflow) (6) · [`typed`](#typed) (3) · [`local`](#local) (1) · [`provider-agnostic`](#provider-agnostic) (7) · [`cli`](#cli) (8) · [`ide`](#ide) (6) · [`tui`](#tui) (2) · [`rust`](#rust) (2) · [`python`](#python) (55) · [`typescript`](#typescript) (25)
+[`mcp`](#mcp) (21) · [`memory`](#memory) (16) · [`multi-agent`](#multi-agent) (15) · [`evals`](#evals) (14) · [`voice`](#voice) (2) · [`vision`](#vision) (2) · [`browser`](#browser) (3) · [`sandbox`](#sandbox) (16) · [`low-code`](#low-code) (4) · [`rag`](#rag) (4) · [`tool-discovery`](#tool-discovery) (6) · [`training`](#training) (4) · [`workflow`](#workflow) (6) · [`typed`](#typed) (3) · [`local`](#local) (1) · [`provider-agnostic`](#provider-agnostic) (8) · [`cli`](#cli) (8) · [`ide`](#ide) (6) · [`tui`](#tui) (2) · [`rust`](#rust) (2) · [`python`](#python) (56) · [`typescript`](#typescript) (26)
 
 ---
 
@@ -71,6 +71,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 **Frameworks**
 
+- [Hermes](https://github.com/NousResearch/hermes-agent) — ⭐191k — Nous Research's self-improving agent: a learning loop turns experience into reusable skills, builds a persistent user model across sessions, and checkpoints state to disk with rollback; lean enough for a $5 VPS, driven from chat, and model-agnostic (Nous Portal, OpenRouter, OpenAI, or any endpoint).
 - [AutoGPT](https://github.com/Significant-Gravitas/AutoGPT) — ⭐185k — The original autonomous loop: goal in, agent iterates with tools and memory; Forge is the dev framework, Benchmark the eval harness.
 - [agno](https://github.com/agno-agi/agno) — ⭐40.6k — Python agents with memory, knowledge bases, tools, and structured outputs; continues the PhiData-era product line under the Agno name—production apps, evals, and pipelines.
 - [letta](https://github.com/letta-ai/letta) — ⭐23.3k — Python agent runtime with tool use and control flow; lean API; stateful agents with long-horizon memory.
@@ -101,6 +102,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 **Frameworks**
 
+- [OpenClaw](https://github.com/openclaw/openclaw) — ⭐378k — Self-hosted, always-on personal agent (formerly Clawdbot/Moltbot): a gateway + event-loop runtime that treats messages, heartbeats, crons, and webhooks as one input queue, persists state to local files, and lives in your chat apps (WhatsApp, Telegram, Slack, Discord). 13,700+ community skills; the fastest-growing repo in GitHub history.
 - [agent-squad](https://github.com/2FastLabs/agent-squad) — ⭐7.6k — AWS-originated orchestrator (now under 2FastLabs): intent classification, streaming, SupervisorAgent; "agent-as-tools" so one agent delegates to a squad.
 - [AgentVerse](https://github.com/OpenBMB/AgentVerse) — ⭐5.1k — Task-solving and simulation envs for multi-LLM agents; deploy many agents in custom environments without building infra from scratch.
 - [Bee Agent Framework](https://github.com/i-am-bee/beeai-framework) — ⭐3.3k — Python + TypeScript, LF AI–backed; MCP/ACP, workflows, Requirement Agent; the one that pushes "production multi-agent" without LangChain.
@@ -335,6 +337,10 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 - [AutoHarness](https://github.com/aiming-lab/AutoHarness) — ⭐312 — Lightweight governance harness: wraps any LLM client in ~2 lines for automated harness engineering—6–14 step pipeline, YAML constitution, risk-pattern matching, session persistence with cost tracking, multi-agent profiles.
 
+**Frameworks**
+
+- [Hermes](https://github.com/NousResearch/hermes-agent) — ⭐191k — Nous Research's self-improving agent: a learning loop turns experience into reusable skills, builds a persistent user model across sessions, and checkpoints state to disk with rollback; lean enough for a $5 VPS, driven from chat, and model-agnostic (Nous Portal, OpenRouter, OpenAI, or any endpoint).
+
 **Evaluation and benchmarking harnesses**
 
 - [arc-agi-benchmarking](https://github.com/arcprize/arc-agi-benchmarking) — ⭐350 — Runner for ARC-AGI: multi-provider (OpenAI, Anthropic, Gemini, etc.), rate limits, retries, and scoring.
@@ -430,6 +436,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 **Frameworks**
 
+- [Hermes](https://github.com/NousResearch/hermes-agent) — ⭐191k — Nous Research's self-improving agent: a learning loop turns experience into reusable skills, builds a persistent user model across sessions, and checkpoints state to disk with rollback; lean enough for a $5 VPS, driven from chat, and model-agnostic (Nous Portal, OpenRouter, OpenAI, or any endpoint).
 - [AutoGPT](https://github.com/Significant-Gravitas/AutoGPT) — ⭐185k — The original autonomous loop: goal in, agent iterates with tools and memory; Forge is the dev framework, Benchmark the eval harness.
 - [langflow](https://github.com/langflow-ai/langflow) — ⭐150k — Low-code UI to build and deploy LangChain/LangGraph flows; visual DAG editor and one-click run.
 - [Dify](https://github.com/langgenius/dify) — ⭐145k — One-stop LLM app platform: visual workflows, RAG pipeline, 50+ tools, model management; "ship from prototype to prod" in a single UI.
@@ -516,6 +523,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 **Frameworks**
 
+- [OpenClaw](https://github.com/openclaw/openclaw) — ⭐378k — Self-hosted, always-on personal agent (formerly Clawdbot/Moltbot): a gateway + event-loop runtime that treats messages, heartbeats, crons, and webhooks as one input queue, persists state to local files, and lives in your chat apps (WhatsApp, Telegram, Slack, Discord). 13,700+ community skills; the fastest-growing repo in GitHub history.
 - [n8n](https://github.com/n8n-io/n8n) — ⭐192k — Fair-code workflow engine with 400+ nodes and native AI nodes; the self-hosted Zapier that actually does agents and LangChain.
 - [Flowise](https://github.com/FlowiseAI/Flowise) — ⭐53.5k — Drag-and-drop LangChain UI; deploy flows without code. The low-code sibling to Langflow, with a different component and hosting story.
 - [mastra](https://github.com/mastra-ai/mastra) — ⭐25k — TypeScript-first; agents, tools, and workflows with a single runtime and minimal boilerplate.
@@ -563,6 +571,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 **Frameworks**
 
+- [Hermes](https://github.com/NousResearch/hermes-agent) — ⭐191k — Nous Research's self-improving agent: a learning loop turns experience into reusable skills, builds a persistent user model across sessions, and checkpoints state to disk with rollback; lean enough for a $5 VPS, driven from chat, and model-agnostic (Nous Portal, OpenRouter, OpenAI, or any endpoint).
 - [AutoGPT](https://github.com/Significant-Gravitas/AutoGPT) — ⭐185k — The original autonomous loop: goal in, agent iterates with tools and memory; Forge is the dev framework, Benchmark the eval harness.
 - [langflow](https://github.com/langflow-ai/langflow) — ⭐150k — Low-code UI to build and deploy LangChain/LangGraph flows; visual DAG editor and one-click run.
 - [Dify](https://github.com/langgenius/dify) — ⭐145k — One-stop LLM app platform: visual workflows, RAG pipeline, 50+ tools, model management; "ship from prototype to prod" in a single UI.
@@ -649,6 +658,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 **Frameworks**
 
+- [OpenClaw](https://github.com/openclaw/openclaw) — ⭐378k — Self-hosted, always-on personal agent (formerly Clawdbot/Moltbot): a gateway + event-loop runtime that treats messages, heartbeats, crons, and webhooks as one input queue, persists state to local files, and lives in your chat apps (WhatsApp, Telegram, Slack, Discord). 13,700+ community skills; the fastest-growing repo in GitHub history.
 - [n8n](https://github.com/n8n-io/n8n) — ⭐192k — Fair-code workflow engine with 400+ nodes and native AI nodes; the self-hosted Zapier that actually does agents and LangChain.
 - [Flowise](https://github.com/FlowiseAI/Flowise) — ⭐53.5k — Drag-and-drop LangChain UI; deploy flows without code. The low-code sibling to Langflow, with a different component and hosting story.
 - [mastra](https://github.com/mastra-ai/mastra) — ⭐25k — TypeScript-first; agents, tools, and workflows with a single runtime and minimal boilerplate.

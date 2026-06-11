@@ -27,7 +27,7 @@
 <text x="832.5" y="254.5" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">4</text>
 <text x="397.5" y="387.0" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">2</text>
 <text x="832.5" y="387.0" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">13</text>
-<text x="1050.0" y="387.0" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">15</text>
+<text x="1050.0" y="387.0" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">17</text>
 <text x="615.0" y="652.0" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">1</text>
 <text x="1050.0" y="652.0" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">11</text>
 <text x="1050.0" y="254.5" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">4</text>
@@ -105,17 +105,19 @@
 <circle cx="1013.2" cy="444.0" r="5.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>langflow — ⭐150k</title></circle>
 <circle cx="981.5" cy="304.7" r="5.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>opencode — ⭐173k</title></circle>
 <circle cx="900.2" cy="309.5" r="5.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>AutoGPT — ⭐185k</title></circle>
+<circle cx="910.6" cy="327.6" r="5.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Hermes — ⭐191k</title></circle>
 <circle cx="1002.7" cy="160.1" r="5.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>n8n — ⭐192k</title></circle>
+<circle cx="981.1" cy="357.9" r="5.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>OpenClaw — ⭐378k</title></circle>
 <text x="760.5" y="614.4" text-anchor="end" font-size="12.5" font-weight="600" fill="#1f2937">smolagents</text>
 <text x="754.8" y="177.9" text-anchor="start" font-size="12.5" font-weight="600" fill="#1f2937">mastra</text>
 <text x="270.3" y="327.9" text-anchor="start" font-size="12.5" font-weight="600" fill="#1f2937">Cline</text>
 <text x="766.0" y="336.3" text-anchor="end" font-size="12.5" font-weight="600" fill="#1f2937">Gemini CLI</text>
-<text x="909.2" y="314.0" text-anchor="start" font-size="12.5" font-weight="600" fill="#1f2937">AutoGPT</text>
+<text x="972.1" y="362.4" text-anchor="end" font-size="12.5" font-weight="600" fill="#1f2937">OpenClaw</text>
 <text x="539.2" y="598.0" text-anchor="end" font-size="12.5" font-weight="600" fill="#1f2937">claw-code-agent</text>
 <text x="989.1" y="589.8" text-anchor="end" font-size="12.5" font-weight="600" fill="#1f2937">AgentVerse</text>
 <text x="993.7" y="164.6" text-anchor="end" font-size="12.5" font-weight="600" fill="#1f2937">n8n</text>
 <text x="767.1" y="501.0" text-anchor="end" font-size="12.5" font-weight="600" fill="#1f2937">langchain</text>
 <text x="1004.2" y="448.5" text-anchor="end" font-size="12.5" font-weight="600" fill="#1f2937">langflow</text>
 <text x="534.2" y="313.2" text-anchor="start" font-size="12.5" font-weight="600" fill="#1f2937">aider</text>
-<text x="1060" y="784" text-anchor="end" font-size="12" fill="#9ca3af">72 loop-owning projects shown · 29 format/component entries (n/a) omitted · full tiers in harnesses.json</text>
+<text x="1060" y="784" text-anchor="end" font-size="12" fill="#9ca3af">74 loop-owning projects shown · 29 format/component entries (n/a) omitted · full tiers in harnesses.json</text>
 </svg>

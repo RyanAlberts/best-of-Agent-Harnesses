@@ -5,7 +5,7 @@
     "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses",
     "license": "CC-BY-SA-4.0",
     "stars_captured": "2026-06-11",
-    "project_count": 101,
+    "project_count": 103,
     "tiers": [
       "super simple",
       "mostly simple",
@@ -153,6 +153,15 @@
         "run-llama/llama_index",
         "pydantic/pydantic-ai",
         "agno-agi/agno"
+      ],
+      "category_title": "Frameworks"
+    },
+    {
+      "intent": "I want an always-on personal agent that lives in my chat apps",
+      "picks": [
+        "openclaw/openclaw",
+        "NousResearch/hermes-agent",
+        "HKUDS/OpenHarness"
       ],
       "category_title": "Frameworks"
     },
@@ -924,6 +933,31 @@
       }
     },
     {
+      "name": "OpenClaw",
+      "github_id": "openclaw/openclaw",
+      "url": "https://github.com/openclaw/openclaw",
+      "description": "Self-hosted, always-on personal agent (formerly Clawdbot/Moltbot): a gateway + event-loop runtime that treats messages, heartbeats, crons, and webhooks as one input queue, persists state to local files, and lives in your chat apps (WhatsApp, Telegram, Slack, Discord). 13,700+ community skills; the fastest-growing repo in GitHub history.",
+      "category": "frameworks",
+      "category_title": "Frameworks",
+      "stars": 378191,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (always-on runtime, channels, skill ecosystem — product suite)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "open-source",
+      "tags": [
+        "typescript",
+        "multi-agent"
+      ],
+      "example": {
+        "label": "Agent runtime architecture",
+        "url": "https://github.com/openclaw/openclaw/blob/main/docs/agent-runtime-architecture.md"
+      }
+    },
+    {
       "name": "n8n",
       "github_id": "n8n-io/n8n",
       "url": "https://github.com/n8n-io/n8n",
@@ -947,6 +981,32 @@
       "example": {
         "label": "Agent vs chain workflow",
         "url": "https://github.com/n8n-io/n8n-docs/blob/main/docs/advanced-ai/examples/agent-chain-comparison.md"
+      }
+    },
+    {
+      "name": "Hermes",
+      "github_id": "NousResearch/hermes-agent",
+      "url": "https://github.com/NousResearch/hermes-agent",
+      "description": "Nous Research's self-improving agent: a learning loop turns experience into reusable skills, builds a persistent user model across sessions, and checkpoints state to disk with rollback; lean enough for a $5 VPS, driven from chat, and model-agnostic (Nous Portal, OpenRouter, OpenAI, or any endpoint).",
+      "category": "frameworks",
+      "category_title": "Frameworks",
+      "stars": 190827,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (lean runtime, learning loop, disk-first memory)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "open-source",
+      "tags": [
+        "memory",
+        "python",
+        "provider-agnostic"
+      ],
+      "example": {
+        "label": "Built-in skills",
+        "url": "https://github.com/NousResearch/hermes-agent/tree/main/skills"
       }
     },
     {

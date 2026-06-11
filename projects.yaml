@@ -215,6 +215,14 @@ projects:
     github_id: superagentxai/superagentx
     labels: ["python"]
     category: "frameworks"
+  - name: OpenClaw
+    github_id: openclaw/openclaw
+    labels: ["javascript"]
+    category: "frameworks"
+  - name: Hermes
+    github_id: NousResearch/hermes-agent
+    labels: ["python"]
+    category: "frameworks"
   - name: AgentVerse
     github_id: OpenBMB/AgentVerse
     labels: ["python"]

@@ -1,6 +1,6 @@
 # Best of Agent Harnesses
 
-> Hand-curated, ranked list of 101 AI agent harnesses — the runtimes that close the loop between a stateless model and the outside world. 9 categories, a 4-tier adoption-surface rating (simplicity ↔ capability), capability tags, a license signal, and one concrete example link per project. Stars captured 2026-06-11.
+> Hand-curated, ranked list of 103 AI agent harnesses — the runtimes that close the loop between a stateless model and the outside world. 9 categories, a 4-tier adoption-surface rating (simplicity ↔ capability), capability tags, a license signal, and one concrete example link per project. Stars captured 2026-06-11.
 
 Maintained at https://github.com/RyanAlberts/best-of-Agent-Harnesses (CC-BY-SA-4.0).
 Structured data: https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/harnesses.json
@@ -15,6 +15,7 @@ Tiers, least to most adoption surface: super simple → mostly simple → slight
 - I want to plug hundreds to thousands of tools without context bloat: MCP-Zero (https://github.com/xfey/MCP-Zero), ToolGen (https://github.com/Reason-Wang/ToolGen), ToolRAG (https://github.com/antl3x/ToolRAG), langgraph-bigtool (https://github.com/langchain-ai/langgraph-bigtool), spring-ai-tool-search-tool (https://github.com/spring-ai-community/spring-ai-tool-search-tool)
 - I want multi-agent orchestration: openai-agents-python (https://github.com/openai/openai-agents-python), crewAI (https://github.com/crewAIInc/crewAI), autogen (https://github.com/microsoft/autogen), PraisonAI (https://github.com/MervinPraison/PraisonAI), agent-squad (https://github.com/2FastLabs/agent-squad)
 - I want a general LLM app framework: langgraph (https://github.com/langchain-ai/langgraph), langchain (https://github.com/langchain-ai/langchain), llama-index (https://github.com/run-llama/llama_index), pydantic-ai (https://github.com/pydantic/pydantic-ai), agno (https://github.com/agno-agi/agno)
+- I want an always-on personal agent that lives in my chat apps: OpenClaw (https://github.com/openclaw/openclaw), Hermes (https://github.com/NousResearch/hermes-agent), OpenHarness (HKUDS) (https://github.com/HKUDS/OpenHarness)
 - I want low-code / visual workflows: langflow (https://github.com/langflow-ai/langflow), Flowise (https://github.com/FlowiseAI/Flowise), Dify (https://github.com/langgenius/dify), n8n (https://github.com/n8n-io/n8n)
 - I want browser-using agents: browser-use (https://github.com/browser-use/browser-use), WebVoyager (https://github.com/MinorJerry/WebVoyager), puppeteer-real-browser-mcp (https://github.com/withLinda/puppeteer-real-browser-mcp-server)
 - I want sandboxed code execution for agent-generated code: E2B (https://github.com/e2b-dev/E2B), Daytona (https://github.com/daytonaio/daytona), smolagents (https://github.com/huggingface/smolagents), OpenHands (https://github.com/OpenHands/OpenHands)
@@ -65,11 +66,13 @@ Skill packs, slash-command libraries, meta-prompting frameworks, and official SD
 - [AutoHarness](https://github.com/aiming-lab/AutoHarness) — ⭐312, super simple, autonomy: bounded, recovery: none, open-source: Lightweight governance harness: wraps any LLM client in ~2 lines for automated harness engineering—6–14 step pipeline, YAML constitution, risk-pattern matching, session persistence with cost tracking, multi-agent profiles. [memory, multi-agent, provider-agnostic, python]
 - [pmstack](https://github.com/RyanAlberts/pmstack) — ⭐2, super simple, autonomy: n/a, recovery: n/a, open-source: Claude Code config for AI product managers: CLAUDE.md plus skills for competitive analysis, PRD-from-signal, metric frameworks, stakeholder briefs, and agent eval design. "GStack for PMs." [evals]
 
-## Frameworks (24 projects)
+## Frameworks (26 projects)
 
 General-purpose agent and LLM application frameworks (the app layer, not harnesses per se).
 
+- [OpenClaw](https://github.com/openclaw/openclaw) — ⭐378k, complex, autonomy: headless, recovery: resumable, open-source: Self-hosted, always-on personal agent (formerly Clawdbot/Moltbot): a gateway + event-loop runtime that treats messages, heartbeats, crons, and webhooks as one input queue, persists state to local files, and lives in your chat apps (WhatsApp, Telegram, Slack, Discord). 13,700+ community skills; the fastest-growing repo in GitHub history. [typescript, multi-agent]
 - [n8n](https://github.com/n8n-io/n8n) — ⭐192k, complex, autonomy: headless, recovery: durable, restricted (Fair-code): Fair-code workflow engine with 400+ nodes and native AI nodes; the self-hosted Zapier that actually does agents and LangChain. [workflow, local, typescript]
+- [Hermes](https://github.com/NousResearch/hermes-agent) — ⭐191k, slightly complex, autonomy: headless, recovery: resumable, open-source: Nous Research's self-improving agent: a learning loop turns experience into reusable skills, builds a persistent user model across sessions, and checkpoints state to disk with rollback; lean enough for a $5 VPS, driven from chat, and model-agnostic (Nous Portal, OpenRouter, OpenAI, or any endpoint). [memory, python, provider-agnostic]
 - [AutoGPT](https://github.com/Significant-Gravitas/AutoGPT) — ⭐185k, complex, autonomy: headless, recovery: resumable, restricted (Polyform-SU): The original autonomous loop: goal in, agent iterates with tools and memory; Forge is the dev framework, Benchmark the eval harness. [memory, evals, python]
 - [langflow](https://github.com/langflow-ai/langflow) — ⭐150k, complex, autonomy: headless, recovery: retry, open-source: Low-code UI to build and deploy LangChain/LangGraph flows; visual DAG editor and one-click run. [low-code, python]
 - [Dify](https://github.com/langgenius/dify) — ⭐145k, complex, autonomy: headless, recovery: retry, restricted (Fair-code): One-stop LLM app platform: visual workflows, RAG pipeline, 50+ tools, model management; "ship from prototype to prod" in a single UI. [low-code, rag, python]

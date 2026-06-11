@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1320 880" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
 <rect width="1320" height="880" fill="#ffffff" rx="8"/>
 <text x="660.0" y="52" text-anchor="middle" font-size="30" font-weight="700" fill="#111827">The Agent Harness Landscape</text>
-<text x="660.0" y="80" text-anchor="middle" font-size="15" fill="#6b7280">101 hand-curated projects · GitHub stars vs. adoption surface area · stars captured 2026-06-11</text>
+<text x="660.0" y="80" text-anchor="middle" font-size="15" fill="#6b7280">103 hand-curated projects · GitHub stars vs. adoption surface area · stars captured 2026-06-11</text>
 <circle cx="80" cy="112" r="6" fill="#8b5cf6"/>
 <text x="91" y="116" font-size="12.5" fill="#374151">Progressive disclosure</text>
 <circle cx="262.2" cy="112" r="6" fill="#ef4444"/>
@@ -38,10 +38,10 @@
 <text x="533.8" y="800" text-anchor="middle" font-size="12" fill="#9ca3af">18 projects</text>
 <line x1="685.0" y1="168" x2="685.0" y2="750" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4 4"/>
 <text x="836.2" y="780" text-anchor="middle" font-size="15" font-weight="600" fill="#111827">slightly complex</text>
-<text x="836.2" y="800" text-anchor="middle" font-size="12" fill="#9ca3af">39 projects</text>
+<text x="836.2" y="800" text-anchor="middle" font-size="12" fill="#9ca3af">40 projects</text>
 <line x1="987.5" y1="168" x2="987.5" y2="750" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4 4"/>
 <text x="1138.8" y="780" text-anchor="middle" font-size="15" font-weight="600" fill="#111827">complex</text>
-<text x="1138.8" y="800" text-anchor="middle" font-size="12" fill="#9ca3af">35 projects</text>
+<text x="1138.8" y="800" text-anchor="middle" font-size="12" fill="#9ca3af">36 projects</text>
 <line x1="80" y1="750" x2="1290" y2="750" stroke="#d1d5db" stroke-width="1.5"/>
 <text x="685.0" y="830" text-anchor="middle" font-size="13" fill="#6b7280">←  less to adopt: a file format, one concept&#160;&#160;·&#160;&#160;simplicity ↔ capability&#160;&#160;·&#160;&#160;full platforms with their own runtime: more to adopt  →</text>
 <circle cx="316.4" cy="749.9" r="4.5" fill="#10b981" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>agentlog — ⭐0</title></circle>
@@ -131,20 +131,22 @@
 <circle cx="491.5" cy="235.7" r="6.5" fill="#f59e0b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>get-shit-done — ⭐64.1k</title></circle>
 <circle cx="858.7" cy="229.6" r="4.5" fill="#a16207" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Daytona — ⭐72.5k</title></circle>
 <circle cx="1137.6" cy="226.9" r="4.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>OpenHands — ⭐76.5k</title></circle>
-<circle cx="881.4" cy="223.6" r="6.5" fill="#10b981" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>claude-mem — ⭐81.8k</title></circle>
+<circle cx="881.4" cy="223.6" r="4.5" fill="#10b981" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>claude-mem — ⭐81.8k</title></circle>
 <circle cx="857.7" cy="218.6" r="6.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Codex — ⭐90.4k</title></circle>
 <circle cx="926.7" cy="214.5" r="6.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>browser-use — ⭐98.3k</title></circle>
 <circle cx="888.7" cy="211.1" r="6.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Gemini CLI — ⭐105k</title></circle>
 <circle cx="823.7" cy="209.3" r="6.5" fill="#f59e0b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>GStack — ⭐109k</title></circle>
 <circle cx="1192.6" cy="197.3" r="4.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>langchain — ⭐139k</title></circle>
-<circle cx="1078.7" cy="195.3" r="6.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Dify — ⭐145k</title></circle>
+<circle cx="1078.7" cy="195.3" r="4.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Dify — ⭐145k</title></circle>
 <circle cx="498.1" cy="193.7" r="6.5" fill="#f59e0b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Anthropic Skills — ⭐149k</title></circle>
 <circle cx="1217.5" cy="193.7" r="6.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>langflow — ⭐150k</title></circle>
 <circle cx="874.8" cy="186.4" r="6.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>opencode — ⭐173k</title></circle>
 <circle cx="1073.9" cy="183.2" r="6.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>AutoGPT — ⭐185k</title></circle>
+<circle cx="784.6" cy="181.6" r="6.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Hermes — ⭐191k</title></circle>
 <circle cx="1204.2" cy="181.3" r="6.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>n8n — ⭐192k</title></circle>
 <circle cx="1220.6" cy="176.1" r="6.5" fill="#f59e0b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>everything-claude-code — ⭐213k</title></circle>
 <circle cx="1180.8" cy="173.5" r="6.5" fill="#f59e0b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>superpowers — ⭐225k</title></circle>
+<circle cx="1176.7" cy="147.7" r="6.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>OpenClaw — ⭐378k</title></circle>
 <text x="246.7" y="263.6" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">awesome-cursorrules</text>
 <text x="279.8" y="292.9" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">agents.md</text>
 <text x="170.4" y="332.0" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">MCP Inspector</text>
@@ -157,17 +159,17 @@
 <text x="589.2" y="281.6" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">smolagents</text>
 <text x="491.7" y="297.6" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">openai-agents-python</text>
 <text x="528.5" y="313.6" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">MCP Python SDK</text>
-<text x="884.8" y="190.9" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">opencode</text>
-<text x="833.7" y="213.8" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">GStack</text>
-<text x="898.7" y="229.8" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">Gemini CLI</text>
-<text x="916.7" y="245.8" text-anchor="end" font-size="13" font-weight="600" fill="#1f2937">browser-use</text>
-<text x="867.7" y="261.8" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">Codex</text>
-<text x="891.4" y="277.8" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">claude-mem</text>
+<text x="794.6" y="186.1" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">Hermes</text>
+<text x="884.8" y="202.1" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">opencode</text>
+<text x="833.7" y="218.1" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">GStack</text>
+<text x="898.7" y="234.1" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">Gemini CLI</text>
+<text x="916.7" y="250.1" text-anchor="end" font-size="13" font-weight="600" fill="#1f2937">browser-use</text>
+<text x="867.7" y="266.1" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">Codex</text>
+<text x="1186.7" y="152.2" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">OpenClaw</text>
 <text x="1190.8" y="178.0" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">superpowers</text>
 <text x="1210.6" y="194.0" text-anchor="end" font-size="13" font-weight="600" fill="#1f2937">everything-claude-code</text>
 <text x="1214.2" y="210.0" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">n8n</text>
 <text x="1083.9" y="226.0" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">AutoGPT</text>
 <text x="1207.5" y="242.0" text-anchor="end" font-size="13" font-weight="600" fill="#1f2937">langflow</text>
-<text x="1088.7" y="258.0" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">Dify</text>
 <text x="1290" y="862" text-anchor="end" font-size="12" fill="#9ca3af">github.com/RyanAlberts/best-of-Agent-Harnesses · CC BY-SA 4.0 · regenerated by scripts/generate.py</text>
 </svg>
