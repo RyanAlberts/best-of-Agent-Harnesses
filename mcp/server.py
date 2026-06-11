@@ -46,6 +46,19 @@ def _tokens(text: str) -> set:
     return {w for w in re.findall(r"[a-z0-9+#-]+", text.lower()) if w not in _STOP}
 
 
+def _overlap(q: set, hay: set) -> set:
+    """Query tokens with a match in hay, tolerating inflections: tokens of 4+
+    chars match if either is a prefix of the other (benchmark/benchmarks,
+    evaluate/evaluates)."""
+    hits = set()
+    for w in q:
+        for h in hay:
+            if w == h or (len(w) >= 4 and len(h) >= 4 and (w.startswith(h) or h.startswith(w))):
+                hits.add(w)
+                break
+    return hits
+
+
 def _brief(p: dict, reason: str = "") -> dict:
     out = {
         "name": p["name"],
@@ -83,8 +96,8 @@ def pick_harness(use_case: str, max_complexity: str = "complex",
     # Curated use-case intents are the strongest signal: best word-overlap intent
     # seeds its hand-picked projects to the top, in curated order.
     seeded: dict = {}
-    best = max(d["use_cases"], key=lambda u: len(q & _tokens(u["intent"])), default=None)
-    if best and len(q & _tokens(best["intent"])) >= 2:
+    best = max(d["use_cases"], key=lambda u: len(_overlap(q, _tokens(u["intent"]))), default=None)
+    if best and len(_overlap(q, _tokens(best["intent"]))) >= 2:
         for rank, gid in enumerate(best["picks"]):
             seeded[gid] = (100 - rank, f"curated pick for \"{best['intent']}\"")
 
@@ -98,7 +111,7 @@ def pick_harness(use_case: str, max_complexity: str = "complex",
         if p["github_id"] in seeded:
             score, reason = seeded[p["github_id"]]
         else:
-            overlap = q & _tokens(f"{p['description']} {' '.join(p['tags'])} {p['category_title']}")
+            overlap = _overlap(q, _tokens(f"{p['description']} {' '.join(p['tags'])} {p['category_title']}"))
             if not overlap:
                 continue
             score = len(overlap) * 3 + math.log10(max(p["stars"], 2))
@@ -129,7 +142,7 @@ def search_harnesses(query: str, limit: int = 10) -> str:
     for p in d["projects"]:
         hay = f"{p['name']} {p['github_id']} {p['description']} {' '.join(p['tags'])} {p['category_title']}"
         name_hit = 50 if ql in p["name"].lower() or ql in p["github_id"].lower() else 0
-        overlap = q & _tokens(hay)
+        overlap = _overlap(q, _tokens(hay))
         if not (name_hit or overlap):
             continue
         scored.append((name_hit + len(overlap) * 3 + math.log10(max(p["stars"], 2)), p))
