@@ -232,6 +232,43 @@
       "category_title": "Libraries and SDKs"
     }
   ],
+  "comparisons": [
+    {
+      "slug": "how-to-pick-a-harness",
+      "title": "How to pick a harness",
+      "summary": "Six questions, in order. Each one eliminates most of the list; by the end you should be choosing between two or three projects, not 103. The [use-case index](../README.md#pick-by-use-case), the [landscape charts](../README.md#the-landscape-at-a-glance), and the head-to-head pages do the heavy liftin",
+      "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/comparisons/how-to-pick-a-harness.md",
+      "raw_url": "https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/comparisons/how-to-pick-a-harness.md"
+    },
+    {
+      "slug": "memory-layers",
+      "title": "Agent memory layers: Mem0 vs Letta vs claude-mem",
+      "summary": "\"Add memory to my agent\" hides three different products: a **memory API** you call from any agent (Mem0), an **agent runtime** where memory is the core abstraction (Letta), and a **plugin** that gives one specific harness perfect recall (claude-mem). They're barely competitors — the comparison that ",
+      "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/comparisons/memory-layers.md",
+      "raw_url": "https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/comparisons/memory-layers.md"
+    },
+    {
+      "slug": "multi-agent-orchestration",
+      "title": "Multi-agent orchestration: OpenAI Agents SDK vs CrewAI vs AutoGen vs LangGraph",
+      "summary": "Four very different answers to \"how should multiple agents coordinate?\" — and the differences are architectural, not cosmetic. Picking wrong here is expensive: the coordination model shapes your whole codebase.",
+      "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/comparisons/multi-agent-orchestration.md",
+      "raw_url": "https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/comparisons/multi-agent-orchestration.md"
+    },
+    {
+      "slug": "openclaw-vs-hermes",
+      "title": "OpenClaw vs Hermes: the always-on personal-agent debate",
+      "summary": "The loudest harness argument of 2026. Both are open-source (MIT), self-hosted, always-on personal agents you talk to from chat apps — and they're two of the most-starred projects on this entire list. The flame war treats them as rivals; the architecture says they're opposite design philosophies that",
+      "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/comparisons/openclaw-vs-hermes.md",
+      "raw_url": "https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/comparisons/openclaw-vs-hermes.md"
+    },
+    {
+      "slug": "terminal-coding-agents",
+      "title": "Terminal coding agents: opencode vs Codex vs Gemini CLI vs crush vs goose",
+      "summary": "The most-asked pick in this list: *\"I want a turnkey coding agent in my terminal today.\"* These five are the open(ish)-source field. The closed first-party products (Claude Code, Cursor's agent) aren't list entries, but they define the workflow all five implement: a tool-call loop with file edit, sh",
+      "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/comparisons/terminal-coding-agents.md",
+      "raw_url": "https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/comparisons/terminal-coding-agents.md"
+    }
+  ],
   "projects": [
     {
       "name": "awesome-cursorrules",

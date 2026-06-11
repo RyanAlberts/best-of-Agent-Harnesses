@@ -117,6 +117,10 @@ PR + MERGE (PAT-auth via curl):
     - MOVED repos applied (step 4) and any ARCHIVED/rebrand flags needing
       editorial review
     - FAILED fetches, if any
+    - COMPARISONS FRESHNESS: for each comparisons/*.md, the date of the last
+      commit touching it (git log -1 --format=%cs -- <file>). Flag any page
+      older than 60 days as "needs an editorial review pass" — the star rows
+      auto-patch but the prose claims do not.
     - WEEKLY PULSE: issues and PRs on RyanAlberts/best-of-Agent-Harnesses
       updated in the last 7 days — title + URL each, via
       curl -fsS -H "Authorization: token $GH_TOKEN" \

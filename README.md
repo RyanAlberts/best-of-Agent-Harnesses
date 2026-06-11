@@ -70,7 +70,7 @@ This list is also published in machine-readable form, so coding agents and resea
 
 - [**harnesses.json**](harnesses.json) — every project with category, complexity tier, capability tags, stars, license signal, and a concrete example link, plus the full use-case index.
 - [**llms.txt**](llms.txt) — the entire list in one agent-readable file. Point any agent at the [raw URL](https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/llms.txt).
-- [**MCP server**](mcp/) — `pick_harness`, `search_harnesses`, `get_harness`, and `list_categories` as tools over this data. One-line install (needs [uv](https://docs.astral.sh/uv/)):
+- [**MCP server**](mcp/) — `pick_harness` (with complexity/autonomy/recovery filters), `search_harnesses`, `get_harness`, `list_categories`, plus `list_comparisons`/`get_comparison` for the decision guides. One-line install (needs [uv](https://docs.astral.sh/uv/)):
 
 ```sh
 claude mcp add agent-harnesses -- uv run https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/mcp/server.py

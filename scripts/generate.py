@@ -1032,7 +1032,7 @@ def generate_readme() -> str:
         "",
         "- [**harnesses.json**](harnesses.json) — every project with category, complexity tier, capability tags, stars, license signal, and a concrete example link, plus the full use-case index.",
         "- [**llms.txt**](llms.txt) — the entire list in one agent-readable file. Point any agent at the [raw URL](https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/llms.txt).",
-        "- [**MCP server**](mcp/) — `pick_harness`, `search_harnesses`, `get_harness`, and `list_categories` as tools over this data. One-line install (needs [uv](https://docs.astral.sh/uv/)):",
+        "- [**MCP server**](mcp/) — `pick_harness` (with complexity/autonomy/recovery filters), `search_harnesses`, `get_harness`, `list_categories`, plus `list_comparisons`/`get_comparison` for the decision guides. One-line install (needs [uv](https://docs.astral.sh/uv/)):",
         "",
         "```sh",
         "claude mcp add agent-harnesses -- uv run https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/mcp/server.py",
@@ -1237,6 +1237,26 @@ def oss_signal(marker: str) -> str:
     return "unknown"
 
 
+def comparisons_index() -> list:
+    """Index of comparisons/*.md for harnesses.json — slug, title, and first
+    prose paragraph as summary — so the MCP server can list and fetch the
+    decision guides without hardcoding them."""
+    out = []
+    for f in sorted((REPO_ROOT / "comparisons").glob("*.md")):
+        lines = f.read_text().split("\n")
+        title = next((l[2:].strip() for l in lines if l.startswith("# ")), f.stem)
+        summary = next((l.strip() for l in lines
+                        if l.strip() and not l.startswith(("#", "|", "_", "-", "[", "<", "!"))), "")
+        out.append({
+            "slug": f.stem,
+            "title": title,
+            "summary": summary[:300],
+            "url": f"https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/comparisons/{f.name}",
+            "raw_url": f"https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/comparisons/{f.name}",
+        })
+    return out
+
+
 def generate_harnesses_json() -> str:
     import json
     projects = []
@@ -1280,6 +1300,7 @@ def generate_harnesses_json() -> str:
         },
         "categories": [{"id": c, "title": t, "subtitle": s} for c, t, s in CATEGORIES],
         "use_cases": [{"intent": intent, "picks": ids, "category_title": cat} for intent, ids, cat in USE_CASES],
+        "comparisons": comparisons_index(),
         "projects": projects,
     }
     return json.dumps(doc, indent=2, ensure_ascii=False) + "\n"

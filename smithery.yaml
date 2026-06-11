@@ -1,0 +1,6 @@
+# Smithery (smithery.ai) index entry — lets Smithery host/launch this server.
+startCommand:
+  type: stdio
+  configSchema: {}
+  commandFunction: |-
+    (config) => ({ command: "uv", args: ["run", "mcp/server.py"] })

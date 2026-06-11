@@ -178,6 +178,32 @@ def get_harness(github_id: str) -> str:
 
 
 @mcp.tool()
+def list_comparisons() -> str:
+    """The list's head-to-head decision guides (e.g. "OpenClaw vs Hermes",
+    "How to pick a harness") — slug, title, and summary for each. Fetch the
+    full text of one with get_comparison(slug)."""
+    return json.dumps({"comparisons": data().get("comparisons", [])},
+                      indent=2, ensure_ascii=False)
+
+
+@mcp.tool()
+def get_comparison(slug: str) -> str:
+    """Full markdown of one decision guide by slug (see list_comparisons).
+    Guides cover architecture trade-offs, field reports, and the post-June-2026
+    billing reality — use them when a user is choosing between specific
+    harnesses, not just browsing."""
+    for c in data().get("comparisons", []):
+        if c["slug"] == slug:
+            local = Path(__file__).resolve().parent.parent / "comparisons" / f"{slug}.md"
+            if local.exists():
+                return local.read_text()
+            with urllib.request.urlopen(c["raw_url"], timeout=15) as r:
+                return r.read().decode()
+    return json.dumps({"error": f"unknown slug: {slug}",
+                       "available": [c["slug"] for c in data().get("comparisons", [])]})
+
+
+@mcp.tool()
 def list_categories() -> str:
     """The list's 9 categories and 13 curated use-case intents, with project counts."""
     d = data()
@@ -193,5 +219,9 @@ def list_categories() -> str:
     }, indent=2, ensure_ascii=False)
 
 
-if __name__ == "__main__":
+def main():
     mcp.run()
+
+
+if __name__ == "__main__":
+    main()

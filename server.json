@@ -1,0 +1,21 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+  "name": "io.github.ryanalberts/agent-harnesses",
+  "description": "Harness recommendations from a hand-curated, weekly-rescored list of 110 agent harnesses: pick by use case with complexity/autonomy/recovery filters, search, and head-to-head decision guides (OpenClaw vs Hermes, terminal coding agents, and more).",
+  "repository": {
+    "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registry_type": "pypi",
+      "registry_base_url": "https://pypi.org",
+      "identifier": "agent-harnesses-mcp",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}

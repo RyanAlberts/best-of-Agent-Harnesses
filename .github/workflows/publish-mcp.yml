@@ -1,0 +1,48 @@
+# Publishes the MCP server on tag push (mcp-v*):
+#   1. builds the wheel from mcp/
+#   2. publishes to PyPI via trusted publishing (no token; one-time setup:
+#      pypi.org -> project agent-harnesses-mcp -> add trusted publisher for
+#      this repo + workflow file)
+#   3. publishes server.json to the official MCP registry via GitHub OIDC
+#      (authorizes the io.github.ryanalberts/* namespace automatically)
+# Before tagging: bump the version in BOTH mcp/pyproject.toml and server.json
+# to match the tag (mcp-v0.1.0 -> 0.1.0).
+name: publish-mcp
+
+on:
+  push:
+    tags: ["mcp-v*"]
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: astral-sh/setup-uv@v7
+
+      - name: Check versions match the tag
+        run: |
+          TAG_VERSION="${GITHUB_REF_NAME#mcp-v}"
+          grep -q "^version = \"$TAG_VERSION\"" mcp/pyproject.toml || { echo "mcp/pyproject.toml version != $TAG_VERSION"; exit 1; }
+          grep -q "\"version\": \"$TAG_VERSION\"" server.json || { echo "server.json version != $TAG_VERSION"; exit 1; }
+
+      - name: Build wheel + sdist
+        run: uv build mcp/ --out-dir dist
+
+      - name: Publish to PyPI (trusted publishing)
+        uses: pypa/gh-action-pypi-publish@release/v1
+
+      - name: Install mcp-publisher
+        run: |
+          curl -sL "$(curl -s https://api.github.com/repos/modelcontextprotocol/registry/releases/latest \
+            | grep browser_download_url | grep linux_amd64 | cut -d '"' -f 4)" | tar xz mcp-publisher
+
+      - name: Publish to the official MCP registry
+        run: |
+          ./mcp-publisher login github-oidc
+          ./mcp-publisher publish
