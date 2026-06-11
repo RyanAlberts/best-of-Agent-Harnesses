@@ -16,13 +16,33 @@ import sys
 import urllib.request
 from datetime import datetime
 from pathlib import Path
-from zoneinfo import ZoneInfo
 
 GEN = Path(__file__).resolve().parent / "generate.py"
+
+
+def today_chicago() -> str:
+    """Today's date in America/Chicago. Override with TODAY=YYYY-MM-DD for
+    sandboxes missing tzdata or running Python <3.9."""
+    override = os.environ.get("TODAY", "")
+    if override:
+        if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", override):
+            sys.exit(f"BLOCKED: TODAY={override!r} is not YYYY-MM-DD.")
+        return override
+    try:
+        from zoneinfo import ZoneInfo
+        return datetime.now(ZoneInfo("America/Chicago")).strftime("%Y-%m-%d")
+    except Exception as e:
+        sys.exit(
+            f"BLOCKED: can't resolve America/Chicago ({e!r} — Python <3.9 or no tzdata).\n"
+            "Re-run as: TODAY=YYYY-MM-DD python3 scripts/refresh_stars.py\n"
+            "(use today's date in America/Chicago, not UTC)."
+        )
 
 token = os.environ.get("GH_TOKEN") or os.environ.get("GITHUB_TOKEN")
 if not token:
     sys.exit("BLOCKED: set GH_TOKEN or GITHUB_TOKEN — anonymous rate limit is too low for ~101 repos.")
+
+today = today_chicago()  # resolve early: fail before any API calls, not after
 
 src = GEN.read_text()
 ids = re.findall(r'^\s*"([^"\s]+/[^"\s]+)":\s*\(\d+,', src, re.M)
@@ -60,7 +80,14 @@ for gid in ids:
         src = re.sub(r'("%s":\s*\()\d+(,)' % re.escape(gid), r"\g<1>%d\g<2>" % n, src)
         changed.append((gid, old, n))
 
-today = datetime.now(ZoneInfo("America/Chicago")).strftime("%Y-%m-%d")
+if failed:
+    print("FAILED (old counts kept):")
+    for a, e in failed:
+        print(f"  {a}: {e}")
+    if len(failed) > 5:
+        sys.exit("Too many failures — aborting WITHOUT writing, so a stale rescore "
+                 "can't be stamped with today's date.")
+
 src = re.sub(r'STARS_CAPTURED = "\d{4}-\d{2}-\d{2}"', f'STARS_CAPTURED = "{today}"', src)
 src = re.sub(r"# Star counts captured \d{4}-\d{2}-\d{2}", f"# Star counts captured {today}", src)
 GEN.write_text(src)
@@ -77,9 +104,3 @@ if archived:
     print("ARCHIVED — flag in description or drop per CLAUDE.md curation bar:")
     for a in archived:
         print(f"  {a}")
-if failed:
-    print("FAILED (old counts kept):")
-    for a, e in failed:
-        print(f"  {a}: {e}")
-    if len(failed) > 5:
-        sys.exit("Too many failures — aborting so a partial rescore isn't committed.")

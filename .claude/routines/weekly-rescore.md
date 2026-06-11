@@ -4,6 +4,41 @@
      generation pipeline changes, update this file in the same PR, then paste
      the new prompt into the routine. -->
 
+## First-run smoke test (run once before enabling the full prompt below)
+
+The routines sandbox differs from interactive CC sessions. Paste THIS as the
+routine prompt first, hit "Run now", read the log, then replace it with the
+full prompt. It proves the environment without committing or pushing anything.
+
+    SMOKE TEST for the weekly rescore of RyanAlberts/best-of-Agent-Harnesses.
+    Do NOT commit, push, or open a PR. Goal: prove this sandbox can run the
+    rescore, then report.
+
+    1. Pre-flight: if GH_TOKEN is unset, print BLOCKED and stop.
+    2. cd /home/user/best-of-Agent-Harnesses
+       git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/RyanAlberts/best-of-Agent-Harnesses.git
+       git checkout main && git fetch origin && git reset --hard origin/main
+    3. Environment probes — report each result verbatim:
+       python3 --version
+       python3 -c "from zoneinfo import ZoneInfo; print(ZoneInfo('America/Chicago'))"
+       which git jq curl
+       (If the zoneinfo probe fails, the rescore still works — prefix step 4
+       with TODAY=YYYY-MM-DD, today's date in America/Chicago, and say so.)
+    4. python3 scripts/refresh_stars.py
+    5. python3 scripts/generate.py
+    6. python3 -c "import json; d=json.load(open('harnesses.json')); assert d['meta']['project_count']==len(d['projects']); print('sanity ok:', d['meta']['stars_captured'])"
+    7. git status --porcelain && git diff --stat — confirm only these change:
+       scripts/generate.py, README.md, TAGS.md, projects.yaml, config/header.md,
+       harnesses.json, llms.txt, assets/landscape.svg, comparisons/*.md.
+    8. REPORT: probe results, the refresh_stars summary (counts changed /
+       MOVED / ARCHIVED / FAILED), the diff stat, and a one-line verdict:
+       "SMOKE TEST PASSED — enable the full weekly-rescore prompt" or exactly
+       what failed.
+    9. Discard everything so the real run starts clean:
+       git reset --hard origin/main
+
+## Full prompt
+
 Weekly rescore for RyanAlberts/best-of-Agent-Harnesses. Use today's date in
 America/Chicago — call it TODAY, format YYYY-MM-DD.
 
@@ -31,6 +66,8 @@ are owned by the scripts.
 3. python3 scripts/refresh_stars.py
    - Fetches live star counts for all ~101 repos (uses GH_TOKEN), rewrites
      META inside scripts/generate.py, bumps STARS_CAPTURED to TODAY.
+   - If it BLOCKS on timezone resolution (no tzdata / old Python), re-run as:
+     TODAY=YYYY-MM-DD python3 scripts/refresh_stars.py
    - Prints: top movers, MOVED repos, ARCHIVED repos, FAILED fetches.
      Save this output for the PR body.
    - It exits non-zero on too many failures: stop and report; never commit
