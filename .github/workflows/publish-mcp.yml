@@ -46,7 +46,7 @@ jobs:
         run: |
           url=$(curl -fsS -H "Authorization: Bearer $GH_TOKEN" \
             https://api.github.com/repos/modelcontextprotocol/registry/releases/latest \
-            | grep -o 'https://[^"]*mcp-publisher_linux_amd64\.tar\.gz')
+            | grep -o 'https://[^"]*mcp-publisher_linux_amd64\.tar\.gz' | head -n1)
           test -n "$url" || { echo "could not resolve mcp-publisher download URL"; exit 1; }
           curl -fsSL "$url" | tar xz mcp-publisher
 
