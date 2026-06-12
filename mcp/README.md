@@ -62,4 +62,4 @@ One-time setup, then never again:
 
 Per release: bump the version in `mcp/pyproject.toml` **and** `server.json` (the workflow fails loudly on mismatch), then `git tag mcp-v<version> && git push origin mcp-v<version>`.
 
-Also indexed via [`smithery.yaml`](../smithery.yaml) (submit the repo once at [smithery.ai](https://smithery.ai)); other directories (Glama, PulseMCP, mcpservers.org) crawl the official registry.
+Directories like Glama, PulseMCP, and mcpservers.org crawl the official registry — no per-directory submissions needed. (Smithery's current publish flow takes hosted-HTTP servers or `.mcpb` bundles, not stdio-from-GitHub, so this server isn't listed there by design.)
