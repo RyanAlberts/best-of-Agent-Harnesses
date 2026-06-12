@@ -8,11 +8,11 @@ alwaysApply: true
 
 When creating commits in this workspace (or when instructing the user to commit):
 
-1. **Author email must be `25306145+RyanAlberts@users.noreply.github.com`** so commits count on the GitHub contribution graph for [@RyanAlberts](https://github.com/RyanAlberts).
+1. **Author email must be `25306145+RyanAlberts@users.noreply.github.com`** — GitHub's noreply address for the account. It credits the contribution graph for [@RyanAlberts](https://github.com/RyanAlberts) exactly like a real email, without exposing one. Never commit with a personal email address.
 2. **Author name:** `Ryan Alexander Alberts`
 3. **Before committing**, ensure the repo has:
    - `git config user.email "25306145+RyanAlberts@users.noreply.github.com"`
-   - `git config user.name "Ryan Alexander Alberts"`  
-   (local repo config is fine; do not use university or other emails unless the user explicitly asks.)
+   - `git config user.name "Ryan Alexander Alberts"`
+   (local repo config is fine; do not use personal, university, or other emails.)
 
 4. Do not amend or recommit solely to fix email unless the user requests it—**get it right on the first commit.**

@@ -103,6 +103,7 @@ COMMIT (TZ, signing off, identity overrides):
         -c user.name='Ryan Alexander Alberts' \
         commit -a --author='Ryan Alexander Alberts <25306145+RyanAlberts@users.noreply.github.com>' \
         -m "weekly rescore TODAY"
+    (The noreply address is REQUIRED — never put a personal email in a commit.)
 
 PUSH (PAT-auth via the rewritten origin URL):
 11. git push -u origin weekly-rescore-TODAY
@@ -133,7 +134,8 @@ VERIFY credit:
 14. curl -fsS -H "Authorization: token $GH_TOKEN" \
         https://api.github.com/repos/RyanAlberts/best-of-Agent-Harnesses/commits/main \
         | jq '{sha:.sha, login:.author.login, email:.commit.author.email}'
-    Assert login=="RyanAlberts" and email=="25306145+RyanAlberts@users.noreply.github.com".
+    Assert login=="RyanAlberts" and email ends with "@users.noreply.github.com".
+    A personal email in the author field is a policy violation — report it.
 
 Exit criteria: rescore commit on main with TODAY's actual star counts (not
 just a date bump — refresh_stars.py must report changed counts), credited to

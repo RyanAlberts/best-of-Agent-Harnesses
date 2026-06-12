@@ -9,7 +9,7 @@ description = "MCP server for best-of-Agent-Harnesses: harness recommendations, 
 readme = "README.md"
 requires-python = ">=3.10"
 license = "MIT"
-authors = [{ name = "Ryan Alberts", email = "25306145+RyanAlberts@users.noreply.github.com" }]
+authors = [{ name = "Ryan Alberts" }]
 keywords = ["mcp", "model-context-protocol", "agents", "agent-harness", "llm"]
 dependencies = ["mcp>=1.2"]
 

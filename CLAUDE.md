@@ -5,7 +5,7 @@
 All commits in this repo must be authored as:
 
 - **Name:** `Ryan Alexander Alberts`
-- **Email:** `25306145+RyanAlberts@users.noreply.github.com`
+- **Email:** `25306145+RyanAlberts@users.noreply.github.com` — GitHub's noreply address for the account. It credits the contribution graph exactly like a real email without exposing one. **Never put a personal email address in a commit** (policy change 2026-06-12).
 
 so they count toward [@RyanAlberts](https://github.com/RyanAlberts)'s GitHub contribution graph. Set both author and committer — GitHub matches on author email, but matching the committer too keeps the trailer clean.
 
@@ -21,7 +21,7 @@ git -c user.email='25306145+RyanAlberts@users.noreply.github.com' \
 
 `TZ='America/Chicago'` is required on every commit. The user works from Dallas, TX (CST/CDT) and the contribution graph buckets commits by their local timezone; UTC-stamped commits land on the wrong calendar day. Do not rely on whatever timezone the sandbox happens to be in.
 
-Do not use `noreply@anthropic.com`, `@users.noreply.github.com`, or any university email unless explicitly requested. Get it right on the first commit; don't amend just to fix attribution unless asked.
+Do not use `noreply@anthropic.com` as the author, and never use a personal or university email. Get it right on the first commit; don't amend just to fix attribution unless asked.
 
 ## Branching and pushing (required)
 
@@ -34,7 +34,7 @@ After every push, verify the new commits credit [@RyanAlberts](https://github.co
 1. Call `mcp__github__get_commit` (or `list_commits`).
 2. Assert both:
    - `author.login == "RyanAlberts"` (not `null`)
-   - `commit.author.email == "25306145+RyanAlberts@users.noreply.github.com"` (or `RyanAlberts@users.noreply.github.com` for merge commits the GitHub API itself authored)
+   - `commit.author.email` ends with `@users.noreply.github.com` (the account noreply `25306145+RyanAlberts@...`, or `RyanAlberts@...` for merge commits the GitHub API itself authored). A personal email here is a policy violation — stop and report it.
 3. If `author.login` is `null`, the author email isn't a verified email on the account. Don't silently move on — stop, tell the user the SHA and the bad email, and offer to amend:
    - On a `claude/*` working branch: amend with the canonical email and force-push the working branch.
    - Already on `main`: amend locally, then re-land via the PR-then-self-merge fallback. Never force-push `main`.
