@@ -20,6 +20,7 @@ permissions:
 jobs:
   publish:
     runs-on: ubuntu-latest
+    environment: pypi  # must match the environment name on the PyPI trusted publisher
     steps:
       - uses: actions/checkout@v6
 
