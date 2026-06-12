@@ -37,11 +37,18 @@ jobs:
 
       - name: Publish to PyPI (trusted publishing)
         uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          skip-existing: true  # idempotent re-runs after a downstream step fails
 
       - name: Install mcp-publisher
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          curl -sL "$(curl -s https://api.github.com/repos/modelcontextprotocol/registry/releases/latest \
-            | grep browser_download_url | grep linux_amd64 | cut -d '"' -f 4)" | tar xz mcp-publisher
+          url=$(curl -fsS -H "Authorization: Bearer $GH_TOKEN" \
+            https://api.github.com/repos/modelcontextprotocol/registry/releases/latest \
+            | grep -o 'https://[^"]*mcp-publisher_linux_amd64\.tar\.gz')
+          test -n "$url" || { echo "could not resolve mcp-publisher download URL"; exit 1; }
+          curl -fsSL "$url" | tar xz mcp-publisher
 
       - name: Publish to the official MCP registry
         run: |
