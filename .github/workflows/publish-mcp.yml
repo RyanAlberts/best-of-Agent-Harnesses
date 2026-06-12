@@ -4,7 +4,7 @@
 #      pypi.org -> project agent-harnesses-mcp -> add trusted publisher for
 #      this repo + workflow file)
 #   3. publishes server.json to the official MCP registry via GitHub OIDC
-#      (authorizes the io.github.ryanalberts/* namespace automatically)
+#      (authorizes the io.github.RyanAlberts/* namespace automatically)
 # Before tagging: bump the version in BOTH mcp/pyproject.toml and server.json
 # to match the tag (mcp-v0.1.0 -> 0.1.0).
 name: publish-mcp
