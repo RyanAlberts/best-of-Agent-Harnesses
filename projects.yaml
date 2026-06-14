@@ -109,7 +109,7 @@ projects:
     labels: ["python"]
     category: "coding-agent-products"
   - name: coderClaw
-    github_id: SeanHogg/coderClaw
+    github_id: SeanHogg/BuilderForceAgents
     labels: ["javascript"]
     category: "coding-agent-products"
   - name: Open Interpreter
@@ -125,7 +125,7 @@ projects:
     labels: ["javascript"]
     category: "coding-harness-configs"
   - name: everything-claude-code
-    github_id: affaan-m/everything-claude-code
+    github_id: affaan-m/ECC
     category: "coding-harness-configs"
   - name: superpowers
     github_id: obra/superpowers
@@ -438,7 +438,7 @@ projects:
     labels: ["python"]
     category: "libraries-sdks"
   - name: strands-agents
-    github_id: strands-agents/sdk-python
+    github_id: strands-agents/harness-sdk
     labels: ["python"]
     category: "libraries-sdks"
   - name: openai-agents-js
