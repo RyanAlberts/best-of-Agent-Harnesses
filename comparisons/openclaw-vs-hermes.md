@@ -4,7 +4,7 @@ The loudest harness argument of 2026. Both are open-source (MIT), self-hosted, a
 
 | | [OpenClaw](https://github.com/openclaw/openclaw) | [Hermes](https://github.com/NousResearch/hermes-agent) |
 |---|---|---|
-| ⭐ Stars | 378k | 191k |
+| ⭐ Stars | 379k | 193k |
 | Steward | OpenClaw Foundation (community) | Nous Research |
 | License | MIT | MIT |
 | Core language | TypeScript | Python |
