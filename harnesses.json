@@ -5,7 +5,7 @@
     "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses",
     "license": "CC-BY-SA-4.0",
     "stars_captured": "2026-06-14",
-    "project_count": 110,
+    "project_count": 111,
     "tiers": [
       "super simple",
       "mostly simple",
@@ -1732,6 +1732,32 @@
       "example": {
         "label": "Parallel marketing agents",
         "url": "https://github.com/superagentxai/superagentx/blob/master/examples/agents/parallel_agents.py"
+      }
+    },
+    {
+      "name": "LocalHarness",
+      "github_id": "ahwurm/localharness",
+      "url": "https://github.com/ahwurm/localharness",
+      "description": "Model-agnostic, config-driven (YAML) agent harness built for local LLMs (vLLM/Ollama/LM Studio/llama.cpp); orchestrator → divisions → agents with isolated per-agent memory, deny-first permissions, an event-bus audit trail, and a built-in benchmark for measuring harness changes against your own model.",
+      "category": "frameworks",
+      "category_title": "Frameworks",
+      "stars": 6,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "moderate (YAML-config agent org: orchestrator→divisions→agents; built-in bench + autoresearch loop)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "retry",
+      "recovery_rank": 2,
+      "license_signal": "open-source",
+      "tags": [
+        "local",
+        "yaml",
+        "python"
+      ],
+      "example": {
+        "label": "Quickstart: init + start",
+        "url": "https://github.com/ahwurm/localharness#quick-start"
       }
     },
     {
