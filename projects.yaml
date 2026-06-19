@@ -181,6 +181,10 @@ projects:
     labels: ["python"]
     category: "personal-agent-runtimes"
   # Frameworks
+  - name: LocalHarness
+    github_id: ahwurm/localharness
+    labels: ["python"]
+    category: "frameworks"
   - name: langgraph
     github_id: langchain-ai/langgraph
     labels: ["python"]
