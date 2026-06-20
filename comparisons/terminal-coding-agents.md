@@ -6,7 +6,7 @@ What actually differs between them is the **harness** — the agent loop, provid
 
 | | [opencode](https://github.com/anomalyco/opencode) | [Gemini CLI](https://github.com/google-gemini/gemini-cli) | [Codex](https://github.com/openai/codex) | [goose](https://github.com/aaif-goose/goose) | [crush](https://github.com/charmbracelet/crush) |
 |---|---|---|---|---|---|
-| ⭐ Stars | 174k | 105k | 91k | 49.3k | 25.3k |
+| ⭐ Stars | 176k | 105k | 92.2k | 49.9k | 25.5k |
 | Steward | anomaly (community) | Google (first-party) | OpenAI (first-party) | Linux Foundation AAIF | Charm |
 | License | open source | open source | open source | open source | ⚠️ FSL-1.1-MIT |
 | Core language | TypeScript | TypeScript | Rust | Rust | Go |
