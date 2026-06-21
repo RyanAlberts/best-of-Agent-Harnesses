@@ -19,11 +19,11 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 **Coding agent products (IDEs, CLIs, full suites)**
 
-- [opencode](https://github.com/anomalyco/opencode) — ⭐176k — Open-source terminal coding agent (formerly `sst/opencode`; transferred to anomalyco). The **harness** is a multi-provider tool-call loop (Claude, OpenAI, Gemini, local) with strong plugin and MCP support; the TUI is the shell. 100% OSS, very actively shipped.
+- [opencode](https://github.com/anomalyco/opencode) — ⭐177k — Open-source terminal coding agent (formerly `sst/opencode`; transferred to anomalyco). The **harness** is a multi-provider tool-call loop (Claude, OpenAI, Gemini, local) with strong plugin and MCP support; the TUI is the shell. 100% OSS, very actively shipped.
 - [Gemini CLI](https://github.com/google-gemini/gemini-cli) — ⭐105k — Google's first-party terminal agent for Gemini. The **harness** is the plugin/MCP tool-call loop; the terminal is the shell—Google's parallel to Claude Code / Codex, not just an API.
-- [goose](https://github.com/aaif-goose/goose) — ⭐49.9k — Block-originated Rust agent, now stewarded by the Linux Foundation's Agentic AI Foundation (`aaif-goose/goose`). The **harness** is the MCP/ACP extension model with recipes and provider choice; there's no fixed UI slot—you bolt it into whatever shell you use.
+- [goose](https://github.com/aaif-goose/goose) — ⭐50k — Block-originated Rust agent, now stewarded by the Linux Foundation's Agentic AI Foundation (`aaif-goose/goose`). The **harness** is the MCP/ACP extension model with recipes and provider choice; there's no fixed UI slot—you bolt it into whatever shell you use.
 - [Roo Code](https://github.com/RooCodeInc/Roo-Code) — ⭐24.2k — VS Code/Cursor extension in the Cline lineage. The **harness** is the approval-gated agent with custom modes and a strong MCP story; the IDE is the UI. Popular community fork when you want that workflow without the upstream extension.
-- [claw-code-agent](https://github.com/HarnessLab/claw-code-agent) — ⭐514 — Python reimplementation of the Claude Code agent architecture with zero external dependencies; interactive chat, streaming, plugin runtime, nested agent delegation, cost tracking, MCP transport—portable harness without the Rust/TS toolchain.
+- [claw-code-agent](https://github.com/HarnessLab/claw-code-agent) — ⭐515 — Python reimplementation of the Claude Code agent architecture with zero external dependencies; interactive chat, streaming, plugin runtime, nested agent delegation, cost tracking, MCP transport—portable harness without the Rust/TS toolchain.
 
 **Coding harness configs and SDKs**
 
@@ -31,13 +31,13 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 **Frameworks**
 
-- [browser-use](https://github.com/browser-use/browser-use) — ⭐99.6k — Python layer over Playwright: natural-language goals become browser actions—web-agent loop without hand-rolling MCP or a custom driver for every site.
+- [browser-use](https://github.com/browser-use/browser-use) — ⭐99.9k — Python layer over Playwright: natural-language goals become browser actions—web-agent loop without hand-rolling MCP or a custom driver for every site.
 - [Bee Agent Framework](https://github.com/i-am-bee/beeai-framework) — ⭐3.3k — Python + TypeScript, LF AI–backed; MCP/ACP, workflows, Requirement Agent; the one that pushes "production multi-agent" without LangChain.
 
 **Plugins, MCPs, CLI tools**
 
 - [aider](https://github.com/Aider-AI/aider) — ⭐46.5k — Git-aware CLI pair programmer; edits in-repo, supports multiple models and MCP so agents see version control and tools.
-- [github-mcp-server](https://github.com/github/github-mcp-server) — ⭐30.8k — GitHub's official MCP server (Go): repos, issues, PRs, code search, Actions. Replaces the older community `cyanheads/github-mcp-server` as the canonical way to give agents GitHub access.
+- [github-mcp-server](https://github.com/github/github-mcp-server) — ⭐30.9k — GitHub's official MCP server (Go): repos, issues, PRs, code search, Actions. Replaces the older community `cyanheads/github-mcp-server` as the canonical way to give agents GitHub access.
 - [MCP Python SDK](https://github.com/modelcontextprotocol/python-sdk) — ⭐23.4k — Official SDK to build and consume MCP servers/clients in Python; stdio and SSE transports.
 - [MCP TypeScript SDK](https://github.com/modelcontextprotocol/typescript-sdk) — ⭐12.7k — Official MCP implementation for Node/TS; reference for the protocol.
 - [MCP Inspector](https://github.com/modelcontextprotocol/inspector) — ⭐10.1k — GUI to test and debug MCP servers; inspect tools, resources, and prompts.
@@ -50,7 +50,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 - [pydantic-ai](https://github.com/pydantic/pydantic-ai) — ⭐17.9k — Type-safe Python agents with Pydantic I/O; multi-provider, MCP, Logfire observability, and human-in-the-loop.
 - [strands-agents](https://github.com/strands-agents/harness-sdk) — ⭐6.2k — Model-driven Python SDK; decorators for tools, native MCP, multi-agent; "minimal code" without sacrificing provider choice.
-- [open-harness](https://github.com/MaxGfeller/open-harness) — ⭐569 — TypeScript Agent class on Vercel AI SDK; streaming events, filesystem/bash tools, MCP, and subagent delegation.
+- [open-harness](https://github.com/MaxGfeller/open-harness) — ⭐571 — TypeScript Agent class on Vercel AI SDK; streaming events, filesystem/bash tools, MCP, and subagent delegation.
 
 ---
 
@@ -58,19 +58,19 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 **Coding agent products (IDEs, CLIs, full suites)**
 
-- [OpenHands](https://github.com/OpenHands/OpenHands) — ⭐77.8k — Dockerized software-engineering agent. The **harness** is the bash/editor/browser toolset with micro-agents and event-stream session bridging; Docker is the sandbox. Main OSS choice for teams self-hosting autonomous repo work.
+- [OpenHands](https://github.com/OpenHands/OpenHands) — ⭐77.9k — Dockerized software-engineering agent. The **harness** is the bash/editor/browser toolset with micro-agents and event-stream session bridging; Docker is the sandbox. Main OSS choice for teams self-hosting autonomous repo work.
 - [crush](https://github.com/charmbracelet/crush) — ⭐25.5k — Charm's terminal coding agent (Charm's fork of the original OpenCode). The **harness** is the tool-calling loop with session persistence; the Bubble Tea TUI is the shell.
 
 **Coding harness configs and SDKs**
 
-- [superpowers](https://github.com/obra/superpowers) — ⭐233k — Performance-oriented harness pack for Claude Code, Codex, OpenCode, Cursor: skills, instincts, memory, security, research-first workflows. Treats harness engineering itself as the performance lever.
+- [superpowers](https://github.com/obra/superpowers) — ⭐235k — Performance-oriented harness pack for Claude Code, Codex, OpenCode, Cursor: skills, instincts, memory, security, research-first workflows. Treats harness engineering itself as the performance lever.
 - [SWE-agent](https://github.com/SWE-agent/SWE-agent) — ⭐19.6k — LM-driven harness built for SWE-bench: edit state, command execution, and issue-focused loop—the reference agent stack next to the benchmark itself.
 - [Claude Agent SDK](https://github.com/anthropics/claude-agent-sdk-python) — ⭐7.4k — Official Anthropic SDK (Python + [TypeScript](https://github.com/anthropics/claude-agent-sdk-typescript), [demos](https://github.com/anthropics/claude-agent-sdk-demos), [quickstarts](https://github.com/anthropics/claude-quickstarts)): built-in tools, MCP, long-running coding agents with session bridging.
-- [AutoHarness](https://github.com/aiming-lab/AutoHarness) — ⭐324 — Lightweight governance harness: wraps any LLM client in ~2 lines for automated harness engineering—6–14 step pipeline, YAML constitution, risk-pattern matching, session persistence with cost tracking, multi-agent profiles.
+- [AutoHarness](https://github.com/aiming-lab/AutoHarness) — ⭐326 — Lightweight governance harness: wraps any LLM client in ~2 lines for automated harness engineering—6–14 step pipeline, YAML constitution, risk-pattern matching, session persistence with cost tracking, multi-agent profiles.
 
 **Personal agent runtimes**
 
-- [Hermes](https://github.com/NousResearch/hermes-agent) — ⭐198k — Nous Research's self-improving agent: a learning loop turns experience into reusable skills, builds a persistent user model across sessions, and checkpoints state to disk with rollback; lean enough for a $5 VPS, driven from chat, and model-agnostic (Nous Portal, OpenRouter, OpenAI, or any endpoint).
+- [Hermes](https://github.com/NousResearch/hermes-agent) — ⭐199k — Nous Research's self-improving agent: a learning loop turns experience into reusable skills, builds a persistent user model across sessions, and checkpoints state to disk with rollback; lean enough for a $5 VPS, driven from chat, and model-agnostic (Nous Portal, OpenRouter, OpenAI, or any endpoint).
 - [Eliza](https://github.com/elizaOS/eliza) — ⭐18.6k — Open "agentic operating system" (elizaOS): persistent multi-agent runtime with character files, a plugin ecosystem, and social/platform integrations — the harness behind a large share of autonomous social agents.
 - [Agent Zero](https://github.com/agent0ai/agent-zero) — ⭐18.1k — Organic, prompt-defined personal agent framework: hierarchical sub-agents, persistent memory, browser and code tools, and self-modifying behavior; runs in Docker with a web UI.
 - [OpenHarness (HKUDS)](https://github.com/HKUDS/OpenHarness) — ⭐14k — Open agent harness with a built-in personal agent ("Ohmo") that runs across Feishu, Slack, Telegram, and Discord; core tool-use, skills, memory, multi-agent coordination with auto-compaction for multi-day sessions.
@@ -83,7 +83,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 **Plugins, MCPs, CLI tools**
 
-- [claude-mem](https://github.com/thedotmack/claude-mem) — ⭐83.3k — Claude Code plugin that captures everything an agent does during a session, AI-compresses it (via claude-agent-sdk), and injects the relevant context into future sessions—session-to-session memory as a drop-in.
+- [claude-mem](https://github.com/thedotmack/claude-mem) — ⭐83.5k — Claude Code plugin that captures everything an agent does during a session, AI-compresses it (via claude-agent-sdk), and injects the relevant context into future sessions—session-to-session memory as a drop-in.
 - [agentlog](https://github.com/RyanAlberts/agentlog) — Persistent decision memory for any project: `remember`, `recall`, `reflect`. Single-file Python CLI that stores decisions as JSONL and uses Claude or Gemini to retrieve and synthesize patterns—Karpathy's LLM Wiki concept as a CLI.
 
 **Evaluation and benchmarking harnesses**
@@ -92,7 +92,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 **Libraries and SDKs**
 
-- [Mem0](https://github.com/mem0ai/mem0) — ⭐58.9k — Universal memory layer for AI agents: stores user/org/session memory, retrieves on demand. Apache-2.0; the de-facto memory primitive paired with most harnesses in 2026.
+- [Mem0](https://github.com/mem0ai/mem0) — ⭐59k — Universal memory layer for AI agents: stores user/org/session memory, retrieves on demand. Apache-2.0; the de-facto memory primitive paired with most harnesses in 2026.
 - [Cloudflare Agents](https://github.com/cloudflare/agents) — ⭐5.1k — Persistent, stateful agents on Durable Objects: state, websockets, scheduling, and AI chat baked in. The serverless answer to "where does the agent live?"
 
 ---
@@ -101,8 +101,8 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 **Coding harness configs and SDKs**
 
-- [everything-claude-code](https://github.com/affaan-m/ECC) — ⭐218k — The breakout 2026 harness pack for Claude Code: 28 specialized subagents, 119 reusable skills, 60 slash commands, 34 rules, 20+ automated hooks. Ships a full "AI engineering team" as config.
-- [AutoHarness](https://github.com/aiming-lab/AutoHarness) — ⭐324 — Lightweight governance harness: wraps any LLM client in ~2 lines for automated harness engineering—6–14 step pipeline, YAML constitution, risk-pattern matching, session persistence with cost tracking, multi-agent profiles.
+- [everything-claude-code](https://github.com/affaan-m/ECC) — ⭐219k — The breakout 2026 harness pack for Claude Code: 28 specialized subagents, 119 reusable skills, 60 slash commands, 34 rules, 20+ automated hooks. Ships a full "AI engineering team" as config.
+- [AutoHarness](https://github.com/aiming-lab/AutoHarness) — ⭐326 — Lightweight governance harness: wraps any LLM client in ~2 lines for automated harness engineering—6–14 step pipeline, YAML constitution, risk-pattern matching, session persistence with cost tracking, multi-agent profiles.
 
 **Personal agent runtimes**
 
@@ -131,10 +131,10 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 **Libraries and SDKs**
 
-- [deepagents](https://github.com/langchain-ai/deepagents) — ⭐24.8k — LangChain's Python+TypeScript agent harness on top of LangGraph: planning tool, virtual filesystem, shell sandbox, sub-agent spawning—the "Claude Code-style" harness as a reusable library.
+- [deepagents](https://github.com/langchain-ai/deepagents) — ⭐24.9k — LangChain's Python+TypeScript agent harness on top of LangGraph: planning tool, virtual filesystem, shell sandbox, sub-agent spawning—the "Claude Code-style" harness as a reusable library.
 - [strands-agents](https://github.com/strands-agents/harness-sdk) — ⭐6.2k — Model-driven Python SDK; decorators for tools, native MCP, multi-agent; "minimal code" without sacrificing provider choice.
-- [openai-agents-js](https://github.com/openai/openai-agents-js) — ⭐3.2k — Official OpenAI Agents SDK for Node/TS: handoffs, guardrails, voice; the JS counterpart to openai-agents-python.
-- [open-harness](https://github.com/MaxGfeller/open-harness) — ⭐569 — TypeScript Agent class on Vercel AI SDK; streaming events, filesystem/bash tools, MCP, and subagent delegation.
+- [openai-agents-js](https://github.com/openai/openai-agents-js) — ⭐3.3k — Official OpenAI Agents SDK for Node/TS: handoffs, guardrails, voice; the JS counterpart to openai-agents-python.
+- [open-harness](https://github.com/MaxGfeller/open-harness) — ⭐571 — TypeScript Agent class on Vercel AI SDK; streaming events, filesystem/bash tools, MCP, and subagent delegation.
 
 ---
 
@@ -159,7 +159,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [inspect_ai](https://github.com/UKGovernmentBEIS/inspect_ai) — ⭐2.2k — Inspect AI core: composable eval tasks, sandboxes, scorers, and multi-model runs; the framework behind inspect_evals, not just the task bundle.
 - [WebVoyager](https://github.com/MinorJerry/WebVoyager) — ⭐1.1k — End-to-end web agent with LMMs: screenshots + actions on real sites; benchmark on 15 sites, GPT-4V for automatic eval.
 - [SWE-Gym](https://github.com/SWE-Gym/SWE-Gym) — ⭐694 — Training and evaluation for SWE agents and verifiers (ICML 2025).
-- [inspect_evals](https://github.com/UKGovernmentBEIS/inspect_evals) — ⭐546 — UK AISI/Arcadia/Vector: GAIA and other evals in Inspect AI; level 1–3, sandboxed, tool-calling solvers.
+- [inspect_evals](https://github.com/UKGovernmentBEIS/inspect_evals) — ⭐547 — UK AISI/Arcadia/Vector: GAIA and other evals in Inspect AI; level 1–3, sandboxed, tool-calling solvers.
 - [arc-agi-benchmarking](https://github.com/arcprize/arc-agi-benchmarking) — ⭐350 — Runner for ARC-AGI: multi-provider (OpenAI, Anthropic, Gemini, etc.), rate limits, retries, and scoring.
 - [AgencyBench](https://github.com/GAIR-NLP/AgencyBench) — ⭐87 — Long-horizon agent benchmark: 32 scenarios, 138 tasks, ~1M tokens and ~90 tool calls; Docker sandbox and rubric-based + LLM judges.
 
@@ -173,7 +173,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 **Libraries and SDKs**
 
-- [openai-agents-js](https://github.com/openai/openai-agents-js) — ⭐3.2k — Official OpenAI Agents SDK for Node/TS: handoffs, guardrails, voice; the JS counterpart to openai-agents-python.
+- [openai-agents-js](https://github.com/openai/openai-agents-js) — ⭐3.3k — Official OpenAI Agents SDK for Node/TS: handoffs, guardrails, voice; the JS counterpart to openai-agents-python.
 
 ---
 
@@ -193,7 +193,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 **Coding agent products (IDEs, CLIs, full suites)**
 
-- [OpenHands](https://github.com/OpenHands/OpenHands) — ⭐77.8k — Dockerized software-engineering agent. The **harness** is the bash/editor/browser toolset with micro-agents and event-stream session bridging; Docker is the sandbox. Main OSS choice for teams self-hosting autonomous repo work.
+- [OpenHands](https://github.com/OpenHands/OpenHands) — ⭐77.9k — Dockerized software-engineering agent. The **harness** is the bash/editor/browser toolset with micro-agents and event-stream session bridging; Docker is the sandbox. Main OSS choice for teams self-hosting autonomous repo work.
 
 **Personal agent runtimes**
 
@@ -201,7 +201,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 **Frameworks**
 
-- [browser-use](https://github.com/browser-use/browser-use) — ⭐99.6k — Python layer over Playwright: natural-language goals become browser actions—web-agent loop without hand-rolling MCP or a custom driver for every site.
+- [browser-use](https://github.com/browser-use/browser-use) — ⭐99.9k — Python layer over Playwright: natural-language goals become browser actions—web-agent loop without hand-rolling MCP or a custom driver for every site.
 
 **Plugins, MCPs, CLI tools**
 
@@ -213,8 +213,8 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 **Coding agent products (IDEs, CLIs, full suites)**
 
-- [Codex](https://github.com/openai/codex) — ⭐92.2k — OpenAI's terminal coding agent. The **harness** is the sandboxed tool-call loop with multi-provider support; the CLI is the shell. Reference implementation for "official CLI that ships code."
-- [OpenHands](https://github.com/OpenHands/OpenHands) — ⭐77.8k — Dockerized software-engineering agent. The **harness** is the bash/editor/browser toolset with micro-agents and event-stream session bridging; Docker is the sandbox. Main OSS choice for teams self-hosting autonomous repo work.
+- [Codex](https://github.com/openai/codex) — ⭐92.4k — OpenAI's terminal coding agent. The **harness** is the sandboxed tool-call loop with multi-provider support; the CLI is the shell. Reference implementation for "official CLI that ships code."
+- [OpenHands](https://github.com/OpenHands/OpenHands) — ⭐77.9k — Dockerized software-engineering agent. The **harness** is the bash/editor/browser toolset with micro-agents and event-stream session bridging; Docker is the sandbox. Main OSS choice for teams self-hosting autonomous repo work.
 
 **Personal agent runtimes**
 
@@ -234,7 +234,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [SWE-bench](https://github.com/SWE-bench/SWE-bench) — ⭐5.2k — LMs resolve real GitHub issues; Docker harness, instance IDs; standard for code-agent evals.
 - [AgentBench](https://github.com/THUDM/AgentBench) — ⭐3.5k — ICLR'24 benchmark: agents across AlfWorld, DB, knowledge graphs, OS, webshop; Docker Compose, function-calling interface.
 - [inspect_ai](https://github.com/UKGovernmentBEIS/inspect_ai) — ⭐2.2k — Inspect AI core: composable eval tasks, sandboxes, scorers, and multi-model runs; the framework behind inspect_evals, not just the task bundle.
-- [inspect_evals](https://github.com/UKGovernmentBEIS/inspect_evals) — ⭐546 — UK AISI/Arcadia/Vector: GAIA and other evals in Inspect AI; level 1–3, sandboxed, tool-calling solvers.
+- [inspect_evals](https://github.com/UKGovernmentBEIS/inspect_evals) — ⭐547 — UK AISI/Arcadia/Vector: GAIA and other evals in Inspect AI; level 1–3, sandboxed, tool-calling solvers.
 - [AgencyBench](https://github.com/GAIR-NLP/AgencyBench) — ⭐87 — Long-horizon agent benchmark: 32 scenarios, 138 tasks, ~1M tokens and ~90 tool calls; Docker sandbox and rubric-based + LLM judges.
 - [SUPER](https://github.com/allenai/super-benchmark) — ⭐53 — Agents that set up and run ML/NLP from GitHub repos; 45 expert problems, 152 masked tasks, 602 AutoGen tasks; Docker-based.
 
@@ -243,7 +243,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [Daytona](https://github.com/daytonaio/daytona) — ⭐72.4k — Elastic dev environments for AI-generated code: workspaces, Git, previews—infra harness between "the model wrote a patch" and "it ran in a real machine."
 - [Composio](https://github.com/ComposioHQ/composio) — ⭐28.9k — 1,000+ toolkits with auth, tool search, and a sandboxed workbench—drop-in tool layer so agents stop reinventing OAuth + integrations. Python and TypeScript.
 - [smolagents](https://github.com/huggingface/smolagents) — ⭐27.9k — Code-as-action agents: model outputs Python executed in sandbox (E2B, Modal, etc.); ~1k LOC core.
-- [deepagents](https://github.com/langchain-ai/deepagents) — ⭐24.8k — LangChain's Python+TypeScript agent harness on top of LangGraph: planning tool, virtual filesystem, shell sandbox, sub-agent spawning—the "Claude Code-style" harness as a reusable library.
+- [deepagents](https://github.com/langchain-ai/deepagents) — ⭐24.9k — LangChain's Python+TypeScript agent harness on top of LangGraph: planning tool, virtual filesystem, shell sandbox, sub-agent spawning—the "Claude Code-style" harness as a reusable library.
 - [E2B](https://github.com/e2b-dev/E2B) — ⭐12.7k — Firecracker sandboxes for executing agent-generated code; the hosted isolation layer many tool-calling demos use instead of running arbitrary LLM output on your laptop.
 
 ---
@@ -254,7 +254,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 - [langflow](https://github.com/langflow-ai/langflow) — ⭐150k — Low-code UI to build and deploy LangChain/LangGraph flows; visual DAG editor and one-click run.
 - [Dify](https://github.com/langgenius/dify) — ⭐146k — One-stop LLM app platform: visual workflows, RAG pipeline, 50+ tools, model management; "ship from prototype to prod" in a single UI.
-- [Flowise](https://github.com/FlowiseAI/Flowise) — ⭐53.7k — Drag-and-drop LangChain UI; deploy flows without code. The low-code sibling to Langflow, with a different component and hosting story.
+- [Flowise](https://github.com/FlowiseAI/Flowise) — ⭐53.9k — Drag-and-drop LangChain UI; deploy flows without code. The low-code sibling to Langflow, with a different component and hosting story.
 - [botpress](https://github.com/botpress/botpress) — ⭐14.7k — Visual bot builder and runtime; multi-channel, open-source alternative to commercial bot platforms.
 
 ---
@@ -293,13 +293,13 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 **Multi-agent and orchestration**
 
-- [AgentRL](https://github.com/THUDM/AgentRL) — ⭐301 — Multitask, multiturn RL for LLM agents; Ray-based scaling, rollout/actor workers—for teams that want to train agents, not just run them.
+- [AgentRL](https://github.com/THUDM/AgentRL) — ⭐302 — Multitask, multiturn RL for LLM agents; Ray-based scaling, rollout/actor workers—for teams that want to train agents, not just run them.
 
 **Evaluation and benchmarking harnesses**
 
 - [Agent Lightning](https://github.com/microsoft/agent-lightning) — ⭐17.3k — Microsoft's training-oriented harness: optimization loops for agent behavior—when you need to improve policies over rollouts, not only score a fixed prompt.
 - [SWE-Gym](https://github.com/SWE-Gym/SWE-Gym) — ⭐694 — Training and evaluation for SWE agents and verifiers (ICML 2025).
-- [swe-smith](https://github.com/SWE-bench/SWE-smith) — ⭐680 — Data generation for SWE agents; 50k+ instances across 128 repos; used for SWE-agent-LM training.
+- [swe-smith](https://github.com/SWE-bench/SWE-smith) — ⭐681 — Data generation for SWE agents; 50k+ instances across 128 repos; used for SWE-agent-LM training.
 
 ---
 
@@ -316,7 +316,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 **Frameworks**
 
 - [n8n](https://github.com/n8n-io/n8n) — ⭐193k — Fair-code workflow engine with 400+ nodes and native AI nodes; the self-hosted Zapier that actually does agents and LangChain.
-- [langgraph](https://github.com/langchain-ai/langgraph) — ⭐35.2k — State-machine graphs over LLM steps; checkpointing, human-in-the-loop, and durable execution so workflows survive restarts.
+- [langgraph](https://github.com/langchain-ai/langgraph) — ⭐35.3k — State-machine graphs over LLM steps; checkpointing, human-in-the-loop, and durable execution so workflows survive restarts.
 - [R2R](https://github.com/SciPhi-AI/R2R) — ⭐7.9k — RAG-first: hybrid search, knowledge graphs, multimodal; the framework for "production RAG" when you care more about retrieval than chat UI.
 
 **Multi-agent and orchestration**
@@ -354,16 +354,16 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 **Coding agent products (IDEs, CLIs, full suites)**
 
-- [opencode](https://github.com/anomalyco/opencode) — ⭐176k — Open-source terminal coding agent (formerly `sst/opencode`; transferred to anomalyco). The **harness** is a multi-provider tool-call loop (Claude, OpenAI, Gemini, local) with strong plugin and MCP support; the TUI is the shell. 100% OSS, very actively shipped.
-- [Codex](https://github.com/openai/codex) — ⭐92.2k — OpenAI's terminal coding agent. The **harness** is the sandboxed tool-call loop with multi-provider support; the CLI is the shell. Reference implementation for "official CLI that ships code."
+- [opencode](https://github.com/anomalyco/opencode) — ⭐177k — Open-source terminal coding agent (formerly `sst/opencode`; transferred to anomalyco). The **harness** is a multi-provider tool-call loop (Claude, OpenAI, Gemini, local) with strong plugin and MCP support; the TUI is the shell. 100% OSS, very actively shipped.
+- [Codex](https://github.com/openai/codex) — ⭐92.4k — OpenAI's terminal coding agent. The **harness** is the sandboxed tool-call loop with multi-provider support; the CLI is the shell. Reference implementation for "official CLI that ships code."
 
 **Coding harness configs and SDKs**
 
-- [AutoHarness](https://github.com/aiming-lab/AutoHarness) — ⭐324 — Lightweight governance harness: wraps any LLM client in ~2 lines for automated harness engineering—6–14 step pipeline, YAML constitution, risk-pattern matching, session persistence with cost tracking, multi-agent profiles.
+- [AutoHarness](https://github.com/aiming-lab/AutoHarness) — ⭐326 — Lightweight governance harness: wraps any LLM client in ~2 lines for automated harness engineering—6–14 step pipeline, YAML constitution, risk-pattern matching, session persistence with cost tracking, multi-agent profiles.
 
 **Personal agent runtimes**
 
-- [Hermes](https://github.com/NousResearch/hermes-agent) — ⭐198k — Nous Research's self-improving agent: a learning loop turns experience into reusable skills, builds a persistent user model across sessions, and checkpoints state to disk with rollback; lean enough for a $5 VPS, driven from chat, and model-agnostic (Nous Portal, OpenRouter, OpenAI, or any endpoint).
+- [Hermes](https://github.com/NousResearch/hermes-agent) — ⭐199k — Nous Research's self-improving agent: a learning loop turns experience into reusable skills, builds a persistent user model across sessions, and checkpoints state to disk with rollback; lean enough for a $5 VPS, driven from chat, and model-agnostic (Nous Portal, OpenRouter, OpenAI, or any endpoint).
 
 **Evaluation and benchmarking harnesses**
 
@@ -371,7 +371,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 **Libraries and SDKs**
 
-- [LiteLLM](https://github.com/BerriAI/litellm) — ⭐50.9k — One interface to 100+ LLMs; routing, caching, budgets. Not an agent framework—the pipe every agent framework uses.
+- [LiteLLM](https://github.com/BerriAI/litellm) — ⭐51k — One interface to 100+ LLMs; routing, caching, budgets. Not an agent framework—the pipe every agent framework uses.
 - [vercel/ai](https://github.com/vercel/ai) — ⭐25k — React and Node SDK for streaming, tool calls, and agent-style UIs; provider-agnostic.
 - [pydantic-ai](https://github.com/pydantic/pydantic-ai) — ⭐17.9k — Type-safe Python agents with Pydantic I/O; multi-provider, MCP, Logfire observability, and human-in-the-loop.
 
@@ -381,9 +381,9 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 **Coding agent products (IDEs, CLIs, full suites)**
 
-- [opencode](https://github.com/anomalyco/opencode) — ⭐176k — Open-source terminal coding agent (formerly `sst/opencode`; transferred to anomalyco). The **harness** is a multi-provider tool-call loop (Claude, OpenAI, Gemini, local) with strong plugin and MCP support; the TUI is the shell. 100% OSS, very actively shipped.
+- [opencode](https://github.com/anomalyco/opencode) — ⭐177k — Open-source terminal coding agent (formerly `sst/opencode`; transferred to anomalyco). The **harness** is a multi-provider tool-call loop (Claude, OpenAI, Gemini, local) with strong plugin and MCP support; the TUI is the shell. 100% OSS, very actively shipped.
 - [Gemini CLI](https://github.com/google-gemini/gemini-cli) — ⭐105k — Google's first-party terminal agent for Gemini. The **harness** is the plugin/MCP tool-call loop; the terminal is the shell—Google's parallel to Claude Code / Codex, not just an API.
-- [Codex](https://github.com/openai/codex) — ⭐92.2k — OpenAI's terminal coding agent. The **harness** is the sandboxed tool-call loop with multi-provider support; the CLI is the shell. Reference implementation for "official CLI that ships code."
+- [Codex](https://github.com/openai/codex) — ⭐92.4k — OpenAI's terminal coding agent. The **harness** is the sandboxed tool-call loop with multi-provider support; the CLI is the shell. Reference implementation for "official CLI that ships code."
 - [Open Interpreter](https://github.com/openinterpreter/openinterpreter) — ⭐64.1k — Lightweight terminal coding agent oriented to open models (DeepSeek, Kimi, Qwen). The **harness** is a code-execution loop — the model writes code, the harness executes it with confirmation gates; the CLI is the shell. The original "let the LLM run code on my machine" project, reborn for open weights.
 - [crush](https://github.com/charmbracelet/crush) — ⭐25.5k — Charm's terminal coding agent (Charm's fork of the original OpenCode). The **harness** is the tool-calling loop with session persistence; the Bubble Tea TUI is the shell.
 
@@ -407,17 +407,17 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 **Coding agent products (IDEs, CLIs, full suites)**
 
-- [Cline](https://github.com/cline/cline) — ⭐63.5k — VS Code extension whose **harness** is a plan-then-act loop with per-step human approval and cost transparency; the VS Code integration is the UI shell. Open-source counterweight to Cursor.
+- [Cline](https://github.com/cline/cline) — ⭐63.6k — VS Code extension whose **harness** is a plan-then-act loop with per-step human approval and cost transparency; the VS Code integration is the UI shell. Open-source counterweight to Cursor.
 - [Roo Code](https://github.com/RooCodeInc/Roo-Code) — ⭐24.2k — VS Code/Cursor extension in the Cline lineage. The **harness** is the approval-gated agent with custom modes and a strong MCP story; the IDE is the UI. Popular community fork when you want that workflow without the upstream extension.
 - [coderClaw](https://github.com/SeanHogg/BuilderForceAgents) — ⭐3 — Self-hosted multi-role coding system (Creator, Reviewer, Test, Refactor, etc.) with AST and semantic maps; IDE-agnostic, chat-channel triggers.
 
 **Coding harness configs and SDKs**
 
-- [superpowers](https://github.com/obra/superpowers) — ⭐233k — Performance-oriented harness pack for Claude Code, Codex, OpenCode, Cursor: skills, instincts, memory, security, research-first workflows. Treats harness engineering itself as the performance lever.
+- [superpowers](https://github.com/obra/superpowers) — ⭐235k — Performance-oriented harness pack for Claude Code, Codex, OpenCode, Cursor: skills, instincts, memory, security, research-first workflows. Treats harness engineering itself as the performance lever.
 
 **Plugins, MCPs, CLI tools**
 
-- [continue](https://github.com/continuedev/continue) — ⭐34.1k — Open-source IDE extension (VS Code, JetBrains); in-editor completion and chat with local or API models.
+- [continue](https://github.com/continuedev/continue) — ⭐34.2k — Open-source IDE extension (VS Code, JetBrains); in-editor completion and chat with local or API models.
 
 ---
 
@@ -425,7 +425,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 **Coding agent products (IDEs, CLIs, full suites)**
 
-- [opencode](https://github.com/anomalyco/opencode) — ⭐176k — Open-source terminal coding agent (formerly `sst/opencode`; transferred to anomalyco). The **harness** is a multi-provider tool-call loop (Claude, OpenAI, Gemini, local) with strong plugin and MCP support; the TUI is the shell. 100% OSS, very actively shipped.
+- [opencode](https://github.com/anomalyco/opencode) — ⭐177k — Open-source terminal coding agent (formerly `sst/opencode`; transferred to anomalyco). The **harness** is a multi-provider tool-call loop (Claude, OpenAI, Gemini, local) with strong plugin and MCP support; the TUI is the shell. 100% OSS, very actively shipped.
 - [crush](https://github.com/charmbracelet/crush) — ⭐25.5k — Charm's terminal coding agent (Charm's fork of the original OpenCode). The **harness** is the tool-calling loop with session persistence; the Bubble Tea TUI is the shell.
 
 ---
@@ -434,8 +434,8 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 **Coding agent products (IDEs, CLIs, full suites)**
 
-- [goose](https://github.com/aaif-goose/goose) — ⭐49.9k — Block-originated Rust agent, now stewarded by the Linux Foundation's Agentic AI Foundation (`aaif-goose/goose`). The **harness** is the MCP/ACP extension model with recipes and provider choice; there's no fixed UI slot—you bolt it into whatever shell you use.
-- [claw-code-agent](https://github.com/HarnessLab/claw-code-agent) — ⭐514 — Python reimplementation of the Claude Code agent architecture with zero external dependencies; interactive chat, streaming, plugin runtime, nested agent delegation, cost tracking, MCP transport—portable harness without the Rust/TS toolchain.
+- [goose](https://github.com/aaif-goose/goose) — ⭐50k — Block-originated Rust agent, now stewarded by the Linux Foundation's Agentic AI Foundation (`aaif-goose/goose`). The **harness** is the MCP/ACP extension model with recipes and provider choice; there's no fixed UI slot—you bolt it into whatever shell you use.
+- [claw-code-agent](https://github.com/HarnessLab/claw-code-agent) — ⭐515 — Python reimplementation of the Claude Code agent architecture with zero external dependencies; interactive chat, streaming, plugin runtime, nested agent delegation, cost tracking, MCP transport—portable harness without the Rust/TS toolchain.
 
 ---
 
@@ -448,9 +448,9 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 **Coding agent products (IDEs, CLIs, full suites)**
 
-- [OpenHands](https://github.com/OpenHands/OpenHands) — ⭐77.8k — Dockerized software-engineering agent. The **harness** is the bash/editor/browser toolset with micro-agents and event-stream session bridging; Docker is the sandbox. Main OSS choice for teams self-hosting autonomous repo work.
+- [OpenHands](https://github.com/OpenHands/OpenHands) — ⭐77.9k — Dockerized software-engineering agent. The **harness** is the bash/editor/browser toolset with micro-agents and event-stream session bridging; Docker is the sandbox. Main OSS choice for teams self-hosting autonomous repo work.
 - [Open Interpreter](https://github.com/openinterpreter/openinterpreter) — ⭐64.1k — Lightweight terminal coding agent oriented to open models (DeepSeek, Kimi, Qwen). The **harness** is a code-execution loop — the model writes code, the harness executes it with confirmation gates; the CLI is the shell. The original "let the LLM run code on my machine" project, reborn for open weights.
-- [claw-code-agent](https://github.com/HarnessLab/claw-code-agent) — ⭐514 — Python reimplementation of the Claude Code agent architecture with zero external dependencies; interactive chat, streaming, plugin runtime, nested agent delegation, cost tracking, MCP transport—portable harness without the Rust/TS toolchain.
+- [claw-code-agent](https://github.com/HarnessLab/claw-code-agent) — ⭐515 — Python reimplementation of the Claude Code agent architecture with zero external dependencies; interactive chat, streaming, plugin runtime, nested agent delegation, cost tracking, MCP transport—portable harness without the Rust/TS toolchain.
 
 **Coding harness configs and SDKs**
 
@@ -458,11 +458,11 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [SWE-agent](https://github.com/SWE-agent/SWE-agent) — ⭐19.6k — LM-driven harness built for SWE-bench: edit state, command execution, and issue-focused loop—the reference agent stack next to the benchmark itself.
 - [Claude Agent SDK](https://github.com/anthropics/claude-agent-sdk-python) — ⭐7.4k — Official Anthropic SDK (Python + [TypeScript](https://github.com/anthropics/claude-agent-sdk-typescript), [demos](https://github.com/anthropics/claude-agent-sdk-demos), [quickstarts](https://github.com/anthropics/claude-quickstarts)): built-in tools, MCP, long-running coding agents with session bridging.
 - [RepoMaster](https://github.com/QuantaAlpha/RepoMaster) — ⭐529 — Repo-scoped research harness: builds function-call and module-dependency graphs to explore only what's needed; large relative gains on MLE-bench and GitTaskBench with lower token use.
-- [AutoHarness](https://github.com/aiming-lab/AutoHarness) — ⭐324 — Lightweight governance harness: wraps any LLM client in ~2 lines for automated harness engineering—6–14 step pipeline, YAML constitution, risk-pattern matching, session persistence with cost tracking, multi-agent profiles.
+- [AutoHarness](https://github.com/aiming-lab/AutoHarness) — ⭐326 — Lightweight governance harness: wraps any LLM client in ~2 lines for automated harness engineering—6–14 step pipeline, YAML constitution, risk-pattern matching, session persistence with cost tracking, multi-agent profiles.
 
 **Personal agent runtimes**
 
-- [Hermes](https://github.com/NousResearch/hermes-agent) — ⭐198k — Nous Research's self-improving agent: a learning loop turns experience into reusable skills, builds a persistent user model across sessions, and checkpoints state to disk with rollback; lean enough for a $5 VPS, driven from chat, and model-agnostic (Nous Portal, OpenRouter, OpenAI, or any endpoint).
+- [Hermes](https://github.com/NousResearch/hermes-agent) — ⭐199k — Nous Research's self-improving agent: a learning loop turns experience into reusable skills, builds a persistent user model across sessions, and checkpoints state to disk with rollback; lean enough for a $5 VPS, driven from chat, and model-agnostic (Nous Portal, OpenRouter, OpenAI, or any endpoint).
 - [Khoj](https://github.com/khoj-ai/khoj) — ⭐35.2k — Self-hostable "AI second brain": answers over your docs and the web, custom agents, scheduled automations, and multi-client reach (web, Obsidian, Emacs, WhatsApp). A personal-agent harness with retrieval at the core.
 - [Agent Zero](https://github.com/agent0ai/agent-zero) — ⭐18.1k — Organic, prompt-defined personal agent framework: hierarchical sub-agents, persistent memory, browser and code tools, and self-modifying behavior; runs in Docker with a web UI.
 - [AIlice](https://github.com/myshell-ai/AIlice) — ⭐1.4k — Fully autonomous general-purpose agent; one binary, Docker-ready, for when you want "set goal and walk away" without a framework.
@@ -473,10 +473,10 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [langflow](https://github.com/langflow-ai/langflow) — ⭐150k — Low-code UI to build and deploy LangChain/LangGraph flows; visual DAG editor and one-click run.
 - [Dify](https://github.com/langgenius/dify) — ⭐146k — One-stop LLM app platform: visual workflows, RAG pipeline, 50+ tools, model management; "ship from prototype to prod" in a single UI.
 - [langchain](https://github.com/langchain-ai/langchain) — ⭐140k — Chains, tools, retrievers, and agents; the usual entry point for "add tools to an LLM" in Python/JS.
-- [browser-use](https://github.com/browser-use/browser-use) — ⭐99.6k — Python layer over Playwright: natural-language goals become browser actions—web-agent loop without hand-rolling MCP or a custom driver for every site.
+- [browser-use](https://github.com/browser-use/browser-use) — ⭐99.9k — Python layer over Playwright: natural-language goals become browser actions—web-agent loop without hand-rolling MCP or a custom driver for every site.
 - [llama-index](https://github.com/run-llama/llama_index) — ⭐50.2k — Data-centric: indexing, RAG, and query engines; agent abstractions sit on top of your data pipelines.
 - [agno](https://github.com/agno-agi/agno) — ⭐40.8k — Python agents with memory, knowledge bases, tools, and structured outputs; continues the PhiData-era product line under the Agno name—production apps, evals, and pipelines.
-- [langgraph](https://github.com/langchain-ai/langgraph) — ⭐35.2k — State-machine graphs over LLM steps; checkpointing, human-in-the-loop, and durable execution so workflows survive restarts.
+- [langgraph](https://github.com/langchain-ai/langgraph) — ⭐35.3k — State-machine graphs over LLM steps; checkpointing, human-in-the-loop, and durable execution so workflows survive restarts.
 - [semantic-kernel](https://github.com/microsoft/semantic-kernel) — ⭐28.2k — Microsoft's plugin and planner layer for LLMs; C#, Python, Java; strong on enterprise auth and orchestration.
 - [letta](https://github.com/letta-ai/letta) — ⭐23.4k — Python agent runtime with tool use and control flow; lean API; stateful agents with long-horizon memory.
 - [rasa](https://github.com/RasaHQ/rasa) — ⭐21.2k — Conversational AI stack (NLU, dialogue, actions); long-standing OSS choice for chat and voice bots.
@@ -491,12 +491,12 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 - [MetaGPT](https://github.com/FoundationAgents/MetaGPT) — ⭐68.9k — The "AI software company" multi-agent framework: role-played PM, architect, and engineer agents turn a one-line requirement into specs, designs, and code along an SOP assembly line. The landmark of the genre; development pace has slowed in 2026.
 - [autogen](https://github.com/microsoft/autogen) — ⭐59.1k — Conversable agents and group chats; code execution and human-in-the-loop; Microsoft origin, AG2 ecosystem.
-- [crewAI](https://github.com/crewAIInc/crewAI) — ⭐54k — Role-based agents (roles, goals, backstories) in Crews; Flows add event-driven and hierarchical control for production.
+- [crewAI](https://github.com/crewAIInc/crewAI) — ⭐54.1k — Role-based agents (roles, goals, backstories) in Crews; Flows add event-driven and hierarchical control for production.
 - [ChatDev](https://github.com/OpenBMB/ChatDev) — ⭐33.5k — Multi-agent software-company simulation (CEO, CTO, programmer, tester) built on chat chains with communicative dehallucination; ChatDev 2.0 continues the line. MetaGPT's conversational sibling.
 - [openai-agents-python](https://github.com/openai/openai-agents-python) — ⭐27.3k — Handoffs, guardrails, and multi-LLM routing; minimal surface so you own the loop.
 - [Microsoft Agent Framework](https://github.com/microsoft/agent-framework) — ⭐11.5k — Microsoft's convergence of AutoGen and Semantic Kernel: build, orchestrate, and deploy agents and multi-agent workflows in Python and .NET, with graph-based workflows and checkpointing — the designated successor harness for both lines.
 - [PraisonAI](https://github.com/MervinPraison/PraisonAI) — ⭐8.2k — Autonomous multi-agent teams with a single entry point; emphasis on minimal config.
-- [AgentRL](https://github.com/THUDM/AgentRL) — ⭐301 — Multitask, multiturn RL for LLM agents; Ray-based scaling, rollout/actor workers—for teams that want to train agents, not just run them.
+- [AgentRL](https://github.com/THUDM/AgentRL) — ⭐302 — Multitask, multiturn RL for LLM agents; Ray-based scaling, rollout/actor workers—for teams that want to train agents, not just run them.
 
 **Plugins, MCPs, CLI tools**
 
@@ -512,7 +512,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [inspect_ai](https://github.com/UKGovernmentBEIS/inspect_ai) — ⭐2.2k — Inspect AI core: composable eval tasks, sandboxes, scorers, and multi-model runs; the framework behind inspect_evals, not just the task bundle.
 - [WebArena](https://github.com/web-arena-x/webarena) — ⭐1.5k — Realistic web env (e.g. e‑commerce, CMS, dev tools); 812 tasks; measures end-to-end web agent success.
 - [SWE-Gym](https://github.com/SWE-Gym/SWE-Gym) — ⭐694 — Training and evaluation for SWE agents and verifiers (ICML 2025).
-- [swe-smith](https://github.com/SWE-bench/SWE-smith) — ⭐680 — Data generation for SWE agents; 50k+ instances across 128 repos; used for SWE-agent-LM training.
+- [swe-smith](https://github.com/SWE-bench/SWE-smith) — ⭐681 — Data generation for SWE agents; 50k+ instances across 128 repos; used for SWE-agent-LM training.
 - [arc-agi-benchmarking](https://github.com/arcprize/arc-agi-benchmarking) — ⭐350 — Runner for ARC-AGI: multi-provider (OpenAI, Anthropic, Gemini, etc.), rate limits, retries, and scoring.
 - [AgencyBench](https://github.com/GAIR-NLP/AgencyBench) — ⭐87 — Long-horizon agent benchmark: 32 scenarios, 138 tasks, ~1M tokens and ~90 tool calls; Docker sandbox and rubric-based + LLM judges.
 - [letta-evals](https://github.com/letta-ai/letta-evals) — ⭐72 — Eval harness for stateful Letta agents; configurable suites and grading (LLM or rule-based) so you can measure what you ship.
@@ -524,11 +524,11 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 **Libraries and SDKs**
 
-- [Mem0](https://github.com/mem0ai/mem0) — ⭐58.9k — Universal memory layer for AI agents: stores user/org/session memory, retrieves on demand. Apache-2.0; the de-facto memory primitive paired with most harnesses in 2026.
-- [LiteLLM](https://github.com/BerriAI/litellm) — ⭐50.9k — One interface to 100+ LLMs; routing, caching, budgets. Not an agent framework—the pipe every agent framework uses.
+- [Mem0](https://github.com/mem0ai/mem0) — ⭐59k — Universal memory layer for AI agents: stores user/org/session memory, retrieves on demand. Apache-2.0; the de-facto memory primitive paired with most harnesses in 2026.
+- [LiteLLM](https://github.com/BerriAI/litellm) — ⭐51k — One interface to 100+ LLMs; routing, caching, budgets. Not an agent framework—the pipe every agent framework uses.
 - [Composio](https://github.com/ComposioHQ/composio) — ⭐28.9k — 1,000+ toolkits with auth, tool search, and a sandboxed workbench—drop-in tool layer so agents stop reinventing OAuth + integrations. Python and TypeScript.
 - [smolagents](https://github.com/huggingface/smolagents) — ⭐27.9k — Code-as-action agents: model outputs Python executed in sandbox (E2B, Modal, etc.); ~1k LOC core.
-- [deepagents](https://github.com/langchain-ai/deepagents) — ⭐24.8k — LangChain's Python+TypeScript agent harness on top of LangGraph: planning tool, virtual filesystem, shell sandbox, sub-agent spawning—the "Claude Code-style" harness as a reusable library.
+- [deepagents](https://github.com/langchain-ai/deepagents) — ⭐24.9k — LangChain's Python+TypeScript agent harness on top of LangGraph: planning tool, virtual filesystem, shell sandbox, sub-agent spawning—the "Claude Code-style" harness as a reusable library.
 - [pydantic-ai](https://github.com/pydantic/pydantic-ai) — ⭐17.9k — Type-safe Python agents with Pydantic I/O; multi-provider, MCP, Logfire observability, and human-in-the-loop.
 - [E2B](https://github.com/e2b-dev/E2B) — ⭐12.7k — Firecracker sandboxes for executing agent-generated code; the hosted isolation layer many tool-calling demos use instead of running arbitrary LLM output on your laptop.
 - [strands-agents](https://github.com/strands-agents/harness-sdk) — ⭐6.2k — Model-driven Python SDK; decorators for tools, native MCP, multi-agent; "minimal code" without sacrificing provider choice.
@@ -539,15 +539,15 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 **Progressive disclosure harnesses**
 
-- [agents.md](https://github.com/agentsmd/agents.md) — ⭐22.3k — Open format for repo-scoped agent briefings; v1.1 adds hierarchical scope and progressive disclosure so agents get a map of what exists, then load only what's relevant.
+- [agents.md](https://github.com/agentsmd/agents.md) — ⭐22.4k — Open format for repo-scoped agent briefings; v1.1 adds hierarchical scope and progressive disclosure so agents get a map of what exists, then load only what's relevant.
 
 **Coding agent products (IDEs, CLIs, full suites)**
 
-- [opencode](https://github.com/anomalyco/opencode) — ⭐176k — Open-source terminal coding agent (formerly `sst/opencode`; transferred to anomalyco). The **harness** is a multi-provider tool-call loop (Claude, OpenAI, Gemini, local) with strong plugin and MCP support; the TUI is the shell. 100% OSS, very actively shipped.
+- [opencode](https://github.com/anomalyco/opencode) — ⭐177k — Open-source terminal coding agent (formerly `sst/opencode`; transferred to anomalyco). The **harness** is a multi-provider tool-call loop (Claude, OpenAI, Gemini, local) with strong plugin and MCP support; the TUI is the shell. 100% OSS, very actively shipped.
 - [Gemini CLI](https://github.com/google-gemini/gemini-cli) — ⭐105k — Google's first-party terminal agent for Gemini. The **harness** is the plugin/MCP tool-call loop; the terminal is the shell—Google's parallel to Claude Code / Codex, not just an API.
-- [Cline](https://github.com/cline/cline) — ⭐63.5k — VS Code extension whose **harness** is a plan-then-act loop with per-step human approval and cost transparency; the VS Code integration is the UI shell. Open-source counterweight to Cursor.
+- [Cline](https://github.com/cline/cline) — ⭐63.6k — VS Code extension whose **harness** is a plan-then-act loop with per-step human approval and cost transparency; the VS Code integration is the UI shell. Open-source counterweight to Cursor.
 - [Roo Code](https://github.com/RooCodeInc/Roo-Code) — ⭐24.2k — VS Code/Cursor extension in the Cline lineage. The **harness** is the approval-gated agent with custom modes and a strong MCP story; the IDE is the UI. Popular community fork when you want that workflow without the upstream extension.
-- [claw-code-agent](https://github.com/HarnessLab/claw-code-agent) — ⭐514 — Python reimplementation of the Claude Code agent architecture with zero external dependencies; interactive chat, streaming, plugin runtime, nested agent delegation, cost tracking, MCP transport—portable harness without the Rust/TS toolchain.
+- [claw-code-agent](https://github.com/HarnessLab/claw-code-agent) — ⭐515 — Python reimplementation of the Claude Code agent architecture with zero external dependencies; interactive chat, streaming, plugin runtime, nested agent delegation, cost tracking, MCP transport—portable harness without the Rust/TS toolchain.
 - [coderClaw](https://github.com/SeanHogg/BuilderForceAgents) — ⭐3 — Self-hosted multi-role coding system (Creator, Reviewer, Test, Refactor, etc.) with AST and semantic maps; IDE-agnostic, chat-channel triggers.
 
 **Coding harness configs and SDKs**
@@ -563,14 +563,14 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 **Frameworks**
 
 - [n8n](https://github.com/n8n-io/n8n) — ⭐193k — Fair-code workflow engine with 400+ nodes and native AI nodes; the self-hosted Zapier that actually does agents and LangChain.
-- [Flowise](https://github.com/FlowiseAI/Flowise) — ⭐53.7k — Drag-and-drop LangChain UI; deploy flows without code. The low-code sibling to Langflow, with a different component and hosting story.
+- [Flowise](https://github.com/FlowiseAI/Flowise) — ⭐53.9k — Drag-and-drop LangChain UI; deploy flows without code. The low-code sibling to Langflow, with a different component and hosting story.
 - [mastra](https://github.com/mastra-ai/mastra) — ⭐25.3k — TypeScript-first; agents, tools, and workflows with a single runtime and minimal boilerplate.
 - [botpress](https://github.com/botpress/botpress) — ⭐14.7k — Visual bot builder and runtime; multi-channel, open-source alternative to commercial bot platforms.
 - [Bee Agent Framework](https://github.com/i-am-bee/beeai-framework) — ⭐3.3k — Python + TypeScript, LF AI–backed; MCP/ACP, workflows, Requirement Agent; the one that pushes "production multi-agent" without LangChain.
 
 **Plugins, MCPs, CLI tools**
 
-- [continue](https://github.com/continuedev/continue) — ⭐34.1k — Open-source IDE extension (VS Code, JetBrains); in-editor completion and chat with local or API models.
+- [continue](https://github.com/continuedev/continue) — ⭐34.2k — Open-source IDE extension (VS Code, JetBrains); in-editor completion and chat with local or API models.
 - [MCP TypeScript SDK](https://github.com/modelcontextprotocol/typescript-sdk) — ⭐12.7k — Official MCP implementation for Node/TS; reference for the protocol.
 - [MCP Inspector](https://github.com/modelcontextprotocol/inspector) — ⭐10.1k — GUI to test and debug MCP servers; inspect tools, resources, and prompts.
 - [puppeteer-real-browser-mcp](https://github.com/withLinda/puppeteer-real-browser-mcp-server) — ⭐23 — Puppeteer MCP with real-browser and anti-detection; for agents that need to drive sites that block headless.
@@ -580,10 +580,10 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 - [Composio](https://github.com/ComposioHQ/composio) — ⭐28.9k — 1,000+ toolkits with auth, tool search, and a sandboxed workbench—drop-in tool layer so agents stop reinventing OAuth + integrations. Python and TypeScript.
 - [vercel/ai](https://github.com/vercel/ai) — ⭐25k — React and Node SDK for streaming, tool calls, and agent-style UIs; provider-agnostic.
-- [deepagents](https://github.com/langchain-ai/deepagents) — ⭐24.8k — LangChain's Python+TypeScript agent harness on top of LangGraph: planning tool, virtual filesystem, shell sandbox, sub-agent spawning—the "Claude Code-style" harness as a reusable library.
+- [deepagents](https://github.com/langchain-ai/deepagents) — ⭐24.9k — LangChain's Python+TypeScript agent harness on top of LangGraph: planning tool, virtual filesystem, shell sandbox, sub-agent spawning—the "Claude Code-style" harness as a reusable library.
 - [Cloudflare Agents](https://github.com/cloudflare/agents) — ⭐5.1k — Persistent, stateful agents on Durable Objects: state, websockets, scheduling, and AI chat baked in. The serverless answer to "where does the agent live?"
-- [openai-agents-js](https://github.com/openai/openai-agents-js) — ⭐3.2k — Official OpenAI Agents SDK for Node/TS: handoffs, guardrails, voice; the JS counterpart to openai-agents-python.
-- [open-harness](https://github.com/MaxGfeller/open-harness) — ⭐569 — TypeScript Agent class on Vercel AI SDK; streaming events, filesystem/bash tools, MCP, and subagent delegation.
+- [openai-agents-js](https://github.com/openai/openai-agents-js) — ⭐3.3k — Official OpenAI Agents SDK for Node/TS: handoffs, guardrails, voice; the JS counterpart to openai-agents-python.
+- [open-harness](https://github.com/MaxGfeller/open-harness) — ⭐571 — TypeScript Agent class on Vercel AI SDK; streaming events, filesystem/bash tools, MCP, and subagent delegation.
 
 ---
 
@@ -596,9 +596,9 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 **Coding agent products (IDEs, CLIs, full suites)**
 
-- [OpenHands](https://github.com/OpenHands/OpenHands) — ⭐77.8k — Dockerized software-engineering agent. The **harness** is the bash/editor/browser toolset with micro-agents and event-stream session bridging; Docker is the sandbox. Main OSS choice for teams self-hosting autonomous repo work.
+- [OpenHands](https://github.com/OpenHands/OpenHands) — ⭐77.9k — Dockerized software-engineering agent. The **harness** is the bash/editor/browser toolset with micro-agents and event-stream session bridging; Docker is the sandbox. Main OSS choice for teams self-hosting autonomous repo work.
 - [Open Interpreter](https://github.com/openinterpreter/openinterpreter) — ⭐64.1k — Lightweight terminal coding agent oriented to open models (DeepSeek, Kimi, Qwen). The **harness** is a code-execution loop — the model writes code, the harness executes it with confirmation gates; the CLI is the shell. The original "let the LLM run code on my machine" project, reborn for open weights.
-- [claw-code-agent](https://github.com/HarnessLab/claw-code-agent) — ⭐514 — Python reimplementation of the Claude Code agent architecture with zero external dependencies; interactive chat, streaming, plugin runtime, nested agent delegation, cost tracking, MCP transport—portable harness without the Rust/TS toolchain.
+- [claw-code-agent](https://github.com/HarnessLab/claw-code-agent) — ⭐515 — Python reimplementation of the Claude Code agent architecture with zero external dependencies; interactive chat, streaming, plugin runtime, nested agent delegation, cost tracking, MCP transport—portable harness without the Rust/TS toolchain.
 
 **Coding harness configs and SDKs**
 
@@ -606,11 +606,11 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [SWE-agent](https://github.com/SWE-agent/SWE-agent) — ⭐19.6k — LM-driven harness built for SWE-bench: edit state, command execution, and issue-focused loop—the reference agent stack next to the benchmark itself.
 - [Claude Agent SDK](https://github.com/anthropics/claude-agent-sdk-python) — ⭐7.4k — Official Anthropic SDK (Python + [TypeScript](https://github.com/anthropics/claude-agent-sdk-typescript), [demos](https://github.com/anthropics/claude-agent-sdk-demos), [quickstarts](https://github.com/anthropics/claude-quickstarts)): built-in tools, MCP, long-running coding agents with session bridging.
 - [RepoMaster](https://github.com/QuantaAlpha/RepoMaster) — ⭐529 — Repo-scoped research harness: builds function-call and module-dependency graphs to explore only what's needed; large relative gains on MLE-bench and GitTaskBench with lower token use.
-- [AutoHarness](https://github.com/aiming-lab/AutoHarness) — ⭐324 — Lightweight governance harness: wraps any LLM client in ~2 lines for automated harness engineering—6–14 step pipeline, YAML constitution, risk-pattern matching, session persistence with cost tracking, multi-agent profiles.
+- [AutoHarness](https://github.com/aiming-lab/AutoHarness) — ⭐326 — Lightweight governance harness: wraps any LLM client in ~2 lines for automated harness engineering—6–14 step pipeline, YAML constitution, risk-pattern matching, session persistence with cost tracking, multi-agent profiles.
 
 **Personal agent runtimes**
 
-- [Hermes](https://github.com/NousResearch/hermes-agent) — ⭐198k — Nous Research's self-improving agent: a learning loop turns experience into reusable skills, builds a persistent user model across sessions, and checkpoints state to disk with rollback; lean enough for a $5 VPS, driven from chat, and model-agnostic (Nous Portal, OpenRouter, OpenAI, or any endpoint).
+- [Hermes](https://github.com/NousResearch/hermes-agent) — ⭐199k — Nous Research's self-improving agent: a learning loop turns experience into reusable skills, builds a persistent user model across sessions, and checkpoints state to disk with rollback; lean enough for a $5 VPS, driven from chat, and model-agnostic (Nous Portal, OpenRouter, OpenAI, or any endpoint).
 - [Khoj](https://github.com/khoj-ai/khoj) — ⭐35.2k — Self-hostable "AI second brain": answers over your docs and the web, custom agents, scheduled automations, and multi-client reach (web, Obsidian, Emacs, WhatsApp). A personal-agent harness with retrieval at the core.
 - [Agent Zero](https://github.com/agent0ai/agent-zero) — ⭐18.1k — Organic, prompt-defined personal agent framework: hierarchical sub-agents, persistent memory, browser and code tools, and self-modifying behavior; runs in Docker with a web UI.
 - [AIlice](https://github.com/myshell-ai/AIlice) — ⭐1.4k — Fully autonomous general-purpose agent; one binary, Docker-ready, for when you want "set goal and walk away" without a framework.
@@ -621,10 +621,10 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [langflow](https://github.com/langflow-ai/langflow) — ⭐150k — Low-code UI to build and deploy LangChain/LangGraph flows; visual DAG editor and one-click run.
 - [Dify](https://github.com/langgenius/dify) — ⭐146k — One-stop LLM app platform: visual workflows, RAG pipeline, 50+ tools, model management; "ship from prototype to prod" in a single UI.
 - [langchain](https://github.com/langchain-ai/langchain) — ⭐140k — Chains, tools, retrievers, and agents; the usual entry point for "add tools to an LLM" in Python/JS.
-- [browser-use](https://github.com/browser-use/browser-use) — ⭐99.6k — Python layer over Playwright: natural-language goals become browser actions—web-agent loop without hand-rolling MCP or a custom driver for every site.
+- [browser-use](https://github.com/browser-use/browser-use) — ⭐99.9k — Python layer over Playwright: natural-language goals become browser actions—web-agent loop without hand-rolling MCP or a custom driver for every site.
 - [llama-index](https://github.com/run-llama/llama_index) — ⭐50.2k — Data-centric: indexing, RAG, and query engines; agent abstractions sit on top of your data pipelines.
 - [agno](https://github.com/agno-agi/agno) — ⭐40.8k — Python agents with memory, knowledge bases, tools, and structured outputs; continues the PhiData-era product line under the Agno name—production apps, evals, and pipelines.
-- [langgraph](https://github.com/langchain-ai/langgraph) — ⭐35.2k — State-machine graphs over LLM steps; checkpointing, human-in-the-loop, and durable execution so workflows survive restarts.
+- [langgraph](https://github.com/langchain-ai/langgraph) — ⭐35.3k — State-machine graphs over LLM steps; checkpointing, human-in-the-loop, and durable execution so workflows survive restarts.
 - [semantic-kernel](https://github.com/microsoft/semantic-kernel) — ⭐28.2k — Microsoft's plugin and planner layer for LLMs; C#, Python, Java; strong on enterprise auth and orchestration.
 - [letta](https://github.com/letta-ai/letta) — ⭐23.4k — Python agent runtime with tool use and control flow; lean API; stateful agents with long-horizon memory.
 - [rasa](https://github.com/RasaHQ/rasa) — ⭐21.2k — Conversational AI stack (NLU, dialogue, actions); long-standing OSS choice for chat and voice bots.
@@ -639,12 +639,12 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 - [MetaGPT](https://github.com/FoundationAgents/MetaGPT) — ⭐68.9k — The "AI software company" multi-agent framework: role-played PM, architect, and engineer agents turn a one-line requirement into specs, designs, and code along an SOP assembly line. The landmark of the genre; development pace has slowed in 2026.
 - [autogen](https://github.com/microsoft/autogen) — ⭐59.1k — Conversable agents and group chats; code execution and human-in-the-loop; Microsoft origin, AG2 ecosystem.
-- [crewAI](https://github.com/crewAIInc/crewAI) — ⭐54k — Role-based agents (roles, goals, backstories) in Crews; Flows add event-driven and hierarchical control for production.
+- [crewAI](https://github.com/crewAIInc/crewAI) — ⭐54.1k — Role-based agents (roles, goals, backstories) in Crews; Flows add event-driven and hierarchical control for production.
 - [ChatDev](https://github.com/OpenBMB/ChatDev) — ⭐33.5k — Multi-agent software-company simulation (CEO, CTO, programmer, tester) built on chat chains with communicative dehallucination; ChatDev 2.0 continues the line. MetaGPT's conversational sibling.
 - [openai-agents-python](https://github.com/openai/openai-agents-python) — ⭐27.3k — Handoffs, guardrails, and multi-LLM routing; minimal surface so you own the loop.
 - [Microsoft Agent Framework](https://github.com/microsoft/agent-framework) — ⭐11.5k — Microsoft's convergence of AutoGen and Semantic Kernel: build, orchestrate, and deploy agents and multi-agent workflows in Python and .NET, with graph-based workflows and checkpointing — the designated successor harness for both lines.
 - [PraisonAI](https://github.com/MervinPraison/PraisonAI) — ⭐8.2k — Autonomous multi-agent teams with a single entry point; emphasis on minimal config.
-- [AgentRL](https://github.com/THUDM/AgentRL) — ⭐301 — Multitask, multiturn RL for LLM agents; Ray-based scaling, rollout/actor workers—for teams that want to train agents, not just run them.
+- [AgentRL](https://github.com/THUDM/AgentRL) — ⭐302 — Multitask, multiturn RL for LLM agents; Ray-based scaling, rollout/actor workers—for teams that want to train agents, not just run them.
 
 **Plugins, MCPs, CLI tools**
 
@@ -660,7 +660,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [inspect_ai](https://github.com/UKGovernmentBEIS/inspect_ai) — ⭐2.2k — Inspect AI core: composable eval tasks, sandboxes, scorers, and multi-model runs; the framework behind inspect_evals, not just the task bundle.
 - [WebArena](https://github.com/web-arena-x/webarena) — ⭐1.5k — Realistic web env (e.g. e‑commerce, CMS, dev tools); 812 tasks; measures end-to-end web agent success.
 - [SWE-Gym](https://github.com/SWE-Gym/SWE-Gym) — ⭐694 — Training and evaluation for SWE agents and verifiers (ICML 2025).
-- [swe-smith](https://github.com/SWE-bench/SWE-smith) — ⭐680 — Data generation for SWE agents; 50k+ instances across 128 repos; used for SWE-agent-LM training.
+- [swe-smith](https://github.com/SWE-bench/SWE-smith) — ⭐681 — Data generation for SWE agents; 50k+ instances across 128 repos; used for SWE-agent-LM training.
 - [arc-agi-benchmarking](https://github.com/arcprize/arc-agi-benchmarking) — ⭐350 — Runner for ARC-AGI: multi-provider (OpenAI, Anthropic, Gemini, etc.), rate limits, retries, and scoring.
 - [AgencyBench](https://github.com/GAIR-NLP/AgencyBench) — ⭐87 — Long-horizon agent benchmark: 32 scenarios, 138 tasks, ~1M tokens and ~90 tool calls; Docker sandbox and rubric-based + LLM judges.
 - [letta-evals](https://github.com/letta-ai/letta-evals) — ⭐72 — Eval harness for stateful Letta agents; configurable suites and grading (LLM or rule-based) so you can measure what you ship.
@@ -672,11 +672,11 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 **Libraries and SDKs**
 
-- [Mem0](https://github.com/mem0ai/mem0) — ⭐58.9k — Universal memory layer for AI agents: stores user/org/session memory, retrieves on demand. Apache-2.0; the de-facto memory primitive paired with most harnesses in 2026.
-- [LiteLLM](https://github.com/BerriAI/litellm) — ⭐50.9k — One interface to 100+ LLMs; routing, caching, budgets. Not an agent framework—the pipe every agent framework uses.
+- [Mem0](https://github.com/mem0ai/mem0) — ⭐59k — Universal memory layer for AI agents: stores user/org/session memory, retrieves on demand. Apache-2.0; the de-facto memory primitive paired with most harnesses in 2026.
+- [LiteLLM](https://github.com/BerriAI/litellm) — ⭐51k — One interface to 100+ LLMs; routing, caching, budgets. Not an agent framework—the pipe every agent framework uses.
 - [Composio](https://github.com/ComposioHQ/composio) — ⭐28.9k — 1,000+ toolkits with auth, tool search, and a sandboxed workbench—drop-in tool layer so agents stop reinventing OAuth + integrations. Python and TypeScript.
 - [smolagents](https://github.com/huggingface/smolagents) — ⭐27.9k — Code-as-action agents: model outputs Python executed in sandbox (E2B, Modal, etc.); ~1k LOC core.
-- [deepagents](https://github.com/langchain-ai/deepagents) — ⭐24.8k — LangChain's Python+TypeScript agent harness on top of LangGraph: planning tool, virtual filesystem, shell sandbox, sub-agent spawning—the "Claude Code-style" harness as a reusable library.
+- [deepagents](https://github.com/langchain-ai/deepagents) — ⭐24.9k — LangChain's Python+TypeScript agent harness on top of LangGraph: planning tool, virtual filesystem, shell sandbox, sub-agent spawning—the "Claude Code-style" harness as a reusable library.
 - [pydantic-ai](https://github.com/pydantic/pydantic-ai) — ⭐17.9k — Type-safe Python agents with Pydantic I/O; multi-provider, MCP, Logfire observability, and human-in-the-loop.
 - [E2B](https://github.com/e2b-dev/E2B) — ⭐12.7k — Firecracker sandboxes for executing agent-generated code; the hosted isolation layer many tool-calling demos use instead of running arbitrary LLM output on your laptop.
 - [strands-agents](https://github.com/strands-agents/harness-sdk) — ⭐6.2k — Model-driven Python SDK; decorators for tools, native MCP, multi-agent; "minimal code" without sacrificing provider choice.
@@ -687,15 +687,15 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 **Progressive disclosure harnesses**
 
-- [agents.md](https://github.com/agentsmd/agents.md) — ⭐22.3k — Open format for repo-scoped agent briefings; v1.1 adds hierarchical scope and progressive disclosure so agents get a map of what exists, then load only what's relevant.
+- [agents.md](https://github.com/agentsmd/agents.md) — ⭐22.4k — Open format for repo-scoped agent briefings; v1.1 adds hierarchical scope and progressive disclosure so agents get a map of what exists, then load only what's relevant.
 
 **Coding agent products (IDEs, CLIs, full suites)**
 
-- [opencode](https://github.com/anomalyco/opencode) — ⭐176k — Open-source terminal coding agent (formerly `sst/opencode`; transferred to anomalyco). The **harness** is a multi-provider tool-call loop (Claude, OpenAI, Gemini, local) with strong plugin and MCP support; the TUI is the shell. 100% OSS, very actively shipped.
+- [opencode](https://github.com/anomalyco/opencode) — ⭐177k — Open-source terminal coding agent (formerly `sst/opencode`; transferred to anomalyco). The **harness** is a multi-provider tool-call loop (Claude, OpenAI, Gemini, local) with strong plugin and MCP support; the TUI is the shell. 100% OSS, very actively shipped.
 - [Gemini CLI](https://github.com/google-gemini/gemini-cli) — ⭐105k — Google's first-party terminal agent for Gemini. The **harness** is the plugin/MCP tool-call loop; the terminal is the shell—Google's parallel to Claude Code / Codex, not just an API.
-- [Cline](https://github.com/cline/cline) — ⭐63.5k — VS Code extension whose **harness** is a plan-then-act loop with per-step human approval and cost transparency; the VS Code integration is the UI shell. Open-source counterweight to Cursor.
+- [Cline](https://github.com/cline/cline) — ⭐63.6k — VS Code extension whose **harness** is a plan-then-act loop with per-step human approval and cost transparency; the VS Code integration is the UI shell. Open-source counterweight to Cursor.
 - [Roo Code](https://github.com/RooCodeInc/Roo-Code) — ⭐24.2k — VS Code/Cursor extension in the Cline lineage. The **harness** is the approval-gated agent with custom modes and a strong MCP story; the IDE is the UI. Popular community fork when you want that workflow without the upstream extension.
-- [claw-code-agent](https://github.com/HarnessLab/claw-code-agent) — ⭐514 — Python reimplementation of the Claude Code agent architecture with zero external dependencies; interactive chat, streaming, plugin runtime, nested agent delegation, cost tracking, MCP transport—portable harness without the Rust/TS toolchain.
+- [claw-code-agent](https://github.com/HarnessLab/claw-code-agent) — ⭐515 — Python reimplementation of the Claude Code agent architecture with zero external dependencies; interactive chat, streaming, plugin runtime, nested agent delegation, cost tracking, MCP transport—portable harness without the Rust/TS toolchain.
 - [coderClaw](https://github.com/SeanHogg/BuilderForceAgents) — ⭐3 — Self-hosted multi-role coding system (Creator, Reviewer, Test, Refactor, etc.) with AST and semantic maps; IDE-agnostic, chat-channel triggers.
 
 **Coding harness configs and SDKs**
@@ -711,14 +711,14 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 **Frameworks**
 
 - [n8n](https://github.com/n8n-io/n8n) — ⭐193k — Fair-code workflow engine with 400+ nodes and native AI nodes; the self-hosted Zapier that actually does agents and LangChain.
-- [Flowise](https://github.com/FlowiseAI/Flowise) — ⭐53.7k — Drag-and-drop LangChain UI; deploy flows without code. The low-code sibling to Langflow, with a different component and hosting story.
+- [Flowise](https://github.com/FlowiseAI/Flowise) — ⭐53.9k — Drag-and-drop LangChain UI; deploy flows without code. The low-code sibling to Langflow, with a different component and hosting story.
 - [mastra](https://github.com/mastra-ai/mastra) — ⭐25.3k — TypeScript-first; agents, tools, and workflows with a single runtime and minimal boilerplate.
 - [botpress](https://github.com/botpress/botpress) — ⭐14.7k — Visual bot builder and runtime; multi-channel, open-source alternative to commercial bot platforms.
 - [Bee Agent Framework](https://github.com/i-am-bee/beeai-framework) — ⭐3.3k — Python + TypeScript, LF AI–backed; MCP/ACP, workflows, Requirement Agent; the one that pushes "production multi-agent" without LangChain.
 
 **Plugins, MCPs, CLI tools**
 
-- [continue](https://github.com/continuedev/continue) — ⭐34.1k — Open-source IDE extension (VS Code, JetBrains); in-editor completion and chat with local or API models.
+- [continue](https://github.com/continuedev/continue) — ⭐34.2k — Open-source IDE extension (VS Code, JetBrains); in-editor completion and chat with local or API models.
 - [MCP TypeScript SDK](https://github.com/modelcontextprotocol/typescript-sdk) — ⭐12.7k — Official MCP implementation for Node/TS; reference for the protocol.
 - [MCP Inspector](https://github.com/modelcontextprotocol/inspector) — ⭐10.1k — GUI to test and debug MCP servers; inspect tools, resources, and prompts.
 - [puppeteer-real-browser-mcp](https://github.com/withLinda/puppeteer-real-browser-mcp-server) — ⭐23 — Puppeteer MCP with real-browser and anti-detection; for agents that need to drive sites that block headless.
@@ -728,7 +728,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 - [Composio](https://github.com/ComposioHQ/composio) — ⭐28.9k — 1,000+ toolkits with auth, tool search, and a sandboxed workbench—drop-in tool layer so agents stop reinventing OAuth + integrations. Python and TypeScript.
 - [vercel/ai](https://github.com/vercel/ai) — ⭐25k — React and Node SDK for streaming, tool calls, and agent-style UIs; provider-agnostic.
-- [deepagents](https://github.com/langchain-ai/deepagents) — ⭐24.8k — LangChain's Python+TypeScript agent harness on top of LangGraph: planning tool, virtual filesystem, shell sandbox, sub-agent spawning—the "Claude Code-style" harness as a reusable library.
+- [deepagents](https://github.com/langchain-ai/deepagents) — ⭐24.9k — LangChain's Python+TypeScript agent harness on top of LangGraph: planning tool, virtual filesystem, shell sandbox, sub-agent spawning—the "Claude Code-style" harness as a reusable library.
 - [Cloudflare Agents](https://github.com/cloudflare/agents) — ⭐5.1k — Persistent, stateful agents on Durable Objects: state, websockets, scheduling, and AI chat baked in. The serverless answer to "where does the agent live?"
-- [openai-agents-js](https://github.com/openai/openai-agents-js) — ⭐3.2k — Official OpenAI Agents SDK for Node/TS: handoffs, guardrails, voice; the JS counterpart to openai-agents-python.
-- [open-harness](https://github.com/MaxGfeller/open-harness) — ⭐569 — TypeScript Agent class on Vercel AI SDK; streaming events, filesystem/bash tools, MCP, and subagent delegation.
+- [openai-agents-js](https://github.com/openai/openai-agents-js) — ⭐3.3k — Official OpenAI Agents SDK for Node/TS: handoffs, guardrails, voice; the JS counterpart to openai-agents-python.
+- [open-harness](https://github.com/MaxGfeller/open-harness) — ⭐571 — TypeScript Agent class on Vercel AI SDK; streaming events, filesystem/bash tools, MCP, and subagent delegation.
