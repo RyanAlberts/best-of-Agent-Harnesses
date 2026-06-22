@@ -64,6 +64,7 @@ def _brief(p: dict, reason: str = "") -> dict:
         "name": p["name"],
         "github_id": p["github_id"],
         "url": p["url"],
+        "page_url": p.get("page_url", ""),
         "stars": p["stars"],
         "tier": p["tier"],
         "autonomy": p.get("autonomy", "n/a"),

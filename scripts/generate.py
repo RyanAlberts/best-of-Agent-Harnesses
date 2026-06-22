@@ -973,6 +973,96 @@ def count_projects() -> int:
     return sum(len(PROJECTS[c]) for c, _, _ in CATEGORIES)
 
 
+# ---------------------------------------------------------------------------
+# Discoverability surfaces (GEO/SEO): stable per-project slugs and deep links,
+# a data-derived FAQ, schema.org JSON-LD, and a JSON Feed of refreshes. The
+# GitHub Pages site (scripts/build_site.py) renders HTML from the same data.
+# ---------------------------------------------------------------------------
+
+SITE_ORIGIN = "https://ryanalberts.github.io"
+BASE_PATH = "/best-of-Agent-Harnesses"  # GitHub Pages project-site path
+SITE_URL = f"{SITE_ORIGIN}{BASE_PATH}/"
+REPO_HTTP = "https://github.com/RyanAlberts/best-of-Agent-Harnesses"
+RAW_BASE = "https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main"
+
+
+def ordered_projects() -> list:
+    """All projects in canonical display order: category order, stars descending."""
+    out: list = []
+    for cat_id, _, _ in CATEGORIES:
+        out += sorted(PROJECTS[cat_id], key=lambda x: stars_for(x.github_id), reverse=True)
+    return out
+
+
+_SLUG_MAP: "dict[str, str]" = {}
+
+
+def project_slug(github_id: str) -> str:
+    """Stable, unique anchor/URL slug for a project (its repo name, deduped)."""
+    if not _SLUG_MAP:
+        used: set = set()
+        for p in ordered_projects():
+            base = slug(p.github_id.split("/")[-1]) or slug(p.github_id.replace("/", "-"))
+            s, n = base, 2
+            while s in used:
+                s = f"{base}-{n}"
+                n += 1
+            used.add(s)
+            _SLUG_MAP[p.github_id] = s
+    return _SLUG_MAP[github_id]
+
+
+def project_anchor_url(github_id: str) -> str:
+    """Deep link to the project's row in the README."""
+    return f"{REPO_HTTP}#{project_slug(github_id)}"
+
+
+def project_page_url(github_id: str) -> str:
+    """Canonical URL of the project's page on the GitHub Pages site."""
+    return f"{SITE_URL}h/{project_slug(github_id)}/"
+
+
+def build_faq() -> list:
+    """Question/answer pairs derived from the list data — the shape AI answer
+    engines cite. Each item: {kind, q, a, slug}. `kind` is use-case | derived |
+    concept so each surface can include the right subset."""
+    faq: list = []
+
+    def add(kind: str, q: str, a: str) -> None:
+        faq.append({"kind": kind, "q": q, "a": a, "slug": slug(q)})
+
+    for intent, ids, cat_title in USE_CASES:
+        picks = ", ".join(find_project(g).display_name for g in ids[:3])
+        add("use-case", f"What is the best agent harness if {intent}?",
+            f"Top picks: {picks}. See the “{cat_title}” category for the full ranked list.")
+
+    headless = [p for p in ordered_projects() if axes_for(p.github_id)[0] == "headless"]
+    durable = [p for p in ordered_projects() if axes_for(p.github_id)[1] == "durable"]
+    oss = [p for p in ordered_projects() if oss_signal(p.oss) == "open-source"]
+    add("derived", "Which agent harnesses can run unattended (headless)?",
+        "Harnesses designed for unattended runs, batches, and fleets: "
+        + ", ".join(p.display_name for p in headless[:8]) + ".")
+    add("derived", "Which agent harnesses survive a crash mid-task (durable)?",
+        "Harnesses whose execution state persists across restarts: "
+        + ", ".join(p.display_name for p in durable[:8]) + ".")
+    add("derived", "How many of these agent harnesses are open source?",
+        f"{len(oss)} of {count_projects()} carry a standard open-source license; the rest are "
+        "source-available or unclear, and flagged per row.")
+
+    add("concept", "What is an agent harness?",
+        "The runtime that turns a model into an agent: it decides what the model's reasoning "
+        "is allowed to touch, and supplies the orchestration, tool wiring, memory, error "
+        "recovery, and guardrails around per-turn inference.")
+    add("concept", "How is this list ranked?",
+        "By relevance to harness concerns (environment, orchestration, lifecycle, guardrails) "
+        f"and by GitHub stars (captured {STARS_CAPTURED}); each project also carries an "
+        "adoption-surface tier and autonomy/recovery scores.")
+    add("concept", "How can an AI agent use this list directly?",
+        "Three machine-readable surfaces: harnesses.json (structured), llms.txt (one file), "
+        "and an MCP server (uvx agent-harnesses-mcp) exposing pick_harness and search_harnesses.")
+    return faq
+
+
 def generate_readme() -> str:
     total = count_projects()
     header = [
@@ -1044,6 +1134,7 @@ def generate_readme() -> str:
         "- [How to Pick a Harness](#how-to-pick-a-harness)",
         "- [Pick by use case](#pick-by-use-case)",
         "- [For agents: harnesses.json, llms.txt, MCP server](#for-agents)",
+        "- [FAQ](#faq)",
     ]
     for cat_id, title, _ in CATEGORIES:
         count = len(PROJECTS[cat_id])
@@ -1084,9 +1175,15 @@ def generate_readme() -> str:
             chips = tag_chips_md(p.tags)
             autonomy, recovery = axes_for(p.github_id)
             marks = ("&#8202;★" if autonomy == "headless" else "") + ("&#8202;✱" if recovery == "durable" else "")
-            row = f"| {i} | [**{p.display_name}**](https://github.com/{p.github_id}){marks} | {stars_cell} | {p.description}{chips} | {p.oss} | {p.axis} | {examples_cell} |"
+            anchor = f'<a name="{project_slug(p.github_id)}"></a>'
+            row = f"| {i} | {anchor}[**{p.display_name}**](https://github.com/{p.github_id}){marks} | {stars_cell} | {p.description}{chips} | {p.oss} | {p.axis} | {examples_cell} |"
             body.append(row)
         body.append("")
+    body += ["## FAQ", ""]
+    for item in build_faq():
+        if item["kind"] == "use-case":
+            continue  # use-case Q&A already lives in "Pick by use case"; full set is in llms.txt / harnesses.json
+        body += [f"### {item['q']}", "", item["a"], ""]
     body += [
         "<br>",
         "",
@@ -1268,6 +1365,9 @@ def generate_harnesses_json() -> str:
                 "name": p.display_name,
                 "github_id": p.github_id,
                 "url": f"https://github.com/{p.github_id}",
+                "slug": project_slug(p.github_id),
+                "anchor_url": project_anchor_url(p.github_id),
+                "page_url": project_page_url(p.github_id),
                 "description": p.description,
                 "category": cat_id,
                 "category_title": cat_title,
@@ -1288,6 +1388,10 @@ def generate_harnesses_json() -> str:
             "name": "best-of-Agent-Harnesses",
             "description": "Hand-curated, ranked list of AI agent harnesses, orchestration frameworks, and harness techniques.",
             "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses",
+            "site_url": SITE_URL,
+            "llms_txt_url": f"{RAW_BASE}/llms.txt",
+            "jsonld_url": f"{RAW_BASE}/harnesses.jsonld",
+            "feed_url": f"{SITE_URL}feed.json",
             "license": "CC-BY-SA-4.0",
             "stars_captured": STARS_CAPTURED,
             "project_count": count_projects(),
@@ -1300,6 +1404,7 @@ def generate_harnesses_json() -> str:
         },
         "categories": [{"id": c, "title": t, "subtitle": s} for c, t, s in CATEGORIES],
         "use_cases": [{"intent": intent, "picks": ids, "category_title": cat} for intent, ids, cat in USE_CASES],
+        "faq": build_faq(),
         "comparisons": comparisons_index(),
         "projects": projects,
     }
@@ -1325,6 +1430,11 @@ def generate_llms_txt() -> str:
         picks = ", ".join(f"{find_project(g).display_name} (https://github.com/{g})" for g in ids)
         lines.append(f"- {intent}: {picks}")
     lines.append("")
+    lines += ["## FAQ", ""]
+    for item in build_faq():
+        lines.append(f"### {item['q']}")
+        lines.append(item["a"])
+        lines.append("")
     for cat_id, title, subtitle in CATEGORIES:
         lines.append(f"## {title} ({len(PROJECTS[cat_id])} projects)")
         lines.append("")
@@ -1570,6 +1680,107 @@ def generate_axes_svg() -> str:
     return "\n".join(svg) + "\n"
 
 
+def generate_jsonld() -> str:
+    """schema.org JSON-LD (Dataset + ItemList of SoftwareApplications). GitHub
+    strips inline JSON-LD from rendered READMEs, so this is served as a
+    standalone file and embedded in every Pages-site page, where search crawlers
+    and AI answer engines can read it."""
+    import json
+    items = []
+    for i, p in enumerate(ordered_projects(), 1):
+        items.append({
+            "@type": "ListItem",
+            "position": i,
+            "item": {
+                "@type": "SoftwareApplication",
+                "name": p.display_name,
+                "url": f"https://github.com/{p.github_id}",
+                "description": p.description,
+                "applicationCategory": "DeveloperApplication",
+                "keywords": ", ".join(p.tags),
+            },
+        })
+    doc = {
+        "@context": "https://schema.org",
+        "@type": "Dataset",
+        "name": "Best of Agent Harnesses",
+        "description": "Hand-curated, ranked list of AI agent harnesses, orchestration frameworks, and harness techniques.",
+        "url": SITE_URL,
+        "sameAs": REPO_HTTP,
+        "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "creator": {"@type": "Person", "name": "Ryan Alberts", "url": "https://github.com/RyanAlberts"},
+        "dateModified": STARS_CAPTURED,
+        "keywords": ["agent harness", "AI agents", "LLM", "MCP", "agentic AI", "orchestration"],
+        "distribution": [{
+            "@type": "DataDownload",
+            "encodingFormat": "application/json",
+            "contentUrl": f"{RAW_BASE}/harnesses.json",
+        }],
+        "mainEntity": {"@type": "ItemList", "numberOfItems": len(items), "itemListElement": items},
+    }
+    return json.dumps(doc, indent=2, ensure_ascii=False) + "\n"
+
+
+def generate_feed_json() -> str:
+    """JSON Feed 1.1 of list refreshes — one dated item per stars-capture date,
+    so aggregators and agents can subscribe to "what changed." Prepends the
+    current refresh to any existing items (dedup by id, newest first, cap 50)."""
+    import json
+    top = ordered_projects()[:5]
+    item = {
+        "id": f"refresh-{STARS_CAPTURED}",
+        "title": f"Agent Harnesses list refreshed — {STARS_CAPTURED}",
+        "url": REPO_HTTP,
+        "date_published": f"{STARS_CAPTURED}T00:00:00Z",
+        "content_text": (
+            f"{count_projects()} harnesses across {len(CATEGORIES)} categories. "
+            f"Stars captured {STARS_CAPTURED}. Most-starred: "
+            + ", ".join(p.display_name for p in top) + "."
+        ),
+    }
+    items = [item]
+    existing = REPO_ROOT / "feed.json"
+    if existing.exists():
+        try:
+            prev = json.loads(existing.read_text()).get("items", [])
+            items += [it for it in prev if it.get("id") != item["id"]]
+        except (ValueError, OSError):
+            pass
+    doc = {
+        "version": "https://jsonfeed.org/version/1.1",
+        "title": "best-of-Agent-Harnesses — updates",
+        "home_page_url": REPO_HTTP,
+        "feed_url": f"{SITE_URL}feed.json",
+        "description": "Weekly refreshes of the curated agent-harness list.",
+        "authors": [{"name": "Ryan Alberts", "url": "https://github.com/RyanAlberts"}],
+        "items": items[:50],
+    }
+    return json.dumps(doc, indent=2, ensure_ascii=False) + "\n"
+
+
+def generate_social_svg() -> str:
+    """1280×640 social-preview card. Counts are live so it never drifts.
+    Rasterize for GitHub (Settings → Social preview needs PNG/JPG) with:
+        rsvg-convert assets/social-preview.svg -o assets/social-preview.png"""
+    total = count_projects()
+    ncat = len(CATEGORIES)
+    bg, fg, sub, accent = "#0d1117", "#f0f6fc", "#9ca3af", "#5ac4bf"
+    f = "Helvetica,Arial,sans-serif"
+    return "\n".join([
+        '<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640">',
+        f'  <rect width="1280" height="640" fill="{bg}"/>',
+        f'  <rect x="0" y="0" width="1280" height="10" fill="{accent}"/>',
+        f'  <rect x="80" y="150" width="44" height="44" rx="10" fill="{accent}"/>',
+        f'  <text x="140" y="184" font-family="{f}" font-size="32" fill="{accent}" font-weight="700">best-of-Agent-Harnesses</text>',
+        f'  <text x="80" y="300" font-family="{f}" font-size="74" fill="{fg}" font-weight="800">Best of Agent Harnesses</text>',
+        f'  <text x="80" y="378" font-family="{f}" font-size="38" fill="{sub}">The runtimes that close the loop between a model and the world.</text>',
+        f'  <text x="80" y="500" font-family="{f}" font-size="36" fill="{fg}" font-weight="600">{total} harnesses · {ncat} categories · MCP-ready · weekly-rescored</text>',
+        f'  <text x="80" y="566" font-family="{f}" font-size="27" fill="{sub}">github.com/RyanAlberts/best-of-Agent-Harnesses</text>',
+        '</svg>',
+        '',
+    ])
+
+
 def main():
     all_ids = {p.github_id for plist in PROJECTS.values() for p in plist}
     orphans = set(AXES) - all_ids
@@ -1584,10 +1795,13 @@ def main():
     (REPO_ROOT / "config" / "header.md").write_text(header_content)
     (REPO_ROOT / "TAGS.md").write_text(tags_content)
     (REPO_ROOT / "harnesses.json").write_text(generate_harnesses_json())
+    (REPO_ROOT / "harnesses.jsonld").write_text(generate_jsonld())
     (REPO_ROOT / "llms.txt").write_text(generate_llms_txt())
+    (REPO_ROOT / "feed.json").write_text(generate_feed_json())
     (REPO_ROOT / "assets").mkdir(exist_ok=True)
     (REPO_ROOT / "assets" / "landscape.svg").write_text(generate_landscape_svg())
     (REPO_ROOT / "assets" / "axes-grid.svg").write_text(generate_axes_svg())
+    (REPO_ROOT / "assets" / "social-preview.svg").write_text(generate_social_svg())
     refreshed = refresh_comparisons()
     if refreshed:
         print(f"Comparison star rows refreshed: {', '.join(refreshed)}")

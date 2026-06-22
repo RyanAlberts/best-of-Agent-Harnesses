@@ -23,6 +23,68 @@ Tiers, least to most adoption surface: super simple → mostly simple → slight
 - I want a deep research / autonomous research agent: deepagents (https://github.com/langchain-ai/deepagents), gpt-researcher (https://github.com/assafelovic/gpt-researcher), openagents (https://github.com/OpenAgentsInc/openagents)
 - I want a provider-agnostic LLM pipe (not a framework): LiteLLM (https://github.com/BerriAI/litellm), vercel/ai (https://github.com/vercel/ai)
 
+## FAQ
+
+### What is the best agent harness if I want a turnkey coding agent today?
+Top picks: opencode, Cline, Codex. See the “Coding agent products (IDEs, CLIs, full suites)” category for the full ranked list.
+
+### What is the best agent harness if I want an always-on personal agent that lives in my chat apps?
+Top picks: OpenClaw, Hermes, Khoj. See the “Personal agent runtimes” category for the full ranked list.
+
+### What is the best agent harness if I want to extend Claude Code, Codex, or OpenCode with skills and slash commands?
+Top picks: Anthropic Skills, everything-claude-code, superpowers. See the “Coding harness configs and SDKs” category for the full ranked list.
+
+### What is the best agent harness if I want to build my own coding harness from scratch?
+Top picks: Claude Agent SDK, Google ADK, AutoHarness. See the “Coding harness configs and SDKs” category for the full ranked list.
+
+### What is the best agent harness if I want a drop-in memory layer for agents?
+Top picks: Mem0, claude-mem, agentlog. See the “Plugins, MCPs, CLI tools” category for the full ranked list.
+
+### What is the best agent harness if I want to plug hundreds to thousands of tools without context bloat?
+Top picks: MCP-Zero, ToolGen, ToolRAG. See the “Progressive disclosure harnesses” category for the full ranked list.
+
+### What is the best agent harness if I want multi-agent orchestration?
+Top picks: openai-agents-python, crewAI, autogen. See the “Multi-agent and orchestration” category for the full ranked list.
+
+### What is the best agent harness if I want a general LLM app framework?
+Top picks: langgraph, langchain, llama-index. See the “Frameworks” category for the full ranked list.
+
+### What is the best agent harness if I want low-code / visual workflows?
+Top picks: langflow, Flowise, Dify. See the “Frameworks” category for the full ranked list.
+
+### What is the best agent harness if I want browser-using agents?
+Top picks: browser-use, WebVoyager, puppeteer-real-browser-mcp. See the “Plugins, MCPs, CLI tools” category for the full ranked list.
+
+### What is the best agent harness if I want sandboxed code execution for agent-generated code?
+Top picks: E2B, Daytona, smolagents. See the “Libraries and SDKs” category for the full ranked list.
+
+### What is the best agent harness if I want to evaluate or benchmark agents?
+Top picks: SWE-bench, AgencyBench, inspect_ai. See the “Evaluation and benchmarking harnesses” category for the full ranked list.
+
+### What is the best agent harness if I want a deep research / autonomous research agent?
+Top picks: deepagents, gpt-researcher, openagents. See the “Research and task-specific harnesses” category for the full ranked list.
+
+### What is the best agent harness if I want a provider-agnostic LLM pipe (not a framework)?
+Top picks: LiteLLM, vercel/ai. See the “Libraries and SDKs” category for the full ranked list.
+
+### Which agent harnesses can run unattended (headless)?
+Harnesses designed for unattended runs, batches, and fleets: opencode, OpenHands, goose, SWE-agent, Claude Agent SDK, RepoMaster, OpenClaw, Hermes.
+
+### Which agent harnesses survive a crash mid-task (durable)?
+Harnesses whose execution state persists across restarts: langgraph-bigtool, n8n, langgraph, mastra, letta, deepagents, pydantic-ai, Cloudflare Agents.
+
+### How many of these agent harnesses are open source?
+96 of 110 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.
+
+### What is an agent harness?
+The runtime that turns a model into an agent: it decides what the model's reasoning is allowed to touch, and supplies the orchestration, tool wiring, memory, error recovery, and guardrails around per-turn inference.
+
+### How is this list ranked?
+By relevance to harness concerns (environment, orchestration, lifecycle, guardrails) and by GitHub stars (captured 2026-06-21); each project also carries an adoption-surface tier and autonomy/recovery scores.
+
+### How can an AI agent use this list directly?
+Three machine-readable surfaces: harnesses.json (structured), llms.txt (one file), and an MCP server (uvx agent-harnesses-mcp) exposing pick_harness and search_harnesses.
+
 ## Progressive disclosure harnesses (7 projects)
 
 Formats, runtimes, and patterns that reveal context, tools, or instructions in layers—index first, details on demand—to control tokens and improve agent focus (the "map, not encyclopedia" principle).

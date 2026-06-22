@@ -1,0 +1,22 @@
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": "best-of-Agent-Harnesses — updates",
+  "home_page_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses",
+  "feed_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/feed.json",
+  "description": "Weekly refreshes of the curated agent-harness list.",
+  "authors": [
+    {
+      "name": "Ryan Alberts",
+      "url": "https://github.com/RyanAlberts"
+    }
+  ],
+  "items": [
+    {
+      "id": "refresh-2026-06-21",
+      "title": "Agent Harnesses list refreshed — 2026-06-21",
+      "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses",
+      "date_published": "2026-06-21T00:00:00Z",
+      "content_text": "110 harnesses across 10 categories. Stars captured 2026-06-21. Most-starred: awesome-cursorrules, agents.md, langgraph-bigtool, MCP-Zero, ToolGen."
+    }
+  ]
+}
