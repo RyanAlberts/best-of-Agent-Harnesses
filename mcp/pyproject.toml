@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "agent-harnesses-mcp"
-version = "0.1.1"
+version = "0.1.2"
 description = "MCP server for best-of-Agent-Harnesses: harness recommendations, search, and head-to-head decision guides over a hand-curated, weekly-rescored list of 110 agent harnesses"
 readme = "README.md"
 requires-python = ">=3.10"
