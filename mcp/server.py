@@ -82,7 +82,7 @@ def _brief(p: dict, reason: str = "") -> dict:
 def pick_harness(use_case: str, max_complexity: str = "complex",
                  min_autonomy: str = "", min_recovery: str = "",
                  open_source_only: bool = False, limit: int = 5) -> str:
-    """Recommend agent harnesses for a use case, ranked from a hand-curated list of 101.
+    """Recommend agent harnesses for a use case, ranked from a hand-curated list of 110.
 
     use_case: what you want to do, e.g. "terminal coding agent", "drop-in memory
     layer", "evaluate agents on coding benchmarks".
@@ -146,7 +146,7 @@ def pick_harness(use_case: str, max_complexity: str = "complex",
 
 @mcp.tool()
 def search_harnesses(query: str, limit: int = 10) -> str:
-    """Keyword search across all 101 projects (name, description, tags, category).
+    """Keyword search across all 110 projects (name, description, tags, category).
 
     Returns JSON: matching projects sorted by relevance then stars.
     """
@@ -205,7 +205,7 @@ def get_comparison(slug: str) -> str:
 
 @mcp.tool()
 def list_categories() -> str:
-    """The list's 9 categories and 13 curated use-case intents, with project counts."""
+    """The list's 10 categories and 14 curated use-case intents, with project counts."""
     d = data()
     counts: dict = {}
     for p in d["projects"]:

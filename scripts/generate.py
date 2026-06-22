@@ -1308,10 +1308,11 @@ def generate_harnesses_json() -> str:
 
 def generate_llms_txt() -> str:
     total = count_projects()
+    n_categories = len(CATEGORIES)
     lines = [
         "# Best of Agent Harnesses",
         "",
-        f"> Hand-curated, ranked list of {total} AI agent harnesses — the runtimes that close the loop between a stateless model and the outside world. 9 categories, a 4-tier adoption-surface rating (simplicity ↔ capability), capability tags, a license signal, and one concrete example link per project. Stars captured {STARS_CAPTURED}.",
+        f"> Hand-curated, ranked list of {total} AI agent harnesses — the runtimes that close the loop between a stateless model and the outside world. {n_categories} categories, a 4-tier adoption-surface rating (simplicity ↔ capability), capability tags, a license signal, and one concrete example link per project. Stars captured {STARS_CAPTURED}.",
         "",
         "Maintained at https://github.com/RyanAlberts/best-of-Agent-Harnesses (CC-BY-SA-4.0).",
         "Structured data: https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/harnesses.json",

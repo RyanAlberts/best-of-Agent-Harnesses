@@ -2,7 +2,7 @@
 
 `mcp-name: io.github.RyanAlberts/agent-harnesses`
 
-The [best-of-Agent-Harnesses](https://github.com/RyanAlberts/best-of-Agent-Harnesses) list as an MCP server, so agents can recommend harnesses instead of you reading 101 table rows.
+The [best-of-Agent-Harnesses](https://github.com/RyanAlberts/best-of-Agent-Harnesses) list as an MCP server, so agents can recommend harnesses instead of you reading 110 table rows.
 
 Single file, stdio transport, no clone needed — it fetches [harnesses.json](../harnesses.json) from this repo at startup (or reads it locally from a checkout). Requires [uv](https://docs.astral.sh/uv/).
 
