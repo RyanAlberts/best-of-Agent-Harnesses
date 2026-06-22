@@ -89,6 +89,9 @@ hs_err_pid*
 temp/*
 .DS_Store
 
+# Pages site is built and deployed by .github/workflows/pages.yml, not committed
+site/
+
 # Local / editor (do not publish)
 .cursor/*
 !.cursor/rules/
