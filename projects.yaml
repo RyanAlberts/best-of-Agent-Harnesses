@@ -116,6 +116,10 @@ projects:
     github_id: openinterpreter/openinterpreter
     labels: ["python"]
     category: "coding-agent-products"
+  - name: TeamCopilot
+    github_id: rishabhpoddar/teamcopilot
+    labels: ["javascript", "python"]
+    category: "coding-agent-products"
   # Coding harness configs and SDKs
   - name: get-shit-done
     github_id: gsd-build/get-shit-done
