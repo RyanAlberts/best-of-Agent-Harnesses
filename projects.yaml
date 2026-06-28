@@ -112,6 +112,10 @@ projects:
     github_id: SeanHogg/BuilderForceAgents
     labels: ["javascript"]
     category: "coding-agent-products"
+  - name: oh-my-pi
+    github_id: can1357/oh-my-pi
+    labels: ["javascript"]
+    category: "coding-agent-products"
   - name: Open Interpreter
     github_id: openinterpreter/openinterpreter
     labels: ["python"]

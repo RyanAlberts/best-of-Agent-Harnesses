@@ -26,7 +26,7 @@
 <text x="832.5" y="652.0" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">9</text>
 <text x="832.5" y="254.5" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">4</text>
 <text x="397.5" y="387.0" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">2</text>
-<text x="832.5" y="387.0" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">16</text>
+<text x="832.5" y="387.0" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">17</text>
 <text x="1050.0" y="387.0" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">20</text>
 <text x="615.0" y="652.0" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">1</text>
 <text x="1050.0" y="652.0" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">12</text>
@@ -71,6 +71,7 @@
 <circle cx="717.6" cy="309.0" r="5.5" fill="#ec4899" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Microsoft Agent Framework — ⭐11.7k</title></circle>
 <circle cx="799.2" cy="350.0" r="5.5" fill="#0ea5e9" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>OpenHarness (HKUDS) — ⭐14.2k</title></circle>
 <circle cx="951.6" cy="357.8" r="5.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>botpress — ⭐14.8k</title></circle>
+<circle cx="722.3" cy="360.9" r="5.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>oh-my-pi — ⭐14.9k</title></circle>
 <circle cx="944.9" cy="330.8" r="5.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Agent Lightning — ⭐17.3k</title></circle>
 <circle cx="693.4" cy="176.4" r="5.5" fill="#a16207" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>pydantic-ai — ⭐18k</title></circle>
 <circle cx="788.7" cy="302.8" r="5.5" fill="#0ea5e9" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Agent Zero — ⭐18.2k</title></circle>
@@ -126,5 +127,5 @@
 <text x="767.1" y="501.0" text-anchor="end" font-size="12.5" font-weight="600" fill="#1f2937">langchain</text>
 <text x="1004.2" y="448.5" text-anchor="end" font-size="12.5" font-weight="600" fill="#1f2937">langflow</text>
 <text x="534.2" y="313.2" text-anchor="start" font-size="12.5" font-weight="600" fill="#1f2937">aider</text>
-<text x="1060" y="784" text-anchor="end" font-size="12" fill="#9ca3af">81 loop-owning projects shown · 29 format/component entries (n/a) omitted · full tiers in harnesses.json</text>
+<text x="1060" y="784" text-anchor="end" font-size="12" fill="#9ca3af">82 loop-owning projects shown · 29 format/component entries (n/a) omitted · full tiers in harnesses.json</text>
 </svg>

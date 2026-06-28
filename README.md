@@ -10,7 +10,7 @@
 
 <p align="center">
     <a href="https://best-of.org" title="Best-of Badge"><img src="http://bit.ly/3o3EHNN"></a>
-    <a href="#contents" title="Project Count"><img src="https://img.shields.io/badge/projects-110-blue.svg?color=5ac4bf"></a>
+    <a href="#contents" title="Project Count"><img src="https://img.shields.io/badge/projects-111-blue.svg?color=5ac4bf"></a>
     <a href="https://ryanalberts.github.io/best-of-Agent-Harnesses/" title="Browse the searchable site"><img src="https://img.shields.io/badge/website-live-5ac4bf.svg"></a>
     <a href="#contribution" title="Contributions welcome"><img src="https://img.shields.io/badge/contributions-welcome-green.svg"></a>
     <a href="https://github.com/RyanAlberts/best-of-Agent-Harnesses/releases" title="Updates"><img src="https://img.shields.io/github/release-date/RyanAlberts/best-of-Agent-Harnesses?color=green&label=updated"></a>
@@ -89,7 +89,7 @@ claude mcp add agent-harnesses -- uvx agent-harnesses-mcp
 - [For agents: harnesses.json, llms.txt, MCP server](#for-agents)
 - [FAQ](#faq)
 - [Progressive disclosure harnesses](#progressive-disclosure-harnesses) _7 projects_
-- [Coding agent products (IDEs, CLIs, full suites)](#coding-agent-products-ides-clis-full-suites) _11 projects_
+- [Coding agent products (IDEs, CLIs, full suites)](#coding-agent-products-ides-clis-full-suites) _12 projects_
 - [Coding harness configs and SDKs](#coding-harness-configs-and-sdks) _10 projects_
 - [Personal agent runtimes](#personal-agent-runtimes) _7 projects_
 - [Frameworks](#frameworks) _23 projects_
@@ -146,8 +146,9 @@ _Turnkey coding agents you install and run: IDE extensions, terminal CLIs, Docke
 | 7 | <a name="goose"></a>[**goose**](https://github.com/aaif-goose/goose)&#8202;★ | [50.2k](https://github.com/aaif-goose/goose/stargazers) | Block-originated Rust agent, now stewarded by the Linux Foundation's Agentic AI Foundation (`aaif-goose/goose`). The **harness** is the MCP/ACP extension model with recipes and provider choice; there's no fixed UI slot—you bolt it into whatever shell you use. <sup>`mcp` · `rust`</sup> | ✅ | slightly complex (extensions, MCP/ACP) | [Goose recipes guide](https://block.github.io/goose/docs/guides/recipes/) |
 | 8 | <a name="crush"></a>[**crush**](https://github.com/charmbracelet/crush) | [25.8k](https://github.com/charmbracelet/crush/stargazers) | Charm's terminal coding agent (Charm's fork of the original OpenCode). The **harness** is the tool-calling loop with session persistence; the Bubble Tea TUI is the shell. <sup>`memory` · `cli` · `tui`</sup> | ⚠️ FSL-1.1-MIT | slightly complex (terminal agent, TUI) | [Crush launch post](https://charm.land/blog/crush-comes-home/) |
 | 9 | <a name="roo-code"></a>[**Roo Code**](https://github.com/RooCodeInc/Roo-Code) | [24.3k](https://github.com/RooCodeInc/Roo-Code/stargazers) | VS Code/Cursor extension in the Cline lineage. The **harness** is the approval-gated agent with custom modes and a strong MCP story; the IDE is the UI. Popular community fork when you want that workflow without the upstream extension. <sup>`mcp` · `workflow` · `ide` · `typescript`</sup> | ✅ | slightly complex (IDE extension, MCP-first) | [Custom modes guide](https://docs.roocode.com/features/custom-modes) |
-| 10 | <a name="claw-code-agent"></a>[**claw-code-agent**](https://github.com/HarnessLab/claw-code-agent) | [519](https://github.com/HarnessLab/claw-code-agent/stargazers) | Python reimplementation of the Claude Code agent architecture with zero external dependencies; interactive chat, streaming, plugin runtime, nested agent delegation, cost tracking, MCP transport—portable harness without the Rust/TS toolchain. <sup>`mcp` · `rust` · `python` · `typescript`</sup> | ❓ | slightly complex (pure Python, plugin runtime) | [Quick Start guide](https://github.com/HarnessLab/claw-code-agent#-quick-start) |
-| 11 | <a name="builderforceagents"></a>[**coderClaw**](https://github.com/SeanHogg/BuilderForceAgents) | [3](https://github.com/SeanHogg/BuilderForceAgents/stargazers) | Self-hosted multi-role coding system (Creator, Reviewer, Test, Refactor, etc.) with AST and semantic maps; IDE-agnostic, chat-channel triggers. <sup>`ide` · `typescript`</sup> | ❓ | slightly complex (multi-role, AST/semantic) | [Multi-agent README](https://github.com/SeanHogg/BuilderForceAgents#readme) |
+| 10 | <a name="oh-my-pi"></a>[**oh-my-pi**](https://github.com/can1357/oh-my-pi) | [14.9k](https://github.com/can1357/oh-my-pi/stargazers) | Terminal coding agent (fork of Pi) that wires the IDE into the harness: hash-anchored edits, a 32-tool loop tuned per-model, LSP rename/references/diagnostics on every write, a real DAP debugger (lldb/dlv/debugpy), long-lived Python + Bun execution kernels that call back into the agent's tools, browser control, and 40+ provider support (Claude/OpenAI/Gemini/local). ~55k lines of Rust core. <sup>`browser` · `provider-agnostic` · `cli` · `ide` · `rust`</sup> | ✅ | slightly complex (terminal agent, LSP/DAP, multi-provider) | [LSP wired into edits](https://github.com/can1357/oh-my-pi/blob/main/docs/lsp-config.md) |
+| 11 | <a name="claw-code-agent"></a>[**claw-code-agent**](https://github.com/HarnessLab/claw-code-agent) | [519](https://github.com/HarnessLab/claw-code-agent/stargazers) | Python reimplementation of the Claude Code agent architecture with zero external dependencies; interactive chat, streaming, plugin runtime, nested agent delegation, cost tracking, MCP transport—portable harness without the Rust/TS toolchain. <sup>`mcp` · `rust` · `python` · `typescript`</sup> | ❓ | slightly complex (pure Python, plugin runtime) | [Quick Start guide](https://github.com/HarnessLab/claw-code-agent#-quick-start) |
+| 12 | <a name="builderforceagents"></a>[**coderClaw**](https://github.com/SeanHogg/BuilderForceAgents) | [3](https://github.com/SeanHogg/BuilderForceAgents/stargazers) | Self-hosted multi-role coding system (Creator, Reviewer, Test, Refactor, etc.) with AST and semantic maps; IDE-agnostic, chat-channel triggers. <sup>`ide` · `typescript`</sup> | ❓ | slightly complex (multi-role, AST/semantic) | [Multi-agent README](https://github.com/SeanHogg/BuilderForceAgents#readme) |
 
 ## Coding harness configs and SDKs
 
@@ -325,7 +326,7 @@ Harnesses whose execution state persists across restarts: langgraph-bigtool, n8n
 
 ### How many of these agent harnesses are open source?
 
-96 of 110 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.
+97 of 111 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.
 
 ### What is an agent harness?
 
