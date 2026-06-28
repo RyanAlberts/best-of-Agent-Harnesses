@@ -11,7 +11,7 @@
     "name": "Ryan Alberts",
     "url": "https://github.com/RyanAlberts"
   },
-  "dateModified": "2026-06-26",
+  "dateModified": "2026-06-28",
   "keywords": [
     "agent harness",
     "AI agents",
@@ -1248,11 +1248,11 @@
         "position": 102,
         "item": {
           "@type": "SoftwareApplication",
-          "name": "vercel/ai",
-          "url": "https://github.com/vercel/ai",
-          "description": "React and Node SDK for streaming, tool calls, and agent-style UIs; provider-agnostic.",
+          "name": "deepagents",
+          "url": "https://github.com/langchain-ai/deepagents",
+          "description": "LangChain's Python+TypeScript agent harness on top of LangGraph: planning tool, virtual filesystem, shell sandbox, sub-agent spawning—the \"Claude Code-style\" harness as a reusable library.",
           "applicationCategory": "DeveloperApplication",
-          "keywords": "provider-agnostic, typescript"
+          "keywords": "multi-agent, sandbox, python, typescript"
         }
       },
       {
@@ -1260,11 +1260,11 @@
         "position": 103,
         "item": {
           "@type": "SoftwareApplication",
-          "name": "deepagents",
-          "url": "https://github.com/langchain-ai/deepagents",
-          "description": "LangChain's Python+TypeScript agent harness on top of LangGraph: planning tool, virtual filesystem, shell sandbox, sub-agent spawning—the \"Claude Code-style\" harness as a reusable library.",
+          "name": "vercel/ai",
+          "url": "https://github.com/vercel/ai",
+          "description": "React and Node SDK for streaming, tool calls, and agent-style UIs; provider-agnostic.",
           "applicationCategory": "DeveloperApplication",
-          "keywords": "multi-agent, sandbox, python, typescript"
+          "keywords": "provider-agnostic, typescript"
         }
       },
       {
