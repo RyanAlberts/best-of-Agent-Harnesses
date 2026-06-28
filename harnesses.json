@@ -9,7 +9,7 @@
     "feed_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/feed.json",
     "license": "CC-BY-SA-4.0",
     "stars_captured": "2026-06-26",
-    "project_count": 110,
+    "project_count": 111,
     "tiers": [
       "super simple",
       "mostly simple",
@@ -336,7 +336,7 @@
     {
       "kind": "derived",
       "q": "How many of these agent harnesses are open source?",
-      "a": "96 of 110 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
+      "a": "97 of 111 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
       "slug": "how-many-of-these-agent-harnesses-are-open-source"
     },
     {
@@ -848,6 +848,39 @@
       "example": {
         "label": "Custom modes guide",
         "url": "https://docs.roocode.com/features/custom-modes"
+      }
+    },
+    {
+      "name": "oh-my-pi",
+      "github_id": "can1357/oh-my-pi",
+      "url": "https://github.com/can1357/oh-my-pi",
+      "slug": "oh-my-pi",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#oh-my-pi",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/oh-my-pi/",
+      "description": "Terminal coding agent (fork of Pi) that wires the IDE into the harness: hash-anchored edits, a 32-tool loop tuned per-model, LSP rename/references/diagnostics on every write, a real DAP debugger (lldb/dlv/debugpy), long-lived Python + Bun execution kernels that call back into the agent's tools, browser control, and 40+ provider support (Claude/OpenAI/Gemini/local). ~55k lines of Rust core.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 14939,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (terminal agent, LSP/DAP, multi-provider)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "open-source",
+      "tags": [
+        "browser",
+        "provider-agnostic",
+        "cli",
+        "ide",
+        "rust",
+        "python",
+        "typescript"
+      ],
+      "example": {
+        "label": "LSP wired into edits",
+        "url": "https://github.com/can1357/oh-my-pi/blob/main/docs/lsp-config.md"
       }
     },
     {

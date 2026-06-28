@@ -193,6 +193,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("coderClaw", "SeanHogg/BuilderForceAgents",
                 "Self-hosted multi-role coding system (Creator, Reviewer, Test, Refactor, etc.) with AST and semantic maps; IDE-agnostic, chat-channel triggers.",
                 "slightly complex (multi-role, AST/semantic)", oss="❓", labels=["javascript"]),
+        Project("oh-my-pi", "can1357/oh-my-pi",
+                "Terminal coding agent (fork of Pi) that wires the IDE into the harness: hash-anchored edits, a 32-tool loop tuned per-model, LSP rename/references/diagnostics on every write, a real DAP debugger (lldb/dlv/debugpy), long-lived Python + Bun execution kernels that call back into the agent's tools, browser control, and 40+ provider support (Claude/OpenAI/Gemini/local). ~55k lines of Rust core.",
+                "slightly complex (terminal agent, LSP/DAP, multi-provider)", labels=["javascript"]),
         Project("Open Interpreter", "openinterpreter/openinterpreter",
                 "Lightweight terminal coding agent oriented to open models (DeepSeek, Kimi, Qwen). The **harness** is a code-execution loop — the model writes code, the harness executes it with confirmation gates; the CLI is the shell. The original \"let the LLM run code on my machine\" project, reborn for open weights.",
                 "mostly simple (lean code-exec loop)", labels=["python"]),
@@ -524,6 +527,7 @@ META: dict[str, tuple[int, str, str]] = {
     "aaif-goose/goose": (50240, "https://block.github.io/goose/docs/guides/recipes/", "Goose recipes guide"),
     "HarnessLab/claw-code-agent": (519, "https://github.com/HarnessLab/claw-code-agent#-quick-start", "Quick Start guide"),
     "SeanHogg/BuilderForceAgents": (3, "https://github.com/SeanHogg/BuilderForceAgents#readme", "Multi-agent README"),
+    "can1357/oh-my-pi": (14939, "https://github.com/can1357/oh-my-pi/blob/main/docs/lsp-config.md", "LSP wired into edits"),
     # coding-harness-configs
     "gsd-build/get-shit-done": (64535, "https://github.com/gsd-build/get-shit-done/blob/main/commands/gsd/ship.md", "gsd:ship command"),
     "garrytan/gstack": (116407, "https://github.com/garrytan/gstack/blob/main/ship/SKILL.md", "/ship SKILL.md"),
@@ -681,6 +685,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "RooCodeInc/Roo-Code": ("step-gated", "resumable"),
     "HarnessLab/claw-code-agent": ("checkpoint-gated", "none"),
     "SeanHogg/BuilderForceAgents": ("bounded", "none"),
+    "can1357/oh-my-pi": ("bounded", "resumable"),
     # coding-harness-configs
     "obra/superpowers": ("n/a", "n/a"),
     "affaan-m/ECC": ("n/a", "n/a"),
