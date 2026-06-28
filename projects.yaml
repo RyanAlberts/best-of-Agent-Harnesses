@@ -124,6 +124,13 @@ projects:
     github_id: garrytan/gstack
     labels: ["javascript"]
     category: "coding-harness-configs"
+  - name: LoopTroop
+    github_id: looptroop-ai/LoopTroop
+    labels: ["javascript"]
+    category: "coding-harness-configs"
+  - name: everything-claude-code
+    labels: ["javascript"]
+    category: "coding-harness-configs"
   - name: everything-claude-code
     github_id: affaan-m/ECC
     category: "coding-harness-configs"
