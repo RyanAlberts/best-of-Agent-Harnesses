@@ -10,7 +10,7 @@
 
 <p align="center">
     <a href="https://best-of.org" title="Best-of Badge"><img src="http://bit.ly/3o3EHNN"></a>
-    <a href="#contents" title="Project Count"><img src="https://img.shields.io/badge/projects-110-blue.svg?color=5ac4bf"></a>
+    <a href="#contents" title="Project Count"><img src="https://img.shields.io/badge/projects-111-blue.svg?color=5ac4bf"></a>
     <a href="https://ryanalberts.github.io/best-of-Agent-Harnesses/" title="Browse the searchable site"><img src="https://img.shields.io/badge/website-live-5ac4bf.svg"></a>
     <a href="#contribution" title="Contributions welcome"><img src="https://img.shields.io/badge/contributions-welcome-green.svg"></a>
     <a href="https://github.com/RyanAlberts/best-of-Agent-Harnesses/releases" title="Updates"><img src="https://img.shields.io/github/release-date/RyanAlberts/best-of-Agent-Harnesses?color=green&label=updated"></a>
@@ -95,7 +95,7 @@ claude mcp add agent-harnesses -- uvx agent-harnesses-mcp
 - [Frameworks](#frameworks) _23 projects_
 - [Multi-agent and orchestration](#multi-agent-and-orchestration) _8 projects_
 - [Plugins, MCPs, CLI tools](#plugins-mcps-cli-tools) _12 projects_
-- [Evaluation and benchmarking harnesses](#evaluation-and-benchmarking-harnesses) _16 projects_
+- [Evaluation and benchmarking harnesses](#evaluation-and-benchmarking-harnesses) _17 projects_
 - [Research and task-specific harnesses](#research-and-task-specific-harnesses) _2 projects_
 - [Libraries and SDKs](#libraries-and-sdks) _14 projects_
 
@@ -274,10 +274,11 @@ _Agentic eval systems, reasoning benchmarks, and open agent benchmarks._
 | 10 | <a name="inspect_evals"></a>[**inspect_evals**](https://github.com/UKGovernmentBEIS/inspect_evals)&#8202;★ | [555](https://github.com/UKGovernmentBEIS/inspect_evals/stargazers) | UK AISI/Arcadia/Vector: GAIA and other evals in Inspect AI; level 1–3, sandboxed, tool-calling solvers. <sup>`evals` · `sandbox`</sup> | ✅ | slightly complex (Inspect AI, UK gov) | [inspect SWE-bench eval](https://github.com/UKGovernmentBEIS/inspect_evals/blob/main/src/inspect_evals/swe_bench/README.md) |
 | 11 | <a name="arc-agi-benchmarking"></a>[**arc-agi-benchmarking**](https://github.com/arcprize/arc-agi-benchmarking)&#8202;★ | [350](https://github.com/arcprize/arc-agi-benchmarking/stargazers) | Runner for ARC-AGI: multi-provider (OpenAI, Anthropic, Gemini, etc.), rate limits, retries, and scoring. <sup>`evals` · `provider-agnostic` · `python`</sup> | ✅ | mostly simple (runner, multi-provider) | [o3 prompt example](https://github.com/arcprize/arc-agi-benchmarking/blob/main/docs/examples/prompt_example_o3.md) |
 | 12 | <a name="vitabench"></a>[**VitaBench**](https://github.com/meituan-longcat/vitabench)&#8202;★ | [152](https://github.com/meituan-longcat/vitabench/stargazers) | ICLR'26: 66 tools, real-world apps (delivery, travel, retail); 100 cross-scenario + 300 single-scenario tasks; adopted by Qwen/Seed. | ✅ | complex (66 tools, cross-scenario — product suite) | [VitaBench paper](https://arxiv.org/abs/2509.26490) |
-| 13 | <a name="agencybench"></a>[**AgencyBench**](https://github.com/GAIR-NLP/AgencyBench)&#8202;★ | [88](https://github.com/GAIR-NLP/AgencyBench/stargazers) | Long-horizon agent benchmark: 32 scenarios, 138 tasks, ~1M tokens and ~90 tool calls; Docker sandbox and rubric-based + LLM judges. <sup>`evals` · `sandbox` · `python`</sup> | ✅ | complex (32 scenarios, Docker, judges — product suite) | [AgencyBench leaderboard](https://github.com/GAIR-NLP/AgencyBench#leaderboard) |
-| 14 | <a name="letta-evals"></a>[**letta-evals**](https://github.com/letta-ai/letta-evals)&#8202;★ | [73](https://github.com/letta-ai/letta-evals/stargazers) | Eval harness for stateful Letta agents; configurable suites and grading (LLM or rule-based) so you can measure what you ship. <sup>`memory` · `python`</sup> | ✅ | mostly simple (Letta-specific harness) | [LoCoMo memory benchmark](https://github.com/letta-ai/letta-leaderboard/blob/main/leaderboard/locomo/locomo_benchmark.py) |
-| 15 | <a name="super-benchmark"></a>[**SUPER**](https://github.com/allenai/super-benchmark)&#8202;★ | [53](https://github.com/allenai/super-benchmark/stargazers) | Agents that set up and run ML/NLP from GitHub repos; 45 expert problems, 152 masked tasks, 602 AutoGen tasks; Docker-based. <sup>`sandbox` · `python`</sup> | ✅ | slightly complex (ML/NLP repos, Docker) | [SUPER EMNLP paper](https://arxiv.org/abs/2409.07440) |
-| 16 | <a name="trail-benchmark"></a>[**TRAIL**](https://github.com/patronus-ai/trail-benchmark) | [20](https://github.com/patronus-ai/trail-benchmark/stargazers) | Trace reasoning and agentic issue localization; 148 long-context traces, 841 errors, 20+ error types; Hugging Face dataset. | ✅ | mostly simple (traces, Hugging Face) | [TRAIL dataset card](https://huggingface.co/datasets/PatronusAI/TRAIL) |
+| 13 | <a name="agent-qa"></a>[**agent-qa**](https://github.com/vostride/agent-qa)&#8202;★ | [152](https://github.com/vostride/agent-qa/stargazers) | Self-improving QA harness for web and mobile apps: natural-language tests, memory-backed self-healing, dashboard/CLI, MCP and skills support, plus sandboxed hooks for production regression checks. <sup>`mcp` · `memory` · `sandbox` · `cli` · `typescript`</sup> | ⚠️ FSL-1.1-ALv2 | slightly complex (web/mobile QA, memory, MCP) | [Natural-language QA harness](https://github.com/vostride/agent-qa#readme) |
+| 14 | <a name="agencybench"></a>[**AgencyBench**](https://github.com/GAIR-NLP/AgencyBench)&#8202;★ | [88](https://github.com/GAIR-NLP/AgencyBench/stargazers) | Long-horizon agent benchmark: 32 scenarios, 138 tasks, ~1M tokens and ~90 tool calls; Docker sandbox and rubric-based + LLM judges. <sup>`evals` · `sandbox` · `python`</sup> | ✅ | complex (32 scenarios, Docker, judges — product suite) | [AgencyBench leaderboard](https://github.com/GAIR-NLP/AgencyBench#leaderboard) |
+| 15 | <a name="letta-evals"></a>[**letta-evals**](https://github.com/letta-ai/letta-evals)&#8202;★ | [73](https://github.com/letta-ai/letta-evals/stargazers) | Eval harness for stateful Letta agents; configurable suites and grading (LLM or rule-based) so you can measure what you ship. <sup>`memory` · `python`</sup> | ✅ | mostly simple (Letta-specific harness) | [LoCoMo memory benchmark](https://github.com/letta-ai/letta-leaderboard/blob/main/leaderboard/locomo/locomo_benchmark.py) |
+| 16 | <a name="super-benchmark"></a>[**SUPER**](https://github.com/allenai/super-benchmark)&#8202;★ | [53](https://github.com/allenai/super-benchmark/stargazers) | Agents that set up and run ML/NLP from GitHub repos; 45 expert problems, 152 masked tasks, 602 AutoGen tasks; Docker-based. <sup>`sandbox` · `python`</sup> | ✅ | slightly complex (ML/NLP repos, Docker) | [SUPER EMNLP paper](https://arxiv.org/abs/2409.07440) |
+| 17 | <a name="trail-benchmark"></a>[**TRAIL**](https://github.com/patronus-ai/trail-benchmark) | [20](https://github.com/patronus-ai/trail-benchmark/stargazers) | Trace reasoning and agentic issue localization; 148 long-context traces, 841 errors, 20+ error types; Hugging Face dataset. | ✅ | mostly simple (traces, Hugging Face) | [TRAIL dataset card](https://huggingface.co/datasets/PatronusAI/TRAIL) |
 
 ## Research and task-specific harnesses
 
@@ -325,7 +326,7 @@ Harnesses whose execution state persists across restarts: langgraph-bigtool, n8n
 
 ### How many of these agent harnesses are open source?
 
-96 of 110 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.
+96 of 111 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.
 
 ### What is an agent harness?
 

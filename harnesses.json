@@ -9,7 +9,7 @@
     "feed_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/feed.json",
     "license": "CC-BY-SA-4.0",
     "stars_captured": "2026-06-28",
-    "project_count": 110,
+    "project_count": 111,
     "tiers": [
       "super simple",
       "mostly simple",
@@ -336,7 +336,7 @@
     {
       "kind": "derived",
       "q": "How many of these agent harnesses are open source?",
-      "a": "96 of 110 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
+      "a": "96 of 111 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
       "slug": "how-many-of-these-agent-harnesses-are-open-source"
     },
     {
@@ -2928,6 +2928,37 @@
       "example": {
         "label": "VitaBench paper",
         "url": "https://arxiv.org/abs/2509.26490"
+      }
+    },
+    {
+      "name": "agent-qa",
+      "github_id": "vostride/agent-qa",
+      "url": "https://github.com/vostride/agent-qa",
+      "slug": "agent-qa",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#agent-qa",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/agent-qa/",
+      "description": "Self-improving QA harness for web and mobile apps: natural-language tests, memory-backed self-healing, dashboard/CLI, MCP and skills support, plus sandboxed hooks for production regression checks.",
+      "category": "evaluation",
+      "category_title": "Evaluation and benchmarking harnesses",
+      "stars": 152,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (web/mobile QA, memory, MCP)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "retry",
+      "recovery_rank": 2,
+      "license_signal": "restricted (FSL-1.1-ALv2)",
+      "tags": [
+        "mcp",
+        "memory",
+        "sandbox",
+        "cli",
+        "typescript"
+      ],
+      "example": {
+        "label": "Natural-language QA harness",
+        "url": "https://github.com/vostride/agent-qa#readme"
       }
     },
     {

@@ -390,6 +390,10 @@ projects:
   - name: VitaBench
     github_id: meituan-longcat/vitabench
     category: "evaluation"
+  - name: agent-qa
+    github_id: vostride/agent-qa
+    labels: ["javascript"]
+    category: "evaluation"
   - name: letta-evals
     github_id: letta-ai/letta-evals
     labels: ["python"]

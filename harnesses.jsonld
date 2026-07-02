@@ -29,7 +29,7 @@
   ],
   "mainEntity": {
     "@type": "ItemList",
-    "numberOfItems": 110,
+    "numberOfItems": 111,
     "itemListElement": [
       {
         "@type": "ListItem",
@@ -1116,6 +1116,18 @@
         "position": 91,
         "item": {
           "@type": "SoftwareApplication",
+          "name": "agent-qa",
+          "url": "https://github.com/vostride/agent-qa",
+          "description": "Self-improving QA harness for web and mobile apps: natural-language tests, memory-backed self-healing, dashboard/CLI, MCP and skills support, plus sandboxed hooks for production regression checks.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "mcp, memory, sandbox, cli, typescript"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 92,
+        "item": {
+          "@type": "SoftwareApplication",
           "name": "AgencyBench",
           "url": "https://github.com/GAIR-NLP/AgencyBench",
           "description": "Long-horizon agent benchmark: 32 scenarios, 138 tasks, ~1M tokens and ~90 tool calls; Docker sandbox and rubric-based + LLM judges.",
@@ -1125,7 +1137,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 92,
+        "position": 93,
         "item": {
           "@type": "SoftwareApplication",
           "name": "letta-evals",
@@ -1137,7 +1149,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 93,
+        "position": 94,
         "item": {
           "@type": "SoftwareApplication",
           "name": "SUPER",
@@ -1149,7 +1161,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 94,
+        "position": 95,
         "item": {
           "@type": "SoftwareApplication",
           "name": "TRAIL",
@@ -1161,7 +1173,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 95,
+        "position": 96,
         "item": {
           "@type": "SoftwareApplication",
           "name": "gpt-researcher",
@@ -1173,7 +1185,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 96,
+        "position": 97,
         "item": {
           "@type": "SoftwareApplication",
           "name": "openagents",
@@ -1185,7 +1197,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 97,
+        "position": 98,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Daytona",
@@ -1197,7 +1209,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 98,
+        "position": 99,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Mem0",
@@ -1209,7 +1221,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 99,
+        "position": 100,
         "item": {
           "@type": "SoftwareApplication",
           "name": "LiteLLM",
@@ -1221,7 +1233,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 100,
+        "position": 101,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Composio",
@@ -1233,7 +1245,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 101,
+        "position": 102,
         "item": {
           "@type": "SoftwareApplication",
           "name": "smolagents",
@@ -1245,7 +1257,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 102,
+        "position": 103,
         "item": {
           "@type": "SoftwareApplication",
           "name": "deepagents",
@@ -1257,7 +1269,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 103,
+        "position": 104,
         "item": {
           "@type": "SoftwareApplication",
           "name": "vercel/ai",
@@ -1269,7 +1281,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 104,
+        "position": 105,
         "item": {
           "@type": "SoftwareApplication",
           "name": "pydantic-ai",
@@ -1281,7 +1293,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 105,
+        "position": 106,
         "item": {
           "@type": "SoftwareApplication",
           "name": "E2B",
@@ -1293,7 +1305,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 106,
+        "position": 107,
         "item": {
           "@type": "SoftwareApplication",
           "name": "strands-agents",
@@ -1305,7 +1317,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 107,
+        "position": 108,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Cloudflare Agents",
@@ -1317,7 +1329,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 108,
+        "position": 109,
         "item": {
           "@type": "SoftwareApplication",
           "name": "openai-agents-js",
@@ -1329,7 +1341,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 109,
+        "position": 110,
         "item": {
           "@type": "SoftwareApplication",
           "name": "open-harness",
@@ -1341,7 +1353,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 110,
+        "position": 111,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Community-curated agent lists",
