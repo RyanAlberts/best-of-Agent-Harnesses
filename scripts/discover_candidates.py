@@ -55,20 +55,27 @@ def find(token: str, known_ids: set[str], min_stars: int = 300) -> list[dict]:
     seen: dict[str, dict] = {}
 
     for query in QUERIES:
-        data = _search(query, token)
+        try:
+            data = _search(query, token)
+        except Exception as e:  # rate limit/network — skip this query, keep the rest
+            print(f"search query failed, skipping: {query!r} ({e})", file=sys.stderr)
+            continue
         for item in data.get("items", []):
-            full_name = item["full_name"]
+            full_name = item.get("full_name")
+            if not full_name:
+                continue
             if full_name.lower() in known_lower:
                 continue
             if item.get("archived", False):
                 continue
-            if item.get("stargazers_count", 0) < min_stars:
+            stars = item.get("stargazers_count", 0)
+            if stars < min_stars:
                 continue
             if full_name in seen:
                 continue
             seen[full_name] = {
                 "id": full_name,
-                "stars": item["stargazers_count"],
+                "stars": stars,
                 "topics": item.get("topics", []),
                 "desc": item.get("description") or "",
             }
