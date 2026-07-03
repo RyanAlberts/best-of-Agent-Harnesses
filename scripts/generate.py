@@ -928,6 +928,8 @@ def render_use_cases() -> list:
     for intent, ids, cat_title in USE_CASES:
         picks: list = []
         for gid in ids:
+            if is_graveyard(gid):
+                continue
             p = find_project(gid)
             picks.append(f"[{p.display_name}](https://github.com/{p.github_id})")
         anchor = slug(cat_title)
@@ -983,7 +985,14 @@ def generate_yaml() -> str:
 
 
 def count_projects() -> int:
-    return sum(len(PROJECTS[c]) for c, _, _ in CATEGORIES)
+    """Live project count — excludes graveyard (see is_graveyard)."""
+    return sum(
+        1 for c, _, _ in CATEGORIES for p in PROJECTS[c] if not is_graveyard(p.github_id)
+    )
+
+
+def graveyard_count() -> int:
+    return len(graveyard_projects())
 
 
 # ---------------------------------------------------------------------------
@@ -1061,7 +1070,8 @@ def build_faq() -> list:
         faq.append({"kind": kind, "q": q, "a": a, "slug": slug(q)})
 
     for intent, ids, cat_title in USE_CASES:
-        picks = ", ".join(find_project(g).display_name for g in ids[:3])
+        live_ids = [g for g in ids if not is_graveyard(g)]
+        picks = ", ".join(find_project(g).display_name for g in live_ids[:3])
         add("use-case", f"What is the best agent harness if {intent}?",
             f"Top picks: {picks}. See the “{cat_title}” category for the full ranked list.")
 
@@ -1171,7 +1181,7 @@ def generate_readme() -> str:
         "- [FAQ](#faq)",
     ]
     for cat_id, title, _ in CATEGORIES:
-        count = len(PROJECTS[cat_id])
+        count = sum(1 for p in PROJECTS[cat_id] if not is_graveyard(p.github_id))
         anchor = slug(title)
         header.append(f"- [{title}](#{anchor}) _{count} projects_")
     header += [
@@ -1201,7 +1211,8 @@ def generate_readme() -> str:
         body.append("")
         body.append("| # | Project | ⭐ Stars | Description | Open source | Simplicity ↔ capability | Examples |")
         body.append("|---|---------|---------|-------------|-------------|-------------------------|----------|")
-        sorted_projects = sorted(PROJECTS[cat_id], key=lambda x: stars_for(x.github_id), reverse=True)
+        live_projects = [p for p in PROJECTS[cat_id] if not is_graveyard(p.github_id)]
+        sorted_projects = sorted(live_projects, key=lambda x: stars_for(x.github_id), reverse=True)
         for i, p in enumerate(sorted_projects, 1):
             stars = stars_for(p.github_id)
             stars_cell = f"[{format_stars(stars)}](https://github.com/{p.github_id}/stargazers)"
@@ -1211,6 +1222,25 @@ def generate_readme() -> str:
             marks = ("&#8202;★" if autonomy == "headless" else "") + ("&#8202;✱" if recovery == "durable" else "")
             anchor = f'<a name="{project_slug(p.github_id)}"></a>'
             row = f"| {i} | {anchor}[**{p.display_name}**](https://github.com/{p.github_id}){marks} | {stars_cell} | {p.description}{chips} | {p.oss} | {p.axis} | {examples_cell} |"
+            body.append(row)
+        body.append("")
+    graveyard = graveyard_projects()
+    if graveyard:
+        body.append("## ⚰️ Graveyard")
+        body.append("")
+        body.append(
+            "_Archived upstream. Kept here — not deleted — for citation and historical "
+            "integrity; excluded from counts, the landscape chart, and harnesses.json's "
+            "main list._"
+        )
+        body.append("")
+        body.append("| Project | Last ⭐ Stars | Archived since | |")
+        body.append("|---------|--------------|-----------------|---|")
+        for p in graveyard:
+            gid = p.github_id
+            stars_cell = format_stars(stars_for(gid))
+            since = ARCHIVED[gid]
+            row = f"| [{p.display_name}](https://github.com/{gid}) | {stars_cell} | {since} | archived — kept for integrity |"
             body.append(row)
         body.append("")
     body += ["## FAQ", ""]
@@ -1392,7 +1422,8 @@ def generate_harnesses_json() -> str:
     import json
     projects = []
     for cat_id, cat_title, _ in CATEGORIES:
-        for p in sorted(PROJECTS[cat_id], key=lambda x: stars_for(x.github_id), reverse=True):
+        live = [p for p in PROJECTS[cat_id] if not is_graveyard(p.github_id)]
+        for p in sorted(live, key=lambda x: stars_for(x.github_id), reverse=True):
             tier = tier_of(p)
             autonomy, recovery = axes_for(p.github_id)
             projects.append({
@@ -1429,6 +1460,7 @@ def generate_harnesses_json() -> str:
             "license": "CC-BY-SA-4.0",
             "stars_captured": STARS_CAPTURED,
             "project_count": count_projects(),
+            "graveyard_count": graveyard_count(),
             "tiers": TIER_ORDER,
             "tier_help": "Adoption surface area, least to most: tier_rank 1 = format-only/single concept, 4 = platform with its own runtime and ecosystem.",
             "autonomy_tiers": AUTONOMY_TIERS,
@@ -1437,10 +1469,22 @@ def generate_harnesses_json() -> str:
             "recovery_help": "Behavior when a run dies mid-task, weakest to strongest: rank 1 = start over, 4 = persisted execution state survives restarts. rank 0 / 'n/a' = doesn't execute.",
         },
         "categories": [{"id": c, "title": t, "subtitle": s} for c, t, s in CATEGORIES],
-        "use_cases": [{"intent": intent, "picks": ids, "category_title": cat} for intent, ids, cat in USE_CASES],
+        "use_cases": [
+            {"intent": intent, "picks": [g for g in ids if not is_graveyard(g)], "category_title": cat}
+            for intent, ids, cat in USE_CASES
+        ],
         "faq": build_faq(),
         "comparisons": comparisons_index(),
         "projects": projects,
+        "graveyard": [
+            {
+                "github_id": p.github_id,
+                "name": p.display_name,
+                "last_stars": stars_for(p.github_id),
+                "archived_since": ARCHIVED[p.github_id],
+            }
+            for p in graveyard_projects()
+        ],
     }
     return json.dumps(doc, indent=2, ensure_ascii=False) + "\n"
 
@@ -1524,6 +1568,8 @@ def generate_landscape_svg() -> str:
     pts = []
     for cat_id, _, _ in CATEGORIES:
         for p in PROJECTS[cat_id]:
+            if is_graveyard(p.github_id):
+                continue
             s = stars_for(p.github_id)
             pts.append((p, cat_id, tier_of(p), s, xpos(tier_of(p), p.github_id), ypos(s)))
 

@@ -9,7 +9,8 @@
     "feed_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/feed.json",
     "license": "CC-BY-SA-4.0",
     "stars_captured": "2026-07-03",
-    "project_count": 110,
+    "project_count": 106,
+    "graveyard_count": 4,
     "tiers": [
       "super simple",
       "mostly simple",
@@ -93,8 +94,7 @@
         "openai/codex",
         "google-gemini/gemini-cli",
         "OpenHands/OpenHands",
-        "charmbracelet/crush",
-        "RooCodeInc/Roo-Code"
+        "charmbracelet/crush"
       ],
       "category_title": "Coding agent products (IDEs, CLIs, full suites)"
     },
@@ -149,8 +149,7 @@
         "xfey/MCP-Zero",
         "Reason-Wang/ToolGen",
         "antl3x/ToolRAG",
-        "langchain-ai/langgraph-bigtool",
-        "spring-ai-community/spring-ai-tool-search-tool"
+        "langchain-ai/langgraph-bigtool"
       ],
       "category_title": "Progressive disclosure harnesses"
     },
@@ -336,7 +335,7 @@
     {
       "kind": "derived",
       "q": "How many of these agent harnesses are open source?",
-      "a": "96 of 110 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
+      "a": "93 of 106 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
       "slug": "how-many-of-these-agent-harnesses-are-open-source"
     },
     {
@@ -531,33 +530,6 @@
       "example": {
         "label": "Full eval pipeline",
         "url": "https://github.com/Reason-Wang/ToolGen/blob/master/scripts/eval_full_pipeline.sh"
-      }
-    },
-    {
-      "name": "spring-ai-tool-search-tool",
-      "github_id": "spring-ai-community/spring-ai-tool-search-tool",
-      "url": "https://github.com/spring-ai-community/spring-ai-tool-search-tool",
-      "slug": "spring-ai-tool-search-tool",
-      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#spring-ai-tool-search-tool",
-      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/spring-ai-tool-search-tool/",
-      "description": "Dynamic tool discovery for Spring AI: model gets a search tool first, then pulls definitions for relevant tools; 34–64% token reduction across providers.",
-      "category": "progressive-disclosure",
-      "category_title": "Progressive disclosure harnesses",
-      "stars": 76,
-      "tier": "mostly simple",
-      "tier_rank": 2,
-      "axis": "mostly simple (search-then-load)",
-      "autonomy": "n/a",
-      "autonomy_rank": 0,
-      "recovery": "n/a",
-      "recovery_rank": 0,
-      "license_signal": "open-source",
-      "tags": [
-        "tool-discovery"
-      ],
-      "example": {
-        "label": "Tool Search demo app",
-        "url": "https://github.com/spring-ai-community/spring-ai-tool-search-tool/tree/main/examples/tool-search-tool-demo"
       }
     },
     {
@@ -821,36 +793,6 @@
       }
     },
     {
-      "name": "Roo Code",
-      "github_id": "RooCodeInc/Roo-Code",
-      "url": "https://github.com/RooCodeInc/Roo-Code",
-      "slug": "roo-code",
-      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#roo-code",
-      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/roo-code/",
-      "description": "VS Code/Cursor extension in the Cline lineage. The **harness** is the approval-gated agent with custom modes and a strong MCP story; the IDE is the UI. Popular community fork when you want that workflow without the upstream extension.",
-      "category": "coding-agent-products",
-      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
-      "stars": 24303,
-      "tier": "slightly complex",
-      "tier_rank": 3,
-      "axis": "slightly complex (IDE extension, MCP-first)",
-      "autonomy": "step-gated",
-      "autonomy_rank": 1,
-      "recovery": "resumable",
-      "recovery_rank": 3,
-      "license_signal": "open-source",
-      "tags": [
-        "mcp",
-        "workflow",
-        "ide",
-        "typescript"
-      ],
-      "example": {
-        "label": "Custom modes guide",
-        "url": "https://docs.roocode.com/features/custom-modes"
-      }
-    },
-    {
       "name": "claw-code-agent",
       "github_id": "HarnessLab/claw-code-agent",
       "url": "https://github.com/HarnessLab/claw-code-agent",
@@ -878,34 +820,6 @@
       "example": {
         "label": "Quick Start guide",
         "url": "https://github.com/HarnessLab/claw-code-agent#-quick-start"
-      }
-    },
-    {
-      "name": "coderClaw",
-      "github_id": "SeanHogg/BuilderForceAgents",
-      "url": "https://github.com/SeanHogg/BuilderForceAgents",
-      "slug": "builderforceagents",
-      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#builderforceagents",
-      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/builderforceagents/",
-      "description": "Self-hosted multi-role coding system (Creator, Reviewer, Test, Refactor, etc.) with AST and semantic maps; IDE-agnostic, chat-channel triggers.",
-      "category": "coding-agent-products",
-      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
-      "stars": 3,
-      "tier": "slightly complex",
-      "tier_rank": 3,
-      "axis": "slightly complex (multi-role, AST/semantic)",
-      "autonomy": "bounded",
-      "autonomy_rank": 3,
-      "recovery": "none",
-      "recovery_rank": 1,
-      "license_signal": "unknown",
-      "tags": [
-        "ide",
-        "typescript"
-      ],
-      "example": {
-        "label": "Multi-agent README",
-        "url": "https://github.com/SeanHogg/BuilderForceAgents#readme"
       }
     },
     {
@@ -1013,34 +927,6 @@
       "example": {
         "label": "/ship SKILL.md",
         "url": "https://github.com/garrytan/gstack/blob/main/ship/SKILL.md"
-      }
-    },
-    {
-      "name": "get-shit-done",
-      "github_id": "gsd-build/get-shit-done",
-      "url": "https://github.com/gsd-build/get-shit-done",
-      "slug": "get-shit-done",
-      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#get-shit-done",
-      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/get-shit-done/",
-      "description": "Goal-backward planning and wave-based execution over fresh context windows; avoids context rot by design. Python/JS meta-prompting for Claude Code, OpenCode, Gemini CLI.",
-      "category": "coding-harness-configs",
-      "category_title": "Coding harness configs and SDKs",
-      "stars": 64654,
-      "tier": "mostly simple",
-      "tier_rank": 2,
-      "axis": "mostly simple (meta-prompting, you own stack)",
-      "autonomy": "bounded",
-      "autonomy_rank": 3,
-      "recovery": "resumable",
-      "recovery_rank": 3,
-      "license_signal": "open-source",
-      "tags": [
-        "cli",
-        "python"
-      ],
-      "example": {
-        "label": "gsd:ship command",
-        "url": "https://github.com/gsd-build/get-shit-done/blob/main/commands/gsd/ship.md"
       }
     },
     {
@@ -3490,6 +3376,32 @@
         "label": "Frameworks section",
         "url": "https://github.com/brandonhimpfen/awesome-ai-agents#frameworks"
       }
+    }
+  ],
+  "graveyard": [
+    {
+      "github_id": "gsd-build/get-shit-done",
+      "name": "get-shit-done",
+      "last_stars": 64654,
+      "archived_since": "2026-07-03"
+    },
+    {
+      "github_id": "RooCodeInc/Roo-Code",
+      "name": "Roo Code",
+      "last_stars": 24303,
+      "archived_since": "2026-07-03"
+    },
+    {
+      "github_id": "spring-ai-community/spring-ai-tool-search-tool",
+      "name": "spring-ai-tool-search-tool",
+      "last_stars": 76,
+      "archived_since": "2026-07-03"
+    },
+    {
+      "github_id": "SeanHogg/BuilderForceAgents",
+      "name": "coderClaw",
+      "last_stars": 3,
+      "archived_since": "2026-07-03"
     }
   ]
 }
