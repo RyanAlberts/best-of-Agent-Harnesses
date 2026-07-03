@@ -973,7 +973,7 @@ def generate_yaml() -> str:
     ]
     for cat_id, title, _ in CATEGORIES:
         lines.append(f"  # {title}")
-        for p in PROJECTS[cat_id]:
+        for p in live_projects(cat_id):
             lines.append(f"  - name: {p.name}")
             lines.append(f"    github_id: {p.github_id}")
             if p.labels:
@@ -1030,6 +1030,11 @@ def ordered_projects() -> list:
         projects = [p for p in PROJECTS[cat_id] if not is_graveyard(p.github_id)]
         out += sorted(projects, key=lambda x: stars_for(x.github_id), reverse=True)
     return out
+
+
+def live_projects(cat_id: str) -> "list[Project]":
+    """Non-archived projects in a single category, in PROJECTS insertion order."""
+    return [p for p in PROJECTS[cat_id] if not is_graveyard(p.github_id)]
 
 
 _SLUG_MAP: "dict[str, str]" = {}
@@ -1181,7 +1186,7 @@ def generate_readme() -> str:
         "- [FAQ](#faq)",
     ]
     for cat_id, title, _ in CATEGORIES:
-        count = sum(1 for p in PROJECTS[cat_id] if not is_graveyard(p.github_id))
+        count = len(live_projects(cat_id))
         anchor = slug(title)
         header.append(f"- [{title}](#{anchor}) _{count} projects_")
     header += [
@@ -1211,8 +1216,7 @@ def generate_readme() -> str:
         body.append("")
         body.append("| # | Project | ⭐ Stars | Description | Open source | Simplicity ↔ capability | Examples |")
         body.append("|---|---------|---------|-------------|-------------|-------------------------|----------|")
-        live_projects = [p for p in PROJECTS[cat_id] if not is_graveyard(p.github_id)]
-        sorted_projects = sorted(live_projects, key=lambda x: stars_for(x.github_id), reverse=True)
+        sorted_projects = sorted(live_projects(cat_id), key=lambda x: stars_for(x.github_id), reverse=True)
         for i, p in enumerate(sorted_projects, 1):
             stars = stars_for(p.github_id)
             stars_cell = f"[{format_stars(stars)}](https://github.com/{p.github_id}/stargazers)"
@@ -1327,7 +1331,7 @@ def generate_tags_md() -> str:
     by_tag.setdefault("python", [])
     by_tag.setdefault("typescript", [])
     for cat_id, cat_title, _ in CATEGORIES:
-        for p in PROJECTS[cat_id]:
+        for p in live_projects(cat_id):
             for t in p.tags:
                 by_tag.setdefault(t, []).append((p, cat_title))
 
@@ -1422,8 +1426,7 @@ def generate_harnesses_json() -> str:
     import json
     projects = []
     for cat_id, cat_title, _ in CATEGORIES:
-        live = [p for p in PROJECTS[cat_id] if not is_graveyard(p.github_id)]
-        for p in sorted(live, key=lambda x: stars_for(x.github_id), reverse=True):
+        for p in sorted(live_projects(cat_id), key=lambda x: stars_for(x.github_id), reverse=True):
             tier = tier_of(p)
             autonomy, recovery = axes_for(p.github_id)
             projects.append({
@@ -1505,7 +1508,8 @@ def generate_llms_txt() -> str:
         "",
     ]
     for intent, ids, _ in USE_CASES:
-        picks = ", ".join(f"{find_project(g).display_name} (https://github.com/{g})" for g in ids)
+        live_ids = [g for g in ids if not is_graveyard(g)]
+        picks = ", ".join(f"{find_project(g).display_name} (https://github.com/{g})" for g in live_ids)
         lines.append(f"- {intent}: {picks}")
     lines.append("")
     lines += ["## FAQ", ""]
@@ -1514,11 +1518,11 @@ def generate_llms_txt() -> str:
         lines.append(item["a"])
         lines.append("")
     for cat_id, title, subtitle in CATEGORIES:
-        lines.append(f"## {title} ({len(PROJECTS[cat_id])} projects)")
+        lines.append(f"## {title} ({len(live_projects(cat_id))} projects)")
         lines.append("")
         lines.append(f"{subtitle}")
         lines.append("")
-        for p in sorted(PROJECTS[cat_id], key=lambda x: stars_for(x.github_id), reverse=True):
+        for p in sorted(live_projects(cat_id), key=lambda x: stars_for(x.github_id), reverse=True):
             tags = (" [" + ", ".join(p.tags) + "]") if p.tags else ""
             autonomy, recovery = axes_for(p.github_id)
             lines.append(
@@ -1567,9 +1571,7 @@ def generate_landscape_svg() -> str:
 
     pts = []
     for cat_id, _, _ in CATEGORIES:
-        for p in PROJECTS[cat_id]:
-            if is_graveyard(p.github_id):
-                continue
+        for p in live_projects(cat_id):
             s = stars_for(p.github_id)
             pts.append((p, cat_id, tier_of(p), s, xpos(tier_of(p), p.github_id), ypos(s)))
 
@@ -1692,7 +1694,7 @@ def generate_axes_svg() -> str:
 
     pts, na = [], 0
     for cat_id, _, _ in CATEGORIES:
-        for p in PROJECTS[cat_id]:
+        for p in live_projects(cat_id):
             a, r = axes_for(p.github_id)
             if a == "n/a" or r == "n/a":
                 na += 1
