@@ -17,6 +17,8 @@ import urllib.request
 from datetime import datetime
 from pathlib import Path
 
+import write_queue
+
 GEN = Path(__file__).resolve().parent / "generate.py"
 
 
@@ -65,6 +67,7 @@ def fetch(gid: str) -> tuple:
 
 
 changed, failed, moved, archived = [], [], [], []
+archived_stars = {}
 for gid in ids:
     try:
         n, full, is_archived = fetch(gid)
@@ -75,6 +78,7 @@ for gid in ids:
         moved.append((gid, full))
     if is_archived:
         archived.append(gid)
+        archived_stars[gid] = n
     old = int(re.search(r'"%s":\s*\((\d+),' % re.escape(gid), src).group(1))
     if old != n:
         src = re.sub(r'("%s":\s*\()\d+(,)' % re.escape(gid), r"\g<1>%d\g<2>" % n, src)
@@ -117,3 +121,14 @@ if archived:
     print("ARCHIVED — flag in description or drop per CLAUDE.md curation bar:")
     for a in archived:
         print(f"  {a}")
+
+# Hand off to Flow 2 (a separate Claude routine that reads this file and
+# never calls the GitHub API) — see .superpowers/sdd for the two-flow design.
+write_queue.write({
+    "generated": today,
+    "movers": [{"id": gid, "from": old, "to": n} for gid, old, n in changed],
+    "moved": [{"id": a, "to": b} for a, b in moved],
+    "archived": [{"id": gid, "since": new_archived[gid], "stars": archived_stars[gid]} for gid in archived],
+    "failed": [{"id": gid, "status": err} for gid, err in failed],
+    "candidates": [],
+})
