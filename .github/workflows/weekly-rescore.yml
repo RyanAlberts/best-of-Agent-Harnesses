@@ -1,0 +1,82 @@
+# Weekly rescore — runs the repo's OWN scripts (refresh_stars.py + generate.py)
+# on GitHub-hosted infra, which has unrestricted api.github.com access.
+# This SUPERSEDES the Claude Code cloud routine (.claude/routines/weekly-rescore.md),
+# whose sessions are now scoped to a single repo and can't fetch the ~101 third-party
+# star counts the rescore needs. Unlike the disabled best-of-update-action workflow,
+# this preserves the custom intro + Simplicity <-> capability column because it runs
+# generate.py, not the upstream action.
+#
+# Auth: prefers secret RESCORE_PAT (your "claude routines" classic PAT) if set,
+# else falls back to the built-in GITHUB_TOKEN. Both can read public star counts;
+# the PAT guarantees contribution credit identical to the old routine.
+name: weekly-rescore
+
+on:
+  schedule:
+    - cron: "0 14 * * 0" # Sundays 14:00 UTC = 09:00 America/Chicago (CDT). Matches the old routine.
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: weekly-rescore
+  cancel-in-progress: false
+
+jobs:
+  rescore:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.RESCORE_PAT || secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Refresh stars, regenerate, sanity-check
+        env:
+          GH_TOKEN: ${{ secrets.RESCORE_PAT || secrets.GITHUB_TOKEN }}
+          TZ: America/Chicago
+        run: |
+          set -euo pipefail
+          python3 scripts/refresh_stars.py | tee /tmp/refresh.log
+          python3 scripts/generate.py
+          TODAY="$(TZ=America/Chicago date +%F)"
+          python3 - "$TODAY" <<'PY'
+          import json, sys
+          today = sys.argv[1]
+          d = json.load(open("harnesses.json"))
+          assert d["meta"]["project_count"] == len(d["projects"]), \
+              f'project_count {d["meta"]["project_count"]} != {len(d["projects"])}'
+          assert d["meta"]["stars_captured"] == today, \
+              f'stars_captured {d["meta"]["stars_captured"]} != {today}'
+          print("sanity ok:", d["meta"]["stars_captured"], "projects", len(d["projects"]))
+          PY
+
+      - name: Write run summary
+        if: always()
+        run: |
+          {
+            echo "## Weekly rescore — $(TZ=America/Chicago date +%F)"
+            echo '```'
+            cat /tmp/refresh.log 2>/dev/null || echo "(refresh_stars produced no output — step failed before writing)"
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Commit and push
+        run: |
+          set -euo pipefail
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "No changes — star counts unchanged. Nothing to commit."
+            exit 0
+          fi
+          TODAY="$(TZ=America/Chicago date +%F)"
+          git config user.name  "Ryan Alexander Alberts"
+          git config user.email "25306145+RyanAlberts@users.noreply.github.com"
+          git add -A
+          TZ=America/Chicago git commit \
+            -m "weekly rescore ${TODAY}" \
+            -m "$(head -40 /tmp/refresh.log)"
+          git push origin HEAD:main
