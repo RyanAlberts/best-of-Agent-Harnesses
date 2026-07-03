@@ -1,0 +1,2929 @@
+{
+  "generated": "2026-07-03",
+  "movers": [
+    {
+      "id": "cline/cline",
+      "from": 64248,
+      "to": 64249
+    },
+    {
+      "id": "openai/codex",
+      "from": 95335,
+      "to": 95343
+    },
+    {
+      "id": "google-gemini/gemini-cli",
+      "from": 105734,
+      "to": 105733
+    },
+    {
+      "id": "anomalyco/opencode",
+      "from": 182059,
+      "to": 182071
+    },
+    {
+      "id": "OpenHands/OpenHands",
+      "from": 79296,
+      "to": 79301
+    },
+    {
+      "id": "gsd-build/get-shit-done",
+      "from": 64654,
+      "to": 64653
+    },
+    {
+      "id": "garrytan/gstack",
+      "from": 119168,
+      "to": 119188
+    },
+    {
+      "id": "affaan-m/ECC",
+      "from": 225602,
+      "to": 225627
+    },
+    {
+      "id": "obra/superpowers",
+      "from": 245364,
+      "to": 245420
+    },
+    {
+      "id": "HKUDS/OpenHarness",
+      "from": 14502,
+      "to": 14508
+    },
+    {
+      "id": "anthropics/skills",
+      "from": 157942,
+      "to": 157950
+    },
+    {
+      "id": "langchain-ai/langgraph",
+      "from": 36409,
+      "to": 36410
+    },
+    {
+      "id": "langchain-ai/langchain",
+      "from": 140847,
+      "to": 140849
+    },
+    {
+      "id": "microsoft/semantic-kernel",
+      "from": 28253,
+      "to": 28254
+    },
+    {
+      "id": "mastra-ai/mastra",
+      "from": 25784,
+      "to": 25783
+    },
+    {
+      "id": "letta-ai/letta",
+      "from": 23636,
+      "to": 23635
+    },
+    {
+      "id": "langflow-ai/langflow",
+      "from": 151046,
+      "to": 151049
+    },
+    {
+      "id": "RasaHQ/rasa",
+      "from": 21226,
+      "to": 21224
+    },
+    {
+      "id": "botpress/botpress",
+      "from": 14770,
+      "to": 14768
+    },
+    {
+      "id": "langgenius/dify",
+      "from": 147548,
+      "to": 147553
+    },
+    {
+      "id": "n8n-io/n8n",
+      "from": 195045,
+      "to": 195051
+    },
+    {
+      "id": "2FastLabs/agent-squad",
+      "from": 7680,
+      "to": 7681
+    },
+    {
+      "id": "openclaw/openclaw",
+      "from": 381587,
+      "to": 381590
+    },
+    {
+      "id": "NousResearch/hermes-agent",
+      "from": 208572,
+      "to": 208601
+    },
+    {
+      "id": "openinterpreter/openinterpreter",
+      "from": 64264,
+      "to": 64262
+    },
+    {
+      "id": "FoundationAgents/MetaGPT",
+      "from": 69171,
+      "to": 69170
+    },
+    {
+      "id": "OpenBMB/ChatDev",
+      "from": 33651,
+      "to": 33652
+    },
+    {
+      "id": "khoj-ai/khoj",
+      "from": 35460,
+      "to": 35459
+    },
+    {
+      "id": "agent0ai/agent-zero",
+      "from": 18323,
+      "to": 18321
+    },
+    {
+      "id": "OpenBMB/AgentVerse",
+      "from": 5076,
+      "to": 5075
+    },
+    {
+      "id": "google/adk-python",
+      "from": 20429,
+      "to": 20430
+    },
+    {
+      "id": "browser-use/browser-use",
+      "from": 102445,
+      "to": 102459
+    },
+    {
+      "id": "openai/openai-agents-python",
+      "from": 27626,
+      "to": 27627
+    },
+    {
+      "id": "microsoft/autogen",
+      "from": 59469,
+      "to": 59468
+    },
+    {
+      "id": "MervinPraison/PraisonAI",
+      "from": 8342,
+      "to": 8341
+    },
+    {
+      "id": "Aider-AI/aider",
+      "from": 47001,
+      "to": 47004
+    },
+    {
+      "id": "thedotmack/claude-mem",
+      "from": 85666,
+      "to": 85673
+    },
+    {
+      "id": "modelcontextprotocol/typescript-sdk",
+      "from": 12784,
+      "to": 12783
+    },
+    {
+      "id": "continuedev/continue",
+      "from": 34671,
+      "to": 34670
+    },
+    {
+      "id": "modelcontextprotocol/inspector",
+      "from": 10266,
+      "to": 10265
+    },
+    {
+      "id": "github/github-mcp-server",
+      "from": 31155,
+      "to": 31154
+    },
+    {
+      "id": "SWE-bench/SWE-bench",
+      "from": 5331,
+      "to": 5332
+    },
+    {
+      "id": "assafelovic/gpt-researcher",
+      "from": 28055,
+      "to": 28056
+    },
+    {
+      "id": "langchain-ai/deepagents",
+      "from": 25649,
+      "to": 25651
+    },
+    {
+      "id": "pydantic/pydantic-ai",
+      "from": 18191,
+      "to": 18192
+    },
+    {
+      "id": "MaxGfeller/open-harness",
+      "from": 581,
+      "to": 580
+    },
+    {
+      "id": "vercel/ai",
+      "from": 25338,
+      "to": 25339
+    },
+    {
+      "id": "huggingface/smolagents",
+      "from": 28171,
+      "to": 28173
+    },
+    {
+      "id": "strands-agents/harness-sdk",
+      "from": 6401,
+      "to": 6400
+    },
+    {
+      "id": "BerriAI/litellm",
+      "from": 52525,
+      "to": 52530
+    },
+    {
+      "id": "ComposioHQ/composio",
+      "from": 29083,
+      "to": 29085
+    },
+    {
+      "id": "e2b-dev/E2B",
+      "from": 12825,
+      "to": 12827
+    },
+    {
+      "id": "daytonaio/daytona",
+      "from": 72316,
+      "to": 72314
+    }
+  ],
+  "moved": [],
+  "archived": [
+    {
+      "id": "spring-ai-community/spring-ai-tool-search-tool",
+      "since": "2026-07-03",
+      "stars": 76
+    },
+    {
+      "id": "RooCodeInc/Roo-Code",
+      "since": "2026-07-03",
+      "stars": 24303
+    },
+    {
+      "id": "SeanHogg/BuilderForceAgents",
+      "since": "2026-07-03",
+      "stars": 3
+    },
+    {
+      "id": "gsd-build/get-shit-done",
+      "since": "2026-07-03",
+      "stars": 64653
+    }
+  ],
+  "failed": [],
+  "candidates": [
+    {
+      "id": "firecrawl/firecrawl",
+      "stars": 143651,
+      "topics": [
+        "ai",
+        "ai-agents",
+        "ai-crawler",
+        "ai-scraping",
+        "ai-search",
+        "crawler",
+        "data-extraction",
+        "html-to-markdown",
+        "llm",
+        "markdown",
+        "scraper",
+        "scraping",
+        "web-crawler",
+        "web-data",
+        "web-data-extraction",
+        "web-scraper",
+        "web-scraping",
+        "web-search",
+        "webscraping"
+      ],
+      "desc": "The API to search, scrape, and interact with the web at scale. \ud83d\udd25"
+    },
+    {
+      "id": "infiniflow/ragflow",
+      "stars": 84221,
+      "topics": [
+        "agentic-ai",
+        "agentic-retrieval",
+        "agentic-search",
+        "ai",
+        "ai-agents",
+        "context-engine",
+        "context-management",
+        "llm-apps",
+        "rag",
+        "retrieval-augmented-generation"
+      ],
+      "desc": "RAGFlow is a leading open-source Retrieval-Augmented Generation (RAG) engine that fuses cutting-edge RAG with Agent capabilities to create a superior context layer for LLMs"
+    },
+    {
+      "id": "dair-ai/Prompt-Engineering-Guide",
+      "stars": 76188,
+      "topics": [
+        "agent",
+        "agents",
+        "ai-agents",
+        "chatgpt",
+        "deep-learning",
+        "generative-ai",
+        "language-model",
+        "llms",
+        "openai",
+        "prompt-engineering",
+        "rag"
+      ],
+      "desc": "\ud83d\udc19 Guides, papers, lessons, notebooks and resources for prompt engineering, context engineering, RAG, and AI Agents."
+    },
+    {
+      "id": "bytedance/deer-flow",
+      "stars": 76008,
+      "topics": [
+        "agent",
+        "agentic",
+        "agentic-framework",
+        "agentic-workflow",
+        "ai",
+        "ai-agents",
+        "deep-research",
+        "harness",
+        "langchain",
+        "langgraph",
+        "langmanus",
+        "llm",
+        "multi-agent",
+        "nodejs",
+        "podcast",
+        "python",
+        "superagent",
+        "typescript"
+      ],
+      "desc": "An open-source long-horizon SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skill, subagents and message gateway, it handles different levels of tasks that could take minutes to hours."
+    },
+    {
+      "id": "nexu-io/open-design",
+      "stars": 74667,
+      "topics": [
+        "agent-skills",
+        "ai-agents",
+        "ai-design",
+        "byok",
+        "claude-code-for-design",
+        "claude-design",
+        "codex-design",
+        "coding-agents",
+        "cursor-design",
+        "design-systems",
+        "design-tools",
+        "desktop-app",
+        "figma-alternative",
+        "generative-ai",
+        "hermes-agent",
+        "local-first",
+        "no-code",
+        "prototyping",
+        "ui-generator",
+        "vibe-coding"
+      ],
+      "desc": "\ud83c\udfa8 The Vibe Design Workspace & the open-source Claude Design alternative. \ud83d\udda5\ufe0f Local-first desktop app. \ud83d\uddbc\ufe0f Your coding agent becomes the design engine: prototypes, landing pages, dashboards, slides, images & video \u2014 real files, HTML/PDF/PPTX/MP4 export. \ud83e\udd16 Claude Code / Codex / Cursor / Gemini / OpenCode / Qwen & 20+ CLIs via BYOK."
+    },
+    {
+      "id": "thedaviddias/Front-End-Checklist",
+      "stars": 73116,
+      "topics": [
+        "ai-agent",
+        "ai-agents",
+        "checklist",
+        "css",
+        "front-end-developer-tool",
+        "front-end-development",
+        "frontend",
+        "guidelines",
+        "html",
+        "javascript",
+        "lists",
+        "reference",
+        "resources",
+        "rules",
+        "web-development"
+      ],
+      "desc": "\ud83d\uddc2 The essential checklist for modern web development, for humans and AI agents"
+    },
+    {
+      "id": "DietrichGebert/ponytail",
+      "stars": 72852,
+      "topics": [
+        "agent-skills",
+        "ai-agents",
+        "claude",
+        "claude-code",
+        "claude-code-plugin",
+        "cursor-rules",
+        "developer-tools",
+        "llm",
+        "prompt-engineering",
+        "yagni"
+      ],
+      "desc": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote."
+    },
+    {
+      "id": "microsoft/ai-agents-for-beginners",
+      "stars": 68473,
+      "topics": [
+        "agentic-ai",
+        "agentic-framework",
+        "agentic-rag",
+        "ai-agents",
+        "ai-agents-framework",
+        "autogen",
+        "generative-ai",
+        "semantic-kernel"
+      ],
+      "desc": "12 Lessons to Get Started Building AI Agents"
+    },
+    {
+      "id": "ComposioHQ/awesome-claude-skills",
+      "stars": 66734,
+      "topics": [
+        "agent-skills",
+        "ai-agents",
+        "antigravity",
+        "automation",
+        "claude",
+        "claude-code",
+        "codex",
+        "composio",
+        "cursor",
+        "developer-tools",
+        "gemini-cli",
+        "mcp",
+        "openai-codex",
+        "rube",
+        "saas",
+        "skill",
+        "workflow-automation"
+      ],
+      "desc": "A curated list of awesome Claude Skills, resources, and tools for customizing Claude AI workflows"
+    },
+    {
+      "id": "code-yeongyu/oh-my-openagent",
+      "stars": 64728,
+      "topics": [
+        "ai",
+        "ai-agents",
+        "anthropic",
+        "chatgpt",
+        "claude",
+        "claude-skills",
+        "codex",
+        "cursor",
+        "gemini",
+        "ide",
+        "openai",
+        "opencode",
+        "orchestration",
+        "tui",
+        "typescript"
+      ],
+      "desc": "omo/lazycodex: The coding agent for tokenmaxxers;the one and only agent harness for complex codebases. For your Codex, for your OpenCode"
+    },
+    {
+      "id": "ruvnet/ruflo",
+      "stars": 62830,
+      "topics": [
+        "agentic-ai",
+        "agentic-framework",
+        "agentic-rag",
+        "agentic-workflow",
+        "agents",
+        "ai-agents",
+        "ai-assistant",
+        "ai-coding",
+        "ai-skills",
+        "autonomous-agents",
+        "claude-code",
+        "codex",
+        "mcp-server",
+        "multi-agent",
+        "multi-agent-systems",
+        "npm",
+        "skills",
+        "swarm",
+        "swarm-intelligence",
+        "typescript"
+      ],
+      "desc": "\ud83c\udf0a The leading agent meta-harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, RAG integration, and native Claude Code / Codex / Hermes and many more Integrated"
+    },
+    {
+      "id": "Mintplex-Labs/anything-llm",
+      "stars": 62528,
+      "topics": [
+        "agent-harness",
+        "agentic-ai",
+        "ai-agents",
+        "hermes-agent",
+        "llm",
+        "local-ai",
+        "localai",
+        "multimodal",
+        "no-code",
+        "open-claw",
+        "rag",
+        "self-hosted-ai",
+        "vector-database"
+      ],
+      "desc": "Stop renting your intelligence. Own it with AnythingLLM. Everything you need for a powerful local-first agent experience "
+    },
+    {
+      "id": "shanraisshan/claude-code-best-practice",
+      "stars": 61917,
+      "topics": [
+        "agentic-ai",
+        "agentic-coding",
+        "agentic-engineering",
+        "agentic-workflow",
+        "ai",
+        "ai-agents",
+        "anthropic",
+        "best-practices",
+        "boris",
+        "claude",
+        "claude-ai",
+        "claude-code",
+        "claude-code-agents",
+        "claude-code-best-practices",
+        "claude-code-commands",
+        "claude-code-skills",
+        "context-engineering",
+        "pakistan",
+        "pakistani-developer",
+        "vibe-coding"
+      ],
+      "desc": "from vibe coding to agentic engineering - practice makes claude perfect"
+    },
+    {
+      "id": "asgeirtj/system_prompts_leaks",
+      "stars": 48117,
+      "topics": [
+        "ai",
+        "ai-agents",
+        "anthropic",
+        "awesome",
+        "chatbot",
+        "chatgpt",
+        "claude",
+        "claude-code",
+        "codex",
+        "deep-learning",
+        "education",
+        "gemini",
+        "generative-ai",
+        "google",
+        "llm",
+        "machine-learning",
+        "nlp",
+        "open-source",
+        "openai",
+        "prompt-engineering"
+      ],
+      "desc": "Extracted system prompts from Anthropic - Claude Fable 5, Opus 4.8, Claude Code, Claude Design. OpenAI - ChatGPT 5.5 Thinking, GPT 5.5 Instant, Codex. Google - Gemini 3.5 Flash, 3.1 Pro, Antigravity. xAI - Grok, Cursor, Copilot, VS Code, Perplexity, and more. Updated regularly."
+    },
+    {
+      "id": "zhayujie/CowAgent",
+      "stars": 45773,
+      "topics": [
+        "ai",
+        "ai-agent",
+        "ai-agents",
+        "chatgpt-on-wechat",
+        "claude",
+        "claude-code",
+        "codex",
+        "cowagent",
+        "deepseek",
+        "harness",
+        "llm",
+        "mcp",
+        "multi-agent",
+        "openai",
+        "openclaw",
+        "skills"
+      ],
+      "desc": "Open-source super AI assistant & Agent Harness. Plans tasks, runs tools and skills, self-evolves with memory and knowledge. Multi-model, multi-channel. Lightweight, extensible, one-line install. (formerly chatgpt-on-wechat)"
+    },
+    {
+      "id": "HKUDS/nanobot",
+      "stars": 44987,
+      "topics": [
+        "ai",
+        "ai-agent",
+        "ai-agents",
+        "anthropic",
+        "chatgpt",
+        "claude",
+        "claude-code",
+        "codex",
+        "codex-cli",
+        "llm",
+        "nanobot",
+        "openai",
+        "openclaw"
+      ],
+      "desc": "Lightweight, open-source AI agent for your tools, chats, and workflows."
+    },
+    {
+      "id": "sickn33/antigravity-awesome-skills",
+      "stars": 42288,
+      "topics": [
+        "agent-skills",
+        "agentic-skills",
+        "ai-agent-skills",
+        "ai-agents",
+        "ai-coding",
+        "ai-workflows",
+        "antigravity",
+        "antigravity-skills",
+        "claude-code",
+        "claude-code-skills",
+        "codex-cli",
+        "codex-skills",
+        "cursor",
+        "cursor-skills",
+        "developer-tools",
+        "gemini-cli",
+        "gemini-skills",
+        "kiro",
+        "mcp",
+        "skill-library"
+      ],
+      "desc": "Installable GitHub library of 1,800+ agentic skills for Claude Code, Cursor, Codex CLI, Gemini CLI, Antigravity, and more. Includes specialized plugins, installer CLI, bundles, workflows, and official/community skill collections."
+    },
+    {
+      "id": "wshobson/agents",
+      "stars": 37480,
+      "topics": [
+        "agent-skills",
+        "agentic-ai",
+        "agents",
+        "ai-agents",
+        "anthropic",
+        "automation",
+        "claude-code",
+        "claude-code-plugins",
+        "codex-cli",
+        "copilot",
+        "cursor",
+        "cursor-rules",
+        "developer-tools",
+        "gemini-cli",
+        "mcp",
+        "multi-agent",
+        "opencode",
+        "orchestration",
+        "prompt-engineering",
+        "workflows"
+      ],
+      "desc": "Multi-harness agentic plugin marketplace for Claude Code, Codex CLI, Cursor, OpenCode, GitHub Copilot, and Gemini CLI"
+    },
+    {
+      "id": "Yeachan-Heo/oh-my-claudecode",
+      "stars": 37370,
+      "topics": [
+        "agentic-coding",
+        "ai-agents",
+        "automation",
+        "claude",
+        "claude-code",
+        "multi-agent-systems",
+        "oh-my-opencode",
+        "opencode",
+        "parallel-execution",
+        "vibe-coding"
+      ],
+      "desc": "Teams-first Multi-agent orchestration for Claude Code"
+    },
+    {
+      "id": "Fosowl/agenticSeek",
+      "stars": 26593,
+      "topics": [
+        "agentic-ai",
+        "agents",
+        "ai",
+        "autonomous-agents",
+        "deepseek-r1",
+        "llm",
+        "llm-agents",
+        "voice-assistant"
+      ],
+      "desc": "Fully Local Manus AI. No APIs, No $200 monthly bills. Enjoy an autonomous agent that thinks, browses the web, and code for the sole cost of electricity. \ud83d\udd14 Official updates only via twitter @Martin993886460 (Beware of fake account)"
+    },
+    {
+      "id": "OthmanAdi/planning-with-files",
+      "stars": 24436,
+      "topics": [
+        "agent-skills",
+        "agentic-ai",
+        "ai-agents",
+        "autonomous-agents",
+        "claude",
+        "claude-code",
+        "claude-skills",
+        "codex",
+        "coding-agent",
+        "context-engineering",
+        "copilot",
+        "cursor",
+        "developer-tools",
+        "github-copilot",
+        "llm-agents",
+        "long-running-agents",
+        "manus",
+        "multi-agent-systems",
+        "pi",
+        "planning"
+      ],
+      "desc": "Persistent file-based planning for AI coding agents and long-running agentic tasks. Crash-proof markdown plans that survive context loss and /clear, plus a deterministic completion gate and multi-agent shared state on disk. Manus-style. Works with Claude Code, Codex CLI, Cursor, Kiro, OpenCode and 60+ agents via the SKILL.md standard."
+    },
+    {
+      "id": "aiming-lab/AutoResearchClaw",
+      "stars": 13688,
+      "topics": [
+        "autonomous-research",
+        "citation-verification",
+        "llm-agents",
+        "metaclaw",
+        "multi-agent-debate",
+        "openclaw",
+        "paper-generation",
+        "scientific-discovery",
+        "self-evolving"
+      ],
+      "desc": "Fully autonomous & self-evolving research from idea to paper. Chat an Idea. Get a Paper. \ud83e\udd9e"
+    },
+    {
+      "id": "The-Pocket/PocketFlow-Tutorial-Codebase-Knowledge",
+      "stars": 12415,
+      "topics": [
+        "coding",
+        "large-language-model",
+        "large-language-models",
+        "llm",
+        "llm-agent",
+        "llm-agents",
+        "llm-application",
+        "llm-apps",
+        "llm-framework",
+        "llm-frameworks",
+        "llms",
+        "pocket-flow",
+        "pocketflow"
+      ],
+      "desc": "Pocket Flow: Codebase to Tutorial"
+    },
+    {
+      "id": "FellouAI/eko",
+      "stars": 4935,
+      "topics": [
+        "agent",
+        "agentic-ai",
+        "agentic-ai-development",
+        "agentic-framework",
+        "agentic-workflow",
+        "agents",
+        "ai-agents",
+        "browser-automation",
+        "browseruse",
+        "chain-of-thought",
+        "computer-automation",
+        "computeruse",
+        "genai",
+        "llm-agents",
+        "llm-inference",
+        "llmapi",
+        "natural-language-inference",
+        "prompt-engineering",
+        "rag",
+        "workflow"
+      ],
+      "desc": "Eko (Eko Keeps Operating) - Build Production-ready Agentic Workflow with Natural Language - eko.fellou.ai"
+    },
+    {
+      "id": "camel-ai/oasis",
+      "stars": 4877,
+      "topics": [
+        "agent-based-framework",
+        "agent-based-simulation",
+        "ai-societies",
+        "deep-learning",
+        "large-language-models",
+        "large-scale",
+        "llm-agents",
+        "multi-agent-systems",
+        "natural-language-processing"
+      ],
+      "desc": "\ud83c\udfdd\ufe0f OASIS: Open Agent Social Interaction Simulations with One Million Agents. "
+    },
+    {
+      "id": "IBM/mcp-context-forge",
+      "stars": 4013,
+      "topics": [
+        "agents",
+        "ai",
+        "api-gateway",
+        "asyncio",
+        "authentication-middleware",
+        "devops",
+        "docker",
+        "fastapi",
+        "federation",
+        "gateway",
+        "generative-ai",
+        "jwt",
+        "kubernetes",
+        "llm-agents",
+        "mcp",
+        "model-context-protocol",
+        "observability",
+        "prompt-engineering",
+        "python",
+        "tools"
+      ],
+      "desc": "An AI Gateway, registry, and proxy that sits in front of any MCP, A2A, or REST/gRPC APIs, exposing a unified endpoint with centralized discovery, guardrails and management. Optimizes Agent & Tool calling, and supports plugins."
+    },
+    {
+      "id": "WenyuChiou/awesome-agentic-ai-zh",
+      "stars": 3981,
+      "topics": [
+        "agentic-ai",
+        "agentic-workflows",
+        "ai-agent",
+        "ai-agents",
+        "awesome-list",
+        "chinese-llm",
+        "claude-code",
+        "claude-skills",
+        "cli",
+        "learning-roadmap",
+        "llm",
+        "llm-agents",
+        "mcp",
+        "model-context-protocol",
+        "multi-agent-systems",
+        "prompt-engineering",
+        "rag",
+        "trilingual",
+        "tutorial"
+      ],
+      "desc": "A trilingual (\u7e41\u4e2d / English / \u7b80\u4e2d) learning roadmap for agentic AI: from LLM basics to multi-agent systems, with 240+ curated resources and hands-on examples. \u4e2d\u6587 AI agent \u5b78\u7fd2\u5730\u5716\u3002"
+    },
+    {
+      "id": "HKUDS/Paper2Slides",
+      "stars": 3770,
+      "topics": [
+        "agentic-ai",
+        "llm-agents",
+        "paper2poster",
+        "paper2slides"
+      ],
+      "desc": "\"Paper2Slides: From Paper to Presentation in One Click\""
+    },
+    {
+      "id": "Mirix-AI/MIRIX",
+      "stars": 3551,
+      "topics": [
+        "llm-agents",
+        "llm-memory",
+        "memory-agents",
+        "personal-assistant"
+      ],
+      "desc": "Mirix is a multi-agent personal assistant designed to track on-screen activities and answer user questions intelligently. By capturing real-time visual data and consolidating it into structured memories, Mirix transforms raw inputs into a rich knowledge base that adapts to your digital experiences."
+    },
+    {
+      "id": "strukto-ai/mirage",
+      "stars": 3274,
+      "topics": [
+        "agent-sandbox",
+        "agent-tools",
+        "ai-agents",
+        "bash",
+        "claude-code",
+        "fuse",
+        "langchain",
+        "llm-agents",
+        "openai-agents",
+        "python",
+        "typescript",
+        "vfs",
+        "virtual-filesystem"
+      ],
+      "desc": "A Unified Virtual Filesystem For AI Agents"
+    },
+    {
+      "id": "trypromptly/LLMStack",
+      "stars": 2303,
+      "topics": [
+        "agents",
+        "ai",
+        "ai-agents-framework",
+        "generative-ai",
+        "llm-agents",
+        "llm-chain",
+        "llm-framework",
+        "llmops",
+        "llms",
+        "no-code-ai",
+        "platform"
+      ],
+      "desc": "No-code multi-agent framework to build LLM Agents, workflows and applications with your data"
+    },
+    {
+      "id": "webfuse-com/awesome-autoresearch",
+      "stars": 2294,
+      "topics": [
+        "agentic-systems",
+        "ai-agents",
+        "ai-research",
+        "ai-tools",
+        "autonomous-agents",
+        "autoresearch",
+        "awesome-list",
+        "claude-code",
+        "experiment-loops",
+        "karpathy",
+        "karpathy-inspired",
+        "llm-agents",
+        "research-agents",
+        "scientific-discovery",
+        "self-improving-systems"
+      ],
+      "desc": "A curated list of autonomous improvement loops, research agents, and autoresearch-style systems inspired by Karpathy's autoresearch."
+    },
+    {
+      "id": "google-antigravity/antigravity-sdk-python",
+      "stars": 2184,
+      "topics": [
+        "ai-agents",
+        "antigravity",
+        "gemini",
+        "gemini-api",
+        "google",
+        "llm-agents",
+        "mcp",
+        "python-sdk",
+        "skills"
+      ],
+      "desc": "A Python library for building AI agents that leverage the full power of Google Antigravity."
+    },
+    {
+      "id": "langfengQ/verl-agent",
+      "stars": 2074,
+      "topics": [
+        "agent-framework",
+        "deepseek-r1",
+        "gigpo",
+        "grpo",
+        "large-language-models",
+        "llm-agents",
+        "llm-training",
+        "reinforcement-learning"
+      ],
+      "desc": "verl-agent is an extension of veRL, designed for training LLM/VLM agents via RL. verl-agent is also the official code for paper \"Group-in-Group Policy Optimization for LLM Agent Training\""
+    },
+    {
+      "id": "IBM/AssetOpsBench",
+      "stars": 1967,
+      "topics": [
+        "ai-for-physical-assets",
+        "condition-based-maintenance",
+        "hvac-maintenance",
+        "iot",
+        "llm-agents",
+        "model-context-protocol",
+        "predictive-maintenance",
+        "time-series-forecasting"
+      ],
+      "desc": "AssetOpsBench - Industry 4.0: A unified benchmark and framework for building, orchestrating, and evaluating domain-specific AI agents for Industry 4.0 asset operations and maintenance, with 460+ scenarios, 5 specialist agents (IoT, FMSR, TSFM, Work Order,...), and multi-agent orchestration blueprints (MetaAgent, AgentHive) over MCP."
+    },
+    {
+      "id": "vonzosten/awesome-LangGraph",
+      "stars": 1887,
+      "topics": [
+        "ai",
+        "awesome",
+        "awesome-list",
+        "langchain",
+        "langgraph",
+        "llm",
+        "llm-agents"
+      ],
+      "desc": "An index of the LangChain + LangGraph ecosystem: concepts, projects, tools, templates, and guides for LLM & multi-agent apps."
+    },
+    {
+      "id": "SqueezeAILab/LLMCompiler",
+      "stars": 1858,
+      "topics": [
+        "efficient-inference",
+        "function-calling",
+        "large-language-models",
+        "llama",
+        "llama2",
+        "llm",
+        "llm-agent",
+        "llm-agents",
+        "llm-framework",
+        "llms",
+        "natural-language-processing",
+        "nlp",
+        "parallel-function-call",
+        "transformer"
+      ],
+      "desc": "[ICML 2024] LLMCompiler: An LLM Compiler for Parallel Function Calling"
+    },
+    {
+      "id": "Lumiwealth/lumibot",
+      "stars": 1723,
+      "topics": [
+        "ai-agents",
+        "algorithmic-trading",
+        "alpaca",
+        "backtesting",
+        "broker",
+        "crypto-trading",
+        "finance",
+        "forex",
+        "fred",
+        "futures-trading",
+        "interactive-brokers",
+        "llm-agents",
+        "multi-agent",
+        "options-trading",
+        "python",
+        "quantitative-finance",
+        "sec-filings",
+        "stocks",
+        "technical-analysis",
+        "trading-bot"
+      ],
+      "desc": "Backtestable AI trading agents and Python algorithmic trading strategies for stocks, options, crypto, futures, forex, SEC filings, FRED macro data, and real brokers."
+    },
+    {
+      "id": "stripe/ai",
+      "stars": 1644,
+      "topics": [
+        "ai",
+        "llm",
+        "llm-agents",
+        "mcp",
+        "python",
+        "typescript",
+        "workflows"
+      ],
+      "desc": "One-stop shop for building AI-powered products and businesses with Stripe."
+    },
+    {
+      "id": "VoltAgent/awesome-ai-agent-papers",
+      "stars": 1511,
+      "topics": [
+        "ai-agents",
+        "awesome",
+        "awesome-list",
+        "llm",
+        "llm-agents",
+        "memory",
+        "rag",
+        "research-paper"
+      ],
+      "desc": "A curated collection of AI agent research papers released in 2026, covering agent engineering, memory, evaluation, workflows, and autonomous systems."
+    },
+    {
+      "id": "TIGER-AI-Lab/TheoremExplainAgent",
+      "stars": 1495,
+      "topics": [
+        "llm-agents",
+        "manim",
+        "manim-animations",
+        "manim-video",
+        "rag"
+      ],
+      "desc": "Official Repo for \"TheoremExplainAgent: Towards Video-based Multimodal Explanations for LLM Theorem Understanding\" [ACL 2025 oral]"
+    },
+    {
+      "id": "OpenNSWM-Lab/FAROS",
+      "stars": 1426,
+      "topics": [
+        "agentic-workflow",
+        "ai-scientist",
+        "automated-research",
+        "autoresearch",
+        "llm-agents",
+        "multi-agent",
+        "paper-generation",
+        "research-agent",
+        "research-automation",
+        "scientific-discovery",
+        "workflow-orchestration"
+      ],
+      "desc": "A blueprint-driven AutoResearch runtime for orchestrating AI research workflows from idea generation and experiments to paper writing and peer review."
+    },
+    {
+      "id": "tmgthb/Autonomous-Agents",
+      "stars": 1334,
+      "topics": [
+        "agent",
+        "agent-context",
+        "agent-harness",
+        "agentic",
+        "agentic-ai",
+        "agents",
+        "ai",
+        "ai-agents",
+        "aiagent",
+        "aiagents",
+        "autonomous-agents",
+        "cognitive-agents",
+        "computer-use-agent",
+        "embodied-agent",
+        "generalist-agent",
+        "language-agent",
+        "llm",
+        "llm-agents",
+        "llmagents",
+        "research-paper"
+      ],
+      "desc": "Autonomous Agents (LLMs) research papers. Updated Daily."
+    },
+    {
+      "id": "evo-hq/evo",
+      "stars": 1279,
+      "topics": [
+        "agent-skills",
+        "autonomous-agents",
+        "autoresearch",
+        "claude-code",
+        "code-optimization",
+        "codex",
+        "evolutionary-algorithms",
+        "llm-agents"
+      ],
+      "desc": "turns your codebase into an autoresearch loop \u2014 discovers what to measure, instruments the benchmark, then runs tree search with parallel subagents."
+    },
+    {
+      "id": "HKUDS/VideoAgent",
+      "stars": 1232,
+      "topics": [
+        "agents",
+        "audio-editing",
+        "audio-understanding",
+        "llm-agents",
+        "notebooklm",
+        "podcast",
+        "video-editing",
+        "video-understanding"
+      ],
+      "desc": "\"VideoAgent: All-in-One Agentic Framework for Video Understanding, Editing, and Remaking\""
+    },
+    {
+      "id": "stanford-iris-lab/meta-harness",
+      "stars": 1196,
+      "topics": [
+        "harness-engineering",
+        "llm-agents"
+      ],
+      "desc": "Reference code for the Meta-Harness paper."
+    },
+    {
+      "id": "YGYOOO/WorldX",
+      "stars": 1150,
+      "topics": [
+        "agent",
+        "ai",
+        "ai-agents",
+        "ai-characters",
+        "ai-simulation",
+        "ai-world",
+        "emergent-behavior",
+        "game-ai",
+        "generative-agents",
+        "generative-ai",
+        "llm",
+        "llm-agents",
+        "multi-agent-simulation",
+        "open-source",
+        "phaser",
+        "pixel-art",
+        "typescript"
+      ],
+      "desc": "One sentence creates an AI-driven world \u2014 generate maps, characters, and watch stories emerge on their own. \u4e00\u53e5\u8bdd\u751f\u6210\u4e00\u4e2aAI\u81ea\u4e3b\u9a71\u52a8\u7684\u4e16\u754c."
+    },
+    {
+      "id": "XiaoLuoLYG/GOD",
+      "stars": 877,
+      "topics": [
+        "agent",
+        "agent-control-room",
+        "agent-society",
+        "ai-agents",
+        "generative-agents",
+        "human-in-the-loop",
+        "llm-agents",
+        "multi-agent-simulation",
+        "openai-compatible",
+        "pixel-replay",
+        "python",
+        "react",
+        "social-simulation"
+      ],
+      "desc": "Govern, Observe, Direct - a real-time control room for agent societies"
+    },
+    {
+      "id": "AIScientists-Dev/WorldSeed",
+      "stars": 858,
+      "topics": [
+        "agent-based-simulation",
+        "agentic-ai",
+        "agents",
+        "ai",
+        "ai-agents",
+        "autonomous-agents",
+        "emergent-behavior",
+        "game-ai",
+        "generative-agents",
+        "generative-ai",
+        "llm",
+        "llm-agents",
+        "multi-agent",
+        "multi-agent-systems",
+        "open-source",
+        "python",
+        "simulation",
+        "social-simulation",
+        "typescript",
+        "world-models"
+      ],
+      "desc": "More is Different. A multi-agent world engine where AI agents live, talk, compete, ally."
+    },
+    {
+      "id": "666ghj/BettaFish",
+      "stars": 41611,
+      "topics": [
+        "agent-framework",
+        "data-analysis",
+        "deep-research",
+        "deep-search",
+        "llms",
+        "multi-agent-system",
+        "nlp",
+        "public-opinion-analysis",
+        "python3",
+        "sentiment-analysis"
+      ],
+      "desc": "\u5fae\u8206\uff1a\u4eba\u4eba\u53ef\u7528\u7684\u591aAgent\u8206\u60c5\u5206\u6790\u52a9\u624b\uff0c\u6253\u7834\u4fe1\u606f\u8327\u623f\uff0c\u8fd8\u539f\u8206\u60c5\u539f\u8c8c\uff0c\u9884\u6d4b\u672a\u6765\u8d70\u5411\uff0c\u8f85\u52a9\u51b3\u7b56\uff01\u4ece0\u5b9e\u73b0\uff0c\u4e0d\u4f9d\u8d56\u4efb\u4f55\u6846\u67b6\u3002"
+    },
+    {
+      "id": "esengine/DeepSeek-Reasonix",
+      "stars": 25839,
+      "topics": [
+        "agent",
+        "agent-framework",
+        "ai-agent",
+        "ai-coding",
+        "cli",
+        "coding-agent",
+        "deepseek",
+        "developer-tools",
+        "ink",
+        "llm",
+        "prompt-caching",
+        "r1",
+        "terminal",
+        "tool-use",
+        "tui",
+        "typescript"
+      ],
+      "desc": "DeepSeek-native AI coding agent for your terminal. Engineered around prefix-cache stability \u2014 leave it running."
+    },
+    {
+      "id": "NirDiamant/agents-towards-production",
+      "stars": 20902,
+      "topics": [
+        "agent",
+        "agent-framework",
+        "agentic-ai",
+        "agents",
+        "ai-agents",
+        "deployment",
+        "genai",
+        "generative-ai",
+        "langgraph",
+        "llm",
+        "llms",
+        "mcp",
+        "mlops",
+        "multi-agent-systems",
+        "observability",
+        "production",
+        "python",
+        "rag",
+        "tutorials"
+      ],
+      "desc": "End-to-end, code-first tutorials for building production-grade GenAI agents. From prototype to enterprise deployment."
+    },
+    {
+      "id": "RightNow-AI/openfang",
+      "stars": 17962,
+      "topics": [
+        "agent-framework",
+        "ai-agents",
+        "llm",
+        "mcp",
+        "open-source",
+        "openclaw",
+        "operating-system",
+        "rust"
+      ],
+      "desc": "Open-source Agent Operating System"
+    },
+    {
+      "id": "eigent-ai/eigent",
+      "stars": 14460,
+      "topics": [
+        "agent-framework",
+        "agent-skills",
+        "agentic-ai",
+        "agentic-workflow",
+        "claude-cowork",
+        "claude-cowork-alternative",
+        "claude-cowork-free",
+        "desktop-agent",
+        "multi-agent-systems"
+      ],
+      "desc": "Eigent: The Open Source Cowork Desktop to Unlock Your Exceptional Productivity. Local and Free Alternative to Claude Cowork."
+    },
+    {
+      "id": "aden-hive/hive",
+      "stars": 10633,
+      "topics": [
+        "agent",
+        "agent-framework",
+        "agent-skills",
+        "anthropic",
+        "automation",
+        "autonomous-agents",
+        "claude",
+        "harness",
+        "harness-engineering",
+        "human-in-the-loop",
+        "openai",
+        "python",
+        "self-hosted",
+        "self-improving"
+      ],
+      "desc": "Multi-Agent Harness for Production AI"
+    },
+    {
+      "id": "EvoMap/evolver",
+      "stars": 8847,
+      "topics": [
+        "a2a",
+        "agent-evolution",
+        "agent-framework",
+        "agent-protocol",
+        "ai-agent",
+        "auditable-ai",
+        "autonomous-agent",
+        "cli",
+        "evomap",
+        "gep",
+        "llm-agent",
+        "mcp",
+        "memory-system",
+        "nodejs",
+        "prompt-engineering",
+        "prompt-governance",
+        "self-evolution",
+        "self-evolving",
+        "skill-library",
+        "skills"
+      ],
+      "desc": "The GEP-powered self-evolving engine for AI agents. Auditable evolution with Genes, Capsules, and Events. | evomap.ai"
+    },
+    {
+      "id": "MiroMindAI/MiroThinker",
+      "stars": 8324,
+      "topics": [
+        "agent",
+        "agent-framework",
+        "browsecomp",
+        "deep-research",
+        "futurex",
+        "gaia",
+        "hle",
+        "research-agent",
+        "search-agent",
+        "xbench"
+      ],
+      "desc": "MiroThinker is a deep research agent optimized for complex research and prediction tasks. Our latest models, MiroThinker-1.7, achieves 74.0 and 75.3 on the BrowseComp and BrowseComp Zh, respectively."
+    },
+    {
+      "id": "Upsonic/Upsonic",
+      "stars": 7904,
+      "topics": [
+        "agent",
+        "agent-framework",
+        "autonomous-agent",
+        "autonomous-agents",
+        "claude",
+        "computer-use",
+        "llms",
+        "mcp",
+        "model-context-protocol",
+        "openai",
+        "openclaw",
+        "rag",
+        "reliability",
+        "ucp",
+        "universal-commerce-protocol"
+      ],
+      "desc": "Build autonomous AI agents in Python."
+    },
+    {
+      "id": "crestalnetwork/intentkit",
+      "stars": 6503,
+      "topics": [
+        "agent-framework",
+        "agentic",
+        "ai",
+        "ai-agent",
+        "ai-agent-framework",
+        "blockchain",
+        "intents",
+        "python",
+        "web3"
+      ],
+      "desc": "IntentKit is an open-source, self-hosted cloud agent cluster that manages a collaborative team of AI agents for you."
+    },
+    {
+      "id": "open-multi-agent/open-multi-agent",
+      "stars": 6489,
+      "topics": [
+        "agent-framework",
+        "agent-orchestration",
+        "agentic-ai",
+        "ai-agents",
+        "anthropic",
+        "autogen-alternative",
+        "claude",
+        "crewai-alternative",
+        "deepseek",
+        "gemini",
+        "langgraph-alternative",
+        "llm",
+        "local-llm",
+        "mcp",
+        "model-agnostic",
+        "multi-agent",
+        "nodejs",
+        "ollama",
+        "openai",
+        "typescript"
+      ],
+      "desc": "TypeScript multi-agent orchestration framework. Describe a goal, a coordinator decomposes it into a task DAG that runs on any LLM: Claude, ChatGPT, Gemini, DeepSeek, or local models. "
+    },
+    {
+      "id": "omnigent-ai/omnigent",
+      "stars": 6150,
+      "topics": [
+        "agent-framework",
+        "agent-governance",
+        "agent-orchestration",
+        "agents",
+        "ai",
+        "ai-agent",
+        "ai-agents",
+        "claude-code",
+        "codex",
+        "coding-agents",
+        "developer-tools",
+        "llm",
+        "ml",
+        "multi-agent",
+        "python",
+        "sandbox"
+      ],
+      "desc": "Omnigent is an open-source AI agent framework and meta-harness: orchestrate Claude Code, Codex, Cursor, Pi, and custom agents \u2014 swap harnesses without rewriting, enforce policies and sandboxing, and collaborate in real time from any device."
+    },
+    {
+      "id": "rllm-org/rllm",
+      "stars": 5674,
+      "topics": [
+        "agent-framework",
+        "agentic-workflow",
+        "coding-agent",
+        "distributed-training",
+        "llm-reasoning",
+        "llm-training",
+        "machine-learning",
+        "ml-infrastructure",
+        "ml-platform",
+        "reinforcement-learning",
+        "search-agent",
+        "swe-agent",
+        "tinker",
+        "verl"
+      ],
+      "desc": "Democratizing Reinforcement Learning for LLMs"
+    },
+    {
+      "id": "ag2ai/ag2",
+      "stars": 4729,
+      "topics": [
+        "a2a",
+        "ag2",
+        "agent-framework",
+        "agentic",
+        "agentic-ai",
+        "ai",
+        "ai-agents-framework",
+        "aiagents",
+        "genai",
+        "llm",
+        "llms",
+        "mcp",
+        "multi-agent",
+        "multi-agent-system",
+        "open-source",
+        "python"
+      ],
+      "desc": "AG2 (formerly AutoGen): The Open-Source AgentOS.Join us at: https://discord.gg/sNGSwQME3x"
+    },
+    {
+      "id": "microsoft/agent-governance-toolkit",
+      "stars": 4629,
+      "topics": [
+        "agent-framework",
+        "ai-agents",
+        "ai-safety",
+        "compliance",
+        "governance",
+        "microsoft",
+        "owasp",
+        "policy-engine",
+        "python",
+        "security",
+        "trust",
+        "zero-trust"
+      ],
+      "desc": "AI Agent Governance Toolkit \u2014 Policy enforcement, zero-trust identity, execution sandboxing, and reliability engineering for autonomous AI agents. Covers 10/10 OWASP Agentic Top 10."
+    },
+    {
+      "id": "TencentCloudADP/youtu-agent",
+      "stars": 4578,
+      "topics": [
+        "agent-framework",
+        "agents",
+        "openai-agents",
+        "python"
+      ],
+      "desc": "A simple yet powerful agent framework that delivers with open-source models"
+    },
+    {
+      "id": "evalstate/fast-agent",
+      "stars": 3849,
+      "topics": [
+        "a2a",
+        "acp",
+        "agent",
+        "agent-framework",
+        "agent-skills",
+        "cli",
+        "mcp",
+        "mcp-client",
+        "mcp-server",
+        "python",
+        "skills",
+        "tui"
+      ],
+      "desc": "Code, Build and Evaluate agents - excellent Model and Skills/MCP/ACP/A2A Support"
+    },
+    {
+      "id": "iflytek/skillhub",
+      "stars": 3745,
+      "topics": [
+        "agent-framework",
+        "ai-agent",
+        "ai-governance",
+        "ai-infrastructure",
+        "ai-orchestration",
+        "audit-log",
+        "enterprise-ai",
+        "iflytek-astron",
+        "openclaw",
+        "openclaw-skills",
+        "rbac",
+        "skill",
+        "skill-hub",
+        "skill-management",
+        "skill-manager",
+        "skill-registry",
+        "skills",
+        "version-control"
+      ],
+      "desc": "Self-hosted, open-source agent skill registry for enterprises. Publish & version skill packages, govern with RBAC and audit logs, deploy   on-premise with Docker or Kubernetes."
+    },
+    {
+      "id": "MiroMindAI/MiroFlow",
+      "stars": 3057,
+      "topics": [
+        "agent-framework",
+        "agents",
+        "browsecomp",
+        "claude",
+        "deep-research",
+        "futurex",
+        "gaia",
+        "gpt-5",
+        "hle",
+        "research-agent",
+        "xbench"
+      ],
+      "desc": "\ud83c\udfc6 Top-1 on 5+ benchmarks | Web UI | Supports MiroThinker, Claude, Kimi, OpenAI"
+    },
+    {
+      "id": "open-gitagent/opengap",
+      "stars": 2888,
+      "topics": [
+        "agent",
+        "agent-framework",
+        "agent-skills",
+        "agents",
+        "assistant",
+        "claude-code",
+        "gitagent",
+        "open-standard",
+        "openclaw",
+        "skills"
+      ],
+      "desc": "A framework-agnostic, git-native standard for defining AI agents"
+    },
+    {
+      "id": "didilili/ai-agents-from-zero",
+      "stars": 2444,
+      "topics": [
+        "agent",
+        "agent-framework",
+        "agentic-ai",
+        "ai-agent",
+        "aigc",
+        "coze",
+        "cursor",
+        "deepagents",
+        "dify",
+        "gpt",
+        "langchain",
+        "langgraph",
+        "llm",
+        "mcp",
+        "rag",
+        "skills",
+        "tutorial"
+      ],
+      "desc": " \ud83d\ude80 2026 \u6700\u7cfb\u7edf\u7684 AI Agent \u901f\u6210\u6307\u5357\uff5c\u667a\u80fd\u4f53\u5b9e\u6218\u6559\u7a0b \u00b7 \u5b8c\u6574\u5b66\u4e60\u8def\u5f84  + \u5b9e\u6218\u9879\u76ee + \u9762\u8bd5\u9898\u5e93 \u00b7 \u5bf9\u6807\u5927\u6a21\u578b\u5e94\u7528\u5f00\u53d1\u5de5\u7a0b\u5e08\u5c97\u4f4d \u00b7 \u8986\u76d6LangChain / LangGraph / Coze / Dify / MCP / skills / LLM / RAG / \u63d0\u793a\u8bcd \u00b7 \u4f01\u4e1a\u7ea7\u90e8\u7f72\u4e0e\u5fae\u8c03 \u00b7 \u4ece0\u5230\u4f01\u4e1a\u7ea7\u843d\u5730 + \u4ece\u5b66\u4e60\u5230\u4e0a\u7ebf\u9879\u76ee + \u9762\u8bd5\u51c6\u5907\u4e00\u4f53\u5316 "
+    },
+    {
+      "id": "foryourhealth111-pixel/Vibe-Skills",
+      "stars": 2361,
+      "topics": [
+        "agent-framework",
+        "agent-skills",
+        "agentic-coding",
+        "ai-agents",
+        "ai-scientist",
+        "ai-skills",
+        "ai-workflow",
+        "automation",
+        "claude-code",
+        "codex",
+        "context-engineering",
+        "developer-tools",
+        "llm",
+        "multi-agent",
+        "prompt-engineering",
+        "skills",
+        "vibe-coding",
+        "vibecoding",
+        "workflow-automation"
+      ],
+      "desc": "Vibe-Skills is an all-in-one AI skills package. It seamlessly integrates expert-level capabilities and context management into a general-purpose skills package\uff0c enabling any AI agent to instantly upgrade its functionality\u2014eliminating the friction of fragmented tools and complex harnesses."
+    },
+    {
+      "id": "lioensky/VCPToolBox",
+      "stars": 2176,
+      "topics": [
+        "agent-framework",
+        "ai-agent",
+        "ai-assistant",
+        "ai-companion",
+        "context-management",
+        "context-management-system",
+        "function-calling",
+        "llm",
+        "multi-model",
+        "nodejs",
+        "openai-compatible",
+        "plugin-system",
+        "prompt-engineering",
+        "rag",
+        "rust",
+        "vector-database",
+        "vue"
+      ],
+      "desc": "VCP \u90e8\u7f72\u5728 AI \u6a21\u578b API \u4e0e\u524d\u7aef\u5e94\u7528\u4e4b\u95f4\uff0c\u662f\u9762\u5411AGI OS\u5f00\u53d1\u548c\u63a2\u7d22\u7684\u5de5\u4e1a\u7ea7\u57fa\u5efa\u793a\u8303\u9879\u76ee\u3002\u901a\u8fc7\u7edf\u4e00\u6307\u4ee4\u534f\u8bae\u3001\u591a\u5c42\u7ea7\u6301\u4e45\u5316\u8bb0\u5fc6\u3001\u5206\u5e03\u5f0f\u63d2\u4ef6\u5f15\u64ce\u53ca\u591a Agent \u534f\u4f5c\u6846\u67b6\uff0c\u5c06\u539f\u672c\u201c\u65e0\u72b6\u6001\u3001\u65e0\u8bb0\u5fc6\u3001\u65e0\u5de5\u5177\u8c03\u7528\u80fd\u529b\u201d\u7684\u5927\u8bed\u8a00\u6a21\u578b\uff0c\u5f7b\u5e95\u6539\u9020\u6210\u62e5\u6709\u6c38\u4e45\u81ea\u6211\u610f\u8bc6\u3001\u7269\u7406\u4e16\u754c\u64cd\u4f5c\u6743\u53ca\u7fa4\u4f53\u534f\u4f5c\u667a\u80fd\u7684\u5b8c\u6574\u667a\u80fd\u4f53\u7cfb\u7edf\u3002"
+    },
+    {
+      "id": "GammaLabTechnologies/harmonist",
+      "stars": 2056,
+      "topics": [
+        "agent-framework",
+        "agent-system",
+        "ai-agents",
+        "claude-code",
+        "cursor-ide",
+        "llm",
+        "multi-agent-framework",
+        "orchestration",
+        "prompt-engineering",
+        "python"
+      ],
+      "desc": "Portable AI agent orchestration with mechanical protocol enforcement. 186 agents, zero runtime dependencies."
+    },
+    {
+      "id": "msoedov/agentic_security",
+      "stars": 1915,
+      "topics": [
+        "agent-framework",
+        "agent-security",
+        "ai-red-team",
+        "llm-evaluation",
+        "llm-evaluation-framework",
+        "llm-fuzzer",
+        "llm-fuzzer-aggregator",
+        "llm-fuzzing",
+        "llm-guardrails",
+        "llm-jailbreaks",
+        "llm-scanner",
+        "llm-security",
+        "llm-vulnerabilities",
+        "prompt-testing"
+      ],
+      "desc": "Agentic LLM Vulnerability Scanner / AI red teaming kit \ud83e\uddea"
+    },
+    {
+      "id": "yomorun/yomo",
+      "stars": 1912,
+      "topics": [
+        "a2a-protocol",
+        "agent-framework",
+        "claude-code",
+        "distributed-cloud",
+        "function-calling",
+        "geodistributedsystems",
+        "managed-skills",
+        "mcp",
+        "openai",
+        "quic",
+        "realtime",
+        "serverless",
+        "skills",
+        "yomo"
+      ],
+      "desc": "\ud83e\udd96 Serverless AI Agent Framework with Geo-distributed Edge AI Infra."
+    },
+    {
+      "id": "hesreallyhim/awesome-claude-code",
+      "stars": 47898,
+      "topics": [
+        "agent-skills",
+        "agentic-code",
+        "agentic-coding",
+        "ai-workflow-optimization",
+        "ai-workflows",
+        "anthropic",
+        "anthropic-claude",
+        "awesome",
+        "awesome-claude-code",
+        "awesome-list",
+        "awesome-lists",
+        "awesome-resources",
+        "claude",
+        "claude-code",
+        "coding-agent",
+        "coding-agents",
+        "coding-assistant",
+        "coding-assistants",
+        "llm"
+      ],
+      "desc": "A hand-picked collection of the finest of resources for the most awesome of agents, Claude Code, the undisputed champion of coding companions, from the unstoppable team at Anthropic PBC. A delectable showcase of top tier skills, ambidextrous agents, scintillating status lines, top notch developer tooling, and also we have plugins"
+    },
+    {
+      "id": "1jehuang/jcode",
+      "stars": 8112,
+      "topics": [
+        "ai",
+        "ai-agent",
+        "ai-coding-agent",
+        "claude",
+        "cli",
+        "coding-agent",
+        "llm",
+        "mcp",
+        "openai",
+        "rust",
+        "terminal",
+        "tui"
+      ],
+      "desc": "Coding Agent Harness"
+    },
+    {
+      "id": "algorithmicsuperintelligence/openevolve",
+      "stars": 6641,
+      "topics": [
+        "alpha-evolve",
+        "alphacode",
+        "alphaevolve",
+        "coding-agent",
+        "deepmind",
+        "deepmind-lab",
+        "discovery",
+        "distributed-evolutionary-algorithms",
+        "evolutionary-algorithms",
+        "evolutionary-computation",
+        "genetic-algorithm",
+        "genetic-algorithms",
+        "iterative-methods",
+        "iterative-refinement",
+        "llm-engineering",
+        "llm-ensemble",
+        "llm-inference",
+        "openevolve",
+        "optimize"
+      ],
+      "desc": "Open-source implementation of AlphaEvolve"
+    },
+    {
+      "id": "cloudflare/vibesdk",
+      "stars": 5129,
+      "topics": [
+        "ai",
+        "cloudflare-workers",
+        "coding-agent",
+        "durable-objects",
+        "text-to-app",
+        "vibe-coding"
+      ],
+      "desc": "An open-source vibe coding platform that helps you build your own vibe-coding platform, built entirely on Cloudflare stack "
+    },
+    {
+      "id": "google/agents-cli",
+      "stars": 4699,
+      "topics": [
+        "adk",
+        "agent-development-kit",
+        "agents",
+        "coding-agent",
+        "gemini",
+        "gemini-enterprise-agent-platform",
+        "generative-ai",
+        "google-cloud"
+      ],
+      "desc": "The CLI and skills that turn any coding assistant into an expert at creating, evaluating, and deploying AI agents on Google Cloud."
+    },
+    {
+      "id": "nexu-io/html-video",
+      "stars": 3742,
+      "topics": [
+        "ai-agent",
+        "apache-2",
+        "coding-agent",
+        "css",
+        "ffmpeg",
+        "html",
+        "html-to-video",
+        "hyperframes",
+        "mp4",
+        "open-design",
+        "open-source",
+        "programmatic-video",
+        "video",
+        "video-as-code",
+        "video-generation"
+      ],
+      "desc": "Programmatic video for coding agents \u2014 HTML to video on your laptop. Turn HTML, CSS & data into real MP4s with pluggable render engines, 21 templates, AI soundtrack. Apache-2.0, no per-render fees. An official project by the Open Design team."
+    },
+    {
+      "id": "CommandCodeAI/command-code",
+      "stars": 3454,
+      "topics": [
+        "ai",
+        "ai-agent",
+        "anthropic",
+        "cli",
+        "coding-agent",
+        "command-code",
+        "command-line",
+        "command-line-tool",
+        "deepseek",
+        "glm",
+        "harness",
+        "kimi",
+        "openai"
+      ],
+      "desc": "Command Code AI"
+    },
+    {
+      "id": "superagent-ai/grok-cli",
+      "stars": 3185,
+      "topics": [
+        "agents",
+        "ai",
+        "cli",
+        "code",
+        "coding-agent",
+        "grok",
+        "xai"
+      ],
+      "desc": "An open-source coding agent for the Grok API"
+    },
+    {
+      "id": "SeemSeam/claude_codex_bridge",
+      "stars": 3176,
+      "topics": [
+        "ai-coding",
+        "ai-collaboration",
+        "antigravity",
+        "claude-code",
+        "cli",
+        "codex",
+        "coding-agent",
+        "crush",
+        "cursor-agent",
+        "gemini",
+        "github-copilot",
+        "kimi",
+        "kiro",
+        "multi-agent-cli",
+        "multi-agent-systems",
+        "opencode",
+        "pi-coding-agent",
+        "qwen-code",
+        "terminal",
+        "tmux"
+      ],
+      "desc": "Visible multi-agent CLI workspace for mixing Codex, Claude, Gemini, Kimi, Qwen, Cursor, Copilot, Pi, OpenCode, and other AI coding agents"
+    },
+    {
+      "id": "Windy3f3f3f3f/how-claude-code-works",
+      "stars": 2958,
+      "topics": [
+        "ai",
+        "ai-agent",
+        "anthropic",
+        "architecture",
+        "claude",
+        "claude-code",
+        "coding-agent",
+        "deep-dive",
+        "llm",
+        "source-code-analysis"
+      ],
+      "desc": "Deep dive into Claude Code internals \u2014 architecture, agent loop, context engineering, and more. / \u6df1\u5165\u89e3\u6790 Claude Code \u6e90\u7801\uff1a\u67b6\u6784\u3001Agent \u5faa\u73af\u3001\u4e0a\u4e0b\u6587\u5de5\u7a0b\u3001\u5de5\u5177\u7cfb\u7edf\u7b49"
+    },
+    {
+      "id": "teaql/teaql-agent-kit",
+      "stars": 2801,
+      "topics": [
+        "agentic-coding",
+        "ai-coding",
+        "code-generation",
+        "coding-agent",
+        "ddd",
+        "developer-tools",
+        "domain-driven-design",
+        "java",
+        "rust",
+        "semantic-guardrails",
+        "semantic-modeling",
+        "teaql"
+      ],
+      "desc": "Deterministic execution for non-deterministic AI."
+    },
+    {
+      "id": "CoderLuii/HolyClaude",
+      "stars": 2385,
+      "topics": [
+        "ai",
+        "ai-coding",
+        "anthropic",
+        "claude",
+        "claude-code",
+        "coding-agent",
+        "container",
+        "developer-tools",
+        "devtools",
+        "docker",
+        "docker-compose",
+        "gemini",
+        "headless-browser",
+        "openai",
+        "playwright"
+      ],
+      "desc": "AI coding workstation: Claude Code + web UI + 8 AI CLIs + headless browser + 50+ tools"
+    },
+    {
+      "id": "cocoindex-io/cocoindex-code",
+      "stars": 2375,
+      "topics": [
+        "agents",
+        "ast",
+        "claude-code",
+        "cocoindex",
+        "code-search",
+        "codex",
+        "coding-agent",
+        "context-engineering",
+        "context-window",
+        "context-window-optimization",
+        "indexing",
+        "mcp",
+        "open-code",
+        "python",
+        "rust",
+        "tree-sitter"
+      ],
+      "desc": "A super light-weight embedded code search engine CLI (AST based) that just works - saves 70% token and improves speed for coding agent  \ud83c\udf1f Star if you like it!"
+    },
+    {
+      "id": "softaworks/agent-toolkit",
+      "stars": 2140,
+      "topics": [
+        "agent-skills",
+        "ai",
+        "automation",
+        "claude",
+        "claude-code",
+        "coding-agent",
+        "development"
+      ],
+      "desc": "A curated collection of skills for AI coding agents. Skills are packaged instructions and scripts that extend agent capabilities across development, documentation, planning, and professional workflows."
+    },
+    {
+      "id": "Windy3f3f3f3f/claude-code-from-scratch",
+      "stars": 2075,
+      "topics": [
+        "ai",
+        "ai-agent",
+        "anthropic",
+        "build-from-scratch",
+        "claude",
+        "claude-code",
+        "coding-agent",
+        "llm",
+        "tutorial",
+        "typescript"
+      ],
+      "desc": "Build your own Claude Code from scratch.  \ud83d\udd0d Claude Code \u5f00\u6e90\u4e86 50 \u4e07\u884c\u4ee3\u7801\uff0c\u8bfb\u4e0d\u52a8\uff1f\u7528 ~4000 \u884c TypeScript / Python \u4ece\u96f6\u590d\u73b0\u6838\u5fc3\u67b6\u6784\uff0c11 \u7ae0\u5206\u6b65\u6559\u7a0b\u5e26\u4f60\u7406\u89e3 coding agent \u7cbe\u9ad3"
+    },
+    {
+      "id": "OpenCoworkAI/open-cowork",
+      "stars": 1751,
+      "topics": [
+        "ai-agent",
+        "ai-coding",
+        "ai-tools",
+        "anthropic",
+        "claude-code",
+        "coding-agent",
+        "computer-use",
+        "desktop-app",
+        "electron",
+        "mcp",
+        "multi-model",
+        "open-cowork",
+        "sandbox",
+        "skills"
+      ],
+      "desc": "Open-source AI agent desktop app for Windows & macOS. One-click install Claude Code, MCP tools, and Skills \u2014 with sandbox isolation, multi-model support, and Feishu/Slack integration."
+    },
+    {
+      "id": "itayinbarr/little-coder",
+      "stars": 1697,
+      "topics": [
+        "ai-coding-assistant",
+        "aider-polygot",
+        "benchmark",
+        "code-generation",
+        "coding-agent",
+        "coding-agents",
+        "local-llm",
+        "ollama",
+        "qwen",
+        "small-language-models",
+        "terminal-bench",
+        "tool-use"
+      ],
+      "desc": "A harness optimized to smaller LLMs"
+    },
+    {
+      "id": "he-yufeng/CoreCoder",
+      "stars": 1446,
+      "topics": [
+        "ai-agent",
+        "claude-code",
+        "cli",
+        "coding-agent",
+        "corecoder",
+        "deepseek",
+        "developer-tools",
+        "llm",
+        "openai",
+        "python"
+      ],
+      "desc": "Minimal AI coding agent (~1,000 lines of Python) inspired by Claude Code. Works with any LLM. Think NanoGPT for coding agents. Formerly NanoCoder."
+    },
+    {
+      "id": "gi-dellav/zerostack",
+      "stars": 1399,
+      "topics": [
+        "agent",
+        "agentic-ai",
+        "agentic-coding",
+        "agents",
+        "ai",
+        "claude-code",
+        "coding-agent",
+        "llm",
+        "rust",
+        "rust-lang"
+      ],
+      "desc": "Lightweight coding agent written in Rust, optimized for memory footprint and performance"
+    },
+    {
+      "id": "tigicion/dao-code",
+      "stars": 1364,
+      "topics": [
+        "ai-agent",
+        "cli",
+        "coding-agent",
+        "deepseek",
+        "llm",
+        "terminal",
+        "typescript"
+      ],
+      "desc": "Open-source TypeScript terminal coding agent for DeepSeek-V4 \u2014 builds on DeepSeek's strong price-performance and ultra-cheap cache pricing, engineering byte-stable prefixes and cache-reusing forks so cross-session memory and a continuous self-correction layer add almost no token cost; 1M context, Skills/MCP/Hooks, Claude Code config compatible."
+    },
+    {
+      "id": "ntegrals/10x",
+      "stars": 1353,
+      "topics": [
+        "ai-agents",
+        "anthropic",
+        "claude",
+        "claude-code",
+        "codex",
+        "coding-agent",
+        "continue",
+        "gemini-cli",
+        "open-code"
+      ],
+      "desc": "\u26a1\ufe0f 10x - Up to 20x faster AI coding with multi-step Superpowers. Open-source agent with smart model routing, BYOK, fully self-hosted."
+    },
+    {
+      "id": "ref-tools/ref-tools-mcp",
+      "stars": 1137,
+      "topics": [
+        "coding-agent",
+        "documentation-tool",
+        "mcp",
+        "mcp-server"
+      ],
+      "desc": "Helping coding agents never make mistakes working with public or private libraries without wasting the context window."
+    },
+    {
+      "id": "DataTalksClub/ai-dev-tools-zoomcamp",
+      "stars": 1136,
+      "topics": [
+        "ai",
+        "ai-agents",
+        "automation",
+        "cicd",
+        "coding-agent",
+        "course",
+        "devops",
+        "free",
+        "mcp"
+      ],
+      "desc": "AI Dev Tools Zoomcamp is a free course that helps you use AI tools to write better code, faster. We're starting the first cohort of this course on November 18, 2025! Sign up here to join us \ud83d\udc47\ud83c\udffc"
+    },
+    {
+      "id": "shyamsaktawat/OpenAlpha_Evolve",
+      "stars": 1029,
+      "topics": [
+        "alphacode",
+        "alphafold",
+        "coding-agent",
+        "discovery",
+        "distributed-evolutionary-algorithms",
+        "evolution-computing",
+        "evolutionary-algorithm",
+        "evolutionary-algorithms",
+        "genetic-algorithm",
+        "google",
+        "iterative-methods",
+        "iterative-refinement",
+        "llm-engineering",
+        "llm-ensemble",
+        "llm-inference",
+        "openevolve",
+        "optimize"
+      ],
+      "desc": "OpenAlpha_Evolve is an open-source Python framework inspired by the groundbreaking research on autonomous coding agents like DeepMind's AlphaEvolve."
+    },
+    {
+      "id": "nicobailon/pi-mcp-adapter",
+      "stars": 957,
+      "topics": [
+        "ai",
+        "claude",
+        "coding-agent",
+        "extension",
+        "llm",
+        "mcp",
+        "model-context-protocol",
+        "pi"
+      ],
+      "desc": "Token-efficient MCP adapter for Pi coding agent"
+    },
+    {
+      "id": "LiuMengxuan04/MiniCode",
+      "stars": 953,
+      "topics": [
+        "ai-agent",
+        "cli",
+        "coding-agent",
+        "developer-tools",
+        "nodejs",
+        "terminal",
+        "tool-calling",
+        "tui",
+        "typescript"
+      ],
+      "desc": "A lightweight terminal coding assistant with Claude Code-like workflow, tool loop, and TUI architecture, built for learning and experimentation. Multi-language support: TypeScript , Python and Rust implementations available now."
+    },
+    {
+      "id": "shareAI-lab/learn-claude-code",
+      "stars": 69744,
+      "topics": [
+        "agent",
+        "agent-development",
+        "ai-agent",
+        "claude",
+        "claude-code",
+        "educational",
+        "llm",
+        "python",
+        "teaching",
+        "tutorial"
+      ],
+      "desc": "Bash is all you need -  A nano claude code\u2013like \u300cagent harness\u300d, built from 0 to 1"
+    },
+    {
+      "id": "Hmbown/CodeWhale",
+      "stars": 39381,
+      "topics": [
+        "cli",
+        "deepseek",
+        "llm",
+        "rust",
+        "terminal",
+        "tui"
+      ],
+      "desc": "Open-source, community-driven agent harness"
+    },
+    {
+      "id": "micro/go-micro",
+      "stars": 22914,
+      "topics": [
+        "ai",
+        "ai-agents",
+        "distributed-systems",
+        "go",
+        "golang",
+        "mcp",
+        "micro",
+        "microservices"
+      ],
+      "desc": "A Go agent harness and service framework"
+    },
+    {
+      "id": "mindfold-ai/Trellis",
+      "stars": 11727,
+      "topics": [
+        "agentic-coding",
+        "ai-workflow",
+        "claudecode",
+        "codex",
+        "harness"
+      ],
+      "desc": "The best agent harness."
+    },
+    {
+      "id": "xerrors/Yuxi",
+      "stars": 5952,
+      "topics": [
+        "docker",
+        "fastapi",
+        "harness",
+        "kbqa",
+        "kgqa",
+        "llms",
+        "neo4j",
+        "rag",
+        "vue"
+      ],
+      "desc": "\u7ed3\u5408\u77e5\u8bc6\u5e93\u3001\u77e5\u8bc6\u56fe\u8c31\u7ba1\u7406\u7684 \u591a\u79df\u6237 Agent Harness \u5e73\u53f0\u3002 An agent harness that integrates a LightRAG knowledge base and knowledge graphs. Build with LangChain + Vue + FastAPI, support DeepAgents\u3001MinerU PDF\u3001Neo4j \u3001MCP."
+    },
+    {
+      "id": "lintsinghua/claude-code-book",
+      "stars": 3850,
+      "topics": [
+        "agent",
+        "agent-architecture",
+        "ai-agent",
+        "anthropic",
+        "book",
+        "chinese",
+        "claude-code",
+        "llm",
+        "mcp"
+      ],
+      "desc": "\u300a\u5fa1\u8206\uff1a\u89e3\u7801 Agent Harness\u300b42\u4e07\u5b57\u62c6\u89e3 AI Agent \u7684Harness\u9aa8\u67b6\u4e0e\u795e\u7ecf \u2014\u2014 Claude Code \u67b6\u6784\u6df1\u5ea6\u5256\u6790\uff0c15 \u7ae0\u4ece\u5bf9\u8bdd\u5faa\u73af\u5230\u6784\u5efa\u4f60\u81ea\u5df1\u7684 Agent Harness\u3002\u5728\u7ebf\u9605\u8bfb\u7f51\u7ad9\uff1a"
+    },
+    {
+      "id": "peteromallet/desloppify",
+      "stars": 2961,
+      "topics": [
+        "agent-harness"
+      ],
+      "desc": "Agent harness to make your slop code well-engineered and beautiful."
+    },
+    {
+      "id": "ai-boost/awesome-harness-engineering",
+      "stars": 2595,
+      "topics": [
+        "agent-harness",
+        "agent-memory",
+        "agent-orchestration",
+        "ai-agent-harness",
+        "ai-agents",
+        "awesome-list",
+        "context-engineering",
+        "harness-engineering",
+        "mcp"
+      ],
+      "desc": "Awesome list for AI agent harness engineering: tools, patterns, evals, memory, MCP, permissions, observability, and orchestration."
+    },
+    {
+      "id": "code-yeongyu/lazycodex",
+      "stars": 2352,
+      "topics": [
+        "ai",
+        "ai-agents",
+        "claude",
+        "claude-code",
+        "cli",
+        "codex",
+        "developer-tools",
+        "lazy",
+        "lazycodex",
+        "oh-my-openagent",
+        "omo",
+        "openai",
+        "orchestration",
+        "typescript"
+      ],
+      "desc": "The one and only agent harness for complex codebases. Project memory, planning, execution, and verified completion inside Codex."
+    },
+    {
+      "id": "peteromallet/dataclaw",
+      "stars": 2106,
+      "topics": [],
+      "desc": "Agent harness to publish your history from Claude Code et al. as Huggingface datasets. "
+    },
+    {
+      "id": "DenisSergeevitch/agents-best-practices",
+      "stars": 2081,
+      "topics": [
+        "agent-skill",
+        "agent-skills",
+        "agentic-workflows",
+        "agents",
+        "ai-agents",
+        "anthropic",
+        "claude",
+        "claude-code",
+        "codex",
+        "codex-skill",
+        "mcp",
+        "prompt-engineering"
+      ],
+      "desc": "Provider-neutral Agent Skill for Codex, Claude Code, and agentic harness design."
+    },
+    {
+      "id": "Infisical/agent-vault",
+      "stars": 1787,
+      "topics": [
+        "agents",
+        "ai-agents",
+        "secrets-management"
+      ],
+      "desc": "A HTTP credential proxy and vault for AI agents like Claude Code, OpenClaw, Hermes, custom agents + harnesses, and more."
+    },
+    {
+      "id": "google-antigravity/antigravity-cli",
+      "stars": 1443,
+      "topics": [],
+      "desc": "Antigravity CLI brings the reasoning, execution, and orchestration capabilities of Antigravity agent harness directly into your terminal."
+    },
+    {
+      "id": "Picrew/awesome-agent-harness",
+      "stars": 1407,
+      "topics": [
+        "agent-harness",
+        "context-engineering",
+        "harness-engineering"
+      ],
+      "desc": "An awesome list of Agent Harness engineering resources, including GitHub projects, tools, benchmarks, and practical guides."
+    },
+    {
+      "id": "langchain-ai/deepagentsjs",
+      "stars": 1383,
+      "topics": [
+        "ai",
+        "deepagents",
+        "langchain",
+        "langgraph"
+      ],
+      "desc": "The batteries included agent harness."
+    },
+    {
+      "id": "first-fluke/oh-my-agent",
+      "stars": 1144,
+      "topics": [
+        "agent-harness",
+        "agent-skills",
+        "agentic-coding",
+        "ai-agents",
+        "claude-code",
+        "codex",
+        "cursor",
+        "multi-agent",
+        "multi-agent-systems",
+        "oh-my-agent",
+        "opencode",
+        "orchestration",
+        "orchestrator",
+        "serena"
+      ],
+      "desc": "Portable, vendor-agnostic agent harness for project-specific skills, workflows, and agent teams aligned with your codebase, conventions, and engineering standards."
+    },
+    {
+      "id": "thClaws/thClaws",
+      "stars": 1139,
+      "topics": [
+        "agent-harness",
+        "agent-teams",
+        "ai-agent",
+        "anthropic",
+        "claude-code",
+        "cli",
+        "desktop-app",
+        "developer-tools",
+        "gemini",
+        "kms",
+        "llm",
+        "llm-wiki",
+        "mcp",
+        "model-context-protocol",
+        "multi-provider",
+        "ollama",
+        "openai",
+        "rust",
+        "tauri",
+        "telegram-bot"
+      ],
+      "desc": "Open-source AI agent harness in native Rust \u2014 GUI, CLI, headless, and webapp from one binary. Multi-provider, MCP, skills, plugins, agent teams."
+    },
+    {
+      "id": "Onelevenvy/flock",
+      "stars": 1084,
+      "topics": [
+        "agent",
+        "ai",
+        "chatbot",
+        "deekseek",
+        "harness",
+        "langchain",
+        "langgraph",
+        "langgraph-rust",
+        "llm",
+        "mcp",
+        "muti-agent",
+        "openai",
+        "react-flow",
+        "rust",
+        "workflow"
+      ],
+      "desc": "A desktop multi-agent harness built with Rust, Tauri, and React, powered by langgraph-rust."
+    },
+    {
+      "id": "Chorus-AIDLC/Chorus",
+      "stars": 1055,
+      "topics": [
+        "agent-harness",
+        "ai-agents",
+        "ai-dlc",
+        "claude-code",
+        "harness",
+        "kanban",
+        "multi-agent",
+        "task-management"
+      ],
+      "desc": "The Agent Harness for AI-Human Collaboration, inspired by the AI-DLC (AI-Driven Development Lifecycle)"
+    },
+    {
+      "id": "rasbt/mini-coding-agent",
+      "stars": 982,
+      "topics": [
+        "agents",
+        "ai",
+        "large-language-models",
+        "llms",
+        "python"
+      ],
+      "desc": "Minimal and readable coding agent harness implementation in Python to explain the core components of coding agents."
+    },
+    {
+      "id": "cuga-project/cuga-agent",
+      "stars": 845,
+      "topics": [
+        "coding-agent",
+        "computer-use",
+        "enterprise",
+        "generalist-agent",
+        "guardrails",
+        "harness",
+        "knowledge",
+        "mcp",
+        "policies",
+        "sandbox"
+      ],
+      "desc": "CUGA is an open-source generalist agent harness for the enterprise, supporting complex task execution on web and APIs, OpenAPI/MCP integrations, composable architecture, reasoning modes, and policy-aware features."
+    },
+    {
+      "id": "SafeRL-Lab/cheetahclaws",
+      "stars": 744,
+      "topics": [
+        "agentic-ai",
+        "claude",
+        "claude-code",
+        "memory",
+        "openclaw",
+        "python",
+        "skills"
+      ],
+      "desc": "CheetahClaws: A Fast and Easy-to-Use Agent Harness Infrastructure for Long-Horizon, Multi-Model, and Tool-Using AI Systems"
+    },
+    {
+      "id": "VoltAgent/awesome-design-md",
+      "stars": 95484,
+      "topics": [
+        "awesome-list",
+        "design-md",
+        "design-system",
+        "design-tokens",
+        "figma",
+        "google-stitch",
+        "landing-page",
+        "vibe-coding",
+        "vibe-design",
+        "vibecoding"
+      ],
+      "desc": "A collection of DESIGN.md files analysis by popular brand design systems. Drop one into your project and let coding agents generate a matching UI."
+    },
+    {
+      "id": "addyosmani/agent-skills",
+      "stars": 68753,
+      "topics": [
+        "agent-skills",
+        "antigravity",
+        "antigravity-ide",
+        "claude-code",
+        "cursor",
+        "skills"
+      ],
+      "desc": "Production-grade engineering skills for AI coding agents."
+    },
+    {
+      "id": "earendil-works/pi",
+      "stars": 67429,
+      "topics": [],
+      "desc": "AI agent toolkit: unified LLM API, agent loop, TUI, coding agent CLI"
+    },
+    {
+      "id": "ChromeDevTools/chrome-devtools-mcp",
+      "stars": 45439,
+      "topics": [
+        "browser",
+        "chrome",
+        "chrome-devtools",
+        "debugging",
+        "devtools",
+        "mcp",
+        "mcp-server",
+        "puppeteer"
+      ],
+      "desc": "Chrome DevTools for coding agents"
+    },
+    {
+      "id": "multica-ai/multica",
+      "stars": 38987,
+      "topics": [],
+      "desc": "The open-source managed agents platform. Turn coding agents into real teammates \u2014 assign tasks, track progress, compound skills."
+    },
+    {
+      "id": "BloopAI/vibe-kanban",
+      "stars": 27252,
+      "topics": [
+        "agent",
+        "ai-agents",
+        "kanban",
+        "management",
+        "task-manager"
+      ],
+      "desc": "Get 10X more out of Claude Code, Codex or any coding agent"
+    },
+    {
+      "id": "openai/symphony",
+      "stars": 25765,
+      "topics": [],
+      "desc": "Symphony turns project work into isolated, autonomous implementation runs, allowing teams to manage work instead of supervising coding agents."
+    },
+    {
+      "id": "QwenLM/qwen-code",
+      "stars": 25761,
+      "topics": [],
+      "desc": "An open-source AI coding agent that lives in your terminal."
+    },
+    {
+      "id": "Kilo-Org/kilocode",
+      "stars": 25508,
+      "topics": [
+        "ai",
+        "ai-age",
+        "ai-coding",
+        "ai-developer-tools",
+        "chatgpt",
+        "claude",
+        "cli",
+        "gemini",
+        "jetbrains",
+        "sonnet",
+        "vscode",
+        "vscode-extension"
+      ],
+      "desc": "Kilo is the all-in-one agentic engineering platform. Build, ship, and iterate faster with the most popular open source coding agent."
+    },
+    {
+      "id": "JCodesMore/ai-website-cloner-template",
+      "stars": 25256,
+      "topics": [
+        "ai",
+        "ai-agents",
+        "ai-tools",
+        "automation",
+        "boilerplate",
+        "claude",
+        "claude-code",
+        "clone",
+        "developer-tools",
+        "nextjs",
+        "react",
+        "reverse-engineering",
+        "shadcn-ui",
+        "skills",
+        "tailwindcss",
+        "template",
+        "typescript",
+        "web-scraping",
+        "website-clone"
+      ],
+      "desc": "Clone any website with one command using AI coding agents"
+    },
+    {
+      "id": "gastownhall/beads",
+      "stars": 25067,
+      "topics": [
+        "agents",
+        "claude-code",
+        "coding"
+      ],
+      "desc": "Beads - A memory upgrade for your coding agent"
+    },
+    {
+      "id": "google-labs-code/design.md",
+      "stars": 24596,
+      "topics": [],
+      "desc": "A format specification for describing a visual identity to coding agents. DESIGN.md gives agents a persistent, structured understanding of a design system."
+    },
+    {
+      "id": "rohitg00/agentmemory",
+      "stars": 24506,
+      "topics": [
+        "agentmemory",
+        "agents",
+        "ai",
+        "claude",
+        "claudecode",
+        "codex",
+        "copilot",
+        "cursor",
+        "genai",
+        "harness",
+        "hermes",
+        "memory",
+        "openclaw"
+      ],
+      "desc": "#1 Persistent memory for AI coding agents based on real-world benchmarks"
+    },
+    {
+      "id": "zarazhangrui/frontend-slides",
+      "stars": 24454,
+      "topics": [
+        "ai-slides",
+        "anthropic",
+        "claude",
+        "claude-code",
+        "claude-skill",
+        "generative-ui",
+        "html",
+        "presentation",
+        "slides",
+        "vibe-coding"
+      ],
+      "desc": "Create beautiful slides on the web using a coding agent's frontend skills"
+    },
+    {
+      "id": "manaflow-ai/cmux",
+      "stars": 23540,
+      "topics": [
+        "amp",
+        "claude-code",
+        "codex",
+        "gemini",
+        "ghostty",
+        "opencode",
+        "terminal",
+        "tmux"
+      ],
+      "desc": "Open source Ghostty-based macOS terminal with vertical tabs and notifications for AI coding agents. Built for multitasking, organization, and programmability."
+    },
+    {
+      "id": "alirezarezvani/claude-skills",
+      "stars": 19827,
+      "topics": [
+        "agent-plugins",
+        "agent-skills",
+        "agentic-ai",
+        "ai-coding-agent",
+        "anthropic-claude",
+        "claude-ai",
+        "claude-code",
+        "claude-code-plugins",
+        "claude-code-skills",
+        "claude-skills",
+        "codex-skills",
+        "coding-agent-plugins",
+        "cursor-skills",
+        "developer-tools",
+        "gemini-cli-skills",
+        "openai-codex",
+        "openclaw",
+        "openclaw-plugins",
+        "openclaw-skills",
+        "prompt-engineering"
+      ],
+      "desc": "337 Claude Code skills & agent skills & plugins (30+ Agents, 70+ custom commands, 330+ skills, customizable references, scripts)for Claude Code, Codex, Gemini CLI, Cursor, and 8 more coding agents \u2014 engineering, marketing, product, compliance, C-level advisory, research, business operations, commercial & finance, and your daily productivity skills."
+    },
+    {
+      "id": "mksglu/context-mode",
+      "stars": 18539,
+      "topics": [
+        "antigravity",
+        "claude",
+        "claude-code",
+        "claude-code-hooks",
+        "claude-code-plugins",
+        "claude-code-skill",
+        "codex",
+        "codex-cli",
+        "context-mode",
+        "copilot",
+        "cursor-plugin",
+        "kiro",
+        "mcp",
+        "mcp-server",
+        "mcp-tools",
+        "openclaw",
+        "opencode",
+        "pi-agent",
+        "skills",
+        "zed-extension"
+      ],
+      "desc": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and   enforces routing across 17 platforms via MCP + hooks."
+    },
+    {
+      "id": "can1357/oh-my-pi",
+      "stars": 15819,
+      "topics": [
+        "ai-agent",
+        "ai-coding-agent",
+        "anthropic",
+        "bun",
+        "claude",
+        "cli",
+        "coding-assistant",
+        "llm",
+        "mcp",
+        "multi-provider",
+        "openai",
+        "rust",
+        "terminal",
+        "tui",
+        "typescript"
+      ],
+      "desc": "\u2325  AI Coding agent for the terminal \u2014 hash-anchored edits, optimized tool harness, LSP, Python, browser, subagents, and more"
+    },
+    {
+      "id": "plandex-ai/plandex",
+      "stars": 15495,
+      "topics": [
+        "ai",
+        "ai-agents",
+        "ai-developer-tools",
+        "ai-tools",
+        "cli",
+        "command-line",
+        "developer-tools",
+        "git",
+        "golang",
+        "gpt-4",
+        "llm",
+        "openai",
+        "polyglot-programming",
+        "terminal",
+        "terminal-based",
+        "terminal-ui"
+      ],
+      "desc": "Open source AI coding agent. Designed for large projects and real world tasks."
+    },
+    {
+      "id": "GLips/Figma-Context-MCP",
+      "stars": 15298,
+      "topics": [
+        "ai",
+        "cursor",
+        "figma",
+        "mcp",
+        "typescript"
+      ],
+      "desc": "MCP server to provide Figma layout information to AI coding agents like Cursor"
+    }
+  ]
+}
