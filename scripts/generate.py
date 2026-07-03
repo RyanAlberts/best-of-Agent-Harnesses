@@ -640,6 +640,10 @@ ARCHIVED: "dict[str, str]" = {
     "gsd-build/get-shit-done": "2026-07-03",
 }
 
+# github_ids that are archived upstream (present in ARCHIVED) but should stay
+# out of the Graveyard and remain in normal ordering. Empty by default.
+KEEP_DESPITE_ARCHIVED: "set[str]" = set()
+
 # Canonical 4-tier order of the simplicity ↔ capability axis (least → most
 # adoption surface). Every Project.axis must start with one of these.
 TIER_ORDER = ["super simple", "mostly simple", "slightly complex", "complex"]
@@ -995,11 +999,27 @@ REPO_HTTP = "https://github.com/RyanAlberts/best-of-Agent-Harnesses"
 RAW_BASE = "https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main"
 
 
+def is_graveyard(github_id: str) -> bool:
+    """True if a repo is archived and not explicitly kept out of the Graveyard."""
+    return github_id in ARCHIVED and github_id not in KEEP_DESPITE_ARCHIVED
+
+
+def graveyard_projects() -> list:
+    """All Projects across every category that route to the Graveyard, stars descending."""
+    out: list = []
+    for projects in PROJECTS.values():
+        out += [p for p in projects if is_graveyard(p.github_id)]
+    return sorted(out, key=lambda p: stars_for(p.github_id), reverse=True)
+
+
 def ordered_projects() -> list:
-    """All projects in canonical display order: category order, stars descending."""
+    """All projects in canonical display order: category order, stars descending.
+
+    Excludes projects routed to the Graveyard (see is_graveyard)."""
     out: list = []
     for cat_id, _, _ in CATEGORIES:
-        out += sorted(PROJECTS[cat_id], key=lambda x: stars_for(x.github_id), reverse=True)
+        projects = [p for p in PROJECTS[cat_id] if not is_graveyard(p.github_id)]
+        out += sorted(projects, key=lambda x: stars_for(x.github_id), reverse=True)
     return out
 
 
