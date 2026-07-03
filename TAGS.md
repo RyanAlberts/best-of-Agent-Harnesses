@@ -49,7 +49,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 - [pydantic-ai](https://github.com/pydantic/pydantic-ai) — ⭐18.2k — Type-safe Python agents with Pydantic I/O; multi-provider, MCP, Logfire observability, and human-in-the-loop.
 - [strands-agents](https://github.com/strands-agents/harness-sdk) — ⭐6.4k — Model-driven Python SDK; decorators for tools, native MCP, multi-agent; "minimal code" without sacrificing provider choice.
-- [open-harness](https://github.com/MaxGfeller/open-harness) — ⭐581 — TypeScript Agent class on Vercel AI SDK; streaming events, filesystem/bash tools, MCP, and subagent delegation.
+- [open-harness](https://github.com/MaxGfeller/open-harness) — ⭐580 — TypeScript Agent class on Vercel AI SDK; streaming events, filesystem/bash tools, MCP, and subagent delegation.
 
 ---
 
@@ -130,10 +130,10 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 **Libraries and SDKs**
 
-- [deepagents](https://github.com/langchain-ai/deepagents) — ⭐25.6k — LangChain's Python+TypeScript agent harness on top of LangGraph: planning tool, virtual filesystem, shell sandbox, sub-agent spawning—the "Claude Code-style" harness as a reusable library.
+- [deepagents](https://github.com/langchain-ai/deepagents) — ⭐25.7k — LangChain's Python+TypeScript agent harness on top of LangGraph: planning tool, virtual filesystem, shell sandbox, sub-agent spawning—the "Claude Code-style" harness as a reusable library.
 - [strands-agents](https://github.com/strands-agents/harness-sdk) — ⭐6.4k — Model-driven Python SDK; decorators for tools, native MCP, multi-agent; "minimal code" without sacrificing provider choice.
 - [openai-agents-js](https://github.com/openai/openai-agents-js) — ⭐3.3k — Official OpenAI Agents SDK for Node/TS: handoffs, guardrails, voice; the JS counterpart to openai-agents-python.
-- [open-harness](https://github.com/MaxGfeller/open-harness) — ⭐581 — TypeScript Agent class on Vercel AI SDK; streaming events, filesystem/bash tools, MCP, and subagent delegation.
+- [open-harness](https://github.com/MaxGfeller/open-harness) — ⭐580 — TypeScript Agent class on Vercel AI SDK; streaming events, filesystem/bash tools, MCP, and subagent delegation.
 
 ---
 
@@ -242,7 +242,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [Daytona](https://github.com/daytonaio/daytona) — ⭐72.3k — Elastic dev environments for AI-generated code: workspaces, Git, previews—infra harness between "the model wrote a patch" and "it ran in a real machine."
 - [Composio](https://github.com/ComposioHQ/composio) — ⭐29.1k — 1,000+ toolkits with auth, tool search, and a sandboxed workbench—drop-in tool layer so agents stop reinventing OAuth + integrations. Python and TypeScript.
 - [smolagents](https://github.com/huggingface/smolagents) — ⭐28.2k — Code-as-action agents: model outputs Python executed in sandbox (E2B, Modal, etc.); ~1k LOC core.
-- [deepagents](https://github.com/langchain-ai/deepagents) — ⭐25.6k — LangChain's Python+TypeScript agent harness on top of LangGraph: planning tool, virtual filesystem, shell sandbox, sub-agent spawning—the "Claude Code-style" harness as a reusable library.
+- [deepagents](https://github.com/langchain-ai/deepagents) — ⭐25.7k — LangChain's Python+TypeScript agent harness on top of LangGraph: planning tool, virtual filesystem, shell sandbox, sub-agent spawning—the "Claude Code-style" harness as a reusable library.
 - [E2B](https://github.com/e2b-dev/E2B) — ⭐12.8k — Firecracker sandboxes for executing agent-generated code; the hosted isolation layer many tool-calling demos use instead of running arbitrary LLM output on your laptop.
 
 ---
@@ -515,7 +515,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [LiteLLM](https://github.com/BerriAI/litellm) — ⭐52.5k — One interface to 100+ LLMs; routing, caching, budgets. Not an agent framework—the pipe every agent framework uses.
 - [Composio](https://github.com/ComposioHQ/composio) — ⭐29.1k — 1,000+ toolkits with auth, tool search, and a sandboxed workbench—drop-in tool layer so agents stop reinventing OAuth + integrations. Python and TypeScript.
 - [smolagents](https://github.com/huggingface/smolagents) — ⭐28.2k — Code-as-action agents: model outputs Python executed in sandbox (E2B, Modal, etc.); ~1k LOC core.
-- [deepagents](https://github.com/langchain-ai/deepagents) — ⭐25.6k — LangChain's Python+TypeScript agent harness on top of LangGraph: planning tool, virtual filesystem, shell sandbox, sub-agent spawning—the "Claude Code-style" harness as a reusable library.
+- [deepagents](https://github.com/langchain-ai/deepagents) — ⭐25.7k — LangChain's Python+TypeScript agent harness on top of LangGraph: planning tool, virtual filesystem, shell sandbox, sub-agent spawning—the "Claude Code-style" harness as a reusable library.
 - [pydantic-ai](https://github.com/pydantic/pydantic-ai) — ⭐18.2k — Type-safe Python agents with Pydantic I/O; multi-provider, MCP, Logfire observability, and human-in-the-loop.
 - [E2B](https://github.com/e2b-dev/E2B) — ⭐12.8k — Firecracker sandboxes for executing agent-generated code; the hosted isolation layer many tool-calling demos use instead of running arbitrary LLM output on your laptop.
 - [strands-agents](https://github.com/strands-agents/harness-sdk) — ⭐6.4k — Model-driven Python SDK; decorators for tools, native MCP, multi-agent; "minimal code" without sacrificing provider choice.
@@ -564,11 +564,11 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 **Libraries and SDKs**
 
 - [Composio](https://github.com/ComposioHQ/composio) — ⭐29.1k — 1,000+ toolkits with auth, tool search, and a sandboxed workbench—drop-in tool layer so agents stop reinventing OAuth + integrations. Python and TypeScript.
-- [deepagents](https://github.com/langchain-ai/deepagents) — ⭐25.6k — LangChain's Python+TypeScript agent harness on top of LangGraph: planning tool, virtual filesystem, shell sandbox, sub-agent spawning—the "Claude Code-style" harness as a reusable library.
+- [deepagents](https://github.com/langchain-ai/deepagents) — ⭐25.7k — LangChain's Python+TypeScript agent harness on top of LangGraph: planning tool, virtual filesystem, shell sandbox, sub-agent spawning—the "Claude Code-style" harness as a reusable library.
 - [vercel/ai](https://github.com/vercel/ai) — ⭐25.3k — React and Node SDK for streaming, tool calls, and agent-style UIs; provider-agnostic.
 - [Cloudflare Agents](https://github.com/cloudflare/agents) — ⭐5.2k — Persistent, stateful agents on Durable Objects: state, websockets, scheduling, and AI chat baked in. The serverless answer to "where does the agent live?"
 - [openai-agents-js](https://github.com/openai/openai-agents-js) — ⭐3.3k — Official OpenAI Agents SDK for Node/TS: handoffs, guardrails, voice; the JS counterpart to openai-agents-python.
-- [open-harness](https://github.com/MaxGfeller/open-harness) — ⭐581 — TypeScript Agent class on Vercel AI SDK; streaming events, filesystem/bash tools, MCP, and subagent delegation.
+- [open-harness](https://github.com/MaxGfeller/open-harness) — ⭐580 — TypeScript Agent class on Vercel AI SDK; streaming events, filesystem/bash tools, MCP, and subagent delegation.
 
 ---
 
@@ -660,7 +660,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [LiteLLM](https://github.com/BerriAI/litellm) — ⭐52.5k — One interface to 100+ LLMs; routing, caching, budgets. Not an agent framework—the pipe every agent framework uses.
 - [Composio](https://github.com/ComposioHQ/composio) — ⭐29.1k — 1,000+ toolkits with auth, tool search, and a sandboxed workbench—drop-in tool layer so agents stop reinventing OAuth + integrations. Python and TypeScript.
 - [smolagents](https://github.com/huggingface/smolagents) — ⭐28.2k — Code-as-action agents: model outputs Python executed in sandbox (E2B, Modal, etc.); ~1k LOC core.
-- [deepagents](https://github.com/langchain-ai/deepagents) — ⭐25.6k — LangChain's Python+TypeScript agent harness on top of LangGraph: planning tool, virtual filesystem, shell sandbox, sub-agent spawning—the "Claude Code-style" harness as a reusable library.
+- [deepagents](https://github.com/langchain-ai/deepagents) — ⭐25.7k — LangChain's Python+TypeScript agent harness on top of LangGraph: planning tool, virtual filesystem, shell sandbox, sub-agent spawning—the "Claude Code-style" harness as a reusable library.
 - [pydantic-ai](https://github.com/pydantic/pydantic-ai) — ⭐18.2k — Type-safe Python agents with Pydantic I/O; multi-provider, MCP, Logfire observability, and human-in-the-loop.
 - [E2B](https://github.com/e2b-dev/E2B) — ⭐12.8k — Firecracker sandboxes for executing agent-generated code; the hosted isolation layer many tool-calling demos use instead of running arbitrary LLM output on your laptop.
 - [strands-agents](https://github.com/strands-agents/harness-sdk) — ⭐6.4k — Model-driven Python SDK; decorators for tools, native MCP, multi-agent; "minimal code" without sacrificing provider choice.
@@ -709,8 +709,8 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 **Libraries and SDKs**
 
 - [Composio](https://github.com/ComposioHQ/composio) — ⭐29.1k — 1,000+ toolkits with auth, tool search, and a sandboxed workbench—drop-in tool layer so agents stop reinventing OAuth + integrations. Python and TypeScript.
-- [deepagents](https://github.com/langchain-ai/deepagents) — ⭐25.6k — LangChain's Python+TypeScript agent harness on top of LangGraph: planning tool, virtual filesystem, shell sandbox, sub-agent spawning—the "Claude Code-style" harness as a reusable library.
+- [deepagents](https://github.com/langchain-ai/deepagents) — ⭐25.7k — LangChain's Python+TypeScript agent harness on top of LangGraph: planning tool, virtual filesystem, shell sandbox, sub-agent spawning—the "Claude Code-style" harness as a reusable library.
 - [vercel/ai](https://github.com/vercel/ai) — ⭐25.3k — React and Node SDK for streaming, tool calls, and agent-style UIs; provider-agnostic.
 - [Cloudflare Agents](https://github.com/cloudflare/agents) — ⭐5.2k — Persistent, stateful agents on Durable Objects: state, websockets, scheduling, and AI chat baked in. The serverless answer to "where does the agent live?"
 - [openai-agents-js](https://github.com/openai/openai-agents-js) — ⭐3.3k — Official OpenAI Agents SDK for Node/TS: handoffs, guardrails, voice; the JS counterpart to openai-agents-python.
-- [open-harness](https://github.com/MaxGfeller/open-harness) — ⭐581 — TypeScript Agent class on Vercel AI SDK; streaming events, filesystem/bash tools, MCP, and subagent delegation.
+- [open-harness](https://github.com/MaxGfeller/open-harness) — ⭐580 — TypeScript Agent class on Vercel AI SDK; streaming events, filesystem/bash tools, MCP, and subagent delegation.
