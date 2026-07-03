@@ -4,7 +4,7 @@ Four very different answers to "how should multiple agents coordinate?" — and 
 
 | | [openai-agents-python](https://github.com/openai/openai-agents-python) | [CrewAI](https://github.com/crewAIInc/crewAI) | [AutoGen](https://github.com/microsoft/autogen) | [LangGraph](https://github.com/langchain-ai/langgraph) |
 |---|---|---|---|---|
-| ⭐ Stars | 27.5k | 54.5k | 59.3k | 35.9k |
+| ⭐ Stars | 27.6k | 54.8k | 59.5k | 36.4k |
 | Coordination model | **Handoffs** — agents transfer control like a call-center escalation | **Roles** — agents with goals/backstories collaborate in Crews; Flows for control | **Conversation** — agents talk in group chats until done | **Graph** — explicit state machine; agents are nodes |
 | Adoption surface (list tier) | mostly simple | complex (product suite) | complex (product suite) | slightly complex |
 | Control flow visibility | Medium — emergent from handoff rules | Low-medium — declarative, framework decides | Low — emergent from dialogue | High — you drew the graph |
