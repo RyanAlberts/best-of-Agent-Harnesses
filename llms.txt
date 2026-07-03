@@ -1,6 +1,6 @@
 # Best of Agent Harnesses
 
-> Hand-curated, ranked list of 110 AI agent harnesses — the runtimes that close the loop between a stateless model and the outside world. 10 categories, a 4-tier adoption-surface rating (simplicity ↔ capability), capability tags, a license signal, and one concrete example link per project. Stars captured 2026-07-02.
+> Hand-curated, ranked list of 110 AI agent harnesses — the runtimes that close the loop between a stateless model and the outside world. 10 categories, a 4-tier adoption-surface rating (simplicity ↔ capability), capability tags, a license signal, and one concrete example link per project. Stars captured 2026-07-03.
 
 Maintained at https://github.com/RyanAlberts/best-of-Agent-Harnesses (CC-BY-SA-4.0).
 Structured data: https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/harnesses.json
@@ -80,7 +80,7 @@ Harnesses whose execution state persists across restarts: langgraph-bigtool, n8n
 The runtime that turns a model into an agent: it decides what the model's reasoning is allowed to touch, and supplies the orchestration, tool wiring, memory, error recovery, and guardrails around per-turn inference.
 
 ### How is this list ranked?
-By relevance to harness concerns (environment, orchestration, lifecycle, guardrails) and by GitHub stars (captured 2026-07-02); each project also carries an adoption-surface tier and autonomy/recovery scores.
+By relevance to harness concerns (environment, orchestration, lifecycle, guardrails) and by GitHub stars (captured 2026-07-03); each project also carries an adoption-surface tier and autonomy/recovery scores.
 
 ### How can an AI agent use this list directly?
 Three machine-readable surfaces: harnesses.json (structured), llms.txt (one file), and an MCP server (uvx agent-harnesses-mcp) exposing pick_harness and search_harnesses.
@@ -175,7 +175,7 @@ Harnesses and patterns for multi-agent coordination and handoffs.
 - [MetaGPT](https://github.com/FoundationAgents/MetaGPT) — ⭐69.2k, complex, autonomy: headless, recovery: resumable, open-source: The "AI software company" multi-agent framework: role-played PM, architect, and engineer agents turn a one-line requirement into specs, designs, and code along an SOP assembly line. The landmark of the genre; development pace has slowed in 2026. [multi-agent, python]
 - [autogen](https://github.com/microsoft/autogen) — ⭐59.5k, complex, autonomy: bounded, recovery: resumable, open-source: Conversable agents and group chats; code execution and human-in-the-loop; Microsoft origin, AG2 ecosystem. [multi-agent, python]
 - [crewAI](https://github.com/crewAIInc/crewAI) — ⭐54.8k, complex, autonomy: bounded, recovery: resumable, open-source: Role-based agents (roles, goals, backstories) in Crews; Flows add event-driven and hierarchical control for production. [python]
-- [ChatDev](https://github.com/OpenBMB/ChatDev) — ⭐33.6k, slightly complex, autonomy: headless, recovery: none, open-source: Multi-agent software-company simulation (CEO, CTO, programmer, tester) built on chat chains with communicative dehallucination; ChatDev 2.0 continues the line. MetaGPT's conversational sibling. [python]
+- [ChatDev](https://github.com/OpenBMB/ChatDev) — ⭐33.7k, slightly complex, autonomy: headless, recovery: none, open-source: Multi-agent software-company simulation (CEO, CTO, programmer, tester) built on chat chains with communicative dehallucination; ChatDev 2.0 continues the line. MetaGPT's conversational sibling. [python]
 - [openai-agents-python](https://github.com/openai/openai-agents-python) — ⭐27.6k, mostly simple, autonomy: bounded, recovery: resumable, open-source: Handoffs, guardrails, and multi-LLM routing; minimal surface so you own the loop. [python]
 - [Microsoft Agent Framework](https://github.com/microsoft/agent-framework) — ⭐11.8k, slightly complex, autonomy: bounded, recovery: resumable, open-source: Microsoft's convergence of AutoGen and Semantic Kernel: build, orchestrate, and deploy agents and multi-agent workflows in Python and .NET, with graph-based workflows and checkpointing — the designated successor harness for both lines. [multi-agent, workflow, python]
 - [PraisonAI](https://github.com/MervinPraison/PraisonAI) — ⭐8.3k, mostly simple, autonomy: bounded, recovery: none, open-source: Autonomous multi-agent teams with a single entry point; emphasis on minimal config. [multi-agent, python]
