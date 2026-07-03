@@ -84,11 +84,20 @@ def find(token: str, known_ids: set[str], min_stars: int = 300) -> list[dict]:
 
 
 def main() -> None:
+    import pathlib
+    import generate
+    import write_queue
+
     token = os.environ.get("GH_TOKEN") or os.environ.get("GITHUB_TOKEN")
     if not token:
         sys.exit("BLOCKED: set GH_TOKEN or GITHUB_TOKEN.")
-    candidates = find(token, known_ids=set())
-    print(json.dumps(candidates, indent=2))
+    known = {p.github_id for plist in generate.PROJECTS.values() for p in plist} | set(generate.ARCHIVED)
+    candidates = find(token, known)
+    queue_path = pathlib.Path(__file__).resolve().parent.parent / "curation-queue.json"
+    data = json.loads(queue_path.read_text()) if queue_path.exists() else {}
+    data["candidates"] = candidates
+    write_queue.write(data, queue_path)
+    print(f"discovered {len(candidates)} candidate(s)")
 
 
 if __name__ == "__main__":

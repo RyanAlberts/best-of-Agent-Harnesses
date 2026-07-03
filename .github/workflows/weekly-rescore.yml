@@ -55,6 +55,14 @@ jobs:
           print("sanity ok:", d["meta"]["stars_captured"], "projects", len(d["projects"]))
           PY
 
+      - name: Discover candidates
+        env:
+          GH_TOKEN: ${{ secrets.RESCORE_PAT || secrets.GITHUB_TOKEN }}
+        run: python3 scripts/discover_candidates.py
+
+      - name: Integrity check
+        run: python3 scripts/check_integrity.py
+
       - name: Write run summary
         if: always()
         run: |
@@ -66,6 +74,7 @@ jobs:
           } >> "$GITHUB_STEP_SUMMARY"
 
       - name: Commit and push
+        if: github.ref == 'refs/heads/main'
         run: |
           set -euo pipefail
           if [ -z "$(git status --porcelain)" ]; then
