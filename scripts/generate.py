@@ -196,6 +196,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("Open Interpreter", "openinterpreter/openinterpreter",
                 "Lightweight terminal coding agent oriented to open models (DeepSeek, Kimi, Qwen). The **harness** is a code-execution loop — the model writes code, the harness executes it with confirmation gates; the CLI is the shell. The original \"let the LLM run code on my machine\" project, reborn for open weights.",
                 "mostly simple (lean code-exec loop)", labels=["python"]),
+        Project("Qwen Code", "QwenLM/qwen-code",
+                "Alibaba's first-party terminal agent for Qwen models. The **harness** is the same bounded tool-call loop as Gemini CLI or Codex; the terminal is the shell — Qwen's parallel to those official-vendor CLIs rather than a third-party wrapper.",
+                "slightly complex (official CLI, terminal agent)", oss="❓"),
     ],
     "coding-harness-configs": [
         Project("get-shit-done", "gsd-build/get-shit-done",
@@ -350,6 +353,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("Microsoft Agent Framework", "microsoft/agent-framework",
                 "Microsoft's convergence of AutoGen and Semantic Kernel: build, orchestrate, and deploy agents and multi-agent workflows in Python and .NET, with graph-based workflows and checkpointing — the designated successor harness for both lines.",
                 "slightly complex (Python/.NET SDK, graph workflows)", labels=["python"]),
+        Project("Symphony", "openai/symphony",
+                "OpenAI's own multi-run orchestration **harness**: turns project work into isolated, autonomous implementation runs so a team manages outcomes at fleet scale instead of babysitting one coding-agent session at a time.",
+                "complex (isolated runs, team-scale orchestration — product suite)", oss="❓"),
     ],
     "plugins-mcp-cli": [
         Project("aider", "Aider-AI/aider",
@@ -388,6 +394,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("puppeteer-real-browser-mcp", "withLinda/puppeteer-real-browser-mcp-server",
                 "Puppeteer MCP with real-browser and anti-detection; for agents that need to drive sites that block headless.",
                 "mostly simple (real browser, anti-detect)", oss="❓", labels=["javascript"]),
+        Project("chrome-devtools-mcp", "ChromeDevTools/chrome-devtools-mcp",
+                "Google's official MCP server exposing Chrome DevTools (network, performance, console, DOM) to coding agents — turns any MCP client into a real browser debugger instead of a blind curl.",
+                "slightly complex (official MCP, browser debugging)", oss="❓"),
     ],
     "evaluation": [
         Project("ARC-AGI-2", "arcprize/ARC-AGI-2",
@@ -446,6 +455,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("openagents", "OpenAgentsInc/openagents",
                 "Platform for autonomous agents and autopilot-style workflows; decentralized/Nostr-oriented (Pylon runtime, actively shipped in 2026).",
                 "complex (platform, decentralized — product suite)"),
+        Project("deer-flow", "bytedance/deer-flow",
+                "ByteDance's open-source long-horizon **harness** for research, coding, and content creation — sandboxes, persistent memory, skills, and subagents chain together tasks that run minutes to hours instead of one-shot prompts.",
+                "complex (sandboxes, memory, subagents — product suite)", oss="❓"),
     ],
     "libraries-sdks": [
         Project("deepagents", "langchain-ai/deepagents",
@@ -524,6 +536,7 @@ META: dict[str, tuple[int, str, str]] = {
     "aaif-goose/goose": (50603, "https://block.github.io/goose/docs/guides/recipes/", "Goose recipes guide"),
     "HarnessLab/claw-code-agent": (524, "https://github.com/HarnessLab/claw-code-agent#-quick-start", "Quick Start guide"),
     "SeanHogg/BuilderForceAgents": (3, "https://github.com/SeanHogg/BuilderForceAgents#readme", "Multi-agent README"),
+    "QwenLM/qwen-code": (25761, "", ""),
     # coding-harness-configs
     "gsd-build/get-shit-done": (64653, "https://github.com/gsd-build/get-shit-done/blob/main/commands/gsd/ship.md", "gsd:ship command"),
     "garrytan/gstack": (119188, "https://github.com/garrytan/gstack/blob/main/ship/SKILL.md", "/ship SKILL.md"),
@@ -576,6 +589,7 @@ META: dict[str, tuple[int, str, str]] = {
     "microsoft/autogen": (59468, "https://github.com/microsoft/autogen/tree/main/python/samples/core_distributed-group-chat", "Distributed group chat"),
     "MervinPraison/PraisonAI": (8341, "https://github.com/MervinPraison/PraisonAI/blob/main/examples/python/general/orchestrator-workers.py", "Orchestrator-workers pattern"),
     "THUDM/AgentRL": (309, "https://github.com/THUDM/AgentRL/blob/main/examples/training/async_trainer.py", "Async GRPO trainer"),
+    "openai/symphony": (25765, "", ""),
     # plugins-mcp-cli
     "Aider-AI/aider": (47004, "https://github.com/Aider-AI/aider/blob/main/aider/repomap.py", "Repo map source"),
     "RyanAlberts/agentlog": (0, "https://github.com/RyanAlberts/agentlog/blob/main/example-log/decisions.jsonl", "Sample decisions.jsonl"),
@@ -589,6 +603,7 @@ META: dict[str, tuple[int, str, str]] = {
     "modelcontextprotocol/registry": (6979, "https://github.com/modelcontextprotocol/registry/blob/main/data/seed.json", "Registry seed entries"),
     "docker/mcp-gateway": (1474, "https://github.com/docker/mcp-gateway/blob/main/docs/mcp-gateway.md", "Gateway usage walkthrough"),
     "withLinda/puppeteer-real-browser-mcp-server": (23, "https://github.com/withLinda/puppeteer-real-browser-mcp-server/blob/main/README.md", "11 anti-detection tools"),
+    "ChromeDevTools/chrome-devtools-mcp": (45439, "", ""),
     # evaluation
     "arcprize/ARC-AGI-2": (718, "https://arcprize.org/leaderboard", "ARC Prize leaderboard"),
     "arcprize/arc-agi-benchmarking": (350, "https://github.com/arcprize/arc-agi-benchmarking/blob/main/docs/examples/prompt_example_o3.md", "o3 prompt example"),
@@ -609,6 +624,7 @@ META: dict[str, tuple[int, str, str]] = {
     # research-task
     "assafelovic/gpt-researcher": (28056, "https://github.com/assafelovic/gpt-researcher/blob/master/docs/blog/2024-05-19-gptr-langgraph/index.md", "Multi-agent LangGraph walkthrough"),
     "OpenAgentsInc/openagents": (437, "https://github.com/OpenAgentsInc/openagents/blob/main/docs/reports/nexus/2026-04-23-autopilot-pylon-production-earning-proof.md", "Production earning proof"),
+    "bytedance/deer-flow": (76008, "", ""),
     # libraries-sdks
     "langchain-ai/deepagents": (25651, "https://github.com/langchain-ai/deepagents/tree/main/examples/deep_research", "Deep research agent"),
     "pydantic/pydantic-ai": (18192, "https://github.com/pydantic/pydantic-ai/blob/main/examples/pydantic_ai_examples/bank_support.py", "Bank support agent"),
@@ -642,7 +658,18 @@ ARCHIVED: "dict[str, str]" = {
 
 # github_ids that are archived upstream (present in ARCHIVED) but should stay
 # out of the Graveyard and remain in normal ordering. Empty by default.
-KEEP_DESPITE_ARCHIVED: "set[str]" = set()
+#
+# RooCodeInc/Roo-Code (24.3k stars): long-running Cline-lineage VS Code coding
+# agent with a large install base; archival is a significant ecosystem event
+# (Kilo Code and others are positioned as successors) worth surfacing rather
+# than quietly graveyarding.
+# gsd-build/get-shit-done (64.6k stars): one of the highest star counts on
+# this entire list; losing it to the graveyard silently would hide a project
+# many visitors are still actively searching for.
+KEEP_DESPITE_ARCHIVED: "set[str]" = {
+    "RooCodeInc/Roo-Code",
+    "gsd-build/get-shit-done",
+}
 
 # Canonical 4-tier order of the simplicity ↔ capability axis (least → most
 # adoption surface). Every Project.axis must start with one of these.
@@ -694,6 +721,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "RooCodeInc/Roo-Code": ("step-gated", "resumable"),
     "HarnessLab/claw-code-agent": ("checkpoint-gated", "none"),
     "SeanHogg/BuilderForceAgents": ("bounded", "none"),
+    "QwenLM/qwen-code": ("bounded", "resumable"),
     # coding-harness-configs
     "obra/superpowers": ("n/a", "n/a"),
     "affaan-m/ECC": ("n/a", "n/a"),
@@ -746,6 +774,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "openai/openai-agents-python": ("bounded", "resumable"),
     "MervinPraison/PraisonAI": ("bounded", "none"),
     "THUDM/AgentRL": ("headless", "resumable"),
+    "openai/symphony": ("headless", "retry"),
     # plugins-mcp-cli
     "thedotmack/claude-mem": ("n/a", "n/a"),
     "Aider-AI/aider": ("checkpoint-gated", "resumable"),
@@ -759,6 +788,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "withLinda/puppeteer-real-browser-mcp-server": ("n/a", "n/a"),
     "ajhcs/Better-OpenCodeMCP": ("n/a", "n/a"),
     "RyanAlberts/agentlog": ("n/a", "n/a"),
+    "ChromeDevTools/chrome-devtools-mcp": ("n/a", "n/a"),
     # evaluation
     "microsoft/agent-lightning": ("headless", "resumable"),
     "SWE-bench/SWE-bench": ("headless", "resumable"),
@@ -779,6 +809,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     # research-task
     "assafelovic/gpt-researcher": ("bounded", "retry"),
     "OpenAgentsInc/openagents": ("headless", "resumable"),
+    "bytedance/deer-flow": ("bounded", "resumable"),
     # libraries-sdks
     "daytonaio/daytona": ("n/a", "n/a"),
     "mem0ai/mem0": ("n/a", "n/a"),

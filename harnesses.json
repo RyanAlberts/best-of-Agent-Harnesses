@@ -9,8 +9,8 @@
     "feed_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/feed.json",
     "license": "CC-BY-SA-4.0",
     "stars_captured": "2026-07-03",
-    "project_count": 106,
-    "graveyard_count": 4,
+    "project_count": 112,
+    "graveyard_count": 2,
     "tiers": [
       "super simple",
       "mostly simple",
@@ -94,7 +94,8 @@
         "openai/codex",
         "google-gemini/gemini-cli",
         "OpenHands/OpenHands",
-        "charmbracelet/crush"
+        "charmbracelet/crush",
+        "RooCodeInc/Roo-Code"
       ],
       "category_title": "Coding agent products (IDEs, CLIs, full suites)"
     },
@@ -335,7 +336,7 @@
     {
       "kind": "derived",
       "q": "How many of these agent harnesses are open source?",
-      "a": "93 of 106 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
+      "a": "95 of 112 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
       "slug": "how-many-of-these-agent-harnesses-are-open-source"
     },
     {
@@ -793,6 +794,63 @@
       }
     },
     {
+      "name": "Qwen Code",
+      "github_id": "QwenLM/qwen-code",
+      "url": "https://github.com/QwenLM/qwen-code",
+      "slug": "qwen-code",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#qwen-code",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/qwen-code/",
+      "description": "Alibaba's first-party terminal agent for Qwen models. The **harness** is the same bounded tool-call loop as Gemini CLI or Codex; the terminal is the shell — Qwen's parallel to those official-vendor CLIs rather than a third-party wrapper.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 25761,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (official CLI, terminal agent)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "unknown",
+      "tags": [
+        "cli"
+      ],
+      "example": {
+        "label": "Examples",
+        "url": "https://github.com/QwenLM/qwen-code#readme"
+      }
+    },
+    {
+      "name": "Roo Code",
+      "github_id": "RooCodeInc/Roo-Code",
+      "url": "https://github.com/RooCodeInc/Roo-Code",
+      "slug": "roo-code",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#roo-code",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/roo-code/",
+      "description": "VS Code/Cursor extension in the Cline lineage. The **harness** is the approval-gated agent with custom modes and a strong MCP story; the IDE is the UI. Popular community fork when you want that workflow without the upstream extension.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 24303,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (IDE extension, MCP-first)",
+      "autonomy": "step-gated",
+      "autonomy_rank": 1,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "open-source",
+      "tags": [
+        "mcp",
+        "workflow",
+        "ide",
+        "typescript"
+      ],
+      "example": {
+        "label": "Custom modes guide",
+        "url": "https://docs.roocode.com/features/custom-modes"
+      }
+    },
+    {
       "name": "claw-code-agent",
       "github_id": "HarnessLab/claw-code-agent",
       "url": "https://github.com/HarnessLab/claw-code-agent",
@@ -927,6 +985,34 @@
       "example": {
         "label": "/ship SKILL.md",
         "url": "https://github.com/garrytan/gstack/blob/main/ship/SKILL.md"
+      }
+    },
+    {
+      "name": "get-shit-done",
+      "github_id": "gsd-build/get-shit-done",
+      "url": "https://github.com/gsd-build/get-shit-done",
+      "slug": "get-shit-done",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#get-shit-done",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/get-shit-done/",
+      "description": "Goal-backward planning and wave-based execution over fresh context windows; avoids context rot by design. Python/JS meta-prompting for Claude Code, OpenCode, Gemini CLI.",
+      "category": "coding-harness-configs",
+      "category_title": "Coding harness configs and SDKs",
+      "stars": 64653,
+      "tier": "mostly simple",
+      "tier_rank": 2,
+      "axis": "mostly simple (meta-prompting, you own stack)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "open-source",
+      "tags": [
+        "cli",
+        "python"
+      ],
+      "example": {
+        "label": "gsd:ship command",
+        "url": "https://github.com/gsd-build/get-shit-done/blob/main/commands/gsd/ship.md"
       }
     },
     {
@@ -2058,6 +2144,33 @@
       }
     },
     {
+      "name": "Symphony",
+      "github_id": "openai/symphony",
+      "url": "https://github.com/openai/symphony",
+      "slug": "symphony",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#symphony",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/symphony/",
+      "description": "OpenAI's own multi-run orchestration **harness**: turns project work into isolated, autonomous implementation runs so a team manages outcomes at fleet scale instead of babysitting one coding-agent session at a time.",
+      "category": "multi-agent",
+      "category_title": "Multi-agent and orchestration",
+      "stars": 25765,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (isolated runs, team-scale orchestration — product suite)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "retry",
+      "recovery_rank": 2,
+      "license_signal": "unknown",
+      "tags": [
+        "sandbox"
+      ],
+      "example": {
+        "label": "Examples",
+        "url": "https://github.com/openai/symphony#readme"
+      }
+    },
+    {
       "name": "Microsoft Agent Framework",
       "github_id": "microsoft/agent-framework",
       "url": "https://github.com/microsoft/agent-framework",
@@ -2196,6 +2309,34 @@
       "example": {
         "label": "Repo map source",
         "url": "https://github.com/Aider-AI/aider/blob/main/aider/repomap.py"
+      }
+    },
+    {
+      "name": "chrome-devtools-mcp",
+      "github_id": "ChromeDevTools/chrome-devtools-mcp",
+      "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+      "slug": "chrome-devtools-mcp",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#chrome-devtools-mcp",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/chrome-devtools-mcp/",
+      "description": "Google's official MCP server exposing Chrome DevTools (network, performance, console, DOM) to coding agents — turns any MCP client into a real browser debugger instead of a blind curl.",
+      "category": "plugins-mcp-cli",
+      "category_title": "Plugins, MCPs, CLI tools",
+      "stars": 45439,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (official MCP, browser debugging)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "unknown",
+      "tags": [
+        "mcp",
+        "browser"
+      ],
+      "example": {
+        "label": "Examples",
+        "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp#readme"
       }
     },
     {
@@ -2927,6 +3068,35 @@
       }
     },
     {
+      "name": "deer-flow",
+      "github_id": "bytedance/deer-flow",
+      "url": "https://github.com/bytedance/deer-flow",
+      "slug": "deer-flow",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#deer-flow",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/deer-flow/",
+      "description": "ByteDance's open-source long-horizon **harness** for research, coding, and content creation — sandboxes, persistent memory, skills, and subagents chain together tasks that run minutes to hours instead of one-shot prompts.",
+      "category": "research-task",
+      "category_title": "Research and task-specific harnesses",
+      "stars": 76008,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (sandboxes, memory, subagents — product suite)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "unknown",
+      "tags": [
+        "memory",
+        "multi-agent",
+        "sandbox"
+      ],
+      "example": {
+        "label": "Examples",
+        "url": "https://github.com/bytedance/deer-flow#readme"
+      }
+    },
+    {
       "name": "gpt-researcher",
       "github_id": "assafelovic/gpt-researcher",
       "url": "https://github.com/assafelovic/gpt-researcher",
@@ -3379,18 +3549,6 @@
     }
   ],
   "graveyard": [
-    {
-      "github_id": "gsd-build/get-shit-done",
-      "name": "get-shit-done",
-      "last_stars": 64653,
-      "archived_since": "2026-07-03"
-    },
-    {
-      "github_id": "RooCodeInc/Roo-Code",
-      "name": "Roo Code",
-      "last_stars": 24303,
-      "archived_since": "2026-07-03"
-    },
     {
       "github_id": "spring-ai-community/spring-ai-tool-search-tool",
       "name": "spring-ai-tool-search-tool",

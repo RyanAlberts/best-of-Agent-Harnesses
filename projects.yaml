@@ -76,6 +76,10 @@ projects:
     github_id: cline/cline
     labels: ["javascript"]
     category: "coding-agent-products"
+  - name: Roo-Code
+    github_id: RooCodeInc/Roo-Code
+    labels: ["javascript"]
+    category: "coding-agent-products"
   - name: Codex
     github_id: openai/codex
     category: "coding-agent-products"
@@ -105,7 +109,13 @@ projects:
     github_id: openinterpreter/openinterpreter
     labels: ["python"]
     category: "coding-agent-products"
+  - name: Qwen Code
+    github_id: QwenLM/qwen-code
+    category: "coding-agent-products"
   # Coding harness configs and SDKs
+  - name: get-shit-done
+    github_id: gsd-build/get-shit-done
+    category: "coding-harness-configs"
   - name: GStack
     github_id: garrytan/gstack
     labels: ["javascript"]
@@ -289,6 +299,9 @@ projects:
     github_id: microsoft/agent-framework
     labels: ["python"]
     category: "multi-agent"
+  - name: Symphony
+    github_id: openai/symphony
+    category: "multi-agent"
   # Plugins, MCPs, CLI tools
   - name: aider
     github_id: Aider-AI/aider
@@ -333,6 +346,9 @@ projects:
   - name: puppeteer-real-browser-mcp
     github_id: withLinda/puppeteer-real-browser-mcp-server
     labels: ["javascript"]
+    category: "plugins-mcp-cli"
+  - name: chrome-devtools-mcp
+    github_id: ChromeDevTools/chrome-devtools-mcp
     category: "plugins-mcp-cli"
   # Evaluation and benchmarking harnesses
   - name: ARC-AGI-2
@@ -401,6 +417,9 @@ projects:
     category: "research-task"
   - name: openagents
     github_id: OpenAgentsInc/openagents
+    category: "research-task"
+  - name: deer-flow
+    github_id: bytedance/deer-flow
     category: "research-task"
   # Libraries and SDKs
   - name: deepagents
