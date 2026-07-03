@@ -104,3 +104,8 @@ history/
 .env.*
 !.env.example
 
+
+# Operator-internal — kept local, not for public view
+.claude/
+docs/superpowers/
+.superpowers/
