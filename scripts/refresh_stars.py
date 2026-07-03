@@ -90,6 +90,19 @@ if failed:
 
 src = re.sub(r'STARS_CAPTURED = "\d{4}-\d{2}-\d{2}"', f'STARS_CAPTURED = "{today}"', src)
 src = re.sub(r"# Star counts captured \d{4}-\d{2}-\d{2}", f"# Star counts captured {today}", src)
+
+# Rewrite ARCHIVED: keep existing `since` dates for still-archived repos, add
+# today's date for newly-archived repos, drop entries no longer archived.
+existing_archived = dict(re.findall(r'"([^"\s]+/[^"\s]+)":\s*"(\d{4}-\d{2}-\d{2})"', src[src.index("ARCHIVED"):src.index("TIER_ORDER")]))
+new_archived = {gid: existing_archived.get(gid, today) for gid in archived}
+archived_lines = "\n".join(f'    "{gid}": "{since}",' for gid, since in new_archived.items())
+src = re.sub(
+    r'ARCHIVED: "dict\[str, str\]" = \{.*?\}',
+    "ARCHIVED: \"dict[str, str]\" = {\n" + archived_lines + ("\n" if archived_lines else "") + "}",
+    src,
+    flags=re.S,
+)
+
 GEN.write_text(src)
 
 print(f"Refreshed {len(ids)} repos: {len(changed)} changed, {len(failed)} failed. Capture date -> {today}")

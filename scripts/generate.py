@@ -631,6 +631,15 @@ META: dict[str, tuple[int, str, str]] = {
 # README explanation line, harnesses.json, llms.txt, and the landscape SVG.
 STARS_CAPTURED = "2026-07-03"
 
+# Repos currently archived upstream, keyed by github_id, mapped to the date
+# first observed archived (YYYY-MM-DD). Maintained by scripts/refresh_stars.py.
+ARCHIVED: "dict[str, str]" = {
+    "spring-ai-community/spring-ai-tool-search-tool": "2026-07-03",
+    "RooCodeInc/Roo-Code": "2026-07-03",
+    "SeanHogg/BuilderForceAgents": "2026-07-03",
+    "gsd-build/get-shit-done": "2026-07-03",
+}
+
 # Canonical 4-tier order of the simplicity ↔ capability axis (least → most
 # adoption surface). Every Project.axis must start with one of these.
 TIER_ORDER = ["super simple", "mostly simple", "slightly complex", "complex"]
