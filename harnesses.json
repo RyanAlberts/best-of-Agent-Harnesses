@@ -9,8 +9,8 @@
     "feed_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/feed.json",
     "license": "CC-BY-SA-4.0",
     "stars_captured": "2026-07-03",
-    "project_count": 106,
-    "graveyard_count": 4,
+    "project_count": 116,
+    "graveyard_count": 3,
     "tiers": [
       "super simple",
       "mostly simple",
@@ -94,7 +94,8 @@
         "openai/codex",
         "google-gemini/gemini-cli",
         "OpenHands/OpenHands",
-        "charmbracelet/crush"
+        "charmbracelet/crush",
+        "RooCodeInc/Roo-Code"
       ],
       "category_title": "Coding agent products (IDEs, CLIs, full suites)"
     },
@@ -335,7 +336,7 @@
     {
       "kind": "derived",
       "q": "How many of these agent harnesses are open source?",
-      "a": "93 of 106 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
+      "a": "103 of 116 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
       "slug": "how-many-of-these-agent-harnesses-are-open-source"
     },
     {
@@ -790,6 +791,120 @@
       "example": {
         "label": "Crush launch post",
         "url": "https://charm.land/blog/crush-comes-home/"
+      }
+    },
+    {
+      "name": "Qwen Code",
+      "github_id": "QwenLM/qwen-code",
+      "url": "https://github.com/QwenLM/qwen-code",
+      "slug": "qwen-code",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#qwen-code",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/qwen-code/",
+      "description": "Alibaba's official terminal coding agent for Qwen3-Coder models, forked from Gemini CLI's harness. The **harness** is the same plugin/MCP tool-call loop repointed at Qwen; the CLI is the shell.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 25761,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (official CLI, MCP, forked from Gemini CLI)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "open-source",
+      "tags": [
+        "mcp",
+        "cli",
+        "typescript"
+      ],
+      "example": {
+        "label": "Quick start",
+        "url": "https://github.com/QwenLM/qwen-code#readme"
+      }
+    },
+    {
+      "name": "Kilo Code",
+      "github_id": "Kilo-Org/kilocode",
+      "url": "https://github.com/Kilo-Org/kilocode",
+      "slug": "kilocode",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#kilocode",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/kilocode/",
+      "description": "VS Code/Cursor extension in the Cline/Roo lineage. The **harness** is an approval-gated agent loop with an Orchestrator planning mode plus a standalone CLI; the extension is the UI shell.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 25508,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (IDE extension + CLI, orchestrator mode)",
+      "autonomy": "step-gated",
+      "autonomy_rank": 1,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "open-source",
+      "tags": [
+        "cli",
+        "ide",
+        "typescript"
+      ],
+      "example": {
+        "label": "Feature tour",
+        "url": "https://github.com/Kilo-Org/kilocode#readme"
+      }
+    },
+    {
+      "name": "Roo Code",
+      "github_id": "RooCodeInc/Roo-Code",
+      "url": "https://github.com/RooCodeInc/Roo-Code",
+      "slug": "roo-code",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#roo-code",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/roo-code/",
+      "description": "VS Code/Cursor extension in the Cline lineage. The **harness** is the approval-gated agent with custom modes and a strong MCP story; the IDE is the UI. Archived by the Roo team in May 2026 after they pivoted to a hosted cloud-agent product; kept here (see Graveyard note) for the Cline → Roo fork lineage.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 24303,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (IDE extension, MCP-first)",
+      "autonomy": "step-gated",
+      "autonomy_rank": 1,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "open-source",
+      "tags": [
+        "mcp",
+        "ide",
+        "typescript"
+      ],
+      "example": {
+        "label": "Custom modes guide",
+        "url": "https://docs.roocode.com/features/custom-modes"
+      }
+    },
+    {
+      "name": "Plandex",
+      "github_id": "plandex-ai/plandex",
+      "url": "https://github.com/plandex-ai/plandex",
+      "slug": "plandex",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#plandex",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/plandex/",
+      "description": "Terminal coding agent built for large, multi-file changes. The **harness** is a plan-then-execute loop with diff review and rollback across an entire change set; the CLI is the shell.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 15495,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (plan-then-execute, diff review, rollback)",
+      "autonomy": "checkpoint-gated",
+      "autonomy_rank": 2,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "open-source",
+      "tags": [
+        "cli"
+      ],
+      "example": {
+        "label": "Quick start",
+        "url": "https://github.com/plandex-ai/plandex#readme"
       }
     },
     {
@@ -2058,6 +2173,62 @@
       }
     },
     {
+      "name": "Vibe Kanban",
+      "github_id": "BloopAI/vibe-kanban",
+      "url": "https://github.com/BloopAI/vibe-kanban",
+      "slug": "vibe-kanban",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#vibe-kanban",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/vibe-kanban/",
+      "description": "Kanban board that queues and runs multiple coding-agent sessions (Claude Code, Codex, and others) in parallel. The **harness** is the orchestration layer that assigns tasks and tracks review state; the board is the UI shell.",
+      "category": "multi-agent",
+      "category_title": "Multi-agent and orchestration",
+      "stars": 27252,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (multi-agent task board, session orchestration)",
+      "autonomy": "checkpoint-gated",
+      "autonomy_rank": 2,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "open-source",
+      "tags": [
+        "memory",
+        "multi-agent"
+      ],
+      "example": {
+        "label": "Quick start",
+        "url": "https://github.com/BloopAI/vibe-kanban#readme"
+      }
+    },
+    {
+      "name": "Symphony",
+      "github_id": "openai/symphony",
+      "url": "https://github.com/openai/symphony",
+      "slug": "symphony",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#symphony",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/symphony/",
+      "description": "OpenAI's spec (with an Elixir reference implementation) for issue-tracker-driven multi-agent orchestration: work items become isolated, autonomous implementation runs coordinated across a codebase, paired with Codex. Still prototype-stage, not hardened for production.",
+      "category": "multi-agent",
+      "category_title": "Multi-agent and orchestration",
+      "stars": 25765,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (spec + prototype orchestrator)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "none",
+      "recovery_rank": 1,
+      "license_signal": "open-source",
+      "tags": [
+        "multi-agent",
+        "sandbox"
+      ],
+      "example": {
+        "label": "Quick start",
+        "url": "https://github.com/openai/symphony#readme"
+      }
+    },
+    {
       "name": "Microsoft Agent Framework",
       "github_id": "microsoft/agent-framework",
       "url": "https://github.com/microsoft/agent-framework",
@@ -2112,6 +2283,34 @@
       "example": {
         "label": "Orchestrator-workers pattern",
         "url": "https://github.com/MervinPraison/PraisonAI/blob/main/examples/python/general/orchestrator-workers.py"
+      }
+    },
+    {
+      "name": "AG2",
+      "github_id": "ag2ai/ag2",
+      "url": "https://github.com/ag2ai/ag2",
+      "slug": "ag2",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#ag2",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/ag2/",
+      "description": "Community continuation of AutoGen under independent governance, after the original maintainers forked away from Microsoft. Same conversable-agent/group-chat model as `microsoft/autogen`, now stewarded outside Microsoft.",
+      "category": "multi-agent",
+      "category_title": "Multi-agent and orchestration",
+      "stars": 4729,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (group chat, code exec — product suite)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "open-source",
+      "tags": [
+        "multi-agent",
+        "python"
+      ],
+      "example": {
+        "label": "Quick start",
+        "url": "https://github.com/ag2ai/ag2#readme"
       }
     },
     {
@@ -2362,6 +2561,33 @@
       "example": {
         "label": "Registry seed entries",
         "url": "https://github.com/modelcontextprotocol/registry/blob/main/data/seed.json"
+      }
+    },
+    {
+      "name": "MCP Context Forge",
+      "github_id": "IBM/mcp-context-forge",
+      "url": "https://github.com/IBM/mcp-context-forge",
+      "slug": "mcp-context-forge",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#mcp-context-forge",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/mcp-context-forge/",
+      "description": "IBM's official MCP/A2A gateway: registry, proxy, and virtual-server layer that sits in front of any MCP, A2A, or REST/gRPC API and re-exposes it as a unified MCP endpoint for agents.",
+      "category": "plugins-mcp-cli",
+      "category_title": "Plugins, MCPs, CLI tools",
+      "stars": 4013,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (official gateway, registry, proxy)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [
+        "mcp"
+      ],
+      "example": {
+        "label": "Quick start",
+        "url": "https://github.com/IBM/mcp-context-forge#readme"
       }
     },
     {
@@ -3179,6 +3405,34 @@
       }
     },
     {
+      "name": "Beads",
+      "github_id": "gastownhall/beads",
+      "url": "https://github.com/gastownhall/beads",
+      "slug": "beads",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#beads",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/beads/",
+      "description": "Dolt-backed persistent issue/dependency graph that gives a coding agent long-horizon task memory across sessions—an external memory store rather than an agent loop itself.",
+      "category": "libraries-sdks",
+      "category_title": "Libraries and SDKs",
+      "stars": 25067,
+      "tier": "mostly simple",
+      "tier_rank": 2,
+      "axis": "mostly simple (issue graph, memory store)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [
+        "memory",
+        "workflow"
+      ],
+      "example": {
+        "label": "Quick start",
+        "url": "https://github.com/gastownhall/beads#readme"
+      }
+    },
+    {
       "name": "pydantic-ai",
       "github_id": "pydantic/pydantic-ai",
       "url": "https://github.com/pydantic/pydantic-ai",
@@ -3295,6 +3549,34 @@
       }
     },
     {
+      "name": "fast-agent",
+      "github_id": "evalstate/fast-agent",
+      "url": "https://github.com/evalstate/fast-agent",
+      "slug": "fast-agent",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#fast-agent",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/fast-agent/",
+      "description": "Python framework for building and evaluating agents with first-class MCP, A2A, and ACP support; single-maintainer project with unusually deep protocol coverage.",
+      "category": "libraries-sdks",
+      "category_title": "Libraries and SDKs",
+      "stars": 3849,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (MCP/A2A/ACP support)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "open-source",
+      "tags": [
+        "mcp",
+        "python"
+      ],
+      "example": {
+        "label": "Quick start",
+        "url": "https://github.com/evalstate/fast-agent#readme"
+      }
+    },
+    {
       "name": "openai-agents-js",
       "github_id": "openai/openai-agents-js",
       "url": "https://github.com/openai/openai-agents-js",
@@ -3383,12 +3665,6 @@
       "github_id": "gsd-build/get-shit-done",
       "name": "get-shit-done",
       "last_stars": 64653,
-      "archived_since": "2026-07-03"
-    },
-    {
-      "github_id": "RooCodeInc/Roo-Code",
-      "name": "Roo Code",
-      "last_stars": 24303,
       "archived_since": "2026-07-03"
     },
     {
