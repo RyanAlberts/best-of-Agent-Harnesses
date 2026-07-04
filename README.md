@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/ryanalberts-best-of-agent-harnesses-badge.png)](https://mseep.ai/app/ryanalberts-best-of-agent-harnesses)
+
 <!-- markdownlint-disable -->
 <h1 align="center">
     Best of Agent Harnesses and Harness Techniques
