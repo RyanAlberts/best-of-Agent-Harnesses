@@ -69,6 +69,7 @@ _Reader's index: pick by what you want to do, not by category. Tag chips (e.g. <
 - **I want a deep research / autonomous research agent** — [deepagents](https://github.com/langchain-ai/deepagents), [gpt-researcher](https://github.com/assafelovic/gpt-researcher), [openagents](https://github.com/OpenAgentsInc/openagents) · see [Research and task-specific harnesses](#research-and-task-specific-harnesses)
 - **I want a provider-agnostic LLM pipe (not a framework)** — [LiteLLM](https://github.com/BerriAI/litellm), [vercel/ai](https://github.com/vercel/ai) · see [Libraries and SDKs](#libraries-and-sdks)
 
+- **[Context Kit](https://github.com/JDDavenport/context-kit)** — Personal Context Artifacts: 4 Markdown templates (wiki, mental-models, voice, protocols) + 5 Claude Code skills. Solves context amnesia — every session starts context-full. MIT, one-command install.
 ## For agents
 
 This list is also published in machine-readable form, so coding agents and research agents can recommend harnesses — not just humans browsing GitHub:
