@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1320 880" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
 <rect width="1320" height="880" fill="#ffffff" rx="8"/>
 <text x="660.0" y="52" text-anchor="middle" font-size="30" font-weight="700" fill="#111827">The Agent Harness Landscape</text>
-<text x="660.0" y="80" text-anchor="middle" font-size="15" fill="#6b7280">106 hand-curated projects · GitHub stars vs. adoption surface area · stars captured 2026-07-05</text>
+<text x="660.0" y="80" text-anchor="middle" font-size="15" fill="#6b7280">108 hand-curated projects · GitHub stars vs. adoption surface area · stars captured 2026-07-05</text>
 <circle cx="80" cy="106" r="6" fill="#8b5cf6"/>
 <text x="91" y="110" font-size="12.5" fill="#374151">Progressive disclosure</text>
 <circle cx="262.2" cy="106" r="6" fill="#ef4444"/>
@@ -37,10 +37,10 @@
 <text x="231.2" y="800" text-anchor="middle" font-size="12" fill="#9ca3af">9 projects</text>
 <line x1="382.5" y1="168" x2="382.5" y2="750" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4 4"/>
 <text x="533.8" y="780" text-anchor="middle" font-size="15" font-weight="600" fill="#111827">mostly simple</text>
-<text x="533.8" y="800" text-anchor="middle" font-size="12" fill="#9ca3af">17 projects</text>
+<text x="533.8" y="800" text-anchor="middle" font-size="12" fill="#9ca3af">18 projects</text>
 <line x1="685.0" y1="168" x2="685.0" y2="750" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4 4"/>
 <text x="836.2" y="780" text-anchor="middle" font-size="15" font-weight="600" fill="#111827">slightly complex</text>
-<text x="836.2" y="800" text-anchor="middle" font-size="12" fill="#9ca3af">41 projects</text>
+<text x="836.2" y="800" text-anchor="middle" font-size="12" fill="#9ca3af">42 projects</text>
 <line x1="987.5" y1="168" x2="987.5" y2="750" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4 4"/>
 <text x="1138.8" y="780" text-anchor="middle" font-size="15" font-weight="600" fill="#111827">complex</text>
 <text x="1138.8" y="800" text-anchor="middle" font-size="12" fill="#9ca3af">39 projects</text>
@@ -106,7 +106,8 @@
 <circle cx="1175.9" cy="290.5" r="4.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>rasa — ⭐21.2k</title></circle>
 <circle cx="269.8" cy="287.0" r="6.5" fill="#8b5cf6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>agents.md — ⭐22.8k</title></circle>
 <circle cx="518.5" cy="285.3" r="4.5" fill="#10b981" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>MCP Python SDK — ⭐23.5k</title></circle>
-<circle cx="475.5" cy="285.1" r="6.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>letta — ⭐23.7k</title></circle>
+<circle cx="475.5" cy="285.1" r="4.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>letta — ⭐23.7k</title></circle>
+<circle cx="833.0" cy="283.8" r="4.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Roo Code — ⭐24.3k</title></circle>
 <circle cx="771.8" cy="281.6" r="4.5" fill="#a16207" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>vercel/ai — ⭐25.4k</title></circle>
 <circle cx="868.6" cy="281.0" r="4.5" fill="#a16207" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>deepagents — ⭐25.7k</title></circle>
 <circle cx="851.5" cy="280.7" r="4.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>mastra — ⭐25.8k</title></circle>
@@ -133,6 +134,7 @@
 <circle cx="874.0" cy="238.9" r="4.5" fill="#a16207" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Mem0 — ⭐60.1k</title></circle>
 <circle cx="466.0" cy="235.6" r="6.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Open Interpreter — ⭐64.3k</title></circle>
 <circle cx="788.6" cy="235.5" r="4.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Cline — ⭐64.3k</title></circle>
+<circle cx="491.5" cy="235.3" r="6.5" fill="#f59e0b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>get-shit-done — ⭐64.7k</title></circle>
 <circle cx="1108.4" cy="231.9" r="4.5" fill="#ec4899" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>MetaGPT — ⭐69.2k</title></circle>
 <circle cx="858.7" cy="229.7" r="4.5" fill="#a16207" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Daytona — ⭐72.3k</title></circle>
 <circle cx="1137.6" cy="225.0" r="4.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>OpenHands — ⭐79.5k</title></circle>
@@ -159,11 +161,11 @@
 <text x="296.2" y="485.8" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">AgentSilex</text>
 <text x="305.1" y="501.8" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">AutoHarness</text>
 <text x="508.1" y="195.4" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">Anthropic Skills</text>
-<text x="476.0" y="240.1" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">Open Interpreter</text>
-<text x="528.8" y="256.1" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">LiteLLM</text>
-<text x="589.2" y="280.9" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">smolagents</text>
-<text x="491.7" y="296.9" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">openai-agents-python</text>
-<text x="485.5" y="312.9" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">letta</text>
+<text x="501.5" y="239.8" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">get-shit-done</text>
+<text x="476.0" y="255.8" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">Open Interpreter</text>
+<text x="528.8" y="271.8" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">LiteLLM</text>
+<text x="589.2" y="287.8" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">smolagents</text>
+<text x="491.7" y="303.8" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">openai-agents-python</text>
 <text x="794.6" y="181.5" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">Hermes</text>
 <text x="884.8" y="197.5" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">opencode</text>
 <text x="833.7" y="213.5" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">GStack</text>

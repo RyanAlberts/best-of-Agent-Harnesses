@@ -9,8 +9,8 @@
     "feed_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/feed.json",
     "license": "CC-BY-SA-4.0",
     "stars_captured": "2026-07-05",
-    "project_count": 106,
-    "graveyard_count": 4,
+    "project_count": 108,
+    "graveyard_count": 2,
     "tiers": [
       "super simple",
       "mostly simple",
@@ -94,7 +94,8 @@
         "openai/codex",
         "google-gemini/gemini-cli",
         "OpenHands/OpenHands",
-        "charmbracelet/crush"
+        "charmbracelet/crush",
+        "RooCodeInc/Roo-Code"
       ],
       "category_title": "Coding agent products (IDEs, CLIs, full suites)"
     },
@@ -335,7 +336,7 @@
     {
       "kind": "derived",
       "q": "How many of these agent harnesses are open source?",
-      "a": "93 of 106 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
+      "a": "95 of 108 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
       "slug": "how-many-of-these-agent-harnesses-are-open-source"
     },
     {
@@ -793,6 +794,36 @@
       }
     },
     {
+      "name": "Roo Code",
+      "github_id": "RooCodeInc/Roo-Code",
+      "url": "https://github.com/RooCodeInc/Roo-Code",
+      "slug": "roo-code",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#roo-code",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/roo-code/",
+      "description": "VS Code/Cursor extension in the Cline lineage. The **harness** is the approval-gated agent with custom modes and a strong MCP story; the IDE is the UI. Popular community fork when you want that workflow without the upstream extension.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 24305,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (IDE extension, MCP-first)",
+      "autonomy": "step-gated",
+      "autonomy_rank": 1,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "open-source",
+      "tags": [
+        "mcp",
+        "workflow",
+        "ide",
+        "typescript"
+      ],
+      "example": {
+        "label": "Custom modes guide",
+        "url": "https://docs.roocode.com/features/custom-modes"
+      }
+    },
+    {
       "name": "claw-code-agent",
       "github_id": "HarnessLab/claw-code-agent",
       "url": "https://github.com/HarnessLab/claw-code-agent",
@@ -927,6 +958,34 @@
       "example": {
         "label": "/ship SKILL.md",
         "url": "https://github.com/garrytan/gstack/blob/main/ship/SKILL.md"
+      }
+    },
+    {
+      "name": "get-shit-done",
+      "github_id": "gsd-build/get-shit-done",
+      "url": "https://github.com/gsd-build/get-shit-done",
+      "slug": "get-shit-done",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#get-shit-done",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/get-shit-done/",
+      "description": "Goal-backward planning and wave-based execution over fresh context windows; avoids context rot by design. Python/JS meta-prompting for Claude Code, OpenCode, Gemini CLI.",
+      "category": "coding-harness-configs",
+      "category_title": "Coding harness configs and SDKs",
+      "stars": 64668,
+      "tier": "mostly simple",
+      "tier_rank": 2,
+      "axis": "mostly simple (meta-prompting, you own stack)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "open-source",
+      "tags": [
+        "cli",
+        "python"
+      ],
+      "example": {
+        "label": "gsd:ship command",
+        "url": "https://github.com/gsd-build/get-shit-done/blob/main/commands/gsd/ship.md"
       }
     },
     {
@@ -3379,18 +3438,6 @@
     }
   ],
   "graveyard": [
-    {
-      "github_id": "gsd-build/get-shit-done",
-      "name": "get-shit-done",
-      "last_stars": 64668,
-      "archived_since": "2026-07-03"
-    },
-    {
-      "github_id": "RooCodeInc/Roo-Code",
-      "name": "Roo Code",
-      "last_stars": 24305,
-      "archived_since": "2026-07-03"
-    },
     {
       "github_id": "spring-ai-community/spring-ai-tool-search-tool",
       "name": "spring-ai-tool-search-tool",

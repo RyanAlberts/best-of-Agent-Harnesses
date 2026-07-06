@@ -642,7 +642,13 @@ ARCHIVED: "dict[str, str]" = {
 
 # github_ids that are archived upstream (present in ARCHIVED) but should stay
 # out of the Graveyard and remain in normal ordering. Empty by default.
-KEEP_DESPITE_ARCHIVED: "set[str]" = set()
+# RooCodeInc/Roo-Code (24k+ stars) and gsd-build/get-shit-done (64k+ stars) are
+# each among the most-starred entries in their category; too widely adopted to
+# bury in the Graveyard even though archived upstream (2026-07-03).
+KEEP_DESPITE_ARCHIVED: "set[str]" = {
+    "RooCodeInc/Roo-Code",
+    "gsd-build/get-shit-done",
+}
 
 # Canonical 4-tier order of the simplicity ↔ capability axis (least → most
 # adoption surface). Every Project.axis must start with one of these.

@@ -76,6 +76,10 @@ projects:
     github_id: cline/cline
     labels: ["javascript"]
     category: "coding-agent-products"
+  - name: Roo-Code
+    github_id: RooCodeInc/Roo-Code
+    labels: ["javascript"]
+    category: "coding-agent-products"
   - name: Codex
     github_id: openai/codex
     category: "coding-agent-products"
@@ -106,6 +110,9 @@ projects:
     labels: ["python"]
     category: "coding-agent-products"
   # Coding harness configs and SDKs
+  - name: get-shit-done
+    github_id: gsd-build/get-shit-done
+    category: "coding-harness-configs"
   - name: GStack
     github_id: garrytan/gstack
     labels: ["javascript"]
