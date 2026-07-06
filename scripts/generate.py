@@ -162,6 +162,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("ToolRAG", "antl3x/ToolRAG",
                 "Semantic tool retrieval for LLMs; serves only the tools the user query demands (MCP-compatible), unlimited tool sets with zero context penalty.",
                 "mostly simple (query-driven retrieval)"),
+        Project("cocoindex-code", "cocoindex-io/cocoindex-code",
+                "AST-based (tree-sitter) embedded code-search CLI: agents query a codebase by structure instead of loading whole files, claiming roughly 70% token savings over naive context stuffing.",
+                "mostly simple (embedded CLI, AST search)"),
     ],
     "coding-agent-products": [
         Project("Cline", "cline/cline",
@@ -196,6 +199,15 @@ PROJECTS: dict[str, list[Project]] = {
         Project("Open Interpreter", "openinterpreter/openinterpreter",
                 "Lightweight terminal coding agent oriented to open models (DeepSeek, Kimi, Qwen). The **harness** is a code-execution loop — the model writes code, the harness executes it with confirmation gates; the CLI is the shell. The original \"let the LLM run code on my machine\" project, reborn for open weights.",
                 "mostly simple (lean code-exec loop)", labels=["python"]),
+        Project("Qwen Code", "QwenLM/qwen-code",
+                "Alibaba's official terminal coding agent, forked from Gemini CLI. The **harness** is the tool-call loop tuned for Qwen models and large-context handling; the terminal is the shell — the Qwen counterpart to Codex / Gemini CLI already in this category.",
+                "slightly complex (official CLI, forked harness)"),
+        Project("Symphony", "openai/symphony",
+                "OpenAI's harness for running many autonomous coding-agent implementations in parallel, isolated runs; the orchestration layer turns \"supervise one agent\" into \"manage a portfolio of runs,\" with a dashboard as the UI shell.",
+                "complex (parallel autonomous runs, isolation — product suite)", oss="❓"),
+        Project("Antigravity CLI", "google-antigravity/antigravity-cli",
+                "Official terminal client for Google's Antigravity agentic IDE. The **harness** is Antigravity's reasoning/execution/orchestration loop; the CLI is a thin shell so the same runtime that powers the IDE also runs headless in a terminal.",
+                "slightly complex (official CLI, shared IDE harness)", oss="❓"),
     ],
     "coding-harness-configs": [
         Project("get-shit-done", "gsd-build/get-shit-done",
@@ -388,6 +400,12 @@ PROJECTS: dict[str, list[Project]] = {
         Project("puppeteer-real-browser-mcp", "withLinda/puppeteer-real-browser-mcp-server",
                 "Puppeteer MCP with real-browser and anti-detection; for agents that need to drive sites that block headless.",
                 "mostly simple (real browser, anti-detect)", oss="❓", labels=["javascript"]),
+        Project("MCP Context Forge", "IBM/mcp-context-forge",
+                "IBM's AI gateway/registry/proxy that fronts any MCP, A2A, or REST/gRPC API behind one endpoint, adding centralized discovery, auth, and guardrails so agents call tools through a single governed layer instead of hand-wiring each server.",
+                "slightly complex (enterprise gateway, federation, guardrails)"),
+        Project("Chrome DevTools MCP", "ChromeDevTools/chrome-devtools-mcp",
+                "Google Chrome team's official MCP server exposing the DevTools protocol (console, network, performance traces, screenshots) so coding agents can inspect and debug real browser state instead of guessing.",
+                "mostly simple (official MCP server)"),
     ],
     "evaluation": [
         Project("ARC-AGI-2", "arcprize/ARC-AGI-2",
@@ -490,6 +508,12 @@ PROJECTS: dict[str, list[Project]] = {
         Project("Community-curated agent lists", "brandonhimpfen/awesome-ai-agents",
                 "Broader directories: e.g. [brandonhimpfen/awesome-ai-agents](https://github.com/brandonhimpfen/awesome-ai-agents), [axioma-ai-labs/awesome-ai-agent-frameworks](https://github.com/axioma-ai-labs/awesome-ai-agent-frameworks), [mb-mal/awesome-ai-agents-frameworks](https://github.com/mb-mal/awesome-ai-agents-frameworks)—differ by scope and update cadence.",
                 "super simple (curated lists)", oss="❓"),
+        Project("fast-agent", "evalstate/fast-agent",
+                "MCP-native Python agent framework: agents and workflows are defined declaratively with first-class MCP, ACP, and A2A support, plus built-in evaluation tooling to score what you build.",
+                "mostly simple (declarative agents, MCP-native)", labels=["python"]),
+        Project("Beads", "gastownhall/beads",
+                "Issue-tracker-as-memory for coding agents: persists tasks, decisions, and dependency graphs as a queryable local store so an agent's backlog and reasoning survive context resets and session restarts.",
+                "slightly complex (persistent task/memory store)", oss="❓"),
     ],
 }
 
@@ -513,12 +537,16 @@ META: dict[str, tuple[int, str, str]] = {
     "spring-ai-community/spring-ai-tool-search-tool": (76, "https://github.com/spring-ai-community/spring-ai-tool-search-tool/tree/main/examples/tool-search-tool-demo", "Tool Search demo app"),
     "Reason-Wang/ToolGen": (181, "https://github.com/Reason-Wang/ToolGen/blob/master/scripts/eval_full_pipeline.sh", "Full eval pipeline"),
     "antl3x/ToolRAG": (29, "https://github.com/antl3x/ToolRAG/blob/main/packages/%40antl3x-toolrag/README.md", "MCP server retrieval"),
+    "cocoindex-io/cocoindex-code": (2439, "https://github.com/cocoindex-io/cocoindex-code#readme", "Code search demo"),
     # coding-agent-products
     "cline/cline": (64306, "https://docs.cline.bot/features/plan-and-act", "Plan & Act mode"),
     "RooCodeInc/Roo-Code": (24305, "https://docs.roocode.com/features/custom-modes", "Custom modes guide"),
     "openai/codex": (95632, "https://developers.openai.com/codex/concepts/sandboxing", "Sandboxing concept"),
     "google-gemini/gemini-cli": (105759, "https://github.com/google-gemini/gemini-cli/blob/main/docs/tools/mcp-server.md", "MCP server setup"),
     "charmbracelet/crush": (26084, "https://charm.land/blog/crush-comes-home/", "Crush launch post"),
+    "QwenLM/qwen-code": (25790, "https://github.com/QwenLM/qwen-code#readme", "CLI quickstart"),
+    "openai/symphony": (25791, "https://github.com/openai/symphony#readme", "Project README"),
+    "google-antigravity/antigravity-cli": (1469, "https://github.com/google-antigravity/antigravity-cli#readme", "CLI usage guide"),
     "anomalyco/opencode": (182544, "https://opencode.ai/docs/agents/", "Agent system page"),
     "OpenHands/OpenHands": (79487, "https://docs.all-hands.dev/usage/prompting/microagents-repo", "Repository microagents"),
     "aaif-goose/goose": (50672, "https://block.github.io/goose/docs/guides/recipes/", "Goose recipes guide"),
@@ -589,6 +617,8 @@ META: dict[str, tuple[int, str, str]] = {
     "modelcontextprotocol/registry": (6983, "https://github.com/modelcontextprotocol/registry/blob/main/data/seed.json", "Registry seed entries"),
     "docker/mcp-gateway": (1475, "https://github.com/docker/mcp-gateway/blob/main/docs/mcp-gateway.md", "Gateway usage walkthrough"),
     "withLinda/puppeteer-real-browser-mcp-server": (23, "https://github.com/withLinda/puppeteer-real-browser-mcp-server/blob/main/README.md", "11 anti-detection tools"),
+    "IBM/mcp-context-forge": (4024, "https://github.com/IBM/mcp-context-forge#readme", "Quickstart / architecture overview"),
+    "ChromeDevTools/chrome-devtools-mcp": (45926, "https://github.com/ChromeDevTools/chrome-devtools-mcp#readme", "Tool list & setup"),
     # evaluation
     "arcprize/ARC-AGI-2": (720, "https://arcprize.org/leaderboard", "ARC Prize leaderboard"),
     "arcprize/arc-agi-benchmarking": (351, "https://github.com/arcprize/arc-agi-benchmarking/blob/main/docs/examples/prompt_example_o3.md", "o3 prompt example"),
@@ -624,6 +654,8 @@ META: dict[str, tuple[int, str, str]] = {
     "e2b-dev/E2B": (12844, "https://github.com/e2b-dev/e2b-cookbook/tree/main/examples/anthropic-claude-code-in-sandbox-python", "Claude Code in sandbox"),
     "daytonaio/daytona": (72287, "https://github.com/daytonaio/daytona/tree/main/examples/python/charts", "Charts in sandbox"),
     "brandonhimpfen/awesome-ai-agents": (11, "https://github.com/brandonhimpfen/awesome-ai-agents#frameworks", "Frameworks section"),
+    "evalstate/fast-agent": (3851, "https://github.com/evalstate/fast-agent#readme", "MCP agent examples"),
+    "gastownhall/beads": (25087, "https://github.com/gastownhall/beads#readme", "bd command walkthrough"),
 }
 
 
@@ -689,6 +721,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "Reason-Wang/ToolGen": ("n/a", "n/a"),
     "spring-ai-community/spring-ai-tool-search-tool": ("n/a", "n/a"),
     "antl3x/ToolRAG": ("n/a", "n/a"),
+    "cocoindex-io/cocoindex-code": ("n/a", "n/a"),
     # coding-agent-products
     "anomalyco/opencode": ("headless", "resumable"),
     "google-gemini/gemini-cli": ("bounded", "resumable"),
@@ -700,6 +733,9 @@ AXES: "dict[str, tuple[str, str]]" = {
     "RooCodeInc/Roo-Code": ("step-gated", "resumable"),
     "HarnessLab/claw-code-agent": ("checkpoint-gated", "none"),
     "SeanHogg/BuilderForceAgents": ("bounded", "none"),
+    "QwenLM/qwen-code": ("bounded", "resumable"),
+    "openai/symphony": ("headless", "resumable"),
+    "google-antigravity/antigravity-cli": ("bounded", "resumable"),
     # coding-harness-configs
     "obra/superpowers": ("n/a", "n/a"),
     "affaan-m/ECC": ("n/a", "n/a"),
@@ -765,6 +801,8 @@ AXES: "dict[str, tuple[str, str]]" = {
     "withLinda/puppeteer-real-browser-mcp-server": ("n/a", "n/a"),
     "ajhcs/Better-OpenCodeMCP": ("n/a", "n/a"),
     "RyanAlberts/agentlog": ("n/a", "n/a"),
+    "IBM/mcp-context-forge": ("n/a", "n/a"),
+    "ChromeDevTools/chrome-devtools-mcp": ("n/a", "n/a"),
     # evaluation
     "microsoft/agent-lightning": ("headless", "resumable"),
     "SWE-bench/SWE-bench": ("headless", "resumable"),
@@ -800,6 +838,8 @@ AXES: "dict[str, tuple[str, str]]" = {
     "openai/openai-agents-js": ("bounded", "resumable"),
     "MaxGfeller/open-harness": ("bounded", "none"),
     "brandonhimpfen/awesome-ai-agents": ("n/a", "n/a"),
+    "evalstate/fast-agent": ("bounded", "resumable"),
+    "gastownhall/beads": ("n/a", "n/a"),
 }
 
 

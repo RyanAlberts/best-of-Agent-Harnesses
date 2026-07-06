@@ -9,7 +9,7 @@
     "feed_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/feed.json",
     "license": "CC-BY-SA-4.0",
     "stars_captured": "2026-07-05",
-    "project_count": 108,
+    "project_count": 116,
     "graveyard_count": 2,
     "tiers": [
       "super simple",
@@ -324,7 +324,7 @@
     {
       "kind": "derived",
       "q": "Which agent harnesses can run unattended (headless)?",
-      "a": "Harnesses designed for unattended runs, batches, and fleets: opencode, OpenHands, goose, SWE-agent, Claude Agent SDK, RepoMaster, OpenClaw, Hermes.",
+      "a": "Harnesses designed for unattended runs, batches, and fleets: opencode, OpenHands, goose, Symphony, SWE-agent, Claude Agent SDK, RepoMaster, OpenClaw.",
       "slug": "which-agent-harnesses-can-run-unattended-headless"
     },
     {
@@ -336,7 +336,7 @@
     {
       "kind": "derived",
       "q": "How many of these agent harnesses are open source?",
-      "a": "95 of 108 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
+      "a": "100 of 116 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
       "slug": "how-many-of-these-agent-harnesses-are-open-source"
     },
     {
@@ -448,6 +448,33 @@
       "example": {
         "label": "Self-hosting AGENTS.md",
         "url": "https://github.com/agentsmd/agents.md/blob/main/AGENTS.md"
+      }
+    },
+    {
+      "name": "cocoindex-code",
+      "github_id": "cocoindex-io/cocoindex-code",
+      "url": "https://github.com/cocoindex-io/cocoindex-code",
+      "slug": "cocoindex-code",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#cocoindex-code",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/cocoindex-code/",
+      "description": "AST-based (tree-sitter) embedded code-search CLI: agents query a codebase by structure instead of loading whole files, claiming roughly 70% token savings over naive context stuffing.",
+      "category": "progressive-disclosure",
+      "category_title": "Progressive disclosure harnesses",
+      "stars": 2439,
+      "tier": "mostly simple",
+      "tier_rank": 2,
+      "axis": "mostly simple (embedded CLI, AST search)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [
+        "cli"
+      ],
+      "example": {
+        "label": "Code search demo",
+        "url": "https://github.com/cocoindex-io/cocoindex-code#readme"
       }
     },
     {
@@ -794,6 +821,60 @@
       }
     },
     {
+      "name": "Symphony",
+      "github_id": "openai/symphony",
+      "url": "https://github.com/openai/symphony",
+      "slug": "symphony",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#symphony",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/symphony/",
+      "description": "OpenAI's harness for running many autonomous coding-agent implementations in parallel, isolated runs; the orchestration layer turns \"supervise one agent\" into \"manage a portfolio of runs,\" with a dashboard as the UI shell.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 25791,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (parallel autonomous runs, isolation — product suite)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "unknown",
+      "tags": [
+        "sandbox"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/openai/symphony#readme"
+      }
+    },
+    {
+      "name": "Qwen Code",
+      "github_id": "QwenLM/qwen-code",
+      "url": "https://github.com/QwenLM/qwen-code",
+      "slug": "qwen-code",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#qwen-code",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/qwen-code/",
+      "description": "Alibaba's official terminal coding agent, forked from Gemini CLI. The **harness** is the tool-call loop tuned for Qwen models and large-context handling; the terminal is the shell — the Qwen counterpart to Codex / Gemini CLI already in this category.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 25790,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (official CLI, forked harness)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "open-source",
+      "tags": [
+        "cli"
+      ],
+      "example": {
+        "label": "CLI quickstart",
+        "url": "https://github.com/QwenLM/qwen-code#readme"
+      }
+    },
+    {
       "name": "Roo Code",
       "github_id": "RooCodeInc/Roo-Code",
       "url": "https://github.com/RooCodeInc/Roo-Code",
@@ -821,6 +902,35 @@
       "example": {
         "label": "Custom modes guide",
         "url": "https://docs.roocode.com/features/custom-modes"
+      }
+    },
+    {
+      "name": "Antigravity CLI",
+      "github_id": "google-antigravity/antigravity-cli",
+      "url": "https://github.com/google-antigravity/antigravity-cli",
+      "slug": "antigravity-cli",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#antigravity-cli",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/antigravity-cli/",
+      "description": "Official terminal client for Google's Antigravity agentic IDE. The **harness** is Antigravity's reasoning/execution/orchestration loop; the CLI is a thin shell so the same runtime that powers the IDE also runs headless in a terminal.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 1469,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (official CLI, shared IDE harness)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "unknown",
+      "tags": [
+        "browser",
+        "cli",
+        "ide"
+      ],
+      "example": {
+        "label": "CLI usage guide",
+        "url": "https://github.com/google-antigravity/antigravity-cli#readme"
       }
     },
     {
@@ -2258,6 +2368,35 @@
       }
     },
     {
+      "name": "Chrome DevTools MCP",
+      "github_id": "ChromeDevTools/chrome-devtools-mcp",
+      "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+      "slug": "chrome-devtools-mcp",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#chrome-devtools-mcp",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/chrome-devtools-mcp/",
+      "description": "Google Chrome team's official MCP server exposing the DevTools protocol (console, network, performance traces, screenshots) so coding agents can inspect and debug real browser state instead of guessing.",
+      "category": "plugins-mcp-cli",
+      "category_title": "Plugins, MCPs, CLI tools",
+      "stars": 45926,
+      "tier": "mostly simple",
+      "tier_rank": 2,
+      "axis": "mostly simple (official MCP server)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [
+        "mcp",
+        "vision",
+        "browser"
+      ],
+      "example": {
+        "label": "Tool list & setup",
+        "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp#readme"
+      }
+    },
+    {
       "name": "continue",
       "github_id": "continuedev/continue",
       "url": "https://github.com/continuedev/continue",
@@ -2421,6 +2560,33 @@
       "example": {
         "label": "Registry seed entries",
         "url": "https://github.com/modelcontextprotocol/registry/blob/main/data/seed.json"
+      }
+    },
+    {
+      "name": "MCP Context Forge",
+      "github_id": "IBM/mcp-context-forge",
+      "url": "https://github.com/IBM/mcp-context-forge",
+      "slug": "mcp-context-forge",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#mcp-context-forge",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/mcp-context-forge/",
+      "description": "IBM's AI gateway/registry/proxy that fronts any MCP, A2A, or REST/gRPC API behind one endpoint, adding centralized discovery, auth, and guardrails so agents call tools through a single governed layer instead of hand-wiring each server.",
+      "category": "plugins-mcp-cli",
+      "category_title": "Plugins, MCPs, CLI tools",
+      "stars": 4024,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (enterprise gateway, federation, guardrails)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [
+        "mcp"
+      ],
+      "example": {
+        "label": "Quickstart / architecture overview",
+        "url": "https://github.com/IBM/mcp-context-forge#readme"
       }
     },
     {
@@ -3238,6 +3404,34 @@
       }
     },
     {
+      "name": "Beads",
+      "github_id": "gastownhall/beads",
+      "url": "https://github.com/gastownhall/beads",
+      "slug": "beads",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#beads",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/beads/",
+      "description": "Issue-tracker-as-memory for coding agents: persists tasks, decisions, and dependency graphs as a queryable local store so an agent's backlog and reasoning survive context resets and session restarts.",
+      "category": "libraries-sdks",
+      "category_title": "Libraries and SDKs",
+      "stars": 25087,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (persistent task/memory store)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "unknown",
+      "tags": [
+        "memory",
+        "workflow"
+      ],
+      "example": {
+        "label": "bd command walkthrough",
+        "url": "https://github.com/gastownhall/beads#readme"
+      }
+    },
+    {
       "name": "pydantic-ai",
       "github_id": "pydantic/pydantic-ai",
       "url": "https://github.com/pydantic/pydantic-ai",
@@ -3351,6 +3545,35 @@
       "example": {
         "label": "SDK playground app",
         "url": "https://github.com/cloudflare/agents/tree/main/examples/playground"
+      }
+    },
+    {
+      "name": "fast-agent",
+      "github_id": "evalstate/fast-agent",
+      "url": "https://github.com/evalstate/fast-agent",
+      "slug": "fast-agent",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#fast-agent",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/fast-agent/",
+      "description": "MCP-native Python agent framework: agents and workflows are defined declaratively with first-class MCP, ACP, and A2A support, plus built-in evaluation tooling to score what you build.",
+      "category": "libraries-sdks",
+      "category_title": "Libraries and SDKs",
+      "stars": 3851,
+      "tier": "mostly simple",
+      "tier_rank": 2,
+      "axis": "mostly simple (declarative agents, MCP-native)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "open-source",
+      "tags": [
+        "mcp",
+        "evals",
+        "python"
+      ],
+      "example": {
+        "label": "MCP agent examples",
+        "url": "https://github.com/evalstate/fast-agent#readme"
       }
     },
     {

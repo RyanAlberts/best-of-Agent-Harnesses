@@ -71,6 +71,9 @@ projects:
   - name: ToolRAG
     github_id: antl3x/ToolRAG
     category: "progressive-disclosure"
+  - name: cocoindex-code
+    github_id: cocoindex-io/cocoindex-code
+    category: "progressive-disclosure"
   # Coding agent products (IDEs, CLIs, full suites)
   - name: Cline
     github_id: cline/cline
@@ -108,6 +111,15 @@ projects:
   - name: Open Interpreter
     github_id: openinterpreter/openinterpreter
     labels: ["python"]
+    category: "coding-agent-products"
+  - name: Qwen Code
+    github_id: QwenLM/qwen-code
+    category: "coding-agent-products"
+  - name: Symphony
+    github_id: openai/symphony
+    category: "coding-agent-products"
+  - name: Antigravity CLI
+    github_id: google-antigravity/antigravity-cli
     category: "coding-agent-products"
   # Coding harness configs and SDKs
   - name: get-shit-done
@@ -341,6 +353,12 @@ projects:
     github_id: withLinda/puppeteer-real-browser-mcp-server
     labels: ["javascript"]
     category: "plugins-mcp-cli"
+  - name: MCP Context Forge
+    github_id: IBM/mcp-context-forge
+    category: "plugins-mcp-cli"
+  - name: Chrome DevTools MCP
+    github_id: ChromeDevTools/chrome-devtools-mcp
+    category: "plugins-mcp-cli"
   # Evaluation and benchmarking harnesses
   - name: ARC-AGI-2
     github_id: arcprize/ARC-AGI-2
@@ -462,4 +480,11 @@ projects:
     category: "libraries-sdks"
   - name: Community-curated agent lists
     github_id: brandonhimpfen/awesome-ai-agents
+    category: "libraries-sdks"
+  - name: fast-agent
+    github_id: evalstate/fast-agent
+    labels: ["python"]
+    category: "libraries-sdks"
+  - name: Beads
+    github_id: gastownhall/beads
     category: "libraries-sdks"
