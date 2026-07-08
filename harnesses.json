@@ -9,7 +9,7 @@
     "feed_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/feed.json",
     "license": "CC-BY-SA-4.0",
     "stars_captured": "2026-07-05",
-    "project_count": 106,
+    "project_count": 107,
     "graveyard_count": 4,
     "tiers": [
       "super simple",
@@ -335,7 +335,7 @@
     {
       "kind": "derived",
       "q": "How many of these agent harnesses are open source?",
-      "a": "93 of 106 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
+      "a": "94 of 107 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
       "slug": "how-many-of-these-agent-harnesses-are-open-source"
     },
     {
@@ -1271,6 +1271,36 @@
       "example": {
         "label": "Task showcase",
         "url": "https://github.com/myshell-ai/AIlice#cool-things-we-can-do"
+      }
+    },
+    {
+      "name": "Talon",
+      "github_id": "dylanneve1/talon",
+      "url": "https://github.com/dylanneve1/talon",
+      "slug": "talon",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#talon",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/talon/",
+      "description": "Self-hosted, multi-frontend personal agent runtime: one event loop drives Telegram/Discord/Slack sessions, heartbeats, crons, and triggers, with a persistent memory palace (knowledge graph + diary) and pluggable model backends.",
+      "category": "personal-agent-runtimes",
+      "category_title": "Personal agent runtimes",
+      "stars": 58,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (single runtime, multi-frontend, disk-first memory)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "open-source",
+      "tags": [
+        "memory",
+        "rag",
+        "workflow",
+        "typescript"
+      ],
+      "example": {
+        "label": "README overview",
+        "url": "https://github.com/dylanneve1/talon#readme"
       }
     },
     {

@@ -1,13 +1,13 @@
 <!-- markdownlint-disable -->
 # Tags — cross-reference
 
-_Auto-generated from `scripts/generate.py`. 106 projects across 22 canonical tags. Edit projects in `generate.py` (not here) and rerun the script._
+_Auto-generated from `scripts/generate.py`. 107 projects across 22 canonical tags. Edit projects in `generate.py` (not here) and rerun the script._
 
 Tag chips appear next to each project in [README.md](README.md). This page lists every tag once with the projects that carry it, grouped by category and sorted by GitHub stars within each category.
 
 ## All tags
 
-[`mcp`](#mcp) (20) · [`memory`](#memory) (18) · [`multi-agent`](#multi-agent) (19) · [`evals`](#evals) (14) · [`voice`](#voice) (2) · [`vision`](#vision) (2) · [`browser`](#browser) (4) · [`sandbox`](#sandbox) (17) · [`low-code`](#low-code) (4) · [`rag`](#rag) (4) · [`tool-discovery`](#tool-discovery) (5) · [`training`](#training) (4) · [`workflow`](#workflow) (6) · [`typed`](#typed) (3) · [`local`](#local) (1) · [`provider-agnostic`](#provider-agnostic) (8) · [`cli`](#cli) (8) · [`ide`](#ide) (4) · [`tui`](#tui) (2) · [`rust`](#rust) (2) · [`python`](#python) (61) · [`typescript`](#typescript) (25)
+[`mcp`](#mcp) (20) · [`memory`](#memory) (19) · [`multi-agent`](#multi-agent) (19) · [`evals`](#evals) (14) · [`voice`](#voice) (2) · [`vision`](#vision) (2) · [`browser`](#browser) (4) · [`sandbox`](#sandbox) (17) · [`low-code`](#low-code) (4) · [`rag`](#rag) (5) · [`tool-discovery`](#tool-discovery) (5) · [`training`](#training) (4) · [`workflow`](#workflow) (7) · [`typed`](#typed) (3) · [`local`](#local) (1) · [`provider-agnostic`](#provider-agnostic) (8) · [`cli`](#cli) (8) · [`ide`](#ide) (4) · [`tui`](#tui) (2) · [`rust`](#rust) (2) · [`python`](#python) (61) · [`typescript`](#typescript) (26)
 
 ---
 
@@ -73,6 +73,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [Eliza](https://github.com/elizaOS/eliza) — ⭐18.7k — Open "agentic operating system" (elizaOS): persistent multi-agent runtime with character files, a plugin ecosystem, and social/platform integrations — the harness behind a large share of autonomous social agents.
 - [Agent Zero](https://github.com/agent0ai/agent-zero) — ⭐18.3k — Organic, prompt-defined personal agent framework: hierarchical sub-agents, persistent memory, browser and code tools, and self-modifying behavior; runs in Docker with a web UI.
 - [OpenHarness (HKUDS)](https://github.com/HKUDS/OpenHarness) — ⭐14.6k — Open agent harness with a built-in personal agent ("Ohmo") that runs across Feishu, Slack, Telegram, and Discord; core tool-use, skills, memory, multi-agent coordination with auto-compaction for multi-day sessions.
+- [Talon](https://github.com/dylanneve1/talon) — ⭐58 — Self-hosted, multi-frontend personal agent runtime: one event loop drives Telegram/Discord/Slack sessions, heartbeats, crons, and triggers, with a persistent memory palace (knowledge graph + diary) and pluggable model backends.
 
 **Frameworks**
 
@@ -260,6 +261,10 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 ## `rag`
 
+**Personal agent runtimes**
+
+- [Talon](https://github.com/dylanneve1/talon) — ⭐58 — Self-hosted, multi-frontend personal agent runtime: one event loop drives Telegram/Discord/Slack sessions, heartbeats, crons, and triggers, with a persistent memory palace (knowledge graph + diary) and pluggable model backends.
+
 **Frameworks**
 
 - [Dify](https://github.com/langgenius/dify) — ⭐148k — One-stop LLM app platform: visual workflows, RAG pipeline, 50+ tools, model management; "ship from prototype to prod" in a single UI.
@@ -306,6 +311,10 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 **Coding harness configs and SDKs**
 
 - [RepoMaster](https://github.com/QuantaAlpha/RepoMaster) — ⭐533 — Repo-scoped research harness: builds function-call and module-dependency graphs to explore only what's needed; large relative gains on MLE-bench and GitTaskBench with lower token use.
+
+**Personal agent runtimes**
+
+- [Talon](https://github.com/dylanneve1/talon) — ⭐58 — Self-hosted, multi-frontend personal agent runtime: one event loop drives Telegram/Discord/Slack sessions, heartbeats, crons, and triggers, with a persistent memory palace (knowledge graph + diary) and pluggable model backends.
 
 **Frameworks**
 
@@ -544,6 +553,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 - [OpenClaw](https://github.com/openclaw/openclaw) — ⭐382k — Self-hosted, always-on personal agent (formerly Clawdbot/Moltbot): a gateway + event-loop runtime that treats messages, heartbeats, crons, and webhooks as one input queue, persists state to local files, and lives in your chat apps (WhatsApp, Telegram, Slack, Discord). 13,700+ community skills; the fastest-growing repo in GitHub history.
 - [Eliza](https://github.com/elizaOS/eliza) — ⭐18.7k — Open "agentic operating system" (elizaOS): persistent multi-agent runtime with character files, a plugin ecosystem, and social/platform integrations — the harness behind a large share of autonomous social agents.
+- [Talon](https://github.com/dylanneve1/talon) — ⭐58 — Self-hosted, multi-frontend personal agent runtime: one event loop drives Telegram/Discord/Slack sessions, heartbeats, crons, and triggers, with a persistent memory palace (knowledge graph + diary) and pluggable model backends.
 
 **Frameworks**
 
@@ -689,6 +699,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 - [OpenClaw](https://github.com/openclaw/openclaw) — ⭐382k — Self-hosted, always-on personal agent (formerly Clawdbot/Moltbot): a gateway + event-loop runtime that treats messages, heartbeats, crons, and webhooks as one input queue, persists state to local files, and lives in your chat apps (WhatsApp, Telegram, Slack, Discord). 13,700+ community skills; the fastest-growing repo in GitHub history.
 - [Eliza](https://github.com/elizaOS/eliza) — ⭐18.7k — Open "agentic operating system" (elizaOS): persistent multi-agent runtime with character files, a plugin ecosystem, and social/platform integrations — the harness behind a large share of autonomous social agents.
+- [Talon](https://github.com/dylanneve1/talon) — ⭐58 — Self-hosted, multi-frontend personal agent runtime: one event loop drives Telegram/Discord/Slack sessions, heartbeats, crons, and triggers, with a persistent memory palace (knowledge graph + diary) and pluggable model backends.
 
 **Frameworks**
 

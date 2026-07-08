@@ -10,7 +10,7 @@
 
 <p align="center">
     <a href="https://best-of.org" title="Best-of Badge"><img src="http://bit.ly/3o3EHNN"></a>
-    <a href="#contents" title="Project Count"><img src="https://img.shields.io/badge/projects-106-blue.svg?color=5ac4bf"></a>
+    <a href="#contents" title="Project Count"><img src="https://img.shields.io/badge/projects-107-blue.svg?color=5ac4bf"></a>
     <a href="https://ryanalberts.github.io/best-of-Agent-Harnesses/" title="Browse the searchable site"><img src="https://img.shields.io/badge/website-live-5ac4bf.svg"></a>
     <a href="#contribution" title="Contributions welcome"><img src="https://img.shields.io/badge/contributions-welcome-green.svg"></a>
     <a href="https://github.com/RyanAlberts/best-of-Agent-Harnesses/releases" title="Updates"><img src="https://img.shields.io/github/release-date/RyanAlberts/best-of-Agent-Harnesses?color=green&label=updated"></a>
@@ -91,7 +91,7 @@ claude mcp add agent-harnesses -- uvx agent-harnesses-mcp
 - [Progressive disclosure harnesses](#progressive-disclosure-harnesses) _6 projects_
 - [Coding agent products (IDEs, CLIs, full suites)](#coding-agent-products-ides-clis-full-suites) _9 projects_
 - [Coding harness configs and SDKs](#coding-harness-configs-and-sdks) _9 projects_
-- [Personal agent runtimes](#personal-agent-runtimes) _7 projects_
+- [Personal agent runtimes](#personal-agent-runtimes) _8 projects_
 - [Frameworks](#frameworks) _23 projects_
 - [Multi-agent and orchestration](#multi-agent-and-orchestration) _8 projects_
 - [Plugins, MCPs, CLI tools](#plugins-mcps-cli-tools) _12 projects_
@@ -179,6 +179,7 @@ _Always-on, self-hosted agents you run as a daemon and talk to from chat apps: g
 | 5 | <a name="agent-zero"></a>[**Agent Zero**](https://github.com/agent0ai/agent-zero) | [18.3k](https://github.com/agent0ai/agent-zero/stargazers) | Organic, prompt-defined personal agent framework: hierarchical sub-agents, persistent memory, browser and code tools, and self-modifying behavior; runs in Docker with a web UI. <sup>`memory` · `multi-agent` · `browser` · `sandbox` · `python`</sup> | ❓ | slightly complex (prompt-defined, Docker + web UI) | [Framework tour](https://github.com/agent0ai/agent-zero#readme) |
 | 6 | <a name="openharness"></a>[**OpenHarness (HKUDS)**](https://github.com/HKUDS/OpenHarness) | [14.6k](https://github.com/HKUDS/OpenHarness/stargazers) | Open agent harness with a built-in personal agent ("Ohmo") that runs across Feishu, Slack, Telegram, and Discord; core tool-use, skills, memory, multi-agent coordination with auto-compaction for multi-day sessions. <sup>`memory` · `multi-agent`</sup> | ✅ | complex (personal agent + multi-channel — product suite) | [harness-eval skill](https://github.com/HKUDS/OpenHarness/blob/main/.claude/skills/harness-eval/SKILL.md) |
 | 7 | <a name="ailice"></a>[**AIlice**](https://github.com/myshell-ai/AIlice) | [1.4k](https://github.com/myshell-ai/AIlice/stargazers) | Fully autonomous general-purpose agent; one binary, Docker-ready, for when you want "set goal and walk away" without a framework. <sup>`sandbox` · `python`</sup> | ✅ | slightly complex (autonomous, one binary) | [Task showcase](https://github.com/myshell-ai/AIlice#cool-things-we-can-do) |
+| 8 | <a name="talon"></a>[**Talon**](https://github.com/dylanneve1/talon)&#8202;★ | [58](https://github.com/dylanneve1/talon/stargazers) | Self-hosted, multi-frontend personal agent runtime: one event loop drives Telegram/Discord/Slack sessions, heartbeats, crons, and triggers, with a persistent memory palace (knowledge graph + diary) and pluggable model backends. <sup>`memory` · `rag` · `workflow` · `typescript`</sup> | ✅ | slightly complex (single runtime, multi-frontend, disk-first memory) | [README overview](https://github.com/dylanneve1/talon#readme) |
 
 ## Frameworks
 
@@ -332,7 +333,7 @@ Harnesses whose execution state persists across restarts: langgraph-bigtool, n8n
 
 ### How many of these agent harnesses are open source?
 
-93 of 106 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.
+94 of 107 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.
 
 ### What is an agent harness?
 

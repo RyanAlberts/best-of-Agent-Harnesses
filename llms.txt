@@ -1,6 +1,6 @@
 # Best of Agent Harnesses
 
-> Hand-curated, ranked list of 106 AI agent harnesses — the runtimes that close the loop between a stateless model and the outside world. 10 categories, a 4-tier adoption-surface rating (simplicity ↔ capability), capability tags, a license signal, and one concrete example link per project. Stars captured 2026-07-05.
+> Hand-curated, ranked list of 107 AI agent harnesses — the runtimes that close the loop between a stateless model and the outside world. 10 categories, a 4-tier adoption-surface rating (simplicity ↔ capability), capability tags, a license signal, and one concrete example link per project. Stars captured 2026-07-05.
 
 Maintained at https://github.com/RyanAlberts/best-of-Agent-Harnesses (CC-BY-SA-4.0).
 Structured data: https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/harnesses.json
@@ -74,7 +74,7 @@ Harnesses designed for unattended runs, batches, and fleets: opencode, OpenHands
 Harnesses whose execution state persists across restarts: langgraph-bigtool, n8n, langgraph, mastra, letta, deepagents, pydantic-ai, Cloudflare Agents.
 
 ### How many of these agent harnesses are open source?
-93 of 106 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.
+94 of 107 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.
 
 ### What is an agent harness?
 The runtime that turns a model into an agent: it decides what the model's reasoning is allowed to touch, and supplies the orchestration, tool wiring, memory, error recovery, and guardrails around per-turn inference.
@@ -124,7 +124,7 @@ Skill packs, slash-command libraries, meta-prompting frameworks, and official SD
 - [AutoHarness](https://github.com/aiming-lab/AutoHarness) — ⭐339, super simple, autonomy: bounded, recovery: none, open-source: Lightweight governance harness: wraps any LLM client in ~2 lines for automated harness engineering—6–14 step pipeline, YAML constitution, risk-pattern matching, session persistence with cost tracking, multi-agent profiles. [memory, multi-agent, provider-agnostic, python]
 - [pmstack](https://github.com/RyanAlberts/pmstack) — ⭐4, super simple, autonomy: n/a, recovery: n/a, open-source: Claude Code config for AI product managers: CLAUDE.md plus skills for competitive analysis, PRD-from-signal, metric frameworks, stakeholder briefs, and agent eval design. "GStack for PMs." [evals]
 
-## Personal agent runtimes (7 projects)
+## Personal agent runtimes (8 projects)
 
 Always-on, self-hosted agents you run as a daemon and talk to from chat apps: gateway runtimes, second brains, and self-improving assistants. The agent as a product you operate, not a library you build with.
 
@@ -135,6 +135,7 @@ Always-on, self-hosted agents you run as a daemon and talk to from chat apps: ga
 - [Agent Zero](https://github.com/agent0ai/agent-zero) — ⭐18.3k, slightly complex, autonomy: bounded, recovery: resumable, unknown: Organic, prompt-defined personal agent framework: hierarchical sub-agents, persistent memory, browser and code tools, and self-modifying behavior; runs in Docker with a web UI. [memory, multi-agent, browser, sandbox, python]
 - [OpenHarness (HKUDS)](https://github.com/HKUDS/OpenHarness) — ⭐14.6k, complex, autonomy: bounded, recovery: resumable, open-source: Open agent harness with a built-in personal agent ("Ohmo") that runs across Feishu, Slack, Telegram, and Discord; core tool-use, skills, memory, multi-agent coordination with auto-compaction for multi-day sessions. [memory, multi-agent]
 - [AIlice](https://github.com/myshell-ai/AIlice) — ⭐1.4k, slightly complex, autonomy: bounded, recovery: none, open-source: Fully autonomous general-purpose agent; one binary, Docker-ready, for when you want "set goal and walk away" without a framework. [sandbox, python]
+- [Talon](https://github.com/dylanneve1/talon) — ⭐58, slightly complex, autonomy: headless, recovery: resumable, open-source: Self-hosted, multi-frontend personal agent runtime: one event loop drives Telegram/Discord/Slack sessions, heartbeats, crons, and triggers, with a persistent memory palace (knowledge graph + diary) and pluggable model backends. [memory, rag, workflow, typescript]
 
 ## Frameworks (23 projects)
 
