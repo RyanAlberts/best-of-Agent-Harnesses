@@ -147,6 +147,10 @@ projects:
     github_id: NousResearch/hermes-agent
     labels: ["python"]
     category: "personal-agent-runtimes"
+  - name: Talon
+    github_id: dylanneve1/talon
+    labels: ["javascript"]
+    category: "personal-agent-runtimes"
   - name: Khoj
     github_id: khoj-ai/khoj
     labels: ["python"]
