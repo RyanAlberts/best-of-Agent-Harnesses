@@ -1,0 +1,23 @@
+name: tests
+
+# Runs the pytest suite (including an end-to-end site build) on every PR and
+# push to main, so renderer/data breaks surface before deploy time.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  pytest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: pip install pytest markdown
+      - run: python -m pytest tests/ -q

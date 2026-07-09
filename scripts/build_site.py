@@ -154,7 +154,7 @@ def render_index() -> str:
         f'<li><strong>{esc(intent)}</strong> — '
         + ", ".join(
             f'<a href="{u("h/"+g.project_slug(gid))}">{esc(g.find_project(gid).display_name)}</a>'
-            for gid in ids[:5]
+            for gid in [i for i in ids if not g.is_graveyard(i)][:5]
         )
         + "</li>"
         for intent, ids, _ in g.USE_CASES
@@ -165,7 +165,7 @@ def render_index() -> str:
     )
     cat_cards = "".join(
         f'<a class="card" href="{u("c/"+cid)}"><strong>{esc(t)}</strong>'
-        f'<span>{len(g.PROJECTS[cid])} projects</span></a>'
+        f'<span>{len(g.live_projects(cid))} projects</span></a>'
         for cid, t, _ in g.CATEGORIES
     )
     faq_teaser = "".join(
@@ -233,7 +233,7 @@ def render_project(p) -> str:
     cat_title = next(t for cid, t, _ in g.CATEGORIES if cid == m["category_id"])
     chips = "".join(f'<span class="chip">{esc(t)}</span>' for t in m["tags"])
     siblings = [
-        q for q in sorted(g.PROJECTS[m["category_id"]], key=lambda x: g.stars_for(x.github_id), reverse=True)
+        q for q in sorted(g.live_projects(m["category_id"]), key=lambda x: g.stars_for(x.github_id), reverse=True)
         if q.github_id != p.github_id
     ][:6]
     related = "".join(
@@ -281,7 +281,7 @@ def render_project(p) -> str:
 
 
 def render_category(cid: str, title: str, subtitle: str) -> str:
-    plist = sorted(g.PROJECTS[cid], key=lambda x: g.stars_for(x.github_id), reverse=True)
+    plist = sorted(g.live_projects(cid), key=lambda x: g.stars_for(x.github_id), reverse=True)
     rows = []
     items = []
     for i, p in enumerate(plist, 1):

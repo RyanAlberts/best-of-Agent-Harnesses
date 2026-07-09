@@ -17,6 +17,11 @@ on:
       - scripts/build_site.py
       - scripts/generate.py
       - .github/workflows/pages.yml
+  # weekly-rescore pushes with GITHUB_TOKEN, and GitHub never fires on:push
+  # workflows for token-initiated pushes — chain off the completed run instead.
+  workflow_run:
+    workflows: [weekly-rescore]
+    types: [completed]
   workflow_dispatch:
 
 permissions:
@@ -30,6 +35,7 @@ concurrency:
 
 jobs:
   build:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
