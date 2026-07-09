@@ -27,7 +27,7 @@ jobs:
   rescore:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
         with:
           token: ${{ secrets.RESCORE_PAT || secrets.GITHUB_TOKEN }}
 
