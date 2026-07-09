@@ -72,6 +72,10 @@ projects:
     github_id: antl3x/ToolRAG
     category: "progressive-disclosure"
   # Coding agent products (IDEs, CLIs, full suites)
+  - name: AgentBox
+    github_id: madarco/agentbox
+    labels: ["javascript"]
+    category: "coding-agent-products"
   - name: Cline
     github_id: cline/cline
     labels: ["javascript"]
