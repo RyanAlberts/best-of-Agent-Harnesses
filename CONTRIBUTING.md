@@ -60,6 +60,8 @@ and commit **both** your `generate.py` change and the regenerated output files. 
 - When an official version supersedes a community fork, the official one is listed.
 - In scope: harnesses, orchestration frameworks, and harness techniques — the runtime around the model, not model wrappers or prompt collections.
 
+Promising projects that don't clear the bar yet get pinned to the README's [🔭 On the radar](README.md#-on-the-radar) section — a submission that lands there isn't rejected, it's queued. Radar entries graduate into the ranked list as they mature.
+
 ## Corrections and updates
 
 Wrong description, example link, tier, or axes score for a project you maintain? Open an issue or a small PR against `generate.py` — maintainer corrections are merged fast. Don't submit star-count updates; the weekly rescore handles those.

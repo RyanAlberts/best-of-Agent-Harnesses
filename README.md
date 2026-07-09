@@ -325,6 +325,27 @@ _Archived upstream. Kept here — not deleted — for citation and historical in
 | [spring-ai-tool-search-tool](https://github.com/spring-ai-community/spring-ai-tool-search-tool) | 76 | 2026-07-03 | archived — kept for integrity |
 | [coderClaw](https://github.com/SeanHogg/BuilderForceAgents) | 3 | 2026-07-03 | archived — kept for integrity |
 
+## 🔭 On the radar
+
+_Up-and-coming candidates — surfaced by the weekly discovery scan or submitted by the community — that haven't cleared the [curation bar](CONTRIBUTING.md#curation-bar) or a vetting pass yet. Stars refresh weekly from the discovery queue; descriptions are the projects' own, unvetted. Entries graduate into the ranked list above or drop off._
+
+| Project | ⭐ Stars | What it says it is | Via |
+|---------|---------|--------------------|-----|
+| [**deer-flow**](https://github.com/bytedance/deer-flow) | [76.6k](https://github.com/bytedance/deer-flow/stargazers) | An open-source long-horizon SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skill, subagents and message… | weekly discovery |
+| [**chrome-devtools-mcp**](https://github.com/ChromeDevTools/chrome-devtools-mcp) | [46.5k](https://github.com/ChromeDevTools/chrome-devtools-mcp/stargazers) | Chrome DevTools for coding agents | weekly discovery |
+| [**vibe-kanban**](https://github.com/BloopAI/vibe-kanban) | [27.3k](https://github.com/BloopAI/vibe-kanban/stargazers) | Get 10X more out of Claude Code, Codex or any coding agent | weekly discovery |
+| [**kilocode**](https://github.com/Kilo-Org/kilocode) | [25.9k](https://github.com/Kilo-Org/kilocode/stargazers) | Kilo is the all-in-one agentic engineering platform. Build, ship, and iterate faster with the most popular open source coding agent. | weekly discovery |
+| [**qwen-code**](https://github.com/QwenLM/qwen-code) | [25.9k](https://github.com/QwenLM/qwen-code/stargazers) | An open-source AI coding agent that lives in your terminal. | weekly discovery |
+| [**symphony**](https://github.com/openai/symphony) | [25.9k](https://github.com/openai/symphony/stargazers) | Symphony turns project work into isolated, autonomous implementation runs, allowing teams to manage work instead of supervising coding agents. | weekly discovery |
+| [**beads**](https://github.com/gastownhall/beads) | [25.2k](https://github.com/gastownhall/beads/stargazers) | Beads - A memory upgrade for your coding agent | weekly discovery |
+| [**plandex**](https://github.com/plandex-ai/plandex) | [15.5k](https://github.com/plandex-ai/plandex/stargazers) | Open source AI coding agent. Designed for large projects and real world tasks. | weekly discovery |
+| [**ag2**](https://github.com/ag2ai/ag2) | [4.8k](https://github.com/ag2ai/ag2/stargazers) | AG2 (formerly AutoGen): The Open-Source AgentOS.Join us at: https://discord.gg/sNGSwQME3x | weekly discovery |
+| [**mcp-context-forge**](https://github.com/IBM/mcp-context-forge) | [4.1k](https://github.com/IBM/mcp-context-forge/stargazers) | An AI Gateway, registry, and proxy that sits in front of any MCP, A2A, or REST/gRPC APIs, exposing a unified endpoint with centralized discovery, guardrails… | weekly discovery |
+| [**fast-agent**](https://github.com/evalstate/fast-agent) | [3.9k](https://github.com/evalstate/fast-agent/stargazers) | Code, Build and Evaluate agents - excellent Model and Skills/MCP/ACP/A2A Support | weekly discovery |
+| [**cocoindex-code**](https://github.com/cocoindex-io/cocoindex-code) | [2.5k](https://github.com/cocoindex-io/cocoindex-code/stargazers) | A super light-weight embedded code search engine CLI (AST based) that just works - saves 70% token and improves speed for coding agent  🌟 Star if you like it! | weekly discovery |
+| [**antigravity-cli**](https://github.com/google-antigravity/antigravity-cli) | [1.5k](https://github.com/google-antigravity/antigravity-cli/stargazers) | Antigravity CLI brings the reasoning, execution, and orchestration capabilities of Antigravity agent harness directly into your terminal. | weekly discovery |
+| [**teamcopilot**](https://github.com/rishabhpoddar/teamcopilot) | [14](https://github.com/rishabhpoddar/teamcopilot/stargazers) | Deploy AI agents for your team to automate business workflows and coding. | community · PR #21 |
+
 ## FAQ
 
 ### Which agent harnesses can run unattended (headless)?
@@ -368,7 +389,9 @@ Three machine-readable surfaces: harnesses.json (structured), llms.txt (one file
 Contributions are welcome. To add or suggest projects:
 
 - Open an [issue](https://github.com/RyanAlberts/best-of-Agent-Harnesses/issues) with the repo URL, category, and a short description.
-- Or submit a [pull request](https://github.com/RyanAlberts/best-of-Agent-Harnesses/pulls) editing [projects.yaml](https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/projects.yaml) (and optionally README.md).
+- Or submit a pull request against [scripts/generate.py](https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/scripts/generate.py) — this README, projects.yaml, and TAGS.md are generated from it, so direct edits to them can't merge.
+
+Promising projects that don't clear the curation bar yet get pinned to [🔭 On the radar](#-on-the-radar) — a submission that lands there isn't rejected, it's queued.
 
 For contribution guidelines, see [CONTRIBUTING.md](https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/CONTRIBUTING.md) and the [Code of Conduct](https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/.github/CODE_OF_CONDUCT.md).
 

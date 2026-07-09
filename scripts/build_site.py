@@ -64,6 +64,7 @@ def page(title: str, description: str, canonical_path: str, body: str,
     nav = (
         f'<a href="{u()}">Home</a>'
         f'<a href="{u("faq")}">FAQ</a>'
+        f'<a href="{u("radar")}">Radar</a>'
         f'<a href="{u()}#compare">Compare</a>'
         f'<a href="{u()}#agents">For agents</a>'
         f'<a href="https://github.com/RyanAlberts/best-of-Agent-Harnesses">GitHub ↗</a>'
@@ -307,6 +308,28 @@ def render_category(cid: str, title: str, subtitle: str) -> str:
     return page(f"{title} — Best of Agent Harnesses", subtitle, f"c/{cid}", body, jsonld=jsonld)
 
 
+def render_radar_page() -> str:
+    entries = g.radar_entries()
+    rows = "".join(
+        f'<tr><td><a href="https://github.com/{esc(e["github_id"])}"><strong>{esc(e["github_id"].split("/")[-1])}</strong></a></td>'
+        f'<td class="num">{esc(g.format_stars(e["stars"])) if e["stars"] else "—"}</td>'
+        f'<td>{esc(e["desc"])}</td><td>{esc(e["via"])}</td></tr>'
+        for e in entries
+    )
+    body = f"""
+<nav class="crumbs"><a href="{u()}">Home</a> › On the radar</nav>
+<h1>🔭 On the radar</h1>
+<p class="lede">Up-and-coming candidates — surfaced by the weekly discovery scan or submitted by the community —
+that haven't cleared the curation bar or a vetting pass yet. Stars refresh weekly from the discovery queue;
+descriptions are the projects' own, unvetted. Entries graduate into <a href="{u()}">the ranked list</a> or drop off.</p>
+<table><thead><tr><th>Project</th><th class="num">Stars</th><th>What it says it is</th><th>Via</th></tr></thead>
+<tbody>{rows}</tbody></table>
+"""
+    return page("On the radar — Best of Agent Harnesses",
+                "Up-and-coming agent-harness candidates being watched before they enter the ranked list.",
+                "radar", body)
+
+
 def render_comparison(c: dict) -> str:
     src = (ROOT / "comparisons" / f"{c['slug']}.md").read_text()
     html_body = markdown.markdown(src, extensions=["tables", "fenced_code", "toc"])
@@ -422,6 +445,10 @@ def build() -> dict:
     (OUT / "faq").mkdir()
     (OUT / "faq" / "index.html").write_text(render_faq())
     urls.append(abs_url("faq"))
+
+    (OUT / "radar").mkdir()
+    (OUT / "radar" / "index.html").write_text(render_radar_page())
+    urls.append(abs_url("radar"))
 
     for p in g.ordered_projects():
         slug = g.project_slug(p.github_id)

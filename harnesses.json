@@ -3551,5 +3551,91 @@
       "last_stars": 3,
       "archived_since": "2026-07-03"
     }
+  ],
+  "radar": [
+    {
+      "github_id": "bytedance/deer-flow",
+      "stars": 76620,
+      "desc": "An open-source long-horizon SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skill, subagents and message…",
+      "via": "weekly discovery"
+    },
+    {
+      "github_id": "ChromeDevTools/chrome-devtools-mcp",
+      "stars": 46483,
+      "desc": "Chrome DevTools for coding agents",
+      "via": "weekly discovery"
+    },
+    {
+      "github_id": "BloopAI/vibe-kanban",
+      "stars": 27318,
+      "desc": "Get 10X more out of Claude Code, Codex or any coding agent",
+      "via": "weekly discovery"
+    },
+    {
+      "github_id": "Kilo-Org/kilocode",
+      "stars": 25911,
+      "desc": "Kilo is the all-in-one agentic engineering platform. Build, ship, and iterate faster with the most popular open source coding agent.",
+      "via": "weekly discovery"
+    },
+    {
+      "github_id": "QwenLM/qwen-code",
+      "stars": 25898,
+      "desc": "An open-source AI coding agent that lives in your terminal.",
+      "via": "weekly discovery"
+    },
+    {
+      "github_id": "openai/symphony",
+      "stars": 25879,
+      "desc": "Symphony turns project work into isolated, autonomous implementation runs, allowing teams to manage work instead of supervising coding agents.",
+      "via": "weekly discovery"
+    },
+    {
+      "github_id": "gastownhall/beads",
+      "stars": 25186,
+      "desc": "Beads - A memory upgrade for your coding agent",
+      "via": "weekly discovery"
+    },
+    {
+      "github_id": "plandex-ai/plandex",
+      "stars": 15510,
+      "desc": "Open source AI coding agent. Designed for large projects and real world tasks.",
+      "via": "weekly discovery"
+    },
+    {
+      "github_id": "ag2ai/ag2",
+      "stars": 4750,
+      "desc": "AG2 (formerly AutoGen): The Open-Source AgentOS.Join us at: https://discord.gg/sNGSwQME3x",
+      "via": "weekly discovery"
+    },
+    {
+      "github_id": "IBM/mcp-context-forge",
+      "stars": 4064,
+      "desc": "An AI Gateway, registry, and proxy that sits in front of any MCP, A2A, or REST/gRPC APIs, exposing a unified endpoint with centralized discovery, guardrails…",
+      "via": "weekly discovery"
+    },
+    {
+      "github_id": "evalstate/fast-agent",
+      "stars": 3855,
+      "desc": "Code, Build and Evaluate agents - excellent Model and Skills/MCP/ACP/A2A Support",
+      "via": "weekly discovery"
+    },
+    {
+      "github_id": "cocoindex-io/cocoindex-code",
+      "stars": 2480,
+      "desc": "A super light-weight embedded code search engine CLI (AST based) that just works - saves 70% token and improves speed for coding agent  🌟 Star if you like it!",
+      "via": "weekly discovery"
+    },
+    {
+      "github_id": "google-antigravity/antigravity-cli",
+      "stars": 1532,
+      "desc": "Antigravity CLI brings the reasoning, execution, and orchestration capabilities of Antigravity agent harness directly into your terminal.",
+      "via": "weekly discovery"
+    },
+    {
+      "github_id": "rishabhpoddar/teamcopilot",
+      "stars": 14,
+      "desc": "Deploy AI agents for your team to automate business workflows and coding.",
+      "via": "community · PR #21"
+    }
   ]
 }

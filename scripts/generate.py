@@ -660,6 +660,65 @@ ARCHIVED: "dict[str, str]" = {
 # out of the Graveyard and remain in normal ordering. Empty by default.
 KEEP_DESPITE_ARCHIVED: "set[str]" = set()
 
+# ---------------------------------------------------------------------------
+# On the radar — up-and-coming candidates surfaced publicly before they clear
+# the curation bar: repos the weekly discovery scan keeps finding, plus
+# community submissions that are promising but not listable yet. Pins are
+# editorial; stars and descriptions hydrate from curation-queue.json (rewritten
+# by the weekly Action), so rows refresh without touching this file. An entry
+# graduates by becoming a Project above (it then drops off the radar
+# automatically) or gets unpinned.
+RADAR: "list[dict]" = [
+    {"id": "bytedance/deer-flow", "via": "weekly discovery"},
+    {"id": "ChromeDevTools/chrome-devtools-mcp", "via": "weekly discovery"},
+    {"id": "BloopAI/vibe-kanban", "via": "weekly discovery"},
+    {"id": "Kilo-Org/kilocode", "via": "weekly discovery"},
+    {"id": "QwenLM/qwen-code", "via": "weekly discovery"},
+    {"id": "openai/symphony", "via": "weekly discovery"},
+    {"id": "gastownhall/beads", "via": "weekly discovery"},
+    {"id": "plandex-ai/plandex", "via": "weekly discovery"},
+    {"id": "ag2ai/ag2", "via": "weekly discovery"},
+    {"id": "IBM/mcp-context-forge", "via": "weekly discovery"},
+    {"id": "evalstate/fast-agent", "via": "weekly discovery"},
+    {"id": "cocoindex-io/cocoindex-code", "via": "weekly discovery"},
+    {"id": "google-antigravity/antigravity-cli", "via": "weekly discovery"},
+    {"id": "rishabhpoddar/teamcopilot", "via": "community · PR #21", "stars": 14,
+     "desc": "Deploy AI agents for your team to automate business workflows and coding."},
+]
+
+
+def queue_candidates() -> "dict[str, dict]":
+    """curation-queue.json's candidates keyed by github_id ({} if unreadable)."""
+    import json
+    try:
+        q = json.loads((REPO_ROOT / "curation-queue.json").read_text())
+    except (OSError, ValueError):
+        return {}
+    return {c["id"]: c for c in q.get("candidates", []) if c.get("id")}
+
+
+def radar_entries() -> list:
+    """RADAR pins hydrated from the queue, minus anything already listed,
+    sorted by stars. Descriptions are the repos' own — unvetted."""
+    listed = {p.github_id.lower() for plist in PROJECTS.values() for p in plist}
+    qc = queue_candidates()
+    out = []
+    for pin in RADAR:
+        gid = pin["id"]
+        if gid.lower() in listed:
+            continue
+        c = qc.get(gid, {})
+        desc = (pin.get("desc") or c.get("desc") or "").replace("|", "\\|").replace("\n", " ").strip()
+        if len(desc) > 160:
+            desc = desc[:157].rstrip() + "…"
+        out.append({
+            "github_id": gid,
+            "stars": c.get("stars", pin.get("stars", 0)),
+            "desc": desc,
+            "via": pin.get("via", "weekly discovery"),
+        })
+    return sorted(out, key=lambda e: -e["stars"])
+
 # Canonical 4-tier order of the simplicity ↔ capability axis (least → most
 # adoption surface). Every Project.axis must start with one of these.
 TIER_ORDER = ["super simple", "mostly simple", "slightly complex", "complex"]
@@ -1268,6 +1327,26 @@ def generate_readme() -> str:
             row = f"| [{p.display_name}](https://github.com/{gid}) | {stars_cell} | {since} | archived — kept for integrity |"
             body.append(row)
         body.append("")
+    radar = radar_entries()
+    if radar:
+        body.append("## 🔭 On the radar")
+        body.append("")
+        body.append(
+            "_Up-and-coming candidates — surfaced by the weekly discovery scan or "
+            "submitted by the community — that haven't cleared the "
+            "[curation bar](CONTRIBUTING.md#curation-bar) or a vetting pass yet. "
+            "Stars refresh weekly from the discovery queue; descriptions are the "
+            "projects' own, unvetted. Entries graduate into the ranked list above "
+            "or drop off._"
+        )
+        body.append("")
+        body.append("| Project | ⭐ Stars | What it says it is | Via |")
+        body.append("|---------|---------|--------------------|-----|")
+        for e in radar:
+            gid = e["github_id"]
+            stars_cell = f"[{format_stars(e['stars'])}](https://github.com/{gid}/stargazers)" if e["stars"] else "—"
+            body.append(f"| [**{gid.split('/')[-1]}**](https://github.com/{gid}) | {stars_cell} | {e['desc']} | {e['via']} |")
+        body.append("")
     body += ["## FAQ", ""]
     for item in build_faq():
         if item["kind"] == "use-case":
@@ -1291,7 +1370,9 @@ def generate_readme() -> str:
         "Contributions are welcome. To add or suggest projects:",
         "",
         "- Open an [issue](https://github.com/RyanAlberts/best-of-Agent-Harnesses/issues) with the repo URL, category, and a short description.",
-        "- Or submit a [pull request](https://github.com/RyanAlberts/best-of-Agent-Harnesses/pulls) editing [projects.yaml](https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/projects.yaml) (and optionally README.md).",
+        "- Or submit a pull request against [scripts/generate.py](https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/scripts/generate.py) — this README, projects.yaml, and TAGS.md are generated from it, so direct edits to them can't merge.",
+        "",
+        "Promising projects that don't clear the curation bar yet get pinned to [🔭 On the radar](#-on-the-radar) — a submission that lands there isn't rejected, it's queued.",
         "",
         "For contribution guidelines, see [CONTRIBUTING.md](https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/CONTRIBUTING.md) and the [Code of Conduct](https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/.github/CODE_OF_CONDUCT.md).",
         "",
@@ -1509,6 +1590,7 @@ def generate_harnesses_json() -> str:
             }
             for p in graveyard_projects()
         ],
+        "radar": radar_entries(),
     }
     return json.dumps(doc, indent=2, ensure_ascii=False) + "\n"
 

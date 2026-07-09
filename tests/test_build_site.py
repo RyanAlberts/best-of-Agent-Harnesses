@@ -21,6 +21,7 @@ def test_full_build_succeeds(tmp_path, monkeypatch):
     out, stats = _build(tmp_path, monkeypatch)
     assert (out / "index.html").exists()
     assert (out / "sitemap.xml").exists()
+    assert (out / "radar" / "index.html").exists()
     assert stats["projects"] == generate.count_projects()
 
 
