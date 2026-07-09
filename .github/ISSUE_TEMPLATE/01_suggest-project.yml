@@ -1,0 +1,79 @@
+name: "📦 Suggest a project"
+description: "Point at a harness the list is missing — accepted suggestions get ported for you, with co-author credit."
+title: "Add project: "
+labels: ["add-project"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for stopping to point at what's missing — that's how this list gets better.
+        Fill in what you can; the maintainer ports accepted suggestions into the generator and credits you on the commit.
+        Projects that are promising but below the bar get pinned to [🔭 On the radar](https://github.com/RyanAlberts/best-of-Agent-Harnesses#-on-the-radar) rather than declined.
+  - type: input
+    id: repo_url
+    attributes:
+      label: Repo URL
+      placeholder: https://github.com/org/repo
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Proposed category
+      options:
+        - Progressive disclosure harnesses
+        - Coding agent products (IDEs, CLIs, full suites)
+        - Coding harness configs and SDKs
+        - Personal agent runtimes
+        - Frameworks
+        - Multi-agent and orchestration
+        - Plugins, MCPs, CLI tools
+        - Evaluation and benchmarking harnesses
+        - Research and task-specific harnesses
+        - Libraries and SDKs
+    validations:
+      required: true
+  - type: textarea
+    id: harness_pitch
+    attributes:
+      label: What is the harness?
+      description: One or two sentences on the agent loop, tool wiring, approval model, or recovery layer — as distinct from the UI shell.
+    validations:
+      required: true
+  - type: input
+    id: example_link
+    attributes:
+      label: Best "show me it in action" link
+      description: A docs page, example directory, or leaderboard — not the repo root.
+  - type: input
+    id: closest_entry
+    attributes:
+      label: Closest existing entry, and what this adds over it
+      placeholder: "e.g. like opencode, but X"
+  - type: dropdown
+    id: affiliation
+    attributes:
+      label: Your relationship to the project
+      description: Maintainer submissions are welcome — most good ones are. Just say so.
+      options:
+        - I maintain / am affiliated with it
+        - I'm an unaffiliated user
+    validations:
+      required: true
+  - type: checkboxes
+    id: quality
+    attributes:
+      label: Quality self-check
+      description: This is how the repo gets validated — checking these saves a round-trip.
+      options:
+        - label: It owns or structures an agent loop — not a model wrapper, prompt pack, or demo app
+        - label: A LICENSE file exists (source-available is fine — it's flagged ⚠️)
+        - label: Active — a commit within the last 60 days, and not archived
+        - label: Real usage signals — roughly 100+ stars and >10 commits (or I've added honest context below)
+        - label: The README lets a stranger run it — install steps plus a working example
+        - label: Not already on the list, the Graveyard, or the radar (I searched the README)
+  - type: textarea
+    id: context
+    attributes:
+      label: Anything else
+      description: Below the bar today, unusual license, why solo-maintainer is fine here — any context that helps the call.

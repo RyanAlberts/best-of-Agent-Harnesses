@@ -20,6 +20,14 @@
     🌐 <strong><a href="https://ryanalberts.github.io/best-of-Agent-Harnesses/">Browse the searchable site</a></strong> — one page per harness, filter by capability, autonomy &amp; recovery.
 </p>
 
+## 🧡 Thank you, contributors
+
+A curated list is only as good as the people who stop mid-scroll to point at what it's missing. These folks did exactly that — found a gap, wrote it up, and made the list better than one maintainer ever could:
+
+[**@oldschoola**](https://github.com/oldschoola) — oh-my-pi · [**@madarco**](https://github.com/madarco) — AgentBox · [**@pranshuchittora**](https://github.com/pranshuchittora) — agent-qa · [**@claudiusthebot**](https://github.com/claudiusthebot) — Talon · [**@liviux**](https://github.com/liviux) — LoopTroop · [**@rishabhpoddar**](https://github.com/rishabhpoddar) — TeamCopilot, on the radar
+
+Accepted submissions land with **co-author credit** on the commit that ships them. Promising projects that are still early aren't turned away — they get pinned to [🔭 On the radar](#-on-the-radar) and graduate as they grow. [Add yours →](CONTRIBUTING.md)
+
 ## What is an agent harness?
 
 A model answers; an agent acts. An agent harness is the runtime that turns one into the other — the model thinks; the harness decides what that thinking is allowed to touch.

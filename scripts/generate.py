@@ -660,6 +660,19 @@ ARCHIVED: "dict[str, str]" = {
 # out of the Graveyard and remain in normal ordering. Empty by default.
 KEEP_DESPITE_ARCHIVED: "set[str]" = set()
 
+# Community members whose submissions shaped the list — rendered as the
+# thank-you block at the top of the README. Add a tuple when a submission
+# lands (as a listing or a radar pin); this is deliberately hand-curated
+# because co-authored commits don't show up in GitHub's contributors API.
+CONTRIBUTORS: "list[tuple[str, str]]" = [
+    ("oldschoola", "oh-my-pi"),
+    ("madarco", "AgentBox"),
+    ("pranshuchittora", "agent-qa"),
+    ("claudiusthebot", "Talon"),
+    ("liviux", "LoopTroop"),
+    ("rishabhpoddar", "TeamCopilot, on the radar"),
+]
+
 # ---------------------------------------------------------------------------
 # On the radar — up-and-coming candidates surfaced publicly before they clear
 # the curation bar: repos the weekly discovery scan keeps finding, plus
@@ -1211,6 +1224,18 @@ def generate_readme() -> str:
         "<p align=\"center\">",
         f"    🌐 <strong><a href=\"{SITE_URL}\">Browse the searchable site</a></strong> — one page per harness, filter by capability, autonomy &amp; recovery.",
         "</p>",
+        "",
+        "## 🧡 Thank you, contributors",
+        "",
+        "A curated list is only as good as the people who stop mid-scroll to point at what it's missing. "
+        "These folks did exactly that — found a gap, wrote it up, and made the list better than one "
+        "maintainer ever could:",
+        "",
+        " · ".join(f"[**@{login}**](https://github.com/{login}) — {what}" for login, what in CONTRIBUTORS),
+        "",
+        "Accepted submissions land with **co-author credit** on the commit that ships them. Promising "
+        "projects that are still early aren't turned away — they get pinned to [🔭 On the radar](#-on-the-radar) "
+        "and graduate as they grow. [Add yours →](CONTRIBUTING.md)",
         "",
         "## What is an agent harness?",
         "",
