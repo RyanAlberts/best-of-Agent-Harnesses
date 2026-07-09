@@ -4,7 +4,7 @@
 
 | | [Mem0](https://github.com/mem0ai/mem0) | [claude-mem](https://github.com/thedotmack/claude-mem) | [Letta](https://github.com/letta-ai/letta) |
 |---|---|---|---|
-| ⭐ Stars | 60.1k | 85.9k | 23.7k |
+| ⭐ Stars | 60.5k | 86.6k | 23.7k |
 | Shape | Memory layer / API | Claude Code plugin | Agent runtime with built-in memory |
 | Works with | Any agent or framework | Claude Code only | Agents you build *in* Letta |
 | Memory model | Extracted facts (user/org/session scoped), retrieved on demand | Session capture → AI compression → context injection on resume | Self-editing agent memory (the MemGPT lineage) |
