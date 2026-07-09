@@ -164,10 +164,17 @@ PROJECTS: dict[str, list[Project]] = {
                 "mostly simple (query-driven retrieval)"),
     ],
     "coding-agent-products": [
+        Project("oh-my-pi", "can1357/oh-my-pi",
+                "Terminal coding agent (fork of Pi) that wires the IDE into the **harness**: hash-anchored edits, a 32-tool loop tuned per-model, LSP rename/references/diagnostics on every write, a real DAP debugger (lldb/dlv/debugpy), long-lived Python + Bun execution kernels that call back into the agent's tools, browser control, and 40+ providers (Claude/OpenAI/Gemini/local). ~55k-line Rust core.",
+                "slightly complex (terminal agent, LSP/DAP, multi-provider)", labels=["rust"]),
+        Project("AgentBox", "madarco/agentbox",
+                "Runs multiple coding agents in parallel, each in its own sandboxed VM, locally or in the cloud, from one command. The **harness** contribution is the VM-per-agent isolation and fleet fan-out layer; whichever agent runs inside owns the loop.",
+                "slightly complex (VM-per-agent sandbox, parallel fan-out)", labels=["javascript"]),
         Project("Cline", "cline/cline",
                 "VS Code extension whose **harness** is a plan-then-act loop with per-step human approval and cost transparency; the VS Code integration is the UI shell. Open-source counterweight to Cursor.",
                 "slightly complex (plan-then-act, approval gates)", labels=["javascript"]),
-        Project("Roo-Code", "RooCodeInc/Roo-Code", "",
+        Project("Roo-Code", "RooCodeInc/Roo-Code",
+                "VS Code/Cursor extension in the Cline lineage. The **harness** is the approval-gated agent with custom modes and a strong MCP story; the IDE is the UI. Popular community fork when you want that workflow without the upstream extension.",
                 "slightly complex (IDE extension, MCP-first)", labels=["javascript"], link_name="Roo Code"),
         Project("Codex", "openai/codex",
                 "OpenAI's terminal coding agent. The **harness** is the sandboxed tool-call loop with multi-provider support; the CLI is the shell. Reference implementation for \"official CLI that ships code.\"",
@@ -198,6 +205,9 @@ PROJECTS: dict[str, list[Project]] = {
                 "mostly simple (lean code-exec loop)", labels=["python"]),
     ],
     "coding-harness-configs": [
+        Project("LoopTroop", "looptroop-ai/LoopTroop",
+                "Config layer that chains LLM councils for planning, Ralph loops for iterative refinement, and OpenCode worktrees for shipping. The **harness** contribution is the council → loop → worktree pipeline; OpenCode underneath executes.",
+                "mostly simple (config pipeline over OpenCode)", labels=["javascript"]),
         Project("get-shit-done", "gsd-build/get-shit-done",
                 "Goal-backward planning and wave-based execution over fresh context windows; avoids context rot by design. Python/JS meta-prompting for Claude Code, OpenCode, Gemini CLI.",
                 "mostly simple (meta-prompting, you own stack)"),
@@ -230,6 +240,9 @@ PROJECTS: dict[str, list[Project]] = {
                 "mostly simple (official skills format)", link_name="Anthropic Skills"),
     ],
     "personal-agent-runtimes": [
+        Project("Talon", "dylanneve1/talon",
+                "Multi-platform personal agent living in Telegram, Discord, Teams, and the terminal. The **harness** is a pluggable-backend loop (Claude, Kilo, OpenCode, Codex, OpenAI Agents) with full MCP tool access and persistent background agents (Goals, Heartbeat, Dream); the chat apps are shells.",
+                "slightly complex (multi-platform, pluggable backends, MCP)", labels=["javascript"]),
         Project("OpenClaw", "openclaw/openclaw",
                 "Self-hosted, always-on personal agent (formerly Clawdbot/Moltbot): a gateway + event-loop runtime that treats messages, heartbeats, crons, and webhooks as one input queue, persists state to local files, and lives in your chat apps (WhatsApp, Telegram, Slack, Discord). 13,700+ community skills; the fastest-growing repo in GitHub history.",
                 "complex (always-on runtime, channels, skill ecosystem — product suite)",
@@ -390,6 +403,9 @@ PROJECTS: dict[str, list[Project]] = {
                 "mostly simple (real browser, anti-detect)", oss="❓", labels=["javascript"]),
     ],
     "evaluation": [
+        Project("agent-qa", "vostride/agent-qa",
+                "Self-improving QA **harness** for web and mobile apps: natural-language tests, memory-backed self-healing, dashboard/CLI, MCP and skills support, plus sandboxed hooks for production regression checks.",
+                "slightly complex (web/mobile QA, memory, MCP)", oss="⚠️ FSL-1.1-ALv2", labels=["javascript"]),
         Project("ARC-AGI-2", "arcprize/ARC-AGI-2",
                 "ARC Prize task set: grid-based abstraction/reasoning; public and private splits for generalization.",
                 "super simple (task set)"),
@@ -493,11 +509,6 @@ PROJECTS: dict[str, list[Project]] = {
     ],
 }
 
-# Fill in Roo-Code description that was empty
-PROJECTS["coding-agent-products"][1].description = (
-    "VS Code/Cursor extension in the Cline lineage. The **harness** is the approval-gated agent with custom modes and a strong MCP story; the IDE is the UI. Popular community fork when you want that workflow without the upstream extension."
-)
-
 
 # Stars + examples link, keyed by github_id (post-move where applicable).
 # Star counts captured 2026-07-09 from the GitHub API; refresh by re-running
@@ -514,6 +525,8 @@ META: dict[str, tuple[int, str, str]] = {
     "Reason-Wang/ToolGen": (182, "https://github.com/Reason-Wang/ToolGen/blob/master/scripts/eval_full_pipeline.sh", "Full eval pipeline"),
     "antl3x/ToolRAG": (29, "https://github.com/antl3x/ToolRAG/blob/main/packages/%40antl3x-toolrag/README.md", "MCP server retrieval"),
     # coding-agent-products
+    "can1357/oh-my-pi": (16958, "https://github.com/can1357/oh-my-pi/blob/main/docs/lsp-config.md", "LSP wired into edits"),
+    "madarco/agentbox": (238, "https://github.com/madarco/agentbox#readme", "Parallel agents quick start"),
     "cline/cline": (64486, "https://docs.cline.bot/features/plan-and-act", "Plan & Act mode"),
     "RooCodeInc/Roo-Code": (24310, "https://docs.roocode.com/features/custom-modes", "Custom modes guide"),
     "openai/codex": (96576, "https://developers.openai.com/codex/concepts/sandboxing", "Sandboxing concept"),
@@ -525,6 +538,7 @@ META: dict[str, tuple[int, str, str]] = {
     "HarnessLab/claw-code-agent": (526, "https://github.com/HarnessLab/claw-code-agent#-quick-start", "Quick Start guide"),
     "SeanHogg/BuilderForceAgents": (3, "https://github.com/SeanHogg/BuilderForceAgents#readme", "Multi-agent README"),
     # coding-harness-configs
+    "looptroop-ai/LoopTroop": (55, "https://github.com/looptroop-ai/LoopTroop#readme", "Council → loop → worktree pipeline"),
     "gsd-build/get-shit-done": (64726, "https://github.com/gsd-build/get-shit-done/blob/main/commands/gsd/ship.md", "gsd:ship command"),
     "garrytan/gstack": (120746, "https://github.com/garrytan/gstack/blob/main/ship/SKILL.md", "/ship SKILL.md"),
     "affaan-m/ECC": (227772, "https://github.com/affaan-m/ECC/blob/main/skills/autonomous-agent-harness/SKILL.md", "autonomous-agent-harness skill"),
@@ -556,6 +570,7 @@ META: dict[str, tuple[int, str, str]] = {
     "superagentxai/superagentx": (200, "https://github.com/superagentxai/superagentx/blob/master/examples/agents/parallel_agents.py", "Parallel marketing agents"),
     "openclaw/openclaw": (382325, "https://github.com/openclaw/openclaw/blob/main/docs/agent-runtime-architecture.md", "Agent runtime architecture"),
     "NousResearch/hermes-agent": (212077, "https://github.com/NousResearch/hermes-agent/tree/main/skills", "Built-in skills"),
+    "dylanneve1/talon": (61, "https://github.com/dylanneve1/talon#readme", "Multi-platform setup"),
     "openinterpreter/openinterpreter": (64312, "https://github.com/openinterpreter/openinterpreter#readme", "Quick start"),
     "FoundationAgents/MetaGPT": (69279, "https://github.com/FoundationAgents/MetaGPT/blob/main/examples/build_customized_agent.py", "Build a customized agent"),
     "OpenBMB/ChatDev": (33691, "https://github.com/OpenBMB/ChatDev#readme", "Company simulation quickstart"),
@@ -590,6 +605,7 @@ META: dict[str, tuple[int, str, str]] = {
     "docker/mcp-gateway": (1474, "https://github.com/docker/mcp-gateway/blob/main/docs/mcp-gateway.md", "Gateway usage walkthrough"),
     "withLinda/puppeteer-real-browser-mcp-server": (23, "https://github.com/withLinda/puppeteer-real-browser-mcp-server/blob/main/README.md", "11 anti-detection tools"),
     # evaluation
+    "vostride/agent-qa": (156, "https://github.com/vostride/agent-qa#readme", "Natural-language QA harness"),
     "arcprize/ARC-AGI-2": (722, "https://arcprize.org/leaderboard", "ARC Prize leaderboard"),
     "arcprize/arc-agi-benchmarking": (351, "https://github.com/arcprize/arc-agi-benchmarking/blob/main/docs/examples/prompt_example_o3.md", "o3 prompt example"),
     "GAIR-NLP/AgencyBench": (88, "https://github.com/GAIR-NLP/AgencyBench#leaderboard", "AgencyBench leaderboard"),
@@ -684,6 +700,8 @@ AXES: "dict[str, tuple[str, str]]" = {
     "spring-ai-community/spring-ai-tool-search-tool": ("n/a", "n/a"),
     "antl3x/ToolRAG": ("n/a", "n/a"),
     # coding-agent-products
+    "can1357/oh-my-pi": ("bounded", "resumable"),
+    "madarco/agentbox": ("n/a", "n/a"),
     "anomalyco/opencode": ("headless", "resumable"),
     "google-gemini/gemini-cli": ("bounded", "resumable"),
     "openai/codex": ("bounded", "resumable"),
@@ -695,6 +713,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "HarnessLab/claw-code-agent": ("checkpoint-gated", "none"),
     "SeanHogg/BuilderForceAgents": ("bounded", "none"),
     # coding-harness-configs
+    "looptroop-ai/LoopTroop": ("bounded", "retry"),
     "obra/superpowers": ("n/a", "n/a"),
     "affaan-m/ECC": ("n/a", "n/a"),
     "anthropics/skills": ("n/a", "n/a"),
@@ -732,6 +751,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "howl-anderson/agentsilex": ("bounded", "none"),
     "openclaw/openclaw": ("headless", "resumable"),
     "NousResearch/hermes-agent": ("headless", "resumable"),
+    "dylanneve1/talon": ("headless", "resumable"),
     "openinterpreter/openinterpreter": ("bounded", "resumable"),
     "FoundationAgents/MetaGPT": ("headless", "resumable"),
     "OpenBMB/ChatDev": ("headless", "none"),
@@ -760,6 +780,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "ajhcs/Better-OpenCodeMCP": ("n/a", "n/a"),
     "RyanAlberts/agentlog": ("n/a", "n/a"),
     # evaluation
+    "vostride/agent-qa": ("headless", "retry"),
     "microsoft/agent-lightning": ("headless", "resumable"),
     "SWE-bench/SWE-bench": ("headless", "resumable"),
     "THUDM/AgentBench": ("headless", "none"),

@@ -9,7 +9,7 @@
     "feed_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/feed.json",
     "license": "CC-BY-SA-4.0",
     "stars_captured": "2026-07-09",
-    "project_count": 106,
+    "project_count": 111,
     "graveyard_count": 4,
     "tiers": [
       "super simple",
@@ -335,7 +335,7 @@
     {
       "kind": "derived",
       "q": "How many of these agent harnesses are open source?",
-      "a": "93 of 106 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
+      "a": "97 of 111 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
       "slug": "how-many-of-these-agent-harnesses-are-open-source"
     },
     {
@@ -793,6 +793,38 @@
       }
     },
     {
+      "name": "oh-my-pi",
+      "github_id": "can1357/oh-my-pi",
+      "url": "https://github.com/can1357/oh-my-pi",
+      "slug": "oh-my-pi",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#oh-my-pi",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/oh-my-pi/",
+      "description": "Terminal coding agent (fork of Pi) that wires the IDE into the **harness**: hash-anchored edits, a 32-tool loop tuned per-model, LSP rename/references/diagnostics on every write, a real DAP debugger (lldb/dlv/debugpy), long-lived Python + Bun execution kernels that call back into the agent's tools, browser control, and 40+ providers (Claude/OpenAI/Gemini/local). ~55k-line Rust core.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 16958,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (terminal agent, LSP/DAP, multi-provider)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "open-source",
+      "tags": [
+        "browser",
+        "provider-agnostic",
+        "cli",
+        "ide",
+        "rust",
+        "python"
+      ],
+      "example": {
+        "label": "LSP wired into edits",
+        "url": "https://github.com/can1357/oh-my-pi/blob/main/docs/lsp-config.md"
+      }
+    },
+    {
       "name": "claw-code-agent",
       "github_id": "HarnessLab/claw-code-agent",
       "url": "https://github.com/HarnessLab/claw-code-agent",
@@ -820,6 +852,34 @@
       "example": {
         "label": "Quick Start guide",
         "url": "https://github.com/HarnessLab/claw-code-agent#-quick-start"
+      }
+    },
+    {
+      "name": "AgentBox",
+      "github_id": "madarco/agentbox",
+      "url": "https://github.com/madarco/agentbox",
+      "slug": "agentbox",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#agentbox",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/agentbox/",
+      "description": "Runs multiple coding agents in parallel, each in its own sandboxed VM, locally or in the cloud, from one command. The **harness** contribution is the VM-per-agent isolation and fleet fan-out layer; whichever agent runs inside owns the loop.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 238,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (VM-per-agent sandbox, parallel fan-out)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [
+        "sandbox",
+        "typescript"
+      ],
+      "example": {
+        "label": "Parallel agents quick start",
+        "url": "https://github.com/madarco/agentbox#readme"
       }
     },
     {
@@ -1047,6 +1107,33 @@
       }
     },
     {
+      "name": "LoopTroop",
+      "github_id": "looptroop-ai/LoopTroop",
+      "url": "https://github.com/looptroop-ai/LoopTroop",
+      "slug": "looptroop",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#looptroop",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/looptroop/",
+      "description": "Config layer that chains LLM councils for planning, Ralph loops for iterative refinement, and OpenCode worktrees for shipping. The **harness** contribution is the council → loop → worktree pipeline; OpenCode underneath executes.",
+      "category": "coding-harness-configs",
+      "category_title": "Coding harness configs and SDKs",
+      "stars": 55,
+      "tier": "mostly simple",
+      "tier_rank": 2,
+      "axis": "mostly simple (config pipeline over OpenCode)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "retry",
+      "recovery_rank": 2,
+      "license_signal": "open-source",
+      "tags": [
+        "typescript"
+      ],
+      "example": {
+        "label": "Council → loop → worktree pipeline",
+        "url": "https://github.com/looptroop-ai/LoopTroop#readme"
+      }
+    },
+    {
       "name": "pmstack",
       "github_id": "RyanAlberts/pmstack",
       "url": "https://github.com/RyanAlberts/pmstack",
@@ -1271,6 +1358,36 @@
       "example": {
         "label": "Task showcase",
         "url": "https://github.com/myshell-ai/AIlice#cool-things-we-can-do"
+      }
+    },
+    {
+      "name": "Talon",
+      "github_id": "dylanneve1/talon",
+      "url": "https://github.com/dylanneve1/talon",
+      "slug": "talon",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#talon",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/talon/",
+      "description": "Multi-platform personal agent living in Telegram, Discord, Teams, and the terminal. The **harness** is a pluggable-backend loop (Claude, Kilo, OpenCode, Codex, OpenAI Agents) with full MCP tool access and persistent background agents (Goals, Heartbeat, Dream); the chat apps are shells.",
+      "category": "personal-agent-runtimes",
+      "category_title": "Personal agent runtimes",
+      "stars": 61,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (multi-platform, pluggable backends, MCP)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "open-source",
+      "tags": [
+        "mcp",
+        "memory",
+        "cli",
+        "typescript"
+      ],
+      "example": {
+        "label": "Multi-platform setup",
+        "url": "https://github.com/dylanneve1/talon#readme"
       }
     },
     {
@@ -2789,6 +2906,37 @@
       "example": {
         "label": "o3 prompt example",
         "url": "https://github.com/arcprize/arc-agi-benchmarking/blob/main/docs/examples/prompt_example_o3.md"
+      }
+    },
+    {
+      "name": "agent-qa",
+      "github_id": "vostride/agent-qa",
+      "url": "https://github.com/vostride/agent-qa",
+      "slug": "agent-qa",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#agent-qa",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/agent-qa/",
+      "description": "Self-improving QA **harness** for web and mobile apps: natural-language tests, memory-backed self-healing, dashboard/CLI, MCP and skills support, plus sandboxed hooks for production regression checks.",
+      "category": "evaluation",
+      "category_title": "Evaluation and benchmarking harnesses",
+      "stars": 156,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (web/mobile QA, memory, MCP)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "retry",
+      "recovery_rank": 2,
+      "license_signal": "restricted (FSL-1.1-ALv2)",
+      "tags": [
+        "mcp",
+        "memory",
+        "sandbox",
+        "cli",
+        "typescript"
+      ],
+      "example": {
+        "label": "Natural-language QA harness",
+        "url": "https://github.com/vostride/agent-qa#readme"
       }
     },
     {

@@ -72,6 +72,14 @@ projects:
     github_id: antl3x/ToolRAG
     category: "progressive-disclosure"
   # Coding agent products (IDEs, CLIs, full suites)
+  - name: oh-my-pi
+    github_id: can1357/oh-my-pi
+    labels: ["rust"]
+    category: "coding-agent-products"
+  - name: AgentBox
+    github_id: madarco/agentbox
+    labels: ["javascript"]
+    category: "coding-agent-products"
   - name: Cline
     github_id: cline/cline
     labels: ["javascript"]
@@ -106,6 +114,10 @@ projects:
     labels: ["python"]
     category: "coding-agent-products"
   # Coding harness configs and SDKs
+  - name: LoopTroop
+    github_id: looptroop-ai/LoopTroop
+    labels: ["javascript"]
+    category: "coding-harness-configs"
   - name: GStack
     github_id: garrytan/gstack
     labels: ["javascript"]
@@ -139,6 +151,10 @@ projects:
     github_id: anthropics/skills
     category: "coding-harness-configs"
   # Personal agent runtimes
+  - name: Talon
+    github_id: dylanneve1/talon
+    labels: ["javascript"]
+    category: "personal-agent-runtimes"
   - name: OpenClaw
     github_id: openclaw/openclaw
     labels: ["javascript"]
@@ -335,6 +351,10 @@ projects:
     labels: ["javascript"]
     category: "plugins-mcp-cli"
   # Evaluation and benchmarking harnesses
+  - name: agent-qa
+    github_id: vostride/agent-qa
+    labels: ["javascript"]
+    category: "evaluation"
   - name: ARC-AGI-2
     github_id: arcprize/ARC-AGI-2
     category: "evaluation"

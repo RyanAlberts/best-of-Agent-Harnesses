@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1320 880" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
 <rect width="1320" height="880" fill="#ffffff" rx="8"/>
 <text x="660.0" y="52" text-anchor="middle" font-size="30" font-weight="700" fill="#111827">The Agent Harness Landscape</text>
-<text x="660.0" y="80" text-anchor="middle" font-size="15" fill="#6b7280">106 hand-curated projects · GitHub stars vs. adoption surface area · stars captured 2026-07-09</text>
+<text x="660.0" y="80" text-anchor="middle" font-size="15" fill="#6b7280">111 hand-curated projects · GitHub stars vs. adoption surface area · stars captured 2026-07-09</text>
 <circle cx="80" cy="106" r="6" fill="#8b5cf6"/>
 <text x="91" y="110" font-size="12.5" fill="#374151">Progressive disclosure</text>
 <circle cx="262.2" cy="106" r="6" fill="#ef4444"/>
@@ -37,10 +37,10 @@
 <text x="231.2" y="800" text-anchor="middle" font-size="12" fill="#9ca3af">9 projects</text>
 <line x1="382.5" y1="168" x2="382.5" y2="750" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4 4"/>
 <text x="533.8" y="780" text-anchor="middle" font-size="15" font-weight="600" fill="#111827">mostly simple</text>
-<text x="533.8" y="800" text-anchor="middle" font-size="12" fill="#9ca3af">17 projects</text>
+<text x="533.8" y="800" text-anchor="middle" font-size="12" fill="#9ca3af">18 projects</text>
 <line x1="685.0" y1="168" x2="685.0" y2="750" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4 4"/>
 <text x="836.2" y="780" text-anchor="middle" font-size="15" font-weight="600" fill="#111827">slightly complex</text>
-<text x="836.2" y="800" text-anchor="middle" font-size="12" fill="#9ca3af">41 projects</text>
+<text x="836.2" y="800" text-anchor="middle" font-size="12" fill="#9ca3af">45 projects</text>
 <line x1="987.5" y1="168" x2="987.5" y2="750" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4 4"/>
 <text x="1138.8" y="780" text-anchor="middle" font-size="15" font-weight="600" fill="#111827">complex</text>
 <text x="1138.8" y="800" text-anchor="middle" font-size="12" fill="#9ca3af">39 projects</text>
@@ -54,11 +54,15 @@
 <circle cx="466.0" cy="628.8" r="4.5" fill="#10b981" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>puppeteer-real-browser-mcp — ⭐23</title></circle>
 <circle cx="598.0" cy="617.3" r="4.5" fill="#8b5cf6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>ToolRAG — ⭐29</title></circle>
 <circle cx="845.0" cy="587.5" r="4.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>SUPER — ⭐53</title></circle>
+<circle cx="495.0" cy="585.6" r="4.5" fill="#f59e0b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>LoopTroop — ⭐55</title></circle>
+<circle cx="811.5" cy="580.5" r="4.5" fill="#0ea5e9" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Talon — ⭐61</title></circle>
 <circle cx="489.2" cy="569.0" r="4.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>letta-evals — ⭐77</title></circle>
 <circle cx="1070.6" cy="562.3" r="4.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>AgencyBench — ⭐88</title></circle>
 <circle cx="1213.3" cy="534.6" r="4.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>VitaBench — ⭐154</title></circle>
+<circle cx="809.7" cy="534.0" r="4.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>agent-qa — ⭐156</title></circle>
 <circle cx="1139.9" cy="526.3" r="4.5" fill="#8b5cf6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>ToolGen — ⭐182</title></circle>
 <circle cx="523.7" cy="521.6" r="4.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>SuperAgentX — ⭐200</title></circle>
+<circle cx="887.6" cy="513.0" r="4.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>AgentBox — ⭐238</title></circle>
 <circle cx="1057.2" cy="499.6" r="4.5" fill="#ec4899" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>AgentRL — ⭐312</title></circle>
 <circle cx="295.1" cy="494.3" r="6.5" fill="#f59e0b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>AutoHarness — ⭐347</title></circle>
 <circle cx="559.5" cy="493.8" r="4.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>arc-agi-benchmarking — ⭐351</title></circle>
@@ -97,6 +101,7 @@
 <circle cx="830.1" cy="315.1" r="4.5" fill="#a16207" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>E2B — ⭐12.9k</title></circle>
 <circle cx="1222.0" cy="308.8" r="4.5" fill="#0ea5e9" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>OpenHarness (HKUDS) — ⭐14.7k</title></circle>
 <circle cx="1139.1" cy="308.4" r="4.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>botpress — ⭐14.8k</title></circle>
+<circle cx="821.7" cy="301.6" r="4.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>oh-my-pi — ⭐17k</title></circle>
 <circle cx="1130.6" cy="300.4" r="4.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Agent Lightning — ⭐17.4k</title></circle>
 <circle cx="784.9" cy="297.8" r="4.5" fill="#a16207" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>pydantic-ai — ⭐18.3k</title></circle>
 <circle cx="906.1" cy="297.6" r="4.5" fill="#0ea5e9" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Agent Zero — ⭐18.4k</title></circle>
