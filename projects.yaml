@@ -80,6 +80,10 @@ projects:
     github_id: madarco/agentbox
     labels: ["javascript"]
     category: "coding-agent-products"
+  - name: Proliferate
+    github_id: proliferate-ai/proliferate
+    labels: ["javascript"]
+    category: "coding-agent-products"
   - name: Cline
     github_id: cline/cline
     labels: ["javascript"]

@@ -10,7 +10,7 @@
 
 <p align="center">
     <a href="https://best-of.org" title="Best-of Badge"><img src="http://bit.ly/3o3EHNN"></a>
-    <a href="#contents" title="Project Count"><img src="https://img.shields.io/badge/projects-111-blue.svg?color=5ac4bf"></a>
+    <a href="#contents" title="Project Count"><img src="https://img.shields.io/badge/projects-112-blue.svg?color=5ac4bf"></a>
     <a href="https://ryanalberts.github.io/best-of-Agent-Harnesses/" title="Browse the searchable site"><img src="https://img.shields.io/badge/website-live-5ac4bf.svg"></a>
     <a href="#contribution" title="Contributions welcome"><img src="https://img.shields.io/badge/contributions-welcome-green.svg"></a>
     <a href="https://github.com/RyanAlberts/best-of-Agent-Harnesses/commits/main" title="Updates"><img src="https://img.shields.io/github/last-commit/RyanAlberts/best-of-Agent-Harnesses?color=green&label=updated"></a>
@@ -97,7 +97,7 @@ claude mcp add agent-harnesses -- uvx agent-harnesses-mcp
 - [For agents: harnesses.json, llms.txt, MCP server](#for-agents)
 - [FAQ](#faq)
 - [Progressive disclosure harnesses](#progressive-disclosure-harnesses) _6 projects_
-- [Coding agent products (IDEs, CLIs, full suites)](#coding-agent-products-ides-clis-full-suites) _11 projects_
+- [Coding agent products (IDEs, CLIs, full suites)](#coding-agent-products-ides-clis-full-suites) _12 projects_
 - [Coding harness configs and SDKs](#coding-harness-configs-and-sdks) _10 projects_
 - [Personal agent runtimes](#personal-agent-runtimes) _8 projects_
 - [Frameworks](#frameworks) _23 projects_
@@ -155,6 +155,7 @@ _Turnkey coding agents you install and run: IDE extensions, terminal CLIs, Docke
 | 9 | <a name="oh-my-pi"></a>[**oh-my-pi**](https://github.com/can1357/oh-my-pi) | [17k](https://github.com/can1357/oh-my-pi/stargazers) | Terminal coding agent (fork of Pi) that wires the IDE into the **harness**: hash-anchored edits, a 32-tool loop tuned per-model, LSP rename/references/diagnostics on every write, a real DAP debugger (lldb/dlv/debugpy), long-lived Python + Bun execution kernels that call back into the agent's tools, browser control, and 40+ providers (Claude/OpenAI/Gemini/local). ~55k-line Rust core. <sup>`browser` · `provider-agnostic` · `cli` · `ide` · `rust`</sup> | ✅ | slightly complex (terminal agent, LSP/DAP, multi-provider) | [LSP wired into edits](https://github.com/can1357/oh-my-pi/blob/main/docs/lsp-config.md) |
 | 10 | <a name="claw-code-agent"></a>[**claw-code-agent**](https://github.com/HarnessLab/claw-code-agent) | [526](https://github.com/HarnessLab/claw-code-agent/stargazers) | Python reimplementation of the Claude Code agent architecture with zero external dependencies; interactive chat, streaming, plugin runtime, nested agent delegation, cost tracking, MCP transport—portable harness without the Rust/TS toolchain. <sup>`mcp` · `rust` · `python` · `typescript`</sup> | ❓ | slightly complex (pure Python, plugin runtime) | [Quick Start guide](https://github.com/HarnessLab/claw-code-agent#-quick-start) |
 | 11 | <a name="agentbox"></a>[**AgentBox**](https://github.com/madarco/agentbox) | [238](https://github.com/madarco/agentbox/stargazers) | Runs multiple coding agents in parallel, each in its own sandboxed VM, locally or in the cloud, from one command. The **harness** contribution is the VM-per-agent isolation and fleet fan-out layer; whichever agent runs inside owns the loop. <sup>`sandbox` · `typescript`</sup> | ✅ | slightly complex (VM-per-agent sandbox, parallel fan-out) | [Parallel agents quick start](https://github.com/madarco/agentbox#readme) |
+| 12 | <a name="proliferate"></a>[**Proliferate**](https://github.com/proliferate-ai/proliferate) | [149](https://github.com/proliferate-ai/proliferate/stargazers) | Open-source AI IDE for Claude Code, Codex, OpenCode, and more. The **harness** contribution is the workspace/session orchestration layer: run multiple coding agents in parallel, locally or in the cloud, with isolated workspaces, reusable workflows, and shared team context. <sup>`multi-agent` · `sandbox` · `ide` · `typescript`</sup> | ✅ | complex (multi-agent workspace orchestration — product suite) | [Product README](https://github.com/proliferate-ai/proliferate#readme) |
 
 ## Coding harness configs and SDKs
 
@@ -366,7 +367,7 @@ Harnesses whose execution state persists across restarts: langgraph-bigtool, n8n
 
 ### How many of these agent harnesses are open source?
 
-97 of 111 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.
+98 of 112 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.
 
 ### What is an agent harness?
 

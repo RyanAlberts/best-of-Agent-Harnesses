@@ -9,7 +9,7 @@
     "feed_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/feed.json",
     "license": "CC-BY-SA-4.0",
     "stars_captured": "2026-07-09",
-    "project_count": 111,
+    "project_count": 112,
     "graveyard_count": 4,
     "tiers": [
       "super simple",
@@ -335,7 +335,7 @@
     {
       "kind": "derived",
       "q": "How many of these agent harnesses are open source?",
-      "a": "97 of 111 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
+      "a": "98 of 112 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
       "slug": "how-many-of-these-agent-harnesses-are-open-source"
     },
     {
@@ -880,6 +880,36 @@
       "example": {
         "label": "Parallel agents quick start",
         "url": "https://github.com/madarco/agentbox#readme"
+      }
+    },
+    {
+      "name": "Proliferate",
+      "github_id": "proliferate-ai/proliferate",
+      "url": "https://github.com/proliferate-ai/proliferate",
+      "slug": "proliferate",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#proliferate",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/proliferate/",
+      "description": "Open-source AI IDE for Claude Code, Codex, OpenCode, and more. The **harness** contribution is the workspace/session orchestration layer: run multiple coding agents in parallel, locally or in the cloud, with isolated workspaces, reusable workflows, and shared team context.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 149,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (multi-agent workspace orchestration — product suite)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "open-source",
+      "tags": [
+        "multi-agent",
+        "sandbox",
+        "ide",
+        "typescript"
+      ],
+      "example": {
+        "label": "Product README",
+        "url": "https://github.com/proliferate-ai/proliferate#readme"
       }
     },
     {
