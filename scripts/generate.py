@@ -675,6 +675,7 @@ CONTRIBUTORS: "list[tuple[str, str]]" = [
     ("claudiusthebot", "Talon"),
     ("liviux", "LoopTroop"),
     ("rishabhpoddar", "TeamCopilot, on the radar"),
+    ("ShukantPal", "Proliferate"),
 ]
 
 # ---------------------------------------------------------------------------

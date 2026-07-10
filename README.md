@@ -24,7 +24,7 @@
 
 A curated list is only as good as the people who stop mid-scroll to point at what it's missing. These folks did exactly that — found a gap, wrote it up, and made the list better than one maintainer ever could:
 
-[**@oldschoola**](https://github.com/oldschoola) — oh-my-pi · [**@madarco**](https://github.com/madarco) — AgentBox · [**@pranshuchittora**](https://github.com/pranshuchittora) — agent-qa · [**@claudiusthebot**](https://github.com/claudiusthebot) — Talon · [**@liviux**](https://github.com/liviux) — LoopTroop · [**@rishabhpoddar**](https://github.com/rishabhpoddar) — TeamCopilot, on the radar
+[**@oldschoola**](https://github.com/oldschoola) — oh-my-pi · [**@madarco**](https://github.com/madarco) — AgentBox · [**@pranshuchittora**](https://github.com/pranshuchittora) — agent-qa · [**@claudiusthebot**](https://github.com/claudiusthebot) — Talon · [**@liviux**](https://github.com/liviux) — LoopTroop · [**@rishabhpoddar**](https://github.com/rishabhpoddar) — TeamCopilot, on the radar · [**@ShukantPal**](https://github.com/ShukantPal) — Proliferate
 
 Accepted submissions land with **co-author credit** on the commit that ships them. Promising projects that are still early aren't turned away — they get pinned to [🔭 On the radar](#-on-the-radar) and graduate as they grow. [Add yours →](CONTRIBUTING.md)
 
