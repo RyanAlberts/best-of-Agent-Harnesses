@@ -170,6 +170,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("AgentBox", "madarco/agentbox",
                 "Runs multiple coding agents in parallel, each in its own sandboxed VM, locally or in the cloud, from one command. The **harness** contribution is the VM-per-agent isolation and fleet fan-out layer; whichever agent runs inside owns the loop.",
                 "slightly complex (VM-per-agent sandbox, parallel fan-out)", labels=["javascript"]),
+        Project("Proliferate", "proliferate-ai/proliferate",
+                "Open-source AI IDE for Claude Code, Codex, OpenCode, and more. The **harness** contribution is the workspace/session orchestration layer: run multiple coding agents in parallel, locally or in the cloud, with isolated workspaces, reusable workflows, and shared team context.",
+                "complex (multi-agent workspace orchestration — product suite)", labels=["javascript"]),
         Project("Cline", "cline/cline",
                 "VS Code extension whose **harness** is a plan-then-act loop with per-step human approval and cost transparency; the VS Code integration is the UI shell. Open-source counterweight to Cursor.",
                 "slightly complex (plan-then-act, approval gates)", labels=["javascript"]),
@@ -527,6 +530,7 @@ META: dict[str, tuple[int, str, str]] = {
     # coding-agent-products
     "can1357/oh-my-pi": (16958, "https://github.com/can1357/oh-my-pi/blob/main/docs/lsp-config.md", "LSP wired into edits"),
     "madarco/agentbox": (238, "https://github.com/madarco/agentbox#readme", "Parallel agents quick start"),
+    "proliferate-ai/proliferate": (149, "https://github.com/proliferate-ai/proliferate#readme", "Product README"),
     "cline/cline": (64486, "https://docs.cline.bot/features/plan-and-act", "Plan & Act mode"),
     "RooCodeInc/Roo-Code": (24310, "https://docs.roocode.com/features/custom-modes", "Custom modes guide"),
     "openai/codex": (96576, "https://developers.openai.com/codex/concepts/sandboxing", "Sandboxing concept"),
@@ -774,6 +778,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     # coding-agent-products
     "can1357/oh-my-pi": ("bounded", "resumable"),
     "madarco/agentbox": ("n/a", "n/a"),
+    "proliferate-ai/proliferate": ("bounded", "resumable"),
     "anomalyco/opencode": ("headless", "resumable"),
     "google-gemini/gemini-cli": ("bounded", "resumable"),
     "openai/codex": ("bounded", "resumable"),

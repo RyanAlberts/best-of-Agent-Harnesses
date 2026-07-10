@@ -1,6 +1,6 @@
 # Best of Agent Harnesses
 
-> Hand-curated, ranked list of 111 AI agent harnesses — the runtimes that close the loop between a stateless model and the outside world. 10 categories, a 4-tier adoption-surface rating (simplicity ↔ capability), capability tags, a license signal, and one concrete example link per project. Stars captured 2026-07-09.
+> Hand-curated, ranked list of 112 AI agent harnesses — the runtimes that close the loop between a stateless model and the outside world. 10 categories, a 4-tier adoption-surface rating (simplicity ↔ capability), capability tags, a license signal, and one concrete example link per project. Stars captured 2026-07-09.
 
 Maintained at https://github.com/RyanAlberts/best-of-Agent-Harnesses (CC-BY-SA-4.0).
 Structured data: https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/harnesses.json
@@ -74,7 +74,7 @@ Harnesses designed for unattended runs, batches, and fleets: opencode, OpenHands
 Harnesses whose execution state persists across restarts: langgraph-bigtool, n8n, langgraph, mastra, letta, deepagents, pydantic-ai, Cloudflare Agents.
 
 ### How many of these agent harnesses are open source?
-97 of 111 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.
+98 of 112 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.
 
 ### What is an agent harness?
 The runtime that turns a model into an agent: it decides what the model's reasoning is allowed to touch, and supplies the orchestration, tool wiring, memory, error recovery, and guardrails around per-turn inference.
@@ -96,7 +96,7 @@ Formats, runtimes, and patterns that reveal context, tools, or instructions in l
 - [ToolGen](https://github.com/Reason-Wang/ToolGen) — ⭐182, complex, autonomy: n/a, recovery: n/a, unknown: ICLR 2025: unified tool retrieval and calling via generation; 47k+ tools without context stuffing—retrieval and invocation in one generative step. [tool-discovery, python]
 - [ToolRAG](https://github.com/antl3x/ToolRAG) — ⭐29, mostly simple, autonomy: n/a, recovery: n/a, open-source: Semantic tool retrieval for LLMs; serves only the tools the user query demands (MCP-compatible), unlimited tool sets with zero context penalty. [mcp, tool-discovery]
 
-## Coding agent products (IDEs, CLIs, full suites) (11 projects)
+## Coding agent products (IDEs, CLIs, full suites) (12 projects)
 
 Turnkey coding agents you install and run: IDE extensions, terminal CLIs, Dockerized workspaces. Each entry notes which part is the harness (the agent loop, tool wiring, approval model) versus the UI shell (VS Code extension, TUI, browser client).
 
@@ -111,6 +111,7 @@ Turnkey coding agents you install and run: IDE extensions, terminal CLIs, Docker
 - [oh-my-pi](https://github.com/can1357/oh-my-pi) — ⭐17k, slightly complex, autonomy: bounded, recovery: resumable, open-source: Terminal coding agent (fork of Pi) that wires the IDE into the **harness**: hash-anchored edits, a 32-tool loop tuned per-model, LSP rename/references/diagnostics on every write, a real DAP debugger (lldb/dlv/debugpy), long-lived Python + Bun execution kernels that call back into the agent's tools, browser control, and 40+ providers (Claude/OpenAI/Gemini/local). ~55k-line Rust core. [browser, provider-agnostic, cli, ide, rust, python]
 - [claw-code-agent](https://github.com/HarnessLab/claw-code-agent) — ⭐526, slightly complex, autonomy: checkpoint-gated, recovery: none, unknown: Python reimplementation of the Claude Code agent architecture with zero external dependencies; interactive chat, streaming, plugin runtime, nested agent delegation, cost tracking, MCP transport—portable harness without the Rust/TS toolchain. [mcp, rust, python, typescript]
 - [AgentBox](https://github.com/madarco/agentbox) — ⭐238, slightly complex, autonomy: n/a, recovery: n/a, open-source: Runs multiple coding agents in parallel, each in its own sandboxed VM, locally or in the cloud, from one command. The **harness** contribution is the VM-per-agent isolation and fleet fan-out layer; whichever agent runs inside owns the loop. [sandbox, typescript]
+- [Proliferate](https://github.com/proliferate-ai/proliferate) — ⭐149, complex, autonomy: bounded, recovery: resumable, open-source: Open-source AI IDE for Claude Code, Codex, OpenCode, and more. The **harness** contribution is the workspace/session orchestration layer: run multiple coding agents in parallel, locally or in the cloud, with isolated workspaces, reusable workflows, and shared team context. [multi-agent, sandbox, ide, typescript]
 
 ## Coding harness configs and SDKs (10 projects)
 
