@@ -1231,17 +1231,11 @@ def generate_readme() -> str:
         f"    🌐 <strong><a href=\"{SITE_URL}\">Browse the searchable site</a></strong> — one page per harness, filter by capability, autonomy &amp; recovery.",
         "</p>",
         "",
-        "## 🧡 Thank you, contributors",
-        "",
-        "A curated list is only as good as the people who stop mid-scroll to point at what it's missing. "
-        "These folks did exactly that — found a gap, wrote it up, and made the list better than one "
-        "maintainer ever could:",
-        "",
-        " · ".join(f"[**@{login}**](https://github.com/{login}) — {what}" for login, what in CONTRIBUTORS),
-        "",
-        "Accepted submissions land with **co-author credit** on the commit that ships them. Promising "
-        "projects that are still early aren't turned away — they get pinned to [🔭 On the radar](#-on-the-radar) "
-        "and graduate as they grow. [Add yours →](CONTRIBUTING.md)",
+        "<p align=\"center\">",
+        "    🧡 <strong>A curated list is only as good as the people who stop mid-scroll to point at what it's missing.</strong><br>",
+        "    These folks did exactly that — found a gap, wrote it up, and made the list better than one maintainer ever could.",
+        f"    <a href=\"#-thank-you-contributors\"><strong>Meet the {len(CONTRIBUTORS)} →</strong></a>",
+        "</p>",
         "",
         "## What is an agent harness?",
         "",
@@ -1395,6 +1389,16 @@ def generate_readme() -> str:
         "- [**Anthropic – Effective harnesses for long-running agents**](https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents): Session bridging, feature lists, incremental progress, testing",
         "- [**Aakash Gupta (Medium) – 2026 is agent harnesses**](https://aakashgupta.medium.com/2025-was-agents-2026-is-agent-harnesses-heres-why-that-changes-everything-073e9877655e): Harness as moat, minimal intervention, progressive disclosure",
         "- [**LangChain**](https://python.langchain.com/), [**Anthropic**](https://docs.anthropic.com/), [**OpenAI**](https://platform.openai.com/docs): Official docs for major agent platforms",
+        "",
+        "## 🧡 Thank you, contributors",
+        "",
+        "The people who stopped mid-scroll, found a gap, and wrote it up — this list is better for each of them:",
+        "",
+        " · ".join(f"[**@{login}**](https://github.com/{login}) — {what}" for login, what in CONTRIBUTORS),
+        "",
+        "Accepted submissions land with **co-author credit** on the commit that ships them. Promising "
+        "projects that are still early aren't turned away — they get pinned to [🔭 On the radar](#-on-the-radar) "
+        "and graduate as they grow. [Add yours →](CONTRIBUTING.md)",
         "",
         "## Contribution",
         "",
