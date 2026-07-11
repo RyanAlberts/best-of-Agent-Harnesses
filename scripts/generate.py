@@ -167,6 +167,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("oh-my-pi", "can1357/oh-my-pi",
                 "Terminal coding agent (fork of Pi) that wires the IDE into the **harness**: hash-anchored edits, a 32-tool loop tuned per-model, LSP rename/references/diagnostics on every write, a real DAP debugger (lldb/dlv/debugpy), long-lived Python + Bun execution kernels that call back into the agent's tools, browser control, and 40+ providers (Claude/OpenAI/Gemini/local). ~55k-line Rust core.",
                 "slightly complex (terminal agent, LSP/DAP, multi-provider)", labels=["rust"]),
+        Project("pi", "earendil-works/pi",
+                "The upstream AI agent toolkit behind this list's oh-my-pi fork: a unified multi-provider LLM API, agent loop, and TUI shell providing the **harness** that oh-my-pi's Rust rewrite builds on.",
+                "slightly complex (multi-provider agent loop, TUI)", oss="❓"),
         Project("AgentBox", "madarco/agentbox",
                 "Runs multiple coding agents in parallel, each in its own sandboxed VM, locally or in the cloud, from one command. The **harness** contribution is the VM-per-agent isolation and fleet fan-out layer; whichever agent runs inside owns the loop.",
                 "slightly complex (VM-per-agent sandbox, parallel fan-out)", labels=["javascript"]),
@@ -241,6 +244,12 @@ PROJECTS: dict[str, list[Project]] = {
         Project("Anthropic Skills", "anthropics/skills",
                 "Anthropic's official Agent Skills repository: SKILL.md-based folders (instructions, scripts, resources) Claude dynamically loads on Claude Code, Claude.ai, and the API. The reference for progressive-disclosure skill packs in 2026.",
                 "mostly simple (official skills format)", link_name="Anthropic Skills"),
+        Project("agents-cli", "google/agents-cli",
+                "Google's official CLI and skill pack that layers agent-creation, evaluation, and deployment skills on top of whatever coding assistant you already run, rather than shipping its own agent loop—the **harness** as a config/skills add-on, not a new runtime.",
+                "mostly simple (skills/CLI layer, no new runtime)", oss="❓"),
+        Project("skillhub", "iflytek/skillhub",
+                "iFlytek's self-hosted registry for publishing, versioning, and governing agent skill packages—the **harness** config layer treated as an enterprise artifact store rather than a CLI or IDE shell.",
+                "mostly simple (skill registry/governance)", oss="❓"),
     ],
     "personal-agent-runtimes": [
         Project("Talon", "dylanneve1/talon",
@@ -340,6 +349,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("browser-use", "browser-use/browser-use",
                 "Python layer over Playwright: natural-language goals become browser actions—web-agent loop without hand-rolling MCP or a custom driver for every site.",
                 "slightly complex (LLM + browser, Playwright)", labels=["python"]),
+        Project("youtu-agent", "TencentCloudADP/youtu-agent",
+                "Tencent Cloud's agent framework: a minimal tool-calling **harness** designed to perform well with open-source models, positioned as a lighter alternative to heavier orchestration frameworks.",
+                "mostly simple (minimal loop, open-model focus)", oss="❓"),
     ],
     "multi-agent": [
         Project("openai-agents-python", "openai/openai-agents-python",
@@ -404,6 +416,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("puppeteer-real-browser-mcp", "withLinda/puppeteer-real-browser-mcp-server",
                 "Puppeteer MCP with real-browser and anti-detection; for agents that need to drive sites that block headless.",
                 "mostly simple (real browser, anti-detect)", oss="❓", labels=["javascript"]),
+        Project("agent-vault", "Infisical/agent-vault",
+                "Infisical's HTTP credential proxy that fronts secrets for Claude Code, OpenClaw, and other agent harnesses so the agent's tool calls never see raw credentials—a **harness** security layer, not an agent loop itself.",
+                "mostly simple (credential proxy)", oss="❓"),
     ],
     "evaluation": [
         Project("agent-qa", "vostride/agent-qa",
@@ -529,6 +544,7 @@ META: dict[str, tuple[int, str, str]] = {
     "antl3x/ToolRAG": (29, "https://github.com/antl3x/ToolRAG/blob/main/packages/%40antl3x-toolrag/README.md", "MCP server retrieval"),
     # coding-agent-products
     "can1357/oh-my-pi": (16958, "https://github.com/can1357/oh-my-pi/blob/main/docs/lsp-config.md", "LSP wired into edits"),
+    "earendil-works/pi": (69110, "https://github.com/earendil-works/pi#readme", "Project README"),
     "madarco/agentbox": (238, "https://github.com/madarco/agentbox#readme", "Parallel agents quick start"),
     "proliferate-ai/proliferate": (149, "https://github.com/proliferate-ai/proliferate#readme", "Product README"),
     "cline/cline": (64486, "https://docs.cline.bot/features/plan-and-act", "Plan & Act mode"),
@@ -554,6 +570,8 @@ META: dict[str, tuple[int, str, str]] = {
     "SWE-agent/SWE-agent": (19753, "https://github.com/SWE-agent/SWE-agent/blob/main/config/default.yaml", "Default agent config"),
     "HKUDS/OpenHarness": (14675, "https://github.com/HKUDS/OpenHarness/blob/main/.claude/skills/harness-eval/SKILL.md", "harness-eval skill"),
     "anthropics/skills": (159755, "https://github.com/anthropics/skills/blob/main/skills/docx/SKILL.md", "docx skill"),
+    "google/agents-cli": (4924, "https://github.com/google/agents-cli#readme", "Project README"),
+    "iflytek/skillhub": (3869, "https://github.com/iflytek/skillhub#readme", "Project README"),
     # frameworks
     "langchain-ai/langgraph": (36900, "https://github.com/langchain-ai/langgraph/blob/main/examples/customer-support/customer-support.ipynb", "Customer support agent"),
     "langchain-ai/langchain": (141392, "https://github.com/langchain-ai/langchain-academy/blob/main/module-1/agent.ipynb", "Build an agent notebook"),
@@ -589,6 +607,7 @@ META: dict[str, tuple[int, str, str]] = {
     "howl-anderson/agentsilex": (451, "https://github.com/howl-anderson/agentsilex/blob/main/demo/simple_agent.py", "Simple weather agent"),
     "FlowiseAI/Flowise": (54467, "https://github.com/FlowiseAI/Flowise/blob/main/packages/server/marketplaces/agentflowsv2/Agentic%20RAG.json", "Agentic RAG flow"),
     "browser-use/browser-use": (103932, "https://github.com/browser-use/browser-use/blob/main/examples/use-cases/shopping.py", "Grocery shopping agent"),
+    "TencentCloudADP/youtu-agent": (4580, "https://github.com/TencentCloudADP/youtu-agent#readme", "Project README"),
     # multi-agent
     "openai/openai-agents-python": (27761, "https://github.com/openai/openai-agents-python/blob/main/examples/customer_service/main.py", "Airline customer service handoffs"),
     "crewAIInc/crewAI": (55239, "https://github.com/crewAIInc/crewAI-examples/blob/main/crews/trip_planner/trip_agents.py", "Trip planner crew"),
@@ -608,6 +627,7 @@ META: dict[str, tuple[int, str, str]] = {
     "modelcontextprotocol/registry": (6998, "https://github.com/modelcontextprotocol/registry/blob/main/data/seed.json", "Registry seed entries"),
     "docker/mcp-gateway": (1474, "https://github.com/docker/mcp-gateway/blob/main/docs/mcp-gateway.md", "Gateway usage walkthrough"),
     "withLinda/puppeteer-real-browser-mcp-server": (23, "https://github.com/withLinda/puppeteer-real-browser-mcp-server/blob/main/README.md", "11 anti-detection tools"),
+    "Infisical/agent-vault": (1849, "https://github.com/Infisical/agent-vault#readme", "Project README"),
     # evaluation
     "vostride/agent-qa": (156, "https://github.com/vostride/agent-qa#readme", "Natural-language QA harness"),
     "arcprize/ARC-AGI-2": (722, "https://arcprize.org/leaderboard", "ARC Prize leaderboard"),
@@ -778,6 +798,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "antl3x/ToolRAG": ("n/a", "n/a"),
     # coding-agent-products
     "can1357/oh-my-pi": ("bounded", "resumable"),
+    "earendil-works/pi": ("bounded", "resumable"),
     "madarco/agentbox": ("n/a", "n/a"),
     "proliferate-ai/proliferate": ("bounded", "resumable"),
     "anomalyco/opencode": ("headless", "resumable"),
@@ -795,6 +816,8 @@ AXES: "dict[str, tuple[str, str]]" = {
     "obra/superpowers": ("n/a", "n/a"),
     "affaan-m/ECC": ("n/a", "n/a"),
     "anthropics/skills": ("n/a", "n/a"),
+    "google/agents-cli": ("n/a", "n/a"),
+    "iflytek/skillhub": ("n/a", "n/a"),
     "garrytan/gstack": ("n/a", "n/a"),
     "gsd-build/get-shit-done": ("bounded", "resumable"),
     "SWE-agent/SWE-agent": ("headless", "resumable"),
@@ -810,6 +833,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "langgenius/dify": ("headless", "retry"),
     "langchain-ai/langchain": ("bounded", "retry"),
     "browser-use/browser-use": ("bounded", "retry"),
+    "TencentCloudADP/youtu-agent": ("bounded", "retry"),
     "FlowiseAI/Flowise": ("headless", "retry"),
     "run-llama/llama_index": ("bounded", "retry"),
     "agno-agi/agno": ("bounded", "resumable"),
@@ -855,6 +879,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "modelcontextprotocol/registry": ("n/a", "n/a"),
     "docker/mcp-gateway": ("n/a", "n/a"),
     "withLinda/puppeteer-real-browser-mcp-server": ("n/a", "n/a"),
+    "Infisical/agent-vault": ("n/a", "n/a"),
     "ajhcs/Better-OpenCodeMCP": ("n/a", "n/a"),
     "RyanAlberts/agentlog": ("n/a", "n/a"),
     # evaluation
