@@ -27,9 +27,9 @@ def test_live_projects_excludes_all_graveyard_ids():
 
 
 def test_graveyard_count_matches_archived_reconciliation():
-    assert generate.graveyard_count() == len(
-        [g for g in generate.ARCHIVED if generate.is_graveyard(g)]
-    )
+    archived_graves = [g for g in generate.ARCHIVED if generate.is_graveyard(g)]
+    flagged_graves = [g for g in generate.INTEGRITY_FLAGGED if generate.is_graveyard(g)]
+    assert generate.graveyard_count() == len(archived_graves) + len(flagged_graves)
 
 
 def test_harnesses_json_projects_and_graveyard_are_disjoint():

@@ -30,9 +30,15 @@ categories:
   - category: "plugins-mcp-cli"
     title: "Plugins, MCPs, CLI tools"
     subtitle: "IDE plugins, concrete MCP servers, and CLI tools that give agents tools and context."
+  - category: "memory"
+    title: "Memory and state"
+    subtitle: "Persistent memory layers that give agents recall across turns and sessions: knowledge graphs, vector stores, and session-capture tools that survive a restart. The state a harness needs but rarely ships with."
   - category: "evaluation"
     title: "Evaluation and benchmarking harnesses"
     subtitle: "Agentic eval systems, reasoning benchmarks, and open agent benchmarks."
+  - category: "observability"
+    title: "Observability and eval-ops"
+    subtitle: "Tracing, monitoring, and production evaluation for live agent runs: capture every step, tool call, and token, then score and debug in the loop. Distinct from the fixed-task benchmarks above—this is what you run against your own traffic."
   - category: "research-task"
     title: "Research and task-specific harnesses"
     subtitle: "Deep research, document QA, and domain-specific agent loops."
@@ -129,9 +135,6 @@ projects:
     github_id: garrytan/gstack
     labels: ["javascript"]
     category: "coding-harness-configs"
-  - name: everything-claude-code
-    github_id: affaan-m/ECC
-    category: "coding-harness-configs"
   - name: superpowers
     github_id: obra/superpowers
     category: "coding-harness-configs"
@@ -156,6 +159,9 @@ projects:
     category: "coding-harness-configs"
   - name: Anthropic Skills
     github_id: anthropics/skills
+    category: "coding-harness-configs"
+  - name: Claude Code Subagents
+    github_id: wshobson/agents
     category: "coding-harness-configs"
   - name: agents-cli
     github_id: google/agents-cli
@@ -313,6 +319,10 @@ projects:
     github_id: FoundationAgents/MetaGPT
     labels: ["python"]
     category: "multi-agent"
+  - name: OpenManus
+    github_id: FoundationAgents/OpenManus
+    labels: ["python"]
+    category: "multi-agent"
   - name: ChatDev
     github_id: OpenBMB/ChatDev
     labels: ["python"]
@@ -329,9 +339,6 @@ projects:
   - name: agentlog
     github_id: RyanAlberts/agentlog
     labels: ["python"]
-    category: "plugins-mcp-cli"
-  - name: claude-mem
-    github_id: thedotmack/claude-mem
     category: "plugins-mcp-cli"
   - name: Better-OpenCodeMCP
     github_id: ajhcs/Better-OpenCodeMCP
@@ -369,6 +376,30 @@ projects:
   - name: agent-vault
     github_id: Infisical/agent-vault
     category: "plugins-mcp-cli"
+  - name: MCP Servers
+    github_id: modelcontextprotocol/servers
+    labels: ["javascript"]
+    category: "plugins-mcp-cli"
+  - name: Context7
+    github_id: upstash/context7
+    labels: ["javascript"]
+    category: "plugins-mcp-cli"
+  - name: Playwright MCP
+    github_id: microsoft/playwright-mcp
+    labels: ["javascript"]
+    category: "plugins-mcp-cli"
+  # Memory and state
+  - name: cognee
+    github_id: topoteretes/cognee
+    labels: ["python"]
+    category: "memory"
+  - name: Mem0
+    github_id: mem0ai/mem0
+    labels: ["python"]
+    category: "memory"
+  - name: claude-mem
+    github_id: thedotmack/claude-mem
+    category: "memory"
   # Evaluation and benchmarking harnesses
   - name: agent-qa
     github_id: vostride/agent-qa
@@ -433,6 +464,15 @@ projects:
     github_id: microsoft/agent-lightning
     labels: ["python"]
     category: "evaluation"
+  # Observability and eval-ops
+  - name: Langfuse
+    github_id: langfuse/langfuse
+    labels: ["javascript"]
+    category: "observability"
+  - name: MLflow
+    github_id: mlflow/mlflow
+    labels: ["python"]
+    category: "observability"
   # Research and task-specific harnesses
   - name: gpt-researcher
     github_id: assafelovic/gpt-researcher
@@ -476,10 +516,6 @@ projects:
     category: "libraries-sdks"
   - name: Composio
     github_id: ComposioHQ/composio
-    category: "libraries-sdks"
-  - name: Mem0
-    github_id: mem0ai/mem0
-    labels: ["python"]
     category: "libraries-sdks"
   - name: Cloudflare Agents
     github_id: cloudflare/agents

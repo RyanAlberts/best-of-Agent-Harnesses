@@ -29,7 +29,7 @@
   ],
   "mainEntity": {
     "@type": "ItemList",
-    "numberOfItems": 117,
+    "numberOfItems": 124,
     "itemListElement": [
       {
         "@type": "ListItem",
@@ -276,18 +276,6 @@
         "position": 21,
         "item": {
           "@type": "SoftwareApplication",
-          "name": "everything-claude-code",
-          "url": "https://github.com/affaan-m/ECC",
-          "description": "The breakout 2026 harness pack for Claude Code: 28 specialized subagents, 119 reusable skills, 60 slash commands, 34 rules, 20+ automated hooks. Ships a full \"AI engineering team\" as config.",
-          "applicationCategory": "DeveloperApplication",
-          "keywords": "multi-agent"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 22,
-        "item": {
-          "@type": "SoftwareApplication",
           "name": "Anthropic Skills",
           "url": "https://github.com/anthropics/skills",
           "description": "Anthropic's official Agent Skills repository: SKILL.md-based folders (instructions, scripts, resources) Claude dynamically loads on Claude Code, Claude.ai, and the API. The reference for progressive-disclosure skill packs in 2026.",
@@ -297,7 +285,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 23,
+        "position": 22,
         "item": {
           "@type": "SoftwareApplication",
           "name": "GStack",
@@ -305,6 +293,18 @@
           "description": "Garry Tan's Claude Code skill stack: 23 slash-command modes (CEO/eng/design review, QA, ship, browse, retro, …) that structure one assistant as a virtual engineering team. Daily driver while running YC.",
           "applicationCategory": "DeveloperApplication",
           "keywords": "typescript"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 23,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "wshobson/agents",
+          "url": "https://github.com/wshobson/agents",
+          "description": "Cross-harness marketplace of drop-in subagents and skills for Claude Code, Codex CLI, Cursor, OpenCode, and Copilot; specialized, production-ready agent definitions you install rather than hand-write.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "multi-agent, cli, ide"
         }
       },
       {
@@ -816,6 +816,18 @@
         "position": 66,
         "item": {
           "@type": "SoftwareApplication",
+          "name": "OpenManus",
+          "url": "https://github.com/FoundationAgents/OpenManus",
+          "description": "Open, invite-free general agent from the MetaGPT team: planning plus tool use over a multi-agent loop, aimed at reproducing Manus-style autonomous task completion on your own keys.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "multi-agent, python"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 67,
+        "item": {
+          "@type": "SoftwareApplication",
           "name": "crewAI",
           "url": "https://github.com/crewAIInc/crewAI",
           "description": "Role-based agents (roles, goals, backstories) in Crews; Flows add event-driven and hierarchical control for production.",
@@ -825,7 +837,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 67,
+        "position": 68,
         "item": {
           "@type": "SoftwareApplication",
           "name": "ChatDev",
@@ -837,7 +849,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 68,
+        "position": 69,
         "item": {
           "@type": "SoftwareApplication",
           "name": "openai-agents-python",
@@ -849,7 +861,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 69,
+        "position": 70,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Microsoft Agent Framework",
@@ -861,7 +873,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 70,
+        "position": 71,
         "item": {
           "@type": "SoftwareApplication",
           "name": "PraisonAI",
@@ -873,7 +885,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 71,
+        "position": 72,
         "item": {
           "@type": "SoftwareApplication",
           "name": "AgentRL",
@@ -885,19 +897,31 @@
       },
       {
         "@type": "ListItem",
-        "position": 72,
+        "position": 73,
         "item": {
           "@type": "SoftwareApplication",
-          "name": "claude-mem",
-          "url": "https://github.com/thedotmack/claude-mem",
-          "description": "Claude Code plugin that captures everything an agent does during a session, AI-compresses it (via claude-agent-sdk), and injects the relevant context into future sessions—session-to-session memory as a drop-in.",
+          "name": "MCP Servers",
+          "url": "https://github.com/modelcontextprotocol/servers",
+          "description": "The official reference collection of Model Context Protocol servers (filesystem, git, fetch, memory, time, and more)—the canonical, vetted toolset agents connect to, and the pattern every other MCP server is measured against.",
           "applicationCategory": "DeveloperApplication",
-          "keywords": "memory"
+          "keywords": "mcp, memory, typescript"
         }
       },
       {
         "@type": "ListItem",
-        "position": 73,
+        "position": 74,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "Context7",
+          "url": "https://github.com/upstash/context7",
+          "description": "MCP server that injects up-to-date, version-specific library docs into an agent's context on demand; kills the stale-training-data hallucinations that plague codegen.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "mcp, training, typescript"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 75,
         "item": {
           "@type": "SoftwareApplication",
           "name": "aider",
@@ -909,7 +933,19 @@
       },
       {
         "@type": "ListItem",
-        "position": 74,
+        "position": 76,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "Playwright MCP",
+          "url": "https://github.com/microsoft/playwright-mcp",
+          "description": "Playwright's official MCP server: structured browser control (navigate, click, fill, extract) via the accessibility tree rather than screenshots, so web tasks stay fast and deterministic.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "mcp, vision, browser, typescript"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 77,
         "item": {
           "@type": "SoftwareApplication",
           "name": "continue",
@@ -921,7 +957,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 75,
+        "position": 78,
         "item": {
           "@type": "SoftwareApplication",
           "name": "github-mcp-server",
@@ -933,7 +969,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 76,
+        "position": 79,
         "item": {
           "@type": "SoftwareApplication",
           "name": "MCP Python SDK",
@@ -945,7 +981,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 77,
+        "position": 80,
         "item": {
           "@type": "SoftwareApplication",
           "name": "MCP TypeScript SDK",
@@ -957,7 +993,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 78,
+        "position": 81,
         "item": {
           "@type": "SoftwareApplication",
           "name": "MCP Inspector",
@@ -969,7 +1005,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 79,
+        "position": 82,
         "item": {
           "@type": "SoftwareApplication",
           "name": "MCP Registry",
@@ -981,7 +1017,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 80,
+        "position": 83,
         "item": {
           "@type": "SoftwareApplication",
           "name": "agent-vault",
@@ -993,7 +1029,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 81,
+        "position": 84,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Docker MCP Gateway",
@@ -1005,7 +1041,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 82,
+        "position": 85,
         "item": {
           "@type": "SoftwareApplication",
           "name": "puppeteer-real-browser-mcp",
@@ -1017,7 +1053,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 83,
+        "position": 86,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Better-OpenCodeMCP",
@@ -1029,7 +1065,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 84,
+        "position": 87,
         "item": {
           "@type": "SoftwareApplication",
           "name": "agentlog",
@@ -1041,247 +1077,19 @@
       },
       {
         "@type": "ListItem",
-        "position": 85,
-        "item": {
-          "@type": "SoftwareApplication",
-          "name": "Agent Lightning",
-          "url": "https://github.com/microsoft/agent-lightning",
-          "description": "Microsoft's training-oriented harness: optimization loops for agent behavior—when you need to improve policies over rollouts, not only score a fixed prompt.",
-          "applicationCategory": "DeveloperApplication",
-          "keywords": "evals, training, python"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 86,
-        "item": {
-          "@type": "SoftwareApplication",
-          "name": "SWE-bench",
-          "url": "https://github.com/SWE-bench/SWE-bench",
-          "description": "LMs resolve real GitHub issues; Docker harness, instance IDs; standard for code-agent evals.",
-          "applicationCategory": "DeveloperApplication",
-          "keywords": "evals, sandbox, python"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 87,
-        "item": {
-          "@type": "SoftwareApplication",
-          "name": "AgentBench",
-          "url": "https://github.com/THUDM/AgentBench",
-          "description": "ICLR'24 benchmark: agents across AlfWorld, DB, knowledge graphs, OS, webshop; Docker Compose, function-calling interface.",
-          "applicationCategory": "DeveloperApplication",
-          "keywords": "evals, sandbox, rag, workflow, python"
-        }
-      },
-      {
-        "@type": "ListItem",
         "position": 88,
         "item": {
           "@type": "SoftwareApplication",
-          "name": "inspect_ai",
-          "url": "https://github.com/UKGovernmentBEIS/inspect_ai",
-          "description": "Inspect AI core: composable eval tasks, sandboxes, scorers, and multi-model runs; the framework behind inspect_evals, not just the task bundle.",
+          "name": "claude-mem",
+          "url": "https://github.com/thedotmack/claude-mem",
+          "description": "Claude Code plugin that captures everything an agent does during a session, AI-compresses it (via claude-agent-sdk), and injects the relevant context into future sessions—session-to-session memory as a drop-in.",
           "applicationCategory": "DeveloperApplication",
-          "keywords": "evals, sandbox, python"
+          "keywords": "memory"
         }
       },
       {
         "@type": "ListItem",
         "position": 89,
-        "item": {
-          "@type": "SoftwareApplication",
-          "name": "WebArena",
-          "url": "https://github.com/web-arena-x/webarena",
-          "description": "Realistic web env (e.g. e‑commerce, CMS, dev tools); 812 tasks; measures end-to-end web agent success.",
-          "applicationCategory": "DeveloperApplication",
-          "keywords": "python"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 90,
-        "item": {
-          "@type": "SoftwareApplication",
-          "name": "WebVoyager",
-          "url": "https://github.com/MinorJerry/WebVoyager",
-          "description": "End-to-end web agent with LMMs: screenshots + actions on real sites; benchmark on 15 sites, GPT-4V for automatic eval.",
-          "applicationCategory": "DeveloperApplication",
-          "keywords": "evals, vision"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 91,
-        "item": {
-          "@type": "SoftwareApplication",
-          "name": "ARC-AGI-2",
-          "url": "https://github.com/arcprize/ARC-AGI-2",
-          "description": "ARC Prize task set: grid-based abstraction/reasoning; public and private splits for generalization.",
-          "applicationCategory": "DeveloperApplication",
-          "keywords": ""
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 92,
-        "item": {
-          "@type": "SoftwareApplication",
-          "name": "SWE-Gym",
-          "url": "https://github.com/SWE-Gym/SWE-Gym",
-          "description": "Training and evaluation for SWE agents and verifiers (ICML 2025).",
-          "applicationCategory": "DeveloperApplication",
-          "keywords": "evals, training, python"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 93,
-        "item": {
-          "@type": "SoftwareApplication",
-          "name": "swe-smith",
-          "url": "https://github.com/SWE-bench/SWE-smith",
-          "description": "Data generation for SWE agents; 50k+ instances across 128 repos; used for SWE-agent-LM training.",
-          "applicationCategory": "DeveloperApplication",
-          "keywords": "training, python"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 94,
-        "item": {
-          "@type": "SoftwareApplication",
-          "name": "inspect_evals",
-          "url": "https://github.com/UKGovernmentBEIS/inspect_evals",
-          "description": "UK AISI/Arcadia/Vector: GAIA and other evals in Inspect AI; level 1–3, sandboxed, tool-calling solvers.",
-          "applicationCategory": "DeveloperApplication",
-          "keywords": "evals, sandbox"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 95,
-        "item": {
-          "@type": "SoftwareApplication",
-          "name": "arc-agi-benchmarking",
-          "url": "https://github.com/arcprize/arc-agi-benchmarking",
-          "description": "Runner for ARC-AGI: multi-provider (OpenAI, Anthropic, Gemini, etc.), rate limits, retries, and scoring.",
-          "applicationCategory": "DeveloperApplication",
-          "keywords": "evals, provider-agnostic, python"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 96,
-        "item": {
-          "@type": "SoftwareApplication",
-          "name": "agent-qa",
-          "url": "https://github.com/vostride/agent-qa",
-          "description": "Self-improving QA **harness** for web and mobile apps: natural-language tests, memory-backed self-healing, dashboard/CLI, MCP and skills support, plus sandboxed hooks for production regression checks.",
-          "applicationCategory": "DeveloperApplication",
-          "keywords": "mcp, memory, sandbox, cli, typescript"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 97,
-        "item": {
-          "@type": "SoftwareApplication",
-          "name": "VitaBench",
-          "url": "https://github.com/meituan-longcat/vitabench",
-          "description": "ICLR'26: 66 tools, real-world apps (delivery, travel, retail); 100 cross-scenario + 300 single-scenario tasks; adopted by Qwen/Seed.",
-          "applicationCategory": "DeveloperApplication",
-          "keywords": ""
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 98,
-        "item": {
-          "@type": "SoftwareApplication",
-          "name": "AgencyBench",
-          "url": "https://github.com/GAIR-NLP/AgencyBench",
-          "description": "Long-horizon agent benchmark: 32 scenarios, 138 tasks, ~1M tokens and ~90 tool calls; Docker sandbox and rubric-based + LLM judges.",
-          "applicationCategory": "DeveloperApplication",
-          "keywords": "evals, sandbox, python"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 99,
-        "item": {
-          "@type": "SoftwareApplication",
-          "name": "letta-evals",
-          "url": "https://github.com/letta-ai/letta-evals",
-          "description": "Eval harness for stateful Letta agents; configurable suites and grading (LLM or rule-based) so you can measure what you ship.",
-          "applicationCategory": "DeveloperApplication",
-          "keywords": "memory, python"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 100,
-        "item": {
-          "@type": "SoftwareApplication",
-          "name": "SUPER",
-          "url": "https://github.com/allenai/super-benchmark",
-          "description": "Agents that set up and run ML/NLP from GitHub repos; 45 expert problems, 152 masked tasks, 602 AutoGen tasks; Docker-based.",
-          "applicationCategory": "DeveloperApplication",
-          "keywords": "sandbox, python"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 101,
-        "item": {
-          "@type": "SoftwareApplication",
-          "name": "TRAIL",
-          "url": "https://github.com/patronus-ai/trail-benchmark",
-          "description": "Trace reasoning and agentic issue localization; 148 long-context traces, 841 errors, 20+ error types; Hugging Face dataset.",
-          "applicationCategory": "DeveloperApplication",
-          "keywords": ""
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 102,
-        "item": {
-          "@type": "SoftwareApplication",
-          "name": "gpt-researcher",
-          "url": "https://github.com/assafelovic/gpt-researcher",
-          "description": "Autonomous deep-research agent: web + local sources, citation-grounded reports, multi-agent and deep-research modes. The reference open-source research harness.",
-          "applicationCategory": "DeveloperApplication",
-          "keywords": "multi-agent, python"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 103,
-        "item": {
-          "@type": "SoftwareApplication",
-          "name": "openagents",
-          "url": "https://github.com/OpenAgentsInc/openagents",
-          "description": "Platform for autonomous agents and autopilot-style workflows; decentralized/Nostr-oriented (Pylon runtime, actively shipped in 2026).",
-          "applicationCategory": "DeveloperApplication",
-          "keywords": ""
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 104,
-        "item": {
-          "@type": "SoftwareApplication",
-          "name": "Daytona",
-          "url": "https://github.com/daytonaio/daytona",
-          "description": "Elastic dev environments for AI-generated code: workspaces, Git, previews—infra harness between \"the model wrote a patch\" and \"it ran in a real machine.\"",
-          "applicationCategory": "DeveloperApplication",
-          "keywords": "sandbox"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 105,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Mem0",
@@ -1293,7 +1101,283 @@
       },
       {
         "@type": "ListItem",
+        "position": 90,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "cognee",
+          "url": "https://github.com/topoteretes/cognee",
+          "description": "Open-source memory layer for agents: an extract–cognify–load pipeline that turns your data into a queryable knowledge graph plus vector store, so agents recall facts and relationships across sessions instead of re-reading context.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "memory, rag, workflow, python"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 91,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "Agent Lightning",
+          "url": "https://github.com/microsoft/agent-lightning",
+          "description": "Microsoft's training-oriented harness: optimization loops for agent behavior—when you need to improve policies over rollouts, not only score a fixed prompt.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "evals, training, python"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 92,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "SWE-bench",
+          "url": "https://github.com/SWE-bench/SWE-bench",
+          "description": "LMs resolve real GitHub issues; Docker harness, instance IDs; standard for code-agent evals.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "evals, sandbox, python"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 93,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "AgentBench",
+          "url": "https://github.com/THUDM/AgentBench",
+          "description": "ICLR'24 benchmark: agents across AlfWorld, DB, knowledge graphs, OS, webshop; Docker Compose, function-calling interface.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "evals, sandbox, rag, workflow, python"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 94,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "inspect_ai",
+          "url": "https://github.com/UKGovernmentBEIS/inspect_ai",
+          "description": "Inspect AI core: composable eval tasks, sandboxes, scorers, and multi-model runs; the framework behind inspect_evals, not just the task bundle.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "evals, sandbox, python"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 95,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "WebArena",
+          "url": "https://github.com/web-arena-x/webarena",
+          "description": "Realistic web env (e.g. e‑commerce, CMS, dev tools); 812 tasks; measures end-to-end web agent success.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "python"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 96,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "WebVoyager",
+          "url": "https://github.com/MinorJerry/WebVoyager",
+          "description": "End-to-end web agent with LMMs: screenshots + actions on real sites; benchmark on 15 sites, GPT-4V for automatic eval.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "evals, vision"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 97,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "ARC-AGI-2",
+          "url": "https://github.com/arcprize/ARC-AGI-2",
+          "description": "ARC Prize task set: grid-based abstraction/reasoning; public and private splits for generalization.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": ""
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 98,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "SWE-Gym",
+          "url": "https://github.com/SWE-Gym/SWE-Gym",
+          "description": "Training and evaluation for SWE agents and verifiers (ICML 2025).",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "evals, training, python"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 99,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "swe-smith",
+          "url": "https://github.com/SWE-bench/SWE-smith",
+          "description": "Data generation for SWE agents; 50k+ instances across 128 repos; used for SWE-agent-LM training.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "training, python"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 100,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "inspect_evals",
+          "url": "https://github.com/UKGovernmentBEIS/inspect_evals",
+          "description": "UK AISI/Arcadia/Vector: GAIA and other evals in Inspect AI; level 1–3, sandboxed, tool-calling solvers.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "evals, sandbox"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 101,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "arc-agi-benchmarking",
+          "url": "https://github.com/arcprize/arc-agi-benchmarking",
+          "description": "Runner for ARC-AGI: multi-provider (OpenAI, Anthropic, Gemini, etc.), rate limits, retries, and scoring.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "evals, provider-agnostic, python"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 102,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "agent-qa",
+          "url": "https://github.com/vostride/agent-qa",
+          "description": "Self-improving QA **harness** for web and mobile apps: natural-language tests, memory-backed self-healing, dashboard/CLI, MCP and skills support, plus sandboxed hooks for production regression checks.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "mcp, memory, sandbox, cli, typescript"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 103,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "VitaBench",
+          "url": "https://github.com/meituan-longcat/vitabench",
+          "description": "ICLR'26: 66 tools, real-world apps (delivery, travel, retail); 100 cross-scenario + 300 single-scenario tasks; adopted by Qwen/Seed.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": ""
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 104,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "AgencyBench",
+          "url": "https://github.com/GAIR-NLP/AgencyBench",
+          "description": "Long-horizon agent benchmark: 32 scenarios, 138 tasks, ~1M tokens and ~90 tool calls; Docker sandbox and rubric-based + LLM judges.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "evals, sandbox, python"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 105,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "letta-evals",
+          "url": "https://github.com/letta-ai/letta-evals",
+          "description": "Eval harness for stateful Letta agents; configurable suites and grading (LLM or rule-based) so you can measure what you ship.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "memory, python"
+        }
+      },
+      {
+        "@type": "ListItem",
         "position": 106,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "SUPER",
+          "url": "https://github.com/allenai/super-benchmark",
+          "description": "Agents that set up and run ML/NLP from GitHub repos; 45 expert problems, 152 masked tasks, 602 AutoGen tasks; Docker-based.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "sandbox, python"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 107,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "TRAIL",
+          "url": "https://github.com/patronus-ai/trail-benchmark",
+          "description": "Trace reasoning and agentic issue localization; 148 long-context traces, 841 errors, 20+ error types; Hugging Face dataset.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": ""
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 108,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "Langfuse",
+          "url": "https://github.com/langfuse/langfuse",
+          "description": "Open-source LLM engineering platform: full-trace observability, online and offline evals, prompt management, and cost metrics for agent runs in production—the monitoring layer most harnesses lack out of the box.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "evals, typescript"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 109,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "MLflow",
+          "url": "https://github.com/mlflow/mlflow",
+          "description": "Mature ML platform now covering GenAI: MLflow Tracing captures every agent step, tool call, and token, with built-in LLM evals and prompt versioning—observability for teams already standardized on MLflow.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "evals, python"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 110,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "gpt-researcher",
+          "url": "https://github.com/assafelovic/gpt-researcher",
+          "description": "Autonomous deep-research agent: web + local sources, citation-grounded reports, multi-agent and deep-research modes. The reference open-source research harness.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "multi-agent, python"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 111,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "openagents",
+          "url": "https://github.com/OpenAgentsInc/openagents",
+          "description": "Platform for autonomous agents and autopilot-style workflows; decentralized/Nostr-oriented (Pylon runtime, actively shipped in 2026).",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": ""
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 112,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "Daytona",
+          "url": "https://github.com/daytonaio/daytona",
+          "description": "Elastic dev environments for AI-generated code: workspaces, Git, previews—infra harness between \"the model wrote a patch\" and \"it ran in a real machine.\"",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "sandbox"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 113,
         "item": {
           "@type": "SoftwareApplication",
           "name": "LiteLLM",
@@ -1305,7 +1389,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 107,
+        "position": 114,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Composio",
@@ -1317,7 +1401,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 108,
+        "position": 115,
         "item": {
           "@type": "SoftwareApplication",
           "name": "smolagents",
@@ -1329,7 +1413,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 109,
+        "position": 116,
         "item": {
           "@type": "SoftwareApplication",
           "name": "deepagents",
@@ -1341,7 +1425,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 110,
+        "position": 117,
         "item": {
           "@type": "SoftwareApplication",
           "name": "vercel/ai",
@@ -1353,7 +1437,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 111,
+        "position": 118,
         "item": {
           "@type": "SoftwareApplication",
           "name": "pydantic-ai",
@@ -1365,7 +1449,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 112,
+        "position": 119,
         "item": {
           "@type": "SoftwareApplication",
           "name": "E2B",
@@ -1377,7 +1461,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 113,
+        "position": 120,
         "item": {
           "@type": "SoftwareApplication",
           "name": "strands-agents",
@@ -1389,7 +1473,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 114,
+        "position": 121,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Cloudflare Agents",
@@ -1401,7 +1485,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 115,
+        "position": 122,
         "item": {
           "@type": "SoftwareApplication",
           "name": "openai-agents-js",
@@ -1413,7 +1497,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 116,
+        "position": 123,
         "item": {
           "@type": "SoftwareApplication",
           "name": "open-harness",
@@ -1425,7 +1509,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 117,
+        "position": 124,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Community-curated agent lists",

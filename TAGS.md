@@ -1,13 +1,13 @@
 <!-- markdownlint-disable -->
 # Tags — cross-reference
 
-_Auto-generated from `scripts/generate.py`. 117 projects across 22 canonical tags. Edit projects in `generate.py` (not here) and rerun the script._
+_Auto-generated from `scripts/generate.py`. 124 projects across 22 canonical tags. Edit projects in `generate.py` (not here) and rerun the script._
 
 Tag chips appear next to each project in [README.md](README.md). This page lists every tag once with the projects that carry it, grouped by category and sorted by GitHub stars within each category.
 
 ## All tags
 
-[`mcp`](#mcp) (22) · [`memory`](#memory) (20) · [`multi-agent`](#multi-agent) (20) · [`evals`](#evals) (15) · [`voice`](#voice) (2) · [`vision`](#vision) (2) · [`browser`](#browser) (5) · [`sandbox`](#sandbox) (20) · [`low-code`](#low-code) (4) · [`rag`](#rag) (4) · [`tool-discovery`](#tool-discovery) (5) · [`training`](#training) (4) · [`workflow`](#workflow) (6) · [`typed`](#typed) (3) · [`local`](#local) (2) · [`provider-agnostic`](#provider-agnostic) (10) · [`cli`](#cli) (13) · [`ide`](#ide) (7) · [`tui`](#tui) (3) · [`rust`](#rust) (4) · [`python`](#python) (62) · [`typescript`](#typescript) (30)
+[`mcp`](#mcp) (25) · [`memory`](#memory) (22) · [`multi-agent`](#multi-agent) (21) · [`evals`](#evals) (17) · [`voice`](#voice) (2) · [`vision`](#vision) (3) · [`browser`](#browser) (6) · [`sandbox`](#sandbox) (20) · [`low-code`](#low-code) (4) · [`rag`](#rag) (5) · [`tool-discovery`](#tool-discovery) (5) · [`training`](#training) (5) · [`workflow`](#workflow) (7) · [`typed`](#typed) (3) · [`local`](#local) (2) · [`provider-agnostic`](#provider-agnostic) (10) · [`cli`](#cli) (14) · [`ide`](#ide) (8) · [`tui`](#tui) (3) · [`rust`](#rust) (4) · [`python`](#python) (65) · [`typescript`](#typescript) (34)
 
 ---
 
@@ -39,7 +39,10 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 **Plugins, MCPs, CLI tools**
 
+- [MCP Servers](https://github.com/modelcontextprotocol/servers) — ⭐88.3k — The official reference collection of Model Context Protocol servers (filesystem, git, fetch, memory, time, and more)—the canonical, vetted toolset agents connect to, and the pattern every other MCP server is measured against.
+- [Context7](https://github.com/upstash/context7) — ⭐58.9k — MCP server that injects up-to-date, version-specific library docs into an agent's context on demand; kills the stale-training-data hallucinations that plague codegen.
 - [aider](https://github.com/Aider-AI/aider) — ⭐47.2k — Git-aware CLI pair programmer; edits in-repo, supports multiple models and MCP so agents see version control and tools.
+- [Playwright MCP](https://github.com/microsoft/playwright-mcp) — ⭐35k — Playwright's official MCP server: structured browser control (navigate, click, fill, extract) via the accessibility tree rather than screenshots, so web tasks stay fast and deterministic.
 - [github-mcp-server](https://github.com/github/github-mcp-server) — ⭐31.3k — GitHub's official MCP server (Go): repos, issues, PRs, code search, Actions. Replaces the older community `cyanheads/github-mcp-server` as the canonical way to give agents GitHub access.
 - [MCP Python SDK](https://github.com/modelcontextprotocol/python-sdk) — ⭐23.6k — Official SDK to build and consume MCP servers/clients in Python; stdio and SSE transports.
 - [MCP TypeScript SDK](https://github.com/modelcontextprotocol/typescript-sdk) — ⭐12.8k — Official MCP implementation for Node/TS; reference for the protocol.
@@ -91,8 +94,14 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 **Plugins, MCPs, CLI tools**
 
-- [claude-mem](https://github.com/thedotmack/claude-mem) — ⭐86.6k — Claude Code plugin that captures everything an agent does during a session, AI-compresses it (via claude-agent-sdk), and injects the relevant context into future sessions—session-to-session memory as a drop-in.
+- [MCP Servers](https://github.com/modelcontextprotocol/servers) — ⭐88.3k — The official reference collection of Model Context Protocol servers (filesystem, git, fetch, memory, time, and more)—the canonical, vetted toolset agents connect to, and the pattern every other MCP server is measured against.
 - [agentlog](https://github.com/RyanAlberts/agentlog) — Persistent decision memory for any project: `remember`, `recall`, `reflect`. Single-file Python CLI that stores decisions as JSONL and uses Claude or Gemini to retrieve and synthesize patterns—Karpathy's LLM Wiki concept as a CLI.
+
+**Memory and state**
+
+- [claude-mem](https://github.com/thedotmack/claude-mem) — ⭐86.6k — Claude Code plugin that captures everything an agent does during a session, AI-compresses it (via claude-agent-sdk), and injects the relevant context into future sessions—session-to-session memory as a drop-in.
+- [Mem0](https://github.com/mem0ai/mem0) — ⭐60.5k — Universal memory layer for AI agents: stores user/org/session memory, retrieves on demand. Apache-2.0; the de-facto memory primitive paired with most harnesses in 2026.
+- [cognee](https://github.com/topoteretes/cognee) — ⭐27.6k — Open-source memory layer for agents: an extract–cognify–load pipeline that turns your data into a queryable knowledge graph plus vector store, so agents recall facts and relationships across sessions instead of re-reading context.
 
 **Evaluation and benchmarking harnesses**
 
@@ -101,7 +110,6 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 **Libraries and SDKs**
 
-- [Mem0](https://github.com/mem0ai/mem0) — ⭐60.5k — Universal memory layer for AI agents: stores user/org/session memory, retrieves on demand. Apache-2.0; the de-facto memory primitive paired with most harnesses in 2026.
 - [Cloudflare Agents](https://github.com/cloudflare/agents) — ⭐5.2k — Persistent, stateful agents on Durable Objects: state, websockets, scheduling, and AI chat baked in. The serverless answer to "where does the agent live?"
 
 ---
@@ -114,7 +122,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 **Coding harness configs and SDKs**
 
-- [everything-claude-code](https://github.com/affaan-m/ECC) — ⭐228k — The breakout 2026 harness pack for Claude Code: 28 specialized subagents, 119 reusable skills, 60 slash commands, 34 rules, 20+ automated hooks. Ships a full "AI engineering team" as config.
+- [wshobson/agents](https://github.com/wshobson/agents) — ⭐37.8k — Cross-harness marketplace of drop-in subagents and skills for Claude Code, Codex CLI, Cursor, OpenCode, and Copilot; specialized, production-ready agent definitions you install rather than hand-write.
 - [AutoHarness](https://github.com/aiming-lab/AutoHarness) — ⭐347 — Lightweight governance harness: wraps any LLM client in ~2 lines for automated harness engineering—6–14 step pipeline, YAML constitution, risk-pattern matching, session persistence with cost tracking, multi-agent profiles.
 
 **Personal agent runtimes**
@@ -135,6 +143,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 - [MetaGPT](https://github.com/FoundationAgents/MetaGPT) — ⭐69.3k — The "AI software company" multi-agent framework: role-played PM, architect, and engineer agents turn a one-line requirement into specs, designs, and code along an SOP assembly line. The landmark of the genre; development pace has slowed in 2026.
 - [autogen](https://github.com/microsoft/autogen) — ⭐59.6k — Conversable agents and group chats; code execution and human-in-the-loop; Microsoft origin, AG2 ecosystem.
+- [OpenManus](https://github.com/FoundationAgents/OpenManus) — ⭐57.1k — Open, invite-free general agent from the MetaGPT team: planning plus tool use over a multi-agent loop, aimed at reproducing Manus-style autonomous task completion on your own keys.
 - [Microsoft Agent Framework](https://github.com/microsoft/agent-framework) — ⭐12k — Microsoft's convergence of AutoGen and Semantic Kernel: build, orchestrate, and deploy agents and multi-agent workflows in Python and .NET, with graph-based workflows and checkpointing — the designated successor harness for both lines.
 - [PraisonAI](https://github.com/MervinPraison/PraisonAI) — ⭐8.4k — Autonomous multi-agent teams with a single entry point; emphasis on minimal config.
 
@@ -177,6 +186,11 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [arc-agi-benchmarking](https://github.com/arcprize/arc-agi-benchmarking) — ⭐351 — Runner for ARC-AGI: multi-provider (OpenAI, Anthropic, Gemini, etc.), rate limits, retries, and scoring.
 - [AgencyBench](https://github.com/GAIR-NLP/AgencyBench) — ⭐88 — Long-horizon agent benchmark: 32 scenarios, 138 tasks, ~1M tokens and ~90 tool calls; Docker sandbox and rubric-based + LLM judges.
 
+**Observability and eval-ops**
+
+- [Langfuse](https://github.com/langfuse/langfuse) — ⭐30.9k — Open-source LLM engineering platform: full-trace observability, online and offline evals, prompt management, and cost metrics for agent runs in production—the monitoring layer most harnesses lack out of the box.
+- [MLflow](https://github.com/mlflow/mlflow) — ⭐27k — Mature ML platform now covering GenAI: MLflow Tracing captures every agent step, tool call, and token, with built-in LLM evals and prompt versioning—observability for teams already standardized on MLflow.
+
 ---
 
 ## `voice`
@@ -196,6 +210,10 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 **Frameworks**
 
 - [R2R](https://github.com/SciPhi-AI/R2R) — ⭐7.9k — RAG-first: hybrid search, knowledge graphs, multimodal; the framework for "production RAG" when you care more about retrieval than chat UI.
+
+**Plugins, MCPs, CLI tools**
+
+- [Playwright MCP](https://github.com/microsoft/playwright-mcp) — ⭐35k — Playwright's official MCP server: structured browser control (navigate, click, fill, extract) via the accessibility tree rather than screenshots, so web tasks stay fast and deterministic.
 
 **Evaluation and benchmarking harnesses**
 
@@ -220,6 +238,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 **Plugins, MCPs, CLI tools**
 
+- [Playwright MCP](https://github.com/microsoft/playwright-mcp) — ⭐35k — Playwright's official MCP server: structured browser control (navigate, click, fill, extract) via the accessibility tree rather than screenshots, so web tasks stay fast and deterministic.
 - [puppeteer-real-browser-mcp](https://github.com/withLinda/puppeteer-real-browser-mcp-server) — ⭐23 — Puppeteer MCP with real-browser and anti-detection; for agents that need to drive sites that block headless.
 
 ---
@@ -285,6 +304,10 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [llama-index](https://github.com/run-llama/llama_index) — ⭐50.7k — Data-centric: indexing, RAG, and query engines; agent abstractions sit on top of your data pipelines.
 - [R2R](https://github.com/SciPhi-AI/R2R) — ⭐7.9k — RAG-first: hybrid search, knowledge graphs, multimodal; the framework for "production RAG" when you care more about retrieval than chat UI.
 
+**Memory and state**
+
+- [cognee](https://github.com/topoteretes/cognee) — ⭐27.6k — Open-source memory layer for agents: an extract–cognify–load pipeline that turns your data into a queryable knowledge graph plus vector store, so agents recall facts and relationships across sessions instead of re-reading context.
+
 **Evaluation and benchmarking harnesses**
 
 - [AgentBench](https://github.com/THUDM/AgentBench) — ⭐3.6k — ICLR'24 benchmark: agents across AlfWorld, DB, knowledge graphs, OS, webshop; Docker Compose, function-calling interface.
@@ -312,6 +335,10 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 - [AgentRL](https://github.com/THUDM/AgentRL) — ⭐312 — Multitask, multiturn RL for LLM agents; Ray-based scaling, rollout/actor workers—for teams that want to train agents, not just run them.
 
+**Plugins, MCPs, CLI tools**
+
+- [Context7](https://github.com/upstash/context7) — ⭐58.9k — MCP server that injects up-to-date, version-specific library docs into an agent's context on demand; kills the stale-training-data hallucinations that plague codegen.
+
 **Evaluation and benchmarking harnesses**
 
 - [Agent Lightning](https://github.com/microsoft/agent-lightning) — ⭐17.4k — Microsoft's training-oriented harness: optimization loops for agent behavior—when you need to improve policies over rollouts, not only score a fixed prompt.
@@ -335,6 +362,10 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 **Multi-agent and orchestration**
 
 - [Microsoft Agent Framework](https://github.com/microsoft/agent-framework) — ⭐12k — Microsoft's convergence of AutoGen and Semantic Kernel: build, orchestrate, and deploy agents and multi-agent workflows in Python and .NET, with graph-based workflows and checkpointing — the designated successor harness for both lines.
+
+**Memory and state**
+
+- [cognee](https://github.com/topoteretes/cognee) — ⭐27.6k — Open-source memory layer for agents: an extract–cognify–load pipeline that turns your data into a queryable knowledge graph plus vector store, so agents recall facts and relationships across sessions instead of re-reading context.
 
 **Evaluation and benchmarking harnesses**
 
@@ -409,6 +440,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 **Coding harness configs and SDKs**
 
+- [wshobson/agents](https://github.com/wshobson/agents) — ⭐37.8k — Cross-harness marketplace of drop-in subagents and skills for Claude Code, Codex CLI, Cursor, OpenCode, and Copilot; specialized, production-ready agent definitions you install rather than hand-write.
 - [agents-cli](https://github.com/google/agents-cli) — ⭐4.9k — Google's official CLI and skill pack that layers agent-creation, evaluation, and deployment skills on top of whatever coding assistant you already run, rather than shipping its own agent loop—the **harness** as a config/skills add-on, not a new runtime.
 - [skillhub](https://github.com/iflytek/skillhub) — ⭐3.9k — iFlytek's self-hosted registry for publishing, versioning, and governing agent skill packages—the **harness** config layer treated as an enterprise artifact store rather than a CLI or IDE shell.
 
@@ -443,6 +475,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 **Coding harness configs and SDKs**
 
 - [superpowers](https://github.com/obra/superpowers) — ⭐251k — Performance-oriented harness pack for Claude Code, Codex, OpenCode, Cursor: skills, instincts, memory, security, research-first workflows. Treats harness engineering itself as the performance lever.
+- [wshobson/agents](https://github.com/wshobson/agents) — ⭐37.8k — Cross-harness marketplace of drop-in subagents and skills for Claude Code, Codex CLI, Cursor, OpenCode, and Copilot; specialized, production-ready agent definitions you install rather than hand-write.
 - [skillhub](https://github.com/iflytek/skillhub) — ⭐3.9k — iFlytek's self-hosted registry for publishing, versioning, and governing agent skill packages—the **harness** config layer treated as an enterprise artifact store rather than a CLI or IDE shell.
 
 **Plugins, MCPs, CLI tools**
@@ -524,6 +557,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 - [MetaGPT](https://github.com/FoundationAgents/MetaGPT) — ⭐69.3k — The "AI software company" multi-agent framework: role-played PM, architect, and engineer agents turn a one-line requirement into specs, designs, and code along an SOP assembly line. The landmark of the genre; development pace has slowed in 2026.
 - [autogen](https://github.com/microsoft/autogen) — ⭐59.6k — Conversable agents and group chats; code execution and human-in-the-loop; Microsoft origin, AG2 ecosystem.
+- [OpenManus](https://github.com/FoundationAgents/OpenManus) — ⭐57.1k — Open, invite-free general agent from the MetaGPT team: planning plus tool use over a multi-agent loop, aimed at reproducing Manus-style autonomous task completion on your own keys.
 - [crewAI](https://github.com/crewAIInc/crewAI) — ⭐55.2k — Role-based agents (roles, goals, backstories) in Crews; Flows add event-driven and hierarchical control for production.
 - [ChatDev](https://github.com/OpenBMB/ChatDev) — ⭐33.7k — Multi-agent software-company simulation (CEO, CTO, programmer, tester) built on chat chains with communicative dehallucination; ChatDev 2.0 continues the line. MetaGPT's conversational sibling.
 - [openai-agents-python](https://github.com/openai/openai-agents-python) — ⭐27.8k — Handoffs, guardrails, and multi-LLM routing; minimal surface so you own the loop.
@@ -536,6 +570,11 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [aider](https://github.com/Aider-AI/aider) — ⭐47.2k — Git-aware CLI pair programmer; edits in-repo, supports multiple models and MCP so agents see version control and tools.
 - [MCP Python SDK](https://github.com/modelcontextprotocol/python-sdk) — ⭐23.6k — Official SDK to build and consume MCP servers/clients in Python; stdio and SSE transports.
 - [agentlog](https://github.com/RyanAlberts/agentlog) — Persistent decision memory for any project: `remember`, `recall`, `reflect`. Single-file Python CLI that stores decisions as JSONL and uses Claude or Gemini to retrieve and synthesize patterns—Karpathy's LLM Wiki concept as a CLI.
+
+**Memory and state**
+
+- [Mem0](https://github.com/mem0ai/mem0) — ⭐60.5k — Universal memory layer for AI agents: stores user/org/session memory, retrieves on demand. Apache-2.0; the de-facto memory primitive paired with most harnesses in 2026.
+- [cognee](https://github.com/topoteretes/cognee) — ⭐27.6k — Open-source memory layer for agents: an extract–cognify–load pipeline that turns your data into a queryable knowledge graph plus vector store, so agents recall facts and relationships across sessions instead of re-reading context.
 
 **Evaluation and benchmarking harnesses**
 
@@ -551,13 +590,16 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [letta-evals](https://github.com/letta-ai/letta-evals) — ⭐77 — Eval harness for stateful Letta agents; configurable suites and grading (LLM or rule-based) so you can measure what you ship.
 - [SUPER](https://github.com/allenai/super-benchmark) — ⭐53 — Agents that set up and run ML/NLP from GitHub repos; 45 expert problems, 152 masked tasks, 602 AutoGen tasks; Docker-based.
 
+**Observability and eval-ops**
+
+- [MLflow](https://github.com/mlflow/mlflow) — ⭐27k — Mature ML platform now covering GenAI: MLflow Tracing captures every agent step, tool call, and token, with built-in LLM evals and prompt versioning—observability for teams already standardized on MLflow.
+
 **Research and task-specific harnesses**
 
 - [gpt-researcher](https://github.com/assafelovic/gpt-researcher) — ⭐28.2k — Autonomous deep-research agent: web + local sources, citation-grounded reports, multi-agent and deep-research modes. The reference open-source research harness.
 
 **Libraries and SDKs**
 
-- [Mem0](https://github.com/mem0ai/mem0) — ⭐60.5k — Universal memory layer for AI agents: stores user/org/session memory, retrieves on demand. Apache-2.0; the de-facto memory primitive paired with most harnesses in 2026.
 - [LiteLLM](https://github.com/BerriAI/litellm) — ⭐53.1k — One interface to 100+ LLMs; routing, caching, budgets. Not an agent framework—the pipe every agent framework uses.
 - [Composio](https://github.com/ComposioHQ/composio) — ⭐29.1k — 1,000+ toolkits with auth, tool search, and a sandboxed workbench—drop-in tool layer so agents stop reinventing OAuth + integrations. Python and TypeScript.
 - [smolagents](https://github.com/huggingface/smolagents) — ⭐28.3k — Code-as-action agents: model outputs Python executed in sandbox (E2B, Modal, etc.); ~1k LOC core.
@@ -605,6 +647,9 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 **Plugins, MCPs, CLI tools**
 
+- [MCP Servers](https://github.com/modelcontextprotocol/servers) — ⭐88.3k — The official reference collection of Model Context Protocol servers (filesystem, git, fetch, memory, time, and more)—the canonical, vetted toolset agents connect to, and the pattern every other MCP server is measured against.
+- [Context7](https://github.com/upstash/context7) — ⭐58.9k — MCP server that injects up-to-date, version-specific library docs into an agent's context on demand; kills the stale-training-data hallucinations that plague codegen.
+- [Playwright MCP](https://github.com/microsoft/playwright-mcp) — ⭐35k — Playwright's official MCP server: structured browser control (navigate, click, fill, extract) via the accessibility tree rather than screenshots, so web tasks stay fast and deterministic.
 - [continue](https://github.com/continuedev/continue) — ⭐34.8k — Open-source IDE extension (VS Code, JetBrains); in-editor completion and chat with local or API models.
 - [MCP TypeScript SDK](https://github.com/modelcontextprotocol/typescript-sdk) — ⭐12.8k — Official MCP implementation for Node/TS; reference for the protocol.
 - [MCP Inspector](https://github.com/modelcontextprotocol/inspector) — ⭐10.3k — GUI to test and debug MCP servers; inspect tools, resources, and prompts.
@@ -614,6 +659,10 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 **Evaluation and benchmarking harnesses**
 
 - [agent-qa](https://github.com/vostride/agent-qa) — ⭐156 — Self-improving QA **harness** for web and mobile apps: natural-language tests, memory-backed self-healing, dashboard/CLI, MCP and skills support, plus sandboxed hooks for production regression checks.
+
+**Observability and eval-ops**
+
+- [Langfuse](https://github.com/langfuse/langfuse) — ⭐30.9k — Open-source LLM engineering platform: full-trace observability, online and offline evals, prompt management, and cost metrics for agent runs in production—the monitoring layer most harnesses lack out of the box.
 
 **Libraries and SDKs**
 
@@ -678,6 +727,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 - [MetaGPT](https://github.com/FoundationAgents/MetaGPT) — ⭐69.3k — The "AI software company" multi-agent framework: role-played PM, architect, and engineer agents turn a one-line requirement into specs, designs, and code along an SOP assembly line. The landmark of the genre; development pace has slowed in 2026.
 - [autogen](https://github.com/microsoft/autogen) — ⭐59.6k — Conversable agents and group chats; code execution and human-in-the-loop; Microsoft origin, AG2 ecosystem.
+- [OpenManus](https://github.com/FoundationAgents/OpenManus) — ⭐57.1k — Open, invite-free general agent from the MetaGPT team: planning plus tool use over a multi-agent loop, aimed at reproducing Manus-style autonomous task completion on your own keys.
 - [crewAI](https://github.com/crewAIInc/crewAI) — ⭐55.2k — Role-based agents (roles, goals, backstories) in Crews; Flows add event-driven and hierarchical control for production.
 - [ChatDev](https://github.com/OpenBMB/ChatDev) — ⭐33.7k — Multi-agent software-company simulation (CEO, CTO, programmer, tester) built on chat chains with communicative dehallucination; ChatDev 2.0 continues the line. MetaGPT's conversational sibling.
 - [openai-agents-python](https://github.com/openai/openai-agents-python) — ⭐27.8k — Handoffs, guardrails, and multi-LLM routing; minimal surface so you own the loop.
@@ -690,6 +740,11 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [aider](https://github.com/Aider-AI/aider) — ⭐47.2k — Git-aware CLI pair programmer; edits in-repo, supports multiple models and MCP so agents see version control and tools.
 - [MCP Python SDK](https://github.com/modelcontextprotocol/python-sdk) — ⭐23.6k — Official SDK to build and consume MCP servers/clients in Python; stdio and SSE transports.
 - [agentlog](https://github.com/RyanAlberts/agentlog) — Persistent decision memory for any project: `remember`, `recall`, `reflect`. Single-file Python CLI that stores decisions as JSONL and uses Claude or Gemini to retrieve and synthesize patterns—Karpathy's LLM Wiki concept as a CLI.
+
+**Memory and state**
+
+- [Mem0](https://github.com/mem0ai/mem0) — ⭐60.5k — Universal memory layer for AI agents: stores user/org/session memory, retrieves on demand. Apache-2.0; the de-facto memory primitive paired with most harnesses in 2026.
+- [cognee](https://github.com/topoteretes/cognee) — ⭐27.6k — Open-source memory layer for agents: an extract–cognify–load pipeline that turns your data into a queryable knowledge graph plus vector store, so agents recall facts and relationships across sessions instead of re-reading context.
 
 **Evaluation and benchmarking harnesses**
 
@@ -705,13 +760,16 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [letta-evals](https://github.com/letta-ai/letta-evals) — ⭐77 — Eval harness for stateful Letta agents; configurable suites and grading (LLM or rule-based) so you can measure what you ship.
 - [SUPER](https://github.com/allenai/super-benchmark) — ⭐53 — Agents that set up and run ML/NLP from GitHub repos; 45 expert problems, 152 masked tasks, 602 AutoGen tasks; Docker-based.
 
+**Observability and eval-ops**
+
+- [MLflow](https://github.com/mlflow/mlflow) — ⭐27k — Mature ML platform now covering GenAI: MLflow Tracing captures every agent step, tool call, and token, with built-in LLM evals and prompt versioning—observability for teams already standardized on MLflow.
+
 **Research and task-specific harnesses**
 
 - [gpt-researcher](https://github.com/assafelovic/gpt-researcher) — ⭐28.2k — Autonomous deep-research agent: web + local sources, citation-grounded reports, multi-agent and deep-research modes. The reference open-source research harness.
 
 **Libraries and SDKs**
 
-- [Mem0](https://github.com/mem0ai/mem0) — ⭐60.5k — Universal memory layer for AI agents: stores user/org/session memory, retrieves on demand. Apache-2.0; the de-facto memory primitive paired with most harnesses in 2026.
 - [LiteLLM](https://github.com/BerriAI/litellm) — ⭐53.1k — One interface to 100+ LLMs; routing, caching, budgets. Not an agent framework—the pipe every agent framework uses.
 - [Composio](https://github.com/ComposioHQ/composio) — ⭐29.1k — 1,000+ toolkits with auth, tool search, and a sandboxed workbench—drop-in tool layer so agents stop reinventing OAuth + integrations. Python and TypeScript.
 - [smolagents](https://github.com/huggingface/smolagents) — ⭐28.3k — Code-as-action agents: model outputs Python executed in sandbox (E2B, Modal, etc.); ~1k LOC core.
@@ -759,6 +817,9 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 **Plugins, MCPs, CLI tools**
 
+- [MCP Servers](https://github.com/modelcontextprotocol/servers) — ⭐88.3k — The official reference collection of Model Context Protocol servers (filesystem, git, fetch, memory, time, and more)—the canonical, vetted toolset agents connect to, and the pattern every other MCP server is measured against.
+- [Context7](https://github.com/upstash/context7) — ⭐58.9k — MCP server that injects up-to-date, version-specific library docs into an agent's context on demand; kills the stale-training-data hallucinations that plague codegen.
+- [Playwright MCP](https://github.com/microsoft/playwright-mcp) — ⭐35k — Playwright's official MCP server: structured browser control (navigate, click, fill, extract) via the accessibility tree rather than screenshots, so web tasks stay fast and deterministic.
 - [continue](https://github.com/continuedev/continue) — ⭐34.8k — Open-source IDE extension (VS Code, JetBrains); in-editor completion and chat with local or API models.
 - [MCP TypeScript SDK](https://github.com/modelcontextprotocol/typescript-sdk) — ⭐12.8k — Official MCP implementation for Node/TS; reference for the protocol.
 - [MCP Inspector](https://github.com/modelcontextprotocol/inspector) — ⭐10.3k — GUI to test and debug MCP servers; inspect tools, resources, and prompts.
@@ -768,6 +829,10 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 **Evaluation and benchmarking harnesses**
 
 - [agent-qa](https://github.com/vostride/agent-qa) — ⭐156 — Self-improving QA **harness** for web and mobile apps: natural-language tests, memory-backed self-healing, dashboard/CLI, MCP and skills support, plus sandboxed hooks for production regression checks.
+
+**Observability and eval-ops**
+
+- [Langfuse](https://github.com/langfuse/langfuse) — ⭐30.9k — Open-source LLM engineering platform: full-trace observability, online and offline evals, prompt management, and cost metrics for agent runs in production—the monitoring layer most harnesses lack out of the box.
 
 **Libraries and SDKs**
 
