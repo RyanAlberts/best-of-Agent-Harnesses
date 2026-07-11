@@ -76,6 +76,9 @@ projects:
     github_id: can1357/oh-my-pi
     labels: ["rust"]
     category: "coding-agent-products"
+  - name: pi
+    github_id: earendil-works/pi
+    category: "coding-agent-products"
   - name: AgentBox
     github_id: madarco/agentbox
     labels: ["javascript"]
@@ -153,6 +156,12 @@ projects:
     category: "coding-harness-configs"
   - name: Anthropic Skills
     github_id: anthropics/skills
+    category: "coding-harness-configs"
+  - name: agents-cli
+    github_id: google/agents-cli
+    category: "coding-harness-configs"
+  - name: skillhub
+    github_id: iflytek/skillhub
     category: "coding-harness-configs"
   # Personal agent runtimes
   - name: Talon
@@ -276,6 +285,9 @@ projects:
     github_id: browser-use/browser-use
     labels: ["python"]
     category: "frameworks"
+  - name: youtu-agent
+    github_id: TencentCloudADP/youtu-agent
+    category: "frameworks"
   # Multi-agent and orchestration
   - name: openai-agents-python
     github_id: openai/openai-agents-python
@@ -353,6 +365,9 @@ projects:
   - name: puppeteer-real-browser-mcp
     github_id: withLinda/puppeteer-real-browser-mcp-server
     labels: ["javascript"]
+    category: "plugins-mcp-cli"
+  - name: agent-vault
+    github_id: Infisical/agent-vault
     category: "plugins-mcp-cli"
   # Evaluation and benchmarking harnesses
   - name: agent-qa

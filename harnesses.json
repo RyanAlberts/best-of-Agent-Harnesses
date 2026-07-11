@@ -9,7 +9,7 @@
     "feed_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/feed.json",
     "license": "CC-BY-SA-4.0",
     "stars_captured": "2026-07-09",
-    "project_count": 112,
+    "project_count": 117,
     "graveyard_count": 4,
     "tiers": [
       "super simple",
@@ -335,7 +335,7 @@
     {
       "kind": "derived",
       "q": "How many of these agent harnesses are open source?",
-      "a": "98 of 112 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
+      "a": "98 of 117 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
       "slug": "how-many-of-these-agent-harnesses-are-open-source"
     },
     {
@@ -677,6 +677,35 @@
       "example": {
         "label": "Repository microagents",
         "url": "https://docs.all-hands.dev/usage/prompting/microagents-repo"
+      }
+    },
+    {
+      "name": "pi",
+      "github_id": "earendil-works/pi",
+      "url": "https://github.com/earendil-works/pi",
+      "slug": "pi",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#pi",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/pi/",
+      "description": "The upstream AI agent toolkit behind this list's oh-my-pi fork: a unified multi-provider LLM API, agent loop, and TUI shell providing the **harness** that oh-my-pi's Rust rewrite builds on.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 69110,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (multi-provider agent loop, TUI)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "unknown",
+      "tags": [
+        "provider-agnostic",
+        "tui",
+        "rust"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/earendil-works/pi#readme"
       }
     },
     {
@@ -1076,6 +1105,63 @@
       "example": {
         "label": "Research agent demo",
         "url": "https://github.com/anthropics/claude-agent-sdk-demos/blob/main/research-agent/research_agent/agent.py"
+      }
+    },
+    {
+      "name": "agents-cli",
+      "github_id": "google/agents-cli",
+      "url": "https://github.com/google/agents-cli",
+      "slug": "agents-cli",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#agents-cli",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/agents-cli/",
+      "description": "Google's official CLI and skill pack that layers agent-creation, evaluation, and deployment skills on top of whatever coding assistant you already run, rather than shipping its own agent loop—the **harness** as a config/skills add-on, not a new runtime.",
+      "category": "coding-harness-configs",
+      "category_title": "Coding harness configs and SDKs",
+      "stars": 4924,
+      "tier": "mostly simple",
+      "tier_rank": 2,
+      "axis": "mostly simple (skills/CLI layer, no new runtime)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "unknown",
+      "tags": [
+        "evals",
+        "cli"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/google/agents-cli#readme"
+      }
+    },
+    {
+      "name": "skillhub",
+      "github_id": "iflytek/skillhub",
+      "url": "https://github.com/iflytek/skillhub",
+      "slug": "skillhub",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#skillhub",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/skillhub/",
+      "description": "iFlytek's self-hosted registry for publishing, versioning, and governing agent skill packages—the **harness** config layer treated as an enterprise artifact store rather than a CLI or IDE shell.",
+      "category": "coding-harness-configs",
+      "category_title": "Coding harness configs and SDKs",
+      "stars": 3869,
+      "tier": "mostly simple",
+      "tier_rank": 2,
+      "axis": "mostly simple (skill registry/governance)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "unknown",
+      "tags": [
+        "local",
+        "cli",
+        "ide"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/iflytek/skillhub#readme"
       }
     },
     {
@@ -1958,6 +2044,31 @@
       }
     },
     {
+      "name": "youtu-agent",
+      "github_id": "TencentCloudADP/youtu-agent",
+      "url": "https://github.com/TencentCloudADP/youtu-agent",
+      "slug": "youtu-agent",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#youtu-agent",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/youtu-agent/",
+      "description": "Tencent Cloud's agent framework: a minimal tool-calling **harness** designed to perform well with open-source models, positioned as a lighter alternative to heavier orchestration frameworks.",
+      "category": "frameworks",
+      "category_title": "Frameworks",
+      "stars": 4580,
+      "tier": "mostly simple",
+      "tier_rank": 2,
+      "axis": "mostly simple (minimal loop, open-model focus)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "retry",
+      "recovery_rank": 2,
+      "license_signal": "unknown",
+      "tags": [],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/TencentCloudADP/youtu-agent#readme"
+      }
+    },
+    {
       "name": "Bee Agent Framework",
       "github_id": "i-am-bee/beeai-framework",
       "url": "https://github.com/i-am-bee/beeai-framework",
@@ -2509,6 +2620,31 @@
       "example": {
         "label": "Registry seed entries",
         "url": "https://github.com/modelcontextprotocol/registry/blob/main/data/seed.json"
+      }
+    },
+    {
+      "name": "agent-vault",
+      "github_id": "Infisical/agent-vault",
+      "url": "https://github.com/Infisical/agent-vault",
+      "slug": "agent-vault",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#agent-vault",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/agent-vault/",
+      "description": "Infisical's HTTP credential proxy that fronts secrets for Claude Code, OpenClaw, and other agent harnesses so the agent's tool calls never see raw credentials—a **harness** security layer, not an agent loop itself.",
+      "category": "plugins-mcp-cli",
+      "category_title": "Plugins, MCPs, CLI tools",
+      "stars": 1849,
+      "tier": "mostly simple",
+      "tier_rank": 2,
+      "axis": "mostly simple (credential proxy)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "unknown",
+      "tags": [],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/Infisical/agent-vault#readme"
       }
     },
     {
