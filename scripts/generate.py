@@ -131,8 +131,12 @@ CATEGORIES = [
      "Harnesses and patterns for multi-agent coordination and handoffs."),
     ("plugins-mcp-cli", "Plugins, MCPs, CLI tools",
      "IDE plugins, concrete MCP servers, and CLI tools that give agents tools and context."),
+    ("memory", "Memory and state",
+     "Persistent memory layers that give agents recall across turns and sessions: knowledge graphs, vector stores, and session-capture tools that survive a restart. The state a harness needs but rarely ships with."),
     ("evaluation", "Evaluation and benchmarking harnesses",
      "Agentic eval systems, reasoning benchmarks, and open agent benchmarks."),
+    ("observability", "Observability and eval-ops",
+     "Tracing, monitoring, and production evaluation for live agent runs: capture every step, tool call, and token, then score and debug in the loop. Distinct from the fixed-task benchmarks above—this is what you run against your own traffic."),
     ("research-task", "Research and task-specific harnesses",
      "Deep research, document QA, and domain-specific agent loops."),
     ("libraries-sdks", "Libraries and SDKs",
@@ -244,6 +248,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("Anthropic Skills", "anthropics/skills",
                 "Anthropic's official Agent Skills repository: SKILL.md-based folders (instructions, scripts, resources) Claude dynamically loads on Claude Code, Claude.ai, and the API. The reference for progressive-disclosure skill packs in 2026.",
                 "mostly simple (official skills format)", link_name="Anthropic Skills"),
+        Project("Claude Code Subagents", "wshobson/agents",
+                "Cross-harness marketplace of drop-in subagents and skills for Claude Code, Codex CLI, Cursor, OpenCode, and Copilot; specialized, production-ready agent definitions you install rather than hand-write.",
+                "super simple (drop-in agent packs)", link_name="wshobson/agents"),
         Project("agents-cli", "google/agents-cli",
                 "Google's official CLI and skill pack that layers agent-creation, evaluation, and deployment skills on top of whatever coding assistant you already run, rather than shipping its own agent loop—the **harness** as a config/skills add-on, not a new runtime.",
                 "mostly simple (skills/CLI layer, no new runtime)", oss="❓"),
@@ -372,6 +379,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("MetaGPT", "FoundationAgents/MetaGPT",
                 "The \"AI software company\" multi-agent framework: role-played PM, architect, and engineer agents turn a one-line requirement into specs, designs, and code along an SOP assembly line. The landmark of the genre; development pace has slowed in 2026.",
                 "complex (role pipeline, SOPs — product suite)", labels=["python"]),
+        Project("OpenManus", "FoundationAgents/OpenManus",
+                "Open, invite-free general agent from the MetaGPT team: planning plus tool use over a multi-agent loop, aimed at reproducing Manus-style autonomous task completion on your own keys.",
+                "complex (multi-agent + tools)", labels=["python"]),
         Project("ChatDev", "OpenBMB/ChatDev",
                 "Multi-agent software-company simulation (CEO, CTO, programmer, tester) built on chat chains with communicative dehallucination; ChatDev 2.0 continues the line. MetaGPT's conversational sibling.",
                 "slightly complex (chat-chain simulation)", labels=["python"]),
@@ -386,9 +396,6 @@ PROJECTS: dict[str, list[Project]] = {
         Project("agentlog", "RyanAlberts/agentlog",
                 "Persistent decision memory for any project: `remember`, `recall`, `reflect`. Single-file Python CLI that stores decisions as JSONL and uses Claude or Gemini to retrieve and synthesize patterns—Karpathy's LLM Wiki concept as a CLI.",
                 "super simple (one file, three commands)", labels=["python"]),
-        Project("claude-mem", "thedotmack/claude-mem",
-                "Claude Code plugin that captures everything an agent does during a session, AI-compresses it (via claude-agent-sdk), and injects the relevant context into future sessions—session-to-session memory as a drop-in.",
-                "slightly complex (session capture + compression)"),
         Project("Better-OpenCodeMCP", "ajhcs/Better-OpenCodeMCP",
                 "MCP server for OpenCode/Crush: async task execution, model bridging (e.g. Claude→Gemini), process pooling.",
                 "mostly simple (MCP server, model bridging)", labels=["javascript"]),
@@ -419,6 +426,26 @@ PROJECTS: dict[str, list[Project]] = {
         Project("agent-vault", "Infisical/agent-vault",
                 "Infisical's HTTP credential proxy that fronts secrets for Claude Code, OpenClaw, and other agent harnesses so the agent's tool calls never see raw credentials—a **harness** security layer, not an agent loop itself.",
                 "mostly simple (credential proxy)", oss="❓"),
+        Project("MCP Servers", "modelcontextprotocol/servers",
+                "The official reference collection of Model Context Protocol servers (filesystem, git, fetch, memory, time, and more)—the canonical, vetted toolset agents connect to, and the pattern every other MCP server is measured against.",
+                "mostly simple (reference servers)", labels=["javascript"]),
+        Project("Context7", "upstash/context7",
+                "MCP server that injects up-to-date, version-specific library docs into an agent's context on demand; kills the stale-training-data hallucinations that plague codegen.",
+                "super simple (drop-in MCP)", labels=["javascript"]),
+        Project("Playwright MCP", "microsoft/playwright-mcp",
+                "Playwright's official MCP server: structured browser control (navigate, click, fill, extract) via the accessibility tree rather than screenshots, so web tasks stay fast and deterministic.",
+                "mostly simple (browser MCP)", labels=["javascript"]),
+    ],
+    "memory": [
+        Project("cognee", "topoteretes/cognee",
+                "Open-source memory layer for agents: an extract–cognify–load pipeline that turns your data into a queryable knowledge graph plus vector store, so agents recall facts and relationships across sessions instead of re-reading context.",
+                "slightly complex (graph + vector memory)", labels=["python"]),
+        Project("Mem0", "mem0ai/mem0",
+                "Universal memory layer for AI agents: stores user/org/session memory, retrieves on demand. Apache-2.0; the de-facto memory primitive paired with most harnesses in 2026.",
+                "slightly complex (memory layer, multi-platform)", labels=["python"]),
+        Project("claude-mem", "thedotmack/claude-mem",
+                "Claude Code plugin that captures everything an agent does during a session, AI-compresses it (via claude-agent-sdk), and injects the relevant context into future sessions—session-to-session memory as a drop-in.",
+                "slightly complex (session capture + compression)"),
     ],
     "evaluation": [
         Project("agent-qa", "vostride/agent-qa",
@@ -473,6 +500,14 @@ PROJECTS: dict[str, list[Project]] = {
                 "Microsoft's training-oriented harness: optimization loops for agent behavior—when you need to improve policies over rollouts, not only score a fixed prompt.",
                 "complex (agent training, Microsoft stack — product suite)", labels=["python"]),
     ],
+    "observability": [
+        Project("Langfuse", "langfuse/langfuse",
+                "Open-source LLM engineering platform: full-trace observability, online and offline evals, prompt management, and cost metrics for agent runs in production—the monitoring layer most harnesses lack out of the box.",
+                "slightly complex (tracing + evals platform)", labels=["javascript"]),
+        Project("MLflow", "mlflow/mlflow",
+                "Mature ML platform now covering GenAI: MLflow Tracing captures every agent step, tool call, and token, with built-in LLM evals and prompt versioning—observability for teams already standardized on MLflow.",
+                "complex (full ML + GenAI platform)", labels=["python"]),
+    ],
     "research-task": [
         Project("gpt-researcher", "assafelovic/gpt-researcher",
                 "Autonomous deep-research agent: web + local sources, citation-grounded reports, multi-agent and deep-research modes. The reference open-source research harness.",
@@ -509,9 +544,6 @@ PROJECTS: dict[str, list[Project]] = {
         Project("Composio", "ComposioHQ/composio",
                 "1,000+ toolkits with auth, tool search, and a sandboxed workbench—drop-in tool layer so agents stop reinventing OAuth + integrations. Python and TypeScript.",
                 "complex (1k+ tools, auth, search — product suite)"),
-        Project("Mem0", "mem0ai/mem0",
-                "Universal memory layer for AI agents: stores user/org/session memory, retrieves on demand. Apache-2.0; the de-facto memory primitive paired with most harnesses in 2026.",
-                "slightly complex (memory layer, multi-platform)", labels=["python"]),
         Project("Cloudflare Agents", "cloudflare/agents",
                 "Persistent, stateful agents on Durable Objects: state, websockets, scheduling, and AI chat baked in. The serverless answer to \"where does the agent live?\"",
                 "slightly complex (Durable Objects, stateful)", labels=["javascript"]),
@@ -664,6 +696,19 @@ META: dict[str, tuple[int, str, str]] = {
     "e2b-dev/E2B": (12913, "https://github.com/e2b-dev/e2b-cookbook/tree/main/examples/anthropic-claude-code-in-sandbox-python", "Claude Code in sandbox"),
     "daytonaio/daytona": (72249, "https://github.com/daytonaio/daytona/tree/main/examples/python/charts", "Charts in sandbox"),
     "brandonhimpfen/awesome-ai-agents": (11, "https://github.com/brandonhimpfen/awesome-ai-agents#frameworks", "Frameworks section"),
+    # memory
+    "topoteretes/cognee": (27577, "https://github.com/topoteretes/cognee#readme", "Quickstart"),
+    # observability
+    "langfuse/langfuse": (30927, "https://langfuse.com/docs", "Docs"),
+    "mlflow/mlflow": (26982, "https://mlflow.org", "Docs"),
+    # plugins-mcp-cli (MCP infrastructure)
+    "modelcontextprotocol/servers": (88342, "https://github.com/modelcontextprotocol/servers#readme", "Server catalog"),
+    "upstash/context7": (58932, "https://context7.com", "Docs"),
+    "microsoft/playwright-mcp": (34958, "https://github.com/microsoft/playwright-mcp#readme", "Setup & config"),
+    # multi-agent
+    "FoundationAgents/OpenManus": (57148, "https://github.com/FoundationAgents/OpenManus#readme", "Quickstart"),
+    # coding-harness-configs
+    "wshobson/agents": (37797, "https://github.com/wshobson/agents#readme", "Agent catalog"),
 }
 
 
@@ -683,6 +728,20 @@ ARCHIVED: "dict[str, str]" = {
 # github_ids that are archived upstream (present in ARCHIVED) but should stay
 # out of the Graveyard and remain in normal ordering. Empty by default.
 KEEP_DESPITE_ARCHIVED: "set[str]" = set()
+
+# Repos routed to the Graveyard for a curation-integrity reason rather than
+# upstream archival — e.g. star manipulation. Keyed by github_id, mapped to
+# (date flagged YYYY-MM-DD, short public reason). Kept in the list, not deleted,
+# so the record stays honest and the exclusion is auditable. Excluded from the
+# ranked count, the landscape chart, and harnesses.json's main list.
+INTEGRITY_FLAGGED: "dict[str, tuple[str, str]]" = {
+    "affaan-m/ECC": (
+        "2026-07-11",
+        "suspected star manipulation — ~228k stars / ~35k forks on a repo "
+        "created 2026-01 with no matching install base, dependents, or discussion; "
+        "fork-to-star ratio and growth curve are inconsistent with organic adoption",
+    ),
+}
 
 # Community members whose submissions shaped the list — rendered as the
 # thank-you block at the top of the README. Add a tuple when a submission
@@ -918,6 +977,19 @@ AXES: "dict[str, tuple[str, str]]" = {
     "openai/openai-agents-js": ("bounded", "resumable"),
     "MaxGfeller/open-harness": ("bounded", "none"),
     "brandonhimpfen/awesome-ai-agents": ("n/a", "n/a"),
+    # memory (state layers — no agent loop of their own)
+    "topoteretes/cognee": ("n/a", "n/a"),
+    # observability (tracing/eval-ops infra — no agent loop of their own)
+    "langfuse/langfuse": ("n/a", "n/a"),
+    "mlflow/mlflow": ("n/a", "n/a"),
+    # plugins-mcp-cli (MCP infrastructure — tools/servers, not loops)
+    "modelcontextprotocol/servers": ("n/a", "n/a"),
+    "upstash/context7": ("n/a", "n/a"),
+    "microsoft/playwright-mcp": ("n/a", "n/a"),
+    # multi-agent
+    "FoundationAgents/OpenManus": ("bounded", "none"),
+    # coding-harness-configs (skill/subagent packs — no loop)
+    "wshobson/agents": ("n/a", "n/a"),
 }
 
 
@@ -980,7 +1052,7 @@ USE_CASES: "list[tuple[str, list[str], str]]" = [
       "agent0ai/agent-zero", "HKUDS/OpenHarness"],
      "Personal agent runtimes"),
     ("I want to extend Claude Code, Codex, or OpenCode with skills and slash commands",
-     ["anthropics/skills", "affaan-m/ECC",
+     ["anthropics/skills", "wshobson/agents",
       "obra/superpowers", "garrytan/gstack", "RyanAlberts/pmstack"],
      "Coding harness configs and SDKs"),
     ("I want to build my own coding harness from scratch",
@@ -1133,8 +1205,23 @@ RAW_BASE = "https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesse
 
 
 def is_graveyard(github_id: str) -> bool:
-    """True if a repo is archived and not explicitly kept out of the Graveyard."""
-    return github_id in ARCHIVED and github_id not in KEEP_DESPITE_ARCHIVED
+    """True if a repo is archived (and not kept out) or flagged for integrity."""
+    archived = github_id in ARCHIVED and github_id not in KEEP_DESPITE_ARCHIVED
+    return archived or github_id in INTEGRITY_FLAGGED
+
+
+def graveyard_since(github_id: str) -> str:
+    """Date a repo entered the Graveyard: archival date or integrity-flag date."""
+    if github_id in ARCHIVED:
+        return ARCHIVED[github_id]
+    return INTEGRITY_FLAGGED[github_id][0]
+
+
+def graveyard_reason(github_id: str) -> str:
+    """Why a repo is in the Graveyard — archival or the integrity-flag reason."""
+    if github_id in ARCHIVED and github_id not in INTEGRITY_FLAGGED:
+        return "archived upstream — kept for citation"
+    return INTEGRITY_FLAGGED[github_id][1]
 
 
 def graveyard_projects() -> list:
@@ -1363,18 +1450,19 @@ def generate_readme() -> str:
         body.append("## ⚰️ Graveyard")
         body.append("")
         body.append(
-            "_Archived upstream. Kept here — not deleted — for citation and historical "
-            "integrity; excluded from counts, the landscape chart, and harnesses.json's "
-            "main list._"
+            "_Archived upstream, or flagged for curation integrity (e.g. suspected star "
+            "manipulation). Kept here — not deleted — for citation and transparency; "
+            "excluded from the ranked count, the landscape chart, and harnesses.json's "
+            "main list. Curation is the point: a starred repo is not automatically a "
+            "credible one._"
         )
         body.append("")
-        body.append("| Project | Last ⭐ Stars | Archived since | |")
-        body.append("|---------|--------------|-----------------|---|")
+        body.append("| Project | Last ⭐ Stars | Since | Why it's here |")
+        body.append("|---------|--------------|-------|---------------|")
         for p in graveyard:
             gid = p.github_id
             stars_cell = format_stars(stars_for(gid))
-            since = ARCHIVED[gid]
-            row = f"| [{p.display_name}](https://github.com/{gid}) | {stars_cell} | {since} | archived — kept for integrity |"
+            row = f"| [{p.display_name}](https://github.com/{gid}) | {stars_cell} | {graveyard_since(gid)} | {graveyard_reason(gid)} |"
             body.append(row)
         body.append("")
     radar = radar_entries()
@@ -1646,7 +1734,8 @@ def generate_harnesses_json() -> str:
                 "github_id": p.github_id,
                 "name": p.display_name,
                 "last_stars": stars_for(p.github_id),
-                "archived_since": ARCHIVED[p.github_id],
+                "since": graveyard_since(p.github_id),
+                "reason": graveyard_reason(p.github_id),
             }
             for p in graveyard_projects()
         ],
@@ -1706,7 +1795,9 @@ LANDSCAPE_STYLE = {
     "frameworks": ("#3b82f6", "Frameworks"),
     "multi-agent": ("#ec4899", "Multi-agent"),
     "plugins-mcp-cli": ("#10b981", "Plugins & MCP"),
+    "memory": ("#84cc16", "Memory & state"),
     "evaluation": ("#64748b", "Evals & benchmarks"),
+    "observability": ("#6366f1", "Observability"),
     "research-task": ("#14b8a6", "Research"),
     "libraries-sdks": ("#a16207", "Libraries & SDKs"),
 }

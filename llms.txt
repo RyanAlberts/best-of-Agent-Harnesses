@@ -1,6 +1,6 @@
 # Best of Agent Harnesses
 
-> Hand-curated, ranked list of 117 AI agent harnesses — the runtimes that close the loop between a stateless model and the outside world. 10 categories, a 4-tier adoption-surface rating (simplicity ↔ capability), capability tags, a license signal, and one concrete example link per project. Stars captured 2026-07-09.
+> Hand-curated, ranked list of 124 AI agent harnesses — the runtimes that close the loop between a stateless model and the outside world. 12 categories, a 4-tier adoption-surface rating (simplicity ↔ capability), capability tags, a license signal, and one concrete example link per project. Stars captured 2026-07-09.
 
 Maintained at https://github.com/RyanAlberts/best-of-Agent-Harnesses (CC-BY-SA-4.0).
 Structured data: https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/harnesses.json
@@ -10,7 +10,7 @@ Tiers, least to most adoption surface: super simple → mostly simple → slight
 
 - I want a turnkey coding agent today: opencode (https://github.com/anomalyco/opencode), Cline (https://github.com/cline/cline), Codex (https://github.com/openai/codex), Gemini CLI (https://github.com/google-gemini/gemini-cli), OpenHands (https://github.com/OpenHands/OpenHands), crush (https://github.com/charmbracelet/crush)
 - I want an always-on personal agent that lives in my chat apps: OpenClaw (https://github.com/openclaw/openclaw), Hermes (https://github.com/NousResearch/hermes-agent), Khoj (https://github.com/khoj-ai/khoj), Agent Zero (https://github.com/agent0ai/agent-zero), OpenHarness (HKUDS) (https://github.com/HKUDS/OpenHarness)
-- I want to extend Claude Code, Codex, or OpenCode with skills and slash commands: Anthropic Skills (https://github.com/anthropics/skills), everything-claude-code (https://github.com/affaan-m/ECC), superpowers (https://github.com/obra/superpowers), GStack (https://github.com/garrytan/gstack), pmstack (https://github.com/RyanAlberts/pmstack)
+- I want to extend Claude Code, Codex, or OpenCode with skills and slash commands: Anthropic Skills (https://github.com/anthropics/skills), wshobson/agents (https://github.com/wshobson/agents), superpowers (https://github.com/obra/superpowers), GStack (https://github.com/garrytan/gstack), pmstack (https://github.com/RyanAlberts/pmstack)
 - I want to build my own coding harness from scratch: Claude Agent SDK (https://github.com/anthropics/claude-agent-sdk-python), Google ADK (https://github.com/google/adk-python), AutoHarness (https://github.com/aiming-lab/AutoHarness), SWE-agent (https://github.com/SWE-agent/SWE-agent), RepoMaster (https://github.com/QuantaAlpha/RepoMaster), claw-code-agent (https://github.com/HarnessLab/claw-code-agent)
 - I want a drop-in memory layer for agents: Mem0 (https://github.com/mem0ai/mem0), claude-mem (https://github.com/thedotmack/claude-mem), agentlog (https://github.com/RyanAlberts/agentlog), agno (https://github.com/agno-agi/agno), letta (https://github.com/letta-ai/letta)
 - I want to plug hundreds to thousands of tools without context bloat: MCP-Zero (https://github.com/xfey/MCP-Zero), ToolGen (https://github.com/Reason-Wang/ToolGen), ToolRAG (https://github.com/antl3x/ToolRAG), langgraph-bigtool (https://github.com/langchain-ai/langgraph-bigtool)
@@ -32,7 +32,7 @@ Top picks: opencode, Cline, Codex. See the “Coding agent products (IDEs, CLIs,
 Top picks: OpenClaw, Hermes, Khoj. See the “Personal agent runtimes” category for the full ranked list.
 
 ### What is the best agent harness if I want to extend Claude Code, Codex, or OpenCode with skills and slash commands?
-Top picks: Anthropic Skills, everything-claude-code, superpowers. See the “Coding harness configs and SDKs” category for the full ranked list.
+Top picks: Anthropic Skills, wshobson/agents, superpowers. See the “Coding harness configs and SDKs” category for the full ranked list.
 
 ### What is the best agent harness if I want to build my own coding harness from scratch?
 Top picks: Claude Agent SDK, Google ADK, AutoHarness. See the “Coding harness configs and SDKs” category for the full ranked list.
@@ -74,7 +74,7 @@ Harnesses designed for unattended runs, batches, and fleets: opencode, OpenHands
 Harnesses whose execution state persists across restarts: langgraph-bigtool, n8n, langgraph, mastra, letta, deepagents, pydantic-ai, Cloudflare Agents.
 
 ### How many of these agent harnesses are open source?
-98 of 117 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.
+105 of 124 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.
 
 ### What is an agent harness?
 The runtime that turns a model into an agent: it decides what the model's reasoning is allowed to touch, and supplies the orchestration, tool wiring, memory, error recovery, and guardrails around per-turn inference.
@@ -119,9 +119,9 @@ Turnkey coding agents you install and run: IDE extensions, terminal CLIs, Docker
 Skill packs, slash-command libraries, meta-prompting frameworks, and official SDKs that give you the harness (the agent loop, planning, memory, hooks) without bundling a specific IDE or CLI shell.
 
 - [superpowers](https://github.com/obra/superpowers) — ⭐251k, complex, autonomy: n/a, recovery: n/a, open-source: Performance-oriented harness pack for Claude Code, Codex, OpenCode, Cursor: skills, instincts, memory, security, research-first workflows. Treats harness engineering itself as the performance lever. [memory, ide]
-- [everything-claude-code](https://github.com/affaan-m/ECC) — ⭐228k, complex, autonomy: n/a, recovery: n/a, open-source: The breakout 2026 harness pack for Claude Code: 28 specialized subagents, 119 reusable skills, 60 slash commands, 34 rules, 20+ automated hooks. Ships a full "AI engineering team" as config. [multi-agent]
 - [Anthropic Skills](https://github.com/anthropics/skills) — ⭐160k, mostly simple, autonomy: n/a, recovery: n/a, open-source: Anthropic's official Agent Skills repository: SKILL.md-based folders (instructions, scripts, resources) Claude dynamically loads on Claude Code, Claude.ai, and the API. The reference for progressive-disclosure skill packs in 2026.
 - [GStack](https://github.com/garrytan/gstack) — ⭐121k, slightly complex, autonomy: n/a, recovery: n/a, open-source: Garry Tan's Claude Code skill stack: 23 slash-command modes (CEO/eng/design review, QA, ship, browse, retro, …) that structure one assistant as a virtual engineering team. Daily driver while running YC. [typescript]
+- [wshobson/agents](https://github.com/wshobson/agents) — ⭐37.8k, super simple, autonomy: n/a, recovery: n/a, open-source: Cross-harness marketplace of drop-in subagents and skills for Claude Code, Codex CLI, Cursor, OpenCode, and Copilot; specialized, production-ready agent definitions you install rather than hand-write. [multi-agent, cli, ide]
 - [SWE-agent](https://github.com/SWE-agent/SWE-agent) — ⭐19.8k, slightly complex, autonomy: headless, recovery: resumable, open-source: LM-driven harness built for SWE-bench: edit state, command execution, and issue-focused loop—the reference agent stack next to the benchmark itself. [memory, evals, python]
 - [Claude Agent SDK](https://github.com/anthropics/claude-agent-sdk-python) — ⭐7.6k, complex, autonomy: headless, recovery: resumable, open-source: Official Anthropic SDK (Python + [TypeScript](https://github.com/anthropics/claude-agent-sdk-typescript), [demos](https://github.com/anthropics/claude-agent-sdk-demos), [quickstarts](https://github.com/anthropics/claude-quickstarts)): built-in tools, MCP, long-running coding agents with session bridging. [mcp, memory, python, typescript]
 - [agents-cli](https://github.com/google/agents-cli) — ⭐4.9k, mostly simple, autonomy: n/a, recovery: n/a, unknown: Google's official CLI and skill pack that layers agent-creation, evaluation, and deployment skills on top of whatever coding assistant you already run, rather than shipping its own agent loop—the **harness** as a config/skills add-on, not a new runtime. [evals, cli]
@@ -173,12 +173,13 @@ General-purpose agent and LLM application frameworks (the app layer, not harness
 - [AgentSilex](https://github.com/howl-anderson/agentsilex) — ⭐451, super simple, autonomy: bounded, recovery: none, open-source: ~300 lines of readable agent code on top of LiteLLM; the "I want to see the whole loop" option for learning or minimal production. [python]
 - [SuperAgentX](https://github.com/superagentxai/superagentx) — ⭐200, mostly simple, autonomy: bounded, recovery: none, open-source: Lightweight multi-agent orchestrator with an AGI-angle; minimal surface, docs-first, for teams that want orchestration without the kitchen sink. [multi-agent, python]
 
-## Multi-agent and orchestration (8 projects)
+## Multi-agent and orchestration (9 projects)
 
 Harnesses and patterns for multi-agent coordination and handoffs.
 
 - [MetaGPT](https://github.com/FoundationAgents/MetaGPT) — ⭐69.3k, complex, autonomy: headless, recovery: resumable, open-source: The "AI software company" multi-agent framework: role-played PM, architect, and engineer agents turn a one-line requirement into specs, designs, and code along an SOP assembly line. The landmark of the genre; development pace has slowed in 2026. [multi-agent, python]
 - [autogen](https://github.com/microsoft/autogen) — ⭐59.6k, complex, autonomy: bounded, recovery: resumable, open-source: Conversable agents and group chats; code execution and human-in-the-loop; Microsoft origin, AG2 ecosystem. [multi-agent, python]
+- [OpenManus](https://github.com/FoundationAgents/OpenManus) — ⭐57.1k, complex, autonomy: bounded, recovery: none, open-source: Open, invite-free general agent from the MetaGPT team: planning plus tool use over a multi-agent loop, aimed at reproducing Manus-style autonomous task completion on your own keys. [multi-agent, python]
 - [crewAI](https://github.com/crewAIInc/crewAI) — ⭐55.2k, complex, autonomy: bounded, recovery: resumable, open-source: Role-based agents (roles, goals, backstories) in Crews; Flows add event-driven and hierarchical control for production. [python]
 - [ChatDev](https://github.com/OpenBMB/ChatDev) — ⭐33.7k, slightly complex, autonomy: headless, recovery: none, open-source: Multi-agent software-company simulation (CEO, CTO, programmer, tester) built on chat chains with communicative dehallucination; ChatDev 2.0 continues the line. MetaGPT's conversational sibling. [python]
 - [openai-agents-python](https://github.com/openai/openai-agents-python) — ⭐27.8k, mostly simple, autonomy: bounded, recovery: resumable, open-source: Handoffs, guardrails, and multi-LLM routing; minimal surface so you own the loop. [python]
@@ -186,12 +187,14 @@ Harnesses and patterns for multi-agent coordination and handoffs.
 - [PraisonAI](https://github.com/MervinPraison/PraisonAI) — ⭐8.4k, mostly simple, autonomy: bounded, recovery: none, open-source: Autonomous multi-agent teams with a single entry point; emphasis on minimal config. [multi-agent, python]
 - [AgentRL](https://github.com/THUDM/AgentRL) — ⭐312, complex, autonomy: headless, recovery: resumable, open-source: Multitask, multiturn RL for LLM agents; Ray-based scaling, rollout/actor workers—for teams that want to train agents, not just run them. [training, python]
 
-## Plugins, MCPs, CLI tools (13 projects)
+## Plugins, MCPs, CLI tools (15 projects)
 
 IDE plugins, concrete MCP servers, and CLI tools that give agents tools and context.
 
-- [claude-mem](https://github.com/thedotmack/claude-mem) — ⭐86.6k, slightly complex, autonomy: n/a, recovery: n/a, open-source: Claude Code plugin that captures everything an agent does during a session, AI-compresses it (via claude-agent-sdk), and injects the relevant context into future sessions—session-to-session memory as a drop-in. [memory]
+- [MCP Servers](https://github.com/modelcontextprotocol/servers) — ⭐88.3k, mostly simple, autonomy: n/a, recovery: n/a, open-source: The official reference collection of Model Context Protocol servers (filesystem, git, fetch, memory, time, and more)—the canonical, vetted toolset agents connect to, and the pattern every other MCP server is measured against. [mcp, memory, typescript]
+- [Context7](https://github.com/upstash/context7) — ⭐58.9k, super simple, autonomy: n/a, recovery: n/a, open-source: MCP server that injects up-to-date, version-specific library docs into an agent's context on demand; kills the stale-training-data hallucinations that plague codegen. [mcp, training, typescript]
 - [aider](https://github.com/Aider-AI/aider) — ⭐47.2k, slightly complex, autonomy: checkpoint-gated, recovery: resumable, open-source: Git-aware CLI pair programmer; edits in-repo, supports multiple models and MCP so agents see version control and tools. [mcp, cli, python]
+- [Playwright MCP](https://github.com/microsoft/playwright-mcp) — ⭐35k, mostly simple, autonomy: n/a, recovery: n/a, open-source: Playwright's official MCP server: structured browser control (navigate, click, fill, extract) via the accessibility tree rather than screenshots, so web tasks stay fast and deterministic. [mcp, vision, browser, typescript]
 - [continue](https://github.com/continuedev/continue) — ⭐34.8k, complex, autonomy: checkpoint-gated, recovery: resumable, open-source: Open-source IDE extension (VS Code, JetBrains); in-editor completion and chat with local or API models. [ide, typescript]
 - [github-mcp-server](https://github.com/github/github-mcp-server) — ⭐31.3k, slightly complex, autonomy: n/a, recovery: n/a, open-source: GitHub's official MCP server (Go): repos, issues, PRs, code search, Actions. Replaces the older community `cyanheads/github-mcp-server` as the canonical way to give agents GitHub access. [mcp]
 - [MCP Python SDK](https://github.com/modelcontextprotocol/python-sdk) — ⭐23.6k, mostly simple, autonomy: n/a, recovery: n/a, open-source: Official SDK to build and consume MCP servers/clients in Python; stdio and SSE transports. [mcp, python]
@@ -203,6 +206,14 @@ IDE plugins, concrete MCP servers, and CLI tools that give agents tools and cont
 - [puppeteer-real-browser-mcp](https://github.com/withLinda/puppeteer-real-browser-mcp-server) — ⭐23, mostly simple, autonomy: n/a, recovery: n/a, unknown: Puppeteer MCP with real-browser and anti-detection; for agents that need to drive sites that block headless. [mcp, browser, typescript]
 - [Better-OpenCodeMCP](https://github.com/ajhcs/Better-OpenCodeMCP) — ⭐8, mostly simple, autonomy: n/a, recovery: n/a, open-source: MCP server for OpenCode/Crush: async task execution, model bridging (e.g. Claude→Gemini), process pooling. [mcp, typescript]
 - [agentlog](https://github.com/RyanAlberts/agentlog) — ⭐0, super simple, autonomy: n/a, recovery: n/a, open-source: Persistent decision memory for any project: `remember`, `recall`, `reflect`. Single-file Python CLI that stores decisions as JSONL and uses Claude or Gemini to retrieve and synthesize patterns—Karpathy's LLM Wiki concept as a CLI. [memory, cli, python]
+
+## Memory and state (3 projects)
+
+Persistent memory layers that give agents recall across turns and sessions: knowledge graphs, vector stores, and session-capture tools that survive a restart. The state a harness needs but rarely ships with.
+
+- [claude-mem](https://github.com/thedotmack/claude-mem) — ⭐86.6k, slightly complex, autonomy: n/a, recovery: n/a, open-source: Claude Code plugin that captures everything an agent does during a session, AI-compresses it (via claude-agent-sdk), and injects the relevant context into future sessions—session-to-session memory as a drop-in. [memory]
+- [Mem0](https://github.com/mem0ai/mem0) — ⭐60.5k, slightly complex, autonomy: n/a, recovery: n/a, open-source: Universal memory layer for AI agents: stores user/org/session memory, retrieves on demand. Apache-2.0; the de-facto memory primitive paired with most harnesses in 2026. [memory, python]
+- [cognee](https://github.com/topoteretes/cognee) — ⭐27.6k, slightly complex, autonomy: n/a, recovery: n/a, open-source: Open-source memory layer for agents: an extract–cognify–load pipeline that turns your data into a queryable knowledge graph plus vector store, so agents recall facts and relationships across sessions instead of re-reading context. [memory, rag, workflow, python]
 
 ## Evaluation and benchmarking harnesses (17 projects)
 
@@ -226,6 +237,13 @@ Agentic eval systems, reasoning benchmarks, and open agent benchmarks.
 - [SUPER](https://github.com/allenai/super-benchmark) — ⭐53, slightly complex, autonomy: headless, recovery: none, open-source: Agents that set up and run ML/NLP from GitHub repos; 45 expert problems, 152 masked tasks, 602 AutoGen tasks; Docker-based. [sandbox, python]
 - [TRAIL](https://github.com/patronus-ai/trail-benchmark) — ⭐20, mostly simple, autonomy: n/a, recovery: n/a, open-source: Trace reasoning and agentic issue localization; 148 long-context traces, 841 errors, 20+ error types; Hugging Face dataset.
 
+## Observability and eval-ops (2 projects)
+
+Tracing, monitoring, and production evaluation for live agent runs: capture every step, tool call, and token, then score and debug in the loop. Distinct from the fixed-task benchmarks above—this is what you run against your own traffic.
+
+- [Langfuse](https://github.com/langfuse/langfuse) — ⭐30.9k, slightly complex, autonomy: n/a, recovery: n/a, open-source: Open-source LLM engineering platform: full-trace observability, online and offline evals, prompt management, and cost metrics for agent runs in production—the monitoring layer most harnesses lack out of the box. [evals, typescript]
+- [MLflow](https://github.com/mlflow/mlflow) — ⭐27k, complex, autonomy: n/a, recovery: n/a, open-source: Mature ML platform now covering GenAI: MLflow Tracing captures every agent step, tool call, and token, with built-in LLM evals and prompt versioning—observability for teams already standardized on MLflow. [evals, python]
+
 ## Research and task-specific harnesses (2 projects)
 
 Deep research, document QA, and domain-specific agent loops.
@@ -233,12 +251,11 @@ Deep research, document QA, and domain-specific agent loops.
 - [gpt-researcher](https://github.com/assafelovic/gpt-researcher) — ⭐28.2k, complex, autonomy: bounded, recovery: retry, open-source: Autonomous deep-research agent: web + local sources, citation-grounded reports, multi-agent and deep-research modes. The reference open-source research harness. [multi-agent, python]
 - [openagents](https://github.com/OpenAgentsInc/openagents) — ⭐438, complex, autonomy: headless, recovery: resumable, open-source: Platform for autonomous agents and autopilot-style workflows; decentralized/Nostr-oriented (Pylon runtime, actively shipped in 2026).
 
-## Libraries and SDKs (14 projects)
+## Libraries and SDKs (13 projects)
 
 Lightweight runtimes, tool loops, and provider-agnostic harness primitives.
 
 - [Daytona](https://github.com/daytonaio/daytona) — ⭐72.2k, slightly complex, autonomy: n/a, recovery: n/a, open-source: Elastic dev environments for AI-generated code: workspaces, Git, previews—infra harness between "the model wrote a patch" and "it ran in a real machine." [sandbox]
-- [Mem0](https://github.com/mem0ai/mem0) — ⭐60.5k, slightly complex, autonomy: n/a, recovery: n/a, open-source: Universal memory layer for AI agents: stores user/org/session memory, retrieves on demand. Apache-2.0; the de-facto memory primitive paired with most harnesses in 2026. [memory, python]
 - [LiteLLM](https://github.com/BerriAI/litellm) — ⭐53.1k, mostly simple, autonomy: n/a, recovery: retry, open-source: One interface to 100+ LLMs; routing, caching, budgets. Not an agent framework—the pipe every agent framework uses. [provider-agnostic, python]
 - [Composio](https://github.com/ComposioHQ/composio) — ⭐29.1k, complex, autonomy: n/a, recovery: n/a, open-source: 1,000+ toolkits with auth, tool search, and a sandboxed workbench—drop-in tool layer so agents stop reinventing OAuth + integrations. Python and TypeScript. [sandbox, tool-discovery, python, typescript]
 - [smolagents](https://github.com/huggingface/smolagents) — ⭐28.3k, mostly simple, autonomy: bounded, recovery: none, open-source: Code-as-action agents: model outputs Python executed in sandbox (E2B, Modal, etc.); ~1k LOC core. [sandbox, python]

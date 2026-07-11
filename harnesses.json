@@ -9,8 +9,8 @@
     "feed_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/feed.json",
     "license": "CC-BY-SA-4.0",
     "stars_captured": "2026-07-09",
-    "project_count": 117,
-    "graveyard_count": 4,
+    "project_count": 124,
+    "graveyard_count": 5,
     "tiers": [
       "super simple",
       "mostly simple",
@@ -70,9 +70,19 @@
       "subtitle": "IDE plugins, concrete MCP servers, and CLI tools that give agents tools and context."
     },
     {
+      "id": "memory",
+      "title": "Memory and state",
+      "subtitle": "Persistent memory layers that give agents recall across turns and sessions: knowledge graphs, vector stores, and session-capture tools that survive a restart. The state a harness needs but rarely ships with."
+    },
+    {
       "id": "evaluation",
       "title": "Evaluation and benchmarking harnesses",
       "subtitle": "Agentic eval systems, reasoning benchmarks, and open agent benchmarks."
+    },
+    {
+      "id": "observability",
+      "title": "Observability and eval-ops",
+      "subtitle": "Tracing, monitoring, and production evaluation for live agent runs: capture every step, tool call, and token, then score and debug in the loop. Distinct from the fixed-task benchmarks above—this is what you run against your own traffic."
     },
     {
       "id": "research-task",
@@ -113,7 +123,7 @@
       "intent": "I want to extend Claude Code, Codex, or OpenCode with skills and slash commands",
       "picks": [
         "anthropics/skills",
-        "affaan-m/ECC",
+        "wshobson/agents",
         "obra/superpowers",
         "garrytan/gstack",
         "RyanAlberts/pmstack"
@@ -251,7 +261,7 @@
     {
       "kind": "use-case",
       "q": "What is the best agent harness if I want to extend Claude Code, Codex, or OpenCode with skills and slash commands?",
-      "a": "Top picks: Anthropic Skills, everything-claude-code, superpowers. See the “Coding harness configs and SDKs” category for the full ranked list.",
+      "a": "Top picks: Anthropic Skills, wshobson/agents, superpowers. See the “Coding harness configs and SDKs” category for the full ranked list.",
       "slug": "what-is-the-best-agent-harness-if-i-want-to-extend-claude-code-codex-or-opencode-with-skills-and-slash-commands"
     },
     {
@@ -335,7 +345,7 @@
     {
       "kind": "derived",
       "q": "How many of these agent harnesses are open source?",
-      "a": "98 of 117 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
+      "a": "105 of 124 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
       "slug": "how-many-of-these-agent-harnesses-are-open-source"
     },
     {
@@ -970,33 +980,6 @@
       }
     },
     {
-      "name": "everything-claude-code",
-      "github_id": "affaan-m/ECC",
-      "url": "https://github.com/affaan-m/ECC",
-      "slug": "ecc",
-      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#ecc",
-      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/ecc/",
-      "description": "The breakout 2026 harness pack for Claude Code: 28 specialized subagents, 119 reusable skills, 60 slash commands, 34 rules, 20+ automated hooks. Ships a full \"AI engineering team\" as config.",
-      "category": "coding-harness-configs",
-      "category_title": "Coding harness configs and SDKs",
-      "stars": 227772,
-      "tier": "complex",
-      "tier_rank": 4,
-      "axis": "complex (subagents + skills + hooks — product suite)",
-      "autonomy": "n/a",
-      "autonomy_rank": 0,
-      "recovery": "n/a",
-      "recovery_rank": 0,
-      "license_signal": "open-source",
-      "tags": [
-        "multi-agent"
-      ],
-      "example": {
-        "label": "autonomous-agent-harness skill",
-        "url": "https://github.com/affaan-m/ECC/blob/main/skills/autonomous-agent-harness/SKILL.md"
-      }
-    },
-    {
       "name": "Anthropic Skills",
       "github_id": "anthropics/skills",
       "url": "https://github.com/anthropics/skills",
@@ -1046,6 +1029,35 @@
       "example": {
         "label": "/ship SKILL.md",
         "url": "https://github.com/garrytan/gstack/blob/main/ship/SKILL.md"
+      }
+    },
+    {
+      "name": "wshobson/agents",
+      "github_id": "wshobson/agents",
+      "url": "https://github.com/wshobson/agents",
+      "slug": "agents",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#agents",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/agents/",
+      "description": "Cross-harness marketplace of drop-in subagents and skills for Claude Code, Codex CLI, Cursor, OpenCode, and Copilot; specialized, production-ready agent definitions you install rather than hand-write.",
+      "category": "coding-harness-configs",
+      "category_title": "Coding harness configs and SDKs",
+      "stars": 37797,
+      "tier": "super simple",
+      "tier_rank": 1,
+      "axis": "super simple (drop-in agent packs)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [
+        "multi-agent",
+        "cli",
+        "ide"
+      ],
+      "example": {
+        "label": "Agent catalog",
+        "url": "https://github.com/wshobson/agents#readme"
       }
     },
     {
@@ -2235,6 +2247,34 @@
       }
     },
     {
+      "name": "OpenManus",
+      "github_id": "FoundationAgents/OpenManus",
+      "url": "https://github.com/FoundationAgents/OpenManus",
+      "slug": "openmanus",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#openmanus",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/openmanus/",
+      "description": "Open, invite-free general agent from the MetaGPT team: planning plus tool use over a multi-agent loop, aimed at reproducing Manus-style autonomous task completion on your own keys.",
+      "category": "multi-agent",
+      "category_title": "Multi-agent and orchestration",
+      "stars": 57148,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (multi-agent + tools)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "none",
+      "recovery_rank": 1,
+      "license_signal": "open-source",
+      "tags": [
+        "multi-agent",
+        "python"
+      ],
+      "example": {
+        "label": "Quickstart",
+        "url": "https://github.com/FoundationAgents/OpenManus#readme"
+      }
+    },
+    {
       "name": "crewAI",
       "github_id": "crewAIInc/crewAI",
       "url": "https://github.com/crewAIInc/crewAI",
@@ -2401,30 +2441,61 @@
       }
     },
     {
-      "name": "claude-mem",
-      "github_id": "thedotmack/claude-mem",
-      "url": "https://github.com/thedotmack/claude-mem",
-      "slug": "claude-mem",
-      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#claude-mem",
-      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/claude-mem/",
-      "description": "Claude Code plugin that captures everything an agent does during a session, AI-compresses it (via claude-agent-sdk), and injects the relevant context into future sessions—session-to-session memory as a drop-in.",
+      "name": "MCP Servers",
+      "github_id": "modelcontextprotocol/servers",
+      "url": "https://github.com/modelcontextprotocol/servers",
+      "slug": "servers",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#servers",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/servers/",
+      "description": "The official reference collection of Model Context Protocol servers (filesystem, git, fetch, memory, time, and more)—the canonical, vetted toolset agents connect to, and the pattern every other MCP server is measured against.",
       "category": "plugins-mcp-cli",
       "category_title": "Plugins, MCPs, CLI tools",
-      "stars": 86568,
-      "tier": "slightly complex",
-      "tier_rank": 3,
-      "axis": "slightly complex (session capture + compression)",
+      "stars": 88342,
+      "tier": "mostly simple",
+      "tier_rank": 2,
+      "axis": "mostly simple (reference servers)",
       "autonomy": "n/a",
       "autonomy_rank": 0,
       "recovery": "n/a",
       "recovery_rank": 0,
       "license_signal": "open-source",
       "tags": [
-        "memory"
+        "mcp",
+        "memory",
+        "typescript"
       ],
       "example": {
-        "label": "Lifecycle hooks config",
-        "url": "https://github.com/thedotmack/claude-mem/blob/main/plugin/hooks/hooks.json"
+        "label": "Server catalog",
+        "url": "https://github.com/modelcontextprotocol/servers#readme"
+      }
+    },
+    {
+      "name": "Context7",
+      "github_id": "upstash/context7",
+      "url": "https://github.com/upstash/context7",
+      "slug": "context7",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#context7",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/context7/",
+      "description": "MCP server that injects up-to-date, version-specific library docs into an agent's context on demand; kills the stale-training-data hallucinations that plague codegen.",
+      "category": "plugins-mcp-cli",
+      "category_title": "Plugins, MCPs, CLI tools",
+      "stars": 58932,
+      "tier": "super simple",
+      "tier_rank": 1,
+      "axis": "super simple (drop-in MCP)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [
+        "mcp",
+        "training",
+        "typescript"
+      ],
+      "example": {
+        "label": "Docs",
+        "url": "https://context7.com"
       }
     },
     {
@@ -2454,6 +2525,36 @@
       "example": {
         "label": "Repo map source",
         "url": "https://github.com/Aider-AI/aider/blob/main/aider/repomap.py"
+      }
+    },
+    {
+      "name": "Playwright MCP",
+      "github_id": "microsoft/playwright-mcp",
+      "url": "https://github.com/microsoft/playwright-mcp",
+      "slug": "playwright-mcp",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#playwright-mcp",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/playwright-mcp/",
+      "description": "Playwright's official MCP server: structured browser control (navigate, click, fill, extract) via the accessibility tree rather than screenshots, so web tasks stay fast and deterministic.",
+      "category": "plugins-mcp-cli",
+      "category_title": "Plugins, MCPs, CLI tools",
+      "stars": 34958,
+      "tier": "mostly simple",
+      "tier_rank": 2,
+      "axis": "mostly simple (browser MCP)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [
+        "mcp",
+        "vision",
+        "browser",
+        "typescript"
+      ],
+      "example": {
+        "label": "Setup & config",
+        "url": "https://github.com/microsoft/playwright-mcp#readme"
       }
     },
     {
@@ -2760,6 +2861,91 @@
       "example": {
         "label": "Sample decisions.jsonl",
         "url": "https://github.com/RyanAlberts/agentlog/blob/main/example-log/decisions.jsonl"
+      }
+    },
+    {
+      "name": "claude-mem",
+      "github_id": "thedotmack/claude-mem",
+      "url": "https://github.com/thedotmack/claude-mem",
+      "slug": "claude-mem",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#claude-mem",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/claude-mem/",
+      "description": "Claude Code plugin that captures everything an agent does during a session, AI-compresses it (via claude-agent-sdk), and injects the relevant context into future sessions—session-to-session memory as a drop-in.",
+      "category": "memory",
+      "category_title": "Memory and state",
+      "stars": 86568,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (session capture + compression)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [
+        "memory"
+      ],
+      "example": {
+        "label": "Lifecycle hooks config",
+        "url": "https://github.com/thedotmack/claude-mem/blob/main/plugin/hooks/hooks.json"
+      }
+    },
+    {
+      "name": "Mem0",
+      "github_id": "mem0ai/mem0",
+      "url": "https://github.com/mem0ai/mem0",
+      "slug": "mem0",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#mem0",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/mem0/",
+      "description": "Universal memory layer for AI agents: stores user/org/session memory, retrieves on demand. Apache-2.0; the de-facto memory primitive paired with most harnesses in 2026.",
+      "category": "memory",
+      "category_title": "Memory and state",
+      "stars": 60486,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (memory layer, multi-platform)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [
+        "memory",
+        "python"
+      ],
+      "example": {
+        "label": "Next.js memory demo",
+        "url": "https://github.com/mem0ai/mem0/tree/main/examples/mem0-demo"
+      }
+    },
+    {
+      "name": "cognee",
+      "github_id": "topoteretes/cognee",
+      "url": "https://github.com/topoteretes/cognee",
+      "slug": "cognee",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#cognee",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/cognee/",
+      "description": "Open-source memory layer for agents: an extract–cognify–load pipeline that turns your data into a queryable knowledge graph plus vector store, so agents recall facts and relationships across sessions instead of re-reading context.",
+      "category": "memory",
+      "category_title": "Memory and state",
+      "stars": 27577,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (graph + vector memory)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [
+        "memory",
+        "rag",
+        "workflow",
+        "python"
+      ],
+      "example": {
+        "label": "Quickstart",
+        "url": "https://github.com/topoteretes/cognee#readme"
       }
     },
     {
@@ -3241,6 +3427,62 @@
       }
     },
     {
+      "name": "Langfuse",
+      "github_id": "langfuse/langfuse",
+      "url": "https://github.com/langfuse/langfuse",
+      "slug": "langfuse",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#langfuse",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/langfuse/",
+      "description": "Open-source LLM engineering platform: full-trace observability, online and offline evals, prompt management, and cost metrics for agent runs in production—the monitoring layer most harnesses lack out of the box.",
+      "category": "observability",
+      "category_title": "Observability and eval-ops",
+      "stars": 30927,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (tracing + evals platform)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [
+        "evals",
+        "typescript"
+      ],
+      "example": {
+        "label": "Docs",
+        "url": "https://langfuse.com/docs"
+      }
+    },
+    {
+      "name": "MLflow",
+      "github_id": "mlflow/mlflow",
+      "url": "https://github.com/mlflow/mlflow",
+      "slug": "mlflow",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#mlflow",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/mlflow/",
+      "description": "Mature ML platform now covering GenAI: MLflow Tracing captures every agent step, tool call, and token, with built-in LLM evals and prompt versioning—observability for teams already standardized on MLflow.",
+      "category": "observability",
+      "category_title": "Observability and eval-ops",
+      "stars": 26982,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (full ML + GenAI platform)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [
+        "evals",
+        "python"
+      ],
+      "example": {
+        "label": "Docs",
+        "url": "https://mlflow.org"
+      }
+    },
+    {
       "name": "gpt-researcher",
       "github_id": "assafelovic/gpt-researcher",
       "url": "https://github.com/assafelovic/gpt-researcher",
@@ -3318,34 +3560,6 @@
       "example": {
         "label": "Charts in sandbox",
         "url": "https://github.com/daytonaio/daytona/tree/main/examples/python/charts"
-      }
-    },
-    {
-      "name": "Mem0",
-      "github_id": "mem0ai/mem0",
-      "url": "https://github.com/mem0ai/mem0",
-      "slug": "mem0",
-      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#mem0",
-      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/mem0/",
-      "description": "Universal memory layer for AI agents: stores user/org/session memory, retrieves on demand. Apache-2.0; the de-facto memory primitive paired with most harnesses in 2026.",
-      "category": "libraries-sdks",
-      "category_title": "Libraries and SDKs",
-      "stars": 60486,
-      "tier": "slightly complex",
-      "tier_rank": 3,
-      "axis": "slightly complex (memory layer, multi-platform)",
-      "autonomy": "n/a",
-      "autonomy_rank": 0,
-      "recovery": "n/a",
-      "recovery_rank": 0,
-      "license_signal": "open-source",
-      "tags": [
-        "memory",
-        "python"
-      ],
-      "example": {
-        "label": "Next.js memory demo",
-        "url": "https://github.com/mem0ai/mem0/tree/main/examples/mem0-demo"
       }
     },
     {
@@ -3584,9 +3798,9 @@
       "name": "Cloudflare Agents",
       "github_id": "cloudflare/agents",
       "url": "https://github.com/cloudflare/agents",
-      "slug": "agents",
-      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#agents",
-      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/agents/",
+      "slug": "agents-2",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#agents-2",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/agents-2/",
       "description": "Persistent, stateful agents on Durable Objects: state, websockets, scheduling, and AI chat baked in. The serverless answer to \"where does the agent live?\"",
       "category": "libraries-sdks",
       "category_title": "Libraries and SDKs",
@@ -3694,28 +3908,39 @@
   ],
   "graveyard": [
     {
+      "github_id": "affaan-m/ECC",
+      "name": "everything-claude-code",
+      "last_stars": 227772,
+      "since": "2026-07-11",
+      "reason": "suspected star manipulation — ~228k stars / ~35k forks on a repo created 2026-01 with no matching install base, dependents, or discussion; fork-to-star ratio and growth curve are inconsistent with organic adoption"
+    },
+    {
       "github_id": "gsd-build/get-shit-done",
       "name": "get-shit-done",
       "last_stars": 64726,
-      "archived_since": "2026-07-03"
+      "since": "2026-07-03",
+      "reason": "archived upstream — kept for citation"
     },
     {
       "github_id": "RooCodeInc/Roo-Code",
       "name": "Roo Code",
       "last_stars": 24310,
-      "archived_since": "2026-07-03"
+      "since": "2026-07-03",
+      "reason": "archived upstream — kept for citation"
     },
     {
       "github_id": "spring-ai-community/spring-ai-tool-search-tool",
       "name": "spring-ai-tool-search-tool",
       "last_stars": 76,
-      "archived_since": "2026-07-03"
+      "since": "2026-07-03",
+      "reason": "archived upstream — kept for citation"
     },
     {
       "github_id": "SeanHogg/BuilderForceAgents",
       "name": "coderClaw",
       "last_stars": 3,
-      "archived_since": "2026-07-03"
+      "since": "2026-07-03",
+      "reason": "archived upstream — kept for citation"
     }
   ],
   "radar": [
