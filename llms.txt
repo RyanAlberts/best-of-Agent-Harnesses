@@ -83,7 +83,7 @@ The runtime that turns a model into an agent: it decides what the model's reason
 By relevance to harness concerns (environment, orchestration, lifecycle, guardrails) and by GitHub stars (captured 2026-07-09); each project also carries an adoption-surface tier and autonomy/recovery scores.
 
 ### How can an AI agent use this list directly?
-Three machine-readable surfaces: harnesses.json (structured), llms.txt (one file), and an MCP server (uvx agent-harnesses-mcp) exposing pick_harness and search_harnesses.
+Three machine-readable surfaces: harnesses.json (structured), llms.txt (one file), and an MCP server (uvx agent-harnesses-mcp) exposing recommend, pick_harness, and search_harnesses.
 
 ## Progressive disclosure harnesses (6 projects)
 

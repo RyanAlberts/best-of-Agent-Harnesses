@@ -12,12 +12,17 @@
     <a href="https://best-of.org" title="Best-of Badge"><img src="http://bit.ly/3o3EHNN"></a>
     <a href="#contents" title="Project Count"><img src="https://img.shields.io/badge/projects-124-blue.svg?color=5ac4bf"></a>
     <a href="https://ryanalberts.github.io/best-of-Agent-Harnesses/" title="Browse the searchable site"><img src="https://img.shields.io/badge/website-live-5ac4bf.svg"></a>
+    <a href="#for-agents" title="Agents can query this list — MCP server, llms.txt & JSON"><img src="https://img.shields.io/badge/agents-query%20this%20list-5ac4bf.svg"></a>
     <a href="#contribution" title="Contributions welcome"><img src="https://img.shields.io/badge/contributions-welcome-green.svg"></a>
     <a href="https://github.com/RyanAlberts/best-of-Agent-Harnesses/commits/main" title="Updates"><img src="https://img.shields.io/github/last-commit/RyanAlberts/best-of-Agent-Harnesses?color=green&label=updated"></a>
 </p>
 
 <p align="center">
     🌐 <strong><a href="https://ryanalberts.github.io/best-of-Agent-Harnesses/">Browse the searchable site</a></strong> — one page per harness, filter by capability, autonomy &amp; recovery.
+</p>
+
+<p align="center">
+    🤖 <strong>Agents can query this list</strong> — an <a href="#for-agents">MCP server</a> (<code>recommend</code>, <code>pick_harness</code>, …), <a href="llms.txt">llms.txt</a> &amp; <a href="harnesses.json">JSON</a>, so your agent recommends harnesses too.
 </p>
 
 <p align="center">
@@ -81,7 +86,7 @@ This list is also published in machine-readable form, so coding agents and resea
 
 - [**harnesses.json**](harnesses.json) — every project with category, complexity tier, capability tags, stars, license signal, and a concrete example link, plus the full use-case index.
 - [**llms.txt**](llms.txt) — the entire list in one agent-readable file. Point any agent at the [raw URL](https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/llms.txt).
-- [**MCP server**](mcp/) — `pick_harness` (with complexity/autonomy/recovery filters), `search_harnesses`, `get_harness`, `list_categories`, plus `list_comparisons`/`get_comparison` for the decision guides. Published to PyPI and the [official MCP registry](https://registry.modelcontextprotocol.io) as `io.github.RyanAlberts/agent-harnesses`. One-line install (needs [uv](https://docs.astral.sh/uv/)):
+- [**MCP server**](mcp/) — `recommend` (one opinionated pick + alternatives + what to *avoid*, e.g. repos flagged for star manipulation), `pick_harness` (ranked, with complexity/autonomy/recovery filters), `search_harnesses`, `get_harness`, `list_categories`, plus `list_comparisons`/`get_comparison` for the decision guides. Published to PyPI and the [official MCP registry](https://registry.modelcontextprotocol.io) as `io.github.RyanAlberts/agent-harnesses`. One-line install (needs [uv](https://docs.astral.sh/uv/)):
 
 ```sh
 claude mcp add agent-harnesses -- uvx agent-harnesses-mcp
@@ -410,7 +415,7 @@ By relevance to harness concerns (environment, orchestration, lifecycle, guardra
 
 ### How can an AI agent use this list directly?
 
-Three machine-readable surfaces: harnesses.json (structured), llms.txt (one file), and an MCP server (uvx agent-harnesses-mcp) exposing pick_harness and search_harnesses.
+Three machine-readable surfaces: harnesses.json (structured), llms.txt (one file), and an MCP server (uvx agent-harnesses-mcp) exposing recommend, pick_harness, and search_harnesses.
 
 <br>
 
