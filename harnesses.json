@@ -9,7 +9,7 @@
     "feed_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/feed.json",
     "license": "CC-BY-SA-4.0",
     "stars_captured": "2026-07-12",
-    "project_count": 124,
+    "project_count": 136,
     "graveyard_count": 5,
     "tiers": [
       "super simple",
@@ -333,7 +333,7 @@
     {
       "kind": "derived",
       "q": "Which agent harnesses can run unattended (headless)?",
-      "a": "Harnesses designed for unattended runs, batches, and fleets: opencode, OpenHands, goose, SWE-agent, Claude Agent SDK, RepoMaster, OpenClaw, Hermes.",
+      "a": "Harnesses designed for unattended runs, batches, and fleets: opencode, OpenHands, goose, Qwen Code, SWE-agent, Claude Agent SDK, RepoMaster, OpenClaw.",
       "slug": "which-agent-harnesses-can-run-unattended-headless"
     },
     {
@@ -345,7 +345,7 @@
     {
       "kind": "derived",
       "q": "How many of these agent harnesses are open source?",
-      "a": "105 of 124 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
+      "a": "115 of 136 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
       "slug": "how-many-of-these-agent-harnesses-are-open-source"
     },
     {
@@ -433,6 +433,34 @@
       }
     },
     {
+      "name": "DESIGN.md",
+      "github_id": "google-labs-code/design.md",
+      "url": "https://github.com/google-labs-code/design.md",
+      "slug": "designmd",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#designmd",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/designmd/",
+      "description": "Google Labs' format spec for describing a visual identity to coding agents: YAML front matter plus human-readable rationale gives agents a persistent, structured understanding of a design system instead of re-deriving it from screenshots each session. Sibling format to AGENTS.md, for design instead of code.",
+      "category": "progressive-disclosure",
+      "category_title": "Progressive disclosure harnesses",
+      "stars": 25754,
+      "tier": "super simple",
+      "tier_rank": 1,
+      "axis": "super simple (format only)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [
+        "memory",
+        "vision"
+      ],
+      "example": {
+        "label": "DESIGN.md spec",
+        "url": "https://github.com/google-labs-code/design.md/blob/main/docs/spec.md"
+      }
+    },
+    {
       "name": "agents.md",
       "github_id": "agentsmd/agents.md",
       "url": "https://github.com/agentsmd/agents.md",
@@ -457,6 +485,36 @@
       "example": {
         "label": "Self-hosting AGENTS.md",
         "url": "https://github.com/agentsmd/agents.md/blob/main/AGENTS.md"
+      }
+    },
+    {
+      "name": "Context Mode",
+      "github_id": "mksglu/context-mode",
+      "url": "https://github.com/mksglu/context-mode",
+      "slug": "context-mode",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#context-mode",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/context-mode/",
+      "description": "MCP server that sandboxes tool output and persists session memory in SQLite to cut context consumption (claims ~98% reduction) across 17+ agent platforms (Claude Code, Copilot, Cursor, OpenCode, and more)—progressive disclosure applied to what comes back from a tool call, not just what's loaded upfront.",
+      "category": "progressive-disclosure",
+      "category_title": "Progressive disclosure harnesses",
+      "stars": 18837,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (context sandboxing, 17+ platform adapters)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "restricted (Elastic-2.0)",
+      "tags": [
+        "mcp",
+        "memory",
+        "sandbox",
+        "ide"
+      ],
+      "example": {
+        "label": "Context savings benchmark",
+        "url": "https://github.com/mksglu/context-mode/blob/main/BENCHMARK.md"
       }
     },
     {
@@ -832,6 +890,64 @@
       }
     },
     {
+      "name": "Kilo Code",
+      "github_id": "Kilo-Org/kilocode",
+      "url": "https://github.com/Kilo-Org/kilocode",
+      "slug": "kilocode",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#kilocode",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/kilocode/",
+      "description": "VS Code/JetBrains/CLI coding agent in the Cline/Roo Code lineage. The **harness** is the approval-gated agent loop with 500+ model access and mid-task model switching; the IDE or terminal is the shell. Community fork that's become the most-starred in its family.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 26064,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (IDE + CLI, model switching)",
+      "autonomy": "step-gated",
+      "autonomy_rank": 1,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "open-source",
+      "tags": [
+        "cli",
+        "ide"
+      ],
+      "example": {
+        "label": "Kilo Code docs",
+        "url": "https://kilo.ai/docs"
+      }
+    },
+    {
+      "name": "Qwen Code",
+      "github_id": "QwenLM/qwen-code",
+      "url": "https://github.com/QwenLM/qwen-code",
+      "slug": "qwen-code",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#qwen-code",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/qwen-code/",
+      "description": "Alibaba's official terminal coding agent for the Qwen models (also takes OpenAI/Anthropic/Gemini keys). The **harness** is a multi-provider tool-call loop with interactive, headless, and daemon modes plus IDE plugins; the CLI is the shell.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 25971,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (official CLI, multi-provider, headless mode)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "open-source",
+      "tags": [
+        "browser",
+        "provider-agnostic",
+        "cli",
+        "ide"
+      ],
+      "example": {
+        "label": "Qwen Code docs",
+        "url": "https://qwenlm.github.io/qwen-code-docs/en/users/overview"
+      }
+    },
+    {
       "name": "oh-my-pi",
       "github_id": "can1357/oh-my-pi",
       "url": "https://github.com/can1357/oh-my-pi",
@@ -861,6 +977,34 @@
       "example": {
         "label": "LSP wired into edits",
         "url": "https://github.com/can1357/oh-my-pi/blob/main/docs/lsp-config.md"
+      }
+    },
+    {
+      "name": "Antigravity CLI",
+      "github_id": "google-antigravity/antigravity-cli",
+      "url": "https://github.com/google-antigravity/antigravity-cli",
+      "slug": "antigravity-cli",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#antigravity-cli",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/antigravity-cli/",
+      "description": "Google's terminal harness for Antigravity: brings Antigravity's reasoning, execution, and orchestration loop into an SSH-friendly CLI built for keyboard-driven remote sessions. The **harness** is the tool-call loop; the terminal is the shell.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 1572,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (official CLI, SSH-oriented)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "unknown",
+      "tags": [
+        "memory",
+        "cli"
+      ],
+      "example": {
+        "label": "CLI overview docs",
+        "url": "https://antigravity.google/docs/cli-overview"
       }
     },
     {
@@ -2028,6 +2172,31 @@
       }
     },
     {
+      "name": "VibeSDK",
+      "github_id": "cloudflare/vibesdk",
+      "url": "https://github.com/cloudflare/vibesdk",
+      "slug": "vibesdk",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#vibesdk",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/vibesdk/",
+      "description": "Cloudflare's open-source vibe-coding platform generator: describe an app in natural language and an agent builds and deploys it on Cloudflare's stack—the SDK for standing up your own Claude/Codex-style app-building product rather than a harness you drop into an existing one.",
+      "category": "frameworks",
+      "category_title": "Frameworks",
+      "stars": 5145,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (full-stack generator platform — product suite)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "open-source",
+      "tags": [],
+      "example": {
+        "label": "Setup guide",
+        "url": "https://github.com/cloudflare/vibesdk/blob/main/docs/setup.md"
+      }
+    },
+    {
       "name": "AgentVerse",
       "github_id": "OpenBMB/AgentVerse",
       "url": "https://github.com/OpenBMB/AgentVerse",
@@ -2356,6 +2525,33 @@
       }
     },
     {
+      "name": "Symphony",
+      "github_id": "openai/symphony",
+      "url": "https://github.com/openai/symphony",
+      "slug": "symphony",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#symphony",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/symphony/",
+      "description": "OpenAI's engineering preview for managing swarms of coding agents: turns project work into isolated, autonomous implementation runs so teams supervise outcomes instead of babysitting each agent. Apache-2.0 spec plus an experimental Elixir reference implementation.",
+      "category": "multi-agent",
+      "category_title": "Multi-agent and orchestration",
+      "stars": 25924,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (isolated runs, team-scale orchestration — product suite)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "open-source",
+      "tags": [
+        "sandbox"
+      ],
+      "example": {
+        "label": "Symphony spec",
+        "url": "https://github.com/openai/symphony/blob/main/SPEC.md"
+      }
+    },
+    {
       "name": "Microsoft Agent Framework",
       "github_id": "microsoft/agent-framework",
       "url": "https://github.com/microsoft/agent-framework",
@@ -2525,6 +2721,35 @@
       "example": {
         "label": "Repo map source",
         "url": "https://github.com/Aider-AI/aider/blob/main/aider/repomap.py"
+      }
+    },
+    {
+      "name": "Chrome DevTools MCP",
+      "github_id": "ChromeDevTools/chrome-devtools-mcp",
+      "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+      "slug": "chrome-devtools-mcp",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#chrome-devtools-mcp",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/chrome-devtools-mcp/",
+      "description": "Official Chrome DevTools MCP server: gives coding agents live control and inspection of a real Chrome instance—performance traces, network, console—for debugging and automation beyond what a screenshot-based browser tool can see.",
+      "category": "plugins-mcp-cli",
+      "category_title": "Plugins, MCPs, CLI tools",
+      "stars": 46735,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (official Chrome MCP)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [
+        "mcp",
+        "vision",
+        "browser"
+      ],
+      "example": {
+        "label": "Tool reference",
+        "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp/blob/main/docs/tool-reference.md"
       }
     },
     {
@@ -2721,6 +2946,33 @@
       "example": {
         "label": "Registry seed entries",
         "url": "https://github.com/modelcontextprotocol/registry/blob/main/data/seed.json"
+      }
+    },
+    {
+      "name": "ContextForge",
+      "github_id": "IBM/mcp-context-forge",
+      "url": "https://github.com/IBM/mcp-context-forge",
+      "slug": "mcp-context-forge",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#mcp-context-forge",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/mcp-context-forge/",
+      "description": "IBM's MCP gateway, registry, and proxy: fronts any MCP, A2A, or REST/gRPC service behind one endpoint with centralized discovery, governance, and observability for agent tool access at enterprise scale.",
+      "category": "plugins-mcp-cli",
+      "category_title": "Plugins, MCPs, CLI tools",
+      "stars": 4080,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (gateway, registry, multi-protocol — product suite)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [
+        "mcp"
+      ],
+      "example": {
+        "label": "Full documentation",
+        "url": "https://ibm.github.io/mcp-context-forge/"
       }
     },
     {
@@ -2946,6 +3198,34 @@
       "example": {
         "label": "Quickstart",
         "url": "https://github.com/topoteretes/cognee#readme"
+      }
+    },
+    {
+      "name": "Beads",
+      "github_id": "gastownhall/beads",
+      "url": "https://github.com/gastownhall/beads",
+      "slug": "beads",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#beads",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/beads/",
+      "description": "Distributed graph issue tracker for coding agents, built on Dolt: replaces flat markdown task lists with a dependency-aware graph so agents keep structured, version-controlled memory of what's done, blocked, and next across long-horizon work.",
+      "category": "memory",
+      "category_title": "Memory and state",
+      "stars": 25246,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (graph tracker, Dolt-backed)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [
+        "memory",
+        "workflow"
+      ],
+      "example": {
+        "label": "Beads docs",
+        "url": "https://beads.gascity.com/"
       }
     },
     {
@@ -3483,6 +3763,33 @@
       }
     },
     {
+      "name": "Agent Governance Toolkit",
+      "github_id": "microsoft/agent-governance-toolkit",
+      "url": "https://github.com/microsoft/agent-governance-toolkit",
+      "slug": "agent-governance-toolkit",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#agent-governance-toolkit",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/agent-governance-toolkit/",
+      "description": "Microsoft's policy layer for autonomous agents: intercepts tool calls before execution so policy violations, identity checks, and sandboxing are structurally enforced rather than left to prompt-level trust—covers the OWASP Agentic Top 10.",
+      "category": "observability",
+      "category_title": "Observability and eval-ops",
+      "stars": 4832,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (policy enforcement, sandboxing, audit — product suite)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [
+        "sandbox"
+      ],
+      "example": {
+        "label": "Quick start guide",
+        "url": "https://github.com/microsoft/agent-governance-toolkit/blob/main/docs/quickstart.md"
+      }
+    },
+    {
       "name": "gpt-researcher",
       "github_id": "assafelovic/gpt-researcher",
       "url": "https://github.com/assafelovic/gpt-researcher",
@@ -3852,6 +4159,34 @@
       }
     },
     {
+      "name": "Antigravity SDK",
+      "github_id": "google-antigravity/antigravity-sdk-python",
+      "url": "https://github.com/google-antigravity/antigravity-sdk-python",
+      "slug": "antigravity-sdk-python",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#antigravity-sdk-python",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/antigravity-sdk-python/",
+      "description": "Google's Python SDK for Antigravity/Gemini agents: abstracts the agentic loop (connections, conversation, hooks, MCP, tools, triggers) so you build agent behavior instead of harness plumbing.",
+      "category": "libraries-sdks",
+      "category_title": "Libraries and SDKs",
+      "stars": 2391,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (SDK, MCP, hooks)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "open-source",
+      "tags": [
+        "mcp",
+        "python"
+      ],
+      "example": {
+        "label": "Hello world example",
+        "url": "https://github.com/google-antigravity/antigravity-sdk-python/blob/main/examples/getting_started/hello_world.py"
+      }
+    },
+    {
       "name": "open-harness",
       "github_id": "MaxGfeller/open-harness",
       "url": "https://github.com/MaxGfeller/open-harness",
@@ -3951,51 +4286,15 @@
       "via": "weekly discovery"
     },
     {
-      "github_id": "ChromeDevTools/chrome-devtools-mcp",
-      "stars": 46735,
-      "desc": "Chrome DevTools for coding agents",
-      "via": "weekly discovery"
-    },
-    {
       "github_id": "BloopAI/vibe-kanban",
       "stars": 27345,
       "desc": "Get 10X more out of Claude Code, Codex or any coding agent",
       "via": "weekly discovery"
     },
     {
-      "github_id": "Kilo-Org/kilocode",
-      "stars": 26064,
-      "desc": "Kilo is the all-in-one agentic engineering platform. Build, ship, and iterate faster with the most popular open source coding agent.",
-      "via": "weekly discovery"
-    },
-    {
-      "github_id": "QwenLM/qwen-code",
-      "stars": 25971,
-      "desc": "An open-source AI coding agent that lives in your terminal.",
-      "via": "weekly discovery"
-    },
-    {
-      "github_id": "openai/symphony",
-      "stars": 25924,
-      "desc": "Symphony turns project work into isolated, autonomous implementation runs, allowing teams to manage work instead of supervising coding agents.",
-      "via": "weekly discovery"
-    },
-    {
-      "github_id": "gastownhall/beads",
-      "stars": 25246,
-      "desc": "Beads - A memory upgrade for your coding agent",
-      "via": "weekly discovery"
-    },
-    {
       "github_id": "ag2ai/ag2",
       "stars": 4760,
       "desc": "AG2 (formerly AutoGen): The Open-Source AgentOS.Join us at: https://discord.gg/sNGSwQME3x",
-      "via": "weekly discovery"
-    },
-    {
-      "github_id": "IBM/mcp-context-forge",
-      "stars": 4080,
-      "desc": "An AI Gateway, registry, and proxy that sits in front of any MCP, A2A, or REST/gRPC APIs, exposing a unified endpoint with centralized discovery, guardrails…",
       "via": "weekly discovery"
     },
     {
@@ -4008,12 +4307,6 @@
       "github_id": "cocoindex-io/cocoindex-code",
       "stars": 2496,
       "desc": "A super light-weight embedded code search engine CLI (AST based) that just works -  improves speed and efficiency for coding agent  🌟 Star if you like it!",
-      "via": "weekly discovery"
-    },
-    {
-      "github_id": "google-antigravity/antigravity-cli",
-      "stars": 1572,
-      "desc": "Antigravity CLI brings the reasoning, execution, and orchestration capabilities of Antigravity agent harness directly into your terminal.",
       "via": "weekly discovery"
     },
     {

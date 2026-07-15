@@ -166,6 +166,12 @@ PROJECTS: dict[str, list[Project]] = {
         Project("ToolRAG", "antl3x/ToolRAG",
                 "Semantic tool retrieval for LLMs; serves only the tools the user query demands (MCP-compatible), unlimited tool sets with zero context penalty.",
                 "mostly simple (query-driven retrieval)"),
+        Project("DESIGN.md", "google-labs-code/design.md",
+                "Google Labs' format spec for describing a visual identity to coding agents: YAML front matter plus human-readable rationale gives agents a persistent, structured understanding of a design system instead of re-deriving it from screenshots each session. Sibling format to AGENTS.md, for design instead of code.",
+                "super simple (format only)"),
+        Project("Context Mode", "mksglu/context-mode",
+                "MCP server that sandboxes tool output and persists session memory in SQLite to cut context consumption (claims ~98% reduction) across 17+ agent platforms (Claude Code, Copilot, Cursor, OpenCode, and more)—progressive disclosure applied to what comes back from a tool call, not just what's loaded upfront.",
+                "slightly complex (context sandboxing, 17+ platform adapters)", oss="⚠️ Elastic-2.0"),
     ],
     "coding-agent-products": [
         Project("oh-my-pi", "can1357/oh-my-pi",
@@ -213,6 +219,15 @@ PROJECTS: dict[str, list[Project]] = {
         Project("Open Interpreter", "openinterpreter/openinterpreter",
                 "Lightweight terminal coding agent oriented to open models (DeepSeek, Kimi, Qwen). The **harness** is a code-execution loop — the model writes code, the harness executes it with confirmation gates; the CLI is the shell. The original \"let the LLM run code on my machine\" project, reborn for open weights.",
                 "mostly simple (lean code-exec loop)", labels=["python"]),
+        Project("Antigravity CLI", "google-antigravity/antigravity-cli",
+                "Google's terminal harness for Antigravity: brings Antigravity's reasoning, execution, and orchestration loop into an SSH-friendly CLI built for keyboard-driven remote sessions. The **harness** is the tool-call loop; the terminal is the shell.",
+                "slightly complex (official CLI, SSH-oriented)", oss="❓"),
+        Project("Qwen Code", "QwenLM/qwen-code",
+                "Alibaba's official terminal coding agent for the Qwen models (also takes OpenAI/Anthropic/Gemini keys). The **harness** is a multi-provider tool-call loop with interactive, headless, and daemon modes plus IDE plugins; the CLI is the shell.",
+                "slightly complex (official CLI, multi-provider, headless mode)"),
+        Project("Kilo Code", "Kilo-Org/kilocode",
+                "VS Code/JetBrains/CLI coding agent in the Cline/Roo Code lineage. The **harness** is the approval-gated agent loop with 500+ model access and mid-task model switching; the IDE or terminal is the shell. Community fork that's become the most-starred in its family.",
+                "slightly complex (IDE + CLI, model switching)"),
     ],
     "coding-harness-configs": [
         Project("LoopTroop", "looptroop-ai/LoopTroop",
@@ -359,6 +374,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("youtu-agent", "TencentCloudADP/youtu-agent",
                 "Tencent Cloud's agent framework: a minimal tool-calling **harness** designed to perform well with open-source models, positioned as a lighter alternative to heavier orchestration frameworks.",
                 "mostly simple (minimal loop, open-model focus)", oss="❓"),
+        Project("VibeSDK", "cloudflare/vibesdk",
+                "Cloudflare's open-source vibe-coding platform generator: describe an app in natural language and an agent builds and deploys it on Cloudflare's stack—the SDK for standing up your own Claude/Codex-style app-building product rather than a harness you drop into an existing one.",
+                "complex (full-stack generator platform — product suite)"),
     ],
     "multi-agent": [
         Project("openai-agents-python", "openai/openai-agents-python",
@@ -388,6 +406,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("Microsoft Agent Framework", "microsoft/agent-framework",
                 "Microsoft's convergence of AutoGen and Semantic Kernel: build, orchestrate, and deploy agents and multi-agent workflows in Python and .NET, with graph-based workflows and checkpointing — the designated successor harness for both lines.",
                 "slightly complex (Python/.NET SDK, graph workflows)", labels=["python"]),
+        Project("Symphony", "openai/symphony",
+                "OpenAI's engineering preview for managing swarms of coding agents: turns project work into isolated, autonomous implementation runs so teams supervise outcomes instead of babysitting each agent. Apache-2.0 spec plus an experimental Elixir reference implementation.",
+                "complex (isolated runs, team-scale orchestration — product suite)"),
     ],
     "plugins-mcp-cli": [
         Project("aider", "Aider-AI/aider",
@@ -435,6 +456,12 @@ PROJECTS: dict[str, list[Project]] = {
         Project("Playwright MCP", "microsoft/playwright-mcp",
                 "Playwright's official MCP server: structured browser control (navigate, click, fill, extract) via the accessibility tree rather than screenshots, so web tasks stay fast and deterministic.",
                 "mostly simple (browser MCP)", labels=["javascript"]),
+        Project("Chrome DevTools MCP", "ChromeDevTools/chrome-devtools-mcp",
+                "Official Chrome DevTools MCP server: gives coding agents live control and inspection of a real Chrome instance—performance traces, network, console—for debugging and automation beyond what a screenshot-based browser tool can see.",
+                "slightly complex (official Chrome MCP)"),
+        Project("ContextForge", "IBM/mcp-context-forge",
+                "IBM's MCP gateway, registry, and proxy: fronts any MCP, A2A, or REST/gRPC service behind one endpoint with centralized discovery, governance, and observability for agent tool access at enterprise scale.",
+                "complex (gateway, registry, multi-protocol — product suite)"),
     ],
     "memory": [
         Project("cognee", "topoteretes/cognee",
@@ -446,6 +473,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("claude-mem", "thedotmack/claude-mem",
                 "Claude Code plugin that captures everything an agent does during a session, AI-compresses it (via claude-agent-sdk), and injects the relevant context into future sessions—session-to-session memory as a drop-in.",
                 "slightly complex (session capture + compression)"),
+        Project("Beads", "gastownhall/beads",
+                "Distributed graph issue tracker for coding agents, built on Dolt: replaces flat markdown task lists with a dependency-aware graph so agents keep structured, version-controlled memory of what's done, blocked, and next across long-horizon work.",
+                "slightly complex (graph tracker, Dolt-backed)"),
     ],
     "evaluation": [
         Project("agent-qa", "vostride/agent-qa",
@@ -507,6 +537,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("MLflow", "mlflow/mlflow",
                 "Mature ML platform now covering GenAI: MLflow Tracing captures every agent step, tool call, and token, with built-in LLM evals and prompt versioning—observability for teams already standardized on MLflow.",
                 "complex (full ML + GenAI platform)", labels=["python"]),
+        Project("Agent Governance Toolkit", "microsoft/agent-governance-toolkit",
+                "Microsoft's policy layer for autonomous agents: intercepts tool calls before execution so policy violations, identity checks, and sandboxing are structurally enforced rather than left to prompt-level trust—covers the OWASP Agentic Top 10.",
+                "complex (policy enforcement, sandboxing, audit — product suite)"),
     ],
     "research-task": [
         Project("gpt-researcher", "assafelovic/gpt-researcher",
@@ -523,6 +556,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("pydantic-ai", "pydantic/pydantic-ai",
                 "Type-safe Python agents with Pydantic I/O; multi-provider, MCP, Logfire observability, and human-in-the-loop.",
                 "slightly complex (type-safe, MCP, Logfire)", labels=["python"]),
+        Project("Antigravity SDK", "google-antigravity/antigravity-sdk-python",
+                "Google's Python SDK for Antigravity/Gemini agents: abstracts the agentic loop (connections, conversation, hooks, MCP, tools, triggers) so you build agent behavior instead of harness plumbing.",
+                "slightly complex (SDK, MCP, hooks)", labels=["python"]),
         Project("open-harness", "MaxGfeller/open-harness",
                 "TypeScript Agent class on Vercel AI SDK; streaming events, filesystem/bash tools, MCP, and subagent delegation.",
                 "slightly complex (streaming, tools, subagents)", labels=["javascript"]),
@@ -574,6 +610,8 @@ META: dict[str, tuple[int, str, str]] = {
     "spring-ai-community/spring-ai-tool-search-tool": (77, "https://github.com/spring-ai-community/spring-ai-tool-search-tool/tree/main/examples/tool-search-tool-demo", "Tool Search demo app"),
     "Reason-Wang/ToolGen": (182, "https://github.com/Reason-Wang/ToolGen/blob/master/scripts/eval_full_pipeline.sh", "Full eval pipeline"),
     "antl3x/ToolRAG": (29, "https://github.com/antl3x/ToolRAG/blob/main/packages/%40antl3x-toolrag/README.md", "MCP server retrieval"),
+    "google-labs-code/design.md": (25754, "https://github.com/google-labs-code/design.md/blob/main/docs/spec.md", "DESIGN.md spec"),
+    "mksglu/context-mode": (18837, "https://github.com/mksglu/context-mode/blob/main/BENCHMARK.md", "Context savings benchmark"),
     # coding-agent-products
     "can1357/oh-my-pi": (17388, "https://github.com/can1357/oh-my-pi/blob/main/docs/lsp-config.md", "LSP wired into edits"),
     "earendil-works/pi": (69847, "https://github.com/earendil-works/pi#readme", "Project README"),
@@ -589,6 +627,9 @@ META: dict[str, tuple[int, str, str]] = {
     "aaif-goose/goose": (51108, "https://block.github.io/goose/docs/guides/recipes/", "Goose recipes guide"),
     "HarnessLab/claw-code-agent": (528, "https://github.com/HarnessLab/claw-code-agent#-quick-start", "Quick Start guide"),
     "SeanHogg/BuilderForceAgents": (3, "https://github.com/SeanHogg/BuilderForceAgents#readme", "Multi-agent README"),
+    "google-antigravity/antigravity-cli": (1572, "https://antigravity.google/docs/cli-overview", "CLI overview docs"),
+    "QwenLM/qwen-code": (25971, "https://qwenlm.github.io/qwen-code-docs/en/users/overview", "Qwen Code docs"),
+    "Kilo-Org/kilocode": (26064, "https://kilo.ai/docs", "Kilo Code docs"),
     # coding-harness-configs
     "looptroop-ai/LoopTroop": (60, "https://github.com/looptroop-ai/LoopTroop#readme", "Council → loop → worktree pipeline"),
     "gsd-build/get-shit-done": (64740, "https://github.com/gsd-build/get-shit-done/blob/main/commands/gsd/ship.md", "gsd:ship command"),
@@ -640,12 +681,14 @@ META: dict[str, tuple[int, str, str]] = {
     "FlowiseAI/Flowise": (54543, "https://github.com/FlowiseAI/Flowise/blob/main/packages/server/marketplaces/agentflowsv2/Agentic%20RAG.json", "Agentic RAG flow"),
     "browser-use/browser-use": (104359, "https://github.com/browser-use/browser-use/blob/main/examples/use-cases/shopping.py", "Grocery shopping agent"),
     "TencentCloudADP/youtu-agent": (4580, "https://github.com/TencentCloudADP/youtu-agent#readme", "Project README"),
+    "cloudflare/vibesdk": (5145, "https://github.com/cloudflare/vibesdk/blob/main/docs/setup.md", "Setup guide"),
     # multi-agent
     "openai/openai-agents-python": (27839, "https://github.com/openai/openai-agents-python/blob/main/examples/customer_service/main.py", "Airline customer service handoffs"),
     "crewAIInc/crewAI": (55382, "https://github.com/crewAIInc/crewAI-examples/blob/main/crews/trip_planner/trip_agents.py", "Trip planner crew"),
     "microsoft/autogen": (59674, "https://github.com/microsoft/autogen/tree/main/python/samples/core_distributed-group-chat", "Distributed group chat"),
     "MervinPraison/PraisonAI": (8410, "https://github.com/MervinPraison/PraisonAI/blob/main/examples/python/general/orchestrator-workers.py", "Orchestrator-workers pattern"),
     "THUDM/AgentRL": (314, "https://github.com/THUDM/AgentRL/blob/main/examples/training/async_trainer.py", "Async GRPO trainer"),
+    "openai/symphony": (25924, "https://github.com/openai/symphony/blob/main/SPEC.md", "Symphony spec"),
     # plugins-mcp-cli
     "Aider-AI/aider": (47312, "https://github.com/Aider-AI/aider/blob/main/aider/repomap.py", "Repo map source"),
     "RyanAlberts/agentlog": (1, "https://github.com/RyanAlberts/agentlog/blob/main/example-log/decisions.jsonl", "Sample decisions.jsonl"),
@@ -660,6 +703,8 @@ META: dict[str, tuple[int, str, str]] = {
     "docker/mcp-gateway": (1479, "https://github.com/docker/mcp-gateway/blob/main/docs/mcp-gateway.md", "Gateway usage walkthrough"),
     "withLinda/puppeteer-real-browser-mcp-server": (24, "https://github.com/withLinda/puppeteer-real-browser-mcp-server/blob/main/README.md", "11 anti-detection tools"),
     "Infisical/agent-vault": (1857, "https://github.com/Infisical/agent-vault#readme", "Project README"),
+    "ChromeDevTools/chrome-devtools-mcp": (46735, "https://github.com/ChromeDevTools/chrome-devtools-mcp/blob/main/docs/tool-reference.md", "Tool reference"),
+    "IBM/mcp-context-forge": (4080, "https://ibm.github.io/mcp-context-forge/", "Full documentation"),
     # evaluation
     "vostride/agent-qa": (157, "https://github.com/vostride/agent-qa#readme", "Natural-language QA harness"),
     "arcprize/ARC-AGI-2": (725, "https://arcprize.org/leaderboard", "ARC Prize leaderboard"),
@@ -684,6 +729,7 @@ META: dict[str, tuple[int, str, str]] = {
     # libraries-sdks
     "langchain-ai/deepagents": (26129, "https://github.com/langchain-ai/deepagents/tree/main/examples/deep_research", "Deep research agent"),
     "pydantic/pydantic-ai": (18442, "https://github.com/pydantic/pydantic-ai/blob/main/examples/pydantic_ai_examples/bank_support.py", "Bank support agent"),
+    "google-antigravity/antigravity-sdk-python": (2391, "https://github.com/google-antigravity/antigravity-sdk-python/blob/main/examples/getting_started/hello_world.py", "Hello world example"),
     "MaxGfeller/open-harness": (585, "https://github.com/MaxGfeller/open-harness/tree/main/examples/cli", "Terminal CLI agent"),
     "vercel/ai": (25504, "https://github.com/vercel/ai/tree/main/examples/next-agent", "Next.js agent example"),
     "huggingface/smolagents": (28310, "https://github.com/huggingface/smolagents/blob/main/examples/rag.py", "RAG code agent"),
@@ -698,9 +744,11 @@ META: dict[str, tuple[int, str, str]] = {
     "brandonhimpfen/awesome-ai-agents": (12, "https://github.com/brandonhimpfen/awesome-ai-agents#frameworks", "Frameworks section"),
     # memory
     "topoteretes/cognee": (27612, "https://github.com/topoteretes/cognee#readme", "Quickstart"),
+    "gastownhall/beads": (25246, "https://beads.gascity.com/", "Beads docs"),
     # observability
     "langfuse/langfuse": (30962, "https://langfuse.com/docs", "Docs"),
     "mlflow/mlflow": (26988, "https://mlflow.org", "Docs"),
+    "microsoft/agent-governance-toolkit": (4832, "https://github.com/microsoft/agent-governance-toolkit/blob/main/docs/quickstart.md", "Quick start guide"),
     # plugins-mcp-cli (MCP infrastructure)
     "modelcontextprotocol/servers": (88369, "https://github.com/modelcontextprotocol/servers#readme", "Server catalog"),
     "upstash/context7": (58961, "https://context7.com", "Docs"),
@@ -727,6 +775,15 @@ ARCHIVED: "dict[str, str]" = {
 
 # github_ids that are archived upstream (present in ARCHIVED) but should stay
 # out of the Graveyard and remain in normal ordering. Empty by default.
+#
+# Proposed 2026-07-15 (pending review, see PR body):
+#   - "RooCodeInc/Roo-Code": 24k+ stars, one of the most-used Cline-lineage
+#     VS Code extensions; archival looks like an org-side lapse rather than
+#     abandonment. Losing it to the Graveyard would misrepresent a tool
+#     people are actively running.
+#   - "gsd-build/get-shit-done": 64k+ stars, widely adopted meta-prompting
+#     config; same reasoning — too prominent to quietly graveyard without
+#     a second look.
 KEEP_DESPITE_ARCHIVED: "set[str]" = set()
 
 # Repos routed to the Graveyard for a curation-integrity reason rather than
@@ -855,6 +912,8 @@ AXES: "dict[str, tuple[str, str]]" = {
     "Reason-Wang/ToolGen": ("n/a", "n/a"),
     "spring-ai-community/spring-ai-tool-search-tool": ("n/a", "n/a"),
     "antl3x/ToolRAG": ("n/a", "n/a"),
+    "google-labs-code/design.md": ("n/a", "n/a"),
+    "mksglu/context-mode": ("n/a", "n/a"),
     # coding-agent-products
     "can1357/oh-my-pi": ("bounded", "resumable"),
     "earendil-works/pi": ("bounded", "resumable"),
@@ -870,6 +929,9 @@ AXES: "dict[str, tuple[str, str]]" = {
     "RooCodeInc/Roo-Code": ("step-gated", "resumable"),
     "HarnessLab/claw-code-agent": ("checkpoint-gated", "none"),
     "SeanHogg/BuilderForceAgents": ("bounded", "none"),
+    "google-antigravity/antigravity-cli": ("bounded", "resumable"),
+    "QwenLM/qwen-code": ("headless", "resumable"),
+    "Kilo-Org/kilocode": ("step-gated", "resumable"),
     # coding-harness-configs
     "looptroop-ai/LoopTroop": ("bounded", "retry"),
     "obra/superpowers": ("n/a", "n/a"),
@@ -921,12 +983,14 @@ AXES: "dict[str, tuple[str, str]]" = {
     "elizaOS/eliza": ("headless", "resumable"),
     "agent0ai/agent-zero": ("bounded", "resumable"),
     "superagentxai/superagentx": ("bounded", "none"),
+    "cloudflare/vibesdk": ("headless", "resumable"),
     # multi-agent
     "microsoft/autogen": ("bounded", "resumable"),
     "crewAIInc/crewAI": ("bounded", "resumable"),
     "openai/openai-agents-python": ("bounded", "resumable"),
     "MervinPraison/PraisonAI": ("bounded", "none"),
     "THUDM/AgentRL": ("headless", "resumable"),
+    "openai/symphony": ("headless", "resumable"),
     # plugins-mcp-cli
     "thedotmack/claude-mem": ("n/a", "n/a"),
     "Aider-AI/aider": ("checkpoint-gated", "resumable"),
@@ -941,6 +1005,8 @@ AXES: "dict[str, tuple[str, str]]" = {
     "Infisical/agent-vault": ("n/a", "n/a"),
     "ajhcs/Better-OpenCodeMCP": ("n/a", "n/a"),
     "RyanAlberts/agentlog": ("n/a", "n/a"),
+    "ChromeDevTools/chrome-devtools-mcp": ("n/a", "n/a"),
+    "IBM/mcp-context-forge": ("n/a", "n/a"),
     # evaluation
     "vostride/agent-qa": ("headless", "retry"),
     "microsoft/agent-lightning": ("headless", "resumable"),
@@ -971,6 +1037,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "vercel/ai": ("bounded", "retry"),
     "langchain-ai/deepagents": ("bounded", "durable"),
     "pydantic/pydantic-ai": ("bounded", "durable"),
+    "google-antigravity/antigravity-sdk-python": ("headless", "resumable"),
     "e2b-dev/E2B": ("n/a", "n/a"),
     "strands-agents/harness-sdk": ("bounded", "resumable"),
     "cloudflare/agents": ("headless", "durable"),
@@ -979,9 +1046,11 @@ AXES: "dict[str, tuple[str, str]]" = {
     "brandonhimpfen/awesome-ai-agents": ("n/a", "n/a"),
     # memory (state layers — no agent loop of their own)
     "topoteretes/cognee": ("n/a", "n/a"),
+    "gastownhall/beads": ("n/a", "n/a"),
     # observability (tracing/eval-ops infra — no agent loop of their own)
     "langfuse/langfuse": ("n/a", "n/a"),
     "mlflow/mlflow": ("n/a", "n/a"),
+    "microsoft/agent-governance-toolkit": ("n/a", "n/a"),
     # plugins-mcp-cli (MCP infrastructure — tools/servers, not loops)
     "modelcontextprotocol/servers": ("n/a", "n/a"),
     "upstash/context7": ("n/a", "n/a"),

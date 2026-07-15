@@ -77,6 +77,12 @@ projects:
   - name: ToolRAG
     github_id: antl3x/ToolRAG
     category: "progressive-disclosure"
+  - name: DESIGN.md
+    github_id: google-labs-code/design.md
+    category: "progressive-disclosure"
+  - name: Context Mode
+    github_id: mksglu/context-mode
+    category: "progressive-disclosure"
   # Coding agent products (IDEs, CLIs, full suites)
   - name: oh-my-pi
     github_id: can1357/oh-my-pi
@@ -125,6 +131,15 @@ projects:
   - name: Open Interpreter
     github_id: openinterpreter/openinterpreter
     labels: ["python"]
+    category: "coding-agent-products"
+  - name: Antigravity CLI
+    github_id: google-antigravity/antigravity-cli
+    category: "coding-agent-products"
+  - name: Qwen Code
+    github_id: QwenLM/qwen-code
+    category: "coding-agent-products"
+  - name: Kilo Code
+    github_id: Kilo-Org/kilocode
     category: "coding-agent-products"
   # Coding harness configs and SDKs
   - name: LoopTroop
@@ -294,6 +309,9 @@ projects:
   - name: youtu-agent
     github_id: TencentCloudADP/youtu-agent
     category: "frameworks"
+  - name: VibeSDK
+    github_id: cloudflare/vibesdk
+    category: "frameworks"
   # Multi-agent and orchestration
   - name: openai-agents-python
     github_id: openai/openai-agents-python
@@ -330,6 +348,9 @@ projects:
   - name: Microsoft Agent Framework
     github_id: microsoft/agent-framework
     labels: ["python"]
+    category: "multi-agent"
+  - name: Symphony
+    github_id: openai/symphony
     category: "multi-agent"
   # Plugins, MCPs, CLI tools
   - name: aider
@@ -388,6 +409,12 @@ projects:
     github_id: microsoft/playwright-mcp
     labels: ["javascript"]
     category: "plugins-mcp-cli"
+  - name: Chrome DevTools MCP
+    github_id: ChromeDevTools/chrome-devtools-mcp
+    category: "plugins-mcp-cli"
+  - name: ContextForge
+    github_id: IBM/mcp-context-forge
+    category: "plugins-mcp-cli"
   # Memory and state
   - name: cognee
     github_id: topoteretes/cognee
@@ -399,6 +426,9 @@ projects:
     category: "memory"
   - name: claude-mem
     github_id: thedotmack/claude-mem
+    category: "memory"
+  - name: Beads
+    github_id: gastownhall/beads
     category: "memory"
   # Evaluation and benchmarking harnesses
   - name: agent-qa
@@ -473,6 +503,9 @@ projects:
     github_id: mlflow/mlflow
     labels: ["python"]
     category: "observability"
+  - name: Agent Governance Toolkit
+    github_id: microsoft/agent-governance-toolkit
+    category: "observability"
   # Research and task-specific harnesses
   - name: gpt-researcher
     github_id: assafelovic/gpt-researcher
@@ -488,6 +521,10 @@ projects:
     category: "libraries-sdks"
   - name: pydantic-ai
     github_id: pydantic/pydantic-ai
+    labels: ["python"]
+    category: "libraries-sdks"
+  - name: Antigravity SDK
+    github_id: google-antigravity/antigravity-sdk-python
     labels: ["python"]
     category: "libraries-sdks"
   - name: open-harness
