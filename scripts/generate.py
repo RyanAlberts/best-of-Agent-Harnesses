@@ -213,6 +213,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("Open Interpreter", "openinterpreter/openinterpreter",
                 "Lightweight terminal coding agent oriented to open models (DeepSeek, Kimi, Qwen). The **harness** is a code-execution loop — the model writes code, the harness executes it with confirmation gates; the CLI is the shell. The original \"let the LLM run code on my machine\" project, reborn for open weights.",
                 "mostly simple (lean code-exec loop)", labels=["python"]),
+        Project("jcode", "1jehuang/jcode",
+                "Rust terminal coding agent that bills itself outright as a \"Coding Agent Harness\": a TUI/CLI shell over a multi-provider (Claude, OpenAI) tool-call loop with MCP support.",
+                "slightly complex (terminal agent, multi-provider, MCP)", oss="❓", labels=["rust"]),
     ],
     "coding-harness-configs": [
         Project("LoopTroop", "looptroop-ai/LoopTroop",
@@ -257,6 +260,12 @@ PROJECTS: dict[str, list[Project]] = {
         Project("skillhub", "iflytek/skillhub",
                 "iFlytek's self-hosted registry for publishing, versioning, and governing agent skill packages—the **harness** config layer treated as an enterprise artifact store rather than a CLI or IDE shell.",
                 "mostly simple (skill registry/governance)", oss="❓"),
+        Project("agents-best-practices", "DenisSergeevitch/agents-best-practices",
+                "Provider-neutral Agent Skill for Codex and Claude Code that packages agentic **harness** design patterns as a skill — teaching harness engineering rather than shipping a runtime.",
+                "super simple (skills bundle)", oss="❓"),
+        Project("awesome-claude-code", "hesreallyhim/awesome-claude-code",
+                "The reference curated index of Claude Code skills, slash commands, hooks, and status lines — a config-layer content bundle, not a runtime, for assembling your own **harness** on top of Claude Code.",
+                "super simple (content bundle)", oss="❓"),
     ],
     "personal-agent-runtimes": [
         Project("Talon", "dylanneve1/talon",
@@ -359,6 +368,12 @@ PROJECTS: dict[str, list[Project]] = {
         Project("youtu-agent", "TencentCloudADP/youtu-agent",
                 "Tencent Cloud's agent framework: a minimal tool-calling **harness** designed to perform well with open-source models, positioned as a lighter alternative to heavier orchestration frameworks.",
                 "mostly simple (minimal loop, open-model focus)", oss="❓"),
+        Project("mini-coding-agent", "rasbt/mini-coding-agent",
+                "Minimal, readable coding-agent **harness** in Python from ML educator Sebastian Raschka (rasbt), built to explain the core loop — tool calls, edits, execution — without framework scaffolding.",
+                "super simple (educational, minimal LOC)", oss="❓", labels=["python"]),
+        Project("CUGA", "cuga-project/cuga-agent",
+                "Open-source generalist agent **harness** for the enterprise: OpenAPI/MCP integrations, composable reasoning modes, and policy/guardrail-aware execution for complex web and API task completion.",
+                "complex (enterprise, guardrails, multi-mode — product suite)", oss="❓"),
     ],
     "multi-agent": [
         Project("openai-agents-python", "openai/openai-agents-python",
@@ -589,6 +604,7 @@ META: dict[str, tuple[int, str, str]] = {
     "aaif-goose/goose": (51108, "https://block.github.io/goose/docs/guides/recipes/", "Goose recipes guide"),
     "HarnessLab/claw-code-agent": (528, "https://github.com/HarnessLab/claw-code-agent#-quick-start", "Quick Start guide"),
     "SeanHogg/BuilderForceAgents": (3, "https://github.com/SeanHogg/BuilderForceAgents#readme", "Multi-agent README"),
+    "1jehuang/jcode": (8291, "https://github.com/1jehuang/jcode#readme", "Project README"),
     # coding-harness-configs
     "looptroop-ai/LoopTroop": (60, "https://github.com/looptroop-ai/LoopTroop#readme", "Council → loop → worktree pipeline"),
     "gsd-build/get-shit-done": (64740, "https://github.com/gsd-build/get-shit-done/blob/main/commands/gsd/ship.md", "gsd:ship command"),
@@ -604,6 +620,8 @@ META: dict[str, tuple[int, str, str]] = {
     "anthropics/skills": (160503, "https://github.com/anthropics/skills/blob/main/skills/docx/SKILL.md", "docx skill"),
     "google/agents-cli": (5060, "https://github.com/google/agents-cli#readme", "Project README"),
     "iflytek/skillhub": (3986, "https://github.com/iflytek/skillhub#readme", "Project README"),
+    "DenisSergeevitch/agents-best-practices": (2112, "https://github.com/DenisSergeevitch/agents-best-practices#readme", "Project README"),
+    "hesreallyhim/awesome-claude-code": (49846, "https://github.com/hesreallyhim/awesome-claude-code#readme", "Project README"),
     # frameworks
     "langchain-ai/langgraph": (37095, "https://github.com/langchain-ai/langgraph/blob/main/examples/customer-support/customer-support.ipynb", "Customer support agent"),
     "langchain-ai/langchain": (141595, "https://github.com/langchain-ai/langchain-academy/blob/main/module-1/agent.ipynb", "Build an agent notebook"),
@@ -640,6 +658,8 @@ META: dict[str, tuple[int, str, str]] = {
     "FlowiseAI/Flowise": (54543, "https://github.com/FlowiseAI/Flowise/blob/main/packages/server/marketplaces/agentflowsv2/Agentic%20RAG.json", "Agentic RAG flow"),
     "browser-use/browser-use": (104359, "https://github.com/browser-use/browser-use/blob/main/examples/use-cases/shopping.py", "Grocery shopping agent"),
     "TencentCloudADP/youtu-agent": (4580, "https://github.com/TencentCloudADP/youtu-agent#readme", "Project README"),
+    "rasbt/mini-coding-agent": (1004, "https://github.com/rasbt/mini-coding-agent#readme", "Project README"),
+    "cuga-project/cuga-agent": (859, "https://github.com/cuga-project/cuga-agent#readme", "Project README"),
     # multi-agent
     "openai/openai-agents-python": (27839, "https://github.com/openai/openai-agents-python/blob/main/examples/customer_service/main.py", "Airline customer service handoffs"),
     "crewAIInc/crewAI": (55382, "https://github.com/crewAIInc/crewAI-examples/blob/main/crews/trip_planner/trip_agents.py", "Trip planner crew"),
@@ -727,7 +747,16 @@ ARCHIVED: "dict[str, str]" = {
 
 # github_ids that are archived upstream (present in ARCHIVED) but should stay
 # out of the Graveyard and remain in normal ordering. Empty by default.
-KEEP_DESPITE_ARCHIVED: "set[str]" = set()
+KEEP_DESPITE_ARCHIVED: "set[str]" = {
+    # Cline-lineage IDE extension with 24k+ stars and a large existing user
+    # base (custom modes, MCP-first workflow); archival doesn't erase its
+    # place in the coding-agent-products history. See PR body for rationale.
+    "RooCodeInc/Roo-Code",
+    # 64k+ stars; an early, widely-cited example of the goal-backward /
+    # wave-based meta-prompting pattern this list's coding-harness-configs
+    # category tracks. See PR body for rationale.
+    "gsd-build/get-shit-done",
+}
 
 # Repos routed to the Graveyard for a curation-integrity reason rather than
 # upstream archival — e.g. star manipulation. Keyed by github_id, mapped to
@@ -773,7 +802,6 @@ RADAR: "list[dict]" = [
     {"id": "QwenLM/qwen-code", "via": "weekly discovery"},
     {"id": "openai/symphony", "via": "weekly discovery"},
     {"id": "gastownhall/beads", "via": "weekly discovery"},
-    {"id": "plandex-ai/plandex", "via": "weekly discovery"},
     {"id": "ag2ai/ag2", "via": "weekly discovery"},
     {"id": "IBM/mcp-context-forge", "via": "weekly discovery"},
     {"id": "evalstate/fast-agent", "via": "weekly discovery"},
@@ -870,6 +898,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "RooCodeInc/Roo-Code": ("step-gated", "resumable"),
     "HarnessLab/claw-code-agent": ("checkpoint-gated", "none"),
     "SeanHogg/BuilderForceAgents": ("bounded", "none"),
+    "1jehuang/jcode": ("checkpoint-gated", "none"),
     # coding-harness-configs
     "looptroop-ai/LoopTroop": ("bounded", "retry"),
     "obra/superpowers": ("n/a", "n/a"),
@@ -885,6 +914,8 @@ AXES: "dict[str, tuple[str, str]]" = {
     "QuantaAlpha/RepoMaster": ("headless", "none"),
     "aiming-lab/AutoHarness": ("bounded", "none"),
     "RyanAlberts/pmstack": ("n/a", "n/a"),
+    "DenisSergeevitch/agents-best-practices": ("n/a", "n/a"),
+    "hesreallyhim/awesome-claude-code": ("n/a", "n/a"),
     # frameworks
     "n8n-io/n8n": ("headless", "durable"),
     "Significant-Gravitas/AutoGPT": ("headless", "resumable"),
@@ -893,6 +924,8 @@ AXES: "dict[str, tuple[str, str]]" = {
     "langchain-ai/langchain": ("bounded", "retry"),
     "browser-use/browser-use": ("bounded", "retry"),
     "TencentCloudADP/youtu-agent": ("bounded", "retry"),
+    "rasbt/mini-coding-agent": ("bounded", "none"),
+    "cuga-project/cuga-agent": ("bounded", "retry"),
     "FlowiseAI/Flowise": ("headless", "retry"),
     "run-llama/llama_index": ("bounded", "retry"),
     "agno-agi/agno": ("bounded", "resumable"),

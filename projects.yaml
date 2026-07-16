@@ -97,6 +97,10 @@ projects:
     github_id: cline/cline
     labels: ["javascript"]
     category: "coding-agent-products"
+  - name: Roo-Code
+    github_id: RooCodeInc/Roo-Code
+    labels: ["javascript"]
+    category: "coding-agent-products"
   - name: Codex
     github_id: openai/codex
     category: "coding-agent-products"
@@ -126,10 +130,17 @@ projects:
     github_id: openinterpreter/openinterpreter
     labels: ["python"]
     category: "coding-agent-products"
+  - name: jcode
+    github_id: 1jehuang/jcode
+    labels: ["rust"]
+    category: "coding-agent-products"
   # Coding harness configs and SDKs
   - name: LoopTroop
     github_id: looptroop-ai/LoopTroop
     labels: ["javascript"]
+    category: "coding-harness-configs"
+  - name: get-shit-done
+    github_id: gsd-build/get-shit-done
     category: "coding-harness-configs"
   - name: GStack
     github_id: garrytan/gstack
@@ -168,6 +179,12 @@ projects:
     category: "coding-harness-configs"
   - name: skillhub
     github_id: iflytek/skillhub
+    category: "coding-harness-configs"
+  - name: agents-best-practices
+    github_id: DenisSergeevitch/agents-best-practices
+    category: "coding-harness-configs"
+  - name: awesome-claude-code
+    github_id: hesreallyhim/awesome-claude-code
     category: "coding-harness-configs"
   # Personal agent runtimes
   - name: Talon
@@ -293,6 +310,13 @@ projects:
     category: "frameworks"
   - name: youtu-agent
     github_id: TencentCloudADP/youtu-agent
+    category: "frameworks"
+  - name: mini-coding-agent
+    github_id: rasbt/mini-coding-agent
+    labels: ["python"]
+    category: "frameworks"
+  - name: CUGA
+    github_id: cuga-project/cuga-agent
     category: "frameworks"
   # Multi-agent and orchestration
   - name: openai-agents-python

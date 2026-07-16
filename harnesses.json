@@ -9,8 +9,8 @@
     "feed_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/feed.json",
     "license": "CC-BY-SA-4.0",
     "stars_captured": "2026-07-12",
-    "project_count": 124,
-    "graveyard_count": 5,
+    "project_count": 131,
+    "graveyard_count": 3,
     "tiers": [
       "super simple",
       "mostly simple",
@@ -104,7 +104,8 @@
         "openai/codex",
         "google-gemini/gemini-cli",
         "OpenHands/OpenHands",
-        "charmbracelet/crush"
+        "charmbracelet/crush",
+        "RooCodeInc/Roo-Code"
       ],
       "category_title": "Coding agent products (IDEs, CLIs, full suites)"
     },
@@ -345,7 +346,7 @@
     {
       "kind": "derived",
       "q": "How many of these agent harnesses are open source?",
-      "a": "105 of 124 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
+      "a": "107 of 131 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
       "slug": "how-many-of-these-agent-harnesses-are-open-source"
     },
     {
@@ -832,6 +833,36 @@
       }
     },
     {
+      "name": "Roo Code",
+      "github_id": "RooCodeInc/Roo-Code",
+      "url": "https://github.com/RooCodeInc/Roo-Code",
+      "slug": "roo-code",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#roo-code",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/roo-code/",
+      "description": "VS Code/Cursor extension in the Cline lineage. The **harness** is the approval-gated agent with custom modes and a strong MCP story; the IDE is the UI. Popular community fork when you want that workflow without the upstream extension.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 24321,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (IDE extension, MCP-first)",
+      "autonomy": "step-gated",
+      "autonomy_rank": 1,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "open-source",
+      "tags": [
+        "mcp",
+        "workflow",
+        "ide",
+        "typescript"
+      ],
+      "example": {
+        "label": "Custom modes guide",
+        "url": "https://docs.roocode.com/features/custom-modes"
+      }
+    },
+    {
       "name": "oh-my-pi",
       "github_id": "can1357/oh-my-pi",
       "url": "https://github.com/can1357/oh-my-pi",
@@ -861,6 +892,37 @@
       "example": {
         "label": "LSP wired into edits",
         "url": "https://github.com/can1357/oh-my-pi/blob/main/docs/lsp-config.md"
+      }
+    },
+    {
+      "name": "jcode",
+      "github_id": "1jehuang/jcode",
+      "url": "https://github.com/1jehuang/jcode",
+      "slug": "jcode",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#jcode",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/jcode/",
+      "description": "Rust terminal coding agent that bills itself outright as a \"Coding Agent Harness\": a TUI/CLI shell over a multi-provider (Claude, OpenAI) tool-call loop with MCP support.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 8291,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (terminal agent, multi-provider, MCP)",
+      "autonomy": "checkpoint-gated",
+      "autonomy_rank": 2,
+      "recovery": "none",
+      "recovery_rank": 1,
+      "license_signal": "unknown",
+      "tags": [
+        "mcp",
+        "provider-agnostic",
+        "cli",
+        "tui",
+        "rust"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/1jehuang/jcode#readme"
       }
     },
     {
@@ -1032,6 +1094,59 @@
       }
     },
     {
+      "name": "get-shit-done",
+      "github_id": "gsd-build/get-shit-done",
+      "url": "https://github.com/gsd-build/get-shit-done",
+      "slug": "get-shit-done",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#get-shit-done",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/get-shit-done/",
+      "description": "Goal-backward planning and wave-based execution over fresh context windows; avoids context rot by design. Python/JS meta-prompting for Claude Code, OpenCode, Gemini CLI.",
+      "category": "coding-harness-configs",
+      "category_title": "Coding harness configs and SDKs",
+      "stars": 64740,
+      "tier": "mostly simple",
+      "tier_rank": 2,
+      "axis": "mostly simple (meta-prompting, you own stack)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "open-source",
+      "tags": [
+        "cli",
+        "python"
+      ],
+      "example": {
+        "label": "gsd:ship command",
+        "url": "https://github.com/gsd-build/get-shit-done/blob/main/commands/gsd/ship.md"
+      }
+    },
+    {
+      "name": "awesome-claude-code",
+      "github_id": "hesreallyhim/awesome-claude-code",
+      "url": "https://github.com/hesreallyhim/awesome-claude-code",
+      "slug": "awesome-claude-code",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#awesome-claude-code",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/awesome-claude-code/",
+      "description": "The reference curated index of Claude Code skills, slash commands, hooks, and status lines — a config-layer content bundle, not a runtime, for assembling your own **harness** on top of Claude Code.",
+      "category": "coding-harness-configs",
+      "category_title": "Coding harness configs and SDKs",
+      "stars": 49846,
+      "tier": "super simple",
+      "tier_rank": 1,
+      "axis": "super simple (content bundle)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "unknown",
+      "tags": [],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/hesreallyhim/awesome-claude-code#readme"
+      }
+    },
+    {
       "name": "wshobson/agents",
       "github_id": "wshobson/agents",
       "url": "https://github.com/wshobson/agents",
@@ -1174,6 +1289,31 @@
       "example": {
         "label": "Project README",
         "url": "https://github.com/iflytek/skillhub#readme"
+      }
+    },
+    {
+      "name": "agents-best-practices",
+      "github_id": "DenisSergeevitch/agents-best-practices",
+      "url": "https://github.com/DenisSergeevitch/agents-best-practices",
+      "slug": "agents-best-practices",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#agents-best-practices",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/agents-best-practices/",
+      "description": "Provider-neutral Agent Skill for Codex and Claude Code that packages agentic **harness** design patterns as a skill — teaching harness engineering rather than shipping a runtime.",
+      "category": "coding-harness-configs",
+      "category_title": "Coding harness configs and SDKs",
+      "stars": 2112,
+      "tier": "super simple",
+      "tier_rank": 1,
+      "axis": "super simple (skills bundle)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "unknown",
+      "tags": [],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/DenisSergeevitch/agents-best-practices#readme"
       }
     },
     {
@@ -2133,6 +2273,60 @@
       "example": {
         "label": "Research assistant crew",
         "url": "https://github.com/agentstack-ai/AgentStack/tree/main/examples/research_assistant"
+      }
+    },
+    {
+      "name": "mini-coding-agent",
+      "github_id": "rasbt/mini-coding-agent",
+      "url": "https://github.com/rasbt/mini-coding-agent",
+      "slug": "mini-coding-agent",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#mini-coding-agent",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/mini-coding-agent/",
+      "description": "Minimal, readable coding-agent **harness** in Python from ML educator Sebastian Raschka (rasbt), built to explain the core loop — tool calls, edits, execution — without framework scaffolding.",
+      "category": "frameworks",
+      "category_title": "Frameworks",
+      "stars": 1004,
+      "tier": "super simple",
+      "tier_rank": 1,
+      "axis": "super simple (educational, minimal LOC)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "none",
+      "recovery_rank": 1,
+      "license_signal": "unknown",
+      "tags": [
+        "python"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/rasbt/mini-coding-agent#readme"
+      }
+    },
+    {
+      "name": "CUGA",
+      "github_id": "cuga-project/cuga-agent",
+      "url": "https://github.com/cuga-project/cuga-agent",
+      "slug": "cuga-agent",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#cuga-agent",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/cuga-agent/",
+      "description": "Open-source generalist agent **harness** for the enterprise: OpenAPI/MCP integrations, composable reasoning modes, and policy/guardrail-aware execution for complex web and API task completion.",
+      "category": "frameworks",
+      "category_title": "Frameworks",
+      "stars": 859,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (enterprise, guardrails, multi-mode — product suite)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "retry",
+      "recovery_rank": 2,
+      "license_signal": "unknown",
+      "tags": [
+        "mcp"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/cuga-project/cuga-agent#readme"
       }
     },
     {
@@ -3915,20 +4109,6 @@
       "reason": "suspected star manipulation — ~228k stars / ~35k forks on a repo created 2026-01 with no matching install base, dependents, or discussion; fork-to-star ratio and growth curve are inconsistent with organic adoption"
     },
     {
-      "github_id": "gsd-build/get-shit-done",
-      "name": "get-shit-done",
-      "last_stars": 64740,
-      "since": "2026-07-03",
-      "reason": "archived upstream — kept for citation"
-    },
-    {
-      "github_id": "RooCodeInc/Roo-Code",
-      "name": "Roo Code",
-      "last_stars": 24321,
-      "since": "2026-07-03",
-      "reason": "archived upstream — kept for citation"
-    },
-    {
       "github_id": "spring-ai-community/spring-ai-tool-search-tool",
       "name": "spring-ai-tool-search-tool",
       "last_stars": 77,
@@ -4021,12 +4201,6 @@
       "stars": 14,
       "desc": "Deploy AI agents for your team to automate business workflows and coding.",
       "via": "community · PR #21"
-    },
-    {
-      "github_id": "plandex-ai/plandex",
-      "stars": 0,
-      "desc": "",
-      "via": "weekly discovery"
     }
   ]
 }
