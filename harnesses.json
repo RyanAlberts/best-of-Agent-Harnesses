@@ -9,8 +9,8 @@
     "feed_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/feed.json",
     "license": "CC-BY-SA-4.0",
     "stars_captured": "2026-07-12",
-    "project_count": 124,
-    "graveyard_count": 5,
+    "project_count": 135,
+    "graveyard_count": 3,
     "tiers": [
       "super simple",
       "mostly simple",
@@ -104,7 +104,8 @@
         "openai/codex",
         "google-gemini/gemini-cli",
         "OpenHands/OpenHands",
-        "charmbracelet/crush"
+        "charmbracelet/crush",
+        "RooCodeInc/Roo-Code"
       ],
       "category_title": "Coding agent products (IDEs, CLIs, full suites)"
     },
@@ -333,7 +334,7 @@
     {
       "kind": "derived",
       "q": "Which agent harnesses can run unattended (headless)?",
-      "a": "Harnesses designed for unattended runs, batches, and fleets: opencode, OpenHands, goose, SWE-agent, Claude Agent SDK, RepoMaster, OpenClaw, Hermes.",
+      "a": "Harnesses designed for unattended runs, batches, and fleets: opencode, OpenHands, goose, Symphony, SWE-agent, Claude Agent SDK, RepoMaster, OpenClaw.",
       "slug": "which-agent-harnesses-can-run-unattended-headless"
     },
     {
@@ -345,7 +346,7 @@
     {
       "kind": "derived",
       "q": "How many of these agent harnesses are open source?",
-      "a": "105 of 124 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
+      "a": "107 of 135 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
       "slug": "how-many-of-these-agent-harnesses-are-open-source"
     },
     {
@@ -457,6 +458,35 @@
       "example": {
         "label": "Self-hosting AGENTS.md",
         "url": "https://github.com/agentsmd/agents.md/blob/main/AGENTS.md"
+      }
+    },
+    {
+      "name": "context-mode",
+      "github_id": "mksglu/context-mode",
+      "url": "https://github.com/mksglu/context-mode",
+      "slug": "context-mode",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#context-mode",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/context-mode/",
+      "description": "Context-window optimization layer that sandboxes tool output before it reaches the model (claimed 98% reduction) and persists session memory across 17 agent platforms via MCP and hooks—progressive disclosure applied to tool results, not just instructions.",
+      "category": "progressive-disclosure",
+      "category_title": "Progressive disclosure harnesses",
+      "stars": 18837,
+      "tier": "mostly simple",
+      "tier_rank": 2,
+      "axis": "mostly simple (output sandboxing, cross-platform)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "unknown",
+      "tags": [
+        "mcp",
+        "memory",
+        "sandbox"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/mksglu/context-mode#readme"
       }
     },
     {
@@ -803,6 +833,31 @@
       }
     },
     {
+      "name": "vibe-kanban",
+      "github_id": "BloopAI/vibe-kanban",
+      "url": "https://github.com/BloopAI/vibe-kanban",
+      "slug": "vibe-kanban",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#vibe-kanban",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/vibe-kanban/",
+      "description": "Kanban-style fleet manager for running Claude Code, Codex, or any coding agent across many tasks at once. The **harness** contribution is the task-queue/review layer on top of whichever agent executes; not an agent loop itself.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 27345,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (task-fleet manager)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "unknown",
+      "tags": [],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/BloopAI/vibe-kanban#readme"
+      }
+    },
+    {
       "name": "crush",
       "github_id": "charmbracelet/crush",
       "url": "https://github.com/charmbracelet/crush",
@@ -829,6 +884,122 @@
       "example": {
         "label": "Crush launch post",
         "url": "https://charm.land/blog/crush-comes-home/"
+      }
+    },
+    {
+      "name": "Kilo Code",
+      "github_id": "Kilo-Org/kilocode",
+      "url": "https://github.com/Kilo-Org/kilocode",
+      "slug": "kilocode",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#kilocode",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/kilocode/",
+      "description": "VS Code extension and CLI in the Cline/Roo-Code lineage — a natural pick now that Roo-Code is archived upstream. The **harness** is an approval-gated autonomous-mode loop with a provider/tool marketplace; the IDE is the shell.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 26064,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (IDE extension + CLI, MCP)",
+      "autonomy": "step-gated",
+      "autonomy_rank": 1,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "unknown",
+      "tags": [
+        "mcp",
+        "cli",
+        "ide",
+        "typescript"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/Kilo-Org/kilocode#readme"
+      }
+    },
+    {
+      "name": "qwen-code",
+      "github_id": "QwenLM/qwen-code",
+      "url": "https://github.com/QwenLM/qwen-code",
+      "slug": "qwen-code",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#qwen-code",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/qwen-code/",
+      "description": "Alibaba's official terminal coding agent, forked from Gemini CLI's agent loop and retuned for Qwen models. The **harness** is the same sandboxed tool-call loop as its upstream; the terminal is the shell.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 25971,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (official CLI, Gemini-CLI fork)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "unknown",
+      "tags": [
+        "sandbox",
+        "cli",
+        "typescript"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/QwenLM/qwen-code#readme"
+      }
+    },
+    {
+      "name": "Symphony",
+      "github_id": "openai/symphony",
+      "url": "https://github.com/openai/symphony",
+      "slug": "symphony",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#symphony",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/symphony/",
+      "description": "OpenAI's harness for fanning a task out into many isolated, autonomous coding-agent implementation runs and surfacing the ones that pass, so a team manages outcomes instead of supervising each session.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 25924,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (parallel isolated runs — product suite)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "unknown",
+      "tags": [
+        "sandbox"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/openai/symphony#readme"
+      }
+    },
+    {
+      "name": "Roo Code",
+      "github_id": "RooCodeInc/Roo-Code",
+      "url": "https://github.com/RooCodeInc/Roo-Code",
+      "slug": "roo-code",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#roo-code",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/roo-code/",
+      "description": "VS Code/Cursor extension in the Cline lineage. The **harness** is the approval-gated agent with custom modes and a strong MCP story; the IDE is the UI. Popular community fork when you want that workflow without the upstream extension.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 24321,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (IDE extension, MCP-first)",
+      "autonomy": "step-gated",
+      "autonomy_rank": 1,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "open-source",
+      "tags": [
+        "mcp",
+        "workflow",
+        "ide",
+        "typescript"
+      ],
+      "example": {
+        "label": "Custom modes guide",
+        "url": "https://docs.roocode.com/features/custom-modes"
       }
     },
     {
@@ -1029,6 +1200,59 @@
       "example": {
         "label": "/ship SKILL.md",
         "url": "https://github.com/garrytan/gstack/blob/main/ship/SKILL.md"
+      }
+    },
+    {
+      "name": "get-shit-done",
+      "github_id": "gsd-build/get-shit-done",
+      "url": "https://github.com/gsd-build/get-shit-done",
+      "slug": "get-shit-done",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#get-shit-done",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/get-shit-done/",
+      "description": "Goal-backward planning and wave-based execution over fresh context windows; avoids context rot by design. Python/JS meta-prompting for Claude Code, OpenCode, Gemini CLI.",
+      "category": "coding-harness-configs",
+      "category_title": "Coding harness configs and SDKs",
+      "stars": 64740,
+      "tier": "mostly simple",
+      "tier_rank": 2,
+      "axis": "mostly simple (meta-prompting, you own stack)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "open-source",
+      "tags": [
+        "cli",
+        "python"
+      ],
+      "example": {
+        "label": "gsd:ship command",
+        "url": "https://github.com/gsd-build/get-shit-done/blob/main/commands/gsd/ship.md"
+      }
+    },
+    {
+      "name": "awesome-claude-code",
+      "github_id": "hesreallyhim/awesome-claude-code",
+      "url": "https://github.com/hesreallyhim/awesome-claude-code",
+      "slug": "awesome-claude-code",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#awesome-claude-code",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/awesome-claude-code/",
+      "description": "Large community-curated index of Claude Code skills, slash commands, status lines, and plugins—resources for extending the harness, not a harness itself, but the most-followed catalog of the genre.",
+      "category": "coding-harness-configs",
+      "category_title": "Coding harness configs and SDKs",
+      "stars": 49846,
+      "tier": "super simple",
+      "tier_rank": 1,
+      "axis": "super simple (curated resource index)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "unknown",
+      "tags": [],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/hesreallyhim/awesome-claude-code#readme"
       }
     },
     {
@@ -2385,6 +2609,34 @@
       }
     },
     {
+      "name": "hive",
+      "github_id": "aden-hive/hive",
+      "url": "https://github.com/aden-hive/hive",
+      "slug": "hive",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#hive",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/hive/",
+      "description": "Self-hosted multi-agent **harness** aimed at production workloads: human-in-the-loop checkpoints and a self-improving agent loop, distinct from single-session coding-agent shells.",
+      "category": "multi-agent",
+      "category_title": "Multi-agent and orchestration",
+      "stars": 10675,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (multi-agent, human-in-the-loop — product suite)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "unknown",
+      "tags": [
+        "multi-agent",
+        "python"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/aden-hive/hive#readme"
+      }
+    },
+    {
       "name": "PraisonAI",
       "github_id": "MervinPraison/PraisonAI",
       "url": "https://github.com/MervinPraison/PraisonAI",
@@ -2525,6 +2777,35 @@
       "example": {
         "label": "Repo map source",
         "url": "https://github.com/Aider-AI/aider/blob/main/aider/repomap.py"
+      }
+    },
+    {
+      "name": "chrome-devtools-mcp",
+      "github_id": "ChromeDevTools/chrome-devtools-mcp",
+      "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+      "slug": "chrome-devtools-mcp",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#chrome-devtools-mcp",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/chrome-devtools-mcp/",
+      "description": "Google's official Chrome DevTools MCP server: exposes console, network, and performance-trace inspection as tool calls agents can drive directly, instead of a human clicking through the DevTools panel.",
+      "category": "plugins-mcp-cli",
+      "category_title": "Plugins, MCPs, CLI tools",
+      "stars": 46735,
+      "tier": "mostly simple",
+      "tier_rank": 2,
+      "axis": "mostly simple (official browser-debug MCP)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "unknown",
+      "tags": [
+        "mcp",
+        "browser",
+        "typescript"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp#readme"
       }
     },
     {
@@ -2946,6 +3227,33 @@
       "example": {
         "label": "Quickstart",
         "url": "https://github.com/topoteretes/cognee#readme"
+      }
+    },
+    {
+      "name": "beads",
+      "github_id": "gastownhall/beads",
+      "url": "https://github.com/gastownhall/beads",
+      "slug": "beads",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#beads",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/beads/",
+      "description": "Portable persistent-memory layer for coding agents: tracks decisions and task state outside the harness's own context window so it survives session resets and model swaps.",
+      "category": "memory",
+      "category_title": "Memory and state",
+      "stars": 25246,
+      "tier": "mostly simple",
+      "tier_rank": 2,
+      "axis": "mostly simple (portable memory store)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "unknown",
+      "tags": [
+        "memory"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/gastownhall/beads#readme"
       }
     },
     {
@@ -3915,20 +4223,6 @@
       "reason": "suspected star manipulation — ~228k stars / ~35k forks on a repo created 2026-01 with no matching install base, dependents, or discussion; fork-to-star ratio and growth curve are inconsistent with organic adoption"
     },
     {
-      "github_id": "gsd-build/get-shit-done",
-      "name": "get-shit-done",
-      "last_stars": 64740,
-      "since": "2026-07-03",
-      "reason": "archived upstream — kept for citation"
-    },
-    {
-      "github_id": "RooCodeInc/Roo-Code",
-      "name": "Roo Code",
-      "last_stars": 24321,
-      "since": "2026-07-03",
-      "reason": "archived upstream — kept for citation"
-    },
-    {
       "github_id": "spring-ai-community/spring-ai-tool-search-tool",
       "name": "spring-ai-tool-search-tool",
       "last_stars": 77,
@@ -3948,42 +4242,6 @@
       "github_id": "bytedance/deer-flow",
       "stars": 76831,
       "desc": "An open-source long-horizon SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skill, subagents and message…",
-      "via": "weekly discovery"
-    },
-    {
-      "github_id": "ChromeDevTools/chrome-devtools-mcp",
-      "stars": 46735,
-      "desc": "Chrome DevTools for coding agents",
-      "via": "weekly discovery"
-    },
-    {
-      "github_id": "BloopAI/vibe-kanban",
-      "stars": 27345,
-      "desc": "Get 10X more out of Claude Code, Codex or any coding agent",
-      "via": "weekly discovery"
-    },
-    {
-      "github_id": "Kilo-Org/kilocode",
-      "stars": 26064,
-      "desc": "Kilo is the all-in-one agentic engineering platform. Build, ship, and iterate faster with the most popular open source coding agent.",
-      "via": "weekly discovery"
-    },
-    {
-      "github_id": "QwenLM/qwen-code",
-      "stars": 25971,
-      "desc": "An open-source AI coding agent that lives in your terminal.",
-      "via": "weekly discovery"
-    },
-    {
-      "github_id": "openai/symphony",
-      "stars": 25924,
-      "desc": "Symphony turns project work into isolated, autonomous implementation runs, allowing teams to manage work instead of supervising coding agents.",
-      "via": "weekly discovery"
-    },
-    {
-      "github_id": "gastownhall/beads",
-      "stars": 25246,
-      "desc": "Beads - A memory upgrade for your coding agent",
       "via": "weekly discovery"
     },
     {

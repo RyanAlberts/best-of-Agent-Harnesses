@@ -25,9 +25,9 @@
 <text x="44" y="395" font-size="13" fill="#6b7280" transform="rotate(-90 44 395)" text-anchor="middle">recovery: crash = start over&#160;&#160;→&#160;&#160;survives restarts</text>
 <text x="832.5" y="652.0" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">9</text>
 <text x="832.5" y="254.5" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">4</text>
-<text x="832.5" y="387.0" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">18</text>
-<text x="397.5" y="387.0" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">1</text>
-<text x="1050.0" y="387.0" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">21</text>
+<text x="832.5" y="387.0" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">21</text>
+<text x="397.5" y="387.0" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">3</text>
+<text x="1050.0" y="387.0" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">22</text>
 <text x="615.0" y="652.0" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">1</text>
 <text x="832.5" y="519.5" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">8</text>
 <text x="1050.0" y="652.0" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">12</text>
@@ -72,6 +72,7 @@
 <circle cx="724.0" cy="355.5" r="5.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>agent-squad — ⭐7.7k</title></circle>
 <circle cx="1015.8" cy="469.1" r="5.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>R2R — ⭐7.9k</title></circle>
 <circle cx="766.5" cy="609.7" r="5.5" fill="#ec4899" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>PraisonAI — ⭐8.4k</title></circle>
+<circle cx="808.8" cy="300.6" r="5.5" fill="#ec4899" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>hive — ⭐10.7k</title></circle>
 <circle cx="717.6" cy="309.0" r="5.5" fill="#ec4899" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Microsoft Agent Framework — ⭐12.1k</title></circle>
 <circle cx="799.2" cy="350.0" r="5.5" fill="#0ea5e9" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>OpenHarness (HKUDS) — ⭐14.7k</title></circle>
 <circle cx="951.6" cy="357.8" r="5.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>botpress — ⭐14.8k</title></circle>
@@ -84,7 +85,11 @@
 <circle cx="962.4" cy="327.4" r="5.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Google ADK — ⭐20.6k</title></circle>
 <circle cx="980.5" cy="362.4" r="5.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>rasa — ⭐21.2k</title></circle>
 <circle cx="905.4" cy="218.0" r="5.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>letta — ⭐23.8k</title></circle>
+<circle cx="296.2" cy="326.9" r="5.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Roo Code — ⭐24.3k</title></circle>
 <circle cx="683.1" cy="470.4" r="5.5" fill="#a16207" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>vercel/ai — ⭐25.5k</title></circle>
+<circle cx="961.9" cy="321.4" r="5.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Symphony — ⭐25.9k</title></circle>
+<circle cx="799.4" cy="315.9" r="5.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>qwen-code — ⭐26k</title></circle>
+<circle cx="286.0" cy="360.1" r="5.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Kilo Code — ⭐26.1k</title></circle>
 <circle cx="745.8" cy="173.4" r="5.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>mastra — ⭐26.1k</title></circle>
 <circle cx="759.2" cy="207.5" r="5.5" fill="#a16207" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>deepagents — ⭐26.1k</title></circle>
 <circle cx="760.7" cy="300.6" r="5.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>crush — ⭐26.5k</title></circle>
@@ -106,6 +111,7 @@
 <circle cx="755.4" cy="364.4" r="5.5" fill="#ec4899" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>autogen — ⭐59.7k</title></circle>
 <circle cx="680.5" cy="305.9" r="5.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Open Interpreter — ⭐64.4k</title></circle>
 <circle cx="261.3" cy="323.4" r="5.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Cline — ⭐64.6k</title></circle>
+<circle cx="700.6" cy="365.8" r="5.5" fill="#f59e0b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>get-shit-done — ⭐64.7k</title></circle>
 <circle cx="927.3" cy="319.3" r="5.5" fill="#ec4899" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>MetaGPT — ⭐69.3k</title></circle>
 <circle cx="771.1" cy="351.6" r="5.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>pi — ⭐69.8k</title></circle>
 <circle cx="950.3" cy="301.5" r="5.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>OpenHands — ⭐80.5k</title></circle>
@@ -131,5 +137,5 @@
 <text x="993.7" y="164.6" text-anchor="end" font-size="12.5" font-weight="600" fill="#1f2937">n8n</text>
 <text x="1004.2" y="448.5" text-anchor="end" font-size="12.5" font-weight="600" fill="#1f2937">langflow</text>
 <text x="534.2" y="313.2" text-anchor="start" font-size="12.5" font-weight="600" fill="#1f2937">aider</text>
-<text x="1060" y="784" text-anchor="end" font-size="12" fill="#9ca3af">86 loop-owning projects shown · 38 format/component entries (n/a) omitted · full tiers in harnesses.json</text>
+<text x="1060" y="784" text-anchor="end" font-size="12" fill="#9ca3af">92 loop-owning projects shown · 43 format/component entries (n/a) omitted · full tiers in harnesses.json</text>
 </svg>
