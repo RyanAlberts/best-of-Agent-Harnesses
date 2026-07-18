@@ -166,6 +166,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("ToolRAG", "antl3x/ToolRAG",
                 "Semantic tool retrieval for LLMs; serves only the tools the user query demands (MCP-compatible), unlimited tool sets with zero context penalty.",
                 "mostly simple (query-driven retrieval)"),
+        Project("context-mode", "mksglu/context-mode",
+                "Context-window optimization layer that sandboxes tool output before it reaches the model (claimed 98% reduction) and persists session memory across 17 agent platforms via MCP and hooks—progressive disclosure applied to tool results, not just instructions.",
+                "mostly simple (output sandboxing, cross-platform)", oss="❓"),
     ],
     "coding-agent-products": [
         Project("oh-my-pi", "can1357/oh-my-pi",
@@ -213,6 +216,18 @@ PROJECTS: dict[str, list[Project]] = {
         Project("Open Interpreter", "openinterpreter/openinterpreter",
                 "Lightweight terminal coding agent oriented to open models (DeepSeek, Kimi, Qwen). The **harness** is a code-execution loop — the model writes code, the harness executes it with confirmation gates; the CLI is the shell. The original \"let the LLM run code on my machine\" project, reborn for open weights.",
                 "mostly simple (lean code-exec loop)", labels=["python"]),
+        Project("qwen-code", "QwenLM/qwen-code",
+                "Alibaba's official terminal coding agent, forked from Gemini CLI's agent loop and retuned for Qwen models. The **harness** is the same sandboxed tool-call loop as its upstream; the terminal is the shell.",
+                "slightly complex (official CLI, Gemini-CLI fork)", oss="❓", labels=["javascript"]),
+        Project("Kilo Code", "Kilo-Org/kilocode",
+                "VS Code extension and CLI in the Cline/Roo-Code lineage — a natural pick now that Roo-Code is archived upstream. The **harness** is an approval-gated autonomous-mode loop with a provider/tool marketplace; the IDE is the shell.",
+                "slightly complex (IDE extension + CLI, MCP)", oss="❓", labels=["javascript"]),
+        Project("Symphony", "openai/symphony",
+                "OpenAI's harness for fanning a task out into many isolated, autonomous coding-agent implementation runs and surfacing the ones that pass, so a team manages outcomes instead of supervising each session.",
+                "complex (parallel isolated runs — product suite)", oss="❓"),
+        Project("vibe-kanban", "BloopAI/vibe-kanban",
+                "Kanban-style fleet manager for running Claude Code, Codex, or any coding agent across many tasks at once. The **harness** contribution is the task-queue/review layer on top of whichever agent executes; not an agent loop itself.",
+                "slightly complex (task-fleet manager)", oss="❓"),
     ],
     "coding-harness-configs": [
         Project("LoopTroop", "looptroop-ai/LoopTroop",
@@ -257,6 +272,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("skillhub", "iflytek/skillhub",
                 "iFlytek's self-hosted registry for publishing, versioning, and governing agent skill packages—the **harness** config layer treated as an enterprise artifact store rather than a CLI or IDE shell.",
                 "mostly simple (skill registry/governance)", oss="❓"),
+        Project("awesome-claude-code", "hesreallyhim/awesome-claude-code",
+                "Large community-curated index of Claude Code skills, slash commands, status lines, and plugins—resources for extending the harness, not a harness itself, but the most-followed catalog of the genre.",
+                "super simple (curated resource index)", oss="❓"),
     ],
     "personal-agent-runtimes": [
         Project("Talon", "dylanneve1/talon",
@@ -388,6 +406,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("Microsoft Agent Framework", "microsoft/agent-framework",
                 "Microsoft's convergence of AutoGen and Semantic Kernel: build, orchestrate, and deploy agents and multi-agent workflows in Python and .NET, with graph-based workflows and checkpointing — the designated successor harness for both lines.",
                 "slightly complex (Python/.NET SDK, graph workflows)", labels=["python"]),
+        Project("hive", "aden-hive/hive",
+                "Self-hosted multi-agent **harness** aimed at production workloads: human-in-the-loop checkpoints and a self-improving agent loop, distinct from single-session coding-agent shells.",
+                "complex (multi-agent, human-in-the-loop — product suite)", oss="❓", labels=["python"]),
     ],
     "plugins-mcp-cli": [
         Project("aider", "Aider-AI/aider",
@@ -435,6 +456,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("Playwright MCP", "microsoft/playwright-mcp",
                 "Playwright's official MCP server: structured browser control (navigate, click, fill, extract) via the accessibility tree rather than screenshots, so web tasks stay fast and deterministic.",
                 "mostly simple (browser MCP)", labels=["javascript"]),
+        Project("chrome-devtools-mcp", "ChromeDevTools/chrome-devtools-mcp",
+                "Google's official Chrome DevTools MCP server: exposes console, network, and performance-trace inspection as tool calls agents can drive directly, instead of a human clicking through the DevTools panel.",
+                "mostly simple (official browser-debug MCP)", oss="❓", labels=["javascript"]),
     ],
     "memory": [
         Project("cognee", "topoteretes/cognee",
@@ -446,6 +470,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("claude-mem", "thedotmack/claude-mem",
                 "Claude Code plugin that captures everything an agent does during a session, AI-compresses it (via claude-agent-sdk), and injects the relevant context into future sessions—session-to-session memory as a drop-in.",
                 "slightly complex (session capture + compression)"),
+        Project("beads", "gastownhall/beads",
+                "Portable persistent-memory layer for coding agents: tracks decisions and task state outside the harness's own context window so it survives session resets and model swaps.",
+                "mostly simple (portable memory store)", oss="❓"),
     ],
     "evaluation": [
         Project("agent-qa", "vostride/agent-qa",
@@ -574,6 +601,7 @@ META: dict[str, tuple[int, str, str]] = {
     "spring-ai-community/spring-ai-tool-search-tool": (77, "https://github.com/spring-ai-community/spring-ai-tool-search-tool/tree/main/examples/tool-search-tool-demo", "Tool Search demo app"),
     "Reason-Wang/ToolGen": (182, "https://github.com/Reason-Wang/ToolGen/blob/master/scripts/eval_full_pipeline.sh", "Full eval pipeline"),
     "antl3x/ToolRAG": (29, "https://github.com/antl3x/ToolRAG/blob/main/packages/%40antl3x-toolrag/README.md", "MCP server retrieval"),
+    "mksglu/context-mode": (18837, "https://github.com/mksglu/context-mode#readme", "Project README"),
     # coding-agent-products
     "can1357/oh-my-pi": (17388, "https://github.com/can1357/oh-my-pi/blob/main/docs/lsp-config.md", "LSP wired into edits"),
     "earendil-works/pi": (69847, "https://github.com/earendil-works/pi#readme", "Project README"),
@@ -589,6 +617,10 @@ META: dict[str, tuple[int, str, str]] = {
     "aaif-goose/goose": (51108, "https://block.github.io/goose/docs/guides/recipes/", "Goose recipes guide"),
     "HarnessLab/claw-code-agent": (528, "https://github.com/HarnessLab/claw-code-agent#-quick-start", "Quick Start guide"),
     "SeanHogg/BuilderForceAgents": (3, "https://github.com/SeanHogg/BuilderForceAgents#readme", "Multi-agent README"),
+    "QwenLM/qwen-code": (25971, "https://github.com/QwenLM/qwen-code#readme", "Project README"),
+    "Kilo-Org/kilocode": (26064, "https://github.com/Kilo-Org/kilocode#readme", "Project README"),
+    "openai/symphony": (25924, "https://github.com/openai/symphony#readme", "Project README"),
+    "BloopAI/vibe-kanban": (27345, "https://github.com/BloopAI/vibe-kanban#readme", "Project README"),
     # coding-harness-configs
     "looptroop-ai/LoopTroop": (60, "https://github.com/looptroop-ai/LoopTroop#readme", "Council → loop → worktree pipeline"),
     "gsd-build/get-shit-done": (64740, "https://github.com/gsd-build/get-shit-done/blob/main/commands/gsd/ship.md", "gsd:ship command"),
@@ -604,6 +636,7 @@ META: dict[str, tuple[int, str, str]] = {
     "anthropics/skills": (160503, "https://github.com/anthropics/skills/blob/main/skills/docx/SKILL.md", "docx skill"),
     "google/agents-cli": (5060, "https://github.com/google/agents-cli#readme", "Project README"),
     "iflytek/skillhub": (3986, "https://github.com/iflytek/skillhub#readme", "Project README"),
+    "hesreallyhim/awesome-claude-code": (49846, "https://github.com/hesreallyhim/awesome-claude-code#readme", "Project README"),
     # frameworks
     "langchain-ai/langgraph": (37095, "https://github.com/langchain-ai/langgraph/blob/main/examples/customer-support/customer-support.ipynb", "Customer support agent"),
     "langchain-ai/langchain": (141595, "https://github.com/langchain-ai/langchain-academy/blob/main/module-1/agent.ipynb", "Build an agent notebook"),
@@ -646,6 +679,7 @@ META: dict[str, tuple[int, str, str]] = {
     "microsoft/autogen": (59674, "https://github.com/microsoft/autogen/tree/main/python/samples/core_distributed-group-chat", "Distributed group chat"),
     "MervinPraison/PraisonAI": (8410, "https://github.com/MervinPraison/PraisonAI/blob/main/examples/python/general/orchestrator-workers.py", "Orchestrator-workers pattern"),
     "THUDM/AgentRL": (314, "https://github.com/THUDM/AgentRL/blob/main/examples/training/async_trainer.py", "Async GRPO trainer"),
+    "aden-hive/hive": (10675, "https://github.com/aden-hive/hive#readme", "Project README"),
     # plugins-mcp-cli
     "Aider-AI/aider": (47312, "https://github.com/Aider-AI/aider/blob/main/aider/repomap.py", "Repo map source"),
     "RyanAlberts/agentlog": (1, "https://github.com/RyanAlberts/agentlog/blob/main/example-log/decisions.jsonl", "Sample decisions.jsonl"),
@@ -698,12 +732,14 @@ META: dict[str, tuple[int, str, str]] = {
     "brandonhimpfen/awesome-ai-agents": (12, "https://github.com/brandonhimpfen/awesome-ai-agents#frameworks", "Frameworks section"),
     # memory
     "topoteretes/cognee": (27612, "https://github.com/topoteretes/cognee#readme", "Quickstart"),
+    "gastownhall/beads": (25246, "https://github.com/gastownhall/beads#readme", "Project README"),
     # observability
     "langfuse/langfuse": (30962, "https://langfuse.com/docs", "Docs"),
     "mlflow/mlflow": (26988, "https://mlflow.org", "Docs"),
     # plugins-mcp-cli (MCP infrastructure)
     "modelcontextprotocol/servers": (88369, "https://github.com/modelcontextprotocol/servers#readme", "Server catalog"),
     "upstash/context7": (58961, "https://context7.com", "Docs"),
+    "ChromeDevTools/chrome-devtools-mcp": (46735, "https://github.com/ChromeDevTools/chrome-devtools-mcp#readme", "Project README"),
     "microsoft/playwright-mcp": (34980, "https://github.com/microsoft/playwright-mcp#readme", "Setup & config"),
     # multi-agent
     "FoundationAgents/OpenManus": (57224, "https://github.com/FoundationAgents/OpenManus#readme", "Quickstart"),
@@ -727,7 +763,17 @@ ARCHIVED: "dict[str, str]" = {
 
 # github_ids that are archived upstream (present in ARCHIVED) but should stay
 # out of the Graveyard and remain in normal ordering. Empty by default.
-KEEP_DESPITE_ARCHIVED: "set[str]" = set()
+KEEP_DESPITE_ARCHIVED: "set[str]" = {
+    # 24k+ stars, a major fork in the Cline lineage that shaped the VS Code
+    # coding-agent-extension genre; archived upstream 2026-07-03 but still
+    # widely referenced/forked (see Kilo Code, its direct successor, added
+    # this cycle). Historically important enough to keep out of the Graveyard.
+    "RooCodeInc/Roo-Code",
+    # 64k+ stars and still climbing per the weekly star-mover feed even after
+    # archival — an outsized footprint for a meta-prompting config repo.
+    # Kept visible (flagged) rather than graveyarded pending a closer look.
+    "gsd-build/get-shit-done",
+}
 
 # Repos routed to the Graveyard for a curation-integrity reason rather than
 # upstream archival — e.g. star manipulation. Keyed by github_id, mapped to
@@ -767,12 +813,6 @@ CONTRIBUTORS: "list[tuple[str, str]]" = [
 # automatically) or gets unpinned.
 RADAR: "list[dict]" = [
     {"id": "bytedance/deer-flow", "via": "weekly discovery"},
-    {"id": "ChromeDevTools/chrome-devtools-mcp", "via": "weekly discovery"},
-    {"id": "BloopAI/vibe-kanban", "via": "weekly discovery"},
-    {"id": "Kilo-Org/kilocode", "via": "weekly discovery"},
-    {"id": "QwenLM/qwen-code", "via": "weekly discovery"},
-    {"id": "openai/symphony", "via": "weekly discovery"},
-    {"id": "gastownhall/beads", "via": "weekly discovery"},
     {"id": "plandex-ai/plandex", "via": "weekly discovery"},
     {"id": "ag2ai/ag2", "via": "weekly discovery"},
     {"id": "IBM/mcp-context-forge", "via": "weekly discovery"},
@@ -855,6 +895,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "Reason-Wang/ToolGen": ("n/a", "n/a"),
     "spring-ai-community/spring-ai-tool-search-tool": ("n/a", "n/a"),
     "antl3x/ToolRAG": ("n/a", "n/a"),
+    "mksglu/context-mode": ("n/a", "n/a"),
     # coding-agent-products
     "can1357/oh-my-pi": ("bounded", "resumable"),
     "earendil-works/pi": ("bounded", "resumable"),
@@ -870,6 +911,10 @@ AXES: "dict[str, tuple[str, str]]" = {
     "RooCodeInc/Roo-Code": ("step-gated", "resumable"),
     "HarnessLab/claw-code-agent": ("checkpoint-gated", "none"),
     "SeanHogg/BuilderForceAgents": ("bounded", "none"),
+    "QwenLM/qwen-code": ("bounded", "resumable"),
+    "Kilo-Org/kilocode": ("step-gated", "resumable"),
+    "openai/symphony": ("headless", "resumable"),
+    "BloopAI/vibe-kanban": ("n/a", "n/a"),
     # coding-harness-configs
     "looptroop-ai/LoopTroop": ("bounded", "retry"),
     "obra/superpowers": ("n/a", "n/a"),
@@ -877,6 +922,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "anthropics/skills": ("n/a", "n/a"),
     "google/agents-cli": ("n/a", "n/a"),
     "iflytek/skillhub": ("n/a", "n/a"),
+    "hesreallyhim/awesome-claude-code": ("n/a", "n/a"),
     "garrytan/gstack": ("n/a", "n/a"),
     "gsd-build/get-shit-done": ("bounded", "resumable"),
     "SWE-agent/SWE-agent": ("headless", "resumable"),
@@ -927,6 +973,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "openai/openai-agents-python": ("bounded", "resumable"),
     "MervinPraison/PraisonAI": ("bounded", "none"),
     "THUDM/AgentRL": ("headless", "resumable"),
+    "aden-hive/hive": ("bounded", "resumable"),
     # plugins-mcp-cli
     "thedotmack/claude-mem": ("n/a", "n/a"),
     "Aider-AI/aider": ("checkpoint-gated", "resumable"),
@@ -979,6 +1026,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "brandonhimpfen/awesome-ai-agents": ("n/a", "n/a"),
     # memory (state layers — no agent loop of their own)
     "topoteretes/cognee": ("n/a", "n/a"),
+    "gastownhall/beads": ("n/a", "n/a"),
     # observability (tracing/eval-ops infra — no agent loop of their own)
     "langfuse/langfuse": ("n/a", "n/a"),
     "mlflow/mlflow": ("n/a", "n/a"),
@@ -986,6 +1034,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "modelcontextprotocol/servers": ("n/a", "n/a"),
     "upstash/context7": ("n/a", "n/a"),
     "microsoft/playwright-mcp": ("n/a", "n/a"),
+    "ChromeDevTools/chrome-devtools-mcp": ("n/a", "n/a"),
     # multi-agent
     "FoundationAgents/OpenManus": ("bounded", "none"),
     # coding-harness-configs (skill/subagent packs — no loop)

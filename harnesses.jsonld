@@ -29,7 +29,7 @@
   ],
   "mainEntity": {
     "@type": "ItemList",
-    "numberOfItems": 124,
+    "numberOfItems": 135,
     "itemListElement": [
       {
         "@type": "ListItem",
@@ -60,6 +60,18 @@
         "position": 3,
         "item": {
           "@type": "SoftwareApplication",
+          "name": "context-mode",
+          "url": "https://github.com/mksglu/context-mode",
+          "description": "Context-window optimization layer that sandboxes tool output before it reaches the model (claimed 98% reduction) and persists session memory across 17 agent platforms via MCP and hooks—progressive disclosure applied to tool results, not just instructions.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "mcp, memory, sandbox"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "SoftwareApplication",
           "name": "langgraph-bigtool",
           "url": "https://github.com/langchain-ai/langgraph-bigtool",
           "description": "Build LangGraph agents with large tool sets; retrieval and on-demand tool loading so agents scale beyond context without stuffing every schema upfront.",
@@ -69,7 +81,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 4,
+        "position": 5,
         "item": {
           "@type": "SoftwareApplication",
           "name": "MCP-Zero",
@@ -81,7 +93,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 5,
+        "position": 6,
         "item": {
           "@type": "SoftwareApplication",
           "name": "ToolGen",
@@ -93,7 +105,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 6,
+        "position": 7,
         "item": {
           "@type": "SoftwareApplication",
           "name": "ToolRAG",
@@ -105,7 +117,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 7,
+        "position": 8,
         "item": {
           "@type": "SoftwareApplication",
           "name": "opencode",
@@ -117,7 +129,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 8,
+        "position": 9,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Gemini CLI",
@@ -129,7 +141,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 9,
+        "position": 10,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Codex",
@@ -141,7 +153,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 10,
+        "position": 11,
         "item": {
           "@type": "SoftwareApplication",
           "name": "OpenHands",
@@ -153,7 +165,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 11,
+        "position": 12,
         "item": {
           "@type": "SoftwareApplication",
           "name": "pi",
@@ -165,7 +177,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 12,
+        "position": 13,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Cline",
@@ -177,7 +189,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 13,
+        "position": 14,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Open Interpreter",
@@ -189,7 +201,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 14,
+        "position": 15,
         "item": {
           "@type": "SoftwareApplication",
           "name": "goose",
@@ -201,7 +213,19 @@
       },
       {
         "@type": "ListItem",
-        "position": 15,
+        "position": 16,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "vibe-kanban",
+          "url": "https://github.com/BloopAI/vibe-kanban",
+          "description": "Kanban-style fleet manager for running Claude Code, Codex, or any coding agent across many tasks at once. The **harness** contribution is the task-queue/review layer on top of whichever agent executes; not an agent loop itself.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": ""
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 17,
         "item": {
           "@type": "SoftwareApplication",
           "name": "crush",
@@ -213,7 +237,55 @@
       },
       {
         "@type": "ListItem",
-        "position": 16,
+        "position": 18,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "Kilo Code",
+          "url": "https://github.com/Kilo-Org/kilocode",
+          "description": "VS Code extension and CLI in the Cline/Roo-Code lineage — a natural pick now that Roo-Code is archived upstream. The **harness** is an approval-gated autonomous-mode loop with a provider/tool marketplace; the IDE is the shell.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "mcp, cli, ide, typescript"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 19,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "qwen-code",
+          "url": "https://github.com/QwenLM/qwen-code",
+          "description": "Alibaba's official terminal coding agent, forked from Gemini CLI's agent loop and retuned for Qwen models. The **harness** is the same sandboxed tool-call loop as its upstream; the terminal is the shell.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "sandbox, cli, typescript"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 20,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "Symphony",
+          "url": "https://github.com/openai/symphony",
+          "description": "OpenAI's harness for fanning a task out into many isolated, autonomous coding-agent implementation runs and surfacing the ones that pass, so a team manages outcomes instead of supervising each session.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "sandbox"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 21,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "Roo Code",
+          "url": "https://github.com/RooCodeInc/Roo-Code",
+          "description": "VS Code/Cursor extension in the Cline lineage. The **harness** is the approval-gated agent with custom modes and a strong MCP story; the IDE is the UI. Popular community fork when you want that workflow without the upstream extension.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "mcp, workflow, ide, typescript"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 22,
         "item": {
           "@type": "SoftwareApplication",
           "name": "oh-my-pi",
@@ -225,7 +297,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 17,
+        "position": 23,
         "item": {
           "@type": "SoftwareApplication",
           "name": "claw-code-agent",
@@ -237,7 +309,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 18,
+        "position": 24,
         "item": {
           "@type": "SoftwareApplication",
           "name": "AgentBox",
@@ -249,7 +321,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 19,
+        "position": 25,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Proliferate",
@@ -261,7 +333,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 20,
+        "position": 26,
         "item": {
           "@type": "SoftwareApplication",
           "name": "superpowers",
@@ -273,7 +345,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 21,
+        "position": 27,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Anthropic Skills",
@@ -285,7 +357,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 22,
+        "position": 28,
         "item": {
           "@type": "SoftwareApplication",
           "name": "GStack",
@@ -297,7 +369,31 @@
       },
       {
         "@type": "ListItem",
-        "position": 23,
+        "position": 29,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "get-shit-done",
+          "url": "https://github.com/gsd-build/get-shit-done",
+          "description": "Goal-backward planning and wave-based execution over fresh context windows; avoids context rot by design. Python/JS meta-prompting for Claude Code, OpenCode, Gemini CLI.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "cli, python"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 30,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "awesome-claude-code",
+          "url": "https://github.com/hesreallyhim/awesome-claude-code",
+          "description": "Large community-curated index of Claude Code skills, slash commands, status lines, and plugins—resources for extending the harness, not a harness itself, but the most-followed catalog of the genre.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": ""
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 31,
         "item": {
           "@type": "SoftwareApplication",
           "name": "wshobson/agents",
@@ -309,7 +405,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 24,
+        "position": 32,
         "item": {
           "@type": "SoftwareApplication",
           "name": "SWE-agent",
@@ -321,7 +417,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 25,
+        "position": 33,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Claude Agent SDK",
@@ -333,7 +429,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 26,
+        "position": 34,
         "item": {
           "@type": "SoftwareApplication",
           "name": "agents-cli",
@@ -345,7 +441,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 27,
+        "position": 35,
         "item": {
           "@type": "SoftwareApplication",
           "name": "skillhub",
@@ -357,7 +453,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 28,
+        "position": 36,
         "item": {
           "@type": "SoftwareApplication",
           "name": "RepoMaster",
@@ -369,7 +465,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 29,
+        "position": 37,
         "item": {
           "@type": "SoftwareApplication",
           "name": "AutoHarness",
@@ -381,7 +477,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 30,
+        "position": 38,
         "item": {
           "@type": "SoftwareApplication",
           "name": "LoopTroop",
@@ -393,7 +489,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 31,
+        "position": 39,
         "item": {
           "@type": "SoftwareApplication",
           "name": "pmstack",
@@ -405,7 +501,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 32,
+        "position": 40,
         "item": {
           "@type": "SoftwareApplication",
           "name": "OpenClaw",
@@ -417,7 +513,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 33,
+        "position": 41,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Hermes",
@@ -429,7 +525,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 34,
+        "position": 42,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Khoj",
@@ -441,7 +537,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 35,
+        "position": 43,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Eliza",
@@ -453,7 +549,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 36,
+        "position": 44,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Agent Zero",
@@ -465,7 +561,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 37,
+        "position": 45,
         "item": {
           "@type": "SoftwareApplication",
           "name": "OpenHarness (HKUDS)",
@@ -477,7 +573,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 38,
+        "position": 46,
         "item": {
           "@type": "SoftwareApplication",
           "name": "AIlice",
@@ -489,7 +585,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 39,
+        "position": 47,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Talon",
@@ -501,7 +597,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 40,
+        "position": 48,
         "item": {
           "@type": "SoftwareApplication",
           "name": "n8n",
@@ -513,7 +609,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 41,
+        "position": 49,
         "item": {
           "@type": "SoftwareApplication",
           "name": "AutoGPT",
@@ -525,7 +621,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 42,
+        "position": 50,
         "item": {
           "@type": "SoftwareApplication",
           "name": "langflow",
@@ -537,7 +633,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 43,
+        "position": 51,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Dify",
@@ -549,7 +645,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 44,
+        "position": 52,
         "item": {
           "@type": "SoftwareApplication",
           "name": "langchain",
@@ -561,7 +657,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 45,
+        "position": 53,
         "item": {
           "@type": "SoftwareApplication",
           "name": "browser-use",
@@ -573,7 +669,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 46,
+        "position": 54,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Flowise",
@@ -585,7 +681,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 47,
+        "position": 55,
         "item": {
           "@type": "SoftwareApplication",
           "name": "llama-index",
@@ -597,7 +693,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 48,
+        "position": 56,
         "item": {
           "@type": "SoftwareApplication",
           "name": "agno",
@@ -609,7 +705,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 49,
+        "position": 57,
         "item": {
           "@type": "SoftwareApplication",
           "name": "langgraph",
@@ -621,7 +717,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 50,
+        "position": 58,
         "item": {
           "@type": "SoftwareApplication",
           "name": "semantic-kernel",
@@ -633,7 +729,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 51,
+        "position": 59,
         "item": {
           "@type": "SoftwareApplication",
           "name": "mastra",
@@ -645,7 +741,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 52,
+        "position": 60,
         "item": {
           "@type": "SoftwareApplication",
           "name": "letta",
@@ -657,7 +753,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 53,
+        "position": 61,
         "item": {
           "@type": "SoftwareApplication",
           "name": "rasa",
@@ -669,7 +765,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 54,
+        "position": 62,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Google ADK",
@@ -681,7 +777,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 55,
+        "position": 63,
         "item": {
           "@type": "SoftwareApplication",
           "name": "botpress",
@@ -693,7 +789,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 56,
+        "position": 64,
         "item": {
           "@type": "SoftwareApplication",
           "name": "R2R",
@@ -705,7 +801,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 57,
+        "position": 65,
         "item": {
           "@type": "SoftwareApplication",
           "name": "agent-squad",
@@ -717,7 +813,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 58,
+        "position": 66,
         "item": {
           "@type": "SoftwareApplication",
           "name": "AgentVerse",
@@ -729,7 +825,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 59,
+        "position": 67,
         "item": {
           "@type": "SoftwareApplication",
           "name": "youtu-agent",
@@ -741,7 +837,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 60,
+        "position": 68,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Bee Agent Framework",
@@ -753,7 +849,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 61,
+        "position": 69,
         "item": {
           "@type": "SoftwareApplication",
           "name": "AgentStack",
@@ -765,7 +861,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 62,
+        "position": 70,
         "item": {
           "@type": "SoftwareApplication",
           "name": "AgentSilex",
@@ -777,7 +873,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 63,
+        "position": 71,
         "item": {
           "@type": "SoftwareApplication",
           "name": "SuperAgentX",
@@ -789,7 +885,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 64,
+        "position": 72,
         "item": {
           "@type": "SoftwareApplication",
           "name": "MetaGPT",
@@ -801,7 +897,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 65,
+        "position": 73,
         "item": {
           "@type": "SoftwareApplication",
           "name": "autogen",
@@ -813,7 +909,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 66,
+        "position": 74,
         "item": {
           "@type": "SoftwareApplication",
           "name": "OpenManus",
@@ -825,7 +921,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 67,
+        "position": 75,
         "item": {
           "@type": "SoftwareApplication",
           "name": "crewAI",
@@ -837,7 +933,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 68,
+        "position": 76,
         "item": {
           "@type": "SoftwareApplication",
           "name": "ChatDev",
@@ -849,7 +945,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 69,
+        "position": 77,
         "item": {
           "@type": "SoftwareApplication",
           "name": "openai-agents-python",
@@ -861,7 +957,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 70,
+        "position": 78,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Microsoft Agent Framework",
@@ -873,7 +969,19 @@
       },
       {
         "@type": "ListItem",
-        "position": 71,
+        "position": 79,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "hive",
+          "url": "https://github.com/aden-hive/hive",
+          "description": "Self-hosted multi-agent **harness** aimed at production workloads: human-in-the-loop checkpoints and a self-improving agent loop, distinct from single-session coding-agent shells.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "multi-agent, python"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 80,
         "item": {
           "@type": "SoftwareApplication",
           "name": "PraisonAI",
@@ -885,7 +993,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 72,
+        "position": 81,
         "item": {
           "@type": "SoftwareApplication",
           "name": "AgentRL",
@@ -897,7 +1005,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 73,
+        "position": 82,
         "item": {
           "@type": "SoftwareApplication",
           "name": "MCP Servers",
@@ -909,7 +1017,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 74,
+        "position": 83,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Context7",
@@ -921,7 +1029,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 75,
+        "position": 84,
         "item": {
           "@type": "SoftwareApplication",
           "name": "aider",
@@ -933,7 +1041,19 @@
       },
       {
         "@type": "ListItem",
-        "position": 76,
+        "position": 85,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "chrome-devtools-mcp",
+          "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+          "description": "Google's official Chrome DevTools MCP server: exposes console, network, and performance-trace inspection as tool calls agents can drive directly, instead of a human clicking through the DevTools panel.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "mcp, browser, typescript"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 86,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Playwright MCP",
@@ -945,7 +1065,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 77,
+        "position": 87,
         "item": {
           "@type": "SoftwareApplication",
           "name": "continue",
@@ -957,7 +1077,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 78,
+        "position": 88,
         "item": {
           "@type": "SoftwareApplication",
           "name": "github-mcp-server",
@@ -969,7 +1089,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 79,
+        "position": 89,
         "item": {
           "@type": "SoftwareApplication",
           "name": "MCP Python SDK",
@@ -981,7 +1101,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 80,
+        "position": 90,
         "item": {
           "@type": "SoftwareApplication",
           "name": "MCP TypeScript SDK",
@@ -993,7 +1113,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 81,
+        "position": 91,
         "item": {
           "@type": "SoftwareApplication",
           "name": "MCP Inspector",
@@ -1005,7 +1125,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 82,
+        "position": 92,
         "item": {
           "@type": "SoftwareApplication",
           "name": "MCP Registry",
@@ -1017,7 +1137,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 83,
+        "position": 93,
         "item": {
           "@type": "SoftwareApplication",
           "name": "agent-vault",
@@ -1029,7 +1149,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 84,
+        "position": 94,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Docker MCP Gateway",
@@ -1041,7 +1161,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 85,
+        "position": 95,
         "item": {
           "@type": "SoftwareApplication",
           "name": "puppeteer-real-browser-mcp",
@@ -1053,7 +1173,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 86,
+        "position": 96,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Better-OpenCodeMCP",
@@ -1065,7 +1185,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 87,
+        "position": 97,
         "item": {
           "@type": "SoftwareApplication",
           "name": "agentlog",
@@ -1077,7 +1197,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 88,
+        "position": 98,
         "item": {
           "@type": "SoftwareApplication",
           "name": "claude-mem",
@@ -1089,7 +1209,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 89,
+        "position": 99,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Mem0",
@@ -1101,7 +1221,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 90,
+        "position": 100,
         "item": {
           "@type": "SoftwareApplication",
           "name": "cognee",
@@ -1113,7 +1233,19 @@
       },
       {
         "@type": "ListItem",
-        "position": 91,
+        "position": 101,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "beads",
+          "url": "https://github.com/gastownhall/beads",
+          "description": "Portable persistent-memory layer for coding agents: tracks decisions and task state outside the harness's own context window so it survives session resets and model swaps.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "memory"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 102,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Agent Lightning",
@@ -1125,7 +1257,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 92,
+        "position": 103,
         "item": {
           "@type": "SoftwareApplication",
           "name": "SWE-bench",
@@ -1137,7 +1269,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 93,
+        "position": 104,
         "item": {
           "@type": "SoftwareApplication",
           "name": "AgentBench",
@@ -1149,7 +1281,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 94,
+        "position": 105,
         "item": {
           "@type": "SoftwareApplication",
           "name": "inspect_ai",
@@ -1161,7 +1293,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 95,
+        "position": 106,
         "item": {
           "@type": "SoftwareApplication",
           "name": "WebArena",
@@ -1173,7 +1305,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 96,
+        "position": 107,
         "item": {
           "@type": "SoftwareApplication",
           "name": "WebVoyager",
@@ -1185,7 +1317,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 97,
+        "position": 108,
         "item": {
           "@type": "SoftwareApplication",
           "name": "ARC-AGI-2",
@@ -1197,7 +1329,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 98,
+        "position": 109,
         "item": {
           "@type": "SoftwareApplication",
           "name": "SWE-Gym",
@@ -1209,7 +1341,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 99,
+        "position": 110,
         "item": {
           "@type": "SoftwareApplication",
           "name": "swe-smith",
@@ -1221,7 +1353,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 100,
+        "position": 111,
         "item": {
           "@type": "SoftwareApplication",
           "name": "inspect_evals",
@@ -1233,7 +1365,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 101,
+        "position": 112,
         "item": {
           "@type": "SoftwareApplication",
           "name": "arc-agi-benchmarking",
@@ -1245,7 +1377,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 102,
+        "position": 113,
         "item": {
           "@type": "SoftwareApplication",
           "name": "agent-qa",
@@ -1257,7 +1389,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 103,
+        "position": 114,
         "item": {
           "@type": "SoftwareApplication",
           "name": "VitaBench",
@@ -1269,7 +1401,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 104,
+        "position": 115,
         "item": {
           "@type": "SoftwareApplication",
           "name": "AgencyBench",
@@ -1281,7 +1413,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 105,
+        "position": 116,
         "item": {
           "@type": "SoftwareApplication",
           "name": "letta-evals",
@@ -1293,7 +1425,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 106,
+        "position": 117,
         "item": {
           "@type": "SoftwareApplication",
           "name": "SUPER",
@@ -1305,7 +1437,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 107,
+        "position": 118,
         "item": {
           "@type": "SoftwareApplication",
           "name": "TRAIL",
@@ -1317,7 +1449,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 108,
+        "position": 119,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Langfuse",
@@ -1329,7 +1461,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 109,
+        "position": 120,
         "item": {
           "@type": "SoftwareApplication",
           "name": "MLflow",
@@ -1341,7 +1473,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 110,
+        "position": 121,
         "item": {
           "@type": "SoftwareApplication",
           "name": "gpt-researcher",
@@ -1353,7 +1485,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 111,
+        "position": 122,
         "item": {
           "@type": "SoftwareApplication",
           "name": "openagents",
@@ -1365,7 +1497,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 112,
+        "position": 123,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Daytona",
@@ -1377,7 +1509,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 113,
+        "position": 124,
         "item": {
           "@type": "SoftwareApplication",
           "name": "LiteLLM",
@@ -1389,7 +1521,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 114,
+        "position": 125,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Composio",
@@ -1401,7 +1533,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 115,
+        "position": 126,
         "item": {
           "@type": "SoftwareApplication",
           "name": "smolagents",
@@ -1413,7 +1545,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 116,
+        "position": 127,
         "item": {
           "@type": "SoftwareApplication",
           "name": "deepagents",
@@ -1425,7 +1557,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 117,
+        "position": 128,
         "item": {
           "@type": "SoftwareApplication",
           "name": "vercel/ai",
@@ -1437,7 +1569,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 118,
+        "position": 129,
         "item": {
           "@type": "SoftwareApplication",
           "name": "pydantic-ai",
@@ -1449,7 +1581,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 119,
+        "position": 130,
         "item": {
           "@type": "SoftwareApplication",
           "name": "E2B",
@@ -1461,7 +1593,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 120,
+        "position": 131,
         "item": {
           "@type": "SoftwareApplication",
           "name": "strands-agents",
@@ -1473,7 +1605,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 121,
+        "position": 132,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Cloudflare Agents",
@@ -1485,7 +1617,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 122,
+        "position": 133,
         "item": {
           "@type": "SoftwareApplication",
           "name": "openai-agents-js",
@@ -1497,7 +1629,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 123,
+        "position": 134,
         "item": {
           "@type": "SoftwareApplication",
           "name": "open-harness",
@@ -1509,7 +1641,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 124,
+        "position": 135,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Community-curated agent lists",

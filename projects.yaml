@@ -77,6 +77,9 @@ projects:
   - name: ToolRAG
     github_id: antl3x/ToolRAG
     category: "progressive-disclosure"
+  - name: context-mode
+    github_id: mksglu/context-mode
+    category: "progressive-disclosure"
   # Coding agent products (IDEs, CLIs, full suites)
   - name: oh-my-pi
     github_id: can1357/oh-my-pi
@@ -95,6 +98,10 @@ projects:
     category: "coding-agent-products"
   - name: Cline
     github_id: cline/cline
+    labels: ["javascript"]
+    category: "coding-agent-products"
+  - name: Roo-Code
+    github_id: RooCodeInc/Roo-Code
     labels: ["javascript"]
     category: "coding-agent-products"
   - name: Codex
@@ -126,10 +133,27 @@ projects:
     github_id: openinterpreter/openinterpreter
     labels: ["python"]
     category: "coding-agent-products"
+  - name: qwen-code
+    github_id: QwenLM/qwen-code
+    labels: ["javascript"]
+    category: "coding-agent-products"
+  - name: Kilo Code
+    github_id: Kilo-Org/kilocode
+    labels: ["javascript"]
+    category: "coding-agent-products"
+  - name: Symphony
+    github_id: openai/symphony
+    category: "coding-agent-products"
+  - name: vibe-kanban
+    github_id: BloopAI/vibe-kanban
+    category: "coding-agent-products"
   # Coding harness configs and SDKs
   - name: LoopTroop
     github_id: looptroop-ai/LoopTroop
     labels: ["javascript"]
+    category: "coding-harness-configs"
+  - name: get-shit-done
+    github_id: gsd-build/get-shit-done
     category: "coding-harness-configs"
   - name: GStack
     github_id: garrytan/gstack
@@ -168,6 +192,9 @@ projects:
     category: "coding-harness-configs"
   - name: skillhub
     github_id: iflytek/skillhub
+    category: "coding-harness-configs"
+  - name: awesome-claude-code
+    github_id: hesreallyhim/awesome-claude-code
     category: "coding-harness-configs"
   # Personal agent runtimes
   - name: Talon
@@ -331,6 +358,10 @@ projects:
     github_id: microsoft/agent-framework
     labels: ["python"]
     category: "multi-agent"
+  - name: hive
+    github_id: aden-hive/hive
+    labels: ["python"]
+    category: "multi-agent"
   # Plugins, MCPs, CLI tools
   - name: aider
     github_id: Aider-AI/aider
@@ -388,6 +419,10 @@ projects:
     github_id: microsoft/playwright-mcp
     labels: ["javascript"]
     category: "plugins-mcp-cli"
+  - name: chrome-devtools-mcp
+    github_id: ChromeDevTools/chrome-devtools-mcp
+    labels: ["javascript"]
+    category: "plugins-mcp-cli"
   # Memory and state
   - name: cognee
     github_id: topoteretes/cognee
@@ -399,6 +434,9 @@ projects:
     category: "memory"
   - name: claude-mem
     github_id: thedotmack/claude-mem
+    category: "memory"
+  - name: beads
+    github_id: gastownhall/beads
     category: "memory"
   # Evaluation and benchmarking harnesses
   - name: agent-qa
