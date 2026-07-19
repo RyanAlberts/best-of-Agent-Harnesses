@@ -11,7 +11,7 @@
     "name": "Ryan Alberts",
     "url": "https://github.com/RyanAlberts"
   },
-  "dateModified": "2026-07-12",
+  "dateModified": "2026-07-19",
   "keywords": [
     "agent harness",
     "AI agents",
@@ -180,11 +180,11 @@
         "position": 13,
         "item": {
           "@type": "SoftwareApplication",
-          "name": "Cline",
-          "url": "https://github.com/cline/cline",
-          "description": "VS Code extension whose **harness** is a plan-then-act loop with per-step human approval and cost transparency; the VS Code integration is the UI shell. Open-source counterweight to Cursor.",
+          "name": "Open Interpreter",
+          "url": "https://github.com/openinterpreter/openinterpreter",
+          "description": "Lightweight terminal coding agent oriented to open models (DeepSeek, Kimi, Qwen). The **harness** is a code-execution loop — the model writes code, the harness executes it with confirmation gates; the CLI is the shell. The original \"let the LLM run code on my machine\" project, reborn for open weights.",
           "applicationCategory": "DeveloperApplication",
-          "keywords": "ide, typescript"
+          "keywords": "cli, python"
         }
       },
       {
@@ -192,11 +192,11 @@
         "position": 14,
         "item": {
           "@type": "SoftwareApplication",
-          "name": "Open Interpreter",
-          "url": "https://github.com/openinterpreter/openinterpreter",
-          "description": "Lightweight terminal coding agent oriented to open models (DeepSeek, Kimi, Qwen). The **harness** is a code-execution loop — the model writes code, the harness executes it with confirmation gates; the CLI is the shell. The original \"let the LLM run code on my machine\" project, reborn for open weights.",
+          "name": "Cline",
+          "url": "https://github.com/cline/cline",
+          "description": "VS Code extension whose **harness** is a plan-then-act loop with per-step human approval and cost transparency; the VS Code integration is the UI shell. Open-source counterweight to Cursor.",
           "applicationCategory": "DeveloperApplication",
-          "keywords": "cli, python"
+          "keywords": "ide, typescript"
         }
       },
       {
@@ -1332,11 +1332,11 @@
         "position": 109,
         "item": {
           "@type": "SoftwareApplication",
-          "name": "SWE-Gym",
-          "url": "https://github.com/SWE-Gym/SWE-Gym",
-          "description": "Training and evaluation for SWE agents and verifiers (ICML 2025).",
+          "name": "swe-smith",
+          "url": "https://github.com/SWE-bench/SWE-smith",
+          "description": "Data generation for SWE agents; 50k+ instances across 128 repos; used for SWE-agent-LM training.",
           "applicationCategory": "DeveloperApplication",
-          "keywords": "evals, training, python"
+          "keywords": "training, python"
         }
       },
       {
@@ -1344,11 +1344,11 @@
         "position": 110,
         "item": {
           "@type": "SoftwareApplication",
-          "name": "swe-smith",
-          "url": "https://github.com/SWE-bench/SWE-smith",
-          "description": "Data generation for SWE agents; 50k+ instances across 128 repos; used for SWE-agent-LM training.",
+          "name": "SWE-Gym",
+          "url": "https://github.com/SWE-Gym/SWE-Gym",
+          "description": "Training and evaluation for SWE agents and verifiers (ICML 2025).",
           "applicationCategory": "DeveloperApplication",
-          "keywords": "training, python"
+          "keywords": "evals, training, python"
         }
       },
       {
