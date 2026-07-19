@@ -9,7 +9,7 @@
     "feed_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/feed.json",
     "license": "CC-BY-SA-4.0",
     "stars_captured": "2026-07-12",
-    "project_count": 135,
+    "project_count": 139,
     "graveyard_count": 3,
     "tiers": [
       "super simple",
@@ -346,7 +346,7 @@
     {
       "kind": "derived",
       "q": "How many of these agent harnesses are open source?",
-      "a": "107 of 135 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
+      "a": "111 of 139 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
       "slug": "how-many-of-these-agent-harnesses-are-open-source"
     },
     {
@@ -1567,6 +1567,34 @@
       "example": {
         "label": "Built-in skills",
         "url": "https://github.com/NousResearch/hermes-agent/tree/main/skills"
+      }
+    },
+    {
+      "name": "CowAgent",
+      "github_id": "zhayujie/CowAgent",
+      "url": "https://github.com/zhayujie/CowAgent",
+      "slug": "cowagent",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#cowagent",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/cowagent/",
+      "description": "Formerly chatgpt-on-wechat (shipping since 2022): a multi-model, multi-channel personal-agent **harness** that plans tasks, runs tools/skills, and self-evolves with memory — installed as a one-line daemon rather than a library you build with.",
+      "category": "personal-agent-runtimes",
+      "category_title": "Personal agent runtimes",
+      "stars": 45943,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (multi-model, multi-channel, memory)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "open-source",
+      "tags": [
+        "memory",
+        "python"
+      ],
+      "example": {
+        "label": "Quick Start guide",
+        "url": "https://docs.cowagent.ai/guide/quick-start"
       }
     },
     {
@@ -3005,6 +3033,34 @@
       }
     },
     {
+      "name": "Agent Governance Toolkit",
+      "github_id": "microsoft/agent-governance-toolkit",
+      "url": "https://github.com/microsoft/agent-governance-toolkit",
+      "slug": "agent-governance-toolkit",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#agent-governance-toolkit",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/agent-governance-toolkit/",
+      "description": "Microsoft's policy-enforcement layer for autonomous agents: zero-trust identity, execution sandboxing, and OWASP Agentic Top-10 coverage bolted onto any agent's tool calls. The **harness** contribution is the governance layer, not an agent loop of its own.",
+      "category": "plugins-mcp-cli",
+      "category_title": "Plugins, MCPs, CLI tools",
+      "stars": 4832,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (policy engine, sandboxing, zero-trust)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [
+        "sandbox",
+        "python"
+      ],
+      "example": {
+        "label": "Policy-gated OpenAI Agents example",
+        "url": "https://github.com/microsoft/agent-governance-toolkit/tree/main/examples/openai-agents-governed"
+      }
+    },
+    {
       "name": "agent-vault",
       "github_id": "Infisical/agent-vault",
       "url": "https://github.com/Infisical/agent-vault",
@@ -3819,6 +3875,34 @@
       }
     },
     {
+      "name": "MiroThinker",
+      "github_id": "MiroMindAI/MiroThinker",
+      "url": "https://github.com/MiroMindAI/MiroThinker",
+      "slug": "mirothinker",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#mirothinker",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/mirothinker/",
+      "description": "Deep-research agent **harness** tuned for long-horizon research and prediction tasks, benchmarked against BrowseComp, GAIA, and HLE rather than shipped as a general framework.",
+      "category": "research-task",
+      "category_title": "Research and task-specific harnesses",
+      "stars": 8332,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (research agent, SOTA benchmarks)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "retry",
+      "recovery_rank": 2,
+      "license_signal": "open-source",
+      "tags": [
+        "memory",
+        "evals"
+      ],
+      "example": {
+        "label": "Quick Start guide",
+        "url": "https://github.com/MiroMindAI/MiroThinker#-quick-start"
+      }
+    },
+    {
       "name": "openagents",
       "github_id": "OpenAgentsInc/openagents",
       "url": "https://github.com/OpenAgentsInc/openagents",
@@ -4157,6 +4241,34 @@
       "example": {
         "label": "Financial research agent",
         "url": "https://github.com/openai/openai-agents-js/tree/main/examples/financial-research-agent"
+      }
+    },
+    {
+      "name": "deepagents (JS)",
+      "github_id": "langchain-ai/deepagentsjs",
+      "url": "https://github.com/langchain-ai/deepagentsjs",
+      "slug": "deepagentsjs",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#deepagentsjs",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/deepagentsjs/",
+      "description": "LangChain's TypeScript sibling to deepagents (above): the same planning-tool, virtual-filesystem, sub-agent-spawning **harness** on top of LangGraph.js, for the Node/TS side.",
+      "category": "libraries-sdks",
+      "category_title": "Libraries and SDKs",
+      "stars": 1401,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (planning, files, sub-agents)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "durable",
+      "recovery_rank": 4,
+      "license_signal": "open-source",
+      "tags": [
+        "multi-agent",
+        "typescript"
+      ],
+      "example": {
+        "label": "Examples folder",
+        "url": "https://github.com/langchain-ai/deepagentsjs/tree/main/examples"
       }
     },
     {

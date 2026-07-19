@@ -1,13 +1,13 @@
 <!-- markdownlint-disable -->
 # Tags — cross-reference
 
-_Auto-generated from `scripts/generate.py`. 135 projects across 22 canonical tags. Edit projects in `generate.py` (not here) and rerun the script._
+_Auto-generated from `scripts/generate.py`. 139 projects across 22 canonical tags. Edit projects in `generate.py` (not here) and rerun the script._
 
 Tag chips appear next to each project in [README.md](README.md). This page lists every tag once with the projects that carry it, grouped by category and sorted by GitHub stars within each category.
 
 ## All tags
 
-[`mcp`](#mcp) (29) · [`memory`](#memory) (24) · [`multi-agent`](#multi-agent) (22) · [`evals`](#evals) (17) · [`voice`](#voice) (2) · [`vision`](#vision) (3) · [`browser`](#browser) (7) · [`sandbox`](#sandbox) (23) · [`low-code`](#low-code) (4) · [`rag`](#rag) (5) · [`tool-discovery`](#tool-discovery) (5) · [`training`](#training) (5) · [`workflow`](#workflow) (8) · [`typed`](#typed) (3) · [`local`](#local) (2) · [`provider-agnostic`](#provider-agnostic) (10) · [`cli`](#cli) (17) · [`ide`](#ide) (10) · [`tui`](#tui) (3) · [`rust`](#rust) (4) · [`python`](#python) (67) · [`typescript`](#typescript) (38)
+[`mcp`](#mcp) (29) · [`memory`](#memory) (26) · [`multi-agent`](#multi-agent) (23) · [`evals`](#evals) (18) · [`voice`](#voice) (2) · [`vision`](#vision) (3) · [`browser`](#browser) (7) · [`sandbox`](#sandbox) (24) · [`low-code`](#low-code) (4) · [`rag`](#rag) (5) · [`tool-discovery`](#tool-discovery) (5) · [`training`](#training) (5) · [`workflow`](#workflow) (8) · [`typed`](#typed) (3) · [`local`](#local) (2) · [`provider-agnostic`](#provider-agnostic) (10) · [`cli`](#cli) (17) · [`ide`](#ide) (10) · [`tui`](#tui) (3) · [`rust`](#rust) (4) · [`python`](#python) (69) · [`typescript`](#typescript) (39)
 
 ---
 
@@ -89,6 +89,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 **Personal agent runtimes**
 
 - [Hermes](https://github.com/NousResearch/hermes-agent) — ⭐214k — Nous Research's self-improving agent: a learning loop turns experience into reusable skills, builds a persistent user model across sessions, and checkpoints state to disk with rollback; lean enough for a $5 VPS, driven from chat, and model-agnostic (Nous Portal, OpenRouter, OpenAI, or any endpoint).
+- [CowAgent](https://github.com/zhayujie/CowAgent) — ⭐45.9k — Formerly chatgpt-on-wechat (shipping since 2022): a multi-model, multi-channel personal-agent **harness** that plans tasks, runs tools/skills, and self-evolves with memory — installed as a one-line daemon rather than a library you build with.
 - [Eliza](https://github.com/elizaOS/eliza) — ⭐18.7k — Open "agentic operating system" (elizaOS): persistent multi-agent runtime with character files, a plugin ecosystem, and social/platform integrations — the harness behind a large share of autonomous social agents.
 - [Agent Zero](https://github.com/agent0ai/agent-zero) — ⭐18.4k — Organic, prompt-defined personal agent framework: hierarchical sub-agents, persistent memory, browser and code tools, and self-modifying behavior; runs in Docker with a web UI.
 - [OpenHarness (HKUDS)](https://github.com/HKUDS/OpenHarness) — ⭐14.7k — Open agent harness with a built-in personal agent ("Ohmo") that runs across Feishu, Slack, Telegram, and Discord; core tool-use, skills, memory, multi-agent coordination with auto-compaction for multi-day sessions.
@@ -116,6 +117,10 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 - [agent-qa](https://github.com/vostride/agent-qa) — ⭐157 — Self-improving QA **harness** for web and mobile apps: natural-language tests, memory-backed self-healing, dashboard/CLI, MCP and skills support, plus sandboxed hooks for production regression checks.
 - [letta-evals](https://github.com/letta-ai/letta-evals) — ⭐77 — Eval harness for stateful Letta agents; configurable suites and grading (LLM or rule-based) so you can measure what you ship.
+
+**Research and task-specific harnesses**
+
+- [MiroThinker](https://github.com/MiroMindAI/MiroThinker) — ⭐8.3k — Deep-research agent **harness** tuned for long-horizon research and prediction tasks, benchmarked against BrowseComp, GAIA, and HLE rather than shipped as a general framework.
 
 **Libraries and SDKs**
 
@@ -166,6 +171,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [deepagents](https://github.com/langchain-ai/deepagents) — ⭐26.1k — LangChain's Python+TypeScript agent harness on top of LangGraph: planning tool, virtual filesystem, shell sandbox, sub-agent spawning—the "Claude Code-style" harness as a reusable library.
 - [strands-agents](https://github.com/strands-agents/harness-sdk) — ⭐6.5k — Model-driven Python SDK; decorators for tools, native MCP, multi-agent; "minimal code" without sacrificing provider choice.
 - [openai-agents-js](https://github.com/openai/openai-agents-js) — ⭐3.4k — Official OpenAI Agents SDK for Node/TS: handoffs, guardrails, voice; the JS counterpart to openai-agents-python.
+- [deepagents (JS)](https://github.com/langchain-ai/deepagentsjs) — ⭐1.4k — LangChain's TypeScript sibling to deepagents (above): the same planning-tool, virtual-filesystem, sub-agent-spawning **harness** on top of LangGraph.js, for the Node/TS side.
 - [open-harness](https://github.com/MaxGfeller/open-harness) — ⭐585 — TypeScript Agent class on Vercel AI SDK; streaming events, filesystem/bash tools, MCP, and subagent delegation.
 
 ---
@@ -200,6 +206,10 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 - [Langfuse](https://github.com/langfuse/langfuse) — ⭐31k — Open-source LLM engineering platform: full-trace observability, online and offline evals, prompt management, and cost metrics for agent runs in production—the monitoring layer most harnesses lack out of the box.
 - [MLflow](https://github.com/mlflow/mlflow) — ⭐27k — Mature ML platform now covering GenAI: MLflow Tracing captures every agent step, tool call, and token, with built-in LLM evals and prompt versioning—observability for teams already standardized on MLflow.
+
+**Research and task-specific harnesses**
+
+- [MiroThinker](https://github.com/MiroMindAI/MiroThinker) — ⭐8.3k — Deep-research agent **harness** tuned for long-horizon research and prediction tasks, benchmarked against BrowseComp, GAIA, and HLE rather than shipped as a general framework.
 
 ---
 
@@ -280,6 +290,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 **Plugins, MCPs, CLI tools**
 
+- [Agent Governance Toolkit](https://github.com/microsoft/agent-governance-toolkit) — ⭐4.8k — Microsoft's policy-enforcement layer for autonomous agents: zero-trust identity, execution sandboxing, and OWASP Agentic Top-10 coverage bolted onto any agent's tool calls. The **harness** contribution is the governance layer, not an agent loop of its own.
 - [Docker MCP Gateway](https://github.com/docker/mcp-gateway) — ⭐1.5k — Docker's official MCP CLI plugin / gateway; container-aware MCP tooling from Docker (replaces deprecated `docker/mcp-servers` path).
 
 **Evaluation and benchmarking harnesses**
@@ -556,6 +567,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 **Personal agent runtimes**
 
 - [Hermes](https://github.com/NousResearch/hermes-agent) — ⭐214k — Nous Research's self-improving agent: a learning loop turns experience into reusable skills, builds a persistent user model across sessions, and checkpoints state to disk with rollback; lean enough for a $5 VPS, driven from chat, and model-agnostic (Nous Portal, OpenRouter, OpenAI, or any endpoint).
+- [CowAgent](https://github.com/zhayujie/CowAgent) — ⭐45.9k — Formerly chatgpt-on-wechat (shipping since 2022): a multi-model, multi-channel personal-agent **harness** that plans tasks, runs tools/skills, and self-evolves with memory — installed as a one-line daemon rather than a library you build with.
 - [Khoj](https://github.com/khoj-ai/khoj) — ⭐35.7k — Self-hostable "AI second brain": answers over your docs and the web, custom agents, scheduled automations, and multi-client reach (web, Obsidian, Emacs, WhatsApp). A personal-agent harness with retrieval at the core.
 - [Agent Zero](https://github.com/agent0ai/agent-zero) — ⭐18.4k — Organic, prompt-defined personal agent framework: hierarchical sub-agents, persistent memory, browser and code tools, and self-modifying behavior; runs in Docker with a web UI.
 - [AIlice](https://github.com/myshell-ai/AIlice) — ⭐1.4k — Fully autonomous general-purpose agent; one binary, Docker-ready, for when you want "set goal and walk away" without a framework.
@@ -597,6 +609,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 - [aider](https://github.com/Aider-AI/aider) — ⭐47.3k — Git-aware CLI pair programmer; edits in-repo, supports multiple models and MCP so agents see version control and tools.
 - [MCP Python SDK](https://github.com/modelcontextprotocol/python-sdk) — ⭐23.6k — Official SDK to build and consume MCP servers/clients in Python; stdio and SSE transports.
+- [Agent Governance Toolkit](https://github.com/microsoft/agent-governance-toolkit) — ⭐4.8k — Microsoft's policy-enforcement layer for autonomous agents: zero-trust identity, execution sandboxing, and OWASP Agentic Top-10 coverage bolted onto any agent's tool calls. The **harness** contribution is the governance layer, not an agent loop of its own.
 - [agentlog](https://github.com/RyanAlberts/agentlog) — ⭐1 — Persistent decision memory for any project: `remember`, `recall`, `reflect`. Single-file Python CLI that stores decisions as JSONL and uses Claude or Gemini to retrieve and synthesize patterns—Karpathy's LLM Wiki concept as a CLI.
 
 **Memory and state**
@@ -703,6 +716,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [vercel/ai](https://github.com/vercel/ai) — ⭐25.5k — React and Node SDK for streaming, tool calls, and agent-style UIs; provider-agnostic.
 - [Cloudflare Agents](https://github.com/cloudflare/agents) — ⭐5.2k — Persistent, stateful agents on Durable Objects: state, websockets, scheduling, and AI chat baked in. The serverless answer to "where does the agent live?"
 - [openai-agents-js](https://github.com/openai/openai-agents-js) — ⭐3.4k — Official OpenAI Agents SDK for Node/TS: handoffs, guardrails, voice; the JS counterpart to openai-agents-python.
+- [deepagents (JS)](https://github.com/langchain-ai/deepagentsjs) — ⭐1.4k — LangChain's TypeScript sibling to deepagents (above): the same planning-tool, virtual-filesystem, sub-agent-spawning **harness** on top of LangGraph.js, for the Node/TS side.
 - [open-harness](https://github.com/MaxGfeller/open-harness) — ⭐585 — TypeScript Agent class on Vercel AI SDK; streaming events, filesystem/bash tools, MCP, and subagent delegation.
 
 ---
@@ -732,6 +746,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 **Personal agent runtimes**
 
 - [Hermes](https://github.com/NousResearch/hermes-agent) — ⭐214k — Nous Research's self-improving agent: a learning loop turns experience into reusable skills, builds a persistent user model across sessions, and checkpoints state to disk with rollback; lean enough for a $5 VPS, driven from chat, and model-agnostic (Nous Portal, OpenRouter, OpenAI, or any endpoint).
+- [CowAgent](https://github.com/zhayujie/CowAgent) — ⭐45.9k — Formerly chatgpt-on-wechat (shipping since 2022): a multi-model, multi-channel personal-agent **harness** that plans tasks, runs tools/skills, and self-evolves with memory — installed as a one-line daemon rather than a library you build with.
 - [Khoj](https://github.com/khoj-ai/khoj) — ⭐35.7k — Self-hostable "AI second brain": answers over your docs and the web, custom agents, scheduled automations, and multi-client reach (web, Obsidian, Emacs, WhatsApp). A personal-agent harness with retrieval at the core.
 - [Agent Zero](https://github.com/agent0ai/agent-zero) — ⭐18.4k — Organic, prompt-defined personal agent framework: hierarchical sub-agents, persistent memory, browser and code tools, and self-modifying behavior; runs in Docker with a web UI.
 - [AIlice](https://github.com/myshell-ai/AIlice) — ⭐1.4k — Fully autonomous general-purpose agent; one binary, Docker-ready, for when you want "set goal and walk away" without a framework.
@@ -773,6 +788,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 - [aider](https://github.com/Aider-AI/aider) — ⭐47.3k — Git-aware CLI pair programmer; edits in-repo, supports multiple models and MCP so agents see version control and tools.
 - [MCP Python SDK](https://github.com/modelcontextprotocol/python-sdk) — ⭐23.6k — Official SDK to build and consume MCP servers/clients in Python; stdio and SSE transports.
+- [Agent Governance Toolkit](https://github.com/microsoft/agent-governance-toolkit) — ⭐4.8k — Microsoft's policy-enforcement layer for autonomous agents: zero-trust identity, execution sandboxing, and OWASP Agentic Top-10 coverage bolted onto any agent's tool calls. The **harness** contribution is the governance layer, not an agent loop of its own.
 - [agentlog](https://github.com/RyanAlberts/agentlog) — ⭐1 — Persistent decision memory for any project: `remember`, `recall`, `reflect`. Single-file Python CLI that stores decisions as JSONL and uses Claude or Gemini to retrieve and synthesize patterns—Karpathy's LLM Wiki concept as a CLI.
 
 **Memory and state**
@@ -879,4 +895,5 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [vercel/ai](https://github.com/vercel/ai) — ⭐25.5k — React and Node SDK for streaming, tool calls, and agent-style UIs; provider-agnostic.
 - [Cloudflare Agents](https://github.com/cloudflare/agents) — ⭐5.2k — Persistent, stateful agents on Durable Objects: state, websockets, scheduling, and AI chat baked in. The serverless answer to "where does the agent live?"
 - [openai-agents-js](https://github.com/openai/openai-agents-js) — ⭐3.4k — Official OpenAI Agents SDK for Node/TS: handoffs, guardrails, voice; the JS counterpart to openai-agents-python.
+- [deepagents (JS)](https://github.com/langchain-ai/deepagentsjs) — ⭐1.4k — LangChain's TypeScript sibling to deepagents (above): the same planning-tool, virtual-filesystem, sub-agent-spawning **harness** on top of LangGraph.js, for the Node/TS side.
 - [open-harness](https://github.com/MaxGfeller/open-harness) — ⭐585 — TypeScript Agent class on Vercel AI SDK; streaming events, filesystem/bash tools, MCP, and subagent delegation.

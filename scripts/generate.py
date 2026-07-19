@@ -303,6 +303,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("AIlice", "myshell-ai/AIlice",
                 "Fully autonomous general-purpose agent; one binary, Docker-ready, for when you want \"set goal and walk away\" without a framework.",
                 "slightly complex (autonomous, one binary)", labels=["python"]),
+        Project("CowAgent", "zhayujie/CowAgent",
+                "Formerly chatgpt-on-wechat (shipping since 2022): a multi-model, multi-channel personal-agent **harness** that plans tasks, runs tools/skills, and self-evolves with memory — installed as a one-line daemon rather than a library you build with.",
+                "slightly complex (multi-model, multi-channel, memory)", labels=["python"]),
     ],
     "frameworks": [
         Project("langgraph", "langchain-ai/langgraph",
@@ -459,6 +462,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("chrome-devtools-mcp", "ChromeDevTools/chrome-devtools-mcp",
                 "Google's official Chrome DevTools MCP server: exposes console, network, and performance-trace inspection as tool calls agents can drive directly, instead of a human clicking through the DevTools panel.",
                 "mostly simple (official browser-debug MCP)", oss="❓", labels=["javascript"]),
+        Project("Agent Governance Toolkit", "microsoft/agent-governance-toolkit",
+                "Microsoft's policy-enforcement layer for autonomous agents: zero-trust identity, execution sandboxing, and OWASP Agentic Top-10 coverage bolted onto any agent's tool calls. The **harness** contribution is the governance layer, not an agent loop of its own.",
+                "slightly complex (policy engine, sandboxing, zero-trust)", labels=["python"]),
     ],
     "memory": [
         Project("cognee", "topoteretes/cognee",
@@ -542,11 +548,17 @@ PROJECTS: dict[str, list[Project]] = {
         Project("openagents", "OpenAgentsInc/openagents",
                 "Platform for autonomous agents and autopilot-style workflows; decentralized/Nostr-oriented (Pylon runtime, actively shipped in 2026).",
                 "complex (platform, decentralized — product suite)"),
+        Project("MiroThinker", "MiroMindAI/MiroThinker",
+                "Deep-research agent **harness** tuned for long-horizon research and prediction tasks, benchmarked against BrowseComp, GAIA, and HLE rather than shipped as a general framework.",
+                "slightly complex (research agent, SOTA benchmarks)"),
     ],
     "libraries-sdks": [
         Project("deepagents", "langchain-ai/deepagents",
                 "LangChain's Python+TypeScript agent harness on top of LangGraph: planning tool, virtual filesystem, shell sandbox, sub-agent spawning—the \"Claude Code-style\" harness as a reusable library.",
                 "slightly complex (planning, files, sub-agents)", labels=["python"]),
+        Project("deepagents (JS)", "langchain-ai/deepagentsjs",
+                "LangChain's TypeScript sibling to deepagents (above): the same planning-tool, virtual-filesystem, sub-agent-spawning **harness** on top of LangGraph.js, for the Node/TS side.",
+                "slightly complex (planning, files, sub-agents)", labels=["javascript"]),
         Project("pydantic-ai", "pydantic/pydantic-ai",
                 "Type-safe Python agents with Pydantic I/O; multi-provider, MCP, Logfire observability, and human-in-the-loop.",
                 "slightly complex (type-safe, MCP, Logfire)", labels=["python"]),
@@ -652,6 +664,7 @@ META: dict[str, tuple[int, str, str]] = {
     "n8n-io/n8n": (196154, "https://github.com/n8n-io/n8n-docs/blob/main/docs/advanced-ai/examples/agent-chain-comparison.md", "Agent vs chain workflow"),
     "Significant-Gravitas/AutoGPT": (185490, "https://github.com/Significant-Gravitas/AutoGPT/blob/master/autogpt_platform/graph_templates/Medium%20Blogger_v28.json", "Medium blogger graph"),
     "myshell-ai/AIlice": (1409, "https://github.com/myshell-ai/AIlice#cool-things-we-can-do", "Task showcase"),
+    "zhayujie/CowAgent": (45943, "https://docs.cowagent.ai/guide/quick-start", "Quick Start guide"),
     "i-am-bee/beeai-framework": (3315, "https://github.com/i-am-bee/beeai-framework/blob/main/python/examples/agents/react.py", "ReAct agent example"),
     "2FastLabs/agent-squad": (7697, "https://github.com/2FastLabs/agent-squad/tree/main/examples/ecommerce-support-simulator", "E-commerce support sim"),
     "superagentxai/superagentx": (200, "https://github.com/superagentxai/superagentx/blob/master/examples/agents/parallel_agents.py", "Parallel marketing agents"),
@@ -694,6 +707,7 @@ META: dict[str, tuple[int, str, str]] = {
     "docker/mcp-gateway": (1479, "https://github.com/docker/mcp-gateway/blob/main/docs/mcp-gateway.md", "Gateway usage walkthrough"),
     "withLinda/puppeteer-real-browser-mcp-server": (24, "https://github.com/withLinda/puppeteer-real-browser-mcp-server/blob/main/README.md", "11 anti-detection tools"),
     "Infisical/agent-vault": (1857, "https://github.com/Infisical/agent-vault#readme", "Project README"),
+    "microsoft/agent-governance-toolkit": (4832, "https://github.com/microsoft/agent-governance-toolkit/tree/main/examples/openai-agents-governed", "Policy-gated OpenAI Agents example"),
     # evaluation
     "vostride/agent-qa": (157, "https://github.com/vostride/agent-qa#readme", "Natural-language QA harness"),
     "arcprize/ARC-AGI-2": (725, "https://arcprize.org/leaderboard", "ARC Prize leaderboard"),
@@ -715,8 +729,10 @@ META: dict[str, tuple[int, str, str]] = {
     # research-task
     "assafelovic/gpt-researcher": (28268, "https://github.com/assafelovic/gpt-researcher/blob/master/docs/blog/2024-05-19-gptr-langgraph/index.md", "Multi-agent LangGraph walkthrough"),
     "OpenAgentsInc/openagents": (439, "https://github.com/OpenAgentsInc/openagents/blob/main/docs/reports/nexus/2026-04-23-autopilot-pylon-production-earning-proof.md", "Production earning proof"),
+    "MiroMindAI/MiroThinker": (8332, "https://github.com/MiroMindAI/MiroThinker#-quick-start", "Quick Start guide"),
     # libraries-sdks
     "langchain-ai/deepagents": (26129, "https://github.com/langchain-ai/deepagents/tree/main/examples/deep_research", "Deep research agent"),
+    "langchain-ai/deepagentsjs": (1401, "https://github.com/langchain-ai/deepagentsjs/tree/main/examples", "Examples folder"),
     "pydantic/pydantic-ai": (18442, "https://github.com/pydantic/pydantic-ai/blob/main/examples/pydantic_ai_examples/bank_support.py", "Bank support agent"),
     "MaxGfeller/open-harness": (585, "https://github.com/MaxGfeller/open-harness/tree/main/examples/cli", "Terminal CLI agent"),
     "vercel/ai": (25504, "https://github.com/vercel/ai/tree/main/examples/next-agent", "Next.js agent example"),
@@ -955,6 +971,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "i-am-bee/beeai-framework": ("bounded", "resumable"),
     "agentstack-ai/AgentStack": ("n/a", "n/a"),
     "myshell-ai/AIlice": ("bounded", "none"),
+    "zhayujie/CowAgent": ("bounded", "resumable"),
     "howl-anderson/agentsilex": ("bounded", "none"),
     "openclaw/openclaw": ("headless", "resumable"),
     "NousResearch/hermes-agent": ("headless", "resumable"),
@@ -986,6 +1003,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "docker/mcp-gateway": ("n/a", "n/a"),
     "withLinda/puppeteer-real-browser-mcp-server": ("n/a", "n/a"),
     "Infisical/agent-vault": ("n/a", "n/a"),
+    "microsoft/agent-governance-toolkit": ("n/a", "n/a"),
     "ajhcs/Better-OpenCodeMCP": ("n/a", "n/a"),
     "RyanAlberts/agentlog": ("n/a", "n/a"),
     # evaluation
@@ -1009,6 +1027,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     # research-task
     "assafelovic/gpt-researcher": ("bounded", "retry"),
     "OpenAgentsInc/openagents": ("headless", "resumable"),
+    "MiroMindAI/MiroThinker": ("bounded", "retry"),
     # libraries-sdks
     "daytonaio/daytona": ("n/a", "n/a"),
     "mem0ai/mem0": ("n/a", "n/a"),
@@ -1017,6 +1036,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "huggingface/smolagents": ("bounded", "none"),
     "vercel/ai": ("bounded", "retry"),
     "langchain-ai/deepagents": ("bounded", "durable"),
+    "langchain-ai/deepagentsjs": ("bounded", "durable"),
     "pydantic/pydantic-ai": ("bounded", "durable"),
     "e2b-dev/E2B": ("n/a", "n/a"),
     "strands-agents/harness-sdk": ("bounded", "resumable"),

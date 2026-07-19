@@ -228,6 +228,10 @@ projects:
     github_id: myshell-ai/AIlice
     labels: ["python"]
     category: "personal-agent-runtimes"
+  - name: CowAgent
+    github_id: zhayujie/CowAgent
+    labels: ["python"]
+    category: "personal-agent-runtimes"
   # Frameworks
   - name: langgraph
     github_id: langchain-ai/langgraph
@@ -423,6 +427,10 @@ projects:
     github_id: ChromeDevTools/chrome-devtools-mcp
     labels: ["javascript"]
     category: "plugins-mcp-cli"
+  - name: Agent Governance Toolkit
+    github_id: microsoft/agent-governance-toolkit
+    labels: ["python"]
+    category: "plugins-mcp-cli"
   # Memory and state
   - name: cognee
     github_id: topoteretes/cognee
@@ -519,10 +527,17 @@ projects:
   - name: openagents
     github_id: OpenAgentsInc/openagents
     category: "research-task"
+  - name: MiroThinker
+    github_id: MiroMindAI/MiroThinker
+    category: "research-task"
   # Libraries and SDKs
   - name: deepagents
     github_id: langchain-ai/deepagents
     labels: ["python"]
+    category: "libraries-sdks"
+  - name: deepagents (JS)
+    github_id: langchain-ai/deepagentsjs
+    labels: ["javascript"]
     category: "libraries-sdks"
   - name: pydantic-ai
     github_id: pydantic/pydantic-ai
