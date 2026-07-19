@@ -24,12 +24,12 @@
 <text x="176" y="201.2" text-anchor="end" font-size="14.5" font-weight="600" fill="#111827">durable ✱</text>
 <text x="44" y="395" font-size="13" fill="#6b7280" transform="rotate(-90 44 395)" text-anchor="middle">recovery: crash = start over&#160;&#160;→&#160;&#160;survives restarts</text>
 <text x="832.5" y="652.0" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">9</text>
-<text x="832.5" y="254.5" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">4</text>
-<text x="832.5" y="387.0" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">21</text>
+<text x="832.5" y="254.5" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">5</text>
+<text x="832.5" y="387.0" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">22</text>
 <text x="397.5" y="387.0" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">3</text>
 <text x="1050.0" y="387.0" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">22</text>
 <text x="615.0" y="652.0" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">1</text>
-<text x="832.5" y="519.5" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">8</text>
+<text x="832.5" y="519.5" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">9</text>
 <text x="1050.0" y="652.0" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">12</text>
 <text x="1050.0" y="254.5" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">4</text>
 <text x="1050.0" y="519.5" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">6</text>
@@ -57,6 +57,7 @@
 <circle cx="910.3" cy="622.1" r="5.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>swe-smith — ⭐697</title></circle>
 <circle cx="1012.9" cy="584.1" r="5.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>SWE-Gym — ⭐701</title></circle>
 <circle cx="1016.7" cy="582.5" r="5.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>WebVoyager — ⭐1.1k</title></circle>
+<circle cx="789.6" cy="173.4" r="5.5" fill="#a16207" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>deepagents (JS) — ⭐1.4k</title></circle>
 <circle cx="658.2" cy="622.8" r="5.5" fill="#0ea5e9" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>AIlice — ⭐1.4k</title></circle>
 <circle cx="1002.7" cy="580.0" r="5.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>WebArena — ⭐1.5k</title></circle>
 <circle cx="1000.1" cy="367.1" r="5.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>inspect_ai — ⭐2.3k</title></circle>
@@ -71,6 +72,7 @@
 <circle cx="990.8" cy="357.7" r="5.5" fill="#f59e0b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Claude Agent SDK — ⭐7.6k</title></circle>
 <circle cx="724.0" cy="355.5" r="5.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>agent-squad — ⭐7.7k</title></circle>
 <circle cx="1015.8" cy="469.1" r="5.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>R2R — ⭐7.9k</title></circle>
+<circle cx="798.9" cy="464.9" r="5.5" fill="#14b8a6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>MiroThinker — ⭐8.3k</title></circle>
 <circle cx="766.5" cy="609.7" r="5.5" fill="#ec4899" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>PraisonAI — ⭐8.4k</title></circle>
 <circle cx="808.8" cy="300.6" r="5.5" fill="#ec4899" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>hive — ⭐10.7k</title></circle>
 <circle cx="717.6" cy="309.0" r="5.5" fill="#ec4899" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Microsoft Agent Framework — ⭐12.1k</title></circle>
@@ -102,6 +104,7 @@
 <circle cx="908.0" cy="316.9" r="5.5" fill="#0ea5e9" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Khoj — ⭐35.7k</title></circle>
 <circle cx="1020.8" cy="204.5" r="5.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>langgraph — ⭐37.1k</title></circle>
 <circle cx="787.0" cy="351.5" r="5.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>agno — ⭐41.1k</title></circle>
+<circle cx="779.1" cy="301.0" r="5.5" fill="#0ea5e9" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>CowAgent — ⭐45.9k</title></circle>
 <circle cx="525.2" cy="308.7" r="5.5" fill="#10b981" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>aider — ⭐47.3k</title></circle>
 <circle cx="665.5" cy="435.6" r="5.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>llama-index — ⭐50.8k</title></circle>
 <circle cx="1008.2" cy="292.6" r="5.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>goose — ⭐51.1k</title></circle>
@@ -137,5 +140,5 @@
 <text x="993.7" y="164.6" text-anchor="end" font-size="12.5" font-weight="600" fill="#1f2937">n8n</text>
 <text x="1004.2" y="448.5" text-anchor="end" font-size="12.5" font-weight="600" fill="#1f2937">langflow</text>
 <text x="534.2" y="313.2" text-anchor="start" font-size="12.5" font-weight="600" fill="#1f2937">aider</text>
-<text x="1060" y="784" text-anchor="end" font-size="12" fill="#9ca3af">92 loop-owning projects shown · 43 format/component entries (n/a) omitted · full tiers in harnesses.json</text>
+<text x="1060" y="784" text-anchor="end" font-size="12" fill="#9ca3af">95 loop-owning projects shown · 44 format/component entries (n/a) omitted · full tiers in harnesses.json</text>
 </svg>
