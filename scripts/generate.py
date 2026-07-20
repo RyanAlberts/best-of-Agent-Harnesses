@@ -169,6 +169,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("context-mode", "mksglu/context-mode",
                 "Context-window optimization layer that sandboxes tool output before it reaches the model (claimed 98% reduction) and persists session memory across 17 agent platforms via MCP and hooks—progressive disclosure applied to tool results, not just instructions.",
                 "mostly simple (output sandboxing, cross-platform)", oss="❓"),
+        Project("Headroom", "headroomlabs-ai/headroom",
+                "Compresses tool outputs, logs, files, and RAG chunks with content-aware compressors before they reach the model—claimed 20% fewer tokens for coding agents and 60–95% fewer for JSON, same answers. Ships as a library, HTTP proxy, or MCP server, so it drops in front of whatever harness you already run.",
+                "mostly simple (compression library/proxy/MCP server)"),
     ],
     "coding-agent-products": [
         Project("oh-my-pi", "can1357/oh-my-pi",
@@ -275,6 +278,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("awesome-claude-code", "hesreallyhim/awesome-claude-code",
                 "Large community-curated index of Claude Code skills, slash commands, status lines, and plugins—resources for extending the harness, not a harness itself, but the most-followed catalog of the genre.",
                 "super simple (curated resource index)", oss="❓"),
+        Project("Agent Skills", "addyosmani/agent-skills",
+                "Addy Osmani's production-grade skill pack: 24 engineering skills and 4 specialist agent personas that encode senior-dev workflows (spec through deploy) across 70+ coding agents including Claude Code, Cursor, and Copilot. The **harness** contribution is the skill/workflow layer, not a new agent loop.",
+                "mostly simple (skills bundle, cross-agent)", link_name="addyosmani/agent-skills"),
     ],
     "personal-agent-runtimes": [
         Project("Talon", "dylanneve1/talon",
@@ -602,6 +608,7 @@ META: dict[str, tuple[int, str, str]] = {
     "Reason-Wang/ToolGen": (183, "https://github.com/Reason-Wang/ToolGen/blob/master/scripts/eval_full_pipeline.sh", "Full eval pipeline"),
     "antl3x/ToolRAG": (29, "https://github.com/antl3x/ToolRAG/blob/main/packages/%40antl3x-toolrag/README.md", "MCP server retrieval"),
     "mksglu/context-mode": (19083, "https://github.com/mksglu/context-mode#readme", "Project README"),
+    "headroomlabs-ai/headroom": (59996, "https://github.com/headroomlabs-ai/headroom#readme", "Project README"),
     # coding-agent-products
     "can1357/oh-my-pi": (18438, "https://github.com/can1357/oh-my-pi/blob/main/docs/lsp-config.md", "LSP wired into edits"),
     "earendil-works/pi": (72644, "https://github.com/earendil-works/pi#readme", "Project README"),
@@ -637,6 +644,7 @@ META: dict[str, tuple[int, str, str]] = {
     "google/agents-cli": (5220, "https://github.com/google/agents-cli#readme", "Project README"),
     "iflytek/skillhub": (4673, "https://github.com/iflytek/skillhub#readme", "Project README"),
     "hesreallyhim/awesome-claude-code": (50396, "https://github.com/hesreallyhim/awesome-claude-code#readme", "Project README"),
+    "addyosmani/agent-skills": (79258, "https://github.com/addyosmani/agent-skills#readme", "Project README"),
     # frameworks
     "langchain-ai/langgraph": (37598, "https://github.com/langchain-ai/langgraph/blob/main/examples/customer-support/customer-support.ipynb", "Customer support agent"),
     "langchain-ai/langchain": (142088, "https://github.com/langchain-ai/langchain-academy/blob/main/module-1/agent.ipynb", "Build an agent notebook"),
@@ -891,6 +899,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "spring-ai-community/spring-ai-tool-search-tool": ("n/a", "n/a"),
     "antl3x/ToolRAG": ("n/a", "n/a"),
     "mksglu/context-mode": ("n/a", "n/a"),
+    "headroomlabs-ai/headroom": ("n/a", "n/a"),
     # coding-agent-products
     "can1357/oh-my-pi": ("bounded", "resumable"),
     "earendil-works/pi": ("bounded", "resumable"),
@@ -918,6 +927,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "google/agents-cli": ("n/a", "n/a"),
     "iflytek/skillhub": ("n/a", "n/a"),
     "hesreallyhim/awesome-claude-code": ("n/a", "n/a"),
+    "addyosmani/agent-skills": ("n/a", "n/a"),
     "garrytan/gstack": ("n/a", "n/a"),
     "open-gsd/gsd-core": ("bounded", "resumable"),
     "SWE-agent/SWE-agent": ("headless", "resumable"),
