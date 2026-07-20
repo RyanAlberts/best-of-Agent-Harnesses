@@ -3552,7 +3552,7 @@
           "rating": "full",
           "rank": 3,
           "detail": "The moderation extension exposes app.moderation.input (runs before the query reaches the app) and app.moderation.output hooks whose response can be direct_output (blocks the request with a preset reply) or overridden (rewrites the content) before/after the LLM call.",
-          "evidence": "https://docs.dify.ai/versions/3-0-x/en/user-guide/extension/api-based-extension/moderation"
+          "evidence": "https://legacy-docs.dify.ai/guides/extension/api-based-extension/moderation"
         },
         "prompt_optimization": {
           "rating": "native",

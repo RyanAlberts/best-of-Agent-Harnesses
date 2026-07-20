@@ -1,9 +1,30 @@
 {
   "github_id": "langgenius/dify",
   "researched": "2026-07-19",
-  "tooling_sandboxing": {"rating": "strong", "detail": "DifySandbox executes Code/Template-Transform/Code-Interpreter node code behind a seccomp system-call whitelist, an isolated per-execution filesystem, and network-isolated proxy containers, rather than running user code directly on the host.", "evidence": "https://dify.ai/blog/difysandbox-goes-open-source-secure-execution-of-code"},
-  "context_memory": {"rating": "strong", "detail": "Session-scoped Conversation Variables handle short-term context, while Knowledge Bases persist document content as vector embeddings (13+ supported vector DB backends) so the same processed knowledge is reused across applications and sessions.", "evidence": "https://docs.dify.ai/en/cloud/use-dify/knowledge/readme"},
-  "lifecycle_hooks": {"rating": "full", "detail": "The moderation extension exposes app.moderation.input (runs before the query reaches the app) and app.moderation.output hooks whose response can be direct_output (blocks the request with a preset reply) or overridden (rewrites the content) before/after the LLM call.", "evidence": "https://docs.dify.ai/versions/3-0-x/en/user-guide/extension/api-based-extension/moderation"},
-  "prompt_optimization": {"rating": "native", "detail": "The Prompt IDE ships a built-in Prompt Generator (INSTRUCTION_GENERATE_TEMPLATE_PROMPT / LLM_MODIFY_PROMPT_SYSTEM) that feeds the previous run's output back to an LLM to rewrite the prompt toward a stated ideal output, an in-harness feedback-driven refinement loop rather than only manual editing.", "evidence": "https://github.com/langgenius/dify/blob/main/api/core/llm_generator/prompts.py"},
-  "build_vs_buy": {"tier": 2, "label": "blueprint", "detail": "Repo installs the self-hostable Community Edition (Docker Compose); Dify Cloud is a named hosted alternative and Enterprise adds a separate license, but the primary published artifact is the self-run platform.", "evidence": "https://raw.githubusercontent.com/langgenius/dify/HEAD/README.md"}
+  "tooling_sandboxing": {
+    "rating": "strong",
+    "detail": "DifySandbox executes Code/Template-Transform/Code-Interpreter node code behind a seccomp system-call whitelist, an isolated per-execution filesystem, and network-isolated proxy containers, rather than running user code directly on the host.",
+    "evidence": "https://dify.ai/blog/difysandbox-goes-open-source-secure-execution-of-code"
+  },
+  "context_memory": {
+    "rating": "strong",
+    "detail": "Session-scoped Conversation Variables handle short-term context, while Knowledge Bases persist document content as vector embeddings (13+ supported vector DB backends) so the same processed knowledge is reused across applications and sessions.",
+    "evidence": "https://docs.dify.ai/en/cloud/use-dify/knowledge/readme"
+  },
+  "lifecycle_hooks": {
+    "rating": "full",
+    "detail": "The moderation extension exposes app.moderation.input (runs before the query reaches the app) and app.moderation.output hooks whose response can be direct_output (blocks the request with a preset reply) or overridden (rewrites the content) before/after the LLM call.",
+    "evidence": "https://legacy-docs.dify.ai/guides/extension/api-based-extension/moderation"
+  },
+  "prompt_optimization": {
+    "rating": "native",
+    "detail": "The Prompt IDE ships a built-in Prompt Generator (INSTRUCTION_GENERATE_TEMPLATE_PROMPT / LLM_MODIFY_PROMPT_SYSTEM) that feeds the previous run's output back to an LLM to rewrite the prompt toward a stated ideal output, an in-harness feedback-driven refinement loop rather than only manual editing.",
+    "evidence": "https://github.com/langgenius/dify/blob/main/api/core/llm_generator/prompts.py"
+  },
+  "build_vs_buy": {
+    "tier": 2,
+    "label": "blueprint",
+    "detail": "Repo installs the self-hostable Community Edition (Docker Compose); Dify Cloud is a named hosted alternative and Enterprise adds a separate license, but the primary published artifact is the self-run platform.",
+    "evidence": "https://raw.githubusercontent.com/langgenius/dify/HEAD/README.md"
+  }
 }
