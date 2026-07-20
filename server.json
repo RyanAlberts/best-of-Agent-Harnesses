@@ -1,18 +1,18 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
   "name": "io.github.RyanAlberts/agent-harnesses",
-  "description": "Opinionated agent-harness picks (recommend/pick_harness), search & decision guides.",
+  "description": "Opinionated agent-harness picks (recommend/compare/pick_harness), search & decision guides.",
   "repository": {
     "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses",
     "source": "github"
   },
-  "version": "0.2.1",
+  "version": "0.3.0",
   "packages": [
     {
       "registryType": "pypi",
       "registryBaseUrl": "https://pypi.org",
       "identifier": "agent-harnesses-mcp",
-      "version": "0.2.1",
+      "version": "0.3.0",
       "transport": {
         "type": "stdio"
       }

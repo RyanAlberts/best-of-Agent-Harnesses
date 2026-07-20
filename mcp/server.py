@@ -6,8 +6,8 @@
 """MCP server for best-of-Agent-Harnesses.
 
 Serves the curated list (harnesses.json) as tools so agents can recommend
-agent harnesses: recommend, pick_harness, search_harnesses, get_harness,
-list_categories.
+agent harnesses: recommend, compare, pick_harness, search_harnesses,
+get_harness, list_categories.
 
 Run directly from GitHub (no clone needed):
     uv run https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/mcp/server.py
@@ -264,6 +264,81 @@ def get_harness(github_id: str) -> str:
             return json.dumps(p, indent=2, ensure_ascii=False)
     return json.dumps({"error": f"unknown github_id: {github_id}",
                        "hint": "use search_harnesses to find the right id"})
+
+
+@mcp.tool()
+def compare(github_ids: list[str]) -> str:
+    """Side-by-side comparison of 2-4 harnesses by github_id — for "should I use X or Y?".
+
+    Answers the head-to-head question with the list's curation intelligence
+    instead of a raw spec dump: each project's record aligned on the list's
+    axes, an edge summary naming which project leads on stars / adoption
+    simplicity / autonomy / failure recovery, a warning when a requested id is
+    in the graveyard (archived or integrity-flagged), and the decision guide
+    covering this matchup when one exists.
+
+    github_ids: 2-4 ids, e.g. ["openclaw/openclaw", "NousResearch/hermes-agent"]
+    — use search_harnesses to find an id.
+    Returns JSON: {projects, edges, warnings, see_also, source, stars_captured}.
+    Edge values are lists of names (more than one = a tie); an axis is omitted
+    when fewer than two of the compared projects are rated on it.
+    """
+    d = data()
+    ids = [g.strip() for g in github_ids if g and g.strip()]
+    if not 2 <= len(ids) <= 4:
+        return json.dumps({"error": "pass 2-4 github_ids"})
+    by_id = {p["github_id"].lower(): p for p in d["projects"]}
+    grave = {g.get("github_id", "").lower(): g for g in d.get("graveyard", [])}
+    projects, warnings, unknown = [], [], []
+    for gid in ids:
+        if (p := by_id.get(gid.lower())):
+            projects.append(p)
+        elif (g := grave.get(gid.lower())):
+            warnings.append({
+                "github_id": g["github_id"],
+                "warning": "in the graveyard, not comparable: "
+                           + g.get("reason", "not recommended"),
+                "last_stars": g.get("last_stars"),
+            })
+        else:
+            unknown.append(gid)
+    if unknown:
+        return json.dumps({"error": f"unknown github_ids: {', '.join(unknown)}",
+                           "hint": "use search_harnesses to find the right id"})
+
+    edges = {}
+    for label, key, best in [
+        ("most_stars", lambda p: p.get("stars", 0), max),
+        ("simplest_adoption", lambda p: p.get("tier_rank", 0), min),
+        ("highest_autonomy", lambda p: p.get("autonomy_rank", 0), max),
+        ("strongest_recovery", lambda p: p.get("recovery_rank", 0), max),
+    ]:
+        rated = [p for p in projects if key(p)]
+        if len(rated) >= 2:
+            top = best(key(p) for p in rated)
+            edges[label] = [p["name"] for p in rated if key(p) == top]
+
+    # See also: the guide that mentions at least two of the compared projects.
+    see_also = None
+    name_tokens = [_tokens(p["name"]) for p in projects]
+    best_guide, best_hits = None, 1
+    for c in d.get("comparisons", []):
+        hay = _tokens(f"{c['title']} {c.get('summary', '')}")
+        hits = sum(1 for t in name_tokens if _overlap(t, hay))
+        if hits > best_hits:
+            best_guide, best_hits = c, hits
+    if best_guide:
+        see_also = {"slug": best_guide["slug"], "title": best_guide["title"],
+                    "how": "fetch full text with get_comparison(slug)"}
+
+    return json.dumps({
+        "projects": [_brief(p) for p in projects],
+        "edges": edges,
+        "warnings": warnings,
+        "see_also": see_also,
+        "source": d["meta"]["url"],
+        "stars_captured": d["meta"]["stars_captured"],
+    }, indent=2, ensure_ascii=False)
 
 
 @mcp.tool()

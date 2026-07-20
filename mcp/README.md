@@ -39,6 +39,7 @@ claude mcp add agent-harnesses -- uv run https://raw.githubusercontent.com/RyanA
 |---|---|
 | `recommend(need, language?, must_run_unattended?, open_source_only?)` | **Opinionated single recommendation** — a decision, not a list. Returns one top pick with the reason, up to two alternatives, any harnesses to **avoid** for this need (archived, or flagged for star manipulation — with why), and the most relevant decision guide to read next. |
 | `pick_harness(use_case, max_complexity?, min_autonomy?, min_recovery?, open_source_only?, limit?)` | Ranked recommendations for a use case, seeded by the list's hand-curated use-case index. `max_complexity` caps adoption surface (`super simple` → `complex`); `min_autonomy` requires a designed autonomy regime (`step-gated` → `headless`); `min_recovery` requires a failure-recovery tier (`none` → `durable`). |
+| `compare(github_ids)` | **Side-by-side of 2–4 harnesses** — "should I use X or Y?". Records aligned on the list's axes, an edge summary naming who leads on stars / adoption simplicity / autonomy / failure recovery, a warning when a requested repo is in the graveyard (archived or integrity-flagged), and the decision guide covering the matchup when one exists. |
 | `search_harnesses(query, limit?)` | Keyword search across names, descriptions, tags, and categories. |
 | `get_harness(github_id)` | Full record for one project. |
 | `list_comparisons()` | The head-to-head decision guides (OpenClaw vs Hermes, terminal coding agents, …) with summaries. |
@@ -46,6 +47,8 @@ claude mcp add agent-harnesses -- uv run https://raw.githubusercontent.com/RyanA
 | `list_categories()` | The 10 categories, use-case intents, and the complexity/autonomy/recovery scales. |
 
 Example: *"recommend('an always-on personal assistant that lives in my chat apps', open_source_only=True)"* → one top pick with the reason, two alternatives, anything to avoid for this need, and the guide to read next.
+
+Example: *"compare(['openclaw/openclaw', 'NousResearch/hermes-agent'])"* → both records side by side, who leads on which axis, and a pointer to the *OpenClaw vs Hermes* guide.
 
 Example: *"pick_harness('sandboxed code execution for generated code', max_complexity='slightly complex', open_source_only=True)"* → E2B, smolagents, Daytona... each with stars, tier, license signal, and a one-line reason.
 

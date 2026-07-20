@@ -364,7 +364,7 @@
     {
       "kind": "concept",
       "q": "How can an AI agent use this list directly?",
-      "a": "Three machine-readable surfaces: harnesses.json (structured), llms.txt (one file), and an MCP server (uvx agent-harnesses-mcp) exposing recommend, pick_harness, and search_harnesses.",
+      "a": "Three machine-readable surfaces: harnesses.json (structured), llms.txt (one file), and an MCP server (uvx agent-harnesses-mcp) exposing recommend, compare, pick_harness, and search_harnesses.",
       "slug": "how-can-an-ai-agent-use-this-list-directly"
     }
   ],
