@@ -1,0 +1,30 @@
+{
+  "github_id": "anthropics/claude-agent-sdk-python",
+  "researched": "2026-07-19",
+  "tooling_sandboxing": {
+    "rating": "basic",
+    "detail": "SDK apps can enable Claude Code's sandboxed Bash tool (Seatbelt on macOS, bubblewrap on Linux/WSL2) for kernel-enforced filesystem/network restrictions, but it is opt-in configuration - default Bash execution is on the host with permission prompts.",
+    "evidence": "https://code.claude.com/docs/en/sandboxing"
+  },
+  "context_memory": {
+    "rating": "strong",
+    "detail": "Sessions are written to disk automatically and can be continued, resumed by ID, or forked, with PreCompact/PostCompact hooks around built-in conversation compaction.",
+    "evidence": "https://code.claude.com/docs/en/agent-sdk/sessions"
+  },
+  "lifecycle_hooks": {
+    "rating": "full",
+    "detail": "PreToolUse hook callbacks receive the tool call before it executes and can return permissionDecision: deny/allow/ask or an updatedInput to block or rewrite the action, alongside PostToolUse, Stop, and many other lifecycle events.",
+    "evidence": "https://code.claude.com/docs/en/agent-sdk/hooks"
+  },
+  "prompt_optimization": {
+    "rating": "configurable",
+    "detail": "System prompts are layered via the claude_code preset, append text, output-style files, or a fully custom string, plus CLAUDE.md project instructions injected into context; there is no automatic prompt tuning.",
+    "evidence": "https://code.claude.com/docs/en/agent-sdk/modifying-system-prompts"
+  },
+  "build_vs_buy": {
+    "tier": 1,
+    "label": "build",
+    "detail": "The published artifact is the claude-agent-sdk Python/TypeScript package (query()/ClaudeSDKClient) that you import and compose into your own application/loop; Anthropic's hosted Claude Code and Managed Agents offerings are the tier-3 alternative for teams that don't want to own the runtime.",
+    "evidence": "https://raw.githubusercontent.com/anthropics/claude-agent-sdk-python/main/README.md"
+  }
+}

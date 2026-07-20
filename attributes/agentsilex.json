@@ -1,0 +1,9 @@
+{
+  "github_id": "howl-anderson/agentsilex",
+  "researched": "2026-07-19",
+  "tooling_sandboxing": {"rating": "unknown", "detail": "Looked for any isolation mechanism around tool execution in the README and repo overview; none is documented one way or the other for this ~300-line minimal framework.", "evidence": ""},
+  "context_memory": {"rating": "basic", "detail": "Session tracks dialog history and shared mutable state across tools/turns for the live run only; the README's own Roadmap lists 'State Persistence - Save and restore agent sessions' as a not-yet-implemented future feature.", "evidence": "https://raw.githubusercontent.com/howl-anderson/agentsilex/main/README.md"},
+  "lifecycle_hooks": {"rating": "partial", "detail": "A 'pluggable callback system for implementing custom behaviors (ReAct, Chain-of-Thought, logging, etc.)' and callback-based memory management exist, but the README does not document specific before/after hook points or confirm callbacks can block/veto a tool call before it runs.", "evidence": "https://raw.githubusercontent.com/howl-anderson/agentsilex/main/README.md"},
+  "prompt_optimization": {"rating": "configurable", "detail": "Agents are created with a first-class 'instructions' parameter for custom system-prompt text; no automatic tuning loop is documented.", "evidence": "https://raw.githubusercontent.com/howl-anderson/agentsilex/main/README.md"},
+  "build_vs_buy": {"tier": 1, "label": "build", "detail": "Explicitly positioned as '~300 lines of readable code. Full control, no magic' -- a transparent, hackable primitive set on top of LiteLLM that you read and compose yourself rather than an opinionated runtime; self-hosted, PyPI-installed, no managed offering.", "evidence": "https://raw.githubusercontent.com/howl-anderson/agentsilex/main/README.md"}
+}

@@ -1,0 +1,9 @@
+{
+  "github_id": "agentstack-ai/AgentStack",
+  "researched": "2026-07-19",
+  "tooling_sandboxing": {"rating": "strong", "detail": "The bundled CodeInterpreterTool runs agent-generated Python in a Docker container built on first use ('secure, isolated environment'), shipped as one of AgentStack's own core tools rather than delegated to a third party.", "evidence": "https://docs.agentstack.sh/tools/tool/code-interpreter"},
+  "context_memory": {"rating": "unknown", "detail": "Looked for a memory/context-persistence module in AgentStack's own docs (vs. relying on whichever of CrewAI/LangGraph/OpenAI Swarms/LlamaIndex is scaffolded); found none in the docs index or introduction.", "evidence": ""},
+  "lifecycle_hooks": {"rating": "partial", "detail": "AgentOps is 'baked into AgentStack projects by default' for monitoring, replay analytics, and compliance tracking -- observability/tracing, not a documented pre-execution blocking hook.", "evidence": "https://docs.agentstack.sh/llms.txt"},
+  "prompt_optimization": {"rating": "configurable", "detail": "Agent role/goal/backstory and per-task description/expected-output are set declaratively in agents.yaml/tasks.yaml, independent of the underlying framework chosen; no automatic tuning loop is documented.", "evidence": "https://docs.agentstack.sh/llms.txt"},
+  "build_vs_buy": {"tier": 2, "label": "blueprint", "detail": "A CLI scaffolder ('create-next-app for agents') that generates a self-hosted project pre-wired with a chosen framework (CrewAI/LangGraph/OpenAI Swarms/LlamaIndex), a standardized agents.yaml/tasks.yaml config layer, and built-in tools -- you configure rather than hand-write the agent loop; no managed hosting offering found.", "evidence": "https://docs.agentstack.sh/introduction"}
+}

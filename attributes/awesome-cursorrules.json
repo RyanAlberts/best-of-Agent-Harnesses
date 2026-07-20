@@ -1,0 +1,9 @@
+{
+  "github_id": "PatrickJS/awesome-cursorrules",
+  "researched": "2026-07-19",
+  "tooling_sandboxing": {"rating": "none", "detail": "The repo is a curated set of .mdc rule files loaded by Cursor; it contains no tool-execution or sandboxing layer of its own.", "evidence": "https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/HEAD/README.md"},
+  "context_memory": {"rating": "none", "detail": "Rules are stateless per-project configuration files scoped by glob/alwaysApply toggles, with no session or cross-session persistence documented.", "evidence": "https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/HEAD/README.md"},
+  "lifecycle_hooks": {"rating": "none", "detail": "The .mdc format only exposes glob/alwaysApply scoping metadata for when a rule loads, not before/after tool-call interception.", "evidence": "https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/HEAD/README.md"},
+  "prompt_optimization": {"rating": "configurable", "detail": "The entire project is a library of drop-in .mdc rule files that inject project-specific system-prompt guidance into Cursor, the canonical rules-file customization pattern.", "evidence": "https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/HEAD/README.md"},
+  "build_vs_buy": {"tier": 2, "label": "blueprint", "detail": "Users copy config-driven .mdc rule blueprints into .cursor/rules/ rather than importing an SDK or running a hosted service; the runtime is Cursor itself.", "evidence": "https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/HEAD/README.md"}
+}

@@ -1,0 +1,30 @@
+{
+  "github_id": "RooCodeInc/Roo-Code",
+  "researched": "2026-07-19",
+  "tooling_sandboxing": {
+    "rating": "basic",
+    "detail": "Actions run on the host with the user's privileges behind a per-category (reads/writes/execute/MCP) approval-prompt system; disabling prompts via auto-approve removes the confirmation step but adds no containment layer.",
+    "evidence": "https://roocodeinc.github.io/Roo-Code/features/auto-approving-actions"
+  },
+  "context_memory": {
+    "rating": "strong",
+    "detail": "Intelligent Context Condensing automatically summarizes earlier conversation once usage crosses a configured context-window percentage, and original (pre-condensed) messages are preserved and restorable by rewinding to a Checkpoint.",
+    "evidence": "https://roocodeinc.github.io/Roo-Code/features/intelligent-context-condensing"
+  },
+  "lifecycle_hooks": {
+    "rating": "none",
+    "detail": "There is no user-definable pre/post tool-call hook surface; open feature requests (e.g. issue #11504, #12025) explicitly ask for Claude Code-style pre-tool-use/post-tool-use hooks that do not yet exist, so interception is limited to the built-in approval-prompt flow.",
+    "evidence": "https://github.com/RooCodeInc/Roo-Code/issues/11504"
+  },
+  "prompt_optimization": {
+    "rating": "configurable",
+    "detail": "Custom Modes compose the system prompt from a manually authored Role Definition (prepended) and Custom Instructions (appended), plus mode-specific rule files under .roo/rules-{mode-slug}/; there is no automatic prompt tuning.",
+    "evidence": "https://roocodeinc.github.io/Roo-Code/features/custom-modes"
+  },
+  "build_vs_buy": {
+    "tier": 2,
+    "label": "blueprint",
+    "detail": "The published artifact was a self-hosted VS Code/JetBrains extension configured via modes and permission settings, with an optional paid Roo Code Cloud/Roomote layer for remote agents and task sharing; note this repository was archived by the owner on 2026-05-15 and the extension itself shut down, with the team pivoting fully to the hosted Roomote cloud agent.",
+    "evidence": "https://github.com/RooCodeInc/Roo-Code"
+  }
+}

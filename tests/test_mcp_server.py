@@ -81,9 +81,23 @@ DATA = {
         "recovery_tiers": ["none", "retry", "resumable", "durable"],
     },
     "projects": [
-        _proj("AlphaClaw", "alpha/alphaclaw", 50000, 4, 4, 4),
-        _proj("BetaPilot", "beta/betapilot", 12000, 2, 3, 2),
-        _proj("GammaKit", "gamma/gammakit", 12000, 2, 0, 0),
+        _proj("AlphaClaw", "alpha/alphaclaw", 50000, 4, 4, 4, deep_dive={
+            "researched": "2026-07-19",
+            "tooling_sandboxing": {"rating": "strong", "rank": 3, "detail": "d", "evidence": "https://e.com"},
+            "context_memory": {"rating": "basic", "rank": 2, "detail": "d", "evidence": "https://e.com"},
+            "lifecycle_hooks": {"rating": "full", "rank": 3, "detail": "d", "evidence": "https://e.com"},
+            "prompt_optimization": {"rating": "unknown", "rank": 0, "detail": "d", "evidence": ""},
+            "build_vs_buy": {"tier": 2, "label": "blueprint", "detail": "d", "evidence": "https://e.com"},
+        }),
+        _proj("BetaPilot", "beta/betapilot", 12000, 2, 3, 2, deep_dive={
+            "researched": "2026-07-19",
+            "tooling_sandboxing": {"rating": "basic", "rank": 2, "detail": "d", "evidence": "https://e.com"},
+            "context_memory": {"rating": "strong", "rank": 3, "detail": "d", "evidence": "https://e.com"},
+            "lifecycle_hooks": {"rating": "none", "rank": 1, "detail": "d", "evidence": "https://e.com"},
+            "prompt_optimization": {"rating": "unknown", "rank": 0, "detail": "d", "evidence": ""},
+            "build_vs_buy": {"tier": 1, "label": "build", "detail": "d", "evidence": "https://e.com"},
+        }),
+        _proj("GammaKit", "gamma/gammakit", 12000, 2, 0, 0, deep_dive=None),
     ],
     "graveyard": [
         {"github_id": "bad/starfarm", "name": "starfarm", "last_stars": 90000,
@@ -141,6 +155,41 @@ def test_compare_arity(server):
     assert "error" in json.loads(server.compare(["alpha/alphaclaw"]))
     assert "error" in json.loads(server.compare(
         ["a/a", "b/b", "c/c", "d/d", "e/e"]))
+
+
+def test_compare_deep_dive_edges(server):
+    server._data = DATA
+    out = json.loads(server.compare(["alpha/alphaclaw", "beta/betapilot"]))
+    assert out["edges"]["strongest_sandboxing"] == ["AlphaClaw"]
+    assert out["edges"]["strongest_memory"] == ["BetaPilot"]
+    assert out["edges"]["fullest_lifecycle_hooks"] == ["AlphaClaw"]
+    # Both unknown on prompt_optimization: no edge declared.
+    assert "most_prompt_optimization" not in out["edges"]
+    assert out["projects"][0]["deep_dive"]["build_vs_buy"]["label"] == "blueprint"
+
+
+def test_compare_unrated_deep_dive_omitted(server):
+    server._data = DATA
+    # GammaKit has no deep_dive: axes with <2 rated projects declare no edge.
+    out = json.loads(server.compare(["alpha/alphaclaw", "gamma/gammakit"]))
+    assert "strongest_sandboxing" not in out["edges"]
+    assert out["projects"][1]["deep_dive"] is None
+
+
+def test_compare_for(server):
+    server._data = DATA
+    out = json.loads(server.compare_for("always-on personal agent", limit=2))
+    assert out["use_case"] == "always-on personal agent"
+    assert len(out["projects"]) == 2
+    assert out["projects"][0]["name"] == "AlphaClaw"  # stars tiebreak on equal overlap
+    assert set(out["why_picked"]) == {p["name"] for p in out["projects"]}
+    assert "edges" in out
+
+
+def test_compare_for_no_match(server):
+    server._data = DATA
+    out = json.loads(server.compare_for("quantum blockchain farming"))
+    assert "message" in out and "projects" not in out
 
 
 def test_compare_real_data(server):

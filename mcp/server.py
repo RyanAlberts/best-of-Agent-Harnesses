@@ -6,8 +6,8 @@
 """MCP server for best-of-Agent-Harnesses.
 
 Serves the curated list (harnesses.json) as tools so agents can recommend
-agent harnesses: recommend, compare, pick_harness, search_harnesses,
-get_harness, list_categories.
+agent harnesses: recommend, compare, compare_for, pick_harness,
+search_harnesses, get_harness, list_categories.
 
 Run directly from GitHub (no clone needed):
     uv run https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/mcp/server.py
@@ -306,12 +306,26 @@ def compare(github_ids: list[str]) -> str:
         return json.dumps({"error": f"unknown github_ids: {', '.join(unknown)}",
                            "hint": "use search_harnesses to find the right id"})
 
+    return json.dumps(_compare_payload(d, projects, warnings),
+                      indent=2, ensure_ascii=False)
+
+
+def _dd_rank(p: dict, axis: str) -> int:
+    return ((p.get("deep_dive") or {}).get(axis) or {}).get("rank", 0)
+
+
+def _compare_payload(d: dict, projects: list, warnings: list) -> dict:
+    """Shared by compare and compare_for: axis edges, guide pointer, records."""
     edges = {}
     for label, key, best in [
         ("most_stars", lambda p: p.get("stars", 0), max),
         ("simplest_adoption", lambda p: p.get("tier_rank", 0), min),
         ("highest_autonomy", lambda p: p.get("autonomy_rank", 0), max),
         ("strongest_recovery", lambda p: p.get("recovery_rank", 0), max),
+        ("strongest_sandboxing", lambda p: _dd_rank(p, "tooling_sandboxing"), max),
+        ("strongest_memory", lambda p: _dd_rank(p, "context_memory"), max),
+        ("fullest_lifecycle_hooks", lambda p: _dd_rank(p, "lifecycle_hooks"), max),
+        ("most_prompt_optimization", lambda p: _dd_rank(p, "prompt_optimization"), max),
     ]:
         rated = [p for p in projects if key(p)]
         if len(rated) >= 2:
@@ -331,14 +345,46 @@ def compare(github_ids: list[str]) -> str:
         see_also = {"slug": best_guide["slug"], "title": best_guide["title"],
                     "how": "fetch full text with get_comparison(slug)"}
 
-    return json.dumps({
-        "projects": [_brief(p) for p in projects],
+    return {
+        "projects": [dict(_brief(p), deep_dive=p.get("deep_dive")) for p in projects],
         "edges": edges,
         "warnings": warnings,
         "see_also": see_also,
         "source": d["meta"]["url"],
         "stars_captured": d["meta"]["stars_captured"],
-    }, indent=2, ensure_ascii=False)
+    }
+
+
+@mcp.tool()
+def compare_for(use_case: str, limit: int = 3, open_source_only: bool = False) -> str:
+    """Pick the top harnesses for a use case or task and compare them side by side.
+
+    One call for "compare the best options for X": candidates are ranked the
+    same way pick_harness ranks them, the top 2-4 are compared head-to-head
+    (per-axis edge lists incl. the researched deep-dive axes — sandboxing,
+    context memory, lifecycle hooks, prompt optimization — plus each project's
+    build-vs-buy tier), with each pick's ranking reason and the decision guide
+    covering the matchup when one exists.
+
+    use_case: the task, e.g. "sandboxed code execution for generated code".
+    limit: how many top candidates to compare (2-4, default 3).
+    Returns JSON: {use_case, projects, why_picked, edges, warnings, see_also, source}.
+    """
+    d = data()
+    n = max(2, min(int(limit), 4))
+    scored = _ranked(d, use_case, open_source_only=open_source_only)
+    if len(scored) < 2:
+        return json.dumps({
+            "use_case": use_case,
+            "message": "Fewer than two confident matches — try search_harnesses "
+                       "or a more concrete task description.",
+            "source": d["meta"]["url"],
+        }, indent=2, ensure_ascii=False)
+    top = scored[:n]
+    payload = _compare_payload(d, [p for _, p, _ in top], [])
+    payload = dict({"use_case": use_case}, **payload)
+    payload["why_picked"] = {p["name"]: reason for _, p, reason in top}
+    return json.dumps(payload, indent=2, ensure_ascii=False)
 
 
 @mcp.tool()
@@ -380,6 +426,8 @@ def list_categories() -> str:
         "tiers": d["meta"]["tiers"],
         "autonomy_tiers": d["meta"].get("autonomy_tiers", []),
         "recovery_tiers": d["meta"].get("recovery_tiers", []),
+        "deep_dive_vocab": d["meta"].get("deep_dive_vocab", {}),
+        "deep_dive_help": d["meta"].get("deep_dive_help", ""),
     }, indent=2, ensure_ascii=False)
 
 

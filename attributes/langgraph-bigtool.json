@@ -1,0 +1,9 @@
+{
+  "github_id": "langchain-ai/langgraph-bigtool",
+  "researched": "2026-07-19",
+  "tooling_sandboxing": {"rating": "none", "detail": "The library only handles tool retrieval; it documents no isolated execution environment, and users must implement their own execution constraints or safety measures.", "evidence": "https://raw.githubusercontent.com/langchain-ai/langgraph-bigtool/HEAD/README.md"},
+  "context_memory": {"rating": "basic", "detail": "Uses LangGraph's long-term memory store purely to index and semantically search for relevant TOOL DEFINITIONS (in-memory or Postgres backend), not to persist conversation/task context.", "evidence": "https://raw.githubusercontent.com/langchain-ai/langgraph-bigtool/HEAD/README.md"},
+  "lifecycle_hooks": {"rating": "none", "detail": "No pre-execution interception or blocking mechanism is documented; the library only wires retrieval into the agent's tool-selection step.", "evidence": "https://raw.githubusercontent.com/langchain-ai/langgraph-bigtool/HEAD/README.md"},
+  "prompt_optimization": {"rating": "none", "detail": "No prompt tuning or system-prompt engineering feature is described in the project docs.", "evidence": "https://raw.githubusercontent.com/langchain-ai/langgraph-bigtool/HEAD/README.md"},
+  "build_vs_buy": {"tier": 1, "label": "build", "detail": "Installed via pip install langgraph-bigtool as a Python library composed into a custom LangGraph agent loop, with no opinionated hosted runtime.", "evidence": "https://raw.githubusercontent.com/langchain-ai/langgraph-bigtool/HEAD/README.md"}
+}

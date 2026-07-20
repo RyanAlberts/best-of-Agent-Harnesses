@@ -1,0 +1,9 @@
+{
+  "github_id": "assafelovic/gpt-researcher",
+  "researched": "2026-07-19",
+  "tooling_sandboxing":  {"rating": "basic", "detail": "Default scrapers (BeautifulSoup HTTP requests, local Selenium/NoDriver browser instances) run directly on the host with no containerization; isolation only exists by opting into external Tavily Extract or FireCrawl scraping APIs.", "evidence": "https://docs.gptr.dev/docs/gpt-researcher/gptr/scraping"},
+  "context_memory":      {"rating": "basic", "detail": "Deep Research mode's \"Smart Context Management\" aggregates and synthesizes findings across concurrent research branches in-process during a single run, but no cross-session persistence is documented.", "evidence": "https://docs.gptr.dev/docs/gpt-researcher/gptr/deep_research"},
+  "lifecycle_hooks":     {"rating": "partial", "detail": "An include_human_feedback setting lets a human review/revise the Editor agent's research outline before the pipeline proceeds, and a websocket/on_progress callback traces steps, but there is no general user-definable pre-tool-use blocking hook system.", "evidence": "https://docs.gptr.dev/docs/gpt-researcher/multi_agents/langgraph"},
+  "prompt_optimization": {"rating": "configurable", "detail": "write_report accepts a custom_prompt for report structure, and PROMPT_FAMILY/AGENT_ROLE settings plus an external config.json let users override built-in prompts, with no automatic tuning loop.", "evidence": "https://docs.gptr.dev/docs/gpt-researcher/gptr/config"},
+  "build_vs_buy":        {"tier": 2, "label": "blueprint", "detail": "The primary artifact is the cloned repo's opinionated self-hostable multi-agent research runtime (Docker Compose, frontend, backend server) you configure via retrievers/scrapers/env vars; a lighter pip-installed GPTResearcher library is offered as a secondary integration path.", "evidence": "https://docs.gptr.dev/docs/gpt-researcher/gptr/pip-package"}
+}

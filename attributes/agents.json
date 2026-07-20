@@ -1,0 +1,9 @@
+{
+  "github_id": "wshobson/agents",
+  "researched": "2026-07-19",
+  "tooling_sandboxing": {"rating": "none", "detail": "A cross-harness marketplace of agent/skill/command markdown definitions installed into the host tool (Claude Code, Codex, Cursor, OpenCode, Copilot); it has no execution or isolation layer of its own — that's entirely delegated to whichever harness runs it.", "evidence": "https://github.com/wshobson/agents#readme"},
+  "context_memory": {"rating": "basic", "detail": "Skills use a progressive-disclosure pattern (SKILL.md kept under 8KB for navigation, with references/ material loaded on demand) that scopes which skill/tool content enters context — this manages the tool surface, not conversation memory.", "evidence": "https://github.com/wshobson/agents/blob/main/docs/authoring.md"},
+  "lifecycle_hooks": {"rating": "none", "detail": "No callback or interception system is documented; installation only wires markdown agent/skill/command files into the host harness's own discovery mechanism.", "evidence": "https://github.com/wshobson/agents#readme"},
+  "prompt_optimization": {"rating": "configurable", "detail": "Each of the 203 agents and 175 skills is a markdown file with YAML frontmatter (name/description/model/tools) plus a freeform instructions body that users select, install, and can edit or fork locally — no automatic tuning loop.", "evidence": "https://github.com/wshobson/agents/blob/main/docs/authoring.md"},
+  "build_vs_buy": {"tier": 2, "label": "blueprint", "detail": "A config-driven plugin/skill marketplace (94 plugins, 203 agents, 175 skills) you install into an existing harness rather than a library you import or a hosted service.", "evidence": "https://github.com/wshobson/agents#readme"}
+}

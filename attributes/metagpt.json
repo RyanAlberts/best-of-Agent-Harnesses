@@ -1,0 +1,30 @@
+{
+  "github_id": "FoundationAgents/MetaGPT",
+  "researched": "2026-07-19",
+  "tooling_sandboxing": {
+    "rating": "none",
+    "detail": "Code/shell tools execute directly in the host Python process via exec() and subprocess.run() (e.g. shell.py, terminal.py's persistent host shell with only a bypassable command blocklist), with an open issue proposing to add microVM sandboxing because none exists today.",
+    "evidence": "https://github.com/FoundationAgents/MetaGPT/issues/1956"
+  },
+  "context_memory": {
+    "rating": "strong",
+    "detail": "Beyond per-run Memory (a list of observed Messages), MetaGPT's own paper describes a cross-project long-term memory where each role's 'handover feedback action' summarizes prior-project experience into long-term memory that is inherited by future constraint-prompt updates.",
+    "evidence": "https://arxiv.org/html/2308.00352v6"
+  },
+  "lifecycle_hooks": {
+    "rating": "unknown",
+    "detail": "Looked for a before/after tool-call interception system beyond the core message-pool 'Environment' that roles observe; found no documented callback/middleware/hook API for blocking or tracing individual tool calls.",
+    "evidence": ""
+  },
+  "prompt_optimization": {
+    "rating": "configurable",
+    "detail": "Agent roles and their prompt/action templates are user-definable (custom agents per the Agent 101 guide); the paper's self-improvement mechanism that auto-updates role constraint prompts is not a documented feature of the installable package.",
+    "evidence": "https://raw.githubusercontent.com/FoundationAgents/MetaGPT/HEAD/README.md"
+  },
+  "build_vs_buy": {
+    "tier": 2,
+    "label": "blueprint",
+    "detail": "Self-hosted, pip-installed, role-based SOP framework (PM/Architect/Engineer roles configured via ~/.metagpt/config2.yaml) you run yourself; MGX (mgx.dev), 'the world's first AI agent development team,' is a separate managed cloud product built on the same ideas.",
+    "evidence": "https://raw.githubusercontent.com/FoundationAgents/MetaGPT/main/README.md"
+  }
+}

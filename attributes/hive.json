@@ -1,0 +1,9 @@
+{
+  "github_id": "aden-hive/hive",
+  "researched": "2026-07-19",
+  "tooling_sandboxing": {"rating": "basic", "detail": "Tool calls dispatch through a plain tool_executor callable with no documented OS-level container/VM isolation; the only execution-time guard found is content validation on SharedMemory writes, plus optional human-in-the-loop approval gates.", "evidence": "https://deepwiki.com/aden-hive/hive/3.2-graph-executor-and-node-execution"},
+  "context_memory": {"rating": "strong", "detail": "CheckpointStore snapshots graph state (memory, paused_at, execution_path, node_visit_counts) to state.json in the session directory at node boundaries, enabling resume after a process crash, alongside role-based memory that persists project context.", "evidence": "https://deepwiki.com/aden-hive/hive/3.2-graph-executor-and-node-execution"},
+  "lifecycle_hooks": {"rating": "partial", "detail": "HITL nodes pause the graph at node boundaries via pause_nodes/approval_callback and route based on human response, but the docs describe this as pausing whole node execution rather than vetoing a specific tool call before it runs.", "evidence": "https://docs.adenhq.com/building/human-in-the-loop.md"},
+  "prompt_optimization": {"rating": "native", "detail": "An automatic execute-evaluate-diagnose-regenerate evolution loop refines a node's system prompt based on diagnosed production failures without manual human editing — 'the most common fix' per the docs.", "evidence": "https://github.com/aden-hive/hive/blob/main/docs/key_concepts/evolution.md"},
+  "build_vs_buy": {"tier": 2, "label": "blueprint", "detail": "Apache-2.0 self-hosted graph-based agent runtime you deploy on your own infrastructure per the Self-Hosting Guide, with no managed hosted alternative advertised as the primary offering.", "evidence": "https://raw.githubusercontent.com/aden-hive/hive/main/README.md"}
+}

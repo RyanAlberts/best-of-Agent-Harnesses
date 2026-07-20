@@ -1,0 +1,9 @@
+{
+  "github_id": "botpress/botpress",
+  "researched": "2026-07-19",
+  "tooling_sandboxing": {"rating": "unknown", "detail": "Looked for how Execute Code cards/hooks/actions actually run (sandboxed container/VM vs. same process as bot server); the Studio 'use-code' guide documents the API surface but discloses no isolation mechanism.", "evidence": ""},
+  "context_memory": {"rating": "strong", "detail": "Variables have a persistent 'User' scope that follows a user across all their conversations (distinct from single-conversation/session scopes), and Autonomous Nodes retrieve from Knowledge Bases on demand.", "evidence": "https://botpress.com/docs/studio/concepts/variables/overview/"},
+  "lifecycle_hooks": {"rating": "partial", "detail": "Before/After Incoming and Before Outgoing hooks run custom JS that can inspect and modify event data (e.g. translate a message before further processing), but the docs describe them as event callbacks at fixed pipeline stages, not an enforced pre-tool-call veto mechanism.", "evidence": "https://botpress.com/docs/studio/concepts/hooks"},
+  "prompt_optimization": {"rating": "configurable", "detail": "The Autonomous Node's Instructions field is a first-class, freely-editable system prompt (plus a separate Personality agent), with no automatic prompt-tuning loop documented.", "evidence": "https://botpress.com/docs/studio/concepts/nodes/autonomous-node"},
+  "build_vs_buy": {"tier": 3, "label": "managed", "detail": "Botpress v12/self-hosted has been officially sunset ('no longer available for purchase, download, or new deployments'); the current botpress/botpress repo is CLI/SDK tooling for building integrations and bots that run on the managed Botpress Cloud platform.", "evidence": "https://botpress.com/docs/studio/guides/advanced/v12"}
+}

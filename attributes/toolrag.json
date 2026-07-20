@@ -1,0 +1,9 @@
+{
+  "github_id": "antl3x/ToolRAG",
+  "researched": "2026-07-19",
+  "tooling_sandboxing": {"rating": "none", "detail": "Tool execution isolation is not addressed anywhere in the documentation; the library only handles which tool schemas get shown to the model.", "evidence": "https://raw.githubusercontent.com/antl3x/ToolRAG/HEAD/README.md"},
+  "context_memory": {"rating": "basic", "detail": "A LibSQL database stores tool definitions and their vector embeddings for semantic tool search, limited to TOOL DEFINITION retrieval rather than conversation or task memory.", "evidence": "https://raw.githubusercontent.com/antl3x/ToolRAG/HEAD/README.md"},
+  "lifecycle_hooks": {"rating": "none", "detail": "No interceptor pattern, middleware, or before/after lifecycle hook is described in the project docs.", "evidence": "https://raw.githubusercontent.com/antl3x/ToolRAG/HEAD/README.md"},
+  "prompt_optimization": {"rating": "none", "detail": "The project focuses solely on semantic tool selection via vector embeddings, with no prompt engineering or tuning feature documented.", "evidence": "https://raw.githubusercontent.com/antl3x/ToolRAG/HEAD/README.md"},
+  "build_vs_buy": {"tier": 1, "label": "build", "detail": "Distributed as the @antl3x/toolrag npm package that developers import into their own MCP/agent code, not a self-hosted runtime or managed service.", "evidence": "https://raw.githubusercontent.com/antl3x/ToolRAG/HEAD/README.md"}
+}

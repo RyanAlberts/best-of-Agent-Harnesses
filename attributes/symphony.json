@@ -1,0 +1,30 @@
+{
+  "github_id": "openai/symphony",
+  "researched": "2026-07-19",
+  "tooling_sandboxing": {
+    "rating": "basic",
+    "detail": "The spec explicitly makes \"mandating strong sandbox controls beyond what the coding agent and host OS provide\" a non-goal, so isolation is whatever the wrapped coding agent and host OS already offer; each implementation defines its own trust boundary rather than Symphony enforcing one.",
+    "evidence": "https://raw.githubusercontent.com/openai/symphony/main/SPEC.md"
+  },
+  "context_memory": {
+    "rating": "none",
+    "detail": "The orchestrator is explicitly stateless beyond the filesystem: \"no persistent database is mandated,\" scheduler state recovers by re-reading the issue tracker, and per-issue workspace directories persist only as git/file state, not conversational context or memory.",
+    "evidence": "https://raw.githubusercontent.com/openai/symphony/main/SPEC.md"
+  },
+  "lifecycle_hooks": {
+    "rating": "partial",
+    "detail": "before_run/after_run/after_create/before_remove are run-level shell-script callbacks around a whole implementation attempt (before_run can abort the attempt before it starts) rather than hooks that intercept individual tool calls inside the agent's own loop.",
+    "evidence": "https://raw.githubusercontent.com/openai/symphony/main/SPEC.md"
+  },
+  "prompt_optimization": {
+    "rating": "configurable",
+    "detail": "WORKFLOW.md's Markdown body is rendered as the system prompt with strict variable substitution (issue fields, attempt metadata); rendering fails the run rather than falling back, and there is no automatic prompt tuning.",
+    "evidence": "https://raw.githubusercontent.com/openai/symphony/main/SPEC.md"
+  },
+  "build_vs_buy": {
+    "tier": 2,
+    "label": "blueprint",
+    "detail": "Symphony is a self-hosted orchestrator daemon (polls an issue tracker, spawns workers as local or SSH subprocesses, optional observability HTTP API) that you configure via WORKFLOW.md and hooks; \"rich web UI or multi-tenant control plane\" is explicitly not a goal, so there is no managed backend.",
+    "evidence": "https://raw.githubusercontent.com/openai/symphony/main/SPEC.md"
+  }
+}

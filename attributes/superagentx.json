@@ -1,0 +1,30 @@
+{
+  "github_id": "superagentxai/superagentx",
+  "researched": "2026-07-19",
+  "tooling_sandboxing": {
+    "rating": "basic",
+    "detail": "Human-approval gates can pause/abort sensitive actions before they run, but this is an approval prompt, not execution isolation -- no container/VM/restricted-filesystem sandboxing for tools is documented; tool execution (e.g. Playwright browser automation) otherwise runs on the host.",
+    "evidence": "https://github.com/superagentxai/superagentx"
+  },
+  "context_memory": {
+    "rating": "strong",
+    "detail": "Uses SQL + Vector databases (SQLite/PostgreSQL) to persist workflow state, agent decisions, tool outputs, and 'context & memory snapshots' for user-specific context retrieval across sessions.",
+    "evidence": "https://github.com/superagentxai/superagentx"
+  },
+  "lifecycle_hooks": {
+    "rating": "partial",
+    "detail": "The Human Approval Governance Agent pauses a sensitive action for explicit human approval before resuming or aborting, with audit logs persisted separately - a built-in approval flow rather than a programmable pre-execution hook API.",
+    "evidence": "https://github.com/superagentxai/superagentx"
+  },
+  "prompt_optimization": {
+    "rating": "configurable",
+    "detail": "Agents take PromptTemplate objects for customizable per-agent system messages; no automatic prompt-tuning loop is documented.",
+    "evidence": "https://github.com/superagentxai/superagentx"
+  },
+  "build_vs_buy": {
+    "tier": 2,
+    "label": "blueprint",
+    "detail": "Self-hosted, policy-driven agent framework (MIT) with a 'Unified Control Plane' for tools/MCPs/models/policies you configure and run via WebSocket/REST/console interfaces, rather than a hosted managed platform.",
+    "evidence": "https://github.com/superagentxai/superagentx"
+  }
+}

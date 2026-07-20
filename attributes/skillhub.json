@@ -1,0 +1,9 @@
+{
+  "github_id": "iflytek/skillhub",
+  "researched": "2026-07-19",
+  "tooling_sandboxing": {"rating": "none", "detail": "SkillHub is a skill package registry/discovery platform (Spring Boot + Postgres + Redis), not an execution engine — it stores and versions skill packages but does not run them.", "evidence": "https://github.com/iflytek/skillhub#readme"},
+  "context_memory": {"rating": "none", "detail": "As a registry (search, versioning, RBAC, audit logging) it has no agent conversation or task-context concept to manage.", "evidence": "https://github.com/iflytek/skillhub#readme"},
+  "lifecycle_hooks": {"rating": "none", "detail": "No tool-call interception surface — the product's lifecycle is publish/discover/version, not agent execution.", "evidence": "https://github.com/iflytek/skillhub#readme"},
+  "prompt_optimization": {"rating": "none", "detail": "No prompt tuning or system-prompt injection feature; it manages skill package metadata, not prompt content.", "evidence": "https://github.com/iflytek/skillhub#readme"},
+  "build_vs_buy": {"tier": 2, "label": "blueprint", "detail": "Self-hosted-only enterprise registry you deploy on your own infrastructure (Docker Compose/Kubernetes, \"full data sovereignty\") with RBAC and namespaces to configure — an opinionated runtime you run yourself.", "evidence": "https://github.com/iflytek/skillhub#readme"}
+}

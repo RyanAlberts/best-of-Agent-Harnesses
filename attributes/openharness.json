@@ -1,0 +1,9 @@
+{
+  "github_id": "HKUDS/OpenHarness",
+  "researched": "2026-07-19",
+  "tooling_sandboxing": {"rating": "strong", "detail": "Enforced restriction shipped in the harness itself: path-level allow/deny rules in `settings.json` (e.g. patterns like \"/etc/*\") and a `denied_commands` list that explicitly rejects patterns like \"DROP TABLE *\", on top of a Plan Mode that \"blocks all writes\" outright.", "evidence": "https://github.com/HKUDS/OpenHarness#readme"},
+  "context_memory": {"rating": "strong", "detail": "\"Auto-Compaction preserves task state and channel logs across context compression — agents can run multi-day sessions without manual compact/clear,\" plus a MEMORY.md persistent-memory subsystem and CLAUDE.md discovery/injection for durable knowledge across sessions.", "evidence": "https://github.com/HKUDS/OpenHarness#readme"},
+  "lifecycle_hooks": {"rating": "full", "detail": "PreToolUse/PostToolUse event hooks combine with Multi-Level Permission Modes — Default (\"ask before write/execute\") and Plan Mode (\"block all writes\") — plus a denied_commands list, giving genuine before-execution blocking alongside after-the-fact audit hooks.", "evidence": "https://github.com/HKUDS/OpenHarness#readme"},
+  "prompt_optimization": {"rating": "configurable", "detail": "\"CLAUDE.md Discovery & Injection\" is listed under the Context & Memory subsystem as a project-level system-prompt customization mechanism, with no automatic tuning loop described.", "evidence": "https://github.com/HKUDS/OpenHarness#readme"},
+  "build_vs_buy": {"tier": 2, "label": "blueprint", "detail": "Self-hosted Python framework installed via `pip install openharness-ai`, running the bundled Ohmo agent on your existing Claude Code/Codex subscription — an opinionated runtime you configure and run, not a managed service.", "evidence": "https://github.com/HKUDS/OpenHarness#readme"}
+}

@@ -1,0 +1,30 @@
+{
+  "github_id": "aiming-lab/AutoHarness",
+  "researched": "2026-07-19",
+  "tooling_sandboxing": {
+    "rating": "basic",
+    "detail": "Governance is enforced through YAML-configured risk-pattern matching and a denylist (path traversal, secret exposure, dangerous ops) at the Permission Check pipeline step, but nothing isolates execution itself (no container/VM) \u2014 it's a configurable restriction layer on top of host execution.",
+    "evidence": "https://github.com/aiming-lab/AutoHarness#readme"
+  },
+  "context_memory": {
+    "rating": "basic",
+    "detail": "Provides \"multi-layer context management\" and token-budget/truncation to keep context under control within a run, plus session persistence for cost-tracking/audit logs, but no described cross-session semantic retrieval or intelligent compaction.",
+    "evidence": "https://github.com/aiming-lab/AutoHarness#readme"
+  },
+  "lifecycle_hooks": {
+    "rating": "partial",
+    "detail": "Every tool call routes through a fixed Parse & Validate -> Risk Classify -> Permission Check -> Execute -> Output Sanitize -> Audit Log pipeline with pre-execution gating and audit traces, but the stages are built-in policy, not user-definable hook code.",
+    "evidence": "https://github.com/aiming-lab/AutoHarness#readme"
+  },
+  "prompt_optimization": {
+    "rating": "unknown",
+    "detail": "Looked in the README for prompt tuning, rules files, or system-prompt customization; not mentioned \u2014 the project's documented scope is governance/validation, not prompt content.",
+    "evidence": ""
+  },
+  "build_vs_buy": {
+    "tier": 1,
+    "label": "build",
+    "detail": "Explicitly \"wrap any LLM client (2 lines, instant governance)\" \u2014 a Python library you import and compose (AutoHarness.wrap(OpenAI())), not a runtime you deploy.",
+    "evidence": "https://github.com/aiming-lab/AutoHarness#readme"
+  }
+}

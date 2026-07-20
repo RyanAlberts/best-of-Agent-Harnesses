@@ -1,0 +1,30 @@
+{
+  "github_id": "garrytan/gstack",
+  "researched": "2026-07-19",
+  "tooling_sandboxing": {
+    "rating": "basic",
+    "detail": "General tool execution (edits, shell) is host-level with configurable guardrails only: /freeze restricts edits to one directory and /careful warns before destructive commands; the one enforced piece is scoped to the browser skill, whose Chromium sessions run behind a deny-default Chrome DevTools Protocol allowlist and per-tab token scoping.",
+    "evidence": "https://raw.githubusercontent.com/garrytan/gstack/main/README.md"
+  },
+  "context_memory": {
+    "rating": "strong",
+    "detail": "A three-layer system persists beyond the session: /learn writes per-repo project learnings to $GSTACK_STATE_ROOT/projects/$SLUG/ that auto-integrate into downstream skills, and optional GBrain integration (local PGLite or Supabase) gives indexed, cross-session code search and shared team memory.",
+    "evidence": "https://raw.githubusercontent.com/garrytan/gstack/main/README.md"
+  },
+  "lifecycle_hooks": {
+    "rating": "partial",
+    "detail": "Continuous checkpoint mode auto-commits work with a WIP: prefix after each step (a post-hoc, observable checkpoint rather than a pre-execution gate), and /context-restore replays state from those commits; there is no hook that blocks or rewrites a tool call before it runs.",
+    "evidence": "https://raw.githubusercontent.com/garrytan/gstack/main/README.md"
+  },
+  "prompt_optimization": {
+    "rating": "configurable",
+    "detail": "A project CLAUDE.md declares available skills and routing rules, gstack-config holds global settings (telemetry, checkpoint_mode, command prefix), and each SKILL.md is a manually authored template Claude loads to decide when to invoke it; there is no automatic prompt tuning.",
+    "evidence": "https://raw.githubusercontent.com/garrytan/gstack/main/README.md"
+  },
+  "build_vs_buy": {
+    "tier": 2,
+    "label": "blueprint",
+    "detail": "GStack is explicitly stated to have \"no runtime of its own\": it is an MIT-licensed skill/slash-command pack (Markdown + shell scripts) layered onto an existing Claude Code install, with an optional on-demand browser daemon and optional GBrain backend; no vendor-hosted execution stack is required.",
+    "evidence": "https://raw.githubusercontent.com/garrytan/gstack/main/README.md"
+  }
+}

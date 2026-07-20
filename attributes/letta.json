@@ -1,0 +1,30 @@
+{
+  "github_id": "letta-ai/letta",
+  "researched": "2026-07-19",
+  "tooling_sandboxing": {
+    "rating": "basic",
+    "detail": "Tool execution runs unsandboxed by default; secure sandboxed execution requires opting into the third-party E2B service via an E2B_API_KEY rather than being enforced by the harness itself.",
+    "evidence": "https://docs.letta.com/guides/agents/tool-execution-sandbox/"
+  },
+  "context_memory": {
+    "rating": "strong",
+    "detail": "An OS-inspired memory model pins editable, persistent 'memory blocks' (core memory) in the context window across all sessions and offloads unlimited facts to a semantically-searchable archival memory store queried on demand.",
+    "evidence": "https://docs.letta.com/guides/core-concepts/memory/memory-blocks"
+  },
+  "lifecycle_hooks": {
+    "rating": "partial",
+    "detail": "Tools flagged default_requires_approval pause execution for an explicit approve/deny before the tool runs - a built-in human-approval gate rather than a programmable pre-execution hook (the sibling Letta Code CLI has a richer PreToolUse/PostToolUse hook system, out of scope for this repo).",
+    "evidence": "https://docs.letta.com/guides/agents/human-in-the-loop/"
+  },
+  "prompt_optimization": {
+    "rating": "configurable",
+    "detail": "The Agent Development Environment exposes a manually-edited 'System Instructions' panel plus editable persona/human memory blocks; no automatic prompt tuning or eval-driven optimization loop is documented for the core agent server.",
+    "evidence": "https://docs.letta.com/guides/ade/settings/"
+  },
+  "build_vs_buy": {
+    "tier": 2,
+    "label": "blueprint",
+    "detail": "The published artifact is an open-source, self-hostable stateful-agent server you deploy via Docker and configure through the ADE (memory blocks, tools, personas); Letta's 'Constellation' is the managed hosted agent-cloud alternative.",
+    "evidence": "https://docs.letta.com/guides/selfhosting"
+  }
+}

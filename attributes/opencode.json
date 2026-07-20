@@ -1,0 +1,30 @@
+{
+  "github_id": "anomalyco/opencode",
+  "researched": "2026-07-19",
+  "tooling_sandboxing": {
+    "rating": "basic",
+    "detail": "Tool execution runs on the host by default; a `permission` config resolves each action to allow/ask/deny with interactive approval prompts, with no container/VM/enforced allowlist isolation the agent can't bypass.",
+    "evidence": "https://opencode.ai/docs/permissions/"
+  },
+  "context_memory": {
+    "rating": "strong",
+    "detail": "Automatic token-based compaction generates an LLM-written checkpoint summary before the context window overflows and keeps a serialized tail of recent messages, while earlier session messages remain durable rather than deleted.",
+    "evidence": "https://v2.opencode.ai/compaction"
+  },
+  "lifecycle_hooks": {
+    "rating": "full",
+    "detail": "The plugin API exposes tool.execute.before/after hooks where a before-hook can throw to block a call (e.g. denying reads of .env files) or mutate output.args to rewrite it, plus session/message/permission event hooks.",
+    "evidence": "https://opencode.ai/docs/plugins/"
+  },
+  "prompt_optimization": {
+    "rating": "configurable",
+    "detail": "Project- and user-level AGENTS.md files (plus legacy CLAUDE.md fallback and glob/URL `instructions` entries in opencode.json) are layered as static, user-authored context; there is no automatic prompt-refinement or tuning loop.",
+    "evidence": "https://opencode.ai/docs/rules/"
+  },
+  "build_vs_buy": {
+    "tier": 2,
+    "label": "blueprint",
+    "detail": "Installs as a self-hosted, config-driven CLI/TUI coding agent (build/plan agent modes, plugin system, any-LLM-provider config) that you run yourself; OpenCode Zen is an optional hosted curated-model gateway, not a required execution backend.",
+    "evidence": "https://opencode.ai/docs/"
+  }
+}

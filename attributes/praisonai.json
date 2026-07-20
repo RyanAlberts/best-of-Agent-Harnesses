@@ -1,0 +1,9 @@
+{
+  "github_id": "MervinPraison/PraisonAI",
+  "researched": "2026-07-19",
+  "tooling_sandboxing": {"rating": "basic", "detail": "CLI sandbox execution (command validation, resource limits, filesystem/network restrictions) is only activated via an explicit --sandbox flag — by default commands run unsandboxed on the host.", "evidence": "https://praison.ai/docs/cli/sandbox-execution"},
+  "context_memory": {"rating": "strong", "detail": "Graph Memory persists agent-derived entities/relationships to an external Neo4j or Memgraph database, surviving across process restarts and sessions rather than living only in the conversation.", "evidence": "https://praison.ai/docs/features/graph-memory"},
+  "lifecycle_hooks": {"rating": "full", "detail": "A documented BEFORE_TOOL hook can validate arguments and raise an exception to veto a tool call before it executes (e.g. blocking an unconfirmed delete_file call), with a separate AFTER_TOOL hook for result logging/transformation.", "evidence": "https://praison.ai/docs/concepts/hooks"},
+  "prompt_optimization": {"rating": "configurable", "detail": "Agents take a free-text instructions parameter and YAML-defined role/goal/backstory config; guardrails only validate output post-generation with retry, and no automatic prompt-tuning loop is documented.", "evidence": "https://praison.ai/docs/concepts/guardrails"},
+  "build_vs_buy": {"tier": 2, "label": "blueprint", "detail": "Self-hosted, pip/npm-installed opinionated agent runtime with YAML-configured agents, built-in sessions/memory backends, and a CLI — you run the process yourself; third-party integrations (Langfuse, Tavily) are optional add-ons, not a required managed control plane.", "evidence": "https://raw.githubusercontent.com/MervinPraison/PraisonAI/main/README.md"}
+}

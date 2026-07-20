@@ -1,0 +1,9 @@
+{
+  "github_id": "mastra-ai/mastra",
+  "researched": "2026-07-19",
+  "tooling_sandboxing": {"rating": "strong", "detail": "Mastra ships a first-party WorkspaceSandbox abstraction with importable isolated providers (E2BSandbox, DaytonaSandbox, BlaxelSandbox cloud sandboxes; AppleContainerSandbox OCI containers; RailwaySandbox VMs) alongside LocalSandbox, so agents can be given \"an isolated computer to work in\" rather than only host execution.", "evidence": "https://mastra.ai/docs/workspace/sandbox"},
+  "context_memory": {"rating": "strong", "detail": "The Memory system persists conversation threads, messages, and working memory through configured storage providers plus vector-search-backed semantic recall of older messages, surviving application restarts rather than only the live request.", "evidence": "https://mastra.ai/docs/memory/overview"},
+  "lifecycle_hooks": {"rating": "full", "detail": "A workflow step calling suspend() saves the current execution state as a snapshot and halts; nothing past that step runs until resume() is explicitly called (e.g. after human approval), giving a genuine pre-execution block on the next action.", "evidence": "https://mastra.ai/docs/workflows/suspend-and-resume"},
+  "prompt_optimization": {"rating": "configurable", "detail": "Agents take an instructions string, per-call system prompts can supplement it via generate(), and reusable prompt blocks with {{variable}} templating compose the system prompt; no automatic prompt-tuning loop is documented.", "evidence": "https://mastra.ai/docs/agents/overview"},
+  "build_vs_buy": {"tier": 2, "label": "blueprint", "detail": "Repo installs the self-hostable TypeScript agent/workflow runtime (deployable as a standalone server or embedded in Next.js/Node); Mastra Cloud/Studio are separate hosted tooling layered on top, not required to run the framework.", "evidence": "https://raw.githubusercontent.com/mastra-ai/mastra/HEAD/README.md"}
+}

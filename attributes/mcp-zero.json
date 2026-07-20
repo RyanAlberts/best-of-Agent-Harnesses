@@ -1,0 +1,30 @@
+{
+  "github_id": "xfey/MCP-Zero",
+  "researched": "2026-07-19",
+  "tooling_sandboxing": {
+    "rating": "unknown",
+    "detail": "Searched the README, arxiv paper, and repo structure (matcher.py/sampler.py/reformatter.py); MCP-Zero is a tool-discovery/retrieval library with no agent execution loop, so there is nothing to rate for sandboxing.",
+    "evidence": ""
+  },
+  "context_memory": {
+    "rating": "basic",
+    "detail": "Hierarchical semantic routing retrieves top-k relevant tool descriptions on demand (~98% token cut on APIBank) - context scoping for tool definitions only, with no session persistence or conversation-context management.",
+    "evidence": "https://arxiv.org/html/2506.01056v2"
+  },
+  "lifecycle_hooks": {
+    "rating": "unknown",
+    "detail": "Searched the README, arxiv paper, and repo structure for hooks/callbacks/middleware; found none because the project is a retrieval library rather than an agent loop with before/after interception points.",
+    "evidence": ""
+  },
+  "prompt_optimization": {
+    "rating": "none",
+    "detail": "Uses one fixed, hardcoded <tool_assistant> prompt template (plus a single in-context example) to trigger tool retrieval; this is not a user-configurable rules layer and there is no automatic prompt-tuning loop.",
+    "evidence": "https://arxiv.org/html/2506.01056v2"
+  },
+  "build_vs_buy": {
+    "tier": 1,
+    "label": "build",
+    "detail": "Ships as an MIT-licensed Python research library (matcher/sampler/reformatter modules plus a precomputed tool-embedding dataset) meant to be imported into someone else's agent loop, not a runnable agent product or opinionated runtime.",
+    "evidence": "https://github.com/xfey/MCP-Zero"
+  }
+}

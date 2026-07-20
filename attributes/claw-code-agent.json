@@ -1,0 +1,30 @@
+{
+  "github_id": "HarnessLab/claw-code-agent",
+  "researched": "2026-07-19",
+  "tooling_sandboxing": {
+    "rating": "basic",
+    "detail": "Access is gated by CLI-selected permission tiers (read-only default, --allow-write, --allow-shell, --unsafe) that filter which tools the model can see; this is a host-level permission gate with no container/VM/restricted-filesystem isolation documented for the agent itself.",
+    "evidence": "https://raw.githubusercontent.com/HarnessLab/claw-code-agent/main/README.md"
+  },
+  "context_memory": {
+    "rating": "strong",
+    "detail": "Auto-compact summarizes conversation history while preserving recent turns when the tracked token count nears the limit, and sessions auto-save with file-history journaling and snapshot IDs so a session resumes mid-task across restarts.",
+    "evidence": "https://raw.githubusercontent.com/HarnessLab/claw-code-agent/main/README.md"
+  },
+  "lifecycle_hooks": {
+    "rating": "partial",
+    "detail": "The six documented plugin hooks (beforePrompt, afterTurn, onResume, beforePersist, beforeDelegate, afterDelegate) intercept at the turn/session/delegation level, not individual tool calls; separately, .claw-policy.json's HookPolicyRuntime.denied_tool_message() can preemptively deny a tool by exact name or prefix match before execution, but only as a static allow/deny list rather than a programmable before/after hook with call-level tracing.",
+    "evidence": "https://raw.githubusercontent.com/HarnessLab/claw-code-agent/main/src/hook_policy.py"
+  },
+  "prompt_optimization": {
+    "rating": "configurable",
+    "detail": "--system-prompt, --append-system-prompt, and --override-system-prompt CLI flags (plus a live GUI prompt editor) let users replace or extend the rendered system prompt; there is no automatic prompt-tuning loop.",
+    "evidence": "https://raw.githubusercontent.com/HarnessLab/claw-code-agent/main/README.md"
+  },
+  "build_vs_buy": {
+    "tier": 2,
+    "label": "blueprint",
+    "detail": "Claw Code Agent is a self-hosted Python CLI/library with a bundled localhost-only FastAPI GUI; it requires only a local Python runtime and an OpenAI-compatible model endpoint (vLLM, Ollama, LiteLLM, OpenRouter), with no hosted execution backend of its own.",
+    "evidence": "https://raw.githubusercontent.com/HarnessLab/claw-code-agent/main/README.md"
+  }
+}

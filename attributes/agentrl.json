@@ -1,0 +1,9 @@
+{
+  "github_id": "THUDM/AgentRL",
+  "researched": "2026-07-19",
+  "tooling_sandboxing": {"rating": "basic", "detail": "Task workers can run as plain Python processes or, recommended for scaling, inside Docker containers built from a template Dockerfile — but the docs frame this as operational distribution across machines, not security sandboxing, and it isn't the default.", "evidence": "https://github.com/THUDM/AgentRL/blob/main/docs/deployment.md"},
+  "context_memory": {"rating": "unknown", "detail": "Looked for session/cross-run persistence in the README and deployment docs; found only group_id-based trajectory grouping that keeps one multi-turn rollout together during training, not a memory or context-persistence mechanism across sessions.", "evidence": ""},
+  "lifecycle_hooks": {"rating": "unknown", "detail": "Searched README, deployment.md, and architecture summaries for a hook/callback/middleware system that could intercept or block an agent/tool action; none is documented — the 'plugin registry' reference is about parameter streaming between Ray workers, not action interception.", "evidence": ""},
+  "prompt_optimization": {"rating": "configurable", "detail": "Each TaskWorker implementation is responsible for constructing the system and user prompts for its environment, so prompt customization happens per-task in code (per docs/tasks.md) rather than via a hardcoded fixed prompt; no automatic prompt-tuning loop is documented.", "evidence": "https://github.com/THUDM/AgentRL/blob/main/docs/deployment.md"},
+  "build_vs_buy": {"tier": 1, "label": "build", "detail": "Installed as pip packages (trainer/controller/worker) that you wire together yourself — a Ray-based RL training harness and set of primitives for rollout/actor/reference workers, not an opinionated turnkey runtime or hosted service.", "evidence": "https://raw.githubusercontent.com/THUDM/AgentRL/main/README.md"}
+}

@@ -1,0 +1,9 @@
+{
+  "github_id": "i-am-bee/beeai-framework",
+  "researched": "2026-07-19",
+  "tooling_sandboxing": {"rating": "basic", "detail": "The SandboxTool for code execution requires the separate, optional beeai-code-interpreter service (its own Docker containers); isolation is delegated to that external companion project rather than enforced by beeai-framework's own execution path.", "evidence": "https://framework.beeai.dev/modules/tools"},
+  "context_memory": {"rating": "basic", "detail": "Memory strategies (unlimited/last-k/token-limited/summarization) and BaseMemory snapshot methods manage the live run's conversation history; the docs describe no persistence of that state across separate sessions.", "evidence": "https://framework.beeai.dev/modules/memory"},
+  "lifecycle_hooks": {"rating": "full", "detail": "Middleware can set the `output` property on a component's `start` event to skip the underlying execution (e.g. an LLM call) entirely and return a mocked value instead, modify `input` before execution, and abort a run mid-stream via RunContext controller.abort().", "evidence": "https://framework.beeai.dev/modules/middleware"},
+  "prompt_optimization": {"rating": "configurable", "detail": "Agents take first-class `role`/`instructions` parameters for system-prompt customization at construction time; no automatic prompt-tuning loop is documented.", "evidence": "https://raw.githubusercontent.com/i-am-bee/beeai-framework/main/README.md"},
+  "build_vs_buy": {"tier": 2, "label": "blueprint", "detail": "Self-hosted, pip/npm-installed agent SDK (Python + TypeScript) you configure and run; the companion Agent Stack (formerly BeeAI Platform) is itself open, self-hostable deployment infrastructure rather than a managed cloud service.", "evidence": "https://raw.githubusercontent.com/i-am-bee/beeai-framework/main/README.md"}
+}

@@ -1,0 +1,9 @@
+{
+  "github_id": "OpenBMB/AgentVerse",
+  "researched": "2026-07-19",
+  "tooling_sandboxing": {"rating": "unknown", "detail": "Tool execution (web browser, Jupyter notebook, bing search) is delegated to the external XAgent ToolServer; no isolation/containment mechanism shipped by AgentVerse itself is documented.", "evidence": ""},
+  "context_memory": {"rating": "basic", "detail": "Agent `memory_type: chat_history` and the Updater rule component manage dialogue state only within one active simulation/task run; no persistence across sessions or compaction is documented.", "evidence": "https://raw.githubusercontent.com/OpenBMB/AgentVerse/main/README.md"},
+  "lifecycle_hooks": {"rating": "partial", "detail": "The environment's Selector rule component filters/discards invalid agent-generated messages after they're produced (an after-the-fact output validator), not a pre-execution blocking hook; Order/Visibility/Updater govern turn-taking and message routing rather than intercepting tool calls.", "evidence": "https://github.com/OpenBMB/AgentVerse/blob/main/README.md"},
+  "prompt_optimization": {"rating": "configurable", "detail": "Agent prompt_template fields with ${placeholder} substitution are set per-agent in config.yaml and filled at runtime via _fill_prompt_template; no automatic prompt tuning loop is documented.", "evidence": "https://raw.githubusercontent.com/OpenBMB/AgentVerse/main/README.md"},
+  "build_vs_buy": {"tier": 2, "label": "blueprint", "detail": "Self-hosted, config.yaml-driven framework for building task-solving or simulation multi-agent environments (describer/order/selector/updater/visibility rules) rather than raw API orchestration; no managed hosted offering beyond a HuggingFace Spaces demo.", "evidence": "https://raw.githubusercontent.com/OpenBMB/AgentVerse/main/README.md"}
+}

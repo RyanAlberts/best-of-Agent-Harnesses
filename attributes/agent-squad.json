@@ -1,0 +1,9 @@
+{
+  "github_id": "2FastLabs/agent-squad",
+  "researched": "2026-07-19",
+  "tooling_sandboxing": {"rating": "unknown", "detail": "README and docs describe tool integration (native functions, HTTP tools, MCP servers) but never address execution isolation, sandboxing, or containment for tool calls.", "evidence": ""},
+  "context_memory": {"rating": "strong", "detail": "ChatStorage is a pluggable interface with InMemoryChatStorage for dev and DynamoDbChatStorage/SqlChatStorage for production, persisting and fetching conversation history across sessions via save_chat_message()/fetch_chat().", "evidence": "https://github.com/2FastLabs/agent-squad"},
+  "lifecycle_hooks": {"rating": "partial", "detail": "Agents accept an optional AgentCallbacks object for lifecycle events like new tokens in streaming responses; the docs describe it as event/observation handling (streaming), not a pre-execution veto mechanism.", "evidence": "https://2fastlabs.github.io/agent-squad/agents/overview/"},
+  "prompt_optimization": {"rating": "configurable", "detail": "Agent descriptions and the classifier's system prompt are user-editable to fix misrouting, and classifiers can be fully replaced by extending the abstract Classifier class, but no automatic tuning loop is documented.", "evidence": "https://github.com/2FastLabs/agent-squad/blob/main/docs/src/content/docs/classifiers/overview.mdx"},
+  "build_vs_buy": {"tier": 2, "label": "blueprint", "detail": "Open-source (Apache 2.0), self-hosted orchestration framework (Python/TypeScript/Swift) you run yourself on Lambda, containers, or on-device, configuring classifiers/agents/storage rather than a hosted control plane.", "evidence": "https://raw.githubusercontent.com/2FastLabs/agent-squad/main/README.md"}
+}

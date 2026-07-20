@@ -1,0 +1,9 @@
+{
+  "github_id": "cline/cline",
+  "researched": "2026-07-19",
+  "tooling_sandboxing": {"rating": "basic", "detail": "Execution is on the host by default with an Auto Approve/YOLO-mode permission system gating file edits, terminal commands, browser actions, and MCP tools; the docs recommend an external sandboxed VM/container for YOLO mode rather than shipping isolation.", "evidence": "https://docs.cline.bot/features/auto-approve"},
+  "context_memory": {"rating": "strong", "detail": "Team/session state persists across restarts (\"pick up where you left off\", scheduled runs persist across restarts) beyond a single live process.", "evidence": "https://raw.githubusercontent.com/cline/cline/HEAD/README.md"},
+  "lifecycle_hooks": {"rating": "full", "detail": "The tool_call_before hook fires before a tool call and can audit or prevent the invocation (policy enforcement, fail_closed mode for unsafe bypass), with tool_call_after logging results afterward.", "evidence": "https://docs.cline.bot/sdk/hooks"},
+  "prompt_optimization": {"rating": "configurable", "detail": ".clinerules files inject project-specific coding standards, architecture conventions, and deployment procedures into how Cline behaves, without automatic tuning.", "evidence": "https://raw.githubusercontent.com/cline/cline/HEAD/README.md"},
+  "build_vs_buy": {"tier": 2, "label": "blueprint", "detail": "Primary published artifact is the self-hosted VS Code/JetBrains extension and CLI configured via .clinerules and the plugin/hook system; a lower-level programmatic SDK is also offered for tier-1 style composition.", "evidence": "https://raw.githubusercontent.com/cline/cline/HEAD/README.md"}
+}

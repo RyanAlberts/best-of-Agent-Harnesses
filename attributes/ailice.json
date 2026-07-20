@@ -1,0 +1,9 @@
+{
+  "github_id": "myshell-ai/AIlice",
+  "researched": "2026-07-19",
+  "tooling_sandboxing": {"rating": "basic", "detail": "Docker is offered as an optional \"sandbox run\" (`docker build -t ailice . && docker run ...`), but the primary, documented install path is native (`pip install -e .`) with the agent's shell/code tools running directly on the host — isolation is opt-in, not the default.", "evidence": "https://github.com/myshell-ai/AIlice#readme"},
+  "context_memory": {"rating": "strong", "detail": "A long-term memory module performs local embedding-model computation for semantic storage/retrieval (with a roadmap item to replace the vector database with a knowledge graph for better long-text/code comprehension), beyond plain chat-history logging.", "evidence": "https://github.com/myshell-ai/AIlice#readme"},
+  "lifecycle_hooks": {"rating": "none", "detail": "The interpreter framework executes pattern-matched actions from LLM output immediately; no pre-execution blocking/veto point is documented, only a mid-run \"interrupt\" mode for the user to inject new prompts.", "evidence": "https://github.com/myshell-ai/AIlice#readme"},
+  "prompt_optimization": {"rating": "unknown", "detail": "Looked for user-configurable system prompts or persona/rules files distinct from the internal \"highly dynamic prompt construction\" (a loop-avoidance mechanism, not a user-facing customization surface); none documented in the README.", "evidence": ""},
+  "build_vs_buy": {"tier": 2, "label": "blueprint", "detail": "A standalone, self-hosted autonomous agent (pip install or Docker, configured via CLI flags like `--contextWindowRatio`), not a library you import into another application.", "evidence": "https://github.com/myshell-ai/AIlice#readme"}
+}

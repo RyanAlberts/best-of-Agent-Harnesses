@@ -1,0 +1,9 @@
+{
+  "github_id": "openai/codex",
+  "researched": "2026-07-19",
+  "tooling_sandboxing": {"rating": "strong", "detail": "Sandboxing is on by default via platform-native enforcement (macOS Seatbelt, Linux/WSL2 bubblewrap user-namespace isolation), confining writes to a workspace-write boundary and blocking network access unless explicitly approved.", "evidence": "https://learn.chatgpt.com/codex/sandboxing"},
+  "context_memory": {"rating": "strong", "detail": "Built-in PreCompact/PostCompact hooks handle context compaction and a SessionStart hook (matcher \"startup|resume\") restores state when a prior session is resumed.", "evidence": "https://learn.chatgpt.com/docs/hooks"},
+  "lifecycle_hooks": {"rating": "full", "detail": "PreToolUse hooks intercept Bash, apply_patch file edits, and MCP tool calls and can return permissionDecision: \"deny\" to block them (or rewrite inputs) before they run, with PostToolUse hooks logging after execution.", "evidence": "https://learn.chatgpt.com/docs/hooks"},
+  "prompt_optimization": {"rating": "configurable", "detail": "AGENTS.md files provide custom, repo-scoped instructions layered into the system prompt, without any automatic tuning of those instructions.", "evidence": "https://developers.openai.com/codex/guides/agents-md"},
+  "build_vs_buy": {"tier": 2, "label": "blueprint", "detail": "Primary artifact is the self-hosted Codex CLI configured via config.toml/hooks.json that you run locally; OpenAI also offers a hosted ChatGPT Codex cloud environment as a managed alternative.", "evidence": "https://raw.githubusercontent.com/openai/codex/HEAD/README.md"}
+}

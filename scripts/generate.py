@@ -1442,7 +1442,7 @@ def generate_readme() -> str:
         "",
         "- [**harnesses.json**](harnesses.json) — every project with category, complexity tier, capability tags, stars, license signal, and a concrete example link, plus the full use-case index.",
         "- [**llms.txt**](llms.txt) — the entire list in one agent-readable file. Point any agent at the [raw URL](https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/llms.txt).",
-        "- [**MCP server**](mcp/) — `recommend` (one opinionated pick + alternatives + what to *avoid*, e.g. repos flagged for star manipulation), `compare` (2–4 harnesses side by side: who leads on which axis, graveyard warnings, the matching decision guide), `pick_harness` (ranked, with complexity/autonomy/recovery filters), `search_harnesses`, `get_harness`, `list_categories`, plus `list_comparisons`/`get_comparison` for the decision guides. Published to PyPI and the [official MCP registry](https://registry.modelcontextprotocol.io) as `io.github.RyanAlberts/agent-harnesses`. One-line install (needs [uv](https://docs.astral.sh/uv/)):",
+        "- [**MCP server**](mcp/) — `recommend` (one opinionated pick + alternatives + what to *avoid*, e.g. repos flagged for star manipulation), `compare`/`compare_for` (2–4 harnesses side by side — by id or by task — who leads on which axis incl. researched sandboxing/memory/hooks/prompt-optimization ratings, graveyard warnings, the matching decision guide), `pick_harness` (ranked, with complexity/autonomy/recovery filters), `search_harnesses`, `get_harness`, `list_categories`, plus `list_comparisons`/`get_comparison` for the decision guides. Published to PyPI and the [official MCP registry](https://registry.modelcontextprotocol.io) as `io.github.RyanAlberts/agent-harnesses`. One-line install (needs [uv](https://docs.astral.sh/uv/)):",
         "",
         "```sh",
         "claude mcp add agent-harnesses -- uvx agent-harnesses-mcp",
@@ -1726,8 +1726,75 @@ def comparisons_index() -> list:
     return out
 
 
+DEEP_DIVE_VOCAB = {
+    "tooling_sandboxing": ["none", "basic", "strong"],
+    "context_memory": ["none", "basic", "strong"],
+    "lifecycle_hooks": ["none", "partial", "full"],
+    "prompt_optimization": ["none", "configurable", "native"],
+}
+BUILD_BUY_LABELS = {1: "build", 2: "blueprint", 3: "managed"}
+
+
+def load_deep_dives(attr_dir=None) -> dict:
+    """attributes/<slug>.json -> {github_id: deep_dive} per attributes/RUBRIC.md.
+
+    Validates vocabulary, completeness, evidence URLs, and that every file maps
+    to a live project; any violation fails the build loudly so a bad research
+    batch can't reach harnesses.json."""
+    import json
+    attr_dir = Path(attr_dir) if attr_dir else REPO_ROOT / "attributes"
+    out, errors = {}, []
+    by_slug = {project_slug(p.github_id): p.github_id
+               for cat_id, _, _ in CATEGORIES for p in live_projects(cat_id)}
+    for f in sorted(attr_dir.glob("*.json")):
+        try:
+            raw = json.loads(f.read_text())
+        except json.JSONDecodeError as e:
+            errors.append(f"{f.name}: invalid JSON ({e})")
+            continue
+        gid = by_slug.get(f.stem)
+        if gid is None or raw.get("github_id") != gid:
+            errors.append(f"{f.name}: no live project with slug {f.stem!r} and "
+                          f"github_id {raw.get('github_id')!r}")
+            continue
+        dd = {"researched": raw.get("researched", "")}
+        for axis, vocab in DEEP_DIVE_VOCAB.items():
+            a = raw.get(axis)
+            if not isinstance(a, dict):
+                errors.append(f"{f.name}: missing axis {axis}")
+                continue
+            rating = a.get("rating")
+            if rating not in vocab and rating != "unknown":
+                errors.append(f"{f.name}: {axis}.rating {rating!r} not in {vocab + ['unknown']}")
+                continue
+            if rating != "unknown" and not str(a.get("evidence", "")).startswith("http"):
+                errors.append(f"{f.name}: {axis} rated {rating!r} without an evidence URL")
+                continue
+            dd[axis] = {"rating": rating,
+                        "rank": vocab.index(rating) + 1 if rating in vocab else 0,
+                        "detail": a.get("detail", ""),
+                        "evidence": a.get("evidence", "")}
+        bb = raw.get("build_vs_buy")
+        if not isinstance(bb, dict) or bb.get("tier") not in (1, 2, 3):
+            errors.append(f"{f.name}: build_vs_buy.tier must be 1, 2, or 3")
+        elif bb.get("label") != BUILD_BUY_LABELS[bb["tier"]]:
+            errors.append(f"{f.name}: build_vs_buy.label {bb.get('label')!r} != "
+                          f"{BUILD_BUY_LABELS[bb['tier']]!r} for tier {bb['tier']}")
+        elif not str(bb.get("evidence", "")).startswith("http"):
+            errors.append(f"{f.name}: build_vs_buy without an evidence URL")
+        else:
+            dd["build_vs_buy"] = {"tier": bb["tier"], "label": bb["label"],
+                                  "detail": bb.get("detail", ""),
+                                  "evidence": bb.get("evidence", "")}
+        out[gid] = dd
+    if errors:
+        raise SystemExit("attributes/ validation failed:\n  " + "\n  ".join(errors))
+    return out
+
+
 def generate_harnesses_json() -> str:
     import json
+    deep_dives = load_deep_dives()
     projects = []
     for cat_id, cat_title, _ in CATEGORIES:
         for p in sorted(live_projects(cat_id), key=lambda x: stars_for(x.github_id), reverse=True):
@@ -1754,6 +1821,7 @@ def generate_harnesses_json() -> str:
                 "license_signal": oss_signal(p.oss),
                 "tags": p.tags,
                 "example": {"label": example_label_for(p.github_id), "url": examples_for(p.github_id)},
+                "deep_dive": deep_dives.get(p.github_id),
             })
     doc = {
         "meta": {
@@ -1774,6 +1842,8 @@ def generate_harnesses_json() -> str:
             "autonomy_help": "Designed autonomy regime, least to most: rank 1 = human approves each action, 4 = built for unattended runs and fleets. rank 0 / 'n/a' = doesn't own an agent loop.",
             "recovery_tiers": RECOVERY_TIERS,
             "recovery_help": "Behavior when a run dies mid-task, weakest to strongest: rank 1 = start over, 4 = persisted execution state survives restarts. rank 0 / 'n/a' = doesn't execute.",
+            "deep_dive_vocab": dict(DEEP_DIVE_VOCAB, build_vs_buy_labels=BUILD_BUY_LABELS),
+            "deep_dive_help": "Researched attributes per attributes/RUBRIC.md: tooling_sandboxing (how it acts), context_memory (how it remembers), lifecycle_hooks (before/after interception), prompt_optimization (refinement support) — rank 3 strongest, 0 unknown — plus build_vs_buy tier (1 build / 2 blueprint / 3 managed, categorical). deep_dive: null = not researched (outside runtime-harness scope).",
         },
         "categories": [{"id": c, "title": t, "subtitle": s} for c, t, s in CATEGORIES],
         "use_cases": [

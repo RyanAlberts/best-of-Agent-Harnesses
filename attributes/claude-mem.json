@@ -1,0 +1,9 @@
+{
+  "github_id": "thedotmack/claude-mem",
+  "researched": "2026-07-19",
+  "tooling_sandboxing": {"rating": "none", "detail": "claude-mem only observes; its hooks documentation describes every hook (SessionStart, UserPromptSubmit, PostToolUse, Stop, SessionEnd) as non-blocking fire-and-forget calls that never intercept or restrict what the host agent's tools do.", "evidence": "https://docs.claude-mem.ai/architecture/hooks"},
+  "context_memory": {"rating": "strong", "detail": "A local SQLite database stores sessions/observations/summaries and a Chroma vector store enables hybrid semantic+keyword search, so compressed context from past sessions is retrieved and re-injected into future sessions rather than being lost when the process ends.", "evidence": "https://raw.githubusercontent.com/thedotmack/claude-mem/main/README.md"},
+  "lifecycle_hooks": {"rating": "partial", "detail": "All 5 lifecycle hooks (SessionStart, UserPromptSubmit, PostToolUse, Stop, SessionEnd) are documented as observer-only, fire-and-forget HTTP calls with 2-second timeouts — none can block or veto a tool call before it executes.", "evidence": "https://docs.claude-mem.ai/architecture/hooks"},
+  "prompt_optimization": {"rating": "none", "detail": "Configuration only covers claude-mem's own behavior (workflow mode, observation language, which model compresses observations, what gets injected as additionalContext) — there is no mechanism to customize or auto-tune the host agent's own system prompt.", "evidence": "https://docs.claude-mem.ai/configuration"},
+  "build_vs_buy": {"tier": 2, "label": "blueprint", "detail": "Installs as a self-hosted local service (Bun-managed worker, SQLite + Chroma storage, hook scripts) via a single npx command that you run on your own machine; optional cmem.ai cloud backup exists as a sync convenience, not the primary artifact.", "evidence": "https://raw.githubusercontent.com/thedotmack/claude-mem/main/README.md"}
+}

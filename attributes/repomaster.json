@@ -1,0 +1,9 @@
+{
+  "github_id": "QuantaAlpha/RepoMaster",
+  "researched": "2026-07-19",
+  "tooling_sandboxing": {"rating": "unknown", "detail": "Looked in the README, USAGE.md, and the Mintlify docs site for Docker/subprocess/filesystem isolation detail around executing discovered-repo code; none of the three sources describe how execution is contained.", "evidence": ""},
+  "context_memory": {"rating": "strong", "detail": "The repository-exploration internals summarize and restart the chat history when a token-limit threshold (80000 tokens) is hit during a task, per token_limit_termination() — built-in compaction/summarization of the working context, not just budgeting.", "evidence": "https://mintlify.wiki/QuantaAlpha/RepoMaster/concepts/repository-exploration.md"},
+  "lifecycle_hooks": {"rating": "unknown", "detail": "Looked in README/USAGE.md/docs site for pre/post tool-call interception or blocking; none found — documentation covers installation, model config, and the multi-agent dispatcher only.", "evidence": ""},
+  "prompt_optimization": {"rating": "unknown", "detail": "Looked for prompt tuning or system-prompt customization across README, USAGE.md, and the docs site; none documented.", "evidence": ""},
+  "build_vs_buy": {"tier": 2, "label": "blueprint", "detail": "Self-hosted, MIT-licensed multi-agent framework you clone, configure with API keys, and run locally (CLI or web UI) — an opinionated orchestrator, not a library you import or a managed service.", "evidence": "https://github.com/QuantaAlpha/RepoMaster#readme"}
+}

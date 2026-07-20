@@ -1,0 +1,30 @@
+{
+  "github_id": "obra/superpowers",
+  "researched": "2026-07-19",
+  "tooling_sandboxing": {
+    "rating": "none",
+    "detail": "Superpowers' own isolation mechanism is git-worktree-based (\"isolated workspace on new branch\") for change management, not execution sandboxing; it ships no container/VM/allowlist of its own and entirely inherits whatever sandboxing (or lack of it) the underlying harness (Claude Code, Codex, OpenCode, Cursor) already provides.",
+    "evidence": "https://raw.githubusercontent.com/obra/superpowers/main/README.md"
+  },
+  "context_memory": {
+    "rating": "basic",
+    "detail": "hooks/hooks.json registers only a SessionStart hook that re-injects the using-superpowers bootstrap instructions at session startup and again after the host harness compacts, which manages live-session continuity but implements no persistent memory or compaction of its own; a separate companion plugin (obra/episodic-memory, installable via the superpowers marketplace) adds vector-indexed cross-session recall but is a distinct optional install, not part of this repo.",
+    "evidence": "https://raw.githubusercontent.com/obra/superpowers/main/hooks/hooks.json"
+  },
+  "lifecycle_hooks": {
+    "rating": "partial",
+    "detail": "The only hook event registered is SessionStart, a run-level kickoff callback that injects text at session start/compact; it cannot intercept, block, or rewrite an individual tool call, and skill activation itself is a soft model instruction (\"you do not have a choice, you MUST use it\") rather than a technical enforcement gate.",
+    "evidence": "https://github.com/obra/superpowers/blob/main/skills/using-superpowers/SKILL.md"
+  },
+  "prompt_optimization": {
+    "rating": "configurable",
+    "detail": "Composable SKILL.md files are loaded/injected into the host harness's context on a conditional, task-matched basis (progressive disclosure), letting users add or author skills that steer agent behavior; there is no automatic tuning of the skill text itself.",
+    "evidence": "https://github.com/obra/superpowers/blob/main/skills/using-superpowers/SKILL.md"
+  },
+  "build_vs_buy": {
+    "tier": 2,
+    "label": "blueprint",
+    "detail": "Superpowers installs as a self-hosted skill/plugin pack layered onto an existing harness (Claude Code marketplace plugin, Codex/OpenCode/Cursor equivalents) rather than a standalone runtime you buy into; there is no hosted execution backend.",
+    "evidence": "https://raw.githubusercontent.com/obra/superpowers/main/README.md"
+  }
+}

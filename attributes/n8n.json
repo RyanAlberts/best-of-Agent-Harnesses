@@ -1,0 +1,30 @@
+{
+  "github_id": "n8n-io/n8n",
+  "researched": "2026-07-19",
+  "tooling_sandboxing": {
+    "rating": "strong",
+    "detail": "The Code node runs JS in a vm2/isolated-vm sandbox with built-in and external module imports denied by default (NODE_FUNCTION_ALLOW_BUILTIN/NODE_FUNCTION_ALLOW_EXTERNAL), and Task Runners execute code in a separate process outside the main instance.",
+    "evidence": "https://docs.n8n.io/deploy/host-n8n/configure-n8n/basic-configuration/configuration-examples/enable-modules-in-code-node"
+  },
+  "context_memory": {
+    "rating": "strong",
+    "detail": "AI Agent nodes attach memory sub-nodes backed by persistent stores (Postgres Chat Memory, Redis Chat Memory, Zep, Motorhead) in addition to session-only Simple Memory, with a Chat Memory Manager node for advanced history trimming.",
+    "evidence": "https://docs.n8n.io/build/integrate-ai/understand-ai-components/how-memory-works"
+  },
+  "lifecycle_hooks": {
+    "rating": "partial",
+    "detail": "Human-in-the-loop review attached to AI Agent tools pauses the workflow pre-execution for an Approve/Deny decision (Deny cancels the action) - a built-in approval gate, not a user-programmable tool-interception hook.",
+    "evidence": "https://docs.n8n.io/build/integrate-ai/ai-examples/human-in-the-loop-for-tools"
+  },
+  "prompt_optimization": {
+    "rating": "configurable",
+    "detail": "The Agent node exposes a manually-edited System Message field to guide agent behavior before conversation starts; there is no automatic prompt tuning or refinement loop.",
+    "evidence": "https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/tools-agent"
+  },
+  "build_vs_buy": {
+    "tier": 2,
+    "label": "blueprint",
+    "detail": "Primary artifact is the self-hostable fair-code workflow engine (Sustainable Use License) that users deploy and configure with nodes/credentials; n8n Cloud is a named hosted alternative, not the repo's installed artifact.",
+    "evidence": "https://raw.githubusercontent.com/n8n-io/n8n/HEAD/README.md"
+  }
+}

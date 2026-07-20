@@ -1,0 +1,9 @@
+{
+  "github_id": "OpenBMB/ChatDev",
+  "researched": "2026-07-19",
+  "tooling_sandboxing": {"rating": "basic", "detail": "Python/function tool nodes execute in a per-session code_workspace/ directory with timeout/env config, but the docs describe no enforced container or VM isolation for individual tool calls — Docker Compose only wraps the whole backend/frontend app.", "evidence": "https://github.com/OpenBMB/ChatDev/blob/main/docs/user_guide/en/workflow_authoring.md"},
+  "context_memory": {"rating": "strong", "detail": "Pluggable memory stores (SimpleMemory with FAISS + optional JSON disk persistence, Mem0Memory fully cloud-managed) persist agent memory across runs and sessions, not just within one conversation.", "evidence": "https://github.com/OpenBMB/ChatDev/blob/main/docs/user_guide/en/modules/memory.md"},
+  "lifecycle_hooks": {"rating": "partial", "detail": "Workflows support a human-node review mode where a person can inspect intermediate artifacts and give feedback mid-run, but no documented pre-tool-call hook can block/rewrite an action before execution.", "evidence": "https://github.com/OpenBMB/ChatDev/blob/main/README.md"},
+  "prompt_optimization": {"rating": "configurable", "detail": "Agent nodes take a prompt_template field with {{variable}} interpolation and YAML-defined role/phase/ChatChain settings, but no automatic prompt-tuning loop is documented.", "evidence": "https://github.com/OpenBMB/ChatDev/blob/main/docs/user_guide/en/workflow_authoring.md"},
+  "build_vs_buy": {"tier": 2, "label": "blueprint", "detail": "Ships as a self-hostable, YAML-configured multi-agent workflow runtime (DAG of model/python/tooling/human nodes) you run yourself via Docker Compose; an older hosted SaaS at chatdev.modelbest.cn is referenced as historical, not the primary artifact.", "evidence": "https://github.com/OpenBMB/ChatDev/blob/main/README.md"}
+}

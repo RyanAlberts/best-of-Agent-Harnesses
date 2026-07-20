@@ -1,0 +1,9 @@
+{
+  "github_id": "agentsmd/agents.md",
+  "researched": "2026-07-19",
+  "tooling_sandboxing": {"rating": "none", "detail": "AGENTS.md is a markdown format spec with no execution or isolation mechanism; running test commands it lists is left entirely to the host agent.", "evidence": "https://agents.md/"},
+  "context_memory": {"rating": "none", "detail": "Nested AGENTS.md files are resolved by directory-proximity precedence at read time (closest file wins) with no session state or cross-session persistence.", "evidence": "https://agents.md/"},
+  "lifecycle_hooks": {"rating": "none", "detail": "The spec defines no before/after interception points; it only documents static markdown sections an agent reads once per task.", "evidence": "https://agents.md/"},
+  "prompt_optimization": {"rating": "configurable", "detail": "AGENTS.md is exactly the rules-file/system-prompt-layering pattern: repo- and directory-scoped instruction files an agent reads for dev/testing/PR guidance.", "evidence": "https://raw.githubusercontent.com/agentsmd/agents.md/HEAD/README.md"},
+  "build_vs_buy": {"tier": 2, "label": "blueprint", "detail": "It is an open format/config spec (with a reference Next.js site) that projects adopt, not an SDK to import or a hosted runtime.", "evidence": "https://raw.githubusercontent.com/agentsmd/agents.md/HEAD/README.md"}
+}

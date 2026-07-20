@@ -1,0 +1,9 @@
+{
+  "github_id": "langflow-ai/langflow",
+  "researched": "2026-07-19",
+  "tooling_sandboxing": {"rating": "none", "detail": "Custom Python components, the Python Interpreter node, and CSV Agent execute arbitrary Python directly in the host Langflow backend process with full filesystem/network access and no per-user isolation by design.", "evidence": "https://docs.langflow.org/security"},
+  "context_memory": {"rating": "strong", "detail": "Memory bases are per-flow vector stores that auto-ingest conversation messages and persist context across sessions, on top of session-ID-scoped chat memory and optional external Mem0/Redis backends.", "evidence": "https://docs.langflow.org/memory"},
+  "lifecycle_hooks": {"rating": "full", "detail": "The beta Policies component wraps tools in a ToolGuard generated from natural-language business rules that \"runs before tool execution,\" blocking calls that violate policy, alongside a separate Guardrails component that validates input before it flows downstream.", "evidence": "https://docs.langflow.org/policies"},
+  "prompt_optimization": {"rating": "configurable", "detail": "Prompt Template components feed a Language Model's System Message input and expose curly-brace template variables sourced from other components or global variables; there is no automatic prompt-tuning mechanism.", "evidence": "https://docs.langflow.org/components-prompts"},
+  "build_vs_buy": {"tier": 2, "label": "blueprint", "detail": "Repo installs the open-source, self-hostable (pip/Docker) visual flow builder; DataStax Langflow is a separate fully-managed cloud version of the same OSS foundation offered as a hosted alternative.", "evidence": "https://docs.datastax.com/en/langflow/index.html"}
+}

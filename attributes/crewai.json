@@ -1,0 +1,30 @@
+{
+  "github_id": "crewAIInc/crewAI",
+  "researched": "2026-07-19",
+  "tooling_sandboxing": {
+    "rating": "basic",
+    "detail": "The former CodeInterpreterTool ran Python in an isolated Docker container by default but has been removed from crewai-tools in favor of delegating code execution to external sandbox services (E2B, Modal); other tools run directly on the host.",
+    "evidence": "https://docs.crewai.com/en/tools/ai-ml/codeinterpretertool"
+  },
+  "context_memory": {
+    "rating": "strong",
+    "detail": "A unified Memory class persists across sessions using LanceDB vector storage by default, retrieving via composite scoring of semantic similarity, recency decay, and LLM-assigned importance.",
+    "evidence": "https://docs.crewai.com/en/concepts/memory"
+  },
+  "lifecycle_hooks": {
+    "rating": "partial",
+    "detail": "Task guardrails reject/transform task output with automatic retries and before/after_kickoff callbacks modify crew-level inputs/outputs - observation and post-hoc transformation, without per-tool-call pre-execution blocking.",
+    "evidence": "https://docs.crewai.com/en/concepts/tasks"
+  },
+  "prompt_optimization": {
+    "rating": "configurable",
+    "detail": "Agents are customized via role/goal/backstory plus optional system_template/prompt_template/response_template overrides, with no automatic prompt tuning or eval-driven search documented.",
+    "evidence": "https://docs.crewai.com/en/concepts/agents"
+  },
+  "build_vs_buy": {
+    "tier": 2,
+    "label": "blueprint",
+    "detail": "The pip-installed crewai package is a self-hosted Python agent framework (agents, tasks, Flows) you configure and run yourself, with CrewAI AMP/Enterprise at app.crewai.com as the optional hosted control plane.",
+    "evidence": "https://raw.githubusercontent.com/crewAIInc/crewAI/main/README.md"
+  }
+}

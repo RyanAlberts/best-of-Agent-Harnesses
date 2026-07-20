@@ -1,0 +1,9 @@
+{
+  "github_id": "earendil-works/pi",
+  "researched": "2026-07-19",
+  "tooling_sandboxing": {"rating": "basic", "detail": "Pi ships no built-in permission system for restricting filesystem/process/network/credential access, and instead documents optional external containerization patterns (Gondolin micro-VM, Docker, OpenShell).", "evidence": "https://raw.githubusercontent.com/earendil-works/pi/HEAD/README.md"},
+  "context_memory": {"rating": "strong", "detail": "Sessions persist as JSONL files with a branching tree structure (message entries, compactions, branch summaries), with session_before_compact/session_compact hooks handling conversation compaction and /resume restoring prior sessions.", "evidence": "https://raw.githubusercontent.com/earendil-works/pi/main/packages/coding-agent/docs/extensions.md"},
+  "lifecycle_hooks": {"rating": "full", "detail": "The tool_call hook fires after a tool starts but before execution and can block it with a reason (or mutate its input), while tool_execution_end/tool_result hooks trace and can modify results after the fact.", "evidence": "https://raw.githubusercontent.com/earendil-works/pi/main/packages/coding-agent/docs/extensions.md"},
+  "prompt_optimization": {"rating": "configurable", "detail": "The before_agent_start hook exposes event.systemPrompt and systemPromptOptions so extensions can chain modifications to the system prompt per turn, and tools can declare promptGuidelines appended to it.", "evidence": "https://raw.githubusercontent.com/earendil-works/pi/main/packages/coding-agent/docs/extensions.md"},
+  "build_vs_buy": {"tier": 2, "label": "blueprint", "detail": "Ships as a self-hosted coding-agent CLI/TUI configured through an extensive extension/hook system rather than a bare SDK primitive; a separate lower-level agent-loop package is also importable for tier-1 style use.", "evidence": "https://raw.githubusercontent.com/earendil-works/pi/HEAD/README.md"}
+}

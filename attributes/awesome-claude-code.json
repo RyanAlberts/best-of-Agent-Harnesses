@@ -1,0 +1,9 @@
+{
+  "github_id": "hesreallyhim/awesome-claude-code",
+  "researched": "2026-07-19",
+  "tooling_sandboxing": {"rating": "none", "detail": "The repo is a hand-picked Markdown index of third-party Claude Code resources (e.g. it links out to Cleat and Brood Box for Docker/microVM sandboxing); it ships no execution environment of its own to sandbox.", "evidence": "https://github.com/hesreallyhim/awesome-claude-code#readme"},
+  "context_memory": {"rating": "none", "detail": "Static curated list of links with no running process, so there is no session, history, or retrieval state to manage — it only catalogs memory tools like Callimachus and Fable.", "evidence": "https://github.com/hesreallyhim/awesome-claude-code#readme"},
+  "lifecycle_hooks": {"rating": "none", "detail": "No hook/callback system exists in the project itself; it links to community docs like \"Claude Code Hooks: Complete Guide\" without implementing interception of its own.", "evidence": "https://github.com/hesreallyhim/awesome-claude-code#readme"},
+  "prompt_optimization": {"rating": "none", "detail": "The README is descriptive prose/links, not a system prompt, rules file, or tuning mechanism.", "evidence": "https://github.com/hesreallyhim/awesome-claude-code#readme"},
+  "build_vs_buy": {"tier": 1, "label": "build", "detail": "The repo installs nothing runnable — it's a bibliography of external tools/skills you'd assemble yourself, the closest fit among the three tiers to \"no opinionated runtime.\"", "evidence": "https://github.com/hesreallyhim/awesome-claude-code#readme"}
+}

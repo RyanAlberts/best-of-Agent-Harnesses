@@ -1,0 +1,9 @@
+{
+  "github_id": "openinterpreter/openinterpreter",
+  "researched": "2026-07-19",
+  "tooling_sandboxing": {"rating": "strong", "detail": "OS-level sandboxing (macOS Seatbelt profiles, Linux/WSL Bubblewrap+seccomp) restricts execution to read-only/workspace-write/danger-full-access modes with network disabled by default in workspace-write, and the project fails closed rather than running unsandboxed when a policy can't be enforced.", "evidence": "https://www.openinterpreter.com/docs/terminal/sandbox"},
+  "context_memory": {"rating": "strong", "detail": "PreCompact/PostCompact hooks manage context compaction and SessionStart plus `interpreter resume --last` restore a prior session's state.", "evidence": "https://www.openinterpreter.com/docs/terminal/hooks"},
+  "lifecycle_hooks": {"rating": "full", "detail": "PreToolUse fires before a tool call and can return permissionDecision: \"deny\" to block it (e.g. deny a command), with PostToolUse tracing after execution.", "evidence": "https://www.openinterpreter.com/docs/terminal/hooks"},
+  "prompt_optimization": {"rating": "configurable", "detail": "AGENTS.md gives the agent project-specific guidance it always reads, layered into the system prompt without automatic tuning.", "evidence": "https://www.openinterpreter.com/docs/terminal"},
+  "build_vs_buy": {"tier": 2, "label": "blueprint", "detail": "A self-hosted terminal CLI (fork of Codex) with selectable model harnesses, configured via hooks/permissions/AGENTS.md and local state under ~/.openinterpreter, not an SDK primitive or managed platform.", "evidence": "https://raw.githubusercontent.com/openinterpreter/openinterpreter/HEAD/README.md"}
+}

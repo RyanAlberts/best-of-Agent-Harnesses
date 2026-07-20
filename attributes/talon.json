@@ -1,0 +1,9 @@
+{
+  "github_id": "dylanneve1/talon",
+  "researched": "2026-07-19",
+  "tooling_sandboxing": {"rating": "basic", "detail": "Config-level allowlist via disabledToolTags/disabledTools and an MCP-process boundary for external tool servers, but no container/VM isolation or restricted filesystem enforced by default.", "evidence": "https://raw.githubusercontent.com/dylanneve1/talon/HEAD/README.md"},
+  "context_memory": {"rating": "strong", "detail": "Persistent cross-session memory via pluggable MemPalace (local vector search) or mem0 (durable semantic fact extraction) backends, plus a Dream agent that runs background memory consolidation and a storage layer that persists sessions/history across restarts.", "evidence": "https://raw.githubusercontent.com/dylanneve1/talon/HEAD/README.md"},
+  "lifecycle_hooks": {"rating": "partial", "detail": "Plugins expose a handleAction() callback and the internal event bus is a pub-sub spine for task/turn lifecycle events, but this is post-event logging/subscription rather than a documented pre-tool-call blocking or rewriting hook.", "evidence": "https://github.com/dylanneve1/talon/tree/main/docs"},
+  "prompt_optimization": {"rating": "configurable", "detail": "System prompt is assembled at session start from editable templates in prompts/ and plugins can append content via getSystemPromptAddition(), but there is no automatic/self-tuning prompt optimization loop.", "evidence": "https://raw.githubusercontent.com/dylanneve1/talon/HEAD/README.md"},
+  "build_vs_buy": {"tier": 2, "label": "blueprint", "detail": "Self-hosted, config-driven TypeScript harness (pluggable model backends, memory backends, plugin system) that the user runs as a daemon/binary rather than a hosted service.", "evidence": "https://raw.githubusercontent.com/dylanneve1/talon/HEAD/README.md"}
+}

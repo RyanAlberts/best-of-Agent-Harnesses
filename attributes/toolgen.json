@@ -1,0 +1,9 @@
+{
+  "github_id": "Reason-Wang/ToolGen",
+  "researched": "2026-07-19",
+  "tooling_sandboxing": {"rating": "none", "detail": "No isolation layer for tool execution is described; the project is research training code, not an execution harness.", "evidence": "https://raw.githubusercontent.com/Reason-Wang/ToolGen/HEAD/README.md"},
+  "context_memory": {"rating": "basic", "detail": "Tools are virtualized as unique generation tokens so the model retrieves and invokes them directly rather than stuffing 47k tool schemas into context, i.e. retrieval scoped to TOOL DEFINITIONS only.", "evidence": "https://raw.githubusercontent.com/Reason-Wang/ToolGen/HEAD/README.md"},
+  "lifecycle_hooks": {"rating": "none", "detail": "No middleware, callback, or before/after interception system is mentioned anywhere in the project docs.", "evidence": "https://raw.githubusercontent.com/Reason-Wang/ToolGen/HEAD/README.md"},
+  "prompt_optimization": {"rating": "none", "detail": "The three-stage pipeline (memorization, retrieval, end-to-end tuning) trains model weights on tool tokens; it is not a system-prompt refinement or prompt-tuning mechanism.", "evidence": "https://raw.githubusercontent.com/Reason-Wang/ToolGen/HEAD/README.md"},
+  "build_vs_buy": {"tier": 1, "label": "build", "detail": "Delivered as open-source research code/model weights on Hugging Face that users must integrate and deploy themselves, with no packaged runtime.", "evidence": "https://raw.githubusercontent.com/Reason-Wang/ToolGen/HEAD/README.md"}
+}

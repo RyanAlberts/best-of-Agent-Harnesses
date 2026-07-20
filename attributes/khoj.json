@@ -1,0 +1,9 @@
+{
+  "github_id": "khoj-ai/khoj",
+  "researched": "2026-07-19",
+  "tooling_sandboxing": {"rating": "strong", "detail": "Python code the assistant generates is run in an isolated sandbox, not the host process: either Cohere's Terrarium as a local Docker container, or E2B as a remote sandbox — \"both approaches isolate code execution rather than running it directly on the server.\"", "evidence": "https://docs.khoj.dev/features/code_execution"},
+  "context_memory": {"rating": "strong", "detail": "Persistent, indexed document retrieval across sessions (PDFs, Markdown, Notion, Word, org-mode) backing semantic search over \"your docs,\" i.e. file/vector-backed memory that survives the process.", "evidence": "https://github.com/khoj-ai/khoj#readme"},
+  "lifecycle_hooks": {"rating": "none", "detail": "The only related feature, Automations, is a scheduler that runs saved queries on a cron-like cadence and emails results — a trigger, not a pre/post interception point on tool calls.", "evidence": "https://docs.khoj.dev/category/features"},
+  "prompt_optimization": {"rating": "configurable", "detail": "\"You can use agents to setup custom system prompts with Khoj\" — server admins define reusable agent personas with their own system prompts that all users can select, with no automatic tuning.", "evidence": "https://docs.khoj.dev/category/features"},
+  "build_vs_buy": {"tier": 2, "label": "blueprint", "detail": "\"Open-source, self-hostable. Always\" is the primary artifact the repo installs; a hosted Khoj Cloud app is offered as an optional convenience alternative rather than the required execution surface.", "evidence": "https://github.com/khoj-ai/khoj#readme"}
+}

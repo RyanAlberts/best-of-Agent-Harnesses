@@ -1,0 +1,30 @@
+{
+  "github_id": "openclaw/openclaw",
+  "researched": "2026-07-19",
+  "tooling_sandboxing": {
+    "rating": "basic",
+    "detail": "A Docker-backed sandbox with tiered workspace mount access (none/ro/rw), blocked system/credential paths, and default-deny private-network access ships in the runtime but is opt-in via agents.defaults.sandbox.mode - default tool execution is on the host gateway.",
+    "evidence": "https://docs.openclaw.ai/gateway/security"
+  },
+  "context_memory": {
+    "rating": "strong",
+    "detail": "Durable memory lives in on-disk MEMORY.md and dated memory/*.md files retrieved via a hybrid vector+keyword memory_search tool, with automatic pre-compaction reminders and an optional 'dreaming' consolidation pass into long-term memory.",
+    "evidence": "https://docs.openclaw.ai/concepts/memory"
+  },
+  "lifecycle_hooks": {
+    "rating": "full",
+    "detail": "The plugin hook before_tool_call can return block: true, rewritten params, or requireApproval to stop or alter a tool call before it runs, alongside observation-only hooks like after_tool_call.",
+    "evidence": "https://docs.openclaw.ai/plugins/hooks"
+  },
+  "prompt_optimization": {
+    "rating": "configurable",
+    "detail": "The system prompt is assembled from workspace bootstrap files (AGENTS.md, SOUL.md, TOOLS.md, etc.) with configurable per-file and total character budgets; composition is manual/config-driven with no automatic prompt tuning.",
+    "evidence": "https://docs.openclaw.ai/concepts/system-prompt"
+  },
+  "build_vs_buy": {
+    "tier": 2,
+    "label": "blueprint",
+    "detail": "OpenClaw installs as a self-hosted npm/daemon Gateway runtime you configure with workspace files, plugins, and sandbox settings; optional companion apps (Windows Hub, macOS, iOS/Android nodes) are additional surfaces, not a required hosted execution stack.",
+    "evidence": "https://raw.githubusercontent.com/openclaw/openclaw/main/README.md"
+  }
+}

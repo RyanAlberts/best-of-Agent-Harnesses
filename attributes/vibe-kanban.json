@@ -1,0 +1,9 @@
+{
+  "github_id": "BloopAI/vibe-kanban",
+  "researched": "2026-07-19",
+  "tooling_sandboxing": {"rating": "none", "detail": "Isolation is limited to Git worktree branching so concurrent agent tasks don't collide on files; there is no execution/security sandbox of its own, since actual tool execution and any permission model belong to whichever orchestrated coding agent (Claude Code, Codex, etc.) runs the task.", "evidence": "https://deepwiki.com/BloopAI/vibe-kanban/6-git-and-github-integration"},
+  "context_memory": {"rating": "strong", "detail": "A local-first SQLite database (via SQLx) persists workflow state per task attempt/session — conversation and file-change history a user can reopen from the board — independent of the Git-managed code state.", "evidence": "https://raw.githubusercontent.com/BloopAI/vibe-kanban/HEAD/README.md"},
+  "lifecycle_hooks": {"rating": "partial", "detail": "The board offers inline diff review to approve and merge a completed task attempt, an after-the-fact human review/merge gate rather than a hook that blocks an individual tool call before it executes.", "evidence": "https://deepwiki.com/BloopAI/vibe-kanban/5.6-kanban-board-and-issue-management"},
+  "prompt_optimization": {"rating": "none", "detail": "No system-prompt customization or prompt tuning feature owned by vibe-kanban itself is documented; each orchestrated coding agent retains its own prompt configuration.", "evidence": "https://raw.githubusercontent.com/BloopAI/vibe-kanban/HEAD/README.md"},
+  "build_vs_buy": {"tier": 2, "label": "blueprint", "detail": "Primary artifact is the self-hosted local app (npx vibe-kanban, Rust/SQLite backend) that orchestrates external agents; a self-hosted \"Vibe Kanban Cloud\" instance option is also documented. The project has since announced it is sunsetting.", "evidence": "https://raw.githubusercontent.com/BloopAI/vibe-kanban/HEAD/README.md"}
+}

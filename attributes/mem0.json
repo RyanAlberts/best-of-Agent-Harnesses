@@ -1,0 +1,9 @@
+{
+  "github_id": "mem0ai/mem0",
+  "researched": "2026-07-19",
+  "tooling_sandboxing":  {"rating": "none", "detail": "Mem0 is purely a memory storage/retrieval API (add, extract, recall) and does not execute tools, code, or actions on behalf of an agent, so there is nothing to sandbox.", "evidence": "https://docs.mem0.ai/overview"},
+  "context_memory":      {"rating": "strong", "detail": "Memories persist across sessions in a vector store with a parallel per-collection entity index, retrieved via multi-signal hybrid search (semantic + BM25 keyword + entity matching).", "evidence": "https://docs.mem0.ai/open-source/graph_memory/overview"},
+  "lifecycle_hooks":     {"rating": "partial", "detail": "Hosted-Platform webhooks send an HTTP POST notification after memory_add/update/delete/categorize events, but the documentation confirms they cannot block or modify the underlying memory operation.", "evidence": "https://docs.mem0.ai/platform/features/webhooks"},
+  "prompt_optimization": {"rating": "configurable", "detail": "custom_instructions (superseding custom_fact_extraction_prompt/custom_update_memory_prompt) let developers hand-write and version their own fact-extraction and update prompts, with no automatic optimization of them.", "evidence": "https://docs.mem0.ai/open-source/features/custom-update-memory-prompt"},
+  "build_vs_buy":        {"tier": 1, "label": "build", "detail": "The mem0ai/mem0 pip and npm packages are a Memory() client library you import into your own app with no opinionated runtime process; Mem0 Platform at app.mem0.ai is the fully managed hosted alternative.", "evidence": "https://raw.githubusercontent.com/mem0ai/mem0/main/README.md"}
+}

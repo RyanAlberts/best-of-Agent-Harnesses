@@ -1,0 +1,30 @@
+{
+  "github_id": "NousResearch/hermes-agent",
+  "researched": "2026-07-19",
+  "tooling_sandboxing": {
+    "rating": "basic",
+    "detail": "Local backend runs tool commands directly on the host by default (approval prompts plus a dangerous-command blocklist), with container/VM isolation (Docker, Singularity, Modal, Daytona) only enforced when the user opts into those backends.",
+    "evidence": "https://hermes-agent.nousresearch.com/docs/user-guide/security"
+  },
+  "context_memory": {
+    "rating": "strong",
+    "detail": "Persistent MEMORY.md and USER.md files on disk are re-injected into the system prompt every session, plus FTS5 full-text session search and Honcho-based dialectic user modeling for cross-session recall.",
+    "evidence": "https://hermes-agent.nousresearch.com/docs/user-guide/features/memory"
+  },
+  "lifecycle_hooks": {
+    "rating": "full",
+    "detail": "User-definable pre_tool_call shell/plugin hooks can return an action:block result to veto a tool call before it executes, alongside post_tool_call, pre_llm_call, and a dozen other lifecycle events.",
+    "evidence": "https://hermes-agent.nousresearch.com/docs/user-guide/features/hooks"
+  },
+  "prompt_optimization": {
+    "rating": "configurable",
+    "detail": "Behavior is customized via user-editable MEMORY.md/USER.md instruction files and a skills system injected into the prompt, while automatic DSPy+GEPA prompt/skill evolution lives in a separate, unmerged experimental repo (hermes-agent-self-evolution) that generates PRs rather than being built into the core agent.",
+    "evidence": "https://github.com/NousResearch/hermes-agent-self-evolution"
+  },
+  "build_vs_buy": {
+    "tier": 2,
+    "label": "blueprint",
+    "detail": "The published artifact is a self-hostable, MIT-licensed agent runtime installed via curl script and configured through config.yaml/backends/skills/plugins that you run yourself (VPS, Docker, GPU box); Nous Portal's 'Hermes Cloud' is the managed hosted alternative.",
+    "evidence": "https://github.com/NousResearch/hermes-agent/blob/main/README.md"
+  }
+}

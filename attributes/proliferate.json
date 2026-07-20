@@ -1,0 +1,30 @@
+{
+  "github_id": "proliferate-ai/proliferate",
+  "researched": "2026-07-19",
+  "tooling_sandboxing": {
+    "rating": "strong",
+    "detail": "Cloud runs execute inside isolated cloud sandbox environments provisioned per task, with a credential gateway that keeps real API keys/subscriptions off the sandbox and issues only short-lived tokens; local runs use a lighter git-worktree-per-task isolation.",
+    "evidence": "https://raw.githubusercontent.com/proliferate-ai/proliferate/main/README.md"
+  },
+  "context_memory": {
+    "rating": "strong",
+    "detail": "A running workspace (agent session state, git history, and in-progress changes) can be moved between local machine and cloud mid-task with history intact, i.e. native session resume/mobility across environments rather than a stateless per-run invocation.",
+    "evidence": "https://raw.githubusercontent.com/proliferate-ai/proliferate/main/README.md"
+  },
+  "lifecycle_hooks": {
+    "rating": "unknown",
+    "detail": "Looked for a pre-tool-call interception hook in the README, the docs/product/agents page, and the changelog; found only a reference to admin-configurable 'guardrails' and 'admin policies' with no documented mechanism for how or where they intercept an agent's actions.",
+    "evidence": ""
+  },
+  "prompt_optimization": {
+    "rating": "configurable",
+    "detail": "MCP servers, skills, and custom tools are configured once and shared by every agent/workspace, and dedicated plan-review and code-review agents (reusable reviewer prompts) check work before it lands; there is no automatic prompt tuning.",
+    "evidence": "https://raw.githubusercontent.com/proliferate-ai/proliferate/main/README.md"
+  },
+  "build_vs_buy": {
+    "tier": 2,
+    "label": "blueprint",
+    "detail": "The published GitHub artifact is an AGPL-3.0 self-hosted control plane (Caddy + Postgres + API, deployable via Docker Compose or AWS CloudFormation) you run yourself; Proliferate Cloud (beta) is an optional managed hosted alternative, not the primary installed artifact.",
+    "evidence": "https://raw.githubusercontent.com/proliferate-ai/proliferate/main/README.md"
+  }
+}

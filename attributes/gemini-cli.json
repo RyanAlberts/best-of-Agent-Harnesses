@@ -1,0 +1,9 @@
+{
+  "github_id": "google-gemini/gemini-cli",
+  "researched": "2026-07-19",
+  "tooling_sandboxing": {"rating": "basic", "detail": "Ships real sandboxing (macOS Seatbelt, or Docker/Podman/gVisor/LXC on Linux, confining writes to the project dir) but it is disabled by default and only activates via -s flag, GEMINI_SANDBOX env var, or config, so host execution is the default.", "evidence": "https://raw.githubusercontent.com/google-gemini/gemini-cli/main/docs/cli/sandbox.md"},
+  "context_memory": {"rating": "strong", "detail": "Supports conversation checkpointing to save and resume complex sessions plus token caching, alongside GEMINI.md context files for project-specific memory.", "evidence": "https://raw.githubusercontent.com/google-gemini/gemini-cli/HEAD/README.md"},
+  "lifecycle_hooks": {"rating": "full", "detail": "BeforeTool hooks run synchronously before a tool call and can deny it (exit code 2 or a JSON {\"decision\":\"deny\"} response), with matching AfterTool hooks for post-execution logic, configured in settings.json.", "evidence": "https://geminicli.com/docs/hooks/reference/"},
+  "prompt_optimization": {"rating": "configurable", "detail": "Custom context files (GEMINI.md) let projects inject persistent, hierarchical system-prompt guidance without modifying the CLI's core prompt.", "evidence": "https://raw.githubusercontent.com/google-gemini/gemini-cli/HEAD/README.md"},
+  "build_vs_buy": {"tier": 2, "label": "blueprint", "detail": "Distributed as a self-hosted, config-driven CLI runtime (settings.json, hooks, GEMINI.md) that you run yourself against the Gemini API/Vertex AI backend, not an SDK primitive set or a fully managed execution platform.", "evidence": "https://raw.githubusercontent.com/google-gemini/gemini-cli/HEAD/README.md"}
+}

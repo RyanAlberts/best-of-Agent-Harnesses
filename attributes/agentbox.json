@@ -1,0 +1,30 @@
+{
+  "github_id": "madarco/agentbox",
+  "researched": "2026-07-19",
+  "tooling_sandboxing": {
+    "rating": "strong",
+    "detail": "Each agent runs in its own sandboxed box: locally a Docker container with a FUSE overlay filesystem, or a cloud VM (Hetzner, Vercel, Daytona, E2B, DigitalOcean); isolation is the project's core shipped mechanism, not delegated to the user.",
+    "evidence": "https://github.com/madarco/agentbox"
+  },
+  "context_memory": {
+    "rating": "strong",
+    "detail": "agentbox pause/unpause and agentbox checkpoint freeze and resume a box's full environment state sub-second from a previous checkpoint, giving session resume of the whole sandboxed workspace (including whatever the inner agent had persisted) across restarts.",
+    "evidence": "https://github.com/madarco/agentbox"
+  },
+  "lifecycle_hooks": {
+    "rating": "none",
+    "detail": "There is no documented hooks/callback system for intercepting agent actions; AgentBox's extensibility is limited to a provider-plugin SDK for adding new infrastructure backends, not for observing or blocking tool calls made by the agent running inside a box.",
+    "evidence": "https://github.com/madarco/agentbox"
+  },
+  "prompt_optimization": {
+    "rating": "none",
+    "detail": "AgentBox has no system-prompt layer of its own; it explicitly passes through whichever wrapped agent's native configuration (\"bring all your skills, plugins, and settings for Claude Code, Codex, Open Code\") unchanged into the box.",
+    "evidence": "https://github.com/madarco/agentbox"
+  },
+  "build_vs_buy": {
+    "tier": 2,
+    "label": "blueprint",
+    "detail": "AgentBox is a self-hosted CLI you run against your own local Docker or your own cloud provider credentials; it orchestrates fleet fan-out and isolation as an opinionated runtime you configure, with no AgentBox-operated managed backend.",
+    "evidence": "https://github.com/madarco/agentbox"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "github_id": "can1357/oh-my-pi",
+  "researched": "2026-07-19",
+  "tooling_sandboxing": {
+    "rating": "basic",
+    "detail": "Tools declare an approval tier (read/write/exec) checked against tools.approval.<tool> policy and an approvalMode (always-ask/write/yolo), but the default mode is yolo which auto-approves everything on the host; pi-iso's APFS/btrfs/overlayfs worktree cloning is copy-on-write workspace isolation for concurrent subagents, not a security sandbox, which is why third-party Docker wrappers (pi-docker-sandbox, pi-less-yolo) exist to add real containment.",
+    "evidence": "https://github.com/can1357/oh-my-pi/blob/main/docs/approval-mode.md"
+  },
+  "context_memory": {
+    "rating": "strong",
+    "detail": "The Hindsight subsystem lets the agent write durable facts mid-run (retain), search them (recall), and synthesize over them (reflect) against a local or cloud memory bank, and compresses each session into a project-scoped 'mental model' that auto-loads on the first turn of the next session.",
+    "evidence": "https://hindsight.vectorize.io/blog/2026/06/08/oh-my-pi-hindsight-memory"
+  },
+  "lifecycle_hooks": {
+    "rating": "full",
+    "detail": "The tool_call hook event fires pre-execution and any handler returning { block: true, reason } stops the call before it runs (a thrown error also fails closed and blocks), alongside session_before_compact, turn_start/end, and tool_result post-execution hooks.",
+    "evidence": "https://github.com/can1357/oh-my-pi/blob/main/docs/hooks.md"
+  },
+  "prompt_optimization": {
+    "rating": "configurable",
+    "detail": "System prompts are assembled at session start from Handlebars templates plus discovered project context files (AGENTS.md, SYSTEM.md, and third-party formats like Cursor MDC or Cline .clinerules); composition is config/template-driven with no automatic tuning loop.",
+    "evidence": "https://github.com/can1357/oh-my-pi/blob/main/AGENTS.md"
+  },
+  "build_vs_buy": {
+    "tier": 2,
+    "label": "blueprint",
+    "detail": "omp is a self-hosted terminal binary (macOS/Linux/Windows) you configure with extensions, hooks, and approval policy; the optional Hindsight memory backend can point at a hosted Cloud endpoint or a self-hosted Docker server, but the core agent runs locally with no required managed control plane.",
+    "evidence": "https://github.com/can1357/oh-my-pi/blob/main/README.md"
+  }
+}

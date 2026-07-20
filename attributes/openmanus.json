@@ -1,0 +1,9 @@
+{
+  "github_id": "FoundationAgents/OpenManus",
+  "researched": "2026-07-19",
+  "tooling_sandboxing": {"rating": "basic", "detail": "Ships its own Docker-based [sandbox] execution mode (image, memory/cpu limits, network settings in config.toml) but it is opt-in and disabled by default (`#use_sandbox = false`, commented out), so tool execution runs on the host by default; a separate open issue proposes extending sandboxing to cover all tool operations by default.", "evidence": "https://raw.githubusercontent.com/FoundationAgents/OpenManus/main/config/config.example.toml"},
+  "context_memory": {"rating": "basic", "detail": "Agents add results to an in-process memory/context object during a single interactive task loop; no database or file-based persistence across separate sessions is documented.", "evidence": "https://llmmultiagents.com/en/blogs/OpenManus_Technical_Analysis"},
+  "lifecycle_hooks": {"rating": "unknown", "detail": "Looked for a before/after tool-call callback or middleware system beyond the BaseAgent/ReActAgent/ToolCallAgent class hierarchy; found no documented interception API for blocking or tracing individual tool calls.", "evidence": ""},
+  "prompt_optimization": {"rating": "configurable", "detail": "Agent system_prompt/next_step_prompt were moved out of code and into config.toml so users can adjust agent behavior (e.g. Manus/PlanningAgent prompts) without code changes.", "evidence": "https://raw.githubusercontent.com/FoundationAgents/OpenManus/main/README.md"},
+  "build_vs_buy": {"tier": 2, "label": "blueprint", "detail": "Self-hosted, MIT-licensed, config.toml-driven agent framework (conda/uv local install) positioned as an open alternative to invite-only Manus; only a HuggingFace Spaces demo exists, no managed hosted offering.", "evidence": "https://raw.githubusercontent.com/FoundationAgents/OpenManus/main/README.md"}
+}

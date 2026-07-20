@@ -1,0 +1,30 @@
+{
+  "github_id": "charmbracelet/crush",
+  "researched": "2026-07-19",
+  "tooling_sandboxing": {
+    "rating": "basic",
+    "detail": "Tool calls run on the host and require an interactive permission prompt by default, with a per-tool allowlist config or a blanket --yolo flag to skip prompts; there is no container/VM/enforced-filesystem isolation.",
+    "evidence": "https://github.com/charmbracelet/crush/blob/main/README.md"
+  },
+  "context_memory": {
+    "rating": "strong",
+    "detail": "Sessions and messages persist to a local SQLite database (internal/db) so conversations resume across restarts, and Crush auto-summarizes into an IsSummaryMessage checkpoint (session.SummaryMessageID) once a conversation nears the model's context limit.",
+    "evidence": "https://deepwiki.com/charmbracelet/crush/4.4-message-history-and-summarization"
+  },
+  "lifecycle_hooks": {
+    "rating": "full",
+    "detail": "The PreToolUse hook event runs user-defined shell commands before a tool executes and can deny the call (exit code 2, blocking it before it runs), rewrite its input via updated_input, or auto-allow it, bypassing the permission prompt.",
+    "evidence": "https://github.com/charmbracelet/crush/blob/main/docs/hooks/README.md"
+  },
+  "prompt_optimization": {
+    "rating": "configurable",
+    "detail": "Crush layers project instructions from AGENTS.md, CRUSH.md, CLAUDE.md, GEMINI.md (and .local variants) in the working directory into Go-template system prompts (internal/agent/templates/*.md.tpl); there is no automatic prompt-tuning loop.",
+    "evidence": "https://github.com/charmbracelet/crush/blob/main/AGENTS.md"
+  },
+  "build_vs_buy": {
+    "tier": 2,
+    "label": "blueprint",
+    "detail": "Crush installs as a self-hosted terminal CLI you run and configure yourself (providers, permissions, hooks, context files); Charm's Hyper is an optional hosted model-provider subscription, not a required execution backend.",
+    "evidence": "https://github.com/charmbracelet/crush/blob/main/README.md"
+  }
+}

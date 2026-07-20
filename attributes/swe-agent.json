@@ -1,0 +1,30 @@
+{
+  "github_id": "SWE-agent/SWE-agent",
+  "researched": "2026-07-19",
+  "tooling_sandboxing": {
+    "rating": "strong",
+    "detail": "Docker is the default execution backend for the agent's shell/edit commands, containerizing the issue-fixing environment out of the box.",
+    "evidence": "https://swe-agent.com/latest/installation/source/"
+  },
+  "context_memory": {
+    "rating": "basic",
+    "detail": "History processors trim/manage the live run's (thought, action, observation) history and trajectories are logged to a .traj file, but nothing persists or resumes across separate runs.",
+    "evidence": "https://swe-agent.com/latest/usage/trajectories/"
+  },
+  "lifecycle_hooks": {
+    "rating": "none",
+    "detail": "Tool behavior is controlled only through static YAML config (command blocklists, timeouts) with no documented callback/hook system that can intercept or veto an action before it runs.",
+    "evidence": "https://swe-agent.com/latest/reference/tools_config/"
+  },
+  "prompt_optimization": {
+    "rating": "configurable",
+    "detail": "Prompts are Jinja-style templates (next_step_template, format_error_template, etc.) set per-agent in a single YAML config file, with no automatic tuning loop.",
+    "evidence": "https://swe-agent.com/latest/config/templates/"
+  },
+  "build_vs_buy": {
+    "tier": 1,
+    "label": "build",
+    "detail": "SWE-agent installs as a pip/source Python CLI and library governed by a single YAML config that you run yourself (optionally against Docker); no vendor-hosted platform is required for core use.",
+    "evidence": "https://raw.githubusercontent.com/SWE-agent/SWE-agent/main/README.md"
+  }
+}

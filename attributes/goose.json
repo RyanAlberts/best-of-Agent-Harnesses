@@ -1,0 +1,9 @@
+{
+  "github_id": "aaif-goose/goose",
+  "researched": "2026-07-19",
+  "tooling_sandboxing": {"rating": "basic", "detail": "Tool execution is gated by a three-tier permission.yaml policy (Always Allow / Ask Before / Never Allow) with Chat/Auto/Approve/Smart-Approval modes, but there is no container/VM isolation shipped (an open \"Sandbox Support?\" feature request confirms it runs with host permissions today).", "evidence": "https://goose-docs.ai/docs/guides/managing-tools/tool-permissions/"},
+  "context_memory": {"rating": "strong", "detail": "Each session's Agent maintains conversation state and automatic context management compacts history when approaching token limits while preserving recent/important context.", "evidence": "https://block-goose.mintlify.app/concepts/agents"},
+  "lifecycle_hooks": {"rating": "partial", "detail": "The Never Allow/Ask Before permission levels can pre-emptively block a tool call, but this is a fixed built-in policy config (not user-definable hook code) with no documented after-the-fact tracing/audit log, short of a full hooks/middleware system.", "evidence": "https://goose-docs.ai/docs/guides/managing-tools/tool-permissions/"},
+  "prompt_optimization": {"rating": "configurable", "detail": ".goosehints/AGENTS.md files are scanned from the working directory and injected into the system prompt at session start, and Recipe YAML files carry their own instructions field plus session-level system_prompt overrides.", "evidence": "https://block-goose.mintlify.app/concepts/agents"},
+  "build_vs_buy": {"tier": 2, "label": "blueprint", "detail": "Ships as a self-hosted Rust desktop app/CLI/API configured via extensions, permission.yaml, and recipe YAML files that you run yourself, not a managed hosted platform.", "evidence": "https://raw.githubusercontent.com/aaif-goose/goose/HEAD/README.md"}
+}

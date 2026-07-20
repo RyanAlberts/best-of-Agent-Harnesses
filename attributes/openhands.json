@@ -1,0 +1,30 @@
+{
+  "github_id": "OpenHands/OpenHands",
+  "researched": "2026-07-19",
+  "tooling_sandboxing": {
+    "rating": "strong",
+    "detail": "RUNTIME=docker is the default sandbox provider, running the agent server in an isolated Docker container described as providing 'complete isolation from the host system'; a Process (no-container) mode exists but is opt-in and documented as unsafe.",
+    "evidence": "https://docs.openhands.dev/openhands/usage/sandboxes/overview.md"
+  },
+  "context_memory": {
+    "rating": "strong",
+    "detail": "A Condenser auto-compresses event history past a configurable threshold (default 120 events) via keep-first-N/last-M plus LLM summarization, and full conversation state (event log, working directory, tool results) is persisted to disk and restorable across sessions or after a crash.",
+    "evidence": "https://docs.openhands.dev/sdk/guides/convo-persistence.md"
+  },
+  "lifecycle_hooks": {
+    "rating": "full",
+    "detail": "PreToolUse, UserPromptSubmit, and Stop hooks run before the corresponding action and can block it by exiting with code 2 (e.g. blocking a dangerous rm -rf command), alongside non-blocking PostToolUse/SessionStart/SessionEnd hooks.",
+    "evidence": "https://docs.openhands.dev/sdk/guides/hooks.md"
+  },
+  "prompt_optimization": {
+    "rating": "configurable",
+    "detail": "A repo-level AGENTS.md plus on-demand 'skills' (markdown files under .agents/skills/, triggered by keyword or by agent decision) statically inject instructions into the system prompt; no automatic prompt-tuning mechanism is documented.",
+    "evidence": "https://docs.openhands.dev/overview/skills.md"
+  },
+  "build_vs_buy": {
+    "tier": 2,
+    "label": "blueprint",
+    "detail": "Primary artifact is the MIT-licensed, self-hosted Agent Server/SDK you run locally, in Docker, or in your own Kubernetes/VPC deployment; OpenHands Cloud is a separate vendor-managed offering for teams that don't want to self-host.",
+    "evidence": "https://docs.openhands.dev/overview/introduction"
+  }
+}

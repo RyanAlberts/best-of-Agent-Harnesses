@@ -1,0 +1,9 @@
+{
+  "github_id": "SciPhi-AI/R2R",
+  "researched": "2026-07-19",
+  "tooling_sandboxing": {"rating": "unknown", "detail": "The research agent ships a python_executor tool (alongside rag/reasoning/critique) per r2r.toml, but no source file or doc describing its isolation mechanism (container/subprocess/none) could be located; the r2r-docs.sciphi.ai docs site returns 404 site-wide.", "evidence": ""},
+  "context_memory": {"rating": "strong", "detail": "Core function is persistent vector/knowledge-graph retrieval over ingested documents (search_file_knowledge tool) plus a Conversations API that threads and retrieves multi-turn chat by conversation_id, backed by the Postgres service in its Docker compose stack.", "evidence": "https://github.com/SciPhi-AI/R2R/blob/main/py/r2r/r2r.toml"},
+  "lifecycle_hooks": {"rating": "unknown", "detail": "Looked for pre-ingestion/pre-request middleware or before/after tool-call hooks; found none in the r2r.toml config, README, or search results, and the docs site (r2r-docs.sciphi.ai) is entirely down (404 on every page including root).", "evidence": ""},
+  "prompt_optimization": {"rating": "configurable", "detail": "r2r.toml exposes named, swappable system-prompt templates per agent (rag_agent_static_prompt/rag_agent_dynamic_prompt) with no automatic tuning loop found.", "evidence": "https://github.com/SciPhi-AI/R2R/blob/main/py/r2r/r2r.toml"},
+  "build_vs_buy": {"tier": 2, "label": "blueprint", "detail": "Primary published artifact is the self-hosted, Docker/pip-installed RAG framework configured via r2r.toml rather than a hand-rolled loop; SciPhi Cloud exists as a separate managed serverless deployment of the same system with a free tier and enterprise plans.", "evidence": "https://raw.githubusercontent.com/SciPhi-AI/R2R/main/py/README.md"}
+}

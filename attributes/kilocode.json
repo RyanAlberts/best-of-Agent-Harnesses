@@ -1,0 +1,30 @@
+{
+  "github_id": "Kilo-Org/kilocode",
+  "researched": "2026-07-19",
+  "tooling_sandboxing": {
+    "rating": "basic",
+    "detail": "The extension/CLI runs tool calls with the full privileges of the host process and relies on an allow/ask/deny permission-prompt system for confirmation, not isolation; per a third-party security analysis, \"the extension runs with the full privileges of the VS Code extension host process\" with no built-in sandboxing.",
+    "evidence": "https://agent-safehouse.dev/docs/agent-investigations/kilo-code"
+  },
+  "context_memory": {
+    "rating": "strong",
+    "detail": "Auto-compaction triggers on configured token-usage or safety-buffer thresholds, condenses older history into a running summary while keeping the most recent turns verbatim within a configurable token budget, and separately prunes stale tool outputs beyond a 40,000-token window between turns.",
+    "evidence": "https://kilo.ai/docs/customize/context/context-condensing"
+  },
+  "lifecycle_hooks": {
+    "rating": "full",
+    "detail": "The plugin API's tool.execute.before hook fires before a tool runs and can block it by throwing an error (e.g. the documented example denies reads of .env files), applying to both the CLI and VS Code extension.",
+    "evidence": "https://kilo.ai/docs/automate/extending/plugins"
+  },
+  "prompt_optimization": {
+    "rating": "configurable",
+    "detail": "Custom modes/agents are authored as Markdown files with YAML frontmatter (or kilo.jsonc entries) whose body becomes the system prompt verbatim, plus AGENTS.md project instructions; there is no automatic tuning or optimization of the written prompt text.",
+    "evidence": "https://kilo.ai/docs/customize/custom-modes"
+  },
+  "build_vs_buy": {
+    "tier": 2,
+    "label": "blueprint",
+    "detail": "The primary published artifact is a self-hosted VS Code/JetBrains extension and CLI you configure with modes, rules, and permissions; Kilo Cloud Agents (isolated per-user Linux containers, remote execution) are an optional hosted tier layered on top, not required for the core loop.",
+    "evidence": "https://kilo.ai/docs/code-with-ai/platforms/cloud-agent"
+  }
+}

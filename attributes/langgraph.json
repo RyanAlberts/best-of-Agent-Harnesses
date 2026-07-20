@@ -1,0 +1,30 @@
+{
+  "github_id": "langchain-ai/langgraph",
+  "researched": "2026-07-19",
+  "tooling_sandboxing": {
+    "rating": "basic",
+    "detail": "Core langgraph's ToolNode executes tool calls directly in the host process with no built-in isolation; sandboxed code execution is delegated to the separate (now-archived) langchain-sandbox package or third-party platforms like Modal/E2B.",
+    "evidence": "https://github.com/langchain-ai/langchain-sandbox"
+  },
+  "context_memory": {
+    "rating": "strong",
+    "detail": "A checkpointer (PostgresSaver/SqliteSaver) persists full graph-state snapshots per thread_id across process restarts and enables resume-from-checkpoint, plus a separate long-term cross-thread store distinct from thread-scoped checkpoints.",
+    "evidence": "https://docs.langchain.com/oss/python/langgraph/persistence"
+  },
+  "lifecycle_hooks": {
+    "rating": "full",
+    "detail": "The interrupt() function can be called inside any node or tool to pause execution before it completes, letting a human approve, edit (override the input via Command(resume=...)), or cancel the pending action.",
+    "evidence": "https://docs.langchain.com/oss/python/langgraph/interrupts"
+  },
+  "prompt_optimization": {
+    "rating": "configurable",
+    "detail": "System prompts are assembled per-run through a @dynamic_prompt decorator that reads typed Runtime context (e.g. user_id) — entirely developer-written logic — with no automatic prompt tuning/optimization loop shipped in core langgraph.",
+    "evidence": "https://docs.langchain.com/oss/python/langchain/runtime"
+  },
+  "build_vs_buy": {
+    "tier": 1,
+    "label": "build",
+    "detail": "langgraph is a pip/npm-installed low-level graph-orchestration library (StateGraph/Pregel API) you import and run in your own process with no required runtime; LangGraph Platform is the paid managed/self-hosted deployment tier for the same graphs.",
+    "evidence": "https://raw.githubusercontent.com/langchain-ai/langgraph/main/README.md"
+  }
+}

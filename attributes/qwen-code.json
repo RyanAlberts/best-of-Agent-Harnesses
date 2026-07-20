@@ -1,0 +1,30 @@
+{
+  "github_id": "QwenLM/qwen-code",
+  "researched": "2026-07-19",
+  "tooling_sandboxing": {
+    "rating": "basic",
+    "detail": "A native sandbox mode (QWEN_SANDBOX=true|docker|podman|sandbox-exec, or -s) runs tool execution inside macOS Seatbelt or a Docker/Podman container, but it is opt-in - default execution is on the host.",
+    "evidence": "https://qwenlm.github.io/qwen-code-docs/en/users/features/sandbox/"
+  },
+  "context_memory": {
+    "rating": "strong",
+    "detail": "Auto-memory automatically writes learned preferences, corrections, and project context to ~/.qwen/projects/<project>/memory/ after each session, with a daily background 'dream' pass that deduplicates and cleans stale entries, plus dedicated PreCompact/PostCompact hooks around conversation compaction.",
+    "evidence": "https://qwenlm.github.io/qwen-code-docs/en/users/features/memory/"
+  },
+  "lifecycle_hooks": {
+    "rating": "full",
+    "detail": "The PreToolUse hook returns a permissionDecision of allow/deny/ask (or exit code 2) to block a tool call before it executes, alongside PostToolUse, SessionStart/End, PreCompact/PostCompact, and other lifecycle events.",
+    "evidence": "https://qwenlm.github.io/qwen-code-docs/en/users/features/hooks/"
+  },
+  "prompt_optimization": {
+    "rating": "configurable",
+    "detail": "QWEN.md/GEMINI.md context files are discovered hierarchically (global, project root, nested directories) and concatenated verbatim into the system prompt; there is no automatic tuning of the written instructions themselves.",
+    "evidence": "https://qwenlm.github.io/qwen-code-docs/en/users/features/memory/"
+  },
+  "build_vs_buy": {
+    "tier": 2,
+    "label": "blueprint",
+    "detail": "Qwen Code installs as a self-hosted terminal CLI (with an optional qwen serve daemon mode for shared HTTP+SSE sessions) that you configure and run yourself against any Qwen-compatible model endpoint; there is no required hosted execution backend.",
+    "evidence": "https://raw.githubusercontent.com/QwenLM/qwen-code/main/README.md"
+  }
+}

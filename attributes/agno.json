@@ -1,0 +1,30 @@
+{
+  "github_id": "agno-agi/agno",
+  "researched": "2026-07-19",
+  "tooling_sandboxing": {
+    "rating": "basic",
+    "detail": "PythonTools can run/save-and-run Python and pip-install packages; the only restriction mechanism is a configurable include_tools/exclude_tools allowlist for \"safe mode\" (all functions available unrestricted by default), with no container/VM isolation documented for the built-in tool.",
+    "evidence": "https://docs.agno.com/examples/tools/python-tools"
+  },
+  "context_memory": {
+    "rating": "strong",
+    "detail": "Adding a storage driver (Sqlite/Postgres/Mongo/etc.) persists agent sessions and user memories to a database keyed by session ID so state survives past the current execution cycle, on top of separate session-scoped chat history.",
+    "evidence": "https://docs-v1.agno.com/agents/memory"
+  },
+  "lifecycle_hooks": {
+    "rating": "full",
+    "detail": "tool_hooks receive the wrapped function call pre-execution and can raise or return a substitute result to block/replace it (pre_hook/post_hook on @tool), in addition to requires_confirmation human-in-the-loop gates.",
+    "evidence": "https://docs.agno.com/tools/hooks"
+  },
+  "prompt_optimization": {
+    "rating": "configurable",
+    "detail": "Agents take an instructions list plus description/additional_context/expected_output parameters that assemble the system message, and instructions can be updated dynamically at runtime; no automatic prompt-tuning loop is documented.",
+    "evidence": "https://docs.agno.com/context/agent/overview"
+  },
+  "build_vs_buy": {
+    "tier": 2,
+    "label": "blueprint",
+    "detail": "The repo installs AgentOS, a self-hosted FastAPI runtime you deploy in your own cloud/data center with your own database; the os.agno.com Control Plane is only a browser client against your own instance, not a hosted execution backend.",
+    "evidence": "https://www.agno.com/agentos"
+  }
+}

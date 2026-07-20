@@ -1,0 +1,30 @@
+{
+  "github_id": "RasaHQ/rasa",
+  "researched": "2026-07-19",
+  "tooling_sandboxing": {
+    "rating": "basic",
+    "detail": "Custom actions execute on a separate action server over an HTTP /webhook contract - architectural process separation (often deployed as its own container) rather than enforced isolation of what the action code can do.",
+    "evidence": "https://rasa.com/docs/action-server/"
+  },
+  "context_memory": {
+    "rating": "strong",
+    "detail": "Tracker stores persist each conversation's full event/slot history outside the process via SQLTrackerStore, RedisTrackerStore, MongoTrackerStore, or DynamoTrackerStore, maintaining context across sessions rather than defaulting to in-memory-only state.",
+    "evidence": "https://rasa.com/docs/reference/integrations/tracker-stores/"
+  },
+  "lifecycle_hooks": {
+    "rating": "partial",
+    "detail": "CALM validates LLM-generated commands against allowed flows before execution via the deterministic Flow Policy state machine, blocking unauthorized actions - structural policy enforcement, not a registerable pre/post hook interface.",
+    "evidence": "https://rasa.com/docs/learn/concepts/calm/"
+  },
+  "prompt_optimization": {
+    "rating": "configurable",
+    "detail": "Business logic and conversational structure are authored as user-defined Flows (with built-in reusable \"patterns\" for common repair situations); this is rules/flow-file configuration rather than an automatic prompt-tuning loop.",
+    "evidence": "https://rasa.com/docs/reference/primitives/flows/"
+  },
+  "build_vs_buy": {
+    "tier": 2,
+    "label": "blueprint",
+    "detail": "The OSS repo (now in maintenance mode) installs a self-hosted dialogue-management framework; forward-looking CALM development lives in Rasa Pro, a separate license tier, with the Rasa Platform as a named hosted/managed option for scaling.",
+    "evidence": "https://raw.githubusercontent.com/RasaHQ/rasa/HEAD/README.md"
+  }
+}

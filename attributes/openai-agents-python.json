@@ -1,0 +1,9 @@
+{
+  "github_id": "openai/openai-agents-python",
+  "researched": "2026-07-19",
+  "tooling_sandboxing": {"rating": "strong", "detail": "Ships a Sandbox Agents execution harness with built-in UnixLocalSandboxClient and DockerSandboxClient backends that handle file staging, filesystem tools, shell access, and sandbox lifecycle for the agent.", "evidence": "https://openai.github.io/openai-agents-python/sandbox_agents/"},
+  "context_memory": {"rating": "strong", "detail": "Sessions persist conversation history to SQLite/SQLAlchemy/Redis/MongoDB/Dapr backends across process restarts, and OpenAIResponsesCompactionSession auto-compacts long histories via the Responses API.", "evidence": "https://openai.github.io/openai-agents-python/sessions/"},
+  "lifecycle_hooks": {"rating": "full", "detail": "Tool guardrails run before a function tool executes and can skip the call, replace its output, or raise a tripwire, and blocking-mode input guardrails prevent the agent from starting at all.", "evidence": "https://openai.github.io/openai-agents-python/guardrails/"},
+  "prompt_optimization": {"rating": "configurable", "detail": "Agents are configured with a free-text instructions field per agent/handoff, but no automatic prompt-tuning or eval-driven prompt search is documented.", "evidence": "https://raw.githubusercontent.com/openai/openai-agents-python/main/README.md"},
+  "build_vs_buy": {"tier": 1, "label": "build", "detail": "Installed via pip as an SDK where you write and own the Runner loop, agents, and tool wiring; OpenAIConversationsSession and hosted sandbox providers exist as optional managed backends but aren't required to run it.", "evidence": "https://raw.githubusercontent.com/openai/openai-agents-python/main/README.md"}
+}

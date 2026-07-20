@@ -1,0 +1,9 @@
+{
+  "github_id": "TencentCloudADP/youtu-agent",
+  "researched": "2026-07-19",
+  "tooling_sandboxing": {"rating": "strong", "detail": "Ships BrowserE2BEnv/E2BEnv (cloud sandboxed execution) and a Docker-isolated BrowserEnv as first-class Environment options for production, distinct from the host-executing ShellLocalEnv which the docs explicitly flag as 'local development only.'", "evidence": "https://tencentcloudadp.github.io/youtu-agent/env/"},
+  "context_memory": {"rating": "basic", "detail": "ContextManager is described as a configurable module for managing the agent's context window (token budgeting within a run); no documentation found of persistence across separate sessions.", "evidence": "https://raw.githubusercontent.com/TencentCloudADP/youtu-agent/main/README.md"},
+  "lifecycle_hooks": {"rating": "unknown", "detail": "Looked for before/after tool-call hooks beyond the mentioned (future-release) DBTracingProcessor for trajectory analysis; no evidence of a blocking pre-execution hook surface was found in the README or reachable docs pages.", "evidence": ""},
+  "prompt_optimization": {"rating": "configurable", "detail": "Agent instructions/system prompts are set via YAML config (agent.instructions) or overridden directly in the SimpleAgent constructor; no automatic prompt-tuning loop is documented.", "evidence": "https://tencentcloudadp.github.io/youtu-agent/agents/"},
+  "build_vs_buy": {"tier": 2, "label": "blueprint", "detail": "Self-hosted, YAML-config-driven agent framework (Environment/ContextManager/Benchmark components) deployable from source or Docker; Tencent Cloud's Agent Development Platform (ADP) is a separate enterprise offering named alongside it.", "evidence": "https://raw.githubusercontent.com/TencentCloudADP/youtu-agent/main/README.md"}
+}

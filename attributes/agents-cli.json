@@ -1,0 +1,9 @@
+{
+  "github_id": "google/agents-cli",
+  "researched": "2026-07-19",
+  "tooling_sandboxing": {"rating": "unknown", "detail": "Looked for Docker/container/subprocess isolation detail in the README; docs cover the dev/eval/deploy workflow and Google Cloud deployment targets (Agent Runtime, Cloud Run, GKE) without describing how code execution is isolated.", "evidence": ""},
+  "context_memory": {"rating": "unknown", "detail": "Looked for session/conversation persistence or retrieval mechanisms; the README documents CLI commands for building, evaluating, and deploying ADK agents but says nothing about memory management.", "evidence": ""},
+  "lifecycle_hooks": {"rating": "unknown", "detail": "Looked for pre/post tool-call interception; none documented — the tool's surface is eval/trace/deploy commands, not a runtime loop with hook points.", "evidence": ""},
+  "prompt_optimization": {"rating": "native", "detail": "Ships `agents-cli eval optimize`, described as auto-tuning agent prompts using eval data — an automatic, eval-driven refinement loop rather than manual editing.", "evidence": "https://github.com/google/agents-cli#readme"},
+  "build_vs_buy": {"tier": 1, "label": "build", "detail": "Explicitly \"a tool for coding agents, not a coding agent itself\" — a CLI/skill pack layered on whatever coding assistant you already run, built on the ADK framework; it works from a local API key with no opinionated runtime of its own (Google Cloud Agent Runtime is an optional deployment target, not a requirement).", "evidence": "https://github.com/google/agents-cli#readme"}
+}

@@ -1,0 +1,9 @@
+{
+  "github_id": "google/adk-python",
+  "researched": "2026-07-19",
+  "tooling_sandboxing": {"rating": "strong", "detail": "Ships a GkeCodeExecutor that runs LLM-generated code in gVisor-sandboxed, non-root, read-only ephemeral pods (or Agent Sandbox instances) on GKE, plus a BuiltInCodeExecutor sandbox with no package installs and no network access.", "evidence": "https://raw.githubusercontent.com/google/adk-docs/main/docs/integrations/gke-code-executor.md"},
+  "context_memory": {"rating": "strong", "detail": "VertexAiMemoryBankService provides persistent, semantically-searchable memory across sessions distinct from short-term session state, retrieved on demand via load_memory/preload_memory/search_memory.", "evidence": "https://adk.dev/sessions/memory/"},
+  "lifecycle_hooks": {"rating": "full", "detail": "before_tool_callback (and before_agent_callback/before_model_callback) can return a replacement value that skips the actual tool/model call entirely, with matching after_* callbacks for post-execution handling.", "evidence": "https://adk.dev/callbacks/"},
+  "prompt_optimization": {"rating": "configurable", "detail": "Agents take a first-class `instruction` (plus global_instruction) parameter for per-agent system prompt customization; no automatic prompt-tuning loop is documented.", "evidence": "https://raw.githubusercontent.com/google/adk-python/main/README.md"},
+  "build_vs_buy": {"tier": 2, "label": "blueprint", "detail": "Primary artifact is the open-source, code-first Python/multi-language agent framework (Agent/Runner/workflow-agent classes) you self-host via `adk run`/`adk web`; Vertex AI Agent Engine exists as a separate fully-managed deployment target for the same agents.", "evidence": "https://raw.githubusercontent.com/google/adk-python/main/README.md"}
+}

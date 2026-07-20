@@ -1,0 +1,30 @@
+{
+  "github_id": "anthropics/skills",
+  "researched": "2026-07-19",
+  "tooling_sandboxing": {
+    "rating": "none",
+    "detail": "This is a pure content repository of SKILL.md folders with no runtime code; execution isolation, if any, happens entirely at whichever platform loads the skill (Claude Code, Claude.ai, the API), not within this repo.",
+    "evidence": "https://raw.githubusercontent.com/anthropics/skills/main/README.md"
+  },
+  "context_memory": {
+    "rating": "none",
+    "detail": "No context or memory management mechanism is defined in the repository; skills are loaded on demand into whatever conversation context the host platform already manages.",
+    "evidence": "https://raw.githubusercontent.com/anthropics/skills/main/README.md"
+  },
+  "lifecycle_hooks": {
+    "rating": "none",
+    "detail": "No hooks, callbacks, or interception points are defined; skill content only shapes behavior by being present in context when Claude decides a skill applies, with no programmatic before/after execution surface.",
+    "evidence": "https://raw.githubusercontent.com/anthropics/skills/main/README.md"
+  },
+  "prompt_optimization": {
+    "rating": "configurable",
+    "detail": "Skills are SKILL.md files (YAML frontmatter name/description plus markdown instructions, scripts, and resources) that Claude discovers and loads dynamically into its prompt/context on a progressive-disclosure basis; authoring is manual and there is no automatic tuning of skill text.",
+    "evidence": "https://raw.githubusercontent.com/anthropics/skills/main/README.md"
+  },
+  "build_vs_buy": {
+    "tier": 2,
+    "label": "blueprint",
+    "detail": "The repo is the reference format for a config-driven skill/plugin system (folders of instructions/scripts/resources you register with a harness) rather than an SDK you import to write your own loop or a hosted service; it has no runtime or managed backend of its own and is consumed by Claude Code, Claude.ai, or the API.",
+    "evidence": "https://raw.githubusercontent.com/anthropics/skills/main/README.md"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "github_id": "mksglu/context-mode",
+  "researched": "2026-07-19",
+  "tooling_sandboxing": {"rating": "strong", "detail": "ctx_execute runs tools at the subprocess level so raw output never enters context, and a PreToolUse hook enforces sandbox routing that blocks dangerous commands (e.g. sudo, rm -rf) before execution.", "evidence": "https://raw.githubusercontent.com/mksglu/context-mode/HEAD/README.md"},
+  "context_memory": {"rating": "strong", "detail": "A per-project SQLite database logs every file edit, git operation, task, error, and decision, with PreCompact/SessionStart hooks building an XML snapshot that restores full working state after context compaction on supported platforms.", "evidence": "https://raw.githubusercontent.com/mksglu/context-mode/HEAD/README.md"},
+  "lifecycle_hooks": {"rating": "full", "detail": "Registers PreToolUse (blocking, can deny execution), PostToolUse, UserPromptSubmit, PreCompact, and SessionStart hooks across supported platforms (Claude Code, Gemini CLI, VS Code Copilot).", "evidence": "https://raw.githubusercontent.com/mksglu/context-mode/HEAD/README.md"},
+  "prompt_optimization": {"rating": "none", "detail": "The project explicitly states it enforces no prose style and never dictates how the model writes its answer, only filtering tool output, not tuning prompts.", "evidence": "https://raw.githubusercontent.com/mksglu/context-mode/HEAD/README.md"},
+  "build_vs_buy": {"tier": 2, "label": "blueprint", "detail": "Ships as a self-hosted, config/hook-driven layer installed into existing agent platforms (nothing leaves the machine); an optional hosted Insight dashboard at context-mode.com/insight is a secondary add-on.", "evidence": "https://raw.githubusercontent.com/mksglu/context-mode/HEAD/README.md"}
+}

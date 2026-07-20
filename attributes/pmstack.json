@@ -1,0 +1,9 @@
+{
+  "github_id": "RyanAlberts/pmstack",
+  "researched": "2026-07-19",
+  "tooling_sandboxing": {"rating": "none", "detail": "A skills package that runs inside Claude Code/Claude.ai — stateless command dispatch where \"the skill is just markdown — Claude reads it as instructions\" — with no execution isolation layer of its own.", "evidence": "https://github.com/RyanAlberts/pmstack#readme"},
+  "context_memory": {"rating": "strong", "detail": "Eval runs persist to disk across sessions for drift comparison — e.g. `eval-runs/code-review-eval-2026-05-06/summary.md` — and `/eval-drift` explicitly \"re-runs the suite weekly, diffs against last week, flags any regression\" using that file-based history.", "evidence": "https://github.com/RyanAlberts/pmstack#readme"},
+  "lifecycle_hooks": {"rating": "partial", "detail": "The only gating mechanism is `/launch-readiness`, which aggregates evidence into a GO/NO-GO/CONDITIONAL verdict after work is produced — an output guardrail/validator, not a pre-execution blocking hook on individual tool calls.", "evidence": "https://github.com/RyanAlberts/pmstack#readme"},
+  "prompt_optimization": {"rating": "configurable", "detail": "Each command is a markdown skill file containing instructions Claude reads on invocation (\"save and re-run; your changes apply immediately\") — first-class, user-editable instruction layering with no automatic tuning loop.", "evidence": "https://github.com/RyanAlberts/pmstack#readme"},
+  "build_vs_buy": {"tier": 2, "label": "blueprint", "detail": "A config-driven skills/command package layered on Claude Code or Claude.ai Projects (markdown skills + slash commands you configure), billed against an existing Claude subscription rather than a separate managed service.", "evidence": "https://github.com/RyanAlberts/pmstack#readme"}
+}
