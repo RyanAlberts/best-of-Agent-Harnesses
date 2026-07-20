@@ -80,6 +80,9 @@ projects:
   - name: context-mode
     github_id: mksglu/context-mode
     category: "progressive-disclosure"
+  - name: Headroom
+    github_id: headroomlabs-ai/headroom
+    category: "progressive-disclosure"
   # Coding agent products (IDEs, CLIs, full suites)
   - name: oh-my-pi
     github_id: can1357/oh-my-pi
@@ -195,6 +198,9 @@ projects:
     category: "coding-harness-configs"
   - name: awesome-claude-code
     github_id: hesreallyhim/awesome-claude-code
+    category: "coding-harness-configs"
+  - name: Agent Skills
+    github_id: addyosmani/agent-skills
     category: "coding-harness-configs"
   # Personal agent runtimes
   - name: Talon
