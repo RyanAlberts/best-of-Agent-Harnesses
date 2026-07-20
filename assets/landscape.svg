@@ -99,6 +99,7 @@
 <circle cx="930.7" cy="359.4" r="4.5" fill="#a16207" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Cloudflare Agents — ⭐5.3k</title></circle>
 <circle cx="882.9" cy="357.8" r="4.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>SWE-bench — ⭐5.5k</title></circle>
 <circle cx="479.2" cy="348.1" r="4.5" fill="#a16207" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>strands-agents — ⭐6.6k</title></circle>
+<circle cx="456.1" cy="346.5" r="4.5" fill="#f59e0b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>get-shit-done — ⭐6.9k</title></circle>
 <circle cx="751.3" cy="345.1" r="4.5" fill="#10b981" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>MCP Registry — ⭐7k</title></circle>
 <circle cx="1189.1" cy="341.0" r="4.5" fill="#f59e0b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Claude Agent SDK — ⭐7.7k</title></circle>
 <circle cx="823.9" cy="340.7" r="4.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>agent-squad — ⭐7.7k</title></circle>
@@ -144,7 +145,7 @@
 <circle cx="791.1" cy="270.8" r="4.5" fill="#10b981" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>github-mcp-server — ⭐31.6k</title></circle>
 <circle cx="893.9" cy="267.5" r="4.5" fill="#ec4899" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>ChatDev — ⭐33.8k</title></circle>
 <circle cx="1161.8" cy="265.7" r="4.5" fill="#10b981" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>continue — ⭐35k</title></circle>
-<circle cx="452.6" cy="265.3" r="4.5" fill="#10b981" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Playwright MCP — ⭐35.3k</title></circle>
+<circle cx="452.6" cy="265.3" r="6.5" fill="#10b981" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Playwright MCP — ⭐35.3k</title></circle>
 <circle cx="1083.8" cy="264.5" r="4.5" fill="#0ea5e9" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Khoj — ⭐35.9k</title></circle>
 <circle cx="924.7" cy="262.1" r="4.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>langgraph — ⭐37.6k</title></circle>
 <circle cx="162.5" cy="261.5" r="6.5" fill="#f59e0b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>wshobson/agents — ⭐38.1k</title></circle>
@@ -162,7 +163,6 @@
 <circle cx="216.3" cy="239.4" r="6.5" fill="#10b981" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Context7 — ⭐59.4k</title></circle>
 <circle cx="1166.2" cy="239.1" r="4.5" fill="#ec4899" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>autogen — ⭐59.8k</title></circle>
 <circle cx="874.0" cy="238.0" r="4.5" fill="#84cc16" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Mem0 — ⭐61.2k</title></circle>
-<circle cx="491.5" cy="235.2" r="6.5" fill="#f59e0b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>get-shit-done — ⭐64.8k</title></circle>
 <circle cx="788.6" cy="235.2" r="4.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Cline — ⭐64.8k</title></circle>
 <circle cx="466.0" cy="233.7" r="6.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Open Interpreter — ⭐66.8k</title></circle>
 <circle cx="1108.4" cy="231.7" r="4.5" fill="#ec4899" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>MetaGPT — ⭐69.4k</title></circle>
@@ -194,9 +194,9 @@
 <text x="508.1" y="194.0" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">Anthropic Skills</text>
 <text x="505.0" y="224.1" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">MCP Servers</text>
 <text x="476.0" y="240.1" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">Open Interpreter</text>
-<text x="501.5" y="256.1" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">get-shit-done</text>
-<text x="528.8" y="272.1" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">LiteLLM</text>
-<text x="471.5" y="288.1" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">chrome-devtools-mcp</text>
+<text x="528.8" y="256.1" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">LiteLLM</text>
+<text x="471.5" y="272.1" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">chrome-devtools-mcp</text>
+<text x="462.6" y="288.1" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">Playwright MCP</text>
 <text x="794.6" y="179.7" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">Hermes</text>
 <text x="884.8" y="195.7" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">opencode</text>
 <text x="833.7" y="211.7" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">GStack</text>

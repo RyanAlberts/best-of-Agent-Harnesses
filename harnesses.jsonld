@@ -372,18 +372,6 @@
         "position": 29,
         "item": {
           "@type": "SoftwareApplication",
-          "name": "get-shit-done",
-          "url": "https://github.com/gsd-build/get-shit-done",
-          "description": "Goal-backward planning and wave-based execution over fresh context windows; avoids context rot by design. Python/JS meta-prompting for Claude Code, OpenCode, Gemini CLI.",
-          "applicationCategory": "DeveloperApplication",
-          "keywords": "cli, python"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 30,
-        "item": {
-          "@type": "SoftwareApplication",
           "name": "awesome-claude-code",
           "url": "https://github.com/hesreallyhim/awesome-claude-code",
           "description": "Large community-curated index of Claude Code skills, slash commands, status lines, and plugins—resources for extending the harness, not a harness itself, but the most-followed catalog of the genre.",
@@ -393,7 +381,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 31,
+        "position": 30,
         "item": {
           "@type": "SoftwareApplication",
           "name": "wshobson/agents",
@@ -405,7 +393,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 32,
+        "position": 31,
         "item": {
           "@type": "SoftwareApplication",
           "name": "SWE-agent",
@@ -417,7 +405,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 33,
+        "position": 32,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Claude Agent SDK",
@@ -425,6 +413,18 @@
           "description": "Official Anthropic SDK (Python + [TypeScript](https://github.com/anthropics/claude-agent-sdk-typescript), [demos](https://github.com/anthropics/claude-agent-sdk-demos), [quickstarts](https://github.com/anthropics/claude-quickstarts)): built-in tools, MCP, long-running coding agents with session bridging.",
           "applicationCategory": "DeveloperApplication",
           "keywords": "mcp, memory, python, typescript"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 33,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "get-shit-done",
+          "url": "https://github.com/open-gsd/gsd-core",
+          "description": "Goal-backward planning and wave-based execution over fresh context windows; avoids context rot by design. Python/JS meta-prompting for Claude Code, OpenCode, Gemini CLI.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "cli, python"
         }
       },
       {

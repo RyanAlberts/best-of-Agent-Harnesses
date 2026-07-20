@@ -2155,67 +2155,6 @@
       }
     },
     {
-      "name": "get-shit-done",
-      "github_id": "gsd-build/get-shit-done",
-      "url": "https://github.com/gsd-build/get-shit-done",
-      "slug": "get-shit-done",
-      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#get-shit-done",
-      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/get-shit-done/",
-      "description": "Goal-backward planning and wave-based execution over fresh context windows; avoids context rot by design. Python/JS meta-prompting for Claude Code, OpenCode, Gemini CLI.",
-      "category": "coding-harness-configs",
-      "category_title": "Coding harness configs and SDKs",
-      "stars": 64773,
-      "tier": "mostly simple",
-      "tier_rank": 2,
-      "axis": "mostly simple (meta-prompting, you own stack)",
-      "autonomy": "bounded",
-      "autonomy_rank": 3,
-      "recovery": "resumable",
-      "recovery_rank": 3,
-      "license_signal": "open-source",
-      "tags": [
-        "cli",
-        "python"
-      ],
-      "example": {
-        "label": "gsd:ship command",
-        "url": "https://github.com/gsd-build/get-shit-done/blob/main/commands/gsd/ship.md"
-      },
-      "deep_dive": {
-        "researched": "2026-07-19",
-        "tooling_sandboxing": {
-          "rating": "basic",
-          "rank": 2,
-          "detail": "The project's own documentation states there is explicitly no sandbox for third-party capabilities; installation is instead gated by a consent record, a SHA512 integrity pin on the fetched artifact, a reversibility path (gsd capability remove), and an optional registry allowlist (strict_known_registries) — approval/allowlist gates, not execution isolation.",
-          "evidence": "https://github.com/open-gsd/gsd-core/blob/next/docs/CONFIGURATION.md"
-        },
-        "context_memory": {
-          "rating": "strong",
-          "rank": 3,
-          "detail": "Work is delegated to fresh-context subagents for research/planning/execution/verification so the orchestrator's own context stays lean, and every meaningful output is written to durable, human-readable .planning/ files (STATE.md, CONTEXT.md, RESEARCH.md, PLAN.md) that any workflow reads on start and writes back to on completion, surviving session boundaries.",
-          "evidence": "https://github.com/open-gsd/gsd-core/blob/next/docs/explanation/context-engineering.md"
-        },
-        "lifecycle_hooks": {
-          "rating": "full",
-          "rank": 3,
-          "detail": "gsd-read-guard.js is a PreToolUse hook that prevents Edit/Write on files the agent hasn't read (blocking before execution), alongside PostToolUse tracing/logging hooks (gsd-context-monitor.js injects context-budget warnings, gsd-session-state.sh and gsd-validate-commit.sh log state); a separate gsd-prompt-guard.js PreToolUse hook is advisory-only (logs, does not block).",
-          "evidence": "https://www.opengsd.net/docs/v1/architecture"
-        },
-        "prompt_optimization": {
-          "rating": "configurable",
-          "rank": 2,
-          "detail": "An agent_skills map in .planning/config.json injects project-specific SKILL.md files into individual subagent prompts (gsd-executor, gsd-planner, gsd-verifier) at spawn time, layered on top of CLAUDE.md; there is no automatic tuning of the injected instructions.",
-          "evidence": "https://github.com/open-gsd/gsd-core/blob/next/docs/CONFIGURATION.md"
-        },
-        "build_vs_buy": {
-          "tier": 2,
-          "label": "blueprint",
-          "detail": "GSD installs as a self-hosted npm script pack (slash commands, hooks, and .planning/ state files) layered onto an existing coding-agent CLI (Claude Code, Gemini CLI, OpenCode, Codex, and others) that you configure and run yourself; there is no hosted execution backend. Note: gsd-build/get-shit-done redirects upstream to the actively maintained open-gsd/gsd-core, which this research used as the current canonical source.",
-          "evidence": "https://raw.githubusercontent.com/open-gsd/gsd-core/main/README.md"
-        }
-      }
-    },
-    {
       "name": "awesome-claude-code",
       "github_id": "hesreallyhim/awesome-claude-code",
       "url": "https://github.com/hesreallyhim/awesome-claude-code",
@@ -2457,6 +2396,67 @@
           "label": "build",
           "detail": "The published artifact is the claude-agent-sdk Python/TypeScript package (query()/ClaudeSDKClient) that you import and compose into your own application/loop; Anthropic's hosted Claude Code and Managed Agents offerings are the tier-3 alternative for teams that don't want to own the runtime.",
           "evidence": "https://raw.githubusercontent.com/anthropics/claude-agent-sdk-python/main/README.md"
+        }
+      }
+    },
+    {
+      "name": "get-shit-done",
+      "github_id": "open-gsd/gsd-core",
+      "url": "https://github.com/open-gsd/gsd-core",
+      "slug": "gsd-core",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#gsd-core",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/gsd-core/",
+      "description": "Goal-backward planning and wave-based execution over fresh context windows; avoids context rot by design. Python/JS meta-prompting for Claude Code, OpenCode, Gemini CLI.",
+      "category": "coding-harness-configs",
+      "category_title": "Coding harness configs and SDKs",
+      "stars": 6854,
+      "tier": "mostly simple",
+      "tier_rank": 2,
+      "axis": "mostly simple (meta-prompting, you own stack)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "open-source",
+      "tags": [
+        "cli",
+        "python"
+      ],
+      "example": {
+        "label": "gsd:ship command",
+        "url": "https://github.com/open-gsd/gsd-core/blob/next/commands/gsd/ship.md"
+      },
+      "deep_dive": {
+        "researched": "2026-07-19",
+        "tooling_sandboxing": {
+          "rating": "basic",
+          "rank": 2,
+          "detail": "The project's own documentation states there is explicitly no sandbox for third-party capabilities; installation is instead gated by a consent record, a SHA512 integrity pin on the fetched artifact, a reversibility path (gsd capability remove), and an optional registry allowlist (strict_known_registries) — approval/allowlist gates, not execution isolation.",
+          "evidence": "https://github.com/open-gsd/gsd-core/blob/next/docs/CONFIGURATION.md"
+        },
+        "context_memory": {
+          "rating": "strong",
+          "rank": 3,
+          "detail": "Work is delegated to fresh-context subagents for research/planning/execution/verification so the orchestrator's own context stays lean, and every meaningful output is written to durable, human-readable .planning/ files (STATE.md, CONTEXT.md, RESEARCH.md, PLAN.md) that any workflow reads on start and writes back to on completion, surviving session boundaries.",
+          "evidence": "https://github.com/open-gsd/gsd-core/blob/next/docs/explanation/context-engineering.md"
+        },
+        "lifecycle_hooks": {
+          "rating": "full",
+          "rank": 3,
+          "detail": "gsd-read-guard.js is a PreToolUse hook that prevents Edit/Write on files the agent hasn't read (blocking before execution), alongside PostToolUse tracing/logging hooks (gsd-context-monitor.js injects context-budget warnings, gsd-session-state.sh and gsd-validate-commit.sh log state); a separate gsd-prompt-guard.js PreToolUse hook is advisory-only (logs, does not block).",
+          "evidence": "https://www.opengsd.net/docs/v1/architecture"
+        },
+        "prompt_optimization": {
+          "rating": "configurable",
+          "rank": 2,
+          "detail": "An agent_skills map in .planning/config.json injects project-specific SKILL.md files into individual subagent prompts (gsd-executor, gsd-planner, gsd-verifier) at spawn time, layered on top of CLAUDE.md; there is no automatic tuning of the injected instructions.",
+          "evidence": "https://github.com/open-gsd/gsd-core/blob/next/docs/CONFIGURATION.md"
+        },
+        "build_vs_buy": {
+          "tier": 2,
+          "label": "blueprint",
+          "detail": "GSD installs as a self-hosted npm script pack (slash commands, hooks, and .planning/ state files) layered onto an existing coding-agent CLI (Claude Code, Gemini CLI, OpenCode, Codex, and others) that you configure and run yourself; there is no hosted execution backend. Note: gsd-build/get-shit-done redirects upstream to the actively maintained open-gsd/gsd-core, which this research used as the current canonical source.",
+          "evidence": "https://raw.githubusercontent.com/open-gsd/gsd-core/main/README.md"
         }
       }
     },

@@ -233,7 +233,7 @@ PROJECTS: dict[str, list[Project]] = {
         Project("LoopTroop", "looptroop-ai/LoopTroop",
                 "Config layer that chains LLM councils for planning, Ralph loops for iterative refinement, and OpenCode worktrees for shipping. The **harness** contribution is the council → loop → worktree pipeline; OpenCode underneath executes.",
                 "mostly simple (config pipeline over OpenCode)", labels=["javascript"]),
-        Project("get-shit-done", "gsd-build/get-shit-done",
+        Project("get-shit-done", "open-gsd/gsd-core",
                 "Goal-backward planning and wave-based execution over fresh context windows; avoids context rot by design. Python/JS meta-prompting for Claude Code, OpenCode, Gemini CLI.",
                 "mostly simple (meta-prompting, you own stack)"),
         Project("GStack", "garrytan/gstack",
@@ -623,7 +623,7 @@ META: dict[str, tuple[int, str, str]] = {
     "BloopAI/vibe-kanban": (27443, "https://github.com/BloopAI/vibe-kanban#readme", "Project README"),
     # coding-harness-configs
     "looptroop-ai/LoopTroop": (71, "https://github.com/looptroop-ai/LoopTroop#readme", "Council → loop → worktree pipeline"),
-    "gsd-build/get-shit-done": (64773, "https://github.com/gsd-build/get-shit-done/blob/main/commands/gsd/ship.md", "gsd:ship command"),
+    "open-gsd/gsd-core": (6854, "https://github.com/open-gsd/gsd-core/blob/next/commands/gsd/ship.md", "gsd:ship command"),
     "garrytan/gstack": (122895, "https://github.com/garrytan/gstack/blob/main/ship/SKILL.md", "/ship SKILL.md"),
     "affaan-m/ECC": (231104, "https://github.com/affaan-m/ECC/blob/main/skills/autonomous-agent-harness/SKILL.md", "autonomous-agent-harness skill"),
     "obra/superpowers": (257422, "https://github.com/obra/superpowers/blob/main/skills/test-driven-development/SKILL.md", "TDD skill"),
@@ -758,7 +758,6 @@ ARCHIVED: "dict[str, str]" = {
     "spring-ai-community/spring-ai-tool-search-tool": "2026-07-03",
     "RooCodeInc/Roo-Code": "2026-07-03",
     "SeanHogg/BuilderForceAgents": "2026-07-03",
-    "gsd-build/get-shit-done": "2026-07-03",
 }
 
 # github_ids that are archived upstream (present in ARCHIVED) but should stay
@@ -769,10 +768,6 @@ KEEP_DESPITE_ARCHIVED: "set[str]" = {
     # widely referenced/forked (see Kilo Code, its direct successor, added
     # this cycle). Historically important enough to keep out of the Graveyard.
     "RooCodeInc/Roo-Code",
-    # 64k+ stars and still climbing per the weekly star-mover feed even after
-    # archival — an outsized footprint for a meta-prompting config repo.
-    # Kept visible (flagged) rather than graveyarded pending a closer look.
-    "gsd-build/get-shit-done",
 }
 
 # Repos routed to the Graveyard for a curation-integrity reason rather than
@@ -924,7 +919,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "iflytek/skillhub": ("n/a", "n/a"),
     "hesreallyhim/awesome-claude-code": ("n/a", "n/a"),
     "garrytan/gstack": ("n/a", "n/a"),
-    "gsd-build/get-shit-done": ("bounded", "resumable"),
+    "open-gsd/gsd-core": ("bounded", "resumable"),
     "SWE-agent/SWE-agent": ("headless", "resumable"),
     "HKUDS/OpenHarness": ("bounded", "resumable"),
     "anthropics/claude-agent-sdk-python": ("headless", "resumable"),

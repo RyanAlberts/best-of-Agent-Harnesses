@@ -153,7 +153,7 @@ projects:
     labels: ["javascript"]
     category: "coding-harness-configs"
   - name: get-shit-done
-    github_id: gsd-build/get-shit-done
+    github_id: open-gsd/gsd-core
     category: "coding-harness-configs"
   - name: GStack
     github_id: garrytan/gstack
