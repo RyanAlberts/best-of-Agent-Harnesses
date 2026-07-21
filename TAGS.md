@@ -1,13 +1,13 @@
 <!-- markdownlint-disable -->
 # Tags — cross-reference
 
-_Auto-generated from `scripts/generate.py`. 135 projects across 22 canonical tags. Edit projects in `generate.py` (not here) and rerun the script._
+_Auto-generated from `scripts/generate.py`. 139 projects across 22 canonical tags. Edit projects in `generate.py` (not here) and rerun the script._
 
 Tag chips appear next to each project in [README.md](README.md). This page lists every tag once with the projects that carry it, grouped by category and sorted by GitHub stars within each category.
 
 ## All tags
 
-[`mcp`](#mcp) (29) · [`memory`](#memory) (24) · [`multi-agent`](#multi-agent) (22) · [`evals`](#evals) (17) · [`voice`](#voice) (2) · [`vision`](#vision) (3) · [`browser`](#browser) (7) · [`sandbox`](#sandbox) (23) · [`low-code`](#low-code) (4) · [`rag`](#rag) (5) · [`tool-discovery`](#tool-discovery) (5) · [`training`](#training) (5) · [`workflow`](#workflow) (8) · [`typed`](#typed) (3) · [`local`](#local) (2) · [`provider-agnostic`](#provider-agnostic) (10) · [`cli`](#cli) (17) · [`ide`](#ide) (10) · [`tui`](#tui) (3) · [`rust`](#rust) (4) · [`python`](#python) (67) · [`typescript`](#typescript) (38)
+[`mcp`](#mcp) (30) · [`memory`](#memory) (25) · [`multi-agent`](#multi-agent) (23) · [`evals`](#evals) (18) · [`voice`](#voice) (2) · [`vision`](#vision) (3) · [`browser`](#browser) (7) · [`sandbox`](#sandbox) (25) · [`low-code`](#low-code) (4) · [`rag`](#rag) (5) · [`tool-discovery`](#tool-discovery) (5) · [`training`](#training) (5) · [`workflow`](#workflow) (8) · [`typed`](#typed) (3) · [`local`](#local) (2) · [`provider-agnostic`](#provider-agnostic) (10) · [`cli`](#cli) (18) · [`ide`](#ide) (10) · [`tui`](#tui) (3) · [`rust`](#rust) (4) · [`python`](#python) (69) · [`typescript`](#typescript) (38)
 
 ---
 
@@ -52,6 +52,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [MCP TypeScript SDK](https://github.com/modelcontextprotocol/typescript-sdk) — ⭐12.9k — Official MCP implementation for Node/TS; reference for the protocol.
 - [MCP Inspector](https://github.com/modelcontextprotocol/inspector) — ⭐10.4k — GUI to test and debug MCP servers; inspect tools, resources, and prompts.
 - [MCP Registry](https://github.com/modelcontextprotocol/registry) — ⭐7k — Official, community-driven registry for MCP servers—the "app store" MCP clients use to discover servers. Maintained by Anthropic + ecosystem maintainers; v0.1 API frozen, production-grade.
+- [cocoindex-code](https://github.com/cocoindex-io/cocoindex-code) — ⭐2.5k — Embedded, tree-sitter/AST-based code-search CLI and MCP server that gives coding agents fast semantic lookups over a repo instead of grepping or re-reading whole files into context.
 - [Docker MCP Gateway](https://github.com/docker/mcp-gateway) — ⭐1.5k — Docker's official MCP CLI plugin / gateway; container-aware MCP tooling from Docker (replaces deprecated `docker/mcp-servers` path).
 - [puppeteer-real-browser-mcp](https://github.com/withLinda/puppeteer-real-browser-mcp-server) — ⭐25 — Puppeteer MCP with real-browser and anti-detection; for agents that need to drive sites that block headless.
 - [Better-OpenCodeMCP](https://github.com/ajhcs/Better-OpenCodeMCP) — ⭐8 — MCP server for OpenCode/Crush: async task execution, model bridging (e.g. Claude→Gemini), process pooling.
@@ -117,6 +118,10 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [agent-qa](https://github.com/vostride/agent-qa) — ⭐160 — Self-improving QA **harness** for web and mobile apps: natural-language tests, memory-backed self-healing, dashboard/CLI, MCP and skills support, plus sandboxed hooks for production regression checks.
 - [letta-evals](https://github.com/letta-ai/letta-evals) — ⭐78 — Eval harness for stateful Letta agents; configurable suites and grading (LLM or rule-based) so you can measure what you ship.
 
+**Research and task-specific harnesses**
+
+- [DeerFlow](https://github.com/bytedance/deer-flow) — ⭐77.4k — ByteDance's long-horizon research **harness**: a LangGraph-based agent loop that researches, codes, and creates using sandboxes, memory, tools, and subagents behind a message gateway—an alternative to the reference gpt-researcher stack for multi-hour tasks.
+
 **Libraries and SDKs**
 
 - [Cloudflare Agents](https://github.com/cloudflare/agents) — ⭐5.3k — Persistent, stateful agents on Durable Objects: state, websockets, scheduling, and AI chat baked in. The serverless answer to "where does the agent live?"
@@ -159,6 +164,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 **Research and task-specific harnesses**
 
+- [DeerFlow](https://github.com/bytedance/deer-flow) — ⭐77.4k — ByteDance's long-horizon research **harness**: a LangGraph-based agent loop that researches, codes, and creates using sandboxes, memory, tools, and subagents behind a message gateway—an alternative to the reference gpt-researcher stack for multi-hour tasks.
 - [gpt-researcher](https://github.com/assafelovic/gpt-researcher) — ⭐28.4k — Autonomous deep-research agent: web + local sources, citation-grounded reports, multi-agent and deep-research modes. The reference open-source research harness.
 
 **Libraries and SDKs**
@@ -200,6 +206,10 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 - [Langfuse](https://github.com/langfuse/langfuse) — ⭐31.4k — Open-source LLM engineering platform: full-trace observability, online and offline evals, prompt management, and cost metrics for agent runs in production—the monitoring layer most harnesses lack out of the box.
 - [MLflow](https://github.com/mlflow/mlflow) — ⭐27.1k — Mature ML platform now covering GenAI: MLflow Tracing captures every agent step, tool call, and token, with built-in LLM evals and prompt versioning—observability for teams already standardized on MLflow.
+
+**Research and task-specific harnesses**
+
+- [MiroThinker](https://github.com/MiroMindAI/MiroThinker) — ⭐8.3k — Deep-research **harness** tuned for long browsing-and-reasoning chains; benchmarked on BrowseComp, GAIA, and HLE by pairing a dedicated agent loop with its own MiroThinker models rather than bolting search onto a generic chat agent.
 
 ---
 
@@ -280,6 +290,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 **Plugins, MCPs, CLI tools**
 
+- [Agent Governance Toolkit](https://github.com/microsoft/agent-governance-toolkit) — ⭐4.9k — Microsoft's policy-enforcement layer for autonomous agents: zero-trust identity, execution sandboxing, and OWASP Agentic Top-10 coverage sit in front of the agent loop as a **harness** security layer—the governance counterpart to Infisical's agent-vault.
 - [Docker MCP Gateway](https://github.com/docker/mcp-gateway) — ⭐1.5k — Docker's official MCP CLI plugin / gateway; container-aware MCP tooling from Docker (replaces deprecated `docker/mcp-servers` path).
 
 **Evaluation and benchmarking harnesses**
@@ -291,6 +302,10 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [agent-qa](https://github.com/vostride/agent-qa) — ⭐160 — Self-improving QA **harness** for web and mobile apps: natural-language tests, memory-backed self-healing, dashboard/CLI, MCP and skills support, plus sandboxed hooks for production regression checks.
 - [AgencyBench](https://github.com/GAIR-NLP/AgencyBench) — ⭐89 — Long-horizon agent benchmark: 32 scenarios, 138 tasks, ~1M tokens and ~90 tool calls; Docker sandbox and rubric-based + LLM judges.
 - [SUPER](https://github.com/allenai/super-benchmark) — ⭐53 — Agents that set up and run ML/NLP from GitHub repos; 45 expert problems, 152 masked tasks, 602 AutoGen tasks; Docker-based.
+
+**Research and task-specific harnesses**
+
+- [DeerFlow](https://github.com/bytedance/deer-flow) — ⭐77.4k — ByteDance's long-horizon research **harness**: a LangGraph-based agent loop that researches, codes, and creates using sandboxes, memory, tools, and subagents behind a message gateway—an alternative to the reference gpt-researcher stack for multi-hour tasks.
 
 **Libraries and SDKs**
 
@@ -475,6 +490,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 **Plugins, MCPs, CLI tools**
 
 - [aider](https://github.com/Aider-AI/aider) — ⭐47.5k — Git-aware CLI pair programmer; edits in-repo, supports multiple models and MCP so agents see version control and tools.
+- [cocoindex-code](https://github.com/cocoindex-io/cocoindex-code) — ⭐2.5k — Embedded, tree-sitter/AST-based code-search CLI and MCP server that gives coding agents fast semantic lookups over a repo instead of grepping or re-reading whole files into context.
 - [Docker MCP Gateway](https://github.com/docker/mcp-gateway) — ⭐1.5k — Docker's official MCP CLI plugin / gateway; container-aware MCP tooling from Docker (replaces deprecated `docker/mcp-servers` path).
 - [agentlog](https://github.com/RyanAlberts/agentlog) — ⭐1 — Persistent decision memory for any project: `remember`, `recall`, `reflect`. Single-file Python CLI that stores decisions as JSONL and uses Claude or Gemini to retrieve and synthesize patterns—Karpathy's LLM Wiki concept as a CLI.
 
@@ -597,6 +613,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 - [aider](https://github.com/Aider-AI/aider) — ⭐47.5k — Git-aware CLI pair programmer; edits in-repo, supports multiple models and MCP so agents see version control and tools.
 - [MCP Python SDK](https://github.com/modelcontextprotocol/python-sdk) — ⭐23.7k — Official SDK to build and consume MCP servers/clients in Python; stdio and SSE transports.
+- [Agent Governance Toolkit](https://github.com/microsoft/agent-governance-toolkit) — ⭐4.9k — Microsoft's policy-enforcement layer for autonomous agents: zero-trust identity, execution sandboxing, and OWASP Agentic Top-10 coverage sit in front of the agent loop as a **harness** security layer—the governance counterpart to Infisical's agent-vault.
 - [agentlog](https://github.com/RyanAlberts/agentlog) — ⭐1 — Persistent decision memory for any project: `remember`, `recall`, `reflect`. Single-file Python CLI that stores decisions as JSONL and uses Claude or Gemini to retrieve and synthesize patterns—Karpathy's LLM Wiki concept as a CLI.
 
 **Memory and state**
@@ -624,6 +641,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 **Research and task-specific harnesses**
 
+- [DeerFlow](https://github.com/bytedance/deer-flow) — ⭐77.4k — ByteDance's long-horizon research **harness**: a LangGraph-based agent loop that researches, codes, and creates using sandboxes, memory, tools, and subagents behind a message gateway—an alternative to the reference gpt-researcher stack for multi-hour tasks.
 - [gpt-researcher](https://github.com/assafelovic/gpt-researcher) — ⭐28.4k — Autonomous deep-research agent: web + local sources, citation-grounded reports, multi-agent and deep-research modes. The reference open-source research harness.
 
 **Libraries and SDKs**
@@ -773,6 +791,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 - [aider](https://github.com/Aider-AI/aider) — ⭐47.5k — Git-aware CLI pair programmer; edits in-repo, supports multiple models and MCP so agents see version control and tools.
 - [MCP Python SDK](https://github.com/modelcontextprotocol/python-sdk) — ⭐23.7k — Official SDK to build and consume MCP servers/clients in Python; stdio and SSE transports.
+- [Agent Governance Toolkit](https://github.com/microsoft/agent-governance-toolkit) — ⭐4.9k — Microsoft's policy-enforcement layer for autonomous agents: zero-trust identity, execution sandboxing, and OWASP Agentic Top-10 coverage sit in front of the agent loop as a **harness** security layer—the governance counterpart to Infisical's agent-vault.
 - [agentlog](https://github.com/RyanAlberts/agentlog) — ⭐1 — Persistent decision memory for any project: `remember`, `recall`, `reflect`. Single-file Python CLI that stores decisions as JSONL and uses Claude or Gemini to retrieve and synthesize patterns—Karpathy's LLM Wiki concept as a CLI.
 
 **Memory and state**
@@ -800,6 +819,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 **Research and task-specific harnesses**
 
+- [DeerFlow](https://github.com/bytedance/deer-flow) — ⭐77.4k — ByteDance's long-horizon research **harness**: a LangGraph-based agent loop that researches, codes, and creates using sandboxes, memory, tools, and subagents behind a message gateway—an alternative to the reference gpt-researcher stack for multi-hour tasks.
 - [gpt-researcher](https://github.com/assafelovic/gpt-researcher) — ⭐28.4k — Autonomous deep-research agent: web + local sources, citation-grounded reports, multi-agent and deep-research modes. The reference open-source research harness.
 
 **Libraries and SDKs**
