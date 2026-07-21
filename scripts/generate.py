@@ -840,6 +840,11 @@ def radar_entries() -> list:
         if gid.lower() in listed:
             continue
         c = qc.get(gid, {})
+        if not c and "stars" not in pin and "desc" not in pin:
+            # Pin has no explicit override and fell out of the current queue
+            # snapshot (dropped from the weekly scan, renamed, etc.) — skip
+            # rather than render a dead row with no stars or description.
+            continue
         desc = (pin.get("desc") or c.get("desc") or "").replace("|", "\\|").replace("\n", " ").strip()
         if len(desc) > 160:
             desc = desc[:157].rstrip() + "…"

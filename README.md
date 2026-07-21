@@ -392,7 +392,6 @@ _Up-and-coming candidates — surfaced by the weekly discovery scan or submitted
 | [**cocoindex-code**](https://github.com/cocoindex-io/cocoindex-code) | [2.5k](https://github.com/cocoindex-io/cocoindex-code/stargazers) | A super light-weight embedded code search engine CLI (AST based) that just works -  improves speed and efficiency for coding agent  🌟 Star if you like it! | weekly discovery |
 | [**antigravity-cli**](https://github.com/google-antigravity/antigravity-cli) | [1.6k](https://github.com/google-antigravity/antigravity-cli/stargazers) | Antigravity CLI brings the reasoning, execution, and orchestration capabilities of Antigravity agent harness directly into your terminal. | weekly discovery |
 | [**teamcopilot**](https://github.com/rishabhpoddar/teamcopilot) | [14](https://github.com/rishabhpoddar/teamcopilot/stargazers) | Deploy AI agents for your team to automate business workflows and coding. | community · PR #21 |
-| [**plandex**](https://github.com/plandex-ai/plandex) | — |  | weekly discovery |
 
 ## FAQ
 
