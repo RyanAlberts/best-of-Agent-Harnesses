@@ -459,6 +459,12 @@ PROJECTS: dict[str, list[Project]] = {
         Project("chrome-devtools-mcp", "ChromeDevTools/chrome-devtools-mcp",
                 "Google's official Chrome DevTools MCP server: exposes console, network, and performance-trace inspection as tool calls agents can drive directly, instead of a human clicking through the DevTools panel.",
                 "mostly simple (official browser-debug MCP)", oss="❓", labels=["javascript"]),
+        Project("Agent Governance Toolkit", "microsoft/agent-governance-toolkit",
+                "Microsoft's policy-enforcement layer for autonomous agents: zero-trust identity, execution sandboxing, and OWASP Agentic Top-10 coverage sit in front of the agent loop as a **harness** security layer—the governance counterpart to Infisical's agent-vault.",
+                "slightly complex (policy engine, zero-trust, sandboxing)", labels=["python"]),
+        Project("cocoindex-code", "cocoindex-io/cocoindex-code",
+                "Embedded, tree-sitter/AST-based code-search CLI and MCP server that gives coding agents fast semantic lookups over a repo instead of grepping or re-reading whole files into context.",
+                "mostly simple (embedded CLI + MCP server)", oss="❓"),
     ],
     "memory": [
         Project("cognee", "topoteretes/cognee",
@@ -542,6 +548,12 @@ PROJECTS: dict[str, list[Project]] = {
         Project("openagents", "OpenAgentsInc/openagents",
                 "Platform for autonomous agents and autopilot-style workflows; decentralized/Nostr-oriented (Pylon runtime, actively shipped in 2026).",
                 "complex (platform, decentralized — product suite)"),
+        Project("DeerFlow", "bytedance/deer-flow",
+                "ByteDance's long-horizon research **harness**: a LangGraph-based agent loop that researches, codes, and creates using sandboxes, memory, tools, and subagents behind a message gateway—an alternative to the reference gpt-researcher stack for multi-hour tasks.",
+                "complex (sandboxes, memory, subagents — product suite)", labels=["python"]),
+        Project("MiroThinker", "MiroMindAI/MiroThinker",
+                "Deep-research **harness** tuned for long browsing-and-reasoning chains; benchmarked on BrowseComp, GAIA, and HLE by pairing a dedicated agent loop with its own MiroThinker models rather than bolting search onto a generic chat agent.",
+                "slightly complex (benchmark-tuned research loop)", oss="❓"),
     ],
     "libraries-sdks": [
         Project("deepagents", "langchain-ai/deepagents",
@@ -694,6 +706,8 @@ META: dict[str, tuple[int, str, str]] = {
     "docker/mcp-gateway": (1497, "https://github.com/docker/mcp-gateway/blob/main/docs/mcp-gateway.md", "Gateway usage walkthrough"),
     "withLinda/puppeteer-real-browser-mcp-server": (25, "https://github.com/withLinda/puppeteer-real-browser-mcp-server/blob/main/README.md", "11 anti-detection tools"),
     "Infisical/agent-vault": (1911, "https://github.com/Infisical/agent-vault#readme", "Project README"),
+    "microsoft/agent-governance-toolkit": (4865, "https://github.com/microsoft/agent-governance-toolkit#readme", "Project README"),
+    "cocoindex-io/cocoindex-code": (2531, "https://github.com/cocoindex-io/cocoindex-code#readme", "Project README"),
     # evaluation
     "vostride/agent-qa": (160, "https://github.com/vostride/agent-qa#readme", "Natural-language QA harness"),
     "arcprize/ARC-AGI-2": (726, "https://arcprize.org/leaderboard", "ARC Prize leaderboard"),
@@ -715,6 +729,8 @@ META: dict[str, tuple[int, str, str]] = {
     # research-task
     "assafelovic/gpt-researcher": (28443, "https://github.com/assafelovic/gpt-researcher/blob/master/docs/blog/2024-05-19-gptr-langgraph/index.md", "Multi-agent LangGraph walkthrough"),
     "OpenAgentsInc/openagents": (441, "https://github.com/OpenAgentsInc/openagents/blob/main/docs/reports/nexus/2026-04-23-autopilot-pylon-production-earning-proof.md", "Production earning proof"),
+    "bytedance/deer-flow": (77382, "https://github.com/bytedance/deer-flow#readme", "Project README"),
+    "MiroMindAI/MiroThinker": (8343, "https://github.com/MiroMindAI/MiroThinker#readme", "Project README"),
     # libraries-sdks
     "langchain-ai/deepagents": (26501, "https://github.com/langchain-ai/deepagents/tree/main/examples/deep_research", "Deep research agent"),
     "pydantic/pydantic-ai": (18647, "https://github.com/pydantic/pydantic-ai/blob/main/examples/pydantic_ai_examples/bank_support.py", "Bank support agent"),
@@ -840,6 +856,11 @@ def radar_entries() -> list:
         if gid.lower() in listed:
             continue
         c = qc.get(gid, {})
+        if not c and "stars" not in pin and "desc" not in pin:
+            # Pin has no explicit override and fell out of the current queue
+            # snapshot (dropped from the weekly scan, renamed, etc.) — skip
+            # rather than render a dead row with no stars or description.
+            continue
         desc = (pin.get("desc") or c.get("desc") or "").replace("|", "\\|").replace("\n", " ").strip()
         if len(desc) > 160:
             desc = desc[:157].rstrip() + "…"
@@ -983,6 +1004,8 @@ AXES: "dict[str, tuple[str, str]]" = {
     "Infisical/agent-vault": ("n/a", "n/a"),
     "ajhcs/Better-OpenCodeMCP": ("n/a", "n/a"),
     "RyanAlberts/agentlog": ("n/a", "n/a"),
+    "microsoft/agent-governance-toolkit": ("n/a", "n/a"),
+    "cocoindex-io/cocoindex-code": ("n/a", "n/a"),
     # evaluation
     "vostride/agent-qa": ("headless", "retry"),
     "microsoft/agent-lightning": ("headless", "resumable"),
@@ -1004,6 +1027,8 @@ AXES: "dict[str, tuple[str, str]]" = {
     # research-task
     "assafelovic/gpt-researcher": ("bounded", "retry"),
     "OpenAgentsInc/openagents": ("headless", "resumable"),
+    "bytedance/deer-flow": ("headless", "resumable"),
+    "MiroMindAI/MiroThinker": ("headless", "retry"),
     # libraries-sdks
     "daytonaio/daytona": ("n/a", "n/a"),
     "mem0ai/mem0": ("n/a", "n/a"),

@@ -1,6 +1,6 @@
 # Best of Agent Harnesses
 
-> Hand-curated, ranked list of 135 AI agent harnesses — the runtimes that close the loop between a stateless model and the outside world. 12 categories, a 4-tier adoption-surface rating (simplicity ↔ capability), capability tags, a license signal, and one concrete example link per project. Stars captured 2026-07-19.
+> Hand-curated, ranked list of 139 AI agent harnesses — the runtimes that close the loop between a stateless model and the outside world. 12 categories, a 4-tier adoption-surface rating (simplicity ↔ capability), capability tags, a license signal, and one concrete example link per project. Stars captured 2026-07-19.
 
 Maintained at https://github.com/RyanAlberts/best-of-Agent-Harnesses (CC-BY-SA-4.0).
 Structured data: https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/harnesses.json
@@ -74,7 +74,7 @@ Harnesses designed for unattended runs, batches, and fleets: opencode, OpenHands
 Harnesses whose execution state persists across restarts: langgraph-bigtool, n8n, langgraph, mastra, letta, deepagents, pydantic-ai, Cloudflare Agents.
 
 ### How many of these agent harnesses are open source?
-107 of 135 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.
+109 of 139 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.
 
 ### What is an agent harness?
 The runtime that turns a model into an agent: it decides what the model's reasoning is allowed to touch, and supplies the orchestration, tool wiring, memory, error recovery, and guardrails around per-turn inference.
@@ -196,7 +196,7 @@ Harnesses and patterns for multi-agent coordination and handoffs.
 - [PraisonAI](https://github.com/MervinPraison/PraisonAI) — ⭐8.5k, mostly simple, autonomy: bounded, recovery: none, open-source: Autonomous multi-agent teams with a single entry point; emphasis on minimal config. [multi-agent, python]
 - [AgentRL](https://github.com/THUDM/AgentRL) — ⭐321, complex, autonomy: headless, recovery: resumable, open-source: Multitask, multiturn RL for LLM agents; Ray-based scaling, rollout/actor workers—for teams that want to train agents, not just run them. [training, python]
 
-## Plugins, MCPs, CLI tools (16 projects)
+## Plugins, MCPs, CLI tools (18 projects)
 
 IDE plugins, concrete MCP servers, and CLI tools that give agents tools and context.
 
@@ -211,6 +211,8 @@ IDE plugins, concrete MCP servers, and CLI tools that give agents tools and cont
 - [MCP TypeScript SDK](https://github.com/modelcontextprotocol/typescript-sdk) — ⭐12.9k, mostly simple, autonomy: n/a, recovery: n/a, open-source: Official MCP implementation for Node/TS; reference for the protocol. [mcp, typescript]
 - [MCP Inspector](https://github.com/modelcontextprotocol/inspector) — ⭐10.4k, super simple, autonomy: n/a, recovery: n/a, open-source: GUI to test and debug MCP servers; inspect tools, resources, and prompts. [mcp, typescript]
 - [MCP Registry](https://github.com/modelcontextprotocol/registry) — ⭐7k, slightly complex, autonomy: n/a, recovery: n/a, open-source: Official, community-driven registry for MCP servers—the "app store" MCP clients use to discover servers. Maintained by Anthropic + ecosystem maintainers; v0.1 API frozen, production-grade. [mcp]
+- [Agent Governance Toolkit](https://github.com/microsoft/agent-governance-toolkit) — ⭐4.9k, slightly complex, autonomy: n/a, recovery: n/a, open-source: Microsoft's policy-enforcement layer for autonomous agents: zero-trust identity, execution sandboxing, and OWASP Agentic Top-10 coverage sit in front of the agent loop as a **harness** security layer—the governance counterpart to Infisical's agent-vault. [sandbox, python]
+- [cocoindex-code](https://github.com/cocoindex-io/cocoindex-code) — ⭐2.5k, mostly simple, autonomy: n/a, recovery: n/a, unknown: Embedded, tree-sitter/AST-based code-search CLI and MCP server that gives coding agents fast semantic lookups over a repo instead of grepping or re-reading whole files into context. [mcp, cli]
 - [agent-vault](https://github.com/Infisical/agent-vault) — ⭐1.9k, mostly simple, autonomy: n/a, recovery: n/a, unknown: Infisical's HTTP credential proxy that fronts secrets for Claude Code, OpenClaw, and other agent harnesses so the agent's tool calls never see raw credentials—a **harness** security layer, not an agent loop itself.
 - [Docker MCP Gateway](https://github.com/docker/mcp-gateway) — ⭐1.5k, slightly complex, autonomy: n/a, recovery: n/a, open-source: Docker's official MCP CLI plugin / gateway; container-aware MCP tooling from Docker (replaces deprecated `docker/mcp-servers` path). [mcp, sandbox, cli]
 - [puppeteer-real-browser-mcp](https://github.com/withLinda/puppeteer-real-browser-mcp-server) — ⭐25, mostly simple, autonomy: n/a, recovery: n/a, unknown: Puppeteer MCP with real-browser and anti-detection; for agents that need to drive sites that block headless. [mcp, browser, typescript]
@@ -255,11 +257,13 @@ Tracing, monitoring, and production evaluation for live agent runs: capture ever
 - [Langfuse](https://github.com/langfuse/langfuse) — ⭐31.4k, slightly complex, autonomy: n/a, recovery: n/a, open-source: Open-source LLM engineering platform: full-trace observability, online and offline evals, prompt management, and cost metrics for agent runs in production—the monitoring layer most harnesses lack out of the box. [evals, typescript]
 - [MLflow](https://github.com/mlflow/mlflow) — ⭐27.1k, complex, autonomy: n/a, recovery: n/a, open-source: Mature ML platform now covering GenAI: MLflow Tracing captures every agent step, tool call, and token, with built-in LLM evals and prompt versioning—observability for teams already standardized on MLflow. [evals, python]
 
-## Research and task-specific harnesses (2 projects)
+## Research and task-specific harnesses (4 projects)
 
 Deep research, document QA, and domain-specific agent loops.
 
+- [DeerFlow](https://github.com/bytedance/deer-flow) — ⭐77.4k, complex, autonomy: headless, recovery: resumable, open-source: ByteDance's long-horizon research **harness**: a LangGraph-based agent loop that researches, codes, and creates using sandboxes, memory, tools, and subagents behind a message gateway—an alternative to the reference gpt-researcher stack for multi-hour tasks. [memory, multi-agent, sandbox, python]
 - [gpt-researcher](https://github.com/assafelovic/gpt-researcher) — ⭐28.4k, complex, autonomy: bounded, recovery: retry, open-source: Autonomous deep-research agent: web + local sources, citation-grounded reports, multi-agent and deep-research modes. The reference open-source research harness. [multi-agent, python]
+- [MiroThinker](https://github.com/MiroMindAI/MiroThinker) — ⭐8.3k, slightly complex, autonomy: headless, recovery: retry, unknown: Deep-research **harness** tuned for long browsing-and-reasoning chains; benchmarked on BrowseComp, GAIA, and HLE by pairing a dedicated agent loop with its own MiroThinker models rather than bolting search onto a generic chat agent. [evals]
 - [openagents](https://github.com/OpenAgentsInc/openagents) — ⭐441, complex, autonomy: headless, recovery: resumable, open-source: Platform for autonomous agents and autopilot-style workflows; decentralized/Nostr-oriented (Pylon runtime, actively shipped in 2026).
 
 ## Libraries and SDKs (13 projects)

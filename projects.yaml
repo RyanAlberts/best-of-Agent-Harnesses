@@ -423,6 +423,13 @@ projects:
     github_id: ChromeDevTools/chrome-devtools-mcp
     labels: ["javascript"]
     category: "plugins-mcp-cli"
+  - name: Agent Governance Toolkit
+    github_id: microsoft/agent-governance-toolkit
+    labels: ["python"]
+    category: "plugins-mcp-cli"
+  - name: cocoindex-code
+    github_id: cocoindex-io/cocoindex-code
+    category: "plugins-mcp-cli"
   # Memory and state
   - name: cognee
     github_id: topoteretes/cognee
@@ -518,6 +525,13 @@ projects:
     category: "research-task"
   - name: openagents
     github_id: OpenAgentsInc/openagents
+    category: "research-task"
+  - name: DeerFlow
+    github_id: bytedance/deer-flow
+    labels: ["python"]
+    category: "research-task"
+  - name: MiroThinker
+    github_id: MiroMindAI/MiroThinker
     category: "research-task"
   # Libraries and SDKs
   - name: deepagents

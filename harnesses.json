@@ -9,7 +9,7 @@
     "feed_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/feed.json",
     "license": "CC-BY-SA-4.0",
     "stars_captured": "2026-07-19",
-    "project_count": 135,
+    "project_count": 139,
     "graveyard_count": 3,
     "tiers": [
       "super simple",
@@ -374,7 +374,7 @@
     {
       "kind": "derived",
       "q": "How many of these agent harnesses are open source?",
-      "a": "107 of 135 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
+      "a": "109 of 139 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
       "slug": "how-many-of-these-agent-harnesses-are-open-source"
     },
     {
@@ -5717,6 +5717,64 @@
       "deep_dive": null
     },
     {
+      "name": "Agent Governance Toolkit",
+      "github_id": "microsoft/agent-governance-toolkit",
+      "url": "https://github.com/microsoft/agent-governance-toolkit",
+      "slug": "agent-governance-toolkit",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#agent-governance-toolkit",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/agent-governance-toolkit/",
+      "description": "Microsoft's policy-enforcement layer for autonomous agents: zero-trust identity, execution sandboxing, and OWASP Agentic Top-10 coverage sit in front of the agent loop as a **harness** security layer—the governance counterpart to Infisical's agent-vault.",
+      "category": "plugins-mcp-cli",
+      "category_title": "Plugins, MCPs, CLI tools",
+      "stars": 4865,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (policy engine, zero-trust, sandboxing)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [
+        "sandbox",
+        "python"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/microsoft/agent-governance-toolkit#readme"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "cocoindex-code",
+      "github_id": "cocoindex-io/cocoindex-code",
+      "url": "https://github.com/cocoindex-io/cocoindex-code",
+      "slug": "cocoindex-code",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#cocoindex-code",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/cocoindex-code/",
+      "description": "Embedded, tree-sitter/AST-based code-search CLI and MCP server that gives coding agents fast semantic lookups over a repo instead of grepping or re-reading whole files into context.",
+      "category": "plugins-mcp-cli",
+      "category_title": "Plugins, MCPs, CLI tools",
+      "stars": 2531,
+      "tier": "mostly simple",
+      "tier_rank": 2,
+      "axis": "mostly simple (embedded CLI + MCP server)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "unknown",
+      "tags": [
+        "mcp",
+        "cli"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/cocoindex-io/cocoindex-code#readme"
+      },
+      "deep_dive": null
+    },
+    {
       "name": "agent-vault",
       "github_id": "Infisical/agent-vault",
       "url": "https://github.com/Infisical/agent-vault",
@@ -6659,6 +6717,37 @@
       "deep_dive": null
     },
     {
+      "name": "DeerFlow",
+      "github_id": "bytedance/deer-flow",
+      "url": "https://github.com/bytedance/deer-flow",
+      "slug": "deer-flow",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#deer-flow",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/deer-flow/",
+      "description": "ByteDance's long-horizon research **harness**: a LangGraph-based agent loop that researches, codes, and creates using sandboxes, memory, tools, and subagents behind a message gateway—an alternative to the reference gpt-researcher stack for multi-hour tasks.",
+      "category": "research-task",
+      "category_title": "Research and task-specific harnesses",
+      "stars": 77382,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (sandboxes, memory, subagents — product suite)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "open-source",
+      "tags": [
+        "memory",
+        "multi-agent",
+        "sandbox",
+        "python"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/bytedance/deer-flow#readme"
+      },
+      "deep_dive": null
+    },
+    {
       "name": "gpt-researcher",
       "github_id": "assafelovic/gpt-researcher",
       "url": "https://github.com/assafelovic/gpt-researcher",
@@ -6718,6 +6807,34 @@
           "evidence": "https://docs.gptr.dev/docs/gpt-researcher/gptr/pip-package"
         }
       }
+    },
+    {
+      "name": "MiroThinker",
+      "github_id": "MiroMindAI/MiroThinker",
+      "url": "https://github.com/MiroMindAI/MiroThinker",
+      "slug": "mirothinker",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#mirothinker",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/mirothinker/",
+      "description": "Deep-research **harness** tuned for long browsing-and-reasoning chains; benchmarked on BrowseComp, GAIA, and HLE by pairing a dedicated agent loop with its own MiroThinker models rather than bolting search onto a generic chat agent.",
+      "category": "research-task",
+      "category_title": "Research and task-specific harnesses",
+      "stars": 8343,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (benchmark-tuned research loop)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "retry",
+      "recovery_rank": 2,
+      "license_signal": "unknown",
+      "tags": [
+        "evals"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/MiroMindAI/MiroThinker#readme"
+      },
+      "deep_dive": null
     },
     {
       "name": "openagents",
@@ -7186,12 +7303,6 @@
   ],
   "radar": [
     {
-      "github_id": "bytedance/deer-flow",
-      "stars": 77382,
-      "desc": "An open-source long-horizon SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skill, subagents and message…",
-      "via": "weekly discovery"
-    },
-    {
       "github_id": "ag2ai/ag2",
       "stars": 4782,
       "desc": "AG2 (formerly AutoGen): The Open-Source AgentOS.Join us at: https://discord.gg/sNGSwQME3x",
@@ -7210,12 +7321,6 @@
       "via": "weekly discovery"
     },
     {
-      "github_id": "cocoindex-io/cocoindex-code",
-      "stars": 2531,
-      "desc": "A super light-weight embedded code search engine CLI (AST based) that just works -  improves speed and efficiency for coding agent  🌟 Star if you like it!",
-      "via": "weekly discovery"
-    },
-    {
       "github_id": "google-antigravity/antigravity-cli",
       "stars": 1639,
       "desc": "Antigravity CLI brings the reasoning, execution, and orchestration capabilities of Antigravity agent harness directly into your terminal.",
@@ -7226,12 +7331,6 @@
       "stars": 14,
       "desc": "Deploy AI agents for your team to automate business workflows and coding.",
       "via": "community · PR #21"
-    },
-    {
-      "github_id": "plandex-ai/plandex",
-      "stars": 0,
-      "desc": "",
-      "via": "weekly discovery"
     }
   ]
 }
