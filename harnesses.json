@@ -9,7 +9,7 @@
     "feed_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/feed.json",
     "license": "CC-BY-SA-4.0",
     "stars_captured": "2026-07-19",
-    "project_count": 135,
+    "project_count": 137,
     "graveyard_count": 3,
     "tiers": [
       "super simple",
@@ -374,7 +374,7 @@
     {
       "kind": "derived",
       "q": "How many of these agent harnesses are open source?",
-      "a": "107 of 135 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
+      "a": "109 of 137 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
       "slug": "how-many-of-these-agent-harnesses-are-open-source"
     },
     {
@@ -434,6 +434,35 @@
     }
   ],
   "projects": [
+    {
+      "name": "Headroom",
+      "github_id": "headroomlabs-ai/headroom",
+      "url": "https://github.com/headroomlabs-ai/headroom",
+      "slug": "headroom",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#headroom",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/headroom/",
+      "description": "Compresses tool outputs, logs, files, and RAG chunks with content-aware compressors before they reach the model—claimed 20% fewer tokens for coding agents and 60–95% fewer for JSON, same answers. Ships as a library, HTTP proxy, or MCP server, so it drops in front of whatever harness you already run.",
+      "category": "progressive-disclosure",
+      "category_title": "Progressive disclosure harnesses",
+      "stars": 59996,
+      "tier": "mostly simple",
+      "tier_rank": 2,
+      "axis": "mostly simple (compression library/proxy/MCP server)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [
+        "mcp",
+        "rag"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/headroomlabs-ai/headroom#readme"
+      },
+      "deep_dive": null
+    },
     {
       "name": "awesome-cursorrules",
       "github_id": "PatrickJS/awesome-cursorrules",
@@ -2153,6 +2182,35 @@
           "evidence": "https://raw.githubusercontent.com/garrytan/gstack/main/README.md"
         }
       }
+    },
+    {
+      "name": "addyosmani/agent-skills",
+      "github_id": "addyosmani/agent-skills",
+      "url": "https://github.com/addyosmani/agent-skills",
+      "slug": "agent-skills",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#agent-skills",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/agent-skills/",
+      "description": "Addy Osmani's production-grade skill pack: 24 engineering skills and 4 specialist agent personas that encode senior-dev workflows (spec through deploy) across 70+ coding agents including Claude Code, Cursor, and Copilot. The **harness** contribution is the skill/workflow layer, not a new agent loop.",
+      "category": "coding-harness-configs",
+      "category_title": "Coding harness configs and SDKs",
+      "stars": 79258,
+      "tier": "mostly simple",
+      "tier_rank": 2,
+      "axis": "mostly simple (skills bundle, cross-agent)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [
+        "workflow",
+        "ide"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/addyosmani/agent-skills#readme"
+      },
+      "deep_dive": null
     },
     {
       "name": "awesome-claude-code",

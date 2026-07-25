@@ -1,6 +1,6 @@
 # Best of Agent Harnesses
 
-> Hand-curated, ranked list of 135 AI agent harnesses — the runtimes that close the loop between a stateless model and the outside world. 12 categories, a 4-tier adoption-surface rating (simplicity ↔ capability), capability tags, a license signal, and one concrete example link per project. Stars captured 2026-07-19.
+> Hand-curated, ranked list of 137 AI agent harnesses — the runtimes that close the loop between a stateless model and the outside world. 12 categories, a 4-tier adoption-surface rating (simplicity ↔ capability), capability tags, a license signal, and one concrete example link per project. Stars captured 2026-07-19.
 
 Maintained at https://github.com/RyanAlberts/best-of-Agent-Harnesses (CC-BY-SA-4.0).
 Structured data: https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/harnesses.json
@@ -74,7 +74,7 @@ Harnesses designed for unattended runs, batches, and fleets: opencode, OpenHands
 Harnesses whose execution state persists across restarts: langgraph-bigtool, n8n, langgraph, mastra, letta, deepagents, pydantic-ai, Cloudflare Agents.
 
 ### How many of these agent harnesses are open source?
-107 of 135 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.
+109 of 137 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.
 
 ### What is an agent harness?
 The runtime that turns a model into an agent: it decides what the model's reasoning is allowed to touch, and supplies the orchestration, tool wiring, memory, error recovery, and guardrails around per-turn inference.
@@ -85,10 +85,11 @@ By relevance to harness concerns (environment, orchestration, lifecycle, guardra
 ### How can an AI agent use this list directly?
 Three machine-readable surfaces: harnesses.json (structured), llms.txt (one file), and an MCP server (uvx agent-harnesses-mcp) exposing recommend, compare, pick_harness, and search_harnesses.
 
-## Progressive disclosure harnesses (7 projects)
+## Progressive disclosure harnesses (8 projects)
 
 Formats, runtimes, and patterns that reveal context, tools, or instructions in layers—index first, details on demand—to control tokens and improve agent focus (the "map, not encyclopedia" principle).
 
+- [Headroom](https://github.com/headroomlabs-ai/headroom) — ⭐60k, mostly simple, autonomy: n/a, recovery: n/a, open-source: Compresses tool outputs, logs, files, and RAG chunks with content-aware compressors before they reach the model—claimed 20% fewer tokens for coding agents and 60–95% fewer for JSON, same answers. Ships as a library, HTTP proxy, or MCP server, so it drops in front of whatever harness you already run. [mcp, rag]
 - [awesome-cursorrules](https://github.com/PatrickJS/awesome-cursorrules) — ⭐40.4k, super simple, autonomy: n/a, recovery: n/a, open-source: Curated .cursorrules and skills that leverage Cursor's index-then-load model; the canonical collection for rules-as-progressive-disclosure in the IDE. [ide]
 - [agents.md](https://github.com/agentsmd/agents.md) — ⭐23.1k, super simple, autonomy: n/a, recovery: n/a, open-source: Open format for repo-scoped agent briefings; v1.1 adds hierarchical scope and progressive disclosure so agents get a map of what exists, then load only what's relevant. [typescript]
 - [context-mode](https://github.com/mksglu/context-mode) — ⭐19.1k, mostly simple, autonomy: n/a, recovery: n/a, unknown: Context-window optimization layer that sandboxes tool output before it reaches the model (claimed 98% reduction) and persists session memory across 17 agent platforms via MCP and hooks—progressive disclosure applied to tool results, not just instructions. [mcp, memory, sandbox]
@@ -120,13 +121,14 @@ Turnkey coding agents you install and run: IDE extensions, terminal CLIs, Docker
 - [AgentBox](https://github.com/madarco/agentbox) — ⭐264, slightly complex, autonomy: n/a, recovery: n/a, open-source: Runs multiple coding agents in parallel, each in its own sandboxed VM, locally or in the cloud, from one command. The **harness** contribution is the VM-per-agent isolation and fleet fan-out layer; whichever agent runs inside owns the loop. [sandbox, typescript]
 - [Proliferate](https://github.com/proliferate-ai/proliferate) — ⭐157, complex, autonomy: bounded, recovery: resumable, open-source: Open-source AI IDE for Claude Code, Codex, OpenCode, and more. The **harness** contribution is the workspace/session orchestration layer: run multiple coding agents in parallel, locally or in the cloud, with isolated workspaces, reusable workflows, and shared team context. [multi-agent, sandbox, ide, typescript]
 
-## Coding harness configs and SDKs (14 projects)
+## Coding harness configs and SDKs (15 projects)
 
 Skill packs, slash-command libraries, meta-prompting frameworks, and official SDKs that give you the harness (the agent loop, planning, memory, hooks) without bundling a specific IDE or CLI shell.
 
 - [superpowers](https://github.com/obra/superpowers) — ⭐257k, complex, autonomy: n/a, recovery: n/a, open-source: Performance-oriented harness pack for Claude Code, Codex, OpenCode, Cursor: skills, instincts, memory, security, research-first workflows. Treats harness engineering itself as the performance lever. [memory, ide]
 - [Anthropic Skills](https://github.com/anthropics/skills) — ⭐163k, mostly simple, autonomy: n/a, recovery: n/a, open-source: Anthropic's official Agent Skills repository: SKILL.md-based folders (instructions, scripts, resources) Claude dynamically loads on Claude Code, Claude.ai, and the API. The reference for progressive-disclosure skill packs in 2026.
 - [GStack](https://github.com/garrytan/gstack) — ⭐123k, slightly complex, autonomy: n/a, recovery: n/a, open-source: Garry Tan's Claude Code skill stack: 23 slash-command modes (CEO/eng/design review, QA, ship, browse, retro, …) that structure one assistant as a virtual engineering team. Daily driver while running YC. [typescript]
+- [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) — ⭐79.3k, mostly simple, autonomy: n/a, recovery: n/a, open-source: Addy Osmani's production-grade skill pack: 24 engineering skills and 4 specialist agent personas that encode senior-dev workflows (spec through deploy) across 70+ coding agents including Claude Code, Cursor, and Copilot. The **harness** contribution is the skill/workflow layer, not a new agent loop. [workflow, ide]
 - [awesome-claude-code](https://github.com/hesreallyhim/awesome-claude-code) — ⭐50.4k, super simple, autonomy: n/a, recovery: n/a, unknown: Large community-curated index of Claude Code skills, slash commands, status lines, and plugins—resources for extending the harness, not a harness itself, but the most-followed catalog of the genre.
 - [wshobson/agents](https://github.com/wshobson/agents) — ⭐38.1k, super simple, autonomy: n/a, recovery: n/a, open-source: Cross-harness marketplace of drop-in subagents and skills for Claude Code, Codex CLI, Cursor, OpenCode, and Copilot; specialized, production-ready agent definitions you install rather than hand-write. [multi-agent, cli, ide]
 - [SWE-agent](https://github.com/SWE-agent/SWE-agent) — ⭐19.9k, slightly complex, autonomy: headless, recovery: resumable, open-source: LM-driven harness built for SWE-bench: edit state, command execution, and issue-focused loop—the reference agent stack next to the benchmark itself. [memory, evals, python]
