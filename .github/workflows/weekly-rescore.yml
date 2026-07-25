@@ -31,7 +31,7 @@ jobs:
         with:
           token: ${{ secrets.RESCORE_PAT || secrets.GITHUB_TOKEN }}
 
-      - uses: actions/setup-python@v6
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.11"
 
