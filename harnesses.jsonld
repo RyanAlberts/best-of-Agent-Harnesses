@@ -29,7 +29,7 @@
   ],
   "mainEntity": {
     "@type": "ItemList",
-    "numberOfItems": 141,
+    "numberOfItems": 142,
     "itemListElement": [
       {
         "@type": "ListItem",
@@ -1416,6 +1416,18 @@
         "position": 116,
         "item": {
           "@type": "SoftwareApplication",
+          "name": "ClawBench",
+          "url": "https://github.com/TIGER-AI-Lab/ClawBench",
+          "description": "Open web-agent evaluation **harness**: runs selectable agents in isolated Docker containers across 153 live-site tasks (plus 130 in V2), intercepts irreversible requests, and records video, screenshots, HTTP traffic, actions, and agent messages for replayable scoring.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "evals, vision, sandbox, python"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 117,
+        "item": {
+          "@type": "SoftwareApplication",
           "name": "arc-agi-benchmarking",
           "url": "https://github.com/arcprize/arc-agi-benchmarking",
           "description": "Runner for ARC-AGI: multi-provider (OpenAI, Anthropic, Gemini, etc.), rate limits, retries, and scoring.",
@@ -1425,7 +1437,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 117,
+        "position": 118,
         "item": {
           "@type": "SoftwareApplication",
           "name": "agent-qa",
@@ -1437,7 +1449,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 118,
+        "position": 119,
         "item": {
           "@type": "SoftwareApplication",
           "name": "VitaBench",
@@ -1449,7 +1461,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 119,
+        "position": 120,
         "item": {
           "@type": "SoftwareApplication",
           "name": "AgencyBench",
@@ -1461,7 +1473,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 120,
+        "position": 121,
         "item": {
           "@type": "SoftwareApplication",
           "name": "letta-evals",
@@ -1473,7 +1485,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 121,
+        "position": 122,
         "item": {
           "@type": "SoftwareApplication",
           "name": "SUPER",
@@ -1485,7 +1497,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 122,
+        "position": 123,
         "item": {
           "@type": "SoftwareApplication",
           "name": "TRAIL",
@@ -1497,7 +1509,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 123,
+        "position": 124,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Langfuse",
@@ -1509,7 +1521,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 124,
+        "position": 125,
         "item": {
           "@type": "SoftwareApplication",
           "name": "MLflow",
@@ -1521,7 +1533,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 125,
+        "position": 126,
         "item": {
           "@type": "SoftwareApplication",
           "name": "DeerFlow",
@@ -1533,7 +1545,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 126,
+        "position": 127,
         "item": {
           "@type": "SoftwareApplication",
           "name": "gpt-researcher",
@@ -1545,7 +1557,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 127,
+        "position": 128,
         "item": {
           "@type": "SoftwareApplication",
           "name": "MiroThinker",
@@ -1557,7 +1569,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 128,
+        "position": 129,
         "item": {
           "@type": "SoftwareApplication",
           "name": "openagents",
@@ -1569,7 +1581,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 129,
+        "position": 130,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Daytona",
@@ -1581,7 +1593,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 130,
+        "position": 131,
         "item": {
           "@type": "SoftwareApplication",
           "name": "LiteLLM",
@@ -1593,7 +1605,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 131,
+        "position": 132,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Composio",
@@ -1605,7 +1617,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 132,
+        "position": 133,
         "item": {
           "@type": "SoftwareApplication",
           "name": "smolagents",
@@ -1617,7 +1629,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 133,
+        "position": 134,
         "item": {
           "@type": "SoftwareApplication",
           "name": "deepagents",
@@ -1629,7 +1641,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 134,
+        "position": 135,
         "item": {
           "@type": "SoftwareApplication",
           "name": "vercel/ai",
@@ -1641,7 +1653,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 135,
+        "position": 136,
         "item": {
           "@type": "SoftwareApplication",
           "name": "pydantic-ai",
@@ -1653,7 +1665,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 136,
+        "position": 137,
         "item": {
           "@type": "SoftwareApplication",
           "name": "E2B",
@@ -1665,7 +1677,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 137,
+        "position": 138,
         "item": {
           "@type": "SoftwareApplication",
           "name": "strands-agents",
@@ -1677,7 +1689,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 138,
+        "position": 139,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Cloudflare Agents",
@@ -1689,7 +1701,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 139,
+        "position": 140,
         "item": {
           "@type": "SoftwareApplication",
           "name": "openai-agents-js",
@@ -1701,7 +1713,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 140,
+        "position": 141,
         "item": {
           "@type": "SoftwareApplication",
           "name": "open-harness",
@@ -1713,7 +1725,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 141,
+        "position": 142,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Community-curated agent lists",

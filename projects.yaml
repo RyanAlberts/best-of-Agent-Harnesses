@@ -478,6 +478,10 @@ projects:
     github_id: web-arena-x/webarena
     labels: ["python"]
     category: "evaluation"
+  - name: ClawBench
+    github_id: TIGER-AI-Lab/ClawBench
+    labels: ["python"]
+    category: "evaluation"
   - name: SWE-bench
     github_id: SWE-bench/SWE-bench
     labels: ["python"]

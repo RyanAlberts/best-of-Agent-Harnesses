@@ -9,7 +9,7 @@
     "feed_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/feed.json",
     "license": "CC-BY-SA-4.0",
     "stars_captured": "2026-07-26",
-    "project_count": 141,
+    "project_count": 142,
     "graveyard_count": 3,
     "tiers": [
       "super simple",
@@ -374,7 +374,7 @@
     {
       "kind": "derived",
       "q": "How many of these agent harnesses are open source?",
-      "a": "111 of 141 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
+      "a": "112 of 142 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
       "slug": "how-many-of-these-agent-harnesses-are-open-source"
     },
     {
@@ -6511,6 +6511,37 @@
       "example": {
         "label": "inspect SWE-bench eval",
         "url": "https://github.com/UKGovernmentBEIS/inspect_evals/blob/main/src/inspect_evals/swe_bench/README.md"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "ClawBench",
+      "github_id": "TIGER-AI-Lab/ClawBench",
+      "url": "https://github.com/TIGER-AI-Lab/ClawBench",
+      "slug": "clawbench",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#clawbench",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/clawbench/",
+      "description": "Open web-agent evaluation **harness**: runs selectable agents in isolated Docker containers across 153 live-site tasks (plus 130 in V2), intercepts irreversible requests, and records video, screenshots, HTTP traffic, actions, and agent messages for replayable scoring.",
+      "category": "evaluation",
+      "category_title": "Evaluation and benchmarking harnesses",
+      "stars": 525,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (live websites, Docker, multi-harness benchmark — product suite)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "none",
+      "recovery_rank": 1,
+      "license_signal": "open-source",
+      "tags": [
+        "evals",
+        "vision",
+        "sandbox",
+        "python"
+      ],
+      "example": {
+        "label": "ClawBench live leaderboard",
+        "url": "https://claw-bench.com/leaderboard"
       },
       "deep_dive": null
     },
