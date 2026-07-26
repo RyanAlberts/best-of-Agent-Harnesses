@@ -11,7 +11,7 @@
     "name": "Ryan Alberts",
     "url": "https://github.com/RyanAlberts"
   },
-  "dateModified": "2026-07-19",
+  "dateModified": "2026-07-26",
   "keywords": [
     "agent harness",
     "AI agents",
@@ -1380,11 +1380,11 @@
         "position": 113,
         "item": {
           "@type": "SoftwareApplication",
-          "name": "swe-smith",
-          "url": "https://github.com/SWE-bench/SWE-smith",
-          "description": "Data generation for SWE agents; 50k+ instances across 128 repos; used for SWE-agent-LM training.",
+          "name": "SWE-Gym",
+          "url": "https://github.com/SWE-Gym/SWE-Gym",
+          "description": "Training and evaluation for SWE agents and verifiers (ICML 2025).",
           "applicationCategory": "DeveloperApplication",
-          "keywords": "training, python"
+          "keywords": "evals, training, python"
         }
       },
       {
@@ -1392,11 +1392,11 @@
         "position": 114,
         "item": {
           "@type": "SoftwareApplication",
-          "name": "SWE-Gym",
-          "url": "https://github.com/SWE-Gym/SWE-Gym",
-          "description": "Training and evaluation for SWE agents and verifiers (ICML 2025).",
+          "name": "swe-smith",
+          "url": "https://github.com/SWE-bench/SWE-smith",
+          "description": "Data generation for SWE agents; 50k+ instances across 128 repos; used for SWE-agent-LM training.",
           "applicationCategory": "DeveloperApplication",
-          "keywords": "evals, training, python"
+          "keywords": "training, python"
         }
       },
       {
