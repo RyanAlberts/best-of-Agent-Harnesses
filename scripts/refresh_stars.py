@@ -5,7 +5,13 @@ Rewrites each star count in place, bumps STARS_CAPTURED (and the META comment
 date) to today in America/Chicago, and prints a movers summary. Run
 scripts/generate.py afterwards to regenerate every derived output.
 
-Auth: GH_TOKEN or GITHUB_TOKEN env var, required — 101 unauthenticated
+WHERE THIS RUNS: .github/workflows/weekly-rescore.yml, on GitHub-hosted infra
+with unrestricted api.github.com access. Do NOT run it from a Claude Code
+cloud session/routine — those are scoped to their own configured repositories
+and can't read third-party star counts, so every fetch 403s. The script
+detects that case and says so rather than silently keeping stale counts.
+
+Auth: GH_TOKEN or GITHUB_TOKEN env var, required — 144 unauthenticated
 requests exceeds GitHub's 60/hr anonymous rate limit.
 """
 
@@ -146,20 +152,25 @@ def main() -> None:
     if scope_missing:
         print()
         print("=" * 70)
-        print(f"ACTION NEEDED: {len(scope_missing)} repo(s) missing from this routine's scope")
+        print("WRONG PLACE: this script is being run from a repo-scoped session")
         print("=" * 70)
         print(
-            "This routine's GitHub credentials only reach repos listed in its own\n"
-            "Repositories field. A repo added to generate.py's META dict but not to\n"
-            "that list can't have its star count refreshed — it silently keeps a\n"
-            "stale number every week until you add it there too.\n"
+            f"{len(scope_missing)} of {len(ids)} repos returned a session-scoping 403.\n"
             "\n"
-            "Fix: claude.ai/code/routines -> this routine -> pencil icon -> Edit\n"
-            "routine -> Repositories section -> Add repository, for each of:\n"
+            "That means this is running inside a Claude Code cloud session (routine),\n"
+            "whose GitHub access is limited to its own configured repositories. It\n"
+            "cannot read star counts for the third-party repos in META, and no amount\n"
+            "of routine configuration reliably fixes that.\n"
+            "\n"
+            "The rescore is ALREADY automated somewhere that works:\n"
+            "  .github/workflows/weekly-rescore.yml — Sundays 09:00 America/Chicago,\n"
+            "  on GitHub-hosted infra with unrestricted api.github.com access.\n"
+            "\n"
+            "Don't run this from a routine. To trigger a rescore manually, use the\n"
+            "workflow's workflow_dispatch (Actions tab -> weekly-rescore -> Run\n"
+            "workflow) instead. A Claude routine should only READ the results:\n"
+            "curation-queue.json, git log, and this repo's own issues/PRs.\n"
         )
-        for gid in scope_missing:
-            print(f"  {gid}")
-        print("\n(Leave 'Allow unrestricted branch pushes' off — read-only is enough.)\n")
 
     if failed:
         print("FAILED (old counts kept, unrelated to routine scope):")
