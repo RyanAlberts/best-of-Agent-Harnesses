@@ -8,7 +8,8 @@ Schema (top-level keys, exactly these six):
     movers     list[{"id","from","to"}]
     moved      list[{"id","to"}]
     archived   list[{"id","since","stars"}]
-    failed     list[{"id","status"}]
+    failed     list[{"id","status"}]  (routine-scope misses use status
+                                        "routine-scope: ...", same shape)
     candidates list                        (filled by Task 6; default [])
 """
 

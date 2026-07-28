@@ -13,6 +13,7 @@ import json
 import os
 import re
 import sys
+import urllib.error
 import urllib.request
 from datetime import datetime
 from pathlib import Path
@@ -20,6 +21,11 @@ from pathlib import Path
 import write_queue
 
 GEN = Path(__file__).resolve().parent / "generate.py"
+
+# Exact substring from the routine-scoping 403 body returned for a repo not
+# in this routine's Repositories list: distinguishes that from ordinary
+# 404s, rate limits, or network errors.
+SCOPE_MARKER = "GitHub access to this repository is not enabled for this session"
 
 
 def today_chicago() -> str:
@@ -53,6 +59,20 @@ def fetch(gid: str, token: str) -> tuple:
     with urllib.request.urlopen(req, timeout=20) as r:
         d = json.loads(r.read().decode())
     return d["stargazers_count"], d["full_name"], d.get("archived", False)
+
+
+def is_scope_error(e: Exception) -> bool:
+    """True if `e` is the routine's own repo-scoping 403 (repo not yet added
+    to this routine's Repositories list), not an ordinary 404/rate-limit/
+    network failure. Distinguishing the two turns a same-looking 403 into an
+    actionable "add this repo to the routine" signal instead of noise."""
+    if not (isinstance(e, urllib.error.HTTPError) and e.code == 403):
+        return False
+    try:
+        body = json.loads(e.read().decode())
+    except Exception:
+        return False
+    return SCOPE_MARKER in body.get("message", "")
 
 
 def parse_archived_block(src: str) -> dict:
@@ -102,13 +122,16 @@ def main() -> None:
     if not ids or len(ids) != len(set(ids)):
         sys.exit(f"BLOCKED: META parse failed ({len(ids)} ids, {len(set(ids))} unique) — format changed?")
 
-    changed, failed, moved, archived = [], [], [], []
+    changed, failed, moved, archived, scope_missing = [], [], [], [], []
     archived_stars = {}
     for gid in ids:
         try:
             n, full, is_archived = fetch(gid, token)
         except Exception as e:  # 404, network — keep the old count, report loudly
-            failed.append((gid, str(e)))
+            if is_scope_error(e):
+                scope_missing.append(gid)
+            else:
+                failed.append((gid, str(e)))
             continue
         if full.lower() != gid.lower():
             moved.append((gid, full))
@@ -120,13 +143,32 @@ def main() -> None:
             src = re.sub(r'("%s":\s*\()\d+(,)' % re.escape(gid), r"\g<1>%d\g<2>" % n, src)
             changed.append((gid, old, n))
 
+    if scope_missing:
+        print()
+        print("=" * 70)
+        print(f"ACTION NEEDED: {len(scope_missing)} repo(s) missing from this routine's scope")
+        print("=" * 70)
+        print(
+            "This routine's GitHub credentials only reach repos listed in its own\n"
+            "Repositories field. A repo added to generate.py's META dict but not to\n"
+            "that list can't have its star count refreshed — it silently keeps a\n"
+            "stale number every week until you add it there too.\n"
+            "\n"
+            "Fix: claude.ai/code/routines -> this routine -> pencil icon -> Edit\n"
+            "routine -> Repositories section -> Add repository, for each of:\n"
+        )
+        for gid in scope_missing:
+            print(f"  {gid}")
+        print("\n(Leave 'Allow unrestricted branch pushes' off — read-only is enough.)\n")
+
     if failed:
-        print("FAILED (old counts kept):")
+        print("FAILED (old counts kept, unrelated to routine scope):")
         for a, e in failed:
             print(f"  {a}: {e}")
-        if len(failed) > 5:
-            sys.exit("Too many failures — aborting WITHOUT writing, so a stale rescore "
-                     "can't be stamped with today's date.")
+
+    if len(failed) + len(scope_missing) > 5:
+        sys.exit("Too many failures — aborting WITHOUT writing, so a stale rescore "
+                 "can't be stamped with today's date.")
 
     src = re.sub(r'STARS_CAPTURED = "\d{4}-\d{2}-\d{2}"', f'STARS_CAPTURED = "{today}"', src)
     src = re.sub(r"# Star counts captured \d{4}-\d{2}-\d{2}", f"# Star counts captured {today}", src)
@@ -136,7 +178,8 @@ def main() -> None:
 
     GEN.write_text(src)
 
-    print(f"Refreshed {len(ids)} repos: {len(changed)} changed, {len(failed)} failed. Capture date -> {today}")
+    print(f"Refreshed {len(ids)} repos: {len(changed)} changed, {len(failed)} failed, "
+          f"{len(scope_missing)} missing from routine scope. Capture date -> {today}")
     print("Top movers:")
     for gid, old, n in sorted(changed, key=lambda t: -abs(t[2] - t[1]))[:15]:
         print(f"  {gid}: {old} -> {n} ({n - old:+d})")
@@ -156,7 +199,11 @@ def main() -> None:
         "movers": [{"id": gid, "from": old, "to": n} for gid, old, n in changed],
         "moved": [{"id": a, "to": b} for a, b in moved],
         "archived": [{"id": gid, "since": new_archived[gid], "stars": archived_stars[gid]} for gid in archived],
-        "failed": [{"id": gid, "status": err} for gid, err in failed],
+        "failed": (
+            [{"id": gid, "status": err} for gid, err in failed]
+            + [{"id": gid, "status": "routine-scope: not in this routine's Repositories list"}
+               for gid in scope_missing]
+        ),
         "candidates": [],
     })
 
