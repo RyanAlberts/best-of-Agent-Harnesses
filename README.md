@@ -92,12 +92,24 @@ This list is also published in machine-readable form, so coding agents and resea
 claude mcp add agent-harnesses -- uvx agent-harnesses-mcp
 ```
 
+### Or hire an agent
+
+Don't just read the list — [**agents/**](agents/) ships ready-to-install agent templates that navigate it for you, always against the current week's data:
+
+- [**harness-scout**](agents/harness-scout.md) — describe what you're building; it picks your harness, with evidence and a graveyard check.
+- [**stack-auditor**](agents/stack-auditor.md) — points at your codebase and flags the harnesses you depend on that died.
+- [**harness-radar**](agents/harness-radar.md) — weekly movement briefing: climbers, arrivals, deaths, graduations.
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/agents/harness-scout.md -o .claude/agents/harness-scout.md
+```
+
 ## Contents
 
 - [The landscape at a glance](#the-landscape-at-a-glance)
 - [How to Pick a Harness](#how-to-pick-a-harness)
 - [Pick by use case](#pick-by-use-case)
-- [For agents: harnesses.json, llms.txt, MCP server](#for-agents)
+- [For agents: harnesses.json, llms.txt, MCP server, agent templates](#for-agents)
 - [FAQ](#faq)
 - [Progressive disclosure harnesses](#progressive-disclosure-harnesses) _8 projects_
 - [Coding agent products (IDEs, CLIs, full suites)](#coding-agent-products-ides-clis-full-suites) _18 projects_
