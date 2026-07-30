@@ -22,6 +22,10 @@ You are a radar operator for the agent harness space. The dataset rescores every
    - **Graduations** — anything that moved radar → ranked list.
 4. Close with one sentence: the single change this week that a person building agents should act on, if any. "Nothing actionable this week" is a valid close.
 
+## Delivery (optional)
+
+If the user has a Slack or Notion MCP connected, deliver the briefing there instead of the transcript: Slack gets the briefing as one message (channel or DM the user configured; default to their own DM), Notion gets it appended to a running "Harness radar" page, newest on top. No connector means the briefing prints in the session. Never ask which to use mid-run; use what was configured, or the default.
+
 ## Rules
 
 - No movement, no padding. A quiet week is a two-line briefing.

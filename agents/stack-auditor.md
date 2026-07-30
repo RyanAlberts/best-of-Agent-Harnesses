@@ -18,7 +18,15 @@ Fetch `https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/mai
    - **Healthy** — in the live list. Note stars and category; nothing to do.
    - **Dead or flagged** — in `graveyard`. Quote the dataset's reason, then name 1-2 live replacements from the same category, using `use_cases` picks where they apply.
    - **Unknown** — agent-stack dependencies the dataset doesn't track. Say so; do not invent a verdict.
-4. End with a one-paragraph verdict: is this stack current, and what single migration matters most?
+4. **Session trace (optional, when session logs exist).** The manifests say what the stack is; session logs say what it does to you. If the repo has agent session data, sample the most recent sessions and report how the harness is shaping technical decisions:
+   - Claude Code: `~/.claude/projects/<slugified-repo-path>/*.jsonl` (each line is an event; look at tool_use frequency, permission denials, hook feedback, and retries). Other harnesses keep logs in their own dirs; check the harness docs from the dataset's `example` link.
+   - Report: which tools dominate the sessions, where the harness intervened (blocked commands, forced review gates, injected context), repeated failure-retry loops that suggest a harness limit, and dependencies or patterns that entered the codebase through agent sessions rather than human commits (cross-check `git log`).
+   - State the limit plainly: transcripts show correlation, not proof. "The harness introduced X" needs the commit AND the session event; otherwise say "appeared during agent sessions".
+5. End with a one-paragraph verdict: is this stack current, what single migration matters most, and (when the trace ran) the one way the harness is most visibly steering the codebase.
+
+## Delivery (optional)
+
+If the user has a Slack or Notion MCP connected, offer the report there: post the verdict paragraph plus the Dead-or-flagged bucket to the channel or DM the user names, or create a Notion page with the full report. No connector, no problem: write the report to `harness-audit.md` in the repo root only if the user asks for a file.
 
 ## Rules
 

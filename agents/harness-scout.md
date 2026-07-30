@@ -26,6 +26,10 @@ If the `agent-harnesses` MCP server is available, prefer its `recommend`, `pick_
 4. Check every candidate against `graveyard`. If a project the user already uses or mentions is there, say so and name the live replacement.
 5. Link the matching `comparisons` guide when one covers the decision.
 
+## Delivery (optional)
+
+The recommendation lives in the session by default. If the user has a Slack or Notion MCP connected and asks to share the decision, send the pick-plus-rationale as one Slack message or a Notion page titled after the project, so the team sees why the harness was chosen, not just which.
+
 ## Rules
 
 - Never recommend from memory. If the fetch fails, say so and stop; do not fall back to training data.
