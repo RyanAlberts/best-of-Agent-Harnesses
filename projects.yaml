@@ -436,6 +436,10 @@ projects:
   - name: cocoindex-code
     github_id: cocoindex-io/cocoindex-code
     category: "plugins-mcp-cli"
+  - name: mcp-context-forge
+    github_id: IBM/mcp-context-forge
+    labels: ["python"]
+    category: "plugins-mcp-cli"
   # Memory and state
   - name: cognee
     github_id: topoteretes/cognee
