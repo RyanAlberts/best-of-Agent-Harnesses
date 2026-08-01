@@ -471,6 +471,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("cocoindex-code", "cocoindex-io/cocoindex-code",
                 "Embedded, tree-sitter/AST-based code-search CLI and MCP server that gives coding agents fast semantic lookups over a repo instead of grepping or re-reading whole files into context.",
                 "mostly simple (embedded CLI + MCP server)", oss="❓"),
+        Project("mcp-context-forge", "IBM/mcp-context-forge",
+                "IBM's official AI gateway, registry, and proxy that fronts any MCP, A2A, or REST/gRPC backend behind one endpoint — centralizes discovery, auth, and guardrails in front of the agent's tool calls instead of wiring each agent to each backend directly.",
+                "slightly complex (gateway, registry, federation)", labels=["python"]),
     ],
     "memory": [
         Project("cognee", "topoteretes/cognee",
@@ -716,6 +719,7 @@ META: dict[str, tuple[int, str, str]] = {
     "Infisical/agent-vault": (1953, "https://github.com/Infisical/agent-vault#readme", "Project README"),
     "microsoft/agent-governance-toolkit": (4920, "https://github.com/microsoft/agent-governance-toolkit#readme", "Project README"),
     "cocoindex-io/cocoindex-code": (2573, "https://github.com/cocoindex-io/cocoindex-code#readme", "Project README"),
+    "IBM/mcp-context-forge": (4142, "https://github.com/IBM/mcp-context-forge#readme", "Project README"),
     # evaluation
     "vostride/agent-qa": (168, "https://github.com/vostride/agent-qa#readme", "Natural-language QA harness"),
     "arcprize/ARC-AGI-2": (728, "https://arcprize.org/leaderboard", "ARC Prize leaderboard"),
@@ -834,10 +838,11 @@ RADAR: "list[dict]" = [
     {"id": "bytedance/deer-flow", "via": "weekly discovery"},
     {"id": "plandex-ai/plandex", "via": "weekly discovery"},
     {"id": "ag2ai/ag2", "via": "weekly discovery"},
-    {"id": "IBM/mcp-context-forge", "via": "weekly discovery"},
     {"id": "evalstate/fast-agent", "via": "weekly discovery"},
     {"id": "cocoindex-io/cocoindex-code", "via": "weekly discovery"},
     {"id": "google-antigravity/antigravity-cli", "via": "weekly discovery"},
+    {"id": "google-antigravity/antigravity-sdk-python", "via": "weekly discovery"},
+    {"id": "OthmanAdi/planning-with-files", "via": "weekly discovery"},
     {"id": "rishabhpoddar/teamcopilot", "via": "community · PR #21", "stars": 14,
      "desc": "Deploy AI agents for your team to automate business workflows and coding."},
 ]
@@ -1016,6 +1021,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "RyanAlberts/agentlog": ("n/a", "n/a"),
     "microsoft/agent-governance-toolkit": ("n/a", "n/a"),
     "cocoindex-io/cocoindex-code": ("n/a", "n/a"),
+    "IBM/mcp-context-forge": ("n/a", "n/a"),
     # evaluation
     "vostride/agent-qa": ("headless", "retry"),
     "microsoft/agent-lightning": ("headless", "resumable"),

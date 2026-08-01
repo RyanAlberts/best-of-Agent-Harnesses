@@ -9,7 +9,7 @@
     "feed_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/feed.json",
     "license": "CC-BY-SA-4.0",
     "stars_captured": "2026-07-26",
-    "project_count": 141,
+    "project_count": 142,
     "graveyard_count": 3,
     "tiers": [
       "super simple",
@@ -374,7 +374,7 @@
     {
       "kind": "derived",
       "q": "How many of these agent harnesses are open source?",
-      "a": "111 of 141 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
+      "a": "112 of 142 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
       "slug": "how-many-of-these-agent-harnesses-are-open-source"
     },
     {
@@ -5804,6 +5804,35 @@
       "deep_dive": null
     },
     {
+      "name": "mcp-context-forge",
+      "github_id": "IBM/mcp-context-forge",
+      "url": "https://github.com/IBM/mcp-context-forge",
+      "slug": "mcp-context-forge",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#mcp-context-forge",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/mcp-context-forge/",
+      "description": "IBM's official AI gateway, registry, and proxy that fronts any MCP, A2A, or REST/gRPC backend behind one endpoint — centralizes discovery, auth, and guardrails in front of the agent's tool calls instead of wiring each agent to each backend directly.",
+      "category": "plugins-mcp-cli",
+      "category_title": "Plugins, MCPs, CLI tools",
+      "stars": 4142,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (gateway, registry, federation)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [
+        "mcp",
+        "python"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/IBM/mcp-context-forge#readme"
+      },
+      "deep_dive": null
+    },
+    {
       "name": "cocoindex-code",
       "github_id": "cocoindex-io/cocoindex-code",
       "url": "https://github.com/cocoindex-io/cocoindex-code",
@@ -7361,21 +7390,27 @@
   ],
   "radar": [
     {
+      "github_id": "OthmanAdi/planning-with-files",
+      "stars": 25748,
+      "desc": "Persistent file-based planning for AI coding agents and long-running tasks. Crash-proof markdown plans, session recovery after /clear and compaction, per-tur…",
+      "via": "weekly discovery"
+    },
+    {
       "github_id": "ag2ai/ag2",
       "stars": 4799,
       "desc": "AG2 (formerly AutoGen): The Open-Source AgentOS.Join us at: https://discord.gg/sNGSwQME3x",
       "via": "weekly discovery"
     },
     {
-      "github_id": "IBM/mcp-context-forge",
-      "stars": 4142,
-      "desc": "An AI Gateway, registry, and proxy that sits in front of any MCP, A2A, or REST/gRPC APIs, exposing a unified endpoint with centralized discovery, guardrails…",
-      "via": "weekly discovery"
-    },
-    {
       "github_id": "evalstate/fast-agent",
       "stars": 3873,
       "desc": "Code, Build and Evaluate agents - excellent Model and Skills/MCP/ACP/A2A Support",
+      "via": "weekly discovery"
+    },
+    {
+      "github_id": "google-antigravity/antigravity-sdk-python",
+      "stars": 2648,
+      "desc": "A Python library for building AI agents that leverage the full power of Google Antigravity.",
       "via": "weekly discovery"
     },
     {

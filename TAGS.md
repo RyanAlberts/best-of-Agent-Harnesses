@@ -1,13 +1,13 @@
 <!-- markdownlint-disable -->
 # Tags — cross-reference
 
-_Auto-generated from `scripts/generate.py`. 141 projects across 22 canonical tags. Edit projects in `generate.py` (not here) and rerun the script._
+_Auto-generated from `scripts/generate.py`. 142 projects across 22 canonical tags. Edit projects in `generate.py` (not here) and rerun the script._
 
 Tag chips appear next to each project in [README.md](README.md). This page lists every tag once with the projects that carry it, grouped by category and sorted by GitHub stars within each category.
 
 ## All tags
 
-[`mcp`](#mcp) (31) · [`memory`](#memory) (25) · [`multi-agent`](#multi-agent) (23) · [`evals`](#evals) (18) · [`voice`](#voice) (2) · [`vision`](#vision) (3) · [`browser`](#browser) (7) · [`sandbox`](#sandbox) (25) · [`low-code`](#low-code) (4) · [`rag`](#rag) (6) · [`tool-discovery`](#tool-discovery) (5) · [`training`](#training) (5) · [`workflow`](#workflow) (9) · [`typed`](#typed) (3) · [`local`](#local) (2) · [`provider-agnostic`](#provider-agnostic) (10) · [`cli`](#cli) (18) · [`ide`](#ide) (11) · [`tui`](#tui) (3) · [`rust`](#rust) (4) · [`python`](#python) (69) · [`typescript`](#typescript) (38)
+[`mcp`](#mcp) (32) · [`memory`](#memory) (25) · [`multi-agent`](#multi-agent) (23) · [`evals`](#evals) (18) · [`voice`](#voice) (2) · [`vision`](#vision) (3) · [`browser`](#browser) (7) · [`sandbox`](#sandbox) (25) · [`low-code`](#low-code) (4) · [`rag`](#rag) (6) · [`tool-discovery`](#tool-discovery) (5) · [`training`](#training) (5) · [`workflow`](#workflow) (9) · [`typed`](#typed) (3) · [`local`](#local) (2) · [`provider-agnostic`](#provider-agnostic) (10) · [`cli`](#cli) (18) · [`ide`](#ide) (11) · [`tui`](#tui) (3) · [`rust`](#rust) (4) · [`python`](#python) (70) · [`typescript`](#typescript) (38)
 
 ---
 
@@ -53,6 +53,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [MCP TypeScript SDK](https://github.com/modelcontextprotocol/typescript-sdk) — ⭐13k — Official MCP implementation for Node/TS; reference for the protocol.
 - [MCP Inspector](https://github.com/modelcontextprotocol/inspector) — ⭐10.5k — GUI to test and debug MCP servers; inspect tools, resources, and prompts.
 - [MCP Registry](https://github.com/modelcontextprotocol/registry) — ⭐7.1k — Official, community-driven registry for MCP servers—the "app store" MCP clients use to discover servers. Maintained by Anthropic + ecosystem maintainers; v0.1 API frozen, production-grade.
+- [mcp-context-forge](https://github.com/IBM/mcp-context-forge) — ⭐4.1k — IBM's official AI gateway, registry, and proxy that fronts any MCP, A2A, or REST/gRPC backend behind one endpoint — centralizes discovery, auth, and guardrails in front of the agent's tool calls instead of wiring each agent to each backend directly.
 - [cocoindex-code](https://github.com/cocoindex-io/cocoindex-code) — ⭐2.6k — Embedded, tree-sitter/AST-based code-search CLI and MCP server that gives coding agents fast semantic lookups over a repo instead of grepping or re-reading whole files into context.
 - [Docker MCP Gateway](https://github.com/docker/mcp-gateway) — ⭐1.5k — Docker's official MCP CLI plugin / gateway; container-aware MCP tooling from Docker (replaces deprecated `docker/mcp-servers` path).
 - [puppeteer-real-browser-mcp](https://github.com/withLinda/puppeteer-real-browser-mcp-server) — ⭐25 — Puppeteer MCP with real-browser and anti-detection; for agents that need to drive sites that block headless.
@@ -621,6 +622,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [aider](https://github.com/Aider-AI/aider) — ⭐47.7k — Git-aware CLI pair programmer; edits in-repo, supports multiple models and MCP so agents see version control and tools.
 - [MCP Python SDK](https://github.com/modelcontextprotocol/python-sdk) — ⭐23.7k — Official SDK to build and consume MCP servers/clients in Python; stdio and SSE transports.
 - [Agent Governance Toolkit](https://github.com/microsoft/agent-governance-toolkit) — ⭐4.9k — Microsoft's policy-enforcement layer for autonomous agents: zero-trust identity, execution sandboxing, and OWASP Agentic Top-10 coverage sit in front of the agent loop as a **harness** security layer—the governance counterpart to Infisical's agent-vault.
+- [mcp-context-forge](https://github.com/IBM/mcp-context-forge) — ⭐4.1k — IBM's official AI gateway, registry, and proxy that fronts any MCP, A2A, or REST/gRPC backend behind one endpoint — centralizes discovery, auth, and guardrails in front of the agent's tool calls instead of wiring each agent to each backend directly.
 - [agentlog](https://github.com/RyanAlberts/agentlog) — ⭐1 — Persistent decision memory for any project: `remember`, `recall`, `reflect`. Single-file Python CLI that stores decisions as JSONL and uses Claude or Gemini to retrieve and synthesize patterns—Karpathy's LLM Wiki concept as a CLI.
 
 **Memory and state**
@@ -799,6 +801,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [aider](https://github.com/Aider-AI/aider) — ⭐47.7k — Git-aware CLI pair programmer; edits in-repo, supports multiple models and MCP so agents see version control and tools.
 - [MCP Python SDK](https://github.com/modelcontextprotocol/python-sdk) — ⭐23.7k — Official SDK to build and consume MCP servers/clients in Python; stdio and SSE transports.
 - [Agent Governance Toolkit](https://github.com/microsoft/agent-governance-toolkit) — ⭐4.9k — Microsoft's policy-enforcement layer for autonomous agents: zero-trust identity, execution sandboxing, and OWASP Agentic Top-10 coverage sit in front of the agent loop as a **harness** security layer—the governance counterpart to Infisical's agent-vault.
+- [mcp-context-forge](https://github.com/IBM/mcp-context-forge) — ⭐4.1k — IBM's official AI gateway, registry, and proxy that fronts any MCP, A2A, or REST/gRPC backend behind one endpoint — centralizes discovery, auth, and guardrails in front of the agent's tool calls instead of wiring each agent to each backend directly.
 - [agentlog](https://github.com/RyanAlberts/agentlog) — ⭐1 — Persistent decision memory for any project: `remember`, `recall`, `reflect`. Single-file Python CLI that stores decisions as JSONL and uses Claude or Gemini to retrieve and synthesize patterns—Karpathy's LLM Wiki concept as a CLI.
 
 **Memory and state**
