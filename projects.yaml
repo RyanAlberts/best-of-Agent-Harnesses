@@ -327,6 +327,14 @@ projects:
   - name: youtu-agent
     github_id: TencentCloudADP/youtu-agent
     category: "frameworks"
+  - name: fast-agent
+    github_id: evalstate/fast-agent
+    labels: ["python"]
+    category: "frameworks"
+  - name: deepagentsjs
+    github_id: langchain-ai/deepagentsjs
+    labels: ["javascript"]
+    category: "frameworks"
   # Multi-agent and orchestration
   - name: openai-agents-python
     github_id: openai/openai-agents-python
@@ -435,6 +443,9 @@ projects:
     category: "plugins-mcp-cli"
   - name: cocoindex-code
     github_id: cocoindex-io/cocoindex-code
+    category: "plugins-mcp-cli"
+  - name: MCP Context Forge
+    github_id: IBM/mcp-context-forge
     category: "plugins-mcp-cli"
   # Memory and state
   - name: cognee
