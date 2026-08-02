@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1320 880" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
 <rect width="1320" height="880" fill="#ffffff" rx="8"/>
 <text x="660.0" y="52" text-anchor="middle" font-size="30" font-weight="700" fill="#111827">The Agent Harness Landscape</text>
-<text x="660.0" y="80" text-anchor="middle" font-size="15" fill="#6b7280">141 hand-curated projects · GitHub stars vs. adoption surface area · stars captured 2026-07-26</text>
+<text x="660.0" y="80" text-anchor="middle" font-size="15" fill="#6b7280">141 hand-curated projects · GitHub stars vs. adoption surface area · stars captured 2026-08-02</text>
 <circle cx="80" cy="106" r="6" fill="#8b5cf6"/>
 <text x="91" y="110" font-size="12.5" fill="#374151">Progressive disclosure</text>
 <circle cx="262.2" cy="106" r="6" fill="#ef4444"/>
@@ -53,167 +53,167 @@
 <circle cx="316.4" cy="749.9" r="4.5" fill="#10b981" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>agentlog — ⭐1</title></circle>
 <circle cx="298.8" cy="681.2" r="4.5" fill="#f59e0b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>pmstack — ⭐8</title></circle>
 <circle cx="628.8" cy="675.3" r="4.5" fill="#10b981" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Better-OpenCodeMCP — ⭐9</title></circle>
-<circle cx="141.0" cy="657.1" r="4.5" fill="#a16207" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Community-curated agent lists — ⭐13</title></circle>
+<circle cx="141.0" cy="653.4" r="4.5" fill="#a16207" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Community-curated agent lists — ⭐14</title></circle>
 <circle cx="549.0" cy="631.0" r="4.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>TRAIL — ⭐22</title></circle>
 <circle cx="466.0" cy="624.7" r="4.5" fill="#10b981" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>puppeteer-real-browser-mcp — ⭐25</title></circle>
 <circle cx="598.0" cy="617.3" r="4.5" fill="#8b5cf6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>ToolRAG — ⭐29</title></circle>
-<circle cx="845.0" cy="586.5" r="4.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>SUPER — ⭐54</title></circle>
-<circle cx="811.5" cy="575.1" r="4.5" fill="#0ea5e9" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Talon — ⭐68</title></circle>
-<circle cx="489.2" cy="567.7" r="4.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>letta-evals — ⭐79</title></circle>
+<circle cx="845.0" cy="583.9" r="4.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>SUPER — ⭐57</title></circle>
+<circle cx="811.5" cy="573.0" r="4.5" fill="#0ea5e9" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Talon — ⭐71</title></circle>
+<circle cx="489.2" cy="567.1" r="4.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>letta-evals — ⭐80</title></circle>
 <circle cx="1070.6" cy="561.2" r="4.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>AgencyBench — ⭐90</title></circle>
-<circle cx="495.0" cy="557.0" r="4.5" fill="#f59e0b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>LoopTroop — ⭐98</title></circle>
-<circle cx="1199.5" cy="535.6" r="4.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Proliferate — ⭐151</title></circle>
-<circle cx="1213.3" cy="532.7" r="4.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>VitaBench — ⭐160</title></circle>
-<circle cx="809.7" cy="530.3" r="4.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>agent-qa — ⭐168</title></circle>
-<circle cx="1139.9" cy="525.8" r="4.5" fill="#8b5cf6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>ToolGen — ⭐184</title></circle>
+<circle cx="495.0" cy="553.1" r="4.5" fill="#f59e0b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>LoopTroop — ⭐106</title></circle>
+<circle cx="1199.5" cy="534.0" r="4.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Proliferate — ⭐156</title></circle>
+<circle cx="1213.3" cy="532.1" r="4.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>VitaBench — ⭐162</title></circle>
+<circle cx="809.7" cy="529.7" r="4.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>agent-qa — ⭐170</title></circle>
+<circle cx="1139.9" cy="526.0" r="4.5" fill="#8b5cf6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>ToolGen — ⭐183</title></circle>
 <circle cx="523.7" cy="521.2" r="4.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>SuperAgentX — ⭐202</title></circle>
-<circle cx="887.6" cy="498.4" r="4.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>AgentBox — ⭐320</title></circle>
-<circle cx="1057.2" cy="497.7" r="4.5" fill="#ec4899" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>AgentRL — ⭐324</title></circle>
-<circle cx="559.5" cy="493.5" r="4.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>arc-agi-benchmarking — ⭐353</title></circle>
-<circle cx="295.1" cy="492.9" r="4.5" fill="#f59e0b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>AutoHarness — ⭐357</title></circle>
-<circle cx="1169.5" cy="482.3" r="4.5" fill="#14b8a6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>openagents — ⭐442</title></circle>
+<circle cx="1057.2" cy="496.8" r="4.5" fill="#ec4899" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>AgentRL — ⭐330</title></circle>
+<circle cx="887.6" cy="496.5" r="4.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>AgentBox — ⭐332</title></circle>
+<circle cx="559.5" cy="493.1" r="4.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>arc-agi-benchmarking — ⭐356</title></circle>
+<circle cx="295.1" cy="492.1" r="4.5" fill="#f59e0b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>AutoHarness — ⭐363</title></circle>
+<circle cx="1169.5" cy="482.1" r="4.5" fill="#14b8a6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>openagents — ⭐444</title></circle>
 <circle cx="286.2" cy="481.1" r="4.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>AgentSilex — ⭐453</title></circle>
 <circle cx="1092.1" cy="475.9" r="4.5" fill="#8b5cf6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>MCP-Zero — ⭐503</title></circle>
-<circle cx="876.9" cy="473.0" r="4.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>claw-code-agent — ⭐534</title></circle>
-<circle cx="741.8" cy="472.5" r="4.5" fill="#f59e0b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>RepoMaster — ⭐539</title></circle>
-<circle cx="905.6" cy="471.5" r="4.5" fill="#8b5cf6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>langgraph-bigtool — ⭐550</title></circle>
-<circle cx="811.5" cy="468.0" r="4.5" fill="#a16207" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>open-harness — ⭐590</title></circle>
-<circle cx="744.1" cy="467.0" r="4.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>inspect_evals — ⭐603</title></circle>
-<circle cx="914.7" cy="458.8" r="4.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>SWE-Gym — ⭐711</title></circle>
-<circle cx="784.2" cy="458.8" r="4.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>swe-smith — ⭐711</title></circle>
-<circle cx="256.8" cy="457.6" r="4.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>ARC-AGI-2 — ⭐728</title></circle>
-<circle cx="919.5" cy="436.7" r="4.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>WebVoyager — ⭐1.1k</title></circle>
+<circle cx="876.9" cy="472.7" r="4.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>claw-code-agent — ⭐537</title></circle>
+<circle cx="741.8" cy="472.3" r="4.5" fill="#f59e0b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>RepoMaster — ⭐541</title></circle>
+<circle cx="905.6" cy="471.3" r="4.5" fill="#8b5cf6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>langgraph-bigtool — ⭐552</title></circle>
+<circle cx="811.5" cy="467.9" r="4.5" fill="#a16207" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>open-harness — ⭐592</title></circle>
+<circle cx="744.1" cy="466.3" r="4.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>inspect_evals — ⭐611</title></circle>
+<circle cx="914.7" cy="458.6" r="4.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>SWE-Gym — ⭐714</title></circle>
+<circle cx="784.2" cy="458.0" r="4.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>swe-smith — ⭐722</title></circle>
+<circle cx="256.8" cy="457.4" r="4.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>ARC-AGI-2 — ⭐731</title></circle>
+<circle cx="919.5" cy="436.6" r="4.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>WebVoyager — ⭐1.1k</title></circle>
 <circle cx="740.2" cy="424.7" r="4.5" fill="#0ea5e9" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>AIlice — ⭐1.4k</title></circle>
-<circle cx="812.4" cy="421.7" r="4.5" fill="#10b981" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Docker MCP Gateway — ⭐1.5k</title></circle>
-<circle cx="1204.2" cy="419.9" r="4.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>WebArena — ⭐1.6k</title></circle>
-<circle cx="465.6" cy="408.7" r="4.5" fill="#10b981" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>agent-vault — ⭐2k</title></circle>
+<circle cx="812.4" cy="421.3" r="4.5" fill="#10b981" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Docker MCP Gateway — ⭐1.5k</title></circle>
+<circle cx="1204.2" cy="419.5" r="4.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>WebArena — ⭐1.6k</title></circle>
+<circle cx="465.6" cy="407.6" r="4.5" fill="#10b981" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>agent-vault — ⭐2k</title></circle>
 <circle cx="878.6" cy="403.3" r="4.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>AgentStack — ⭐2.2k</title></circle>
-<circle cx="1200.9" cy="398.3" r="4.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>inspect_ai — ⭐2.4k</title></circle>
-<circle cx="475.1" cy="395.0" r="4.5" fill="#10b981" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>cocoindex-code — ⭐2.6k</title></circle>
+<circle cx="1200.9" cy="397.5" r="4.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>inspect_ai — ⭐2.4k</title></circle>
+<circle cx="475.1" cy="394.6" r="4.5" fill="#10b981" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>cocoindex-code — ⭐2.6k</title></circle>
 <circle cx="1221.6" cy="382.2" r="4.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Bee Agent Framework — ⭐3.3k</title></circle>
-<circle cx="765.6" cy="380.2" r="4.5" fill="#a16207" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>openai-agents-js — ⭐3.5k</title></circle>
-<circle cx="1200.5" cy="378.4" r="4.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>AgentBench — ⭐3.6k</title></circle>
+<circle cx="765.6" cy="379.6" r="4.5" fill="#a16207" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>openai-agents-js — ⭐3.5k</title></circle>
+<circle cx="1200.5" cy="378.0" r="4.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>AgentBench — ⭐3.6k</title></circle>
 <circle cx="602.3" cy="366.4" r="4.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>youtu-agent — ⭐4.6k</title></circle>
-<circle cx="601.7" cy="363.1" r="4.5" fill="#f59e0b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>skillhub — ⭐4.9k</title></circle>
-<circle cx="859.5" cy="362.9" r="4.5" fill="#10b981" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Agent Governance Toolkit — ⭐4.9k</title></circle>
-<circle cx="1198.4" cy="361.3" r="4.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>AgentVerse — ⭐5.1k</title></circle>
-<circle cx="930.7" cy="359.1" r="4.5" fill="#a16207" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Cloudflare Agents — ⭐5.3k</title></circle>
-<circle cx="565.3" cy="358.6" r="4.5" fill="#f59e0b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>agents-cli — ⭐5.4k</title></circle>
-<circle cx="882.9" cy="357.5" r="4.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>SWE-bench — ⭐5.5k</title></circle>
-<circle cx="479.2" cy="347.6" r="4.5" fill="#a16207" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>strands-agents — ⭐6.7k</title></circle>
-<circle cx="751.3" cy="344.9" r="4.5" fill="#10b981" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>MCP Registry — ⭐7.1k</title></circle>
-<circle cx="456.1" cy="343.9" r="4.5" fill="#f59e0b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>get-shit-done — ⭐7.2k</title></circle>
-<circle cx="823.9" cy="340.6" r="4.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>agent-squad — ⭐7.7k</title></circle>
-<circle cx="1189.1" cy="340.5" r="4.5" fill="#f59e0b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Claude Agent SDK — ⭐7.7k</title></circle>
-<circle cx="1220.8" cy="339.2" r="4.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>R2R — ⭐7.9k</title></circle>
-<circle cx="919.1" cy="336.7" r="4.5" fill="#14b8a6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>MiroThinker — ⭐8.4k</title></circle>
-<circle cx="575.4" cy="335.7" r="4.5" fill="#ec4899" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>PraisonAI — ⭐8.5k</title></circle>
-<circle cx="160.4" cy="325.5" r="6.5" fill="#10b981" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>MCP Inspector — ⭐10.5k</title></circle>
-<circle cx="1234.2" cy="324.1" r="4.5" fill="#ec4899" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>hive — ⭐10.8k</title></circle>
-<circle cx="815.7" cy="317.1" r="4.5" fill="#ec4899" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Microsoft Agent Framework — ⭐12.4k</title></circle>
-<circle cx="437.1" cy="314.9" r="4.5" fill="#10b981" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>MCP TypeScript SDK — ⭐13k</title></circle>
-<circle cx="830.1" cy="314.4" r="4.5" fill="#a16207" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>E2B — ⭐13.1k</title></circle>
-<circle cx="1139.1" cy="308.3" r="4.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>botpress — ⭐14.8k</title></circle>
-<circle cx="1222.0" cy="307.5" r="4.5" fill="#0ea5e9" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>OpenHarness (HKUDS) — ⭐15k</title></circle>
+<circle cx="601.7" cy="363.7" r="4.5" fill="#f59e0b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>skillhub — ⭐4.8k</title></circle>
+<circle cx="1198.4" cy="361.2" r="4.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>AgentVerse — ⭐5.1k</title></circle>
+<circle cx="930.7" cy="358.9" r="4.5" fill="#a16207" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Cloudflare Agents — ⭐5.3k</title></circle>
+<circle cx="565.3" cy="357.8" r="4.5" fill="#f59e0b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>agents-cli — ⭐5.5k</title></circle>
+<circle cx="882.9" cy="357.0" r="4.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>SWE-bench — ⭐5.5k</title></circle>
+<circle cx="859.5" cy="356.8" r="4.5" fill="#10b981" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Agent Governance Toolkit — ⭐5.6k</title></circle>
+<circle cx="479.2" cy="347.1" r="4.5" fill="#a16207" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>strands-agents — ⭐6.8k</title></circle>
+<circle cx="751.3" cy="344.8" r="4.5" fill="#10b981" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>MCP Registry — ⭐7.1k</title></circle>
+<circle cx="456.1" cy="341.5" r="4.5" fill="#f59e0b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>get-shit-done — ⭐7.6k</title></circle>
+<circle cx="823.9" cy="340.5" r="4.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>agent-squad — ⭐7.7k</title></circle>
+<circle cx="1189.1" cy="340.2" r="4.5" fill="#f59e0b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Claude Agent SDK — ⭐7.8k</title></circle>
+<circle cx="1220.8" cy="339.1" r="4.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>R2R — ⭐8k</title></circle>
+<circle cx="919.1" cy="336.6" r="4.5" fill="#14b8a6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>MiroThinker — ⭐8.4k</title></circle>
+<circle cx="575.4" cy="335.6" r="4.5" fill="#ec4899" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>PraisonAI — ⭐8.5k</title></circle>
+<circle cx="160.4" cy="325.0" r="6.5" fill="#10b981" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>MCP Inspector — ⭐10.6k</title></circle>
+<circle cx="1234.2" cy="323.8" r="4.5" fill="#ec4899" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>hive — ⭐10.8k</title></circle>
+<circle cx="815.7" cy="316.5" r="4.5" fill="#ec4899" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Microsoft Agent Framework — ⭐12.5k</title></circle>
+<circle cx="437.1" cy="314.6" r="4.5" fill="#10b981" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>MCP TypeScript SDK — ⭐13k</title></circle>
+<circle cx="830.1" cy="313.9" r="4.5" fill="#a16207" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>E2B — ⭐13.2k</title></circle>
+<circle cx="1139.1" cy="308.2" r="4.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>botpress — ⭐14.8k</title></circle>
+<circle cx="1222.0" cy="307.1" r="4.5" fill="#0ea5e9" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>OpenHarness (HKUDS) — ⭐15.2k</title></circle>
 <circle cx="1130.6" cy="300.2" r="4.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Agent Lightning — ⭐17.4k</title></circle>
-<circle cx="906.1" cy="297.2" r="4.5" fill="#0ea5e9" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Agent Zero — ⭐18.5k</title></circle>
-<circle cx="1188.5" cy="296.4" r="4.5" fill="#0ea5e9" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Eliza — ⭐18.8k</title></circle>
-<circle cx="784.9" cy="296.4" r="4.5" fill="#a16207" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>pydantic-ai — ⭐18.8k</title></circle>
-<circle cx="523.5" cy="295.1" r="4.5" fill="#8b5cf6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>context-mode — ⭐19.3k</title></circle>
-<circle cx="821.7" cy="293.9" r="4.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>oh-my-pi — ⭐19.8k</title></circle>
-<circle cx="909.0" cy="293.6" r="4.5" fill="#f59e0b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>SWE-agent — ⭐19.9k</title></circle>
-<circle cx="1152.9" cy="291.3" r="4.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Google ADK — ⭐20.9k</title></circle>
+<circle cx="906.1" cy="296.8" r="4.5" fill="#0ea5e9" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Agent Zero — ⭐18.7k</title></circle>
+<circle cx="1188.5" cy="296.3" r="4.5" fill="#0ea5e9" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Eliza — ⭐18.9k</title></circle>
+<circle cx="784.9" cy="296.0" r="4.5" fill="#a16207" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>pydantic-ai — ⭐19k</title></circle>
+<circle cx="523.5" cy="294.5" r="4.5" fill="#8b5cf6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>context-mode — ⭐19.6k</title></circle>
+<circle cx="909.0" cy="293.5" r="4.5" fill="#f59e0b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>SWE-agent — ⭐20k</title></circle>
+<circle cx="1152.9" cy="291.1" r="4.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Google ADK — ⭐21k</title></circle>
+<circle cx="821.7" cy="290.5" r="4.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>oh-my-pi — ⭐21.2k</title></circle>
 <circle cx="1175.9" cy="290.4" r="4.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>rasa — ⭐21.3k</title></circle>
-<circle cx="269.8" cy="286.0" r="6.5" fill="#8b5cf6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>agents.md — ⭐23.2k</title></circle>
-<circle cx="518.5" cy="284.9" r="4.5" fill="#10b981" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>MCP Python SDK — ⭐23.7k</title></circle>
-<circle cx="475.5" cy="284.4" r="4.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>letta — ⭐24k</title></circle>
+<circle cx="269.8" cy="285.7" r="6.5" fill="#8b5cf6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>agents.md — ⭐23.4k</title></circle>
+<circle cx="518.5" cy="284.7" r="4.5" fill="#10b981" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>MCP Python SDK — ⭐23.8k</title></circle>
+<circle cx="475.5" cy="284.3" r="4.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>letta — ⭐24.1k</title></circle>
 <circle cx="833.0" cy="283.6" r="4.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Roo Code — ⭐24.4k</title></circle>
-<circle cx="555.6" cy="281.1" r="4.5" fill="#84cc16" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>beads — ⭐25.7k</title></circle>
-<circle cx="771.8" cy="280.8" r="4.5" fill="#a16207" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>vercel/ai — ⭐25.8k</title></circle>
-<circle cx="1152.3" cy="280.0" r="4.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Symphony — ⭐26.2k</title></circle>
-<circle cx="919.7" cy="279.8" r="4.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>qwen-code — ⭐26.3k</title></circle>
-<circle cx="820.0" cy="279.4" r="4.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Kilo Code — ⭐26.5k</title></circle>
-<circle cx="851.5" cy="279.3" r="4.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>mastra — ⭐26.6k</title></circle>
-<circle cx="868.6" cy="278.9" r="4.5" fill="#a16207" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>deepagents — ⭐26.8k</title></circle>
-<circle cx="870.5" cy="278.8" r="4.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>crush — ⭐26.9k</title></circle>
-<circle cx="1054.7" cy="278.1" r="4.5" fill="#6366f1" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>MLflow — ⭐27.2k</title></circle>
-<circle cx="907.9" cy="277.6" r="4.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>vibe-kanban — ⭐27.5k</title></circle>
-<circle cx="481.7" cy="276.4" r="4.5" fill="#ec4899" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>openai-agents-python — ⭐28.2k</title></circle>
-<circle cx="1122.1" cy="276.1" r="4.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>semantic-kernel — ⭐28.4k</title></circle>
-<circle cx="579.2" cy="275.8" r="4.5" fill="#a16207" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>smolagents — ⭐28.5k</title></circle>
-<circle cx="1160.8" cy="275.6" r="4.5" fill="#14b8a6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>gpt-researcher — ⭐28.6k</title></circle>
-<circle cx="854.1" cy="274.4" r="4.5" fill="#84cc16" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>cognee — ⭐29.4k</title></circle>
-<circle cx="1140.3" cy="274.3" r="4.5" fill="#a16207" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Composio — ⭐29.4k</title></circle>
-<circle cx="791.1" cy="270.5" r="4.5" fill="#10b981" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>github-mcp-server — ⭐31.7k</title></circle>
-<circle cx="873.4" cy="270.3" r="4.5" fill="#6366f1" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Langfuse — ⭐31.9k</title></circle>
-<circle cx="893.9" cy="267.4" r="4.5" fill="#ec4899" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>ChatDev — ⭐33.8k</title></circle>
-<circle cx="1161.8" cy="265.5" r="4.5" fill="#10b981" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>continue — ⭐35.1k</title></circle>
-<circle cx="452.6" cy="265.0" r="4.5" fill="#10b981" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Playwright MCP — ⭐35.5k</title></circle>
-<circle cx="1083.8" cy="264.2" r="4.5" fill="#0ea5e9" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Khoj — ⭐36k</title></circle>
-<circle cx="924.7" cy="261.4" r="4.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>langgraph — ⭐38.2k</title></circle>
-<circle cx="162.5" cy="261.3" r="6.5" fill="#f59e0b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>wshobson/agents — ⭐38.2k</title></circle>
-<circle cx="236.7" cy="258.5" r="6.5" fill="#8b5cf6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>awesome-cursorrules — ⭐40.4k</title></circle>
-<circle cx="1206.5" cy="257.3" r="4.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>agno — ⭐41.4k</title></circle>
-<circle cx="461.5" cy="250.4" r="4.5" fill="#10b981" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>chrome-devtools-mcp — ⭐47.6k</title></circle>
-<circle cx="847.7" cy="250.3" r="4.5" fill="#10b981" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>aider — ⭐47.7k</title></circle>
-<circle cx="194.9" cy="247.0" r="6.5" fill="#f59e0b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>awesome-claude-code — ⭐51k</title></circle>
-<circle cx="1052.0" cy="246.9" r="4.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>llama-index — ⭐51.1k</title></circle>
-<circle cx="908.7" cy="246.3" r="4.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>goose — ⭐51.7k</title></circle>
-<circle cx="518.8" cy="243.5" r="6.5" fill="#a16207" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>LiteLLM — ⭐54.7k</title></circle>
-<circle cx="1106.0" cy="243.3" r="4.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Flowise — ⭐54.9k</title></circle>
-<circle cx="1198.8" cy="242.2" r="4.5" fill="#ec4899" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>crewAI — ⭐56.2k</title></circle>
-<circle cx="1089.2" cy="240.9" r="4.5" fill="#ec4899" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>OpenManus — ⭐57.7k</title></circle>
-<circle cx="216.3" cy="239.1" r="6.5" fill="#10b981" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Context7 — ⭐59.8k</title></circle>
-<circle cx="1166.2" cy="239.0" r="4.5" fill="#ec4899" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>autogen — ⭐60k</title></circle>
-<circle cx="874.0" cy="237.6" r="4.5" fill="#84cc16" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Mem0 — ⭐61.7k</title></circle>
-<circle cx="497.4" cy="236.9" r="6.5" fill="#8b5cf6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Headroom — ⭐62.5k</title></circle>
-<circle cx="788.6" cy="234.9" r="4.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Cline — ⭐65.1k</title></circle>
-<circle cx="466.0" cy="233.3" r="6.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Open Interpreter — ⭐67.3k</title></circle>
-<circle cx="1108.4" cy="231.7" r="4.5" fill="#ec4899" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>MetaGPT — ⭐69.5k</title></circle>
-<circle cx="858.7" cy="229.8" r="4.5" fill="#a16207" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Daytona — ⭐72.2k</title></circle>
-<circle cx="1211.2" cy="226.0" r="4.5" fill="#14b8a6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>DeerFlow — ⭐77.9k</title></circle>
-<circle cx="883.7" cy="226.0" r="4.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>pi — ⭐78k</title></circle>
-<circle cx="586.2" cy="224.4" r="6.5" fill="#f59e0b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>addyosmani/agent-skills — ⭐80.4k</title></circle>
-<circle cx="1137.6" cy="223.4" r="4.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>OpenHands — ⭐82.1k</title></circle>
-<circle cx="881.4" cy="219.6" r="4.5" fill="#84cc16" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>claude-mem — ⭐88.6k</title></circle>
-<circle cx="495.0" cy="219.5" r="6.5" fill="#10b981" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>MCP Servers — ⭐88.9k</title></circle>
-<circle cx="857.7" cy="212.9" r="6.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Codex — ⭐102k</title></circle>
-<circle cx="888.7" cy="210.7" r="6.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Gemini CLI — ⭐106k</title></circle>
-<circle cx="926.7" cy="210.4" r="6.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>browser-use — ⭐107k</title></circle>
-<circle cx="823.7" cy="202.8" r="6.5" fill="#f59e0b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>GStack — ⭐124k</title></circle>
-<circle cx="1192.6" cy="196.1" r="4.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>langchain — ⭐143k</title></circle>
-<circle cx="1078.7" cy="193.5" r="6.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Dify — ⭐150k</title></circle>
-<circle cx="1217.5" cy="192.8" r="6.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>langflow — ⭐152k</title></circle>
-<circle cx="498.1" cy="189.0" r="6.5" fill="#f59e0b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Anthropic Skills — ⭐164k</title></circle>
+<circle cx="555.6" cy="280.8" r="4.5" fill="#84cc16" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>beads — ⭐25.8k</title></circle>
+<circle cx="771.8" cy="280.5" r="4.5" fill="#a16207" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>vercel/ai — ⭐26k</title></circle>
+<circle cx="1152.3" cy="279.7" r="4.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Symphony — ⭐26.4k</title></circle>
+<circle cx="919.7" cy="279.4" r="4.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>qwen-code — ⭐26.5k</title></circle>
+<circle cx="820.0" cy="279.1" r="4.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Kilo Code — ⭐26.7k</title></circle>
+<circle cx="851.5" cy="278.9" r="4.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>mastra — ⭐26.8k</title></circle>
+<circle cx="870.5" cy="278.5" r="4.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>crush — ⭐27k</title></circle>
+<circle cx="868.6" cy="278.1" r="4.5" fill="#a16207" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>deepagents — ⭐27.2k</title></circle>
+<circle cx="1054.7" cy="277.9" r="4.5" fill="#6366f1" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>MLflow — ⭐27.3k</title></circle>
+<circle cx="907.9" cy="277.4" r="4.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>vibe-kanban — ⭐27.6k</title></circle>
+<circle cx="481.7" cy="276.1" r="4.5" fill="#ec4899" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>openai-agents-python — ⭐28.3k</title></circle>
+<circle cx="1122.1" cy="276.0" r="4.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>semantic-kernel — ⭐28.4k</title></circle>
+<circle cx="579.2" cy="275.6" r="4.5" fill="#a16207" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>smolagents — ⭐28.6k</title></circle>
+<circle cx="1160.8" cy="275.4" r="4.5" fill="#14b8a6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>gpt-researcher — ⭐28.8k</title></circle>
+<circle cx="1140.3" cy="274.2" r="4.5" fill="#a16207" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Composio — ⭐29.5k</title></circle>
+<circle cx="854.1" cy="273.8" r="4.5" fill="#84cc16" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>cognee — ⭐29.7k</title></circle>
+<circle cx="791.1" cy="270.3" r="4.5" fill="#10b981" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>github-mcp-server — ⭐31.9k</title></circle>
+<circle cx="873.4" cy="269.6" r="4.5" fill="#6366f1" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Langfuse — ⭐32.3k</title></circle>
+<circle cx="893.9" cy="267.3" r="4.5" fill="#ec4899" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>ChatDev — ⭐33.9k</title></circle>
+<circle cx="1161.8" cy="265.3" r="4.5" fill="#10b981" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>continue — ⭐35.3k</title></circle>
+<circle cx="452.6" cy="264.6" r="4.5" fill="#10b981" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Playwright MCP — ⭐35.7k</title></circle>
+<circle cx="1083.8" cy="264.1" r="4.5" fill="#0ea5e9" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Khoj — ⭐36.2k</title></circle>
+<circle cx="162.5" cy="261.0" r="6.5" fill="#f59e0b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>wshobson/agents — ⭐38.4k</title></circle>
+<circle cx="924.7" cy="260.7" r="4.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>langgraph — ⭐38.7k</title></circle>
+<circle cx="236.7" cy="258.5" r="6.5" fill="#8b5cf6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>awesome-cursorrules — ⭐40.5k</title></circle>
+<circle cx="1206.5" cy="257.2" r="4.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>agno — ⭐41.5k</title></circle>
+<circle cx="847.7" cy="250.2" r="4.5" fill="#10b981" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>aider — ⭐47.9k</title></circle>
+<circle cx="461.5" cy="249.6" r="4.5" fill="#10b981" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>chrome-devtools-mcp — ⭐48.4k</title></circle>
+<circle cx="1052.0" cy="246.7" r="4.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>llama-index — ⭐51.3k</title></circle>
+<circle cx="194.9" cy="246.5" r="6.5" fill="#f59e0b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>awesome-claude-code — ⭐51.5k</title></circle>
+<circle cx="908.7" cy="246.0" r="4.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>goose — ⭐52.1k</title></circle>
+<circle cx="1106.0" cy="243.2" r="4.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Flowise — ⭐55.1k</title></circle>
+<circle cx="518.8" cy="243.0" r="6.5" fill="#a16207" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>LiteLLM — ⭐55.4k</title></circle>
+<circle cx="1198.8" cy="241.9" r="4.5" fill="#ec4899" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>crewAI — ⭐56.5k</title></circle>
+<circle cx="1089.2" cy="240.8" r="4.5" fill="#ec4899" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>OpenManus — ⭐57.8k</title></circle>
+<circle cx="216.3" cy="238.8" r="6.5" fill="#10b981" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Context7 — ⭐60.2k</title></circle>
+<circle cx="1166.2" cy="238.8" r="4.5" fill="#ec4899" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>autogen — ⭐60.2k</title></circle>
+<circle cx="874.0" cy="237.1" r="4.5" fill="#84cc16" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Mem0 — ⭐62.3k</title></circle>
+<circle cx="497.4" cy="235.8" r="6.5" fill="#8b5cf6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Headroom — ⭐64k</title></circle>
+<circle cx="788.6" cy="234.6" r="4.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Cline — ⭐65.5k</title></circle>
+<circle cx="466.0" cy="233.1" r="6.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Open Interpreter — ⭐67.5k</title></circle>
+<circle cx="1108.4" cy="231.6" r="4.5" fill="#ec4899" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>MetaGPT — ⭐69.6k</title></circle>
+<circle cx="858.7" cy="229.9" r="4.5" fill="#a16207" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Daytona — ⭐72.1k</title></circle>
+<circle cx="1211.2" cy="225.4" r="4.5" fill="#14b8a6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>DeerFlow — ⭐78.9k</title></circle>
+<circle cx="586.2" cy="223.9" r="6.5" fill="#f59e0b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>addyosmani/agent-skills — ⭐81.3k</title></circle>
+<circle cx="883.7" cy="223.3" r="4.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>pi — ⭐82.2k</title></circle>
+<circle cx="1137.6" cy="223.0" r="4.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>OpenHands — ⭐82.9k</title></circle>
+<circle cx="495.0" cy="219.3" r="6.5" fill="#10b981" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>MCP Servers — ⭐89.1k</title></circle>
+<circle cx="881.4" cy="219.3" r="4.5" fill="#84cc16" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>claude-mem — ⭐89.3k</title></circle>
+<circle cx="857.7" cy="212.0" r="6.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Codex — ⭐103k</title></circle>
+<circle cx="888.7" cy="210.6" r="6.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Gemini CLI — ⭐106k</title></circle>
+<circle cx="926.7" cy="210.0" r="6.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>browser-use — ⭐108k</title></circle>
+<circle cx="823.7" cy="202.3" r="6.5" fill="#f59e0b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>GStack — ⭐126k</title></circle>
+<circle cx="1192.6" cy="195.8" r="4.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>langchain — ⭐143k</title></circle>
+<circle cx="1078.7" cy="193.2" r="6.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Dify — ⭐151k</title></circle>
+<circle cx="1217.5" cy="192.7" r="6.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>langflow — ⭐153k</title></circle>
+<circle cx="498.1" cy="188.6" r="6.5" fill="#f59e0b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Anthropic Skills — ⭐166k</title></circle>
 <circle cx="1073.9" cy="183.0" r="6.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>AutoGPT — ⭐186k</title></circle>
-<circle cx="874.8" cy="181.9" r="6.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>opencode — ⭐190k</title></circle>
-<circle cx="1204.2" cy="179.8" r="6.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>n8n — ⭐198k</title></circle>
-<circle cx="784.6" cy="174.4" r="6.5" fill="#0ea5e9" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Hermes — ⭐221k</title></circle>
-<circle cx="1180.8" cy="166.0" r="6.5" fill="#f59e0b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>superpowers — ⭐261k</title></circle>
-<circle cx="1176.7" cy="146.9" r="6.5" fill="#0ea5e9" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>OpenClaw — ⭐384k</title></circle>
-<text x="226.3" y="243.6" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">Context7</text>
-<text x="204.9" y="259.6" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">awesome-claude-code</text>
-<text x="246.7" y="275.6" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">awesome-cursorrules</text>
-<text x="172.5" y="291.6" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">wshobson/agents</text>
-<text x="279.8" y="307.6" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">agents.md</text>
-<text x="170.4" y="330.0" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">MCP Inspector</text>
-<text x="508.1" y="193.5" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">Anthropic Skills</text>
-<text x="505.0" y="224.0" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">MCP Servers</text>
-<text x="596.2" y="240.0" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">addyosmani/agent-skills</text>
-<text x="476.0" y="256.0" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">Open Interpreter</text>
-<text x="507.4" y="272.0" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">Headroom</text>
-<text x="528.8" y="288.0" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">LiteLLM</text>
-<text x="794.6" y="178.9" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">Hermes</text>
-<text x="884.8" y="194.9" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">opencode</text>
-<text x="833.7" y="210.9" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">GStack</text>
-<text x="916.7" y="226.9" text-anchor="end" font-size="13" font-weight="600" fill="#1f2937">browser-use</text>
-<text x="898.7" y="242.9" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">Gemini CLI</text>
-<text x="867.7" y="258.9" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">Codex</text>
-<text x="1186.7" y="151.4" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">OpenClaw</text>
-<text x="1190.8" y="170.5" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">superpowers</text>
-<text x="1214.2" y="186.5" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">n8n</text>
-<text x="1083.9" y="202.5" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">AutoGPT</text>
-<text x="1207.5" y="218.5" text-anchor="end" font-size="13" font-weight="600" fill="#1f2937">langflow</text>
-<text x="1088.7" y="234.5" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">Dify</text>
+<circle cx="874.8" cy="181.2" r="6.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>opencode — ⭐192k</title></circle>
+<circle cx="1204.2" cy="179.5" r="6.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>n8n — ⭐199k</title></circle>
+<circle cx="784.6" cy="173.6" r="6.5" fill="#0ea5e9" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Hermes — ⭐224k</title></circle>
+<circle cx="1180.8" cy="165.3" r="6.5" fill="#f59e0b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>superpowers — ⭐265k</title></circle>
+<circle cx="1176.7" cy="146.8" r="6.5" fill="#0ea5e9" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>OpenClaw — ⭐385k</title></circle>
+<text x="226.3" y="243.3" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">Context7</text>
+<text x="204.9" y="259.3" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">awesome-claude-code</text>
+<text x="246.7" y="275.3" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">awesome-cursorrules</text>
+<text x="172.5" y="291.3" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">wshobson/agents</text>
+<text x="279.8" y="307.3" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">agents.md</text>
+<text x="170.4" y="329.5" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">MCP Inspector</text>
+<text x="508.1" y="193.1" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">Anthropic Skills</text>
+<text x="505.0" y="223.8" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">MCP Servers</text>
+<text x="596.2" y="239.8" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">addyosmani/agent-skills</text>
+<text x="476.0" y="255.8" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">Open Interpreter</text>
+<text x="507.4" y="271.8" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">Headroom</text>
+<text x="528.8" y="287.8" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">LiteLLM</text>
+<text x="794.6" y="178.1" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">Hermes</text>
+<text x="884.8" y="194.1" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">opencode</text>
+<text x="833.7" y="210.1" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">GStack</text>
+<text x="916.7" y="226.1" text-anchor="end" font-size="13" font-weight="600" fill="#1f2937">browser-use</text>
+<text x="898.7" y="242.1" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">Gemini CLI</text>
+<text x="867.7" y="258.1" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">Codex</text>
+<text x="1186.7" y="151.3" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">OpenClaw</text>
+<text x="1190.8" y="169.8" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">superpowers</text>
+<text x="1214.2" y="185.8" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">n8n</text>
+<text x="1083.9" y="201.8" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">AutoGPT</text>
+<text x="1207.5" y="217.8" text-anchor="end" font-size="13" font-weight="600" fill="#1f2937">langflow</text>
+<text x="1088.7" y="233.8" text-anchor="start" font-size="13" font-weight="600" fill="#1f2937">Dify</text>
 <text x="1290" y="862" text-anchor="end" font-size="12" fill="#9ca3af">github.com/RyanAlberts/best-of-Agent-Harnesses · CC BY-SA 4.0 · regenerated by scripts/generate.py</text>
 </svg>

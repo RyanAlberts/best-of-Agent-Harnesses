@@ -11,7 +11,7 @@
     "name": "Ryan Alberts",
     "url": "https://github.com/RyanAlberts"
   },
-  "dateModified": "2026-07-26",
+  "dateModified": "2026-08-02",
   "keywords": [
     "agent harness",
     "AI agents",
@@ -1056,11 +1056,11 @@
         "position": 86,
         "item": {
           "@type": "SoftwareApplication",
-          "name": "aider",
-          "url": "https://github.com/Aider-AI/aider",
-          "description": "Git-aware CLI pair programmer; edits in-repo, supports multiple models and MCP so agents see version control and tools.",
+          "name": "chrome-devtools-mcp",
+          "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+          "description": "Google's official Chrome DevTools MCP server: exposes console, network, and performance-trace inspection as tool calls agents can drive directly, instead of a human clicking through the DevTools panel.",
           "applicationCategory": "DeveloperApplication",
-          "keywords": "mcp, cli, python"
+          "keywords": "mcp, browser, typescript"
         }
       },
       {
@@ -1068,11 +1068,11 @@
         "position": 87,
         "item": {
           "@type": "SoftwareApplication",
-          "name": "chrome-devtools-mcp",
-          "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
-          "description": "Google's official Chrome DevTools MCP server: exposes console, network, and performance-trace inspection as tool calls agents can drive directly, instead of a human clicking through the DevTools panel.",
+          "name": "aider",
+          "url": "https://github.com/Aider-AI/aider",
+          "description": "Git-aware CLI pair programmer; edits in-repo, supports multiple models and MCP so agents see version control and tools.",
           "applicationCategory": "DeveloperApplication",
-          "keywords": "mcp, browser, typescript"
+          "keywords": "mcp, cli, python"
         }
       },
       {
@@ -1380,11 +1380,11 @@
         "position": 113,
         "item": {
           "@type": "SoftwareApplication",
-          "name": "SWE-Gym",
-          "url": "https://github.com/SWE-Gym/SWE-Gym",
-          "description": "Training and evaluation for SWE agents and verifiers (ICML 2025).",
+          "name": "swe-smith",
+          "url": "https://github.com/SWE-bench/SWE-smith",
+          "description": "Data generation for SWE agents; 50k+ instances across 128 repos; used for SWE-agent-LM training.",
           "applicationCategory": "DeveloperApplication",
-          "keywords": "evals, training, python"
+          "keywords": "training, python"
         }
       },
       {
@@ -1392,11 +1392,11 @@
         "position": 114,
         "item": {
           "@type": "SoftwareApplication",
-          "name": "swe-smith",
-          "url": "https://github.com/SWE-bench/SWE-smith",
-          "description": "Data generation for SWE agents; 50k+ instances across 128 repos; used for SWE-agent-LM training.",
+          "name": "SWE-Gym",
+          "url": "https://github.com/SWE-Gym/SWE-Gym",
+          "description": "Training and evaluation for SWE agents and verifiers (ICML 2025).",
           "applicationCategory": "DeveloperApplication",
-          "keywords": "training, python"
+          "keywords": "evals, training, python"
         }
       },
       {
