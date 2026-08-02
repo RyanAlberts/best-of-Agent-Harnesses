@@ -1,6 +1,6 @@
 # Best of Agent Harnesses
 
-> Hand-curated, ranked list of 141 AI agent harnesses — the runtimes that close the loop between a stateless model and the outside world. 12 categories, a 4-tier adoption-surface rating (simplicity ↔ capability), capability tags, a license signal, and one concrete example link per project. Stars captured 2026-07-26.
+> Hand-curated, ranked list of 144 AI agent harnesses — the runtimes that close the loop between a stateless model and the outside world. 12 categories, a 4-tier adoption-surface rating (simplicity ↔ capability), capability tags, a license signal, and one concrete example link per project. Stars captured 2026-07-26.
 
 Maintained at https://github.com/RyanAlberts/best-of-Agent-Harnesses (CC-BY-SA-4.0).
 Structured data: https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/harnesses.json
@@ -74,7 +74,7 @@ Harnesses designed for unattended runs, batches, and fleets: opencode, OpenHands
 Harnesses whose execution state persists across restarts: langgraph-bigtool, n8n, langgraph, mastra, letta, deepagents, pydantic-ai, Cloudflare Agents.
 
 ### How many of these agent harnesses are open source?
-111 of 141 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.
+111 of 144 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.
 
 ### What is an agent harness?
 The runtime that turns a model into an agent: it decides what the model's reasoning is allowed to touch, and supplies the orchestration, tool wiring, memory, error recovery, and guardrails around per-turn inference.
@@ -154,7 +154,7 @@ Always-on, self-hosted agents you run as a daemon and talk to from chat apps: ga
 - [AIlice](https://github.com/myshell-ai/AIlice) — ⭐1.4k, slightly complex, autonomy: bounded, recovery: none, open-source: Fully autonomous general-purpose agent; one binary, Docker-ready, for when you want "set goal and walk away" without a framework. [sandbox, python]
 - [Talon](https://github.com/dylanneve1/talon) — ⭐68, slightly complex, autonomy: headless, recovery: resumable, open-source: Multi-platform personal agent living in Telegram, Discord, Teams, and the terminal. The **harness** is a pluggable-backend loop (Claude, Kilo, OpenCode, Codex, OpenAI Agents) with full MCP tool access and persistent background agents (Goals, Heartbeat, Dream); the chat apps are shells. [mcp, memory, cli, typescript]
 
-## Frameworks (24 projects)
+## Frameworks (26 projects)
 
 General-purpose agent and LLM application frameworks (the app layer, not harnesses per se).
 
@@ -178,8 +178,10 @@ General-purpose agent and LLM application frameworks (the app layer, not harness
 - [agent-squad](https://github.com/2FastLabs/agent-squad) — ⭐7.7k, slightly complex, autonomy: bounded, recovery: resumable, open-source: AWS-originated orchestrator (now under 2FastLabs): intent classification, streaming, SupervisorAgent; "agent-as-tools" so one agent delegates to a squad. [multi-agent]
 - [AgentVerse](https://github.com/OpenBMB/AgentVerse) — ⭐5.1k, complex, autonomy: headless, recovery: none, open-source: Task-solving and simulation envs for multi-LLM agents; deploy many agents in custom environments without building infra from scratch. [multi-agent, python]
 - [youtu-agent](https://github.com/TencentCloudADP/youtu-agent) — ⭐4.6k, mostly simple, autonomy: bounded, recovery: retry, unknown: Tencent Cloud's agent framework: a minimal tool-calling **harness** designed to perform well with open-source models, positioned as a lighter alternative to heavier orchestration frameworks.
+- [fast-agent](https://github.com/evalstate/fast-agent) — ⭐3.9k, slightly complex, autonomy: bounded, recovery: resumable, unknown: MCP-native Python agent framework: build, test, and evaluate agents with first-class Skills, MCP, ACP, and A2A support, keeping the **harness** thin while the protocol surface stays broad. [mcp, python]
 - [Bee Agent Framework](https://github.com/i-am-bee/beeai-framework) — ⭐3.3k, complex, autonomy: bounded, recovery: resumable, open-source: Python + TypeScript, LF AI–backed; MCP/ACP, workflows, Requirement Agent; the one that pushes "production multi-agent" without LangChain. [mcp, multi-agent, python, typescript]
 - [AgentStack](https://github.com/agentstack-ai/AgentStack) — ⭐2.2k, slightly complex, autonomy: n/a, recovery: n/a, open-source: Scaffolds full agent projects; plugs in CrewAI, LangGraph, OpenAI Swarm, LlamaStack and wires AgentOps observability from day one.
+- [deepagentsjs](https://github.com/langchain-ai/deepagentsjs) — ⭐1.4k, slightly complex, autonomy: bounded, recovery: resumable, unknown: LangChain's TypeScript "batteries-included" agent **harness**: planning, sub-agents, and a virtual filesystem out of the box; the JS sibling to the Python `deepagents` package for long-horizon tasks. [memory, multi-agent, python, typescript]
 - [AgentSilex](https://github.com/howl-anderson/agentsilex) — ⭐453, super simple, autonomy: bounded, recovery: none, open-source: ~300 lines of readable agent code on top of LiteLLM; the "I want to see the whole loop" option for learning or minimal production. [python]
 - [SuperAgentX](https://github.com/superagentxai/superagentx) — ⭐202, mostly simple, autonomy: bounded, recovery: none, open-source: Lightweight multi-agent orchestrator with an AGI-angle; minimal surface, docs-first, for teams that want orchestration without the kitchen sink. [multi-agent, python]
 
@@ -198,7 +200,7 @@ Harnesses and patterns for multi-agent coordination and handoffs.
 - [PraisonAI](https://github.com/MervinPraison/PraisonAI) — ⭐8.5k, mostly simple, autonomy: bounded, recovery: none, open-source: Autonomous multi-agent teams with a single entry point; emphasis on minimal config. [multi-agent, python]
 - [AgentRL](https://github.com/THUDM/AgentRL) — ⭐324, complex, autonomy: headless, recovery: resumable, open-source: Multitask, multiturn RL for LLM agents; Ray-based scaling, rollout/actor workers—for teams that want to train agents, not just run them. [training, python]
 
-## Plugins, MCPs, CLI tools (18 projects)
+## Plugins, MCPs, CLI tools (19 projects)
 
 IDE plugins, concrete MCP servers, and CLI tools that give agents tools and context.
 
@@ -214,6 +216,7 @@ IDE plugins, concrete MCP servers, and CLI tools that give agents tools and cont
 - [MCP Inspector](https://github.com/modelcontextprotocol/inspector) — ⭐10.5k, super simple, autonomy: n/a, recovery: n/a, open-source: GUI to test and debug MCP servers; inspect tools, resources, and prompts. [mcp, typescript]
 - [MCP Registry](https://github.com/modelcontextprotocol/registry) — ⭐7.1k, slightly complex, autonomy: n/a, recovery: n/a, open-source: Official, community-driven registry for MCP servers—the "app store" MCP clients use to discover servers. Maintained by Anthropic + ecosystem maintainers; v0.1 API frozen, production-grade. [mcp]
 - [Agent Governance Toolkit](https://github.com/microsoft/agent-governance-toolkit) — ⭐4.9k, slightly complex, autonomy: n/a, recovery: n/a, open-source: Microsoft's policy-enforcement layer for autonomous agents: zero-trust identity, execution sandboxing, and OWASP Agentic Top-10 coverage sit in front of the agent loop as a **harness** security layer—the governance counterpart to Infisical's agent-vault. [sandbox, python]
+- [MCP Context Forge](https://github.com/IBM/mcp-context-forge) — ⭐4.1k, complex, autonomy: n/a, recovery: n/a, unknown: IBM's AI gateway, registry, and proxy in front of any MCP, A2A, or REST/gRPC API, exposing them as one unified virtual MCP server with auth, rate limiting, and observability built in—infrastructure a harness talks to, not a harness itself. [mcp]
 - [cocoindex-code](https://github.com/cocoindex-io/cocoindex-code) — ⭐2.6k, mostly simple, autonomy: n/a, recovery: n/a, unknown: Embedded, tree-sitter/AST-based code-search CLI and MCP server that gives coding agents fast semantic lookups over a repo instead of grepping or re-reading whole files into context. [mcp, cli]
 - [agent-vault](https://github.com/Infisical/agent-vault) — ⭐2k, mostly simple, autonomy: n/a, recovery: n/a, unknown: Infisical's HTTP credential proxy that fronts secrets for Claude Code, OpenClaw, and other agent harnesses so the agent's tool calls never see raw credentials—a **harness** security layer, not an agent loop itself.
 - [Docker MCP Gateway](https://github.com/docker/mcp-gateway) — ⭐1.5k, slightly complex, autonomy: n/a, recovery: n/a, open-source: Docker's official MCP CLI plugin / gateway; container-aware MCP tooling from Docker (replaces deprecated `docker/mcp-servers` path). [mcp, sandbox, cli]

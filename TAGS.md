@@ -1,13 +1,13 @@
 <!-- markdownlint-disable -->
 # Tags — cross-reference
 
-_Auto-generated from `scripts/generate.py`. 141 projects across 22 canonical tags. Edit projects in `generate.py` (not here) and rerun the script._
+_Auto-generated from `scripts/generate.py`. 144 projects across 22 canonical tags. Edit projects in `generate.py` (not here) and rerun the script._
 
 Tag chips appear next to each project in [README.md](README.md). This page lists every tag once with the projects that carry it, grouped by category and sorted by GitHub stars within each category.
 
 ## All tags
 
-[`mcp`](#mcp) (31) · [`memory`](#memory) (25) · [`multi-agent`](#multi-agent) (23) · [`evals`](#evals) (18) · [`voice`](#voice) (2) · [`vision`](#vision) (3) · [`browser`](#browser) (7) · [`sandbox`](#sandbox) (25) · [`low-code`](#low-code) (4) · [`rag`](#rag) (6) · [`tool-discovery`](#tool-discovery) (5) · [`training`](#training) (5) · [`workflow`](#workflow) (9) · [`typed`](#typed) (3) · [`local`](#local) (2) · [`provider-agnostic`](#provider-agnostic) (10) · [`cli`](#cli) (18) · [`ide`](#ide) (11) · [`tui`](#tui) (3) · [`rust`](#rust) (4) · [`python`](#python) (69) · [`typescript`](#typescript) (38)
+[`mcp`](#mcp) (33) · [`memory`](#memory) (26) · [`multi-agent`](#multi-agent) (24) · [`evals`](#evals) (18) · [`voice`](#voice) (2) · [`vision`](#vision) (3) · [`browser`](#browser) (7) · [`sandbox`](#sandbox) (25) · [`low-code`](#low-code) (4) · [`rag`](#rag) (6) · [`tool-discovery`](#tool-discovery) (5) · [`training`](#training) (5) · [`workflow`](#workflow) (9) · [`typed`](#typed) (3) · [`local`](#local) (2) · [`provider-agnostic`](#provider-agnostic) (10) · [`cli`](#cli) (18) · [`ide`](#ide) (11) · [`tui`](#tui) (3) · [`rust`](#rust) (4) · [`python`](#python) (71) · [`typescript`](#typescript) (39)
 
 ---
 
@@ -39,6 +39,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 **Frameworks**
 
 - [browser-use](https://github.com/browser-use/browser-use) — ⭐107k — Python layer over Playwright: natural-language goals become browser actions—web-agent loop without hand-rolling MCP or a custom driver for every site.
+- [fast-agent](https://github.com/evalstate/fast-agent) — ⭐3.9k — MCP-native Python agent framework: build, test, and evaluate agents with first-class Skills, MCP, ACP, and A2A support, keeping the **harness** thin while the protocol surface stays broad.
 - [Bee Agent Framework](https://github.com/i-am-bee/beeai-framework) — ⭐3.3k — Python + TypeScript, LF AI–backed; MCP/ACP, workflows, Requirement Agent; the one that pushes "production multi-agent" without LangChain.
 
 **Plugins, MCPs, CLI tools**
@@ -53,6 +54,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [MCP TypeScript SDK](https://github.com/modelcontextprotocol/typescript-sdk) — ⭐13k — Official MCP implementation for Node/TS; reference for the protocol.
 - [MCP Inspector](https://github.com/modelcontextprotocol/inspector) — ⭐10.5k — GUI to test and debug MCP servers; inspect tools, resources, and prompts.
 - [MCP Registry](https://github.com/modelcontextprotocol/registry) — ⭐7.1k — Official, community-driven registry for MCP servers—the "app store" MCP clients use to discover servers. Maintained by Anthropic + ecosystem maintainers; v0.1 API frozen, production-grade.
+- [MCP Context Forge](https://github.com/IBM/mcp-context-forge) — ⭐4.1k — IBM's AI gateway, registry, and proxy in front of any MCP, A2A, or REST/gRPC API, exposing them as one unified virtual MCP server with auth, rate limiting, and observability built in—infrastructure a harness talks to, not a harness itself.
 - [cocoindex-code](https://github.com/cocoindex-io/cocoindex-code) — ⭐2.6k — Embedded, tree-sitter/AST-based code-search CLI and MCP server that gives coding agents fast semantic lookups over a repo instead of grepping or re-reading whole files into context.
 - [Docker MCP Gateway](https://github.com/docker/mcp-gateway) — ⭐1.5k — Docker's official MCP CLI plugin / gateway; container-aware MCP tooling from Docker (replaces deprecated `docker/mcp-servers` path).
 - [puppeteer-real-browser-mcp](https://github.com/withLinda/puppeteer-real-browser-mcp-server) — ⭐25 — Puppeteer MCP with real-browser and anti-detection; for agents that need to drive sites that block headless.
@@ -101,6 +103,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [AutoGPT](https://github.com/Significant-Gravitas/AutoGPT) — ⭐186k — The original autonomous loop: goal in, agent iterates with tools and memory; Forge is the dev framework, Benchmark the eval harness.
 - [agno](https://github.com/agno-agi/agno) — ⭐41.4k — Python agents with memory, knowledge bases, tools, and structured outputs; continues the PhiData-era product line under the Agno name—production apps, evals, and pipelines.
 - [letta](https://github.com/letta-ai/letta) — ⭐24k — Python agent runtime with tool use and control flow; lean API; stateful agents with long-horizon memory.
+- [deepagentsjs](https://github.com/langchain-ai/deepagentsjs) — ⭐1.4k — LangChain's TypeScript "batteries-included" agent **harness**: planning, sub-agents, and a virtual filesystem out of the box; the JS sibling to the Python `deepagents` package for long-horizon tasks.
 
 **Plugins, MCPs, CLI tools**
 
@@ -152,6 +155,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [agent-squad](https://github.com/2FastLabs/agent-squad) — ⭐7.7k — AWS-originated orchestrator (now under 2FastLabs): intent classification, streaming, SupervisorAgent; "agent-as-tools" so one agent delegates to a squad.
 - [AgentVerse](https://github.com/OpenBMB/AgentVerse) — ⭐5.1k — Task-solving and simulation envs for multi-LLM agents; deploy many agents in custom environments without building infra from scratch.
 - [Bee Agent Framework](https://github.com/i-am-bee/beeai-framework) — ⭐3.3k — Python + TypeScript, LF AI–backed; MCP/ACP, workflows, Requirement Agent; the one that pushes "production multi-agent" without LangChain.
+- [deepagentsjs](https://github.com/langchain-ai/deepagentsjs) — ⭐1.4k — LangChain's TypeScript "batteries-included" agent **harness**: planning, sub-agents, and a virtual filesystem out of the box; the JS sibling to the Python `deepagents` package for long-horizon tasks.
 - [SuperAgentX](https://github.com/superagentxai/superagentx) — ⭐202 — Lightweight multi-agent orchestrator with an AGI-angle; minimal surface, docs-first, for teams that want orchestration without the kitchen sink.
 
 **Multi-agent and orchestration**
@@ -599,7 +603,9 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [Google ADK](https://github.com/google/adk-python) — ⭐20.9k — Google's official Agent Development Kit: code-first Python toolkit for building, evaluating, and deploying agents. Optimized for Gemini but model-agnostic; deploys to Cloud Run / Vertex AI; ships a dev UI with eval and a code-execution sandbox.
 - [R2R](https://github.com/SciPhi-AI/R2R) — ⭐7.9k — RAG-first: hybrid search, knowledge graphs, multimodal; the framework for "production RAG" when you care more about retrieval than chat UI.
 - [AgentVerse](https://github.com/OpenBMB/AgentVerse) — ⭐5.1k — Task-solving and simulation envs for multi-LLM agents; deploy many agents in custom environments without building infra from scratch.
+- [fast-agent](https://github.com/evalstate/fast-agent) — ⭐3.9k — MCP-native Python agent framework: build, test, and evaluate agents with first-class Skills, MCP, ACP, and A2A support, keeping the **harness** thin while the protocol surface stays broad.
 - [Bee Agent Framework](https://github.com/i-am-bee/beeai-framework) — ⭐3.3k — Python + TypeScript, LF AI–backed; MCP/ACP, workflows, Requirement Agent; the one that pushes "production multi-agent" without LangChain.
+- [deepagentsjs](https://github.com/langchain-ai/deepagentsjs) — ⭐1.4k — LangChain's TypeScript "batteries-included" agent **harness**: planning, sub-agents, and a virtual filesystem out of the box; the JS sibling to the Python `deepagents` package for long-horizon tasks.
 - [AgentSilex](https://github.com/howl-anderson/agentsilex) — ⭐453 — ~300 lines of readable agent code on top of LiteLLM; the "I want to see the whole loop" option for learning or minimal production.
 - [SuperAgentX](https://github.com/superagentxai/superagentx) — ⭐202 — Lightweight multi-agent orchestrator with an AGI-angle; minimal surface, docs-first, for teams that want orchestration without the kitchen sink.
 
@@ -700,6 +706,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [mastra](https://github.com/mastra-ai/mastra) — ⭐26.6k — TypeScript-first; agents, tools, and workflows with a single runtime and minimal boilerplate.
 - [botpress](https://github.com/botpress/botpress) — ⭐14.8k — Visual bot builder and runtime; multi-channel, open-source alternative to commercial bot platforms.
 - [Bee Agent Framework](https://github.com/i-am-bee/beeai-framework) — ⭐3.3k — Python + TypeScript, LF AI–backed; MCP/ACP, workflows, Requirement Agent; the one that pushes "production multi-agent" without LangChain.
+- [deepagentsjs](https://github.com/langchain-ai/deepagentsjs) — ⭐1.4k — LangChain's TypeScript "batteries-included" agent **harness**: planning, sub-agents, and a virtual filesystem out of the box; the JS sibling to the Python `deepagents` package for long-horizon tasks.
 
 **Plugins, MCPs, CLI tools**
 
@@ -777,7 +784,9 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [Google ADK](https://github.com/google/adk-python) — ⭐20.9k — Google's official Agent Development Kit: code-first Python toolkit for building, evaluating, and deploying agents. Optimized for Gemini but model-agnostic; deploys to Cloud Run / Vertex AI; ships a dev UI with eval and a code-execution sandbox.
 - [R2R](https://github.com/SciPhi-AI/R2R) — ⭐7.9k — RAG-first: hybrid search, knowledge graphs, multimodal; the framework for "production RAG" when you care more about retrieval than chat UI.
 - [AgentVerse](https://github.com/OpenBMB/AgentVerse) — ⭐5.1k — Task-solving and simulation envs for multi-LLM agents; deploy many agents in custom environments without building infra from scratch.
+- [fast-agent](https://github.com/evalstate/fast-agent) — ⭐3.9k — MCP-native Python agent framework: build, test, and evaluate agents with first-class Skills, MCP, ACP, and A2A support, keeping the **harness** thin while the protocol surface stays broad.
 - [Bee Agent Framework](https://github.com/i-am-bee/beeai-framework) — ⭐3.3k — Python + TypeScript, LF AI–backed; MCP/ACP, workflows, Requirement Agent; the one that pushes "production multi-agent" without LangChain.
+- [deepagentsjs](https://github.com/langchain-ai/deepagentsjs) — ⭐1.4k — LangChain's TypeScript "batteries-included" agent **harness**: planning, sub-agents, and a virtual filesystem out of the box; the JS sibling to the Python `deepagents` package for long-horizon tasks.
 - [AgentSilex](https://github.com/howl-anderson/agentsilex) — ⭐453 — ~300 lines of readable agent code on top of LiteLLM; the "I want to see the whole loop" option for learning or minimal production.
 - [SuperAgentX](https://github.com/superagentxai/superagentx) — ⭐202 — Lightweight multi-agent orchestrator with an AGI-angle; minimal surface, docs-first, for teams that want orchestration without the kitchen sink.
 
@@ -878,6 +887,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [mastra](https://github.com/mastra-ai/mastra) — ⭐26.6k — TypeScript-first; agents, tools, and workflows with a single runtime and minimal boilerplate.
 - [botpress](https://github.com/botpress/botpress) — ⭐14.8k — Visual bot builder and runtime; multi-channel, open-source alternative to commercial bot platforms.
 - [Bee Agent Framework](https://github.com/i-am-bee/beeai-framework) — ⭐3.3k — Python + TypeScript, LF AI–backed; MCP/ACP, workflows, Requirement Agent; the one that pushes "production multi-agent" without LangChain.
+- [deepagentsjs](https://github.com/langchain-ai/deepagentsjs) — ⭐1.4k — LangChain's TypeScript "batteries-included" agent **harness**: planning, sub-agents, and a virtual filesystem out of the box; the JS sibling to the Python `deepagents` package for long-horizon tasks.
 
 **Plugins, MCPs, CLI tools**
 

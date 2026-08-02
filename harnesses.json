@@ -9,7 +9,7 @@
     "feed_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/feed.json",
     "license": "CC-BY-SA-4.0",
     "stars_captured": "2026-07-26",
-    "project_count": 141,
+    "project_count": 144,
     "graveyard_count": 3,
     "tiers": [
       "super simple",
@@ -374,7 +374,7 @@
     {
       "kind": "derived",
       "q": "How many of these agent harnesses are open source?",
-      "a": "111 of 141 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
+      "a": "111 of 144 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
       "slug": "how-many-of-these-agent-harnesses-are-open-source"
     },
     {
@@ -4602,6 +4602,35 @@
       }
     },
     {
+      "name": "fast-agent",
+      "github_id": "evalstate/fast-agent",
+      "url": "https://github.com/evalstate/fast-agent",
+      "slug": "fast-agent",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#fast-agent",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/fast-agent/",
+      "description": "MCP-native Python agent framework: build, test, and evaluate agents with first-class Skills, MCP, ACP, and A2A support, keeping the **harness** thin while the protocol surface stays broad.",
+      "category": "frameworks",
+      "category_title": "Frameworks",
+      "stars": 3873,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (MCP-native, multi-protocol)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "unknown",
+      "tags": [
+        "mcp",
+        "python"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/evalstate/fast-agent#readme"
+      },
+      "deep_dive": null
+    },
+    {
       "name": "Bee Agent Framework",
       "github_id": "i-am-bee/beeai-framework",
       "url": "https://github.com/i-am-bee/beeai-framework",
@@ -4721,6 +4750,37 @@
           "evidence": "https://docs.agentstack.sh/introduction"
         }
       }
+    },
+    {
+      "name": "deepagentsjs",
+      "github_id": "langchain-ai/deepagentsjs",
+      "url": "https://github.com/langchain-ai/deepagentsjs",
+      "slug": "deepagentsjs",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#deepagentsjs",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/deepagentsjs/",
+      "description": "LangChain's TypeScript \"batteries-included\" agent **harness**: planning, sub-agents, and a virtual filesystem out of the box; the JS sibling to the Python `deepagents` package for long-horizon tasks.",
+      "category": "frameworks",
+      "category_title": "Frameworks",
+      "stars": 1435,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (planning + sub-agents + virtual FS)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "unknown",
+      "tags": [
+        "memory",
+        "multi-agent",
+        "python",
+        "typescript"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/langchain-ai/deepagentsjs#readme"
+      },
+      "deep_dive": null
     },
     {
       "name": "AgentSilex",
@@ -5800,6 +5860,34 @@
       "example": {
         "label": "Project README",
         "url": "https://github.com/microsoft/agent-governance-toolkit#readme"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "MCP Context Forge",
+      "github_id": "IBM/mcp-context-forge",
+      "url": "https://github.com/IBM/mcp-context-forge",
+      "slug": "mcp-context-forge",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#mcp-context-forge",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/mcp-context-forge/",
+      "description": "IBM's AI gateway, registry, and proxy in front of any MCP, A2A, or REST/gRPC API, exposing them as one unified virtual MCP server with auth, rate limiting, and observability built in—infrastructure a harness talks to, not a harness itself.",
+      "category": "plugins-mcp-cli",
+      "category_title": "Plugins, MCPs, CLI tools",
+      "stars": 4142,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (gateway, multi-protocol, official IBM — product suite)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "unknown",
+      "tags": [
+        "mcp"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/IBM/mcp-context-forge#readme"
       },
       "deep_dive": null
     },
@@ -7364,18 +7452,6 @@
       "github_id": "ag2ai/ag2",
       "stars": 4799,
       "desc": "AG2 (formerly AutoGen): The Open-Source AgentOS.Join us at: https://discord.gg/sNGSwQME3x",
-      "via": "weekly discovery"
-    },
-    {
-      "github_id": "IBM/mcp-context-forge",
-      "stars": 4142,
-      "desc": "An AI Gateway, registry, and proxy that sits in front of any MCP, A2A, or REST/gRPC APIs, exposing a unified endpoint with centralized discovery, guardrails…",
-      "via": "weekly discovery"
-    },
-    {
-      "github_id": "evalstate/fast-agent",
-      "stars": 3873,
-      "desc": "Code, Build and Evaluate agents - excellent Model and Skills/MCP/ACP/A2A Support",
       "via": "weekly discovery"
     },
     {

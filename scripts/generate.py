@@ -383,6 +383,12 @@ PROJECTS: dict[str, list[Project]] = {
         Project("youtu-agent", "TencentCloudADP/youtu-agent",
                 "Tencent Cloud's agent framework: a minimal tool-calling **harness** designed to perform well with open-source models, positioned as a lighter alternative to heavier orchestration frameworks.",
                 "mostly simple (minimal loop, open-model focus)", oss="❓"),
+        Project("fast-agent", "evalstate/fast-agent",
+                "MCP-native Python agent framework: build, test, and evaluate agents with first-class Skills, MCP, ACP, and A2A support, keeping the **harness** thin while the protocol surface stays broad.",
+                "slightly complex (MCP-native, multi-protocol)", oss="❓", labels=["python"]),
+        Project("deepagentsjs", "langchain-ai/deepagentsjs",
+                "LangChain's TypeScript \"batteries-included\" agent **harness**: planning, sub-agents, and a virtual filesystem out of the box; the JS sibling to the Python `deepagents` package for long-horizon tasks.",
+                "slightly complex (planning + sub-agents + virtual FS)", oss="❓", labels=["javascript"]),
     ],
     "multi-agent": [
         Project("openai-agents-python", "openai/openai-agents-python",
@@ -471,6 +477,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("cocoindex-code", "cocoindex-io/cocoindex-code",
                 "Embedded, tree-sitter/AST-based code-search CLI and MCP server that gives coding agents fast semantic lookups over a repo instead of grepping or re-reading whole files into context.",
                 "mostly simple (embedded CLI + MCP server)", oss="❓"),
+        Project("MCP Context Forge", "IBM/mcp-context-forge",
+                "IBM's AI gateway, registry, and proxy in front of any MCP, A2A, or REST/gRPC API, exposing them as one unified virtual MCP server with auth, rate limiting, and observability built in—infrastructure a harness talks to, not a harness itself.",
+                "complex (gateway, multi-protocol, official IBM — product suite)", oss="❓"),
     ],
     "memory": [
         Project("cognee", "topoteretes/cognee",
@@ -693,6 +702,8 @@ META: dict[str, tuple[int, str, str]] = {
     "FlowiseAI/Flowise": (54936, "https://github.com/FlowiseAI/Flowise/blob/main/packages/server/marketplaces/agentflowsv2/Agentic%20RAG.json", "Agentic RAG flow"),
     "browser-use/browser-use": (106856, "https://github.com/browser-use/browser-use/blob/main/examples/use-cases/shopping.py", "Grocery shopping agent"),
     "TencentCloudADP/youtu-agent": (4582, "https://github.com/TencentCloudADP/youtu-agent#readme", "Project README"),
+    "evalstate/fast-agent": (3873, "https://github.com/evalstate/fast-agent#readme", "Project README"),
+    "langchain-ai/deepagentsjs": (1435, "https://github.com/langchain-ai/deepagentsjs#readme", "Project README"),
     # multi-agent
     "openai/openai-agents-python": (28177, "https://github.com/openai/openai-agents-python/blob/main/examples/customer_service/main.py", "Airline customer service handoffs"),
     "crewAIInc/crewAI": (56156, "https://github.com/crewAIInc/crewAI-examples/blob/main/crews/trip_planner/trip_agents.py", "Trip planner crew"),
@@ -716,6 +727,7 @@ META: dict[str, tuple[int, str, str]] = {
     "Infisical/agent-vault": (1953, "https://github.com/Infisical/agent-vault#readme", "Project README"),
     "microsoft/agent-governance-toolkit": (4920, "https://github.com/microsoft/agent-governance-toolkit#readme", "Project README"),
     "cocoindex-io/cocoindex-code": (2573, "https://github.com/cocoindex-io/cocoindex-code#readme", "Project README"),
+    "IBM/mcp-context-forge": (4142, "https://github.com/IBM/mcp-context-forge#readme", "Project README"),
     # evaluation
     "vostride/agent-qa": (168, "https://github.com/vostride/agent-qa#readme", "Natural-language QA harness"),
     "arcprize/ARC-AGI-2": (728, "https://arcprize.org/leaderboard", "ARC Prize leaderboard"),
@@ -993,6 +1005,8 @@ AXES: "dict[str, tuple[str, str]]" = {
     "elizaOS/eliza": ("headless", "resumable"),
     "agent0ai/agent-zero": ("bounded", "resumable"),
     "superagentxai/superagentx": ("bounded", "none"),
+    "evalstate/fast-agent": ("bounded", "resumable"),
+    "langchain-ai/deepagentsjs": ("bounded", "resumable"),
     # multi-agent
     "microsoft/autogen": ("bounded", "resumable"),
     "crewAIInc/crewAI": ("bounded", "resumable"),
@@ -1016,6 +1030,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "RyanAlberts/agentlog": ("n/a", "n/a"),
     "microsoft/agent-governance-toolkit": ("n/a", "n/a"),
     "cocoindex-io/cocoindex-code": ("n/a", "n/a"),
+    "IBM/mcp-context-forge": ("n/a", "n/a"),
     # evaluation
     "vostride/agent-qa": ("headless", "retry"),
     "microsoft/agent-lightning": ("headless", "resumable"),
