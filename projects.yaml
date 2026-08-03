@@ -150,6 +150,21 @@ projects:
   - name: vibe-kanban
     github_id: BloopAI/vibe-kanban
     category: "coding-agent-products"
+  - name: eigent
+    github_id: eigent-ai/eigent
+    category: "coding-agent-products"
+  - name: DeepSeek-Reasonix
+    github_id: esengine/DeepSeek-Reasonix
+    labels: ["javascript"]
+    category: "coding-agent-products"
+  - name: jcode
+    github_id: 1jehuang/jcode
+    labels: ["rust"]
+    category: "coding-agent-products"
+  - name: cc-haha
+    github_id: NanmiCoder/cc-haha
+    labels: ["javascript"]
+    category: "coding-agent-products"
   # Coding harness configs and SDKs
   - name: LoopTroop
     github_id: looptroop-ai/LoopTroop
@@ -202,6 +217,12 @@ projects:
   - name: Agent Skills
     github_id: addyosmani/agent-skills
     category: "coding-harness-configs"
+  - name: planning-with-files
+    github_id: OthmanAdi/planning-with-files
+    category: "coding-harness-configs"
+  - name: Meta-Harness
+    github_id: stanford-iris-lab/meta-harness
+    category: "coding-harness-configs"
   # Personal agent runtimes
   - name: Talon
     github_id: dylanneve1/talon
@@ -232,6 +253,14 @@ projects:
     category: "personal-agent-runtimes"
   - name: AIlice
     github_id: myshell-ai/AIlice
+    labels: ["python"]
+    category: "personal-agent-runtimes"
+  - name: nanobot
+    github_id: HKUDS/nanobot
+    labels: ["python"]
+    category: "personal-agent-runtimes"
+  - name: CowAgent
+    github_id: zhayujie/CowAgent
     labels: ["python"]
     category: "personal-agent-runtimes"
   # Frameworks
@@ -327,6 +356,10 @@ projects:
   - name: youtu-agent
     github_id: TencentCloudADP/youtu-agent
     category: "frameworks"
+  - name: Haystack
+    github_id: deepset-ai/haystack
+    labels: ["python"]
+    category: "frameworks"
   # Multi-agent and orchestration
   - name: openai-agents-python
     github_id: openai/openai-agents-python
@@ -338,6 +371,10 @@ projects:
     category: "multi-agent"
   - name: autogen
     github_id: microsoft/autogen
+    labels: ["python"]
+    category: "multi-agent"
+  - name: AG2
+    github_id: ag2ai/ag2
     labels: ["python"]
     category: "multi-agent"
   - name: PraisonAI
@@ -366,6 +403,10 @@ projects:
     category: "multi-agent"
   - name: hive
     github_id: aden-hive/hive
+    labels: ["python"]
+    category: "multi-agent"
+  - name: omnigent
+    github_id: omnigent-ai/omnigent
     labels: ["python"]
     category: "multi-agent"
   # Plugins, MCPs, CLI tools
@@ -435,6 +476,10 @@ projects:
     category: "plugins-mcp-cli"
   - name: cocoindex-code
     github_id: cocoindex-io/cocoindex-code
+    category: "plugins-mcp-cli"
+  - name: mcp-context-forge
+    github_id: IBM/mcp-context-forge
+    labels: ["python"]
     category: "plugins-mcp-cli"
   # Memory and state
   - name: cognee
@@ -538,6 +583,9 @@ projects:
     category: "research-task"
   - name: MiroThinker
     github_id: MiroMindAI/MiroThinker
+    category: "research-task"
+  - name: AutoResearchClaw
+    github_id: aiming-lab/AutoResearchClaw
     category: "research-task"
   # Libraries and SDKs
   - name: deepagents

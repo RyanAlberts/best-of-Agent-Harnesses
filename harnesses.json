@@ -9,7 +9,7 @@
     "feed_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/feed.json",
     "license": "CC-BY-SA-4.0",
     "stars_captured": "2026-08-02",
-    "project_count": 141,
+    "project_count": 154,
     "graveyard_count": 3,
     "tiers": [
       "super simple",
@@ -374,7 +374,7 @@
     {
       "kind": "derived",
       "q": "How many of these agent harnesses are open source?",
-      "a": "111 of 141 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
+      "a": "112 of 154 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
       "slug": "how-many-of-these-agent-harnesses-are-open-source"
     },
     {
@@ -1385,6 +1385,37 @@
       }
     },
     {
+      "name": "DeepSeek-Reasonix",
+      "github_id": "esengine/DeepSeek-Reasonix",
+      "url": "https://github.com/esengine/DeepSeek-Reasonix",
+      "slug": "deepseek-reasonix",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#deepseek-reasonix",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/deepseek-reasonix/",
+      "description": "DeepSeek-native terminal coding agent. The **harness** is engineered around prefix-cache stability for long-running sessions; the TUI is the shell.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 28837,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (terminal agent, prefix-cache tuned)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "unknown",
+      "tags": [
+        "memory",
+        "cli",
+        "tui",
+        "typescript"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/esengine/DeepSeek-Reasonix#readme"
+      },
+      "deep_dive": null
+    },
+    {
       "name": "vibe-kanban",
       "github_id": "BloopAI/vibe-kanban",
       "url": "https://github.com/BloopAI/vibe-kanban",
@@ -1816,6 +1847,97 @@
           "evidence": "https://github.com/can1357/oh-my-pi/blob/main/README.md"
         }
       }
+    },
+    {
+      "name": "jcode",
+      "github_id": "1jehuang/jcode",
+      "url": "https://github.com/1jehuang/jcode",
+      "slug": "jcode",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#jcode",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/jcode/",
+      "description": "Rust terminal coding agent pitched as the most RAM-efficient **harness** in its class; MCP support, multi-provider (Claude/OpenAI).",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 15162,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (terminal agent, low-memory)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "unknown",
+      "tags": [
+        "mcp",
+        "memory",
+        "provider-agnostic",
+        "cli",
+        "rust"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/1jehuang/jcode#readme"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "eigent",
+      "github_id": "eigent-ai/eigent",
+      "url": "https://github.com/eigent-ai/eigent",
+      "slug": "eigent",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#eigent",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/eigent/",
+      "description": "Open-source desktop **harness** positioned as a local, free alternative to Claude Cowork and Codex: multi-agent workspace orchestration in a self-hosted app rather than a hosted product.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 14721,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (desktop multi-agent workspace — product suite)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "unknown",
+      "tags": [
+        "multi-agent",
+        "local"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/eigent-ai/eigent#readme"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "cc-haha",
+      "github_id": "NanmiCoder/cc-haha",
+      "url": "https://github.com/NanmiCoder/cc-haha",
+      "slug": "cc-haha",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#cc-haha",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/cc-haha/",
+      "description": "Local-first desktop workspace **harness** for Claude Code and other agents: multi-agent sessions, Git worktrees, code diffs, a skill marketplace, and chat-app access (WeChat, Telegram, WhatsApp).",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 13866,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (desktop workspace, multi-agent — product suite)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "unknown",
+      "tags": [
+        "memory",
+        "multi-agent",
+        "typescript"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/NanmiCoder/cc-haha#readme"
+      },
+      "deep_dive": null
     },
     {
       "name": "claw-code-agent",
@@ -2333,6 +2455,34 @@
       }
     },
     {
+      "name": "planning-with-files",
+      "github_id": "OthmanAdi/planning-with-files",
+      "url": "https://github.com/OthmanAdi/planning-with-files",
+      "slug": "planning-with-files",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#planning-with-files",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/planning-with-files/",
+      "description": "Skill for persistent, file-based planning across long-running coding-agent sessions: crash-proof markdown plans, session recovery after `/clear`/compaction, and a deterministic completion gate—Manus-style planning as a drop-in **harness** layer via the Agent Skills standard.",
+      "category": "coding-harness-configs",
+      "category_title": "Coding harness configs and SDKs",
+      "stars": 25922,
+      "tier": "mostly simple",
+      "tier_rank": 2,
+      "axis": "mostly simple (skill, file-based state)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "unknown",
+      "tags": [
+        "memory"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/OthmanAdi/planning-with-files#readme"
+      },
+      "deep_dive": null
+    },
+    {
       "name": "SWE-agent",
       "github_id": "SWE-agent/SWE-agent",
       "url": "https://github.com/SWE-agent/SWE-agent",
@@ -2640,6 +2790,32 @@
           "evidence": "https://github.com/iflytek/skillhub#readme"
         }
       }
+    },
+    {
+      "name": "Meta-Harness",
+      "github_id": "stanford-iris-lab/meta-harness",
+      "url": "https://github.com/stanford-iris-lab/meta-harness",
+      "slug": "meta-harness",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#meta-harness",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/meta-harness/",
+      "description": "Reference implementation from the Meta-Harness paper: an academic testbed for harness-engineering research, not a product—useful as a citation-grade baseline rather than something you'd run in production.",
+      "category": "coding-harness-configs",
+      "category_title": "Coding harness configs and SDKs",
+      "stars": 1350,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (research reference implementation)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "unknown",
+      "tags": [],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/stanford-iris-lab/meta-harness#readme"
+      },
+      "deep_dive": null
     },
     {
       "name": "RepoMaster",
@@ -3007,6 +3183,66 @@
           "evidence": "https://github.com/NousResearch/hermes-agent/blob/main/README.md"
         }
       }
+    },
+    {
+      "name": "nanobot",
+      "github_id": "HKUDS/nanobot",
+      "url": "https://github.com/HKUDS/nanobot",
+      "slug": "nanobot",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#nanobot",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/nanobot/",
+      "description": "Ultra-lightweight, self-hosted personal agent framework: the **harness** is a Python daemon wiring tools, memory, and MCP into chat/webhook front ends (Telegram, Discord, web); minimal footprint alternative to heavier personal-runtime stacks.",
+      "category": "personal-agent-runtimes",
+      "category_title": "Personal agent runtimes",
+      "stars": 46514,
+      "tier": "mostly simple",
+      "tier_rank": 2,
+      "axis": "mostly simple (lightweight daemon, chat/MCP)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "unknown",
+      "tags": [
+        "mcp",
+        "memory",
+        "local",
+        "python"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/HKUDS/nanobot#readme"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "CowAgent",
+      "github_id": "zhayujie/CowAgent",
+      "url": "https://github.com/zhayujie/CowAgent",
+      "slug": "cowagent",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#cowagent",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/cowagent/",
+      "description": "Self-hosted **harness** (formerly chatgpt-on-wechat) that plans tasks, runs tools/skills, and self-evolves via memory; multi-model, multi-channel (WeChat, Telegram, etc.), one-line install.",
+      "category": "personal-agent-runtimes",
+      "category_title": "Personal agent runtimes",
+      "stars": 46272,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (multi-channel, self-evolving)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "unknown",
+      "tags": [
+        "memory",
+        "python"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/zhayujie/CowAgent#readme"
+      },
+      "deep_dive": null
     },
     {
       "name": "Khoj",
@@ -4113,6 +4349,36 @@
           "evidence": "https://raw.githubusercontent.com/mastra-ai/mastra/HEAD/README.md"
         }
       }
+    },
+    {
+      "name": "Haystack",
+      "github_id": "deepset-ai/haystack",
+      "url": "https://github.com/deepset-ai/haystack",
+      "slug": "haystack",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#haystack",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/haystack/",
+      "description": "Open-source orchestration framework for context-engineered LLM apps: modular pipelines and agent workflows with explicit control over retrieval, routing, memory, and generation—closer to LangChain's territory than a coding-agent harness.",
+      "category": "frameworks",
+      "category_title": "Frameworks",
+      "stars": 26088,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (modular pipelines, RAG + agents — product suite)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [
+        "memory",
+        "rag",
+        "python"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/deepset-ai/haystack#readme"
+      },
+      "deep_dive": null
     },
     {
       "name": "letta",
@@ -5391,6 +5657,65 @@
       }
     },
     {
+      "name": "omnigent",
+      "github_id": "omnigent-ai/omnigent",
+      "url": "https://github.com/omnigent-ai/omnigent",
+      "slug": "omnigent",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#omnigent",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/omnigent/",
+      "description": "Open-source meta-**harness**: orchestrates Claude Code, Codex, Cursor, Pi, and custom agents behind one policy/sandboxing layer so teams swap harnesses without rewriting workflows.",
+      "category": "multi-agent",
+      "category_title": "Multi-agent and orchestration",
+      "stars": 8030,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (meta-harness, policy + sandboxing — product suite)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "unknown",
+      "tags": [
+        "sandbox",
+        "ide",
+        "python"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/omnigent-ai/omnigent#readme"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "AG2",
+      "github_id": "ag2ai/ag2",
+      "url": "https://github.com/ag2ai/ag2",
+      "slug": "ag2",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#ag2",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/ag2/",
+      "description": "AG2 (formerly AutoGen): the community-governed continuation of the original AutoGen project after Microsoft's fork diverged—conversable multi-agent groups, code execution, and human-in-the-loop under an open-source AgentOS banner. Graduated off the radar this cycle.",
+      "category": "multi-agent",
+      "category_title": "Multi-agent and orchestration",
+      "stars": 4826,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (conversable multi-agent, AgentOS — product suite)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "unknown",
+      "tags": [
+        "multi-agent",
+        "python"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/ag2ai/ag2#readme"
+      },
+      "deep_dive": null
+    },
+    {
       "name": "AgentRL",
       "github_id": "THUDM/AgentRL",
       "url": "https://github.com/THUDM/AgentRL",
@@ -5800,6 +6125,35 @@
       "example": {
         "label": "Project README",
         "url": "https://github.com/microsoft/agent-governance-toolkit#readme"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "mcp-context-forge",
+      "github_id": "IBM/mcp-context-forge",
+      "url": "https://github.com/IBM/mcp-context-forge",
+      "slug": "mcp-context-forge",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#mcp-context-forge",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/mcp-context-forge/",
+      "description": "IBM's official AI gateway/registry/proxy that sits in front of any MCP, A2A, or REST/gRPC API: unified endpoint, centralized discovery, guardrails, and plugin support—the enterprise front door for **harness** tool calling. Graduated off the radar this cycle.",
+      "category": "plugins-mcp-cli",
+      "category_title": "Plugins, MCPs, CLI tools",
+      "stars": 4175,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (gateway, federation, guardrails — product suite)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "unknown",
+      "tags": [
+        "mcp",
+        "python"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/IBM/mcp-context-forge#readme"
       },
       "deep_dive": null
     },
@@ -6867,6 +7221,34 @@
       }
     },
     {
+      "name": "AutoResearchClaw",
+      "github_id": "aiming-lab/AutoResearchClaw",
+      "url": "https://github.com/aiming-lab/AutoResearchClaw",
+      "slug": "autoresearchclaw",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#autoresearchclaw",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/autoresearchclaw/",
+      "description": "Fully autonomous, self-evolving research **harness**: multi-agent debate and citation verification carry a project from idea to a written paper without a human in the loop.",
+      "category": "research-task",
+      "category_title": "Research and task-specific harnesses",
+      "stars": 13947,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (autonomous research, multi-agent debate — product suite)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "unknown",
+      "tags": [
+        "multi-agent"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/aiming-lab/AutoResearchClaw#readme"
+      },
+      "deep_dive": null
+    },
+    {
       "name": "MiroThinker",
       "github_id": "MiroMindAI/MiroThinker",
       "url": "https://github.com/MiroMindAI/MiroThinker",
@@ -7361,21 +7743,69 @@
   ],
   "radar": [
     {
-      "github_id": "ag2ai/ag2",
-      "stars": 4826,
-      "desc": "AG2 (formerly AutoGen): The Open-Source AgentOS.Join us at: https://discord.gg/sNGSwQME3x",
+      "github_id": "Fosowl/agenticSeek",
+      "stars": 26722,
+      "desc": "Fully Local Manus AI. No APIs, No $200 monthly bills. Enjoy an autonomous agent that thinks, browses the web, and code for the sole cost of electricity.",
       "via": "weekly discovery"
     },
     {
-      "github_id": "IBM/mcp-context-forge",
-      "stars": 4175,
-      "desc": "An AI Gateway, registry, and proxy that sits in front of any MCP, A2A, or REST/gRPC APIs, exposing a unified endpoint with centralized discovery, guardrails…",
+      "github_id": "RightNow-AI/openfang",
+      "stars": 18073,
+      "desc": "Open-source Agent Operating System",
+      "via": "weekly discovery"
+    },
+    {
+      "github_id": "EvoMap/evolver",
+      "stars": 8919,
+      "desc": "The GEP-powered self-evolving engine for AI agents. Auditable evolution with Genes, Capsules, and Events. \\| evomap.ai",
+      "via": "weekly discovery"
+    },
+    {
+      "github_id": "algorithmicsuperintelligence/openevolve",
+      "stars": 6832,
+      "desc": "Open-source implementation of AlphaEvolve",
+      "via": "weekly discovery"
+    },
+    {
+      "github_id": "open-multi-agent/open-multi-agent",
+      "stars": 6702,
+      "desc": "TypeScript AI agent orchestration framework with dynamic workflows. Describe the goal, not the graph: a coordinator plans the task DAG at runtime and runs it…",
+      "via": "weekly discovery"
+    },
+    {
+      "github_id": "crestalnetwork/intentkit",
+      "stars": 6504,
+      "desc": "IntentKit is an open-source, self-hosted cloud agent cluster that manages a collaborative team of AI agents for you.",
+      "via": "weekly discovery"
+    },
+    {
+      "github_id": "cloudflare/vibesdk",
+      "stars": 5178,
+      "desc": "An open-source vibe coding platform that helps you build your own vibe-coding platform, built entirely on Cloudflare stack",
+      "via": "weekly discovery"
+    },
+    {
+      "github_id": "FellouAI/eko",
+      "stars": 4947,
+      "desc": "Eko (Eko Keeps Operating) - Build Production-ready Agentic Workflow with Natural Language - eko.fellou.ai",
+      "via": "weekly discovery"
+    },
+    {
+      "github_id": "agentscope-ai/agentscope-java",
+      "stars": 4845,
+      "desc": "Build distributed, production-grade, long-running agents.",
       "via": "weekly discovery"
     },
     {
       "github_id": "evalstate/fast-agent",
       "stars": 3872,
       "desc": "Code, Build and Evaluate agents - excellent Model and Skills/MCP/ACP/A2A Support",
+      "via": "weekly discovery"
+    },
+    {
+      "github_id": "Mirix-AI/MIRIX",
+      "stars": 3558,
+      "desc": "Mirix is a multi-agent personal assistant designed to track on-screen activities and answer user questions intelligently. By capturing real-time visual data…",
       "via": "weekly discovery"
     },
     {
