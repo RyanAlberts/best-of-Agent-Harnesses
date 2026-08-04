@@ -1,13 +1,13 @@
 <!-- markdownlint-disable -->
 # Tags — cross-reference
 
-_Auto-generated from `scripts/generate.py`. 154 projects across 22 canonical tags. Edit projects in `generate.py` (not here) and rerun the script._
+_Auto-generated from `scripts/generate.py`. 159 projects across 22 canonical tags. Edit projects in `generate.py` (not here) and rerun the script._
 
 Tag chips appear next to each project in [README.md](README.md). This page lists every tag once with the projects that carry it, grouped by category and sorted by GitHub stars within each category.
 
 ## All tags
 
-[`mcp`](#mcp) (34) · [`memory`](#memory) (32) · [`multi-agent`](#multi-agent) (27) · [`evals`](#evals) (18) · [`voice`](#voice) (2) · [`vision`](#vision) (3) · [`browser`](#browser) (7) · [`sandbox`](#sandbox) (26) · [`low-code`](#low-code) (4) · [`rag`](#rag) (7) · [`tool-discovery`](#tool-discovery) (5) · [`training`](#training) (5) · [`workflow`](#workflow) (9) · [`typed`](#typed) (3) · [`local`](#local) (4) · [`provider-agnostic`](#provider-agnostic) (11) · [`cli`](#cli) (20) · [`ide`](#ide) (12) · [`tui`](#tui) (4) · [`rust`](#rust) (5) · [`python`](#python) (75) · [`typescript`](#typescript) (40)
+[`mcp`](#mcp) (36) · [`memory`](#memory) (33) · [`multi-agent`](#multi-agent) (28) · [`evals`](#evals) (19) · [`voice`](#voice) (2) · [`vision`](#vision) (3) · [`browser`](#browser) (7) · [`sandbox`](#sandbox) (26) · [`low-code`](#low-code) (4) · [`rag`](#rag) (7) · [`tool-discovery`](#tool-discovery) (5) · [`training`](#training) (5) · [`workflow`](#workflow) (10) · [`typed`](#typed) (3) · [`local`](#local) (4) · [`provider-agnostic`](#provider-agnostic) (11) · [`cli`](#cli) (20) · [`ide`](#ide) (13) · [`tui`](#tui) (4) · [`rust`](#rust) (5) · [`python`](#python) (77) · [`typescript`](#typescript) (40)
 
 ---
 
@@ -41,6 +41,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 **Frameworks**
 
 - [browser-use](https://github.com/browser-use/browser-use) — ⭐108k — Python layer over Playwright: natural-language goals become browser actions—web-agent loop without hand-rolling MCP or a custom driver for every site.
+- [Upsonic](https://github.com/Upsonic/Upsonic) — ⭐7.9k — Python framework for building autonomous agents that treats reliability, tool-calling, and MCP support as first-class concerns rather than bolted-on extras.
 - [Bee Agent Framework](https://github.com/i-am-bee/beeai-framework) — ⭐3.3k — Python + TypeScript, LF AI–backed; MCP/ACP, workflows, Requirement Agent; the one that pushes "production multi-agent" without LangChain.
 
 **Plugins, MCPs, CLI tools**
@@ -69,6 +70,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 - [pydantic-ai](https://github.com/pydantic/pydantic-ai) — ⭐19k — Type-safe Python agents with Pydantic I/O; multi-provider, MCP, Logfire observability, and human-in-the-loop.
 - [strands-agents](https://github.com/strands-agents/harness-sdk) — ⭐6.8k — Model-driven Python SDK; decorators for tools, native MCP, multi-agent; "minimal code" without sacrificing provider choice.
+- [fast-agent](https://github.com/evalstate/fast-agent) — ⭐3.9k — MCP-native Python **harness** for building, testing, and evaluating agents: Skills, ACP, and A2A support alongside first-class Model Context Protocol tool-calling, as a lean alternative to heavier orchestration frameworks.
 - [open-harness](https://github.com/MaxGfeller/open-harness) — ⭐592 — TypeScript Agent class on Vercel AI SDK; streaming events, filesystem/bash tools, MCP, and subagent delegation.
 
 ---
@@ -122,6 +124,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [claude-mem](https://github.com/thedotmack/claude-mem) — ⭐89.3k — Claude Code plugin that captures everything an agent does during a session, AI-compresses it (via claude-agent-sdk), and injects the relevant context into future sessions—session-to-session memory as a drop-in.
 - [Mem0](https://github.com/mem0ai/mem0) — ⭐62.3k — Universal memory layer for AI agents: stores user/org/session memory, retrieves on demand. Apache-2.0; the de-facto memory primitive paired with most harnesses in 2026.
 - [cognee](https://github.com/topoteretes/cognee) — ⭐29.7k — Open-source memory layer for agents: an extract–cognify–load pipeline that turns your data into a queryable knowledge graph plus vector store, so agents recall facts and relationships across sessions instead of re-reading context.
+- [agentmemory](https://github.com/rohitg00/agentmemory) — ⭐26.4k — Drop-in persistent memory layer for coding agents (Claude, Codex, Copilot, Cursor), positioned against real-world agent-memory benchmarks rather than a bespoke recall shim per harness.
 - [beads](https://github.com/gastownhall/beads) — ⭐25.8k — Portable persistent-memory layer for coding agents: tracks decisions and task state outside the harness's own context window so it survives session resets and model swaps.
 
 **Evaluation and benchmarking harnesses**
@@ -174,6 +177,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [Microsoft Agent Framework](https://github.com/microsoft/agent-framework) — ⭐12.5k — Microsoft's convergence of AutoGen and Semantic Kernel: build, orchestrate, and deploy agents and multi-agent workflows in Python and .NET, with graph-based workflows and checkpointing — the designated successor harness for both lines.
 - [hive](https://github.com/aden-hive/hive) — ⭐10.8k — Self-hosted multi-agent **harness** aimed at production workloads: human-in-the-loop checkpoints and a self-improving agent loop, distinct from single-session coding-agent shells.
 - [PraisonAI](https://github.com/MervinPraison/PraisonAI) — ⭐8.5k — Autonomous multi-agent teams with a single entry point; emphasis on minimal config.
+- [AgentScope (Java)](https://github.com/agentscope-ai/agentscope-java) — ⭐4.8k — Java port of the AgentScope multi-agent framework: distributed, production-grade, long-running agent orchestration for teams standardized on the JVM.
 - [AG2](https://github.com/ag2ai/ag2) — ⭐4.8k — AG2 (formerly AutoGen): the community-governed continuation of the original AutoGen project after Microsoft's fork diverged—conversable multi-agent groups, code execution, and human-in-the-loop under an open-source AgentOS banner. Graduated off the radar this cycle.
 
 **Research and task-specific harnesses**
@@ -204,6 +208,10 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [AutoGPT](https://github.com/Significant-Gravitas/AutoGPT) — ⭐186k — The original autonomous loop: goal in, agent iterates with tools and memory; Forge is the dev framework, Benchmark the eval harness.
 - [agno](https://github.com/agno-agi/agno) — ⭐41.5k — Python agents with memory, knowledge bases, tools, and structured outputs; continues the PhiData-era product line under the Agno name—production apps, evals, and pipelines.
 - [Google ADK](https://github.com/google/adk-python) — ⭐21k — Google's official Agent Development Kit: code-first Python toolkit for building, evaluating, and deploying agents. Optimized for Gemini but model-agnostic; deploys to Cloud Run / Vertex AI; ships a dev UI with eval and a code-execution sandbox.
+
+**Memory and state**
+
+- [agentmemory](https://github.com/rohitg00/agentmemory) — ⭐26.4k — Drop-in persistent memory layer for coding agents (Claude, Codex, Copilot, Cursor), positioned against real-world agent-memory benchmarks rather than a bespoke recall shim per harness.
 
 **Evaluation and benchmarking harnesses**
 
@@ -419,6 +427,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [n8n](https://github.com/n8n-io/n8n) — ⭐199k — Fair-code workflow engine with 400+ nodes and native AI nodes; the self-hosted Zapier that actually does agents and LangChain.
 - [langgraph](https://github.com/langchain-ai/langgraph) — ⭐38.7k — State-machine graphs over LLM steps; checkpointing, human-in-the-loop, and durable execution so workflows survive restarts.
 - [R2R](https://github.com/SciPhi-AI/R2R) — ⭐8k — RAG-first: hybrid search, knowledge graphs, multimodal; the framework for "production RAG" when you care more about retrieval than chat UI.
+- [Eko](https://github.com/FellouAI/eko) — ⭐4.9k — Natural-language-defined agentic workflow **harness** from the Fellou team: describe the goal in plain language and Eko compiles it into a deterministic, multi-step agent run.
 
 **Multi-agent and orchestration**
 
@@ -565,6 +574,10 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 - [continue](https://github.com/continuedev/continue) — ⭐35.3k — Open-source IDE extension (VS Code, JetBrains); in-editor completion and chat with local or API models.
 
+**Memory and state**
+
+- [agentmemory](https://github.com/rohitg00/agentmemory) — ⭐26.4k — Drop-in persistent memory layer for coding agents (Claude, Codex, Copilot, Cursor), positioned against real-world agent-memory benchmarks rather than a bespoke recall shim per harness.
+
 ---
 
 ## `tui`
@@ -637,6 +650,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [rasa](https://github.com/RasaHQ/rasa) — ⭐21.3k — Conversational AI stack (NLU, dialogue, actions); long-standing OSS choice for chat and voice bots.
 - [Google ADK](https://github.com/google/adk-python) — ⭐21k — Google's official Agent Development Kit: code-first Python toolkit for building, evaluating, and deploying agents. Optimized for Gemini but model-agnostic; deploys to Cloud Run / Vertex AI; ships a dev UI with eval and a code-execution sandbox.
 - [R2R](https://github.com/SciPhi-AI/R2R) — ⭐8k — RAG-first: hybrid search, knowledge graphs, multimodal; the framework for "production RAG" when you care more about retrieval than chat UI.
+- [Upsonic](https://github.com/Upsonic/Upsonic) — ⭐7.9k — Python framework for building autonomous agents that treats reliability, tool-calling, and MCP support as first-class concerns rather than bolted-on extras.
 - [AgentVerse](https://github.com/OpenBMB/AgentVerse) — ⭐5.1k — Task-solving and simulation envs for multi-LLM agents; deploy many agents in custom environments without building infra from scratch.
 - [Bee Agent Framework](https://github.com/i-am-bee/beeai-framework) — ⭐3.3k — Python + TypeScript, LF AI–backed; MCP/ACP, workflows, Requirement Agent; the one that pushes "production multi-agent" without LangChain.
 - [AgentSilex](https://github.com/howl-anderson/agentsilex) — ⭐453 — ~300 lines of readable agent code on top of LiteLLM; the "I want to see the whole loop" option for learning or minimal production.
@@ -702,6 +716,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [pydantic-ai](https://github.com/pydantic/pydantic-ai) — ⭐19k — Type-safe Python agents with Pydantic I/O; multi-provider, MCP, Logfire observability, and human-in-the-loop.
 - [E2B](https://github.com/e2b-dev/E2B) — ⭐13.2k — Firecracker sandboxes for executing agent-generated code; the hosted isolation layer many tool-calling demos use instead of running arbitrary LLM output on your laptop.
 - [strands-agents](https://github.com/strands-agents/harness-sdk) — ⭐6.8k — Model-driven Python SDK; decorators for tools, native MCP, multi-agent; "minimal code" without sacrificing provider choice.
+- [fast-agent](https://github.com/evalstate/fast-agent) — ⭐3.9k — MCP-native Python **harness** for building, testing, and evaluating agents: Skills, ACP, and A2A support alongside first-class Model Context Protocol tool-calling, as a lean alternative to heavier orchestration frameworks.
 
 ---
 
@@ -823,6 +838,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [rasa](https://github.com/RasaHQ/rasa) — ⭐21.3k — Conversational AI stack (NLU, dialogue, actions); long-standing OSS choice for chat and voice bots.
 - [Google ADK](https://github.com/google/adk-python) — ⭐21k — Google's official Agent Development Kit: code-first Python toolkit for building, evaluating, and deploying agents. Optimized for Gemini but model-agnostic; deploys to Cloud Run / Vertex AI; ships a dev UI with eval and a code-execution sandbox.
 - [R2R](https://github.com/SciPhi-AI/R2R) — ⭐8k — RAG-first: hybrid search, knowledge graphs, multimodal; the framework for "production RAG" when you care more about retrieval than chat UI.
+- [Upsonic](https://github.com/Upsonic/Upsonic) — ⭐7.9k — Python framework for building autonomous agents that treats reliability, tool-calling, and MCP support as first-class concerns rather than bolted-on extras.
 - [AgentVerse](https://github.com/OpenBMB/AgentVerse) — ⭐5.1k — Task-solving and simulation envs for multi-LLM agents; deploy many agents in custom environments without building infra from scratch.
 - [Bee Agent Framework](https://github.com/i-am-bee/beeai-framework) — ⭐3.3k — Python + TypeScript, LF AI–backed; MCP/ACP, workflows, Requirement Agent; the one that pushes "production multi-agent" without LangChain.
 - [AgentSilex](https://github.com/howl-anderson/agentsilex) — ⭐453 — ~300 lines of readable agent code on top of LiteLLM; the "I want to see the whole loop" option for learning or minimal production.
@@ -888,6 +904,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [pydantic-ai](https://github.com/pydantic/pydantic-ai) — ⭐19k — Type-safe Python agents with Pydantic I/O; multi-provider, MCP, Logfire observability, and human-in-the-loop.
 - [E2B](https://github.com/e2b-dev/E2B) — ⭐13.2k — Firecracker sandboxes for executing agent-generated code; the hosted isolation layer many tool-calling demos use instead of running arbitrary LLM output on your laptop.
 - [strands-agents](https://github.com/strands-agents/harness-sdk) — ⭐6.8k — Model-driven Python SDK; decorators for tools, native MCP, multi-agent; "minimal code" without sacrificing provider choice.
+- [fast-agent](https://github.com/evalstate/fast-agent) — ⭐3.9k — MCP-native Python **harness** for building, testing, and evaluating agents: Skills, ACP, and A2A support alongside first-class Model Context Protocol tool-calling, as a lean alternative to heavier orchestration frameworks.
 
 ---
 

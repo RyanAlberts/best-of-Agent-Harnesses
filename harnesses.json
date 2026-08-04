@@ -9,7 +9,7 @@
     "feed_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/feed.json",
     "license": "CC-BY-SA-4.0",
     "stars_captured": "2026-08-02",
-    "project_count": 154,
+    "project_count": 159,
     "graveyard_count": 3,
     "tiers": [
       "super simple",
@@ -374,7 +374,7 @@
     {
       "kind": "derived",
       "q": "How many of these agent harnesses are open source?",
-      "a": "112 of 154 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
+      "a": "112 of 159 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
       "slug": "how-many-of-these-agent-harnesses-are-open-source"
     },
     {
@@ -4689,6 +4689,35 @@
       }
     },
     {
+      "name": "Upsonic",
+      "github_id": "Upsonic/Upsonic",
+      "url": "https://github.com/Upsonic/Upsonic",
+      "slug": "upsonic",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#upsonic",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/upsonic/",
+      "description": "Python framework for building autonomous agents that treats reliability, tool-calling, and MCP support as first-class concerns rather than bolted-on extras.",
+      "category": "frameworks",
+      "category_title": "Frameworks",
+      "stars": 7933,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (reliability-focused agent framework)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "unknown",
+      "tags": [
+        "mcp",
+        "python"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/Upsonic/Upsonic#readme"
+      },
+      "deep_dive": null
+    },
+    {
       "name": "agent-squad",
       "github_id": "2FastLabs/agent-squad",
       "url": "https://github.com/2FastLabs/agent-squad",
@@ -4808,6 +4837,34 @@
           "evidence": "https://raw.githubusercontent.com/OpenBMB/AgentVerse/main/README.md"
         }
       }
+    },
+    {
+      "name": "Eko",
+      "github_id": "FellouAI/eko",
+      "url": "https://github.com/FellouAI/eko",
+      "slug": "eko",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#eko",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/eko/",
+      "description": "Natural-language-defined agentic workflow **harness** from the Fellou team: describe the goal in plain language and Eko compiles it into a deterministic, multi-step agent run.",
+      "category": "frameworks",
+      "category_title": "Frameworks",
+      "stars": 4947,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (NL-to-workflow compiler)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "unknown",
+      "tags": [
+        "workflow"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/FellouAI/eko#readme"
+      },
+      "deep_dive": null
     },
     {
       "name": "youtu-agent",
@@ -5687,6 +5744,34 @@
       "deep_dive": null
     },
     {
+      "name": "AgentScope (Java)",
+      "github_id": "agentscope-ai/agentscope-java",
+      "url": "https://github.com/agentscope-ai/agentscope-java",
+      "slug": "agentscope-java",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#agentscope-java",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/agentscope-java/",
+      "description": "Java port of the AgentScope multi-agent framework: distributed, production-grade, long-running agent orchestration for teams standardized on the JVM.",
+      "category": "multi-agent",
+      "category_title": "Multi-agent and orchestration",
+      "stars": 4845,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (distributed, long-running — product suite)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "unknown",
+      "tags": [
+        "multi-agent"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/agentscope-ai/agentscope-java#readme"
+      },
+      "deep_dive": null
+    },
+    {
       "name": "AG2",
       "github_id": "ag2ai/ag2",
       "url": "https://github.com/ag2ai/ag2",
@@ -6514,6 +6599,36 @@
           "evidence": "https://raw.githubusercontent.com/topoteretes/cognee/main/README.md"
         }
       }
+    },
+    {
+      "name": "agentmemory",
+      "github_id": "rohitg00/agentmemory",
+      "url": "https://github.com/rohitg00/agentmemory",
+      "slug": "agentmemory",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#agentmemory",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/agentmemory/",
+      "description": "Drop-in persistent memory layer for coding agents (Claude, Codex, Copilot, Cursor), positioned against real-world agent-memory benchmarks rather than a bespoke recall shim per harness.",
+      "category": "memory",
+      "category_title": "Memory and state",
+      "stars": 26356,
+      "tier": "mostly simple",
+      "tier_rank": 2,
+      "axis": "mostly simple (drop-in memory layer)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "unknown",
+      "tags": [
+        "memory",
+        "evals",
+        "ide"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/rohitg00/agentmemory#readme"
+      },
+      "deep_dive": null
     },
     {
       "name": "beads",
@@ -7632,6 +7747,35 @@
       "deep_dive": null
     },
     {
+      "name": "fast-agent",
+      "github_id": "evalstate/fast-agent",
+      "url": "https://github.com/evalstate/fast-agent",
+      "slug": "fast-agent",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#fast-agent",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/fast-agent/",
+      "description": "MCP-native Python **harness** for building, testing, and evaluating agents: Skills, ACP, and A2A support alongside first-class Model Context Protocol tool-calling, as a lean alternative to heavier orchestration frameworks.",
+      "category": "libraries-sdks",
+      "category_title": "Libraries and SDKs",
+      "stars": 3872,
+      "tier": "mostly simple",
+      "tier_rank": 2,
+      "axis": "mostly simple (MCP-native, lean surface)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "unknown",
+      "tags": [
+        "mcp",
+        "python"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/evalstate/fast-agent#readme"
+      },
+      "deep_dive": null
+    },
+    {
       "name": "openai-agents-js",
       "github_id": "openai/openai-agents-js",
       "url": "https://github.com/openai/openai-agents-js",
@@ -7782,24 +7926,6 @@
       "github_id": "cloudflare/vibesdk",
       "stars": 5178,
       "desc": "An open-source vibe coding platform that helps you build your own vibe-coding platform, built entirely on Cloudflare stack",
-      "via": "weekly discovery"
-    },
-    {
-      "github_id": "FellouAI/eko",
-      "stars": 4947,
-      "desc": "Eko (Eko Keeps Operating) - Build Production-ready Agentic Workflow with Natural Language - eko.fellou.ai",
-      "via": "weekly discovery"
-    },
-    {
-      "github_id": "agentscope-ai/agentscope-java",
-      "stars": 4845,
-      "desc": "Build distributed, production-grade, long-running agents.",
-      "via": "weekly discovery"
-    },
-    {
-      "github_id": "evalstate/fast-agent",
-      "stars": 3872,
-      "desc": "Code, Build and Evaluate agents - excellent Model and Skills/MCP/ACP/A2A Support",
       "via": "weekly discovery"
     },
     {

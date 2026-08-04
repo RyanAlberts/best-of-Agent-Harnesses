@@ -360,6 +360,13 @@ projects:
     github_id: deepset-ai/haystack
     labels: ["python"]
     category: "frameworks"
+  - name: Upsonic
+    github_id: Upsonic/Upsonic
+    labels: ["python"]
+    category: "frameworks"
+  - name: Eko
+    github_id: FellouAI/eko
+    category: "frameworks"
   # Multi-agent and orchestration
   - name: openai-agents-python
     github_id: openai/openai-agents-python
@@ -408,6 +415,9 @@ projects:
   - name: omnigent
     github_id: omnigent-ai/omnigent
     labels: ["python"]
+    category: "multi-agent"
+  - name: AgentScope (Java)
+    github_id: agentscope-ai/agentscope-java
     category: "multi-agent"
   # Plugins, MCPs, CLI tools
   - name: aider
@@ -495,6 +505,9 @@ projects:
     category: "memory"
   - name: beads
     github_id: gastownhall/beads
+    category: "memory"
+  - name: agentmemory
+    github_id: rohitg00/agentmemory
     category: "memory"
   # Evaluation and benchmarking harnesses
   - name: agent-qa
@@ -633,6 +646,10 @@ projects:
     category: "libraries-sdks"
   - name: Daytona
     github_id: daytonaio/daytona
+    category: "libraries-sdks"
+  - name: fast-agent
+    github_id: evalstate/fast-agent
+    labels: ["python"]
     category: "libraries-sdks"
   - name: Community-curated agent lists
     github_id: brandonhimpfen/awesome-ai-agents
