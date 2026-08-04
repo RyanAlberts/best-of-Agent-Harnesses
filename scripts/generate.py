@@ -410,6 +410,12 @@ PROJECTS: dict[str, list[Project]] = {
         Project("Haystack", "deepset-ai/haystack",
                 "Open-source orchestration framework for context-engineered LLM apps: modular pipelines and agent workflows with explicit control over retrieval, routing, memory, and generation—closer to LangChain's territory than a coding-agent harness.",
                 "complex (modular pipelines, RAG + agents — product suite)", labels=["python"]),
+        Project("Upsonic", "Upsonic/Upsonic",
+                "Python framework for building autonomous agents that treats reliability, tool-calling, and MCP support as first-class concerns rather than bolted-on extras.",
+                "slightly complex (reliability-focused agent framework)", oss="❓", labels=["python"]),
+        Project("Eko", "FellouAI/eko",
+                "Natural-language-defined agentic workflow **harness** from the Fellou team: describe the goal in plain language and Eko compiles it into a deterministic, multi-step agent run.",
+                "slightly complex (NL-to-workflow compiler)", oss="❓"),
     ],
     "multi-agent": [
         Project("openai-agents-python", "openai/openai-agents-python",
@@ -448,6 +454,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("omnigent", "omnigent-ai/omnigent",
                 "Open-source meta-**harness**: orchestrates Claude Code, Codex, Cursor, Pi, and custom agents behind one policy/sandboxing layer so teams swap harnesses without rewriting workflows.",
                 "complex (meta-harness, policy + sandboxing — product suite)", oss="❓", labels=["python"]),
+        Project("AgentScope (Java)", "agentscope-ai/agentscope-java",
+                "Java port of the AgentScope multi-agent framework: distributed, production-grade, long-running agent orchestration for teams standardized on the JVM.",
+                "complex (distributed, long-running — product suite)", oss="❓", link_name="AgentScope (Java)"),
     ],
     "plugins-mcp-cli": [
         Project("aider", "Aider-AI/aider",
@@ -521,6 +530,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("beads", "gastownhall/beads",
                 "Portable persistent-memory layer for coding agents: tracks decisions and task state outside the harness's own context window so it survives session resets and model swaps.",
                 "mostly simple (portable memory store)", oss="❓"),
+        Project("agentmemory", "rohitg00/agentmemory",
+                "Drop-in persistent memory layer for coding agents (Claude, Codex, Copilot, Cursor), positioned against real-world agent-memory benchmarks rather than a bespoke recall shim per harness.",
+                "mostly simple (drop-in memory layer)", oss="❓"),
     ],
     "evaluation": [
         Project("agent-qa", "vostride/agent-qa",
@@ -637,6 +649,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("Daytona", "daytonaio/daytona",
                 "Elastic dev environments for AI-generated code: workspaces, Git, previews—infra harness between \"the model wrote a patch\" and \"it ran in a real machine.\"",
                 "slightly complex (dev env API, isolation)"),
+        Project("fast-agent", "evalstate/fast-agent",
+                "MCP-native Python **harness** for building, testing, and evaluating agents: Skills, ACP, and A2A support alongside first-class Model Context Protocol tool-calling, as a lean alternative to heavier orchestration frameworks.",
+                "mostly simple (MCP-native, lean surface)", oss="❓", labels=["python"]),
         Project("Community-curated agent lists", "brandonhimpfen/awesome-ai-agents",
                 "Broader directories: e.g. [brandonhimpfen/awesome-ai-agents](https://github.com/brandonhimpfen/awesome-ai-agents), [axioma-ai-labs/awesome-ai-agent-frameworks](https://github.com/axioma-ai-labs/awesome-ai-agent-frameworks), [mb-mal/awesome-ai-agents-frameworks](https://github.com/mb-mal/awesome-ai-agents-frameworks)—differ by scope and update cadence.",
                 "super simple (curated lists)", oss="❓"),
@@ -742,6 +757,8 @@ META: dict[str, tuple[int, str, str]] = {
     "TencentCloudADP/youtu-agent": (4588, "https://github.com/TencentCloudADP/youtu-agent#readme", "Project README"),
     "deepset-ai/haystack": (26088, "https://github.com/deepset-ai/haystack#readme", "Project README"),
     "ag2ai/ag2": (4826, "https://github.com/ag2ai/ag2#readme", "Project README"),
+    "Upsonic/Upsonic": (7933, "https://github.com/Upsonic/Upsonic#readme", "Project README"),
+    "FellouAI/eko": (4947, "https://github.com/FellouAI/eko#readme", "Project README"),
     # multi-agent
     "openai/openai-agents-python": (28344, "https://github.com/openai/openai-agents-python/blob/main/examples/customer_service/main.py", "Airline customer service handoffs"),
     "crewAIInc/crewAI": (56503, "https://github.com/crewAIInc/crewAI-examples/blob/main/crews/trip_planner/trip_agents.py", "Trip planner crew"),
@@ -750,6 +767,7 @@ META: dict[str, tuple[int, str, str]] = {
     "THUDM/AgentRL": (330, "https://github.com/THUDM/AgentRL/blob/main/examples/training/async_trainer.py", "Async GRPO trainer"),
     "aden-hive/hive": (10827, "https://github.com/aden-hive/hive#readme", "Project README"),
     "omnigent-ai/omnigent": (8030, "https://github.com/omnigent-ai/omnigent#readme", "Project README"),
+    "agentscope-ai/agentscope-java": (4845, "https://github.com/agentscope-ai/agentscope-java#readme", "Project README"),
     # plugins-mcp-cli
     "Aider-AI/aider": (47874, "https://github.com/Aider-AI/aider/blob/main/aider/repomap.py", "Repo map source"),
     "RyanAlberts/agentlog": (1, "https://github.com/RyanAlberts/agentlog/blob/main/example-log/decisions.jsonl", "Sample decisions.jsonl"),
@@ -806,9 +824,11 @@ META: dict[str, tuple[int, str, str]] = {
     "e2b-dev/E2B": (13226, "https://github.com/e2b-dev/e2b-cookbook/tree/main/examples/anthropic-claude-code-in-sandbox-python", "Claude Code in sandbox"),
     "daytonaio/daytona": (72069, "https://github.com/daytonaio/daytona/tree/main/examples/python/charts", "Charts in sandbox"),
     "brandonhimpfen/awesome-ai-agents": (14, "https://github.com/brandonhimpfen/awesome-ai-agents#frameworks", "Frameworks section"),
+    "evalstate/fast-agent": (3872, "https://github.com/evalstate/fast-agent#readme", "Project README"),
     # memory
     "topoteretes/cognee": (29689, "https://github.com/topoteretes/cognee#readme", "Quickstart"),
     "gastownhall/beads": (25809, "https://github.com/gastownhall/beads#readme", "Project README"),
+    "rohitg00/agentmemory": (26356, "https://github.com/rohitg00/agentmemory#readme", "Project README"),
     # observability
     "langfuse/langfuse": (32326, "https://langfuse.com/docs", "Docs"),
     "mlflow/mlflow": (27330, "https://mlflow.org", "Docs"),
@@ -1065,6 +1085,8 @@ AXES: "dict[str, tuple[str, str]]" = {
     "zhayujie/CowAgent": ("n/a", "n/a"),
     "deepset-ai/haystack": ("n/a", "n/a"),
     "ag2ai/ag2": ("n/a", "n/a"),
+    "Upsonic/Upsonic": ("n/a", "n/a"),
+    "FellouAI/eko": ("n/a", "n/a"),
     # multi-agent
     "microsoft/autogen": ("bounded", "resumable"),
     "crewAIInc/crewAI": ("bounded", "resumable"),
@@ -1073,6 +1095,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "THUDM/AgentRL": ("headless", "resumable"),
     "aden-hive/hive": ("bounded", "resumable"),
     "omnigent-ai/omnigent": ("n/a", "n/a"),
+    "agentscope-ai/agentscope-java": ("n/a", "n/a"),
     # plugins-mcp-cli
     "thedotmack/claude-mem": ("n/a", "n/a"),
     "Aider-AI/aider": ("checkpoint-gated", "resumable"),
@@ -1129,9 +1152,11 @@ AXES: "dict[str, tuple[str, str]]" = {
     "openai/openai-agents-js": ("bounded", "resumable"),
     "MaxGfeller/open-harness": ("bounded", "none"),
     "brandonhimpfen/awesome-ai-agents": ("n/a", "n/a"),
+    "evalstate/fast-agent": ("n/a", "n/a"),
     # memory (state layers — no agent loop of their own)
     "topoteretes/cognee": ("n/a", "n/a"),
     "gastownhall/beads": ("n/a", "n/a"),
+    "rohitg00/agentmemory": ("n/a", "n/a"),
     # observability (tracing/eval-ops infra — no agent loop of their own)
     "langfuse/langfuse": ("n/a", "n/a"),
     "mlflow/mlflow": ("n/a", "n/a"),
