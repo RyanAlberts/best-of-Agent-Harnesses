@@ -249,7 +249,7 @@ PROJECTS: dict[str, list[Project]] = {
                 "Config layer that chains LLM councils for planning, Ralph loops for iterative refinement, and OpenCode worktrees for shipping. The **harness** contribution is the council → loop → worktree pipeline; OpenCode underneath executes.",
                 "mostly simple (config pipeline over OpenCode)", labels=["javascript"]),
         Project("L∞pGate", "rxdt/loopgate_harness",
-                "Repo-native, worker-agnostic coding **harness** that launches fresh CLI-agent iterations against prompt/spec/status files used as durable memory; Git hooks and CI run configurable quality gates before agent changes land.",
+                "A repo-native coding **harness** that runs any CLI agent in a loop against specs. Each iteration starts with fresh context, the repo serves as durable memory, and Git hooks enforce lint, types, tests, security (*and more*) before changes are pushed—instead of relying on agents to follow instructions.",
                 "slightly complex (loop runner, repo memory, commit gates)", labels=["python"]),
         Project("get-shit-done", "open-gsd/gsd-core",
                 "Goal-backward planning and wave-based execution over fresh context windows; avoids context rot by design. Python/JS meta-prompting for Claude Code, OpenCode, Gemini CLI.",

@@ -3008,7 +3008,7 @@
       "slug": "loopgate_harness",
       "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#loopgate_harness",
       "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/loopgate_harness/",
-      "description": "Repo-native, worker-agnostic coding **harness** that launches fresh CLI-agent iterations against prompt/spec/status files used as durable memory; Git hooks and CI run configurable quality gates before agent changes land.",
+      "description": "A repo-native coding **harness** that runs any CLI agent in a loop against specs. Each iteration starts with fresh context, the repo serves as durable memory, and Git hooks enforce lint, types, tests, security (*and more*) before changes are pushed—instead of relying on agents to follow instructions.",
       "category": "coding-harness-configs",
       "category_title": "Coding harness configs and SDKs",
       "stars": 16,
