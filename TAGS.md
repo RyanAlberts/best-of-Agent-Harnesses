@@ -94,7 +94,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [SWE-agent](https://github.com/SWE-agent/SWE-agent) — ⭐20k — LM-driven harness built for SWE-bench: edit state, command execution, and issue-focused loop—the reference agent stack next to the benchmark itself.
 - [Claude Agent SDK](https://github.com/anthropics/claude-agent-sdk-python) — ⭐7.8k — Official Anthropic SDK (Python + [TypeScript](https://github.com/anthropics/claude-agent-sdk-typescript), [demos](https://github.com/anthropics/claude-agent-sdk-demos), [quickstarts](https://github.com/anthropics/claude-quickstarts)): built-in tools, MCP, long-running coding agents with session bridging.
 - [AutoHarness](https://github.com/aiming-lab/AutoHarness) — ⭐363 — Lightweight governance harness: wraps any LLM client in ~2 lines for automated harness engineering—6–14 step pipeline, YAML constitution, risk-pattern matching, session persistence with cost tracking, multi-agent profiles.
-- [L∞pGate](https://github.com/rxdt/loopgate_harness) — ⭐16 — A repo-native coding **harness** that runs any CLI agent in a loop against specs. Each iteration starts with fresh context, the repo serves as durable memory, and Git hooks enforce lint, types, tests, security (*and more*) before changes are pushed—instead of relying on agents to follow instructions.
+- [L∞pGate](https://github.com/rxdt/loopgate_harness) — ⭐16 — Run any CLI agent in a loop against specs. Fresh context each iteration, the repo as durable memory, and lint/types/tests/security (*and more*) enforced by git hooks, so bad changes never land, instead of agents being asked not to.
 
 **Personal agent runtimes**
 
@@ -519,7 +519,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [get-shit-done](https://github.com/open-gsd/gsd-core) — ⭐7.6k — Goal-backward planning and wave-based execution over fresh context windows; avoids context rot by design. Python/JS meta-prompting for Claude Code, OpenCode, Gemini CLI.
 - [agents-cli](https://github.com/google/agents-cli) — ⭐5.5k — Google's official CLI and skill pack that layers agent-creation, evaluation, and deployment skills on top of whatever coding assistant you already run, rather than shipping its own agent loop—the **harness** as a config/skills add-on, not a new runtime.
 - [skillhub](https://github.com/iflytek/skillhub) — ⭐4.8k — iFlytek's self-hosted registry for publishing, versioning, and governing agent skill packages—the **harness** config layer treated as an enterprise artifact store rather than a CLI or IDE shell.
-- [L∞pGate](https://github.com/rxdt/loopgate_harness) — ⭐16 — A repo-native coding **harness** that runs any CLI agent in a loop against specs. Each iteration starts with fresh context, the repo serves as durable memory, and Git hooks enforce lint, types, tests, security (*and more*) before changes are pushed—instead of relying on agents to follow instructions.
+- [L∞pGate](https://github.com/rxdt/loopgate_harness) — ⭐16 — Run any CLI agent in a loop against specs. Fresh context each iteration, the repo as durable memory, and lint/types/tests/security (*and more*) enforced by git hooks, so bad changes never land, instead of agents being asked not to.
 
 **Personal agent runtimes**
 
@@ -613,7 +613,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [get-shit-done](https://github.com/open-gsd/gsd-core) — ⭐7.6k — Goal-backward planning and wave-based execution over fresh context windows; avoids context rot by design. Python/JS meta-prompting for Claude Code, OpenCode, Gemini CLI.
 - [RepoMaster](https://github.com/QuantaAlpha/RepoMaster) — ⭐541 — Repo-scoped research harness: builds function-call and module-dependency graphs to explore only what's needed; large relative gains on MLE-bench and GitTaskBench with lower token use.
 - [AutoHarness](https://github.com/aiming-lab/AutoHarness) — ⭐363 — Lightweight governance harness: wraps any LLM client in ~2 lines for automated harness engineering—6–14 step pipeline, YAML constitution, risk-pattern matching, session persistence with cost tracking, multi-agent profiles.
-- [L∞pGate](https://github.com/rxdt/loopgate_harness) — ⭐16 — A repo-native coding **harness** that runs any CLI agent in a loop against specs. Each iteration starts with fresh context, the repo serves as durable memory, and Git hooks enforce lint, types, tests, security (*and more*) before changes are pushed—instead of relying on agents to follow instructions.
+- [L∞pGate](https://github.com/rxdt/loopgate_harness) — ⭐16 — Run any CLI agent in a loop against specs. Fresh context each iteration, the repo as durable memory, and lint/types/tests/security (*and more*) enforced by git hooks, so bad changes never land, instead of agents being asked not to.
 
 **Personal agent runtimes**
 
@@ -800,7 +800,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [get-shit-done](https://github.com/open-gsd/gsd-core) — ⭐7.6k — Goal-backward planning and wave-based execution over fresh context windows; avoids context rot by design. Python/JS meta-prompting for Claude Code, OpenCode, Gemini CLI.
 - [RepoMaster](https://github.com/QuantaAlpha/RepoMaster) — ⭐541 — Repo-scoped research harness: builds function-call and module-dependency graphs to explore only what's needed; large relative gains on MLE-bench and GitTaskBench with lower token use.
 - [AutoHarness](https://github.com/aiming-lab/AutoHarness) — ⭐363 — Lightweight governance harness: wraps any LLM client in ~2 lines for automated harness engineering—6–14 step pipeline, YAML constitution, risk-pattern matching, session persistence with cost tracking, multi-agent profiles.
-- [L∞pGate](https://github.com/rxdt/loopgate_harness) — ⭐16 — A repo-native coding **harness** that runs any CLI agent in a loop against specs. Each iteration starts with fresh context, the repo serves as durable memory, and Git hooks enforce lint, types, tests, security (*and more*) before changes are pushed—instead of relying on agents to follow instructions.
+- [L∞pGate](https://github.com/rxdt/loopgate_harness) — ⭐16 — Run any CLI agent in a loop against specs. Fresh context each iteration, the repo as durable memory, and lint/types/tests/security (*and more*) enforced by git hooks, so bad changes never land, instead of agents being asked not to.
 
 **Personal agent runtimes**
 

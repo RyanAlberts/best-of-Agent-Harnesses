@@ -590,7 +590,7 @@
           "@type": "SoftwareApplication",
           "name": "L∞pGate",
           "url": "https://github.com/rxdt/loopgate_harness",
-          "description": "A repo-native coding **harness** that runs any CLI agent in a loop against specs. Each iteration starts with fresh context, the repo serves as durable memory, and Git hooks enforce lint, types, tests, security (*and more*) before changes are pushed—instead of relying on agents to follow instructions.",
+          "description": "Run any CLI agent in a loop against specs. Fresh context each iteration, the repo as durable memory, and lint/types/tests/security (*and more*) enforced by git hooks, so bad changes never land, instead of agents being asked not to.",
           "applicationCategory": "DeveloperApplication",
           "keywords": "memory, cli, python"
         }

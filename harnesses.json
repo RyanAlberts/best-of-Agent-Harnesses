@@ -368,7 +368,7 @@
     {
       "kind": "derived",
       "q": "Which agent harnesses survive a crash mid-task (durable)?",
-      "a": "Harnesses whose execution state persists across restarts: langgraph-bigtool, n8n, langgraph, mastra, letta, deepagents, pydantic-ai, Cloudflare Agents.",
+      "a": "Harnesses whose execution state persists across restarts: langgraph-bigtool, L∞pGate, n8n, langgraph, mastra, letta, deepagents, pydantic-ai.",
       "slug": "which-agent-harnesses-survive-a-crash-mid-task-durable"
     },
     {
@@ -3008,7 +3008,7 @@
       "slug": "loopgate_harness",
       "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#loopgate_harness",
       "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/loopgate_harness/",
-      "description": "A repo-native coding **harness** that runs any CLI agent in a loop against specs. Each iteration starts with fresh context, the repo serves as durable memory, and Git hooks enforce lint, types, tests, security (*and more*) before changes are pushed—instead of relying on agents to follow instructions.",
+      "description": "Run any CLI agent in a loop against specs. Fresh context each iteration, the repo as durable memory, and lint/types/tests/security (*and more*) enforced by git hooks, so bad changes never land, instead of agents being asked not to.",
       "category": "coding-harness-configs",
       "category_title": "Coding harness configs and SDKs",
       "stars": 16,
@@ -3017,8 +3017,8 @@
       "axis": "slightly complex (loop runner, repo memory, commit gates)",
       "autonomy": "headless",
       "autonomy_rank": 4,
-      "recovery": "none",
-      "recovery_rank": 1,
+      "recovery": "durable",
+      "recovery_rank": 4,
       "license_signal": "open-source",
       "tags": [
         "memory",
