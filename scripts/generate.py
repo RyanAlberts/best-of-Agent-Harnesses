@@ -1455,10 +1455,10 @@ def build_faq() -> list:
     oss = [p for p in ordered_projects() if oss_signal(p.oss) == "open-source"]
     add("derived", "Which agent harnesses can run unattended (headless)?",
         "Harnesses designed for unattended runs, batches, and fleets: "
-        + ", ".join(p.display_name for p in headless[:8]) + ".")
+        + ", ".join(p.display_name for p in headless[:9]) + ".")
     add("derived", "Which agent harnesses survive a crash mid-task (durable)?",
         "Harnesses whose execution state persists across restarts: "
-        + ", ".join(p.display_name for p in durable[:8]) + ".")
+        + ", ".join(p.display_name for p in durable[:9]) + ".")
     add("derived", "How many of these agent harnesses are open source?",
         f"{len(oss)} of {count_projects()} carry a standard open-source license; the rest are "
         "source-available or unclear, and flagged per row.")

@@ -435,11 +435,11 @@ _Up-and-coming candidates — surfaced by the weekly discovery scan or submitted
 
 ### Which agent harnesses can run unattended (headless)?
 
-Harnesses designed for unattended runs, batches, and fleets: opencode, OpenHands, goose, Symphony, SWE-agent, Claude Agent SDK, RepoMaster, L∞pGate.
+Harnesses designed for unattended runs, batches, and fleets: opencode, OpenHands, goose, Symphony, SWE-agent, Claude Agent SDK, RepoMaster, L∞pGate, OpenClaw.
 
 ### Which agent harnesses survive a crash mid-task (durable)?
 
-Harnesses whose execution state persists across restarts: langgraph-bigtool, L∞pGate, n8n, langgraph, mastra, letta, deepagents, pydantic-ai.
+Harnesses whose execution state persists across restarts: langgraph-bigtool, L∞pGate, n8n, langgraph, mastra, letta, deepagents, pydantic-ai, Cloudflare Agents.
 
 ### How many of these agent harnesses are open source?
 
