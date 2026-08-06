@@ -9,7 +9,7 @@
     "feed_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/feed.json",
     "license": "CC-BY-SA-4.0",
     "stars_captured": "2026-08-02",
-    "project_count": 154,
+    "project_count": 155,
     "graveyard_count": 3,
     "tiers": [
       "super simple",
@@ -374,7 +374,7 @@
     {
       "kind": "derived",
       "q": "How many of these agent harnesses are open source?",
-      "a": "112 of 154 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
+      "a": "112 of 155 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
       "slug": "how-many-of-these-agent-harnesses-are-open-source"
     },
     {
@@ -1782,6 +1782,36 @@
           "evidence": "https://github.com/RooCodeInc/Roo-Code"
         }
       }
+    },
+    {
+      "name": "grok-build",
+      "github_id": "xai-org/grok-build",
+      "url": "https://github.com/xai-org/grok-build",
+      "slug": "grok-build",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#grok-build",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/grok-build/",
+      "description": "xAI's official terminal coding agent. The **harness** is a sandboxed tool-call loop with a fullscreen, mouse-interactive TUI; xAI's parallel to openai/codex and google-gemini/gemini-cli.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 23864,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (official CLI, TUI)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "unknown",
+      "tags": [
+        "sandbox",
+        "cli",
+        "tui"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/xai-org/grok-build#readme"
+      },
+      "deep_dive": null
     },
     {
       "name": "oh-my-pi",
@@ -7743,9 +7773,45 @@
   ],
   "radar": [
     {
+      "github_id": "multica-ai/multica",
+      "stars": 43243,
+      "desc": "The open-source managed agents platform. Turn coding agents into real teammates — assign tasks, track progress, compound skills.",
+      "via": "weekly discovery"
+    },
+    {
+      "github_id": "stablyai/orca",
+      "stars": 35535,
+      "desc": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop, mobile and VPS.",
+      "via": "weekly discovery"
+    },
+    {
       "github_id": "Fosowl/agenticSeek",
       "stars": 26722,
       "desc": "Fully Local Manus AI. No APIs, No $200 monthly bills. Enjoy an autonomous agent that thinks, browses the web, and code for the sole cost of electricity.",
+      "via": "weekly discovery"
+    },
+    {
+      "github_id": "rohitg00/agentmemory",
+      "stars": 26356,
+      "desc": "#1 Persistent memory for AI coding agents based on real-world benchmarks",
+      "via": "weekly discovery"
+    },
+    {
+      "github_id": "manaflow-ai/cmux",
+      "stars": 25495,
+      "desc": "Open source Ghostty-based macOS terminal with vertical tabs and notifications for AI coding agents. Built for multitasking, organization, and programmability.",
+      "via": "weekly discovery"
+    },
+    {
+      "github_id": "alirezarezvani/claude-skills",
+      "stars": 23650,
+      "desc": "345 Claude Code skills & agent skills & plugins (30+ Agents, 70+ custom commands, 330+ skills, customizable references, scripts)for Claude Code, Codex, Gemin…",
+      "via": "weekly discovery"
+    },
+    {
+      "github_id": "herdrdev/herdr",
+      "stars": 23527,
+      "desc": "the runtime your coding agents live on",
       "via": "weekly discovery"
     },
     {
