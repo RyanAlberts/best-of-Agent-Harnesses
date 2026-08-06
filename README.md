@@ -10,7 +10,7 @@
 
 <p align="center">
     <a href="https://best-of.org" title="Best-of Badge"><img src="http://bit.ly/3o3EHNN"></a>
-    <a href="#contents" title="Project Count"><img src="https://img.shields.io/badge/projects-154-blue.svg?color=5ac4bf"></a>
+    <a href="#contents" title="Project Count"><img src="https://img.shields.io/badge/projects-155-blue.svg?color=5ac4bf"></a>
     <a href="https://ryanalberts.github.io/best-of-Agent-Harnesses/" title="Browse the searchable site"><img src="https://img.shields.io/badge/website-live-5ac4bf.svg"></a>
     <a href="#for-agents" title="Agents can query this list — MCP server, llms.txt & JSON"><img src="https://img.shields.io/badge/agents-query%20this%20list-5ac4bf.svg"></a>
     <a href="#contribution" title="Contributions welcome"><img src="https://img.shields.io/badge/contributions-welcome-green.svg"></a>
@@ -113,7 +113,7 @@ curl -fsSL https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses
 - [FAQ](#faq)
 - [Progressive disclosure harnesses](#progressive-disclosure-harnesses) _8 projects_
 - [Coding agent products (IDEs, CLIs, full suites)](#coding-agent-products-ides-clis-full-suites) _22 projects_
-- [Coding harness configs and SDKs](#coding-harness-configs-and-sdks) _17 projects_
+- [Coding harness configs and SDKs](#coding-harness-configs-and-sdks) _18 projects_
 - [Personal agent runtimes](#personal-agent-runtimes) _10 projects_
 - [Frameworks](#frameworks) _25 projects_
 - [Multi-agent and orchestration](#multi-agent-and-orchestration) _12 projects_
@@ -210,7 +210,8 @@ _Skill packs, slash-command libraries, meta-prompting frameworks, and official S
 | 14 | <a name="repomaster"></a>[**RepoMaster**](https://github.com/QuantaAlpha/RepoMaster)&#8202;★ | [541](https://github.com/QuantaAlpha/RepoMaster/stargazers) | Repo-scoped research harness: builds function-call and module-dependency graphs to explore only what's needed; large relative gains on MLE-bench and GitTaskBench with lower token use. <sup>`workflow` · `python`</sup> | ❓ | slightly complex (graph-based exploration) | [PDF-parse case study](https://github.com/QuantaAlpha/RepoMaster/blob/main/example/pdf_parse.md) |
 | 15 | <a name="autoharness"></a>[**AutoHarness**](https://github.com/aiming-lab/AutoHarness) | [363](https://github.com/aiming-lab/AutoHarness/stargazers) | Lightweight governance harness: wraps any LLM client in ~2 lines for automated harness engineering—6–14 step pipeline, YAML constitution, risk-pattern matching, session persistence with cost tracking, multi-agent profiles. <sup>`memory` · `multi-agent` · `provider-agnostic` · `python`</sup> | ✅ | super simple (2-line wrapper, YAML gov) | [Full pipeline demo](https://github.com/aiming-lab/AutoHarness/blob/main/examples/full_pipeline_demo.py) |
 | 16 | <a name="looptroop"></a>[**LoopTroop**](https://github.com/looptroop-ai/LoopTroop) | [106](https://github.com/looptroop-ai/LoopTroop/stargazers) | Config layer that chains LLM councils for planning, Ralph loops for iterative refinement, and OpenCode worktrees for shipping. The **harness** contribution is the council → loop → worktree pipeline; OpenCode underneath executes. <sup>`typescript`</sup> | ✅ | mostly simple (config pipeline over OpenCode) | [Council → loop → worktree pipeline](https://github.com/looptroop-ai/LoopTroop#readme) |
-| 17 | <a name="pmstack"></a>[**pmstack**](https://github.com/RyanAlberts/pmstack) | [8](https://github.com/RyanAlberts/pmstack/stargazers) | Claude Code config for AI product managers: CLAUDE.md plus skills for competitive analysis, PRD-from-signal, metric frameworks, stakeholder briefs, and agent eval design. "GStack for PMs." <sup>`evals`</sup> | ✅ | super simple (skills bundle, PM-focused) | [PRD-from-signal skill](https://github.com/RyanAlberts/pmstack/blob/main/skills/prd-from-signal.md) |
+| 17 | <a name="loopgate_harness"></a>[**L∞pGate**](https://github.com/rxdt/loopgate_harness)&#8202;★ | [16](https://github.com/rxdt/loopgate_harness/stargazers) | Repo-native, worker-agnostic coding **harness** that launches fresh CLI-agent iterations against prompt/spec/status files used as durable memory; Git hooks and CI run configurable quality gates before agent changes land. <sup>`memory` · `cli` · `python`</sup> | ✅ | slightly complex (loop runner, repo memory, commit gates) | [Fresh-context gated loop](https://github.com/rxdt/loopgate_harness#a-lpgate-loop) |
+| 18 | <a name="pmstack"></a>[**pmstack**](https://github.com/RyanAlberts/pmstack) | [8](https://github.com/RyanAlberts/pmstack/stargazers) | Claude Code config for AI product managers: CLAUDE.md plus skills for competitive analysis, PRD-from-signal, metric frameworks, stakeholder briefs, and agent eval design. "GStack for PMs." <sup>`evals`</sup> | ✅ | super simple (skills bundle, PM-focused) | [PRD-from-signal skill](https://github.com/RyanAlberts/pmstack/blob/main/skills/prd-from-signal.md) |
 
 ## Personal agent runtimes
 
@@ -434,7 +435,7 @@ _Up-and-coming candidates — surfaced by the weekly discovery scan or submitted
 
 ### Which agent harnesses can run unattended (headless)?
 
-Harnesses designed for unattended runs, batches, and fleets: opencode, OpenHands, goose, Symphony, SWE-agent, Claude Agent SDK, RepoMaster, OpenClaw.
+Harnesses designed for unattended runs, batches, and fleets: opencode, OpenHands, goose, Symphony, SWE-agent, Claude Agent SDK, RepoMaster, L∞pGate.
 
 ### Which agent harnesses survive a crash mid-task (durable)?
 
@@ -442,7 +443,7 @@ Harnesses whose execution state persists across restarts: langgraph-bigtool, n8n
 
 ### How many of these agent harnesses are open source?
 
-112 of 154 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.
+113 of 155 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.
 
 ### What is an agent harness?
 

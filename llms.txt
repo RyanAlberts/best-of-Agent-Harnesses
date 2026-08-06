@@ -1,6 +1,6 @@
 # Best of Agent Harnesses
 
-> Hand-curated, ranked list of 154 AI agent harnesses — the runtimes that close the loop between a stateless model and the outside world. 12 categories, a 4-tier adoption-surface rating (simplicity ↔ capability), capability tags, a license signal, and one concrete example link per project. Stars captured 2026-08-02.
+> Hand-curated, ranked list of 155 AI agent harnesses — the runtimes that close the loop between a stateless model and the outside world. 12 categories, a 4-tier adoption-surface rating (simplicity ↔ capability), capability tags, a license signal, and one concrete example link per project. Stars captured 2026-08-02.
 
 Maintained at https://github.com/RyanAlberts/best-of-Agent-Harnesses (CC-BY-SA-4.0).
 Structured data: https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/harnesses.json
@@ -68,13 +68,13 @@ Top picks: deepagents, gpt-researcher, openagents. See the “Research and task-
 Top picks: LiteLLM, vercel/ai. See the “Libraries and SDKs” category for the full ranked list.
 
 ### Which agent harnesses can run unattended (headless)?
-Harnesses designed for unattended runs, batches, and fleets: opencode, OpenHands, goose, Symphony, SWE-agent, Claude Agent SDK, RepoMaster, OpenClaw.
+Harnesses designed for unattended runs, batches, and fleets: opencode, OpenHands, goose, Symphony, SWE-agent, Claude Agent SDK, RepoMaster, L∞pGate.
 
 ### Which agent harnesses survive a crash mid-task (durable)?
 Harnesses whose execution state persists across restarts: langgraph-bigtool, n8n, langgraph, mastra, letta, deepagents, pydantic-ai, Cloudflare Agents.
 
 ### How many of these agent harnesses are open source?
-112 of 154 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.
+113 of 155 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.
 
 ### What is an agent harness?
 The runtime that turns a model into an agent: it decides what the model's reasoning is allowed to touch, and supplies the orchestration, tool wiring, memory, error recovery, and guardrails around per-turn inference.
@@ -125,7 +125,7 @@ Turnkey coding agents you install and run: IDE extensions, terminal CLIs, Docker
 - [AgentBox](https://github.com/madarco/agentbox) — ⭐332, slightly complex, autonomy: n/a, recovery: n/a, open-source: Runs multiple coding agents in parallel, each in its own sandboxed VM, locally or in the cloud, from one command. The **harness** contribution is the VM-per-agent isolation and fleet fan-out layer; whichever agent runs inside owns the loop. [sandbox, typescript]
 - [Proliferate](https://github.com/proliferate-ai/proliferate) — ⭐156, complex, autonomy: bounded, recovery: resumable, open-source: Open-source AI IDE for Claude Code, Codex, OpenCode, and more. The **harness** contribution is the workspace/session orchestration layer: run multiple coding agents in parallel, locally or in the cloud, with isolated workspaces, reusable workflows, and shared team context. [multi-agent, sandbox, ide, typescript]
 
-## Coding harness configs and SDKs (17 projects)
+## Coding harness configs and SDKs (18 projects)
 
 Skill packs, slash-command libraries, meta-prompting frameworks, and official SDKs that give you the harness (the agent loop, planning, memory, hooks) without bundling a specific IDE or CLI shell.
 
@@ -145,6 +145,7 @@ Skill packs, slash-command libraries, meta-prompting frameworks, and official SD
 - [RepoMaster](https://github.com/QuantaAlpha/RepoMaster) — ⭐541, slightly complex, autonomy: headless, recovery: none, unknown: Repo-scoped research harness: builds function-call and module-dependency graphs to explore only what's needed; large relative gains on MLE-bench and GitTaskBench with lower token use. [workflow, python]
 - [AutoHarness](https://github.com/aiming-lab/AutoHarness) — ⭐363, super simple, autonomy: bounded, recovery: none, open-source: Lightweight governance harness: wraps any LLM client in ~2 lines for automated harness engineering—6–14 step pipeline, YAML constitution, risk-pattern matching, session persistence with cost tracking, multi-agent profiles. [memory, multi-agent, provider-agnostic, python]
 - [LoopTroop](https://github.com/looptroop-ai/LoopTroop) — ⭐106, mostly simple, autonomy: bounded, recovery: retry, open-source: Config layer that chains LLM councils for planning, Ralph loops for iterative refinement, and OpenCode worktrees for shipping. The **harness** contribution is the council → loop → worktree pipeline; OpenCode underneath executes. [typescript]
+- [L∞pGate](https://github.com/rxdt/loopgate_harness) — ⭐16, slightly complex, autonomy: headless, recovery: none, open-source: Repo-native, worker-agnostic coding **harness** that launches fresh CLI-agent iterations against prompt/spec/status files used as durable memory; Git hooks and CI run configurable quality gates before agent changes land. [memory, cli, python]
 - [pmstack](https://github.com/RyanAlberts/pmstack) — ⭐8, super simple, autonomy: n/a, recovery: n/a, open-source: Claude Code config for AI product managers: CLAUDE.md plus skills for competitive analysis, PRD-from-signal, metric frameworks, stakeholder briefs, and agent eval design. "GStack for PMs." [evals]
 
 ## Personal agent runtimes (10 projects)

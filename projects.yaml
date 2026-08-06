@@ -170,6 +170,10 @@ projects:
     github_id: looptroop-ai/LoopTroop
     labels: ["javascript"]
     category: "coding-harness-configs"
+  - name: L∞pGate
+    github_id: rxdt/loopgate_harness
+    labels: ["python"]
+    category: "coding-harness-configs"
   - name: get-shit-done
     github_id: open-gsd/gsd-core
     category: "coding-harness-configs"

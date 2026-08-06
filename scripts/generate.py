@@ -248,6 +248,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("LoopTroop", "looptroop-ai/LoopTroop",
                 "Config layer that chains LLM councils for planning, Ralph loops for iterative refinement, and OpenCode worktrees for shipping. The **harness** contribution is the council → loop → worktree pipeline; OpenCode underneath executes.",
                 "mostly simple (config pipeline over OpenCode)", labels=["javascript"]),
+        Project("L∞pGate", "rxdt/loopgate_harness",
+                "Repo-native, worker-agnostic coding **harness** that launches fresh CLI-agent iterations against prompt/spec/status files used as durable memory; Git hooks and CI run configurable quality gates before agent changes land.",
+                "slightly complex (loop runner, repo memory, commit gates)", labels=["python"]),
         Project("get-shit-done", "open-gsd/gsd-core",
                 "Goal-backward planning and wave-based execution over fresh context windows; avoids context rot by design. Python/JS meta-prompting for Claude Code, OpenCode, Gemini CLI.",
                 "mostly simple (meta-prompting, you own stack)"),
@@ -685,6 +688,7 @@ META: dict[str, tuple[int, str, str]] = {
     "NanmiCoder/cc-haha": (13866, "https://github.com/NanmiCoder/cc-haha#readme", "Project README"),
     # coding-harness-configs
     "looptroop-ai/LoopTroop": (106, "https://github.com/looptroop-ai/LoopTroop#readme", "Council → loop → worktree pipeline"),
+    "rxdt/loopgate_harness": (16, "https://github.com/rxdt/loopgate_harness#a-lpgate-loop", "Fresh-context gated loop"),
     "open-gsd/gsd-core": (7586, "https://github.com/open-gsd/gsd-core/blob/next/commands/gsd/ship.md", "gsd:ship command"),
     "garrytan/gstack": (125853, "https://github.com/garrytan/gstack/blob/main/ship/SKILL.md", "/ship SKILL.md"),
     "affaan-m/ECC": (236945, "https://github.com/affaan-m/ECC/blob/main/skills/autonomous-agent-harness/SKILL.md", "autonomous-agent-harness skill"),
@@ -1008,6 +1012,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "NanmiCoder/cc-haha": ("n/a", "n/a"),
     # coding-harness-configs
     "looptroop-ai/LoopTroop": ("bounded", "retry"),
+    "rxdt/loopgate_harness": ("headless", "none"),
     "obra/superpowers": ("n/a", "n/a"),
     "affaan-m/ECC": ("n/a", "n/a"),
     "anthropics/skills": ("n/a", "n/a"),
