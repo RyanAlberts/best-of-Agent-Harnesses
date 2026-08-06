@@ -248,6 +248,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("LoopTroop", "looptroop-ai/LoopTroop",
                 "Config layer that chains LLM councils for planning, Ralph loops for iterative refinement, and OpenCode worktrees for shipping. The **harness** contribution is the council → loop → worktree pipeline; OpenCode underneath executes.",
                 "mostly simple (config pipeline over OpenCode)", labels=["javascript"]),
+        Project("L∞pGate", "rxdt/loopgate_harness",
+                "Run any CLI agent in a loop against specs. Fresh context each iteration, the repo as durable memory, and lint/types/tests/security (*and more*) enforced by git hooks, so bad changes never land, instead of agents being asked not to.",
+                "slightly complex (loop runner, repo memory, commit gates)", labels=["python"]),
         Project("get-shit-done", "open-gsd/gsd-core",
                 "Goal-backward planning and wave-based execution over fresh context windows; avoids context rot by design. Python/JS meta-prompting for Claude Code, OpenCode, Gemini CLI.",
                 "mostly simple (meta-prompting, you own stack)"),
@@ -685,6 +688,7 @@ META: dict[str, tuple[int, str, str]] = {
     "NanmiCoder/cc-haha": (13866, "https://github.com/NanmiCoder/cc-haha#readme", "Project README"),
     # coding-harness-configs
     "looptroop-ai/LoopTroop": (106, "https://github.com/looptroop-ai/LoopTroop#readme", "Council → loop → worktree pipeline"),
+    "rxdt/loopgate_harness": (16, "https://github.com/rxdt/loopgate_harness#a-lpgate-loop", "Fresh-context gated loop"),
     "open-gsd/gsd-core": (7586, "https://github.com/open-gsd/gsd-core/blob/next/commands/gsd/ship.md", "gsd:ship command"),
     "garrytan/gstack": (125853, "https://github.com/garrytan/gstack/blob/main/ship/SKILL.md", "/ship SKILL.md"),
     "affaan-m/ECC": (236945, "https://github.com/affaan-m/ECC/blob/main/skills/autonomous-agent-harness/SKILL.md", "autonomous-agent-harness skill"),
@@ -1008,6 +1012,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "NanmiCoder/cc-haha": ("n/a", "n/a"),
     # coding-harness-configs
     "looptroop-ai/LoopTroop": ("bounded", "retry"),
+    "rxdt/loopgate_harness": ("headless", "durable"),
     "obra/superpowers": ("n/a", "n/a"),
     "affaan-m/ECC": ("n/a", "n/a"),
     "anthropics/skills": ("n/a", "n/a"),
@@ -1450,10 +1455,10 @@ def build_faq() -> list:
     oss = [p for p in ordered_projects() if oss_signal(p.oss) == "open-source"]
     add("derived", "Which agent harnesses can run unattended (headless)?",
         "Harnesses designed for unattended runs, batches, and fleets: "
-        + ", ".join(p.display_name for p in headless[:8]) + ".")
+        + ", ".join(p.display_name for p in headless[:9]) + ".")
     add("derived", "Which agent harnesses survive a crash mid-task (durable)?",
         "Harnesses whose execution state persists across restarts: "
-        + ", ".join(p.display_name for p in durable[:8]) + ".")
+        + ", ".join(p.display_name for p in durable[:9]) + ".")
     add("derived", "How many of these agent harnesses are open source?",
         f"{len(oss)} of {count_projects()} carry a standard open-source license; the rest are "
         "source-available or unclear, and flagged per row.")

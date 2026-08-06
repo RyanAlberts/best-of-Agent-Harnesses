@@ -30,10 +30,11 @@
 <text x="1050.0" y="387.0" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">23</text>
 <text x="615.0" y="652.0" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">1</text>
 <text x="832.5" y="519.5" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">8</text>
+<text x="1050.0" y="254.5" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">5</text>
 <text x="1050.0" y="652.0" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">12</text>
-<text x="1050.0" y="254.5" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">4</text>
 <text x="1050.0" y="519.5" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">7</text>
 <text x="615.0" y="387.0" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">2</text>
+<circle cx="878.6" cy="214.4" r="5.5" fill="#f59e0b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>L∞pGate — ⭐16</title></circle>
 <circle cx="958.1" cy="624.6" r="5.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>SUPER — ⭐57</title></circle>
 <circle cx="931.8" cy="340.8" r="5.5" fill="#0ea5e9" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Talon — ⭐71</title></circle>
 <circle cx="916.2" cy="566.6" r="5.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>letta-evals — ⭐80</title></circle>
@@ -135,9 +136,9 @@
 <text x="972.1" y="362.4" text-anchor="end" font-size="12.5" font-weight="600" fill="#1f2937">OpenClaw</text>
 <text x="539.2" y="598.0" text-anchor="end" font-size="12.5" font-weight="600" fill="#1f2937">claw-code-agent</text>
 <text x="767.1" y="501.0" text-anchor="end" font-size="12.5" font-weight="600" fill="#1f2937">langchain</text>
-<text x="987.6" y="633.5" text-anchor="end" font-size="12.5" font-weight="600" fill="#1f2937">ChatDev</text>
 <text x="993.7" y="164.6" text-anchor="end" font-size="12.5" font-weight="600" fill="#1f2937">n8n</text>
+<text x="987.6" y="633.5" text-anchor="end" font-size="12.5" font-weight="600" fill="#1f2937">ChatDev</text>
 <text x="1004.2" y="448.5" text-anchor="end" font-size="12.5" font-weight="600" fill="#1f2937">langflow</text>
 <text x="534.2" y="313.2" text-anchor="start" font-size="12.5" font-weight="600" fill="#1f2937">aider</text>
-<text x="1060" y="784" text-anchor="end" font-size="12" fill="#9ca3af">94 loop-owning projects shown · 60 format/component entries (n/a) omitted · full tiers in harnesses.json</text>
+<text x="1060" y="784" text-anchor="end" font-size="12" fill="#9ca3af">95 loop-owning projects shown · 60 format/component entries (n/a) omitted · full tiers in harnesses.json</text>
 </svg>

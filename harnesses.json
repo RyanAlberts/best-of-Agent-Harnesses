@@ -9,7 +9,7 @@
     "feed_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/feed.json",
     "license": "CC-BY-SA-4.0",
     "stars_captured": "2026-08-02",
-    "project_count": 154,
+    "project_count": 155,
     "graveyard_count": 3,
     "tiers": [
       "super simple",
@@ -362,19 +362,19 @@
     {
       "kind": "derived",
       "q": "Which agent harnesses can run unattended (headless)?",
-      "a": "Harnesses designed for unattended runs, batches, and fleets: opencode, OpenHands, goose, Symphony, SWE-agent, Claude Agent SDK, RepoMaster, OpenClaw.",
+      "a": "Harnesses designed for unattended runs, batches, and fleets: opencode, OpenHands, goose, Symphony, SWE-agent, Claude Agent SDK, RepoMaster, L∞pGate, OpenClaw.",
       "slug": "which-agent-harnesses-can-run-unattended-headless"
     },
     {
       "kind": "derived",
       "q": "Which agent harnesses survive a crash mid-task (durable)?",
-      "a": "Harnesses whose execution state persists across restarts: langgraph-bigtool, n8n, langgraph, mastra, letta, deepagents, pydantic-ai, Cloudflare Agents.",
+      "a": "Harnesses whose execution state persists across restarts: langgraph-bigtool, L∞pGate, n8n, langgraph, mastra, letta, deepagents, pydantic-ai, Cloudflare Agents.",
       "slug": "which-agent-harnesses-survive-a-crash-mid-task-durable"
     },
     {
       "kind": "derived",
       "q": "How many of these agent harnesses are open source?",
-      "a": "112 of 154 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
+      "a": "113 of 155 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
       "slug": "how-many-of-these-agent-harnesses-are-open-source"
     },
     {
@@ -3000,6 +3000,36 @@
           "evidence": "https://github.com/looptroop-ai/LoopTroop#readme"
         }
       }
+    },
+    {
+      "name": "L∞pGate",
+      "github_id": "rxdt/loopgate_harness",
+      "url": "https://github.com/rxdt/loopgate_harness",
+      "slug": "loopgate_harness",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#loopgate_harness",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/loopgate_harness/",
+      "description": "Run any CLI agent in a loop against specs. Fresh context each iteration, the repo as durable memory, and lint/types/tests/security (*and more*) enforced by git hooks, so bad changes never land, instead of agents being asked not to.",
+      "category": "coding-harness-configs",
+      "category_title": "Coding harness configs and SDKs",
+      "stars": 16,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (loop runner, repo memory, commit gates)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "durable",
+      "recovery_rank": 4,
+      "license_signal": "open-source",
+      "tags": [
+        "memory",
+        "cli",
+        "python"
+      ],
+      "example": {
+        "label": "Fresh-context gated loop",
+        "url": "https://github.com/rxdt/loopgate_harness#a-lpgate-loop"
+      },
+      "deep_dive": null
     },
     {
       "name": "pmstack",
