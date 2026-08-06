@@ -1,6 +1,6 @@
 # Best of Agent Harnesses
 
-> Hand-curated, ranked list of 154 AI agent harnesses — the runtimes that close the loop between a stateless model and the outside world. 12 categories, a 4-tier adoption-surface rating (simplicity ↔ capability), capability tags, a license signal, and one concrete example link per project. Stars captured 2026-08-02.
+> Hand-curated, ranked list of 155 AI agent harnesses — the runtimes that close the loop between a stateless model and the outside world. 12 categories, a 4-tier adoption-surface rating (simplicity ↔ capability), capability tags, a license signal, and one concrete example link per project. Stars captured 2026-08-02.
 
 Maintained at https://github.com/RyanAlberts/best-of-Agent-Harnesses (CC-BY-SA-4.0).
 Structured data: https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/harnesses.json
@@ -74,7 +74,7 @@ Harnesses designed for unattended runs, batches, and fleets: opencode, OpenHands
 Harnesses whose execution state persists across restarts: langgraph-bigtool, n8n, langgraph, mastra, letta, deepagents, pydantic-ai, Cloudflare Agents.
 
 ### How many of these agent harnesses are open source?
-112 of 154 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.
+112 of 155 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.
 
 ### What is an agent harness?
 The runtime that turns a model into an agent: it decides what the model's reasoning is allowed to touch, and supplies the orchestration, tool wiring, memory, error recovery, and guardrails around per-turn inference.
@@ -98,7 +98,7 @@ Formats, runtimes, and patterns that reveal context, tools, or instructions in l
 - [ToolGen](https://github.com/Reason-Wang/ToolGen) — ⭐183, complex, autonomy: n/a, recovery: n/a, unknown: ICLR 2025: unified tool retrieval and calling via generation; 47k+ tools without context stuffing—retrieval and invocation in one generative step. [tool-discovery, python]
 - [ToolRAG](https://github.com/antl3x/ToolRAG) — ⭐29, mostly simple, autonomy: n/a, recovery: n/a, open-source: Semantic tool retrieval for LLMs; serves only the tools the user query demands (MCP-compatible), unlimited tool sets with zero context penalty. [mcp, tool-discovery]
 
-## Coding agent products (IDEs, CLIs, full suites) (22 projects)
+## Coding agent products (IDEs, CLIs, full suites) (23 projects)
 
 Turnkey coding agents you install and run: IDE extensions, terminal CLIs, Dockerized workspaces. Each entry notes which part is the harness (the agent loop, tool wiring, approval model) versus the UI shell (VS Code extension, TUI, browser client).
 
@@ -117,6 +117,7 @@ Turnkey coding agents you install and run: IDE extensions, terminal CLIs, Docker
 - [qwen-code](https://github.com/QwenLM/qwen-code) — ⭐26.5k, slightly complex, autonomy: bounded, recovery: resumable, unknown: Alibaba's official terminal coding agent, forked from Gemini CLI's agent loop and retuned for Qwen models. The **harness** is the same sandboxed tool-call loop as its upstream; the terminal is the shell. [sandbox, cli, typescript]
 - [Symphony](https://github.com/openai/symphony) — ⭐26.4k, complex, autonomy: headless, recovery: resumable, unknown: OpenAI's harness for fanning a task out into many isolated, autonomous coding-agent implementation runs and surfacing the ones that pass, so a team manages outcomes instead of supervising each session. [sandbox]
 - [Roo Code](https://github.com/RooCodeInc/Roo-Code) — ⭐24.4k, slightly complex, autonomy: step-gated, recovery: resumable, open-source: VS Code/Cursor extension in the Cline lineage. The **harness** is the approval-gated agent with custom modes and a strong MCP story; the IDE is the UI. Popular community fork when you want that workflow without the upstream extension. [mcp, workflow, ide, typescript]
+- [grok-build](https://github.com/xai-org/grok-build) — ⭐23.9k, slightly complex, autonomy: bounded, recovery: resumable, unknown: xAI's official terminal coding agent. The **harness** is a sandboxed tool-call loop with a fullscreen, mouse-interactive TUI; xAI's parallel to openai/codex and google-gemini/gemini-cli. [sandbox, cli, tui]
 - [oh-my-pi](https://github.com/can1357/oh-my-pi) — ⭐21.2k, slightly complex, autonomy: bounded, recovery: resumable, open-source: Terminal coding agent (fork of Pi) that wires the IDE into the **harness**: hash-anchored edits, a 32-tool loop tuned per-model, LSP rename/references/diagnostics on every write, a real DAP debugger (lldb/dlv/debugpy), long-lived Python + Bun execution kernels that call back into the agent's tools, browser control, and 40+ providers (Claude/OpenAI/Gemini/local). ~55k-line Rust core. [browser, provider-agnostic, cli, ide, rust, python]
 - [jcode](https://github.com/1jehuang/jcode) — ⭐15.2k, slightly complex, autonomy: n/a, recovery: n/a, unknown: Rust terminal coding agent pitched as the most RAM-efficient **harness** in its class; MCP support, multi-provider (Claude/OpenAI). [mcp, memory, provider-agnostic, cli, rust]
 - [eigent](https://github.com/eigent-ai/eigent) — ⭐14.7k, complex, autonomy: n/a, recovery: n/a, unknown: Open-source desktop **harness** positioned as a local, free alternative to Claude Cowork and Codex: multi-agent workspace orchestration in a self-hosted app rather than a hosted product. [multi-agent, local]

@@ -165,6 +165,9 @@ projects:
     github_id: NanmiCoder/cc-haha
     labels: ["javascript"]
     category: "coding-agent-products"
+  - name: grok-build
+    github_id: xai-org/grok-build
+    category: "coding-agent-products"
   # Coding harness configs and SDKs
   - name: LoopTroop
     github_id: looptroop-ai/LoopTroop

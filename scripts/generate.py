@@ -243,6 +243,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("cc-haha", "NanmiCoder/cc-haha",
                 "Local-first desktop workspace **harness** for Claude Code and other agents: multi-agent sessions, Git worktrees, code diffs, a skill marketplace, and chat-app access (WeChat, Telegram, WhatsApp).",
                 "complex (desktop workspace, multi-agent — product suite)", oss="❓", labels=["javascript"]),
+        Project("grok-build", "xai-org/grok-build",
+                "xAI's official terminal coding agent. The **harness** is a sandboxed tool-call loop with a fullscreen, mouse-interactive TUI; xAI's parallel to openai/codex and google-gemini/gemini-cli.",
+                "slightly complex (official CLI, TUI)", oss="❓"),
     ],
     "coding-harness-configs": [
         Project("LoopTroop", "looptroop-ai/LoopTroop",
@@ -683,6 +686,7 @@ META: dict[str, tuple[int, str, str]] = {
     "esengine/DeepSeek-Reasonix": (28837, "https://github.com/esengine/DeepSeek-Reasonix#readme", "Project README"),
     "1jehuang/jcode": (15162, "https://github.com/1jehuang/jcode#readme", "Project README"),
     "NanmiCoder/cc-haha": (13866, "https://github.com/NanmiCoder/cc-haha#readme", "Project README"),
+    "xai-org/grok-build": (23864, "https://github.com/xai-org/grok-build#readme", "Project README"),
     # coding-harness-configs
     "looptroop-ai/LoopTroop": (106, "https://github.com/looptroop-ai/LoopTroop#readme", "Council → loop → worktree pipeline"),
     "open-gsd/gsd-core": (7586, "https://github.com/open-gsd/gsd-core/blob/next/commands/gsd/ship.md", "gsd:ship command"),
@@ -902,6 +906,14 @@ RADAR: "list[dict]" = [
     {"id": "Mirix-AI/MIRIX", "via": "weekly discovery"},
     {"id": "cloudflare/vibesdk", "via": "weekly discovery"},
     {"id": "algorithmicsuperintelligence/openevolve", "via": "weekly discovery"},
+    # Added 2026-08-06 biweekly curation pass — promising but not yet clearing
+    # the bar (unproven fit, thin description, or needs another cycle to watch).
+    {"id": "stablyai/orca", "via": "weekly discovery"},
+    {"id": "manaflow-ai/cmux", "via": "weekly discovery"},
+    {"id": "herdrdev/herdr", "via": "weekly discovery"},
+    {"id": "rohitg00/agentmemory", "via": "weekly discovery"},
+    {"id": "multica-ai/multica", "via": "weekly discovery"},
+    {"id": "alirezarezvani/claude-skills", "via": "weekly discovery"},
 ]
 
 
@@ -1006,6 +1018,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "esengine/DeepSeek-Reasonix": ("n/a", "n/a"),
     "1jehuang/jcode": ("n/a", "n/a"),
     "NanmiCoder/cc-haha": ("n/a", "n/a"),
+    "xai-org/grok-build": ("bounded", "resumable"),
     # coding-harness-configs
     "looptroop-ai/LoopTroop": ("bounded", "retry"),
     "obra/superpowers": ("n/a", "n/a"),

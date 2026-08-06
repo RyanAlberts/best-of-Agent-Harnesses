@@ -1,13 +1,13 @@
 <!-- markdownlint-disable -->
 # Tags — cross-reference
 
-_Auto-generated from `scripts/generate.py`. 154 projects across 22 canonical tags. Edit projects in `generate.py` (not here) and rerun the script._
+_Auto-generated from `scripts/generate.py`. 155 projects across 22 canonical tags. Edit projects in `generate.py` (not here) and rerun the script._
 
 Tag chips appear next to each project in [README.md](README.md). This page lists every tag once with the projects that carry it, grouped by category and sorted by GitHub stars within each category.
 
 ## All tags
 
-[`mcp`](#mcp) (34) · [`memory`](#memory) (32) · [`multi-agent`](#multi-agent) (27) · [`evals`](#evals) (18) · [`voice`](#voice) (2) · [`vision`](#vision) (3) · [`browser`](#browser) (7) · [`sandbox`](#sandbox) (26) · [`low-code`](#low-code) (4) · [`rag`](#rag) (7) · [`tool-discovery`](#tool-discovery) (5) · [`training`](#training) (5) · [`workflow`](#workflow) (9) · [`typed`](#typed) (3) · [`local`](#local) (4) · [`provider-agnostic`](#provider-agnostic) (11) · [`cli`](#cli) (20) · [`ide`](#ide) (12) · [`tui`](#tui) (4) · [`rust`](#rust) (5) · [`python`](#python) (75) · [`typescript`](#typescript) (40)
+[`mcp`](#mcp) (34) · [`memory`](#memory) (32) · [`multi-agent`](#multi-agent) (27) · [`evals`](#evals) (18) · [`voice`](#voice) (2) · [`vision`](#vision) (3) · [`browser`](#browser) (7) · [`sandbox`](#sandbox) (27) · [`low-code`](#low-code) (4) · [`rag`](#rag) (7) · [`tool-discovery`](#tool-discovery) (5) · [`training`](#training) (5) · [`workflow`](#workflow) (9) · [`typed`](#typed) (3) · [`local`](#local) (4) · [`provider-agnostic`](#provider-agnostic) (11) · [`cli`](#cli) (21) · [`ide`](#ide) (12) · [`tui`](#tui) (5) · [`rust`](#rust) (5) · [`python`](#python) (75) · [`typescript`](#typescript) (40)
 
 ---
 
@@ -291,6 +291,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [OpenHands](https://github.com/OpenHands/OpenHands) — ⭐82.9k — Dockerized software-engineering agent. The **harness** is the bash/editor/browser toolset with micro-agents and event-stream session bridging; Docker is the sandbox. Main OSS choice for teams self-hosting autonomous repo work.
 - [qwen-code](https://github.com/QwenLM/qwen-code) — ⭐26.5k — Alibaba's official terminal coding agent, forked from Gemini CLI's agent loop and retuned for Qwen models. The **harness** is the same sandboxed tool-call loop as its upstream; the terminal is the shell.
 - [Symphony](https://github.com/openai/symphony) — ⭐26.4k — OpenAI's harness for fanning a task out into many isolated, autonomous coding-agent implementation runs and surfacing the ones that pass, so a team manages outcomes instead of supervising each session.
+- [grok-build](https://github.com/xai-org/grok-build) — ⭐23.9k — xAI's official terminal coding agent. The **harness** is a sandboxed tool-call loop with a fullscreen, mouse-interactive TUI; xAI's parallel to openai/codex and google-gemini/gemini-cli.
 - [AgentBox](https://github.com/madarco/agentbox) — ⭐332 — Runs multiple coding agents in parallel, each in its own sandboxed VM, locally or in the cloud, from one command. The **harness** contribution is the VM-per-agent isolation and fleet fan-out layer; whichever agent runs inside owns the loop.
 - [Proliferate](https://github.com/proliferate-ai/proliferate) — ⭐156 — Open-source AI IDE for Claude Code, Codex, OpenCode, and more. The **harness** contribution is the workspace/session orchestration layer: run multiple coding agents in parallel, locally or in the cloud, with isolated workspaces, reusable workflows, and shared team context.
 
@@ -509,6 +510,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [crush](https://github.com/charmbracelet/crush) — ⭐27k — Charm's terminal coding agent (Charm's fork of the original OpenCode). The **harness** is the tool-calling loop with session persistence; the Bubble Tea TUI is the shell.
 - [Kilo Code](https://github.com/Kilo-Org/kilocode) — ⭐26.7k — VS Code extension and CLI in the Cline/Roo-Code lineage — a natural pick now that Roo-Code is archived upstream. The **harness** is an approval-gated autonomous-mode loop with a provider/tool marketplace; the IDE is the shell.
 - [qwen-code](https://github.com/QwenLM/qwen-code) — ⭐26.5k — Alibaba's official terminal coding agent, forked from Gemini CLI's agent loop and retuned for Qwen models. The **harness** is the same sandboxed tool-call loop as its upstream; the terminal is the shell.
+- [grok-build](https://github.com/xai-org/grok-build) — ⭐23.9k — xAI's official terminal coding agent. The **harness** is a sandboxed tool-call loop with a fullscreen, mouse-interactive TUI; xAI's parallel to openai/codex and google-gemini/gemini-cli.
 - [oh-my-pi](https://github.com/can1357/oh-my-pi) — ⭐21.2k — Terminal coding agent (fork of Pi) that wires the IDE into the **harness**: hash-anchored edits, a 32-tool loop tuned per-model, LSP rename/references/diagnostics on every write, a real DAP debugger (lldb/dlv/debugpy), long-lived Python + Bun execution kernels that call back into the agent's tools, browser control, and 40+ providers (Claude/OpenAI/Gemini/local). ~55k-line Rust core.
 - [jcode](https://github.com/1jehuang/jcode) — ⭐15.2k — Rust terminal coding agent pitched as the most RAM-efficient **harness** in its class; MCP support, multi-provider (Claude/OpenAI).
 
@@ -575,6 +577,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [pi](https://github.com/earendil-works/pi) — ⭐82.2k — The upstream AI agent toolkit behind this list's oh-my-pi fork: a unified multi-provider LLM API, agent loop, and TUI shell providing the **harness** that oh-my-pi's Rust rewrite builds on.
 - [DeepSeek-Reasonix](https://github.com/esengine/DeepSeek-Reasonix) — ⭐28.8k — DeepSeek-native terminal coding agent. The **harness** is engineered around prefix-cache stability for long-running sessions; the TUI is the shell.
 - [crush](https://github.com/charmbracelet/crush) — ⭐27k — Charm's terminal coding agent (Charm's fork of the original OpenCode). The **harness** is the tool-calling loop with session persistence; the Bubble Tea TUI is the shell.
+- [grok-build](https://github.com/xai-org/grok-build) — ⭐23.9k — xAI's official terminal coding agent. The **harness** is a sandboxed tool-call loop with a fullscreen, mouse-interactive TUI; xAI's parallel to openai/codex and google-gemini/gemini-cli.
 
 ---
 
