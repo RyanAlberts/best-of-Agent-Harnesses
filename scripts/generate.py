@@ -243,6 +243,18 @@ PROJECTS: dict[str, list[Project]] = {
         Project("cc-haha", "NanmiCoder/cc-haha",
                 "Local-first desktop workspace **harness** for Claude Code and other agents: multi-agent sessions, Git worktrees, code diffs, a skill marketplace, and chat-app access (WeChat, Telegram, WhatsApp).",
                 "complex (desktop workspace, multi-agent — product suite)", oss="❓", labels=["javascript"]),
+        Project("Grok Build", "xai-org/grok-build",
+                "xAI's official terminal coding agent: a fullscreen, mouse-interactive TUI **harness** that reads a codebase and executes edits, shell commands, and web searches directly from the terminal.",
+                "slightly complex (fullscreen TUI, shell + web tools)"),
+        Project("Orca", "stablyai/orca",
+                "Agent development environment for running a fleet of coding agents (Claude Code, Codex, and others) in parallel, isolated worktrees, bring-your-own-subscription, from desktop, mobile, or a VPS. The **harness** contribution is the fleet-orchestration and worktree-isolation layer, not an agent loop itself.",
+                "complex (fleet orchestration, multi-surface, worktrees)"),
+        Project("cmux", "manaflow-ai/cmux",
+                "Ghostty-based macOS terminal purpose-built for supervising several coding agents at once: vertical tabs, split panes, an embedded browser, and notifications. The **harness** value is the multi-agent terminal workspace, not an agent loop of its own.",
+                "slightly complex (terminal multiplexer, multi-agent supervision)"),
+        Project("herdr", "herdrdev/herdr",
+                "Background runtime that keeps managed terminal panes alive for coding agents so a session survives a disconnect — the persistence layer under a multi-agent terminal workflow rather than an agent loop itself.",
+                "slightly complex (background runtime, session persistence)"),
     ],
     "coding-harness-configs": [
         Project("LoopTroop", "looptroop-ai/LoopTroop",
@@ -521,6 +533,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("beads", "gastownhall/beads",
                 "Portable persistent-memory layer for coding agents: tracks decisions and task state outside the harness's own context window so it survives session resets and model swaps.",
                 "mostly simple (portable memory store)", oss="❓"),
+        Project("agentmemory", "rohitg00/agentmemory",
+                "Drop-in persistent memory for coding agents: lifecycle hooks silently capture sessions, compress them via an LLM, and inject hybrid keyword+vector+graph recall back into future runs across multiple agent platforms.",
+                "slightly complex (hybrid search, hooks, multi-platform)"),
     ],
     "evaluation": [
         Project("agent-qa", "vostride/agent-qa",
@@ -604,6 +619,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("deepagents", "langchain-ai/deepagents",
                 "LangChain's Python+TypeScript agent harness on top of LangGraph: planning tool, virtual filesystem, shell sandbox, sub-agent spawning—the \"Claude Code-style\" harness as a reusable library.",
                 "slightly complex (planning, files, sub-agents)", labels=["python"]),
+        Project("Deep Agents JS", "langchain-ai/deepagentsjs",
+                "TypeScript port of LangChain's deepagents: the same planning tool, virtual filesystem, and sub-agent spawning as the Python harness, for JS/TS agent stacks.",
+                "slightly complex (planning, files, sub-agents)", labels=["javascript"]),
         Project("pydantic-ai", "pydantic/pydantic-ai",
                 "Type-safe Python agents with Pydantic I/O; multi-provider, MCP, Logfire observability, and human-in-the-loop.",
                 "slightly complex (type-safe, MCP, Logfire)", labels=["python"]),
@@ -683,6 +701,10 @@ META: dict[str, tuple[int, str, str]] = {
     "esengine/DeepSeek-Reasonix": (28837, "https://github.com/esengine/DeepSeek-Reasonix#readme", "Project README"),
     "1jehuang/jcode": (15162, "https://github.com/1jehuang/jcode#readme", "Project README"),
     "NanmiCoder/cc-haha": (13866, "https://github.com/NanmiCoder/cc-haha#readme", "Project README"),
+    "xai-org/grok-build": (23864, "https://github.com/xai-org/grok-build#readme", "Project README"),
+    "stablyai/orca": (35535, "https://github.com/stablyai/orca#readme", "Project README"),
+    "manaflow-ai/cmux": (25495, "https://github.com/manaflow-ai/cmux#readme", "Project README"),
+    "herdrdev/herdr": (23527, "https://github.com/herdrdev/herdr#readme", "Project README"),
     # coding-harness-configs
     "looptroop-ai/LoopTroop": (106, "https://github.com/looptroop-ai/LoopTroop#readme", "Council → loop → worktree pipeline"),
     "open-gsd/gsd-core": (7586, "https://github.com/open-gsd/gsd-core/blob/next/commands/gsd/ship.md", "gsd:ship command"),
@@ -793,6 +815,7 @@ META: dict[str, tuple[int, str, str]] = {
     "aiming-lab/AutoResearchClaw": (13947, "https://github.com/aiming-lab/AutoResearchClaw#readme", "Project README"),
     # libraries-sdks
     "langchain-ai/deepagents": (27219, "https://github.com/langchain-ai/deepagents/tree/main/examples/deep_research", "Deep research agent"),
+    "langchain-ai/deepagentsjs": (1448, "https://github.com/langchain-ai/deepagentsjs#readme", "Project README"),
     "pydantic/pydantic-ai": (18993, "https://github.com/pydantic/pydantic-ai/blob/main/examples/pydantic_ai_examples/bank_support.py", "Bank support agent"),
     "MaxGfeller/open-harness": (592, "https://github.com/MaxGfeller/open-harness/tree/main/examples/cli", "Terminal CLI agent"),
     "vercel/ai": (25959, "https://github.com/vercel/ai/tree/main/examples/next-agent", "Next.js agent example"),
@@ -809,6 +832,7 @@ META: dict[str, tuple[int, str, str]] = {
     # memory
     "topoteretes/cognee": (29689, "https://github.com/topoteretes/cognee#readme", "Quickstart"),
     "gastownhall/beads": (25809, "https://github.com/gastownhall/beads#readme", "Project README"),
+    "rohitg00/agentmemory": (26356, "https://github.com/rohitg00/agentmemory#readme", "Project README"),
     # observability
     "langfuse/langfuse": (32326, "https://langfuse.com/docs", "Docs"),
     "mlflow/mlflow": (27330, "https://mlflow.org", "Docs"),
@@ -902,6 +926,17 @@ RADAR: "list[dict]" = [
     {"id": "Mirix-AI/MIRIX", "via": "weekly discovery"},
     {"id": "cloudflare/vibesdk", "via": "weekly discovery"},
     {"id": "algorithmicsuperintelligence/openevolve", "via": "weekly discovery"},
+    # Added 2026-08-08 biweekly curation pass — promising but not yet clearing
+    # the bar (unproven fit, thin description, or needs another cycle to watch).
+    {"id": "Hmbown/CodeWhale", "via": "weekly discovery"},
+    {"id": "multica-ai/multica", "via": "weekly discovery"},
+    {"id": "alirezarezvani/claude-skills", "via": "weekly discovery"},
+    {"id": "code-yeongyu/oh-my-openagent", "via": "weekly discovery"},
+    {"id": "superagent-ai/grok-cli", "via": "weekly discovery"},
+    {"id": "shareAI-lab/learn-claude-code", "via": "weekly discovery"},
+    {"id": "KunAgent/Kun", "via": "weekly discovery"},
+    {"id": "he-yufeng/CoreCoder", "via": "weekly discovery"},
+    {"id": "ai-boost/awesome-harness-engineering", "via": "weekly discovery"},
 ]
 
 
@@ -1006,6 +1041,10 @@ AXES: "dict[str, tuple[str, str]]" = {
     "esengine/DeepSeek-Reasonix": ("n/a", "n/a"),
     "1jehuang/jcode": ("n/a", "n/a"),
     "NanmiCoder/cc-haha": ("n/a", "n/a"),
+    "xai-org/grok-build": ("n/a", "n/a"),
+    "stablyai/orca": ("n/a", "n/a"),
+    "manaflow-ai/cmux": ("n/a", "n/a"),
+    "herdrdev/herdr": ("n/a", "n/a"),
     # coding-harness-configs
     "looptroop-ai/LoopTroop": ("bounded", "retry"),
     "obra/superpowers": ("n/a", "n/a"),
@@ -1122,6 +1161,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "huggingface/smolagents": ("bounded", "none"),
     "vercel/ai": ("bounded", "retry"),
     "langchain-ai/deepagents": ("bounded", "durable"),
+    "langchain-ai/deepagentsjs": ("bounded", "durable"),
     "pydantic/pydantic-ai": ("bounded", "durable"),
     "e2b-dev/E2B": ("n/a", "n/a"),
     "strands-agents/harness-sdk": ("bounded", "resumable"),
@@ -1132,6 +1172,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     # memory (state layers — no agent loop of their own)
     "topoteretes/cognee": ("n/a", "n/a"),
     "gastownhall/beads": ("n/a", "n/a"),
+    "rohitg00/agentmemory": ("n/a", "n/a"),
     # observability (tracing/eval-ops infra — no agent loop of their own)
     "langfuse/langfuse": ("n/a", "n/a"),
     "mlflow/mlflow": ("n/a", "n/a"),

@@ -165,6 +165,18 @@ projects:
     github_id: NanmiCoder/cc-haha
     labels: ["javascript"]
     category: "coding-agent-products"
+  - name: Grok Build
+    github_id: xai-org/grok-build
+    category: "coding-agent-products"
+  - name: Orca
+    github_id: stablyai/orca
+    category: "coding-agent-products"
+  - name: cmux
+    github_id: manaflow-ai/cmux
+    category: "coding-agent-products"
+  - name: herdr
+    github_id: herdrdev/herdr
+    category: "coding-agent-products"
   # Coding harness configs and SDKs
   - name: LoopTroop
     github_id: looptroop-ai/LoopTroop
@@ -496,6 +508,9 @@ projects:
   - name: beads
     github_id: gastownhall/beads
     category: "memory"
+  - name: agentmemory
+    github_id: rohitg00/agentmemory
+    category: "memory"
   # Evaluation and benchmarking harnesses
   - name: agent-qa
     github_id: vostride/agent-qa
@@ -591,6 +606,10 @@ projects:
   - name: deepagents
     github_id: langchain-ai/deepagents
     labels: ["python"]
+    category: "libraries-sdks"
+  - name: Deep Agents JS
+    github_id: langchain-ai/deepagentsjs
+    labels: ["javascript"]
     category: "libraries-sdks"
   - name: pydantic-ai
     github_id: pydantic/pydantic-ai
