@@ -11,7 +11,7 @@
     "name": "Ryan Alberts",
     "url": "https://github.com/RyanAlberts"
   },
-  "dateModified": "2026-08-02",
+  "dateModified": "2026-08-09",
   "keywords": [
     "agent harness",
     "AI agents",
@@ -168,11 +168,11 @@
         "position": 12,
         "item": {
           "@type": "SoftwareApplication",
-          "name": "OpenHands",
-          "url": "https://github.com/OpenHands/OpenHands",
-          "description": "Dockerized software-engineering agent. The **harness** is the bash/editor/browser toolset with micro-agents and event-stream session bridging; Docker is the sandbox. Main OSS choice for teams self-hosting autonomous repo work.",
+          "name": "pi",
+          "url": "https://github.com/earendil-works/pi",
+          "description": "The upstream AI agent toolkit behind this list's oh-my-pi fork: a unified multi-provider LLM API, agent loop, and TUI shell providing the **harness** that oh-my-pi's Rust rewrite builds on.",
           "applicationCategory": "DeveloperApplication",
-          "keywords": "memory, browser, sandbox, python"
+          "keywords": "provider-agnostic, tui, rust"
         }
       },
       {
@@ -180,11 +180,11 @@
         "position": 13,
         "item": {
           "@type": "SoftwareApplication",
-          "name": "pi",
-          "url": "https://github.com/earendil-works/pi",
-          "description": "The upstream AI agent toolkit behind this list's oh-my-pi fork: a unified multi-provider LLM API, agent loop, and TUI shell providing the **harness** that oh-my-pi's Rust rewrite builds on.",
+          "name": "OpenHands",
+          "url": "https://github.com/OpenHands/OpenHands",
+          "description": "Dockerized software-engineering agent. The **harness** is the bash/editor/browser toolset with micro-agents and event-stream session bridging; Docker is the sandbox. Main OSS choice for teams self-hosting autonomous repo work.",
           "applicationCategory": "DeveloperApplication",
-          "keywords": "provider-agnostic, tui, rust"
+          "keywords": "memory, browser, sandbox, python"
         }
       },
       {
@@ -264,11 +264,11 @@
         "position": 20,
         "item": {
           "@type": "SoftwareApplication",
-          "name": "Kilo Code",
-          "url": "https://github.com/Kilo-Org/kilocode",
-          "description": "VS Code extension and CLI in the Cline/Roo-Code lineage — a natural pick now that Roo-Code is archived upstream. The **harness** is an approval-gated autonomous-mode loop with a provider/tool marketplace; the IDE is the shell.",
+          "name": "qwen-code",
+          "url": "https://github.com/QwenLM/qwen-code",
+          "description": "Alibaba's official terminal coding agent, forked from Gemini CLI's agent loop and retuned for Qwen models. The **harness** is the same sandboxed tool-call loop as its upstream; the terminal is the shell.",
           "applicationCategory": "DeveloperApplication",
-          "keywords": "mcp, cli, ide, typescript"
+          "keywords": "sandbox, cli, typescript"
         }
       },
       {
@@ -276,11 +276,11 @@
         "position": 21,
         "item": {
           "@type": "SoftwareApplication",
-          "name": "qwen-code",
-          "url": "https://github.com/QwenLM/qwen-code",
-          "description": "Alibaba's official terminal coding agent, forked from Gemini CLI's agent loop and retuned for Qwen models. The **harness** is the same sandboxed tool-call loop as its upstream; the terminal is the shell.",
+          "name": "Kilo Code",
+          "url": "https://github.com/Kilo-Org/kilocode",
+          "description": "VS Code extension and CLI in the Cline/Roo-Code lineage — a natural pick now that Roo-Code is archived upstream. The **harness** is an approval-gated autonomous-mode loop with a provider/tool marketplace; the IDE is the shell.",
           "applicationCategory": "DeveloperApplication",
-          "keywords": "sandbox, cli, typescript"
+          "keywords": "mcp, cli, ide, typescript"
         }
       },
       {
@@ -492,11 +492,11 @@
         "position": 39,
         "item": {
           "@type": "SoftwareApplication",
-          "name": "Claude Agent SDK",
-          "url": "https://github.com/anthropics/claude-agent-sdk-python",
-          "description": "Official Anthropic SDK (Python + [TypeScript](https://github.com/anthropics/claude-agent-sdk-typescript), [demos](https://github.com/anthropics/claude-agent-sdk-demos), [quickstarts](https://github.com/anthropics/claude-quickstarts)): built-in tools, MCP, long-running coding agents with session bridging.",
+          "name": "get-shit-done",
+          "url": "https://github.com/open-gsd/gsd-core",
+          "description": "Goal-backward planning and wave-based execution over fresh context windows; avoids context rot by design. Python/JS meta-prompting for Claude Code, OpenCode, Gemini CLI.",
           "applicationCategory": "DeveloperApplication",
-          "keywords": "mcp, memory, python, typescript"
+          "keywords": "cli, python"
         }
       },
       {
@@ -504,11 +504,11 @@
         "position": 40,
         "item": {
           "@type": "SoftwareApplication",
-          "name": "get-shit-done",
-          "url": "https://github.com/open-gsd/gsd-core",
-          "description": "Goal-backward planning and wave-based execution over fresh context windows; avoids context rot by design. Python/JS meta-prompting for Claude Code, OpenCode, Gemini CLI.",
+          "name": "Claude Agent SDK",
+          "url": "https://github.com/anthropics/claude-agent-sdk-python",
+          "description": "Official Anthropic SDK (Python + [TypeScript](https://github.com/anthropics/claude-agent-sdk-typescript), [demos](https://github.com/anthropics/claude-agent-sdk-demos), [quickstarts](https://github.com/anthropics/claude-quickstarts)): built-in tools, MCP, long-running coding agents with session bridging.",
           "applicationCategory": "DeveloperApplication",
-          "keywords": "cli, python"
+          "keywords": "mcp, memory, python, typescript"
         }
       },
       {
