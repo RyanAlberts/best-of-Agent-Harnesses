@@ -2,6 +2,12 @@
 
 This is the decision guide for [best-of-Agent-Harnesses](../README.md), a curated, ranked list of the runtimes that turn an AI model into a working agent: the software that decides what the model's thinking is allowed to touch. Six questions, in order. Each one eliminates most of the list; by the end you should be choosing between two or three projects instead of the entire list. The [use-case index](../README.md#pick-by-use-case), the [landscape charts](../README.md#the-landscape-at-a-glance), and the head-to-head comparison pages linked throughout do the heavy lifting.
 
+## The chart to internalize first
+
+[![Same model, different harness: coding-benchmark pass rates when only the harness changes](../assets/harness-spread.svg)](../assets/harness-spread.svg)
+
+The most-repeated line in this month's harness debates is that ["the harness matters more than the model itself"](https://x.com/amy05sa6/status/2087347665311019129), and the measurements back the slogan. [Cursor's benchmarking research](https://www.mindstudio.ai/blog/agent-harness-scaffolding-matters-more-than-model) found the same model passing 46% of tasks in one harness and 80% in another. On SWE-bench Pro, [swapping only the harness](https://x.com/joelniklaus/status/2085725862142623875) moved GLM-5.2 from 23% to 52%; a [2026 line of research](https://arxiv.org/abs/2605.27922) now calls the harness the binding constraint on agent performance. And because harness rankings barely transfer between models (rank correlation about -0.05), the pick is a *pairing*, not a single winner. Two consequences for everything below: your harness choice deserves at least as much care as your model choice, and it needs re-asking whenever your model changes. When the shortlist is down to two or three, [test-drive them on your own work](how-to-test-drive-a-harness.md).
+
 ## 1. What do you actually want it to do?
 
 Don't start from frameworks; start from the job. The [Pick by use case](../README.md#pick-by-use-case) index maps 14 reader intents ("turnkey coding agent today", "drop-in memory layer", "always-on personal agent in my chat apps") to 2-7 curated picks each. If your job is on that list, you're already down to a handful of candidates.

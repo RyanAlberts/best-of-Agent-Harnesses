@@ -24,6 +24,7 @@ Start with [How to pick a harness](comparisons/how-to-pick-a-harness.md), or jum
 - [Claude Code skill packs: superpowers vs GStack vs get-shit-done vs Anthropic Skills](comparisons/claude-code-skill-packs.md)
 - [Eval and observability platforms: Langfuse vs LangSmith vs Braintrust vs Phoenix](comparisons/eval-platforms.md)
 - [How to pick a harness](comparisons/how-to-pick-a-harness.md)
+- [How to test-drive a harness](comparisons/how-to-test-drive-a-harness.md)
 - [Agent memory layers: Mem0 vs Zep vs Letta vs claude-mem](comparisons/memory-layers.md)
 - [Multi-agent orchestration: OpenAI Agents SDK vs CrewAI vs AutoGen vs Agent Framework vs LangGraph](comparisons/multi-agent-orchestration.md)
 - [OpenClaw vs Hermes: the always-on personal-agent debate](comparisons/openclaw-vs-hermes.md)

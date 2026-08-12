@@ -442,6 +442,13 @@
       "raw_url": "https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/comparisons/how-to-pick-a-harness.md"
     },
     {
+      "slug": "how-to-test-drive-a-harness",
+      "title": "How to test-drive a harness",
+      "summary": "Spec sheets cannot answer \"which harness should I use,\" because an agent's performance is a property of the *pairing* between harness and model, not of either alone: the same model passes [46% of tasks in one harness and 80% in another](https://www.mindstudio.ai/blog/agent-harness-scaffolding-matter",
+      "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/comparisons/how-to-test-drive-a-harness.md",
+      "raw_url": "https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/comparisons/how-to-test-drive-a-harness.md"
+    },
+    {
       "slug": "memory-layers",
       "title": "Agent memory layers: Mem0 vs Zep vs Letta vs claude-mem",
       "summary": "Agents forget. A model keeps nothing between sessions, so anything your agent should still know tomorrow (who the user is, what was decided, what failed last time) has to live in a memory system outside the model. \"Add memory to my agent\" then hides genuinely different products, and picking by star ",

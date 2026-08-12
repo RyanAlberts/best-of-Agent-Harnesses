@@ -51,7 +51,8 @@ _The same projects placed by how much unsupervised rope they're designed to give
 
 _Start with the guide, then the head-to-head decision pages — grounded in the same data as the tables below:_
 
-- [**How to pick a harness**](comparisons/how-to-pick-a-harness.md) — six questions that turn this list into a decision, including the post–June 2026 billing reality
+- [**How to pick a harness**](comparisons/how-to-pick-a-harness.md): six questions that turn this list into a decision, plus the chart to internalize first (the harness moves scores more than the model)
+- [**How to test-drive a harness**](comparisons/how-to-test-drive-a-harness.md): the two-week trial protocol, with a fair setup, tasks from your own repos, seven measurements, and the walk-away test
 - [**OpenClaw vs Hermes**](comparisons/openclaw-vs-hermes.md) — the always-on personal-agent debate: presence vs discipline, plus what the field reports actually say
 - [**Terminal coding agents** — opencode vs Codex vs Gemini CLI vs crush vs goose](comparisons/terminal-coding-agents.md)
 - [**Multi-agent orchestration** — OpenAI Agents SDK vs CrewAI vs AutoGen vs LangGraph](comparisons/multi-agent-orchestration.md)
