@@ -1,13 +1,13 @@
 <!-- markdownlint-disable -->
 # Tags — cross-reference
 
-_Auto-generated from `scripts/generate.py`. 157 projects across 22 canonical tags. Edit projects in `generate.py` (not here) and rerun the script._
+_Auto-generated from `scripts/generate.py`. 158 projects across 22 canonical tags. Edit projects in `generate.py` (not here) and rerun the script._
 
 Tag chips appear next to each project in [README.md](README.md). This page lists every tag once with the projects that carry it, grouped by category and sorted by GitHub stars within each category.
 
 ## All tags
 
-[`mcp`](#mcp) (33) · [`memory`](#memory) (33) · [`multi-agent`](#multi-agent) (27) · [`evals`](#evals) (19) · [`voice`](#voice) (2) · [`vision`](#vision) (3) · [`browser`](#browser) (8) · [`sandbox`](#sandbox) (27) · [`low-code`](#low-code) (4) · [`rag`](#rag) (7) · [`tool-discovery`](#tool-discovery) (5) · [`training`](#training) (5) · [`workflow`](#workflow) (9) · [`typed`](#typed) (3) · [`local`](#local) (5) · [`provider-agnostic`](#provider-agnostic) (11) · [`cli`](#cli) (22) · [`ide`](#ide) (13) · [`tui`](#tui) (4) · [`rust`](#rust) (5) · [`python`](#python) (76) · [`typescript`](#typescript) (41)
+[`mcp`](#mcp) (33) · [`memory`](#memory) (34) · [`multi-agent`](#multi-agent) (27) · [`evals`](#evals) (19) · [`voice`](#voice) (2) · [`vision`](#vision) (3) · [`browser`](#browser) (8) · [`sandbox`](#sandbox) (27) · [`low-code`](#low-code) (4) · [`rag`](#rag) (8) · [`tool-discovery`](#tool-discovery) (5) · [`training`](#training) (5) · [`workflow`](#workflow) (10) · [`typed`](#typed) (3) · [`local`](#local) (5) · [`provider-agnostic`](#provider-agnostic) (11) · [`cli`](#cli) (22) · [`ide`](#ide) (13) · [`tui`](#tui) (4) · [`rust`](#rust) (5) · [`python`](#python) (77) · [`typescript`](#typescript) (41)
 
 ---
 
@@ -118,9 +118,10 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 **Memory and state**
 
-- [claude-mem](https://github.com/thedotmack/claude-mem) — ⭐90.2k — Claude Code plugin that captures everything an agent does during a session, AI-compresses it (via claude-agent-sdk), and injects the relevant context into future sessions—session-to-session memory as a drop-in.
+- [claude-mem](https://github.com/thedotmack/claude-mem) — ⭐90.2k — Session-memory plugin for Claude Code, Codex, OpenClaw, Gemini, Copilot, and more: captures everything an agent does during a session, AI-compresses it, and injects the relevant context into future sessions. Session-to-session memory as a drop-in.
 - [Mem0](https://github.com/mem0ai/mem0) — ⭐62.9k — Universal memory layer for AI agents: stores user/org/session memory, retrieves on demand. Apache-2.0; the de-facto memory primitive paired with most harnesses in 2026.
 - [cognee](https://github.com/topoteretes/cognee) — ⭐29.9k — Open-source memory layer for agents: an extract–cognify–load pipeline that turns your data into a queryable knowledge graph plus vector store, so agents recall facts and relationships across sessions instead of re-reading context.
+- [Graphiti (Zep)](https://github.com/getzep/graphiti) — ⭐29.9k — Zep's open-source memory engine: real-time temporal knowledge graphs that track how facts about users and entities change over time, so agents can answer "what was true when." The layer behind Zep's hosted memory platform.
 - [beads](https://github.com/gastownhall/beads) — ⭐26.1k — Portable persistent-memory layer for coding agents: tracks decisions and task state outside the harness's own context window so it survives session resets and model swaps.
 
 **Evaluation and benchmarking harnesses**
@@ -169,7 +170,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 **Multi-agent and orchestration**
 
 - [MetaGPT](https://github.com/FoundationAgents/MetaGPT) — ⭐69.7k — The "AI software company" multi-agent framework: role-played PM, architect, and engineer agents turn a one-line requirement into specs, designs, and code along an SOP assembly line. The landmark of the genre; development pace has slowed in 2026.
-- [autogen](https://github.com/microsoft/autogen) — ⭐60.3k — Conversable agents and group chats; code execution and human-in-the-loop; Microsoft origin, AG2 ecosystem.
+- [autogen](https://github.com/microsoft/autogen) — ⭐60.3k — Conversable agents and group chats; code execution and human-in-the-loop; Microsoft origin, AG2 ecosystem. ⚠️ In maintenance mode since late 2025: no new features, and Microsoft directs new users to Agent Framework.
 - [OpenManus](https://github.com/FoundationAgents/OpenManus) — ⭐57.9k — Open, invite-free general agent from the MetaGPT team: planning plus tool use over a multi-agent loop, aimed at reproducing Manus-style autonomous task completion on your own keys.
 - [Microsoft Agent Framework](https://github.com/microsoft/agent-framework) — ⭐12.7k — Microsoft's convergence of AutoGen and Semantic Kernel: build, orchestrate, and deploy agents and multi-agent workflows in Python and .NET, with graph-based workflows and checkpointing — the designated successor harness for both lines.
 - [hive](https://github.com/aden-hive/hive) — ⭐10.9k — Self-hosted multi-agent **harness** aimed at production workloads: human-in-the-loop checkpoints and a self-improving agent loop, distinct from single-session coding-agent shells.
@@ -366,6 +367,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 **Memory and state**
 
 - [cognee](https://github.com/topoteretes/cognee) — ⭐29.9k — Open-source memory layer for agents: an extract–cognify–load pipeline that turns your data into a queryable knowledge graph plus vector store, so agents recall facts and relationships across sessions instead of re-reading context.
+- [Graphiti (Zep)](https://github.com/getzep/graphiti) — ⭐29.9k — Zep's open-source memory engine: real-time temporal knowledge graphs that track how facts about users and entities change over time, so agents can answer "what was true when." The layer behind Zep's hosted memory platform.
 
 **Evaluation and benchmarking harnesses**
 
@@ -430,6 +432,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 **Memory and state**
 
 - [cognee](https://github.com/topoteretes/cognee) — ⭐29.9k — Open-source memory layer for agents: an extract–cognify–load pipeline that turns your data into a queryable knowledge graph plus vector store, so agents recall facts and relationships across sessions instead of re-reading context.
+- [Graphiti (Zep)](https://github.com/getzep/graphiti) — ⭐29.9k — Zep's open-source memory engine: real-time temporal knowledge graphs that track how facts about users and entities change over time, so agents can answer "what was true when." The layer behind Zep's hosted memory platform.
 
 **Evaluation and benchmarking harnesses**
 
@@ -655,7 +658,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 **Multi-agent and orchestration**
 
 - [MetaGPT](https://github.com/FoundationAgents/MetaGPT) — ⭐69.7k — The "AI software company" multi-agent framework: role-played PM, architect, and engineer agents turn a one-line requirement into specs, designs, and code along an SOP assembly line. The landmark of the genre; development pace has slowed in 2026.
-- [autogen](https://github.com/microsoft/autogen) — ⭐60.3k — Conversable agents and group chats; code execution and human-in-the-loop; Microsoft origin, AG2 ecosystem.
+- [autogen](https://github.com/microsoft/autogen) — ⭐60.3k — Conversable agents and group chats; code execution and human-in-the-loop; Microsoft origin, AG2 ecosystem. ⚠️ In maintenance mode since late 2025: no new features, and Microsoft directs new users to Agent Framework.
 - [OpenManus](https://github.com/FoundationAgents/OpenManus) — ⭐57.9k — Open, invite-free general agent from the MetaGPT team: planning plus tool use over a multi-agent loop, aimed at reproducing Manus-style autonomous task completion on your own keys.
 - [crewAI](https://github.com/crewAIInc/crewAI) — ⭐56.9k — Role-based agents (roles, goals, backstories) in Crews; Flows add event-driven and hierarchical control for production.
 - [ChatDev](https://github.com/OpenBMB/ChatDev) — ⭐34k — Multi-agent software-company simulation (CEO, CTO, programmer, tester) built on chat chains with communicative dehallucination; ChatDev 2.0 continues the line. MetaGPT's conversational sibling.
@@ -679,6 +682,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 - [Mem0](https://github.com/mem0ai/mem0) — ⭐62.9k — Universal memory layer for AI agents: stores user/org/session memory, retrieves on demand. Apache-2.0; the de-facto memory primitive paired with most harnesses in 2026.
 - [cognee](https://github.com/topoteretes/cognee) — ⭐29.9k — Open-source memory layer for agents: an extract–cognify–load pipeline that turns your data into a queryable knowledge graph plus vector store, so agents recall facts and relationships across sessions instead of re-reading context.
+- [Graphiti (Zep)](https://github.com/getzep/graphiti) — ⭐29.9k — Zep's open-source memory engine: real-time temporal knowledge graphs that track how facts about users and entities change over time, so agents can answer "what was true when." The layer behind Zep's hosted memory platform.
 
 **Evaluation and benchmarking harnesses**
 
@@ -843,7 +847,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 **Multi-agent and orchestration**
 
 - [MetaGPT](https://github.com/FoundationAgents/MetaGPT) — ⭐69.7k — The "AI software company" multi-agent framework: role-played PM, architect, and engineer agents turn a one-line requirement into specs, designs, and code along an SOP assembly line. The landmark of the genre; development pace has slowed in 2026.
-- [autogen](https://github.com/microsoft/autogen) — ⭐60.3k — Conversable agents and group chats; code execution and human-in-the-loop; Microsoft origin, AG2 ecosystem.
+- [autogen](https://github.com/microsoft/autogen) — ⭐60.3k — Conversable agents and group chats; code execution and human-in-the-loop; Microsoft origin, AG2 ecosystem. ⚠️ In maintenance mode since late 2025: no new features, and Microsoft directs new users to Agent Framework.
 - [OpenManus](https://github.com/FoundationAgents/OpenManus) — ⭐57.9k — Open, invite-free general agent from the MetaGPT team: planning plus tool use over a multi-agent loop, aimed at reproducing Manus-style autonomous task completion on your own keys.
 - [crewAI](https://github.com/crewAIInc/crewAI) — ⭐56.9k — Role-based agents (roles, goals, backstories) in Crews; Flows add event-driven and hierarchical control for production.
 - [ChatDev](https://github.com/OpenBMB/ChatDev) — ⭐34k — Multi-agent software-company simulation (CEO, CTO, programmer, tester) built on chat chains with communicative dehallucination; ChatDev 2.0 continues the line. MetaGPT's conversational sibling.
@@ -867,6 +871,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 - [Mem0](https://github.com/mem0ai/mem0) — ⭐62.9k — Universal memory layer for AI agents: stores user/org/session memory, retrieves on demand. Apache-2.0; the de-facto memory primitive paired with most harnesses in 2026.
 - [cognee](https://github.com/topoteretes/cognee) — ⭐29.9k — Open-source memory layer for agents: an extract–cognify–load pipeline that turns your data into a queryable knowledge graph plus vector store, so agents recall facts and relationships across sessions instead of re-reading context.
+- [Graphiti (Zep)](https://github.com/getzep/graphiti) — ⭐29.9k — Zep's open-source memory engine: real-time temporal knowledge graphs that track how facts about users and entities change over time, so agents can answer "what was true when." The layer behind Zep's hosted memory platform.
 
 **Evaluation and benchmarking harnesses**
 

@@ -9,7 +9,7 @@
     "feed_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/feed.json",
     "license": "CC-BY-SA-4.0",
     "stars_captured": "2026-08-09",
-    "project_count": 157,
+    "project_count": 158,
     "graveyard_count": 3,
     "tiers": [
       "super simple",
@@ -175,9 +175,9 @@
       "intent": "I want a drop-in memory layer for agents",
       "picks": [
         "mem0ai/mem0",
+        "getzep/graphiti",
         "thedotmack/claude-mem",
         "RyanAlberts/agentlog",
-        "agno-agi/agno",
         "letta-ai/letta"
       ],
       "category_title": "Plugins, MCPs, CLI tools"
@@ -304,7 +304,7 @@
     {
       "kind": "use-case",
       "q": "What is the best agent harness if I want a drop-in memory layer for agents?",
-      "a": "Top picks: Mem0, claude-mem, agentlog. See the “Plugins, MCPs, CLI tools” category for the full ranked list.",
+      "a": "Top picks: Mem0, Graphiti (Zep), claude-mem. See the “Plugins, MCPs, CLI tools” category for the full ranked list.",
       "slug": "what-is-the-best-agent-harness-if-i-want-a-drop-in-memory-layer-for-agents"
     },
     {
@@ -376,7 +376,7 @@
     {
       "kind": "derived",
       "q": "How many of these agent harnesses are open source?",
-      "a": "115 of 157 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
+      "a": "116 of 158 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
       "slug": "how-many-of-these-agent-harnesses-are-open-source"
     },
     {
@@ -423,21 +423,21 @@
     {
       "slug": "how-to-pick-a-harness",
       "title": "How to pick a harness",
-      "summary": "Six questions, in order. Each one eliminates most of the list; by the end you should be choosing between two or three projects, not 103. The [use-case index](../README.md#pick-by-use-case), the [landscape charts](../README.md#the-landscape-at-a-glance), and the head-to-head pages do the heavy liftin",
+      "summary": "This is the decision guide for [best-of-Agent-Harnesses](../README.md), a curated, ranked list of the runtimes that turn an AI model into a working agent: the software that decides what the model's thinking is allowed to touch. Six questions, in order. Each one eliminates most of the list; by the en",
       "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/comparisons/how-to-pick-a-harness.md",
       "raw_url": "https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/comparisons/how-to-pick-a-harness.md"
     },
     {
       "slug": "memory-layers",
-      "title": "Agent memory layers: Mem0 vs Letta vs claude-mem",
-      "summary": "\"Add memory to my agent\" hides three different products: a **memory API** you call from any agent (Mem0), an **agent runtime** where memory is the core abstraction (Letta), and a **plugin** that gives one specific harness perfect recall (claude-mem). They're barely competitors — the comparison that ",
+      "title": "Agent memory layers: Mem0 vs Zep vs Letta vs claude-mem",
+      "summary": "Agents forget. A model keeps nothing between sessions, so anything your agent should still know tomorrow (who the user is, what was decided, what failed last time) has to live in a memory system outside the model. \"Add memory to my agent\" then hides genuinely different products, and picking by star ",
       "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/comparisons/memory-layers.md",
       "raw_url": "https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/comparisons/memory-layers.md"
     },
     {
       "slug": "multi-agent-orchestration",
-      "title": "Multi-agent orchestration: OpenAI Agents SDK vs CrewAI vs AutoGen vs LangGraph",
-      "summary": "Four very different answers to \"how should multiple agents coordinate?\" — and the differences are architectural, not cosmetic. Picking wrong here is expensive: the coordination model shapes your whole codebase.",
+      "title": "Multi-agent orchestration: OpenAI Agents SDK vs CrewAI vs AutoGen vs Agent Framework vs LangGraph",
+      "summary": "Orchestration is the layer that coordinates several AI agents working on one job: who acts next, what they share, and what happens when a step fails. The five frameworks here answer that with genuinely different architectures, and the pick is expensive to get wrong because the coordination model sha",
       "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/comparisons/multi-agent-orchestration.md",
       "raw_url": "https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/comparisons/multi-agent-orchestration.md"
     },
@@ -465,7 +465,7 @@
     {
       "slug": "terminal-coding-agents",
       "title": "Terminal coding agents: opencode vs Codex vs Gemini CLI vs crush vs goose",
-      "summary": "The most-asked pick in this list: *\"I want a turnkey coding agent in my terminal today.\"* These five are the open(ish)-source field. The closed first-party products (Claude Code, Cursor's agent) aren't list entries, but they define the workflow all five implement: a tool-call loop with file edit, sh",
+      "summary": "The most-asked pick in this list: *\"I want a turnkey coding agent in my terminal today.\"* A terminal coding agent is a program you run in your shell that takes a plain-language request, then works in a loop: the model proposes an action (edit this file, run this command, search the repo), the tool e",
       "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/comparisons/terminal-coding-agents.md",
       "raw_url": "https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/comparisons/terminal-coding-agents.md"
     }
@@ -5244,7 +5244,7 @@
       "slug": "autogen",
       "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#autogen",
       "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/autogen/",
-      "description": "Conversable agents and group chats; code execution and human-in-the-loop; Microsoft origin, AG2 ecosystem.",
+      "description": "Conversable agents and group chats; code execution and human-in-the-loop; Microsoft origin, AG2 ecosystem. ⚠️ In maintenance mode since late 2025: no new features, and Microsoft directs new users to Agent Framework.",
       "category": "multi-agent",
       "category_title": "Multi-agent and orchestration",
       "stars": 60329,
@@ -6405,7 +6405,7 @@
       "slug": "claude-mem",
       "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#claude-mem",
       "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/claude-mem/",
-      "description": "Claude Code plugin that captures everything an agent does during a session, AI-compresses it (via claude-agent-sdk), and injects the relevant context into future sessions—session-to-session memory as a drop-in.",
+      "description": "Session-memory plugin for Claude Code, Codex, OpenClaw, Gemini, Copilot, and more: captures everything an agent does during a session, AI-compresses it, and injects the relevant context into future sessions. Session-to-session memory as a drop-in.",
       "category": "memory",
       "category_title": "Memory and state",
       "stars": 90162,
@@ -6581,6 +6581,37 @@
           "evidence": "https://raw.githubusercontent.com/topoteretes/cognee/main/README.md"
         }
       }
+    },
+    {
+      "name": "Graphiti (Zep)",
+      "github_id": "getzep/graphiti",
+      "url": "https://github.com/getzep/graphiti",
+      "slug": "graphiti",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#graphiti",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/graphiti/",
+      "description": "Zep's open-source memory engine: real-time temporal knowledge graphs that track how facts about users and entities change over time, so agents can answer \"what was true when.\" The layer behind Zep's hosted memory platform.",
+      "category": "memory",
+      "category_title": "Memory and state",
+      "stars": 29860,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (temporal knowledge graph)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [
+        "memory",
+        "rag",
+        "workflow",
+        "python"
+      ],
+      "example": {
+        "label": "Temporal graph quickstart",
+        "url": "https://github.com/getzep/graphiti#readme"
+      },
+      "deep_dive": null
     },
     {
       "name": "beads",

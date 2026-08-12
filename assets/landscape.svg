@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1320 880" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
 <rect width="1320" height="880" fill="#ffffff" rx="8"/>
 <text x="660.0" y="52" text-anchor="middle" font-size="30" font-weight="700" fill="#111827">The Agent Harness Landscape</text>
-<text x="660.0" y="80" text-anchor="middle" font-size="15" fill="#6b7280">157 hand-curated projects · GitHub stars vs. adoption surface area · stars captured 2026-08-09</text>
+<text x="660.0" y="80" text-anchor="middle" font-size="15" fill="#6b7280">158 hand-curated projects · GitHub stars vs. adoption surface area · stars captured 2026-08-09</text>
 <circle cx="80" cy="106" r="6" fill="#8b5cf6"/>
 <text x="91" y="110" font-size="12.5" fill="#374151">Progressive disclosure</text>
 <circle cx="262.2" cy="106" r="6" fill="#ef4444"/>
@@ -44,7 +44,7 @@
 <text x="533.8" y="800" text-anchor="middle" font-size="12" fill="#9ca3af">33 projects</text>
 <line x1="685.0" y1="168" x2="685.0" y2="750" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4 4"/>
 <text x="836.2" y="780" text-anchor="middle" font-size="15" font-weight="600" fill="#111827">slightly complex</text>
-<text x="836.2" y="800" text-anchor="middle" font-size="12" fill="#9ca3af">61 projects</text>
+<text x="836.2" y="800" text-anchor="middle" font-size="12" fill="#9ca3af">62 projects</text>
 <line x1="987.5" y1="168" x2="987.5" y2="750" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4 4"/>
 <text x="1138.8" y="780" text-anchor="middle" font-size="15" font-weight="600" fill="#111827">complex</text>
 <text x="1138.8" y="800" text-anchor="middle" font-size="12" fill="#9ca3af">51 projects</text>
@@ -156,6 +156,7 @@
 <circle cx="579.2" cy="275.5" r="4.5" fill="#a16207" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>smolagents — ⭐28.7k</title></circle>
 <circle cx="1160.8" cy="275.2" r="4.5" fill="#14b8a6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>gpt-researcher — ⭐28.9k</title></circle>
 <circle cx="1140.3" cy="274.0" r="4.5" fill="#a16207" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Composio — ⭐29.6k</title></circle>
+<circle cx="803.0" cy="273.5" r="4.5" fill="#84cc16" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Graphiti (Zep) — ⭐29.9k</title></circle>
 <circle cx="854.1" cy="273.5" r="4.5" fill="#84cc16" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>cognee — ⭐29.9k</title></circle>
 <circle cx="791.1" cy="270.0" r="4.5" fill="#10b981" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>github-mcp-server — ⭐32.1k</title></circle>
 <circle cx="873.4" cy="268.9" r="4.5" fill="#6366f1" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Langfuse — ⭐32.8k</title></circle>

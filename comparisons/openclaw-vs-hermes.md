@@ -29,18 +29,18 @@ Primary-source notes from the debate threads (r/openclaw, r/hermesagent, r/AskCl
 - **Run-both is the power-user consensus, with a twist.** OpenClaw as the coordinator, Hermes as the execution specialist. The most-cited benefit isn't throughput, it's **redundancy**: multiple independent reports of telling one agent to diagnose and fix the other when it bricks. Cost of running both: roughly +30%, for reportedly much more than +30% output.
 - **Trust the threads less than usual.** Both camps accuse the other of astroturfing, and the "everyone is migrating" narrative is contested inside OpenClaw's own subreddit. Volume of sentiment is unusually weak evidence here; the mechanism-level reports above are what's load-bearing.
 
-## The billing earthquake (April to June 2026)
+## The billing scare (April to June 2026)
 
-Some context if you're new to this: running an agent on "subscription auth" means logging it in with the flat-rate Claude subscription you already pay for, instead of a metered API key that bills per token. That arrangement is what changed.
+Some context if you're new to this: running an agent on "subscription auth" means logging it in with the flat-rate Claude subscription you already pay for, instead of a metered API key that bills per token. In 2026 that arrangement nearly changed, twice.
 
-- **Early April 2026:** Anthropic banned third-party agents from running on Claude subscriptions (capacity issues; an estimated 135,000+ OpenClaw instances were on subscription auth).
-- **June 15, 2026:** [Reinstated, with a catch](https://venturebeat.com/technology/anthropic-reinstates-openclaw-and-third-party-agent-usage-on-claude-subscriptions-with-a-catch): programmatic and third-party usage now draws from a separate [Agent SDK credit pool](https://thenewstack.io/anthropic-agent-sdk-credits/): $20 to $200 per month by plan, billed at API rates, non-rollover. An always-on agent on subscription auth is no longer flat-rate.
+- **Early April 2026:** Anthropic banned third-party agents from running on Claude subscriptions (capacity issues; an estimated 135,000+ OpenClaw instances were on subscription auth), then [reinstated them](https://venturebeat.com/technology/anthropic-reinstates-openclaw-and-third-party-agent-usage-on-claude-subscriptions-with-a-catch) alongside an announced catch: a separate metered [Agent SDK credit pool](https://thenewstack.io/anthropic-agent-sdk-credits/) ($20 to $200 per month by plan, billed at API rates) that would end flat-rate always-on agents.
+- **June 15, 2026:** Anthropic [paused the credit-pool change the day it was due to take effect](https://thenewstack.io/anthropic-pauses-claude-agent-sdk-subscription-change/). As of August 2026, third-party and programmatic usage draws from normal subscription limits, and Anthropic says any revised plan will come with notice.
 
-What the ops threads add: the cost problem is usage shape, not harness choice.
+The episode is the lesson: an always-on agent's economics sit on policy that can move under you. What the ops threads add: the durable cost problem is usage shape, not harness choice.
 
 - The trap is **frontier models on background work**. One thread's summary: running a top-tier model on heartbeats is "hiring a PhD physicist to check whether the fridge door is closed" every 15 minutes. One lightweight monitoring setup ran [$0.50/hour, about $360/month](https://old.reddit.com/r/AI_Agents/comments/1tjs12x/how_are_people_keeping_openclawhermes_agents/) before optimization.
 - The fix that recurs across threads, in priority order ([worked example](https://old.reddit.com/r/better_claw/comments/1tgfbig/dont_quite_openclawhermes_because_of_api_costs_do/), claimed ~80% reduction in an afternoon): **(1) wake less**: deterministic scripts and narrow watches that only invoke a model on a match (Hermes's `wakeAgent` and OpenClaw's model-bypassing `message send` both support this); **(2) route by tier**: cheap or free models for background work, a mid-tier model for conversations, never a frontier model on a timer; **(3) slim the tool list**: big tool registries silently tax every request. Field claims put monitoring setups under $5 to $10 per month after all three.
-- Post-June 15 escape routes in the wild: open-weight models (run locally or via OpenRouter), and subscription arbitrage shifting to *other* providers' plans. Both harnesses are provider-flexible; Hermes most natively, since open weights are Nous's founding thesis.
+- The hedges people adopted during the scare, and mostly kept: open-weight models (run locally or via OpenRouter), and spreading load across other providers' plans. Both harnesses are provider-flexible; Hermes most natively, since open weights are Nous's founding thesis.
 
 ## Our read
 

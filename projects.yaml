@@ -486,6 +486,10 @@ projects:
     labels: ["python"]
     category: "plugins-mcp-cli"
   # Memory and state
+  - name: Graphiti (Zep)
+    github_id: getzep/graphiti
+    labels: ["python"]
+    category: "memory"
   - name: cognee
     github_id: topoteretes/cognee
     labels: ["python"]

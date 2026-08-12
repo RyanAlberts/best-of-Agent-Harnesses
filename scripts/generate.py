@@ -422,7 +422,7 @@ PROJECTS: dict[str, list[Project]] = {
                 "Role-based agents (roles, goals, backstories) in Crews; Flows add event-driven and hierarchical control for production.",
                 "complex (roles, Flows, production — product suite)", labels=["python"]),
         Project("autogen", "microsoft/autogen",
-                "Conversable agents and group chats; code execution and human-in-the-loop; Microsoft origin, AG2 ecosystem.",
+                "Conversable agents and group chats; code execution and human-in-the-loop; Microsoft origin, AG2 ecosystem. ⚠️ In maintenance mode since late 2025: no new features, and Microsoft directs new users to Agent Framework.",
                 "complex (group chat, code exec, AG2 — product suite)", oss="✅ CC-BY", labels=["python"]),
         Project("AG2", "ag2ai/ag2",
                 "AG2 (formerly AutoGen): the community-governed continuation of the original AutoGen project after Microsoft's fork diverged—conversable multi-agent groups, code execution, and human-in-the-loop under an open-source AgentOS banner. Graduated off the radar this cycle.",
@@ -512,6 +512,9 @@ PROJECTS: dict[str, list[Project]] = {
                 "complex (gateway, federation, guardrails — product suite)", oss="❓", labels=["python"]),
     ],
     "memory": [
+        Project("Graphiti (Zep)", "getzep/graphiti",
+                "Zep's open-source memory engine: real-time temporal knowledge graphs that track how facts about users and entities change over time, so agents can answer \"what was true when.\" The layer behind Zep's hosted memory platform.",
+                "slightly complex (temporal knowledge graph)", labels=["python"]),
         Project("cognee", "topoteretes/cognee",
                 "Open-source memory layer for agents: an extract–cognify–load pipeline that turns your data into a queryable knowledge graph plus vector store, so agents recall facts and relationships across sessions instead of re-reading context.",
                 "slightly complex (graph + vector memory)", labels=["python"]),
@@ -519,7 +522,7 @@ PROJECTS: dict[str, list[Project]] = {
                 "Universal memory layer for AI agents: stores user/org/session memory, retrieves on demand. Apache-2.0; the de-facto memory primitive paired with most harnesses in 2026.",
                 "slightly complex (memory layer, multi-platform)", labels=["python"]),
         Project("claude-mem", "thedotmack/claude-mem",
-                "Claude Code plugin that captures everything an agent does during a session, AI-compresses it (via claude-agent-sdk), and injects the relevant context into future sessions—session-to-session memory as a drop-in.",
+                "Session-memory plugin for Claude Code, Codex, OpenClaw, Gemini, Copilot, and more: captures everything an agent does during a session, AI-compresses it, and injects the relevant context into future sessions. Session-to-session memory as a drop-in.",
                 "slightly complex (session capture + compression)"),
         Project("beads", "gastownhall/beads",
                 "Portable persistent-memory layer for coding agents: tracks decisions and task state outside the harness's own context window so it survives session resets and model swaps.",
@@ -820,6 +823,7 @@ META: dict[str, tuple[int, str, str]] = {
     "brandonhimpfen/awesome-ai-agents": (15, "https://github.com/brandonhimpfen/awesome-ai-agents#frameworks", "Frameworks section"),
     # memory
     "topoteretes/cognee": (29890, "https://github.com/topoteretes/cognee#readme", "Quickstart"),
+    "getzep/graphiti": (29860, "https://github.com/getzep/graphiti#readme", "Temporal graph quickstart"),
     "gastownhall/beads": (26150, "https://github.com/gastownhall/beads#readme", "Project README"),
     # observability
     "langfuse/langfuse": (32778, "https://langfuse.com/docs", "Docs"),
@@ -1187,6 +1191,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "brandonhimpfen/awesome-ai-agents": ("n/a", "n/a"),
     # memory (state layers — no agent loop of their own)
     "topoteretes/cognee": ("n/a", "n/a"),
+    "getzep/graphiti": ("n/a", "n/a"),
     "gastownhall/beads": ("n/a", "n/a"),
     # observability (tracing/eval-ops infra — no agent loop of their own)
     "langfuse/langfuse": ("n/a", "n/a"),
@@ -1271,8 +1276,8 @@ USE_CASES: "list[tuple[str, list[str], str]]" = [
       "QuantaAlpha/RepoMaster", "HarnessLab/claw-code-agent"],
      "Coding harness configs and SDKs"),
     ("I want a drop-in memory layer for agents",
-     ["mem0ai/mem0", "thedotmack/claude-mem", "RyanAlberts/agentlog",
-      "agno-agi/agno", "letta-ai/letta"],
+     ["mem0ai/mem0", "getzep/graphiti", "thedotmack/claude-mem",
+      "RyanAlberts/agentlog", "letta-ai/letta"],
      "Plugins, MCPs, CLI tools"),
     ("I want to plug hundreds to thousands of tools without context bloat",
      ["xfey/MCP-Zero", "Reason-Wang/ToolGen", "antl3x/ToolRAG",

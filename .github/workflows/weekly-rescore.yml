@@ -45,6 +45,10 @@ jobs:
           # contributors refresh keeps the intro's "Meet the N" roster live,
           # so the count can never go stale between hand edits.
           python3 scripts/refresh_contributors.py | tee -a /tmp/refresh.log
+          # traffic snapshot: GitHub only retains 14 days of traffic data, so
+          # this appends a weekly record to traffic-history.jsonl for real
+          # trend analysis over time.
+          python3 scripts/snapshot_traffic.py | tee -a /tmp/refresh.log
           # discover runs BEFORE generate so the README/site radar section
           # hydrates from this week's queue, not last week's.
           python3 scripts/discover_candidates.py
