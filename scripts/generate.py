@@ -2009,6 +2009,10 @@ def generate_llms_txt() -> str:
         picks = ", ".join(f"{find_project(g).display_name} (https://github.com/{g})" for g in live_ids)
         lines.append(f"- {intent}: {picks}")
     lines.append("")
+    lines += ["## Decision guides", ""]
+    for c in comparisons_index():
+        lines.append(f"- {c['title']}: {SITE_URL}compare/{c['slug']}/ — {c['summary']}")
+    lines.append("")
     lines += ["## FAQ", ""]
     for item in build_faq():
         lines.append(f"### {item['q']}")
