@@ -398,6 +398,27 @@
   ],
   "comparisons": [
     {
+      "slug": "agent-eval-harnesses",
+      "title": "Agent eval harnesses: SWE-bench vs inspect_ai vs AgentBench",
+      "summary": "\"Evaluate my agent\" hides two different products. A benchmark is a fixed exam with a leaderboard: SWE-bench and AgentBench tell you where a model or harness ranks against the field, on tasks someone else wrote. An eval framework is tooling for writing your own exam: inspect_ai measures your agent on",
+      "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/comparisons/agent-eval-harnesses.md",
+      "raw_url": "https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/comparisons/agent-eval-harnesses.md"
+    },
+    {
+      "slug": "browser-agents",
+      "title": "Browser agents: browser-use vs Playwright MCP vs chrome-devtools-mcp",
+      "summary": "One of these is an agent and two are tools, and the two tools barely overlap. browser-use owns an agent loop: hand it a goal and it drives the browser. Playwright MCP and chrome-devtools-mcp are MCP servers: the agent you already run keeps the loop and gains browser hands. Even then the servers spli",
+      "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/comparisons/browser-agents.md",
+      "raw_url": "https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/comparisons/browser-agents.md"
+    },
+    {
+      "slug": "claude-code-skill-packs",
+      "title": "Claude Code skill packs: superpowers vs GStack vs Anthropic Skills vs addyosmani/agent-skills",
+      "summary": "Skill packs are the cheapest tier on this whole list: folders of markdown the harness loads when relevant, with no runtime, no new agent loop, and switching costs near zero. That is why [How to pick a harness](how-to-pick-a-harness.md) tells you to start at this tier. The four big packs are not four",
+      "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/comparisons/claude-code-skill-packs.md",
+      "raw_url": "https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/comparisons/claude-code-skill-packs.md"
+    },
+    {
       "slug": "how-to-pick-a-harness",
       "title": "How to pick a harness",
       "summary": "Six questions, in order. Each one eliminates most of the list; by the end you should be choosing between two or three projects, not 103. The [use-case index](../README.md#pick-by-use-case), the [landscape charts](../README.md#the-landscape-at-a-glance), and the head-to-head pages do the heavy liftin",
@@ -424,6 +445,20 @@
       "summary": "The loudest harness argument of 2026. Both are open-source (MIT), self-hosted, always-on personal agents you talk to from chat apps — and they're two of the most-starred projects on this entire list. The flame war treats them as rivals; the architecture says they're opposite design philosophies that",
       "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/comparisons/openclaw-vs-hermes.md",
       "raw_url": "https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/comparisons/openclaw-vs-hermes.md"
+    },
+    {
+      "slug": "progressive-disclosure",
+      "title": "Progressive disclosure: agents.md vs MCP-Zero vs langgraph-bigtool vs context-mode",
+      "summary": "Context bloat enters through three doors: instructions the agent might need, tool schemas it might call, and tool output it already produced. Progressive disclosure is one principle (give the model a map first, details only on demand) applied at each door. These four projects guard different doors, ",
+      "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/comparisons/progressive-disclosure.md",
+      "raw_url": "https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/comparisons/progressive-disclosure.md"
+    },
+    {
+      "slug": "sandboxed-code-execution",
+      "title": "Sandboxed code execution: E2B vs Daytona vs smolagents",
+      "summary": "\"Run agent-written code somewhere safe\" names two different purchases, and this trio spans both. E2B and Daytona are sandbox infrastructure: they sit below the agent loop and never call a model. smolagents is an agent library whose actions are Python code, and it plugs *into* sandboxes (E2B among th",
+      "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/comparisons/sandboxed-code-execution.md",
+      "raw_url": "https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/comparisons/sandboxed-code-execution.md"
     },
     {
       "slug": "terminal-coding-agents",
@@ -2205,7 +2240,7 @@
       "autonomy_rank": 0,
       "recovery": "n/a",
       "recovery_rank": 0,
-      "license_signal": "open-source",
+      "license_signal": "restricted (Anthropic terms)",
       "tags": [],
       "example": {
         "label": "docx skill",
@@ -5854,7 +5889,7 @@
       "autonomy_rank": 0,
       "recovery": "n/a",
       "recovery_rank": 0,
-      "license_signal": "unknown",
+      "license_signal": "open-source",
       "tags": [
         "mcp",
         "browser",
@@ -7341,7 +7376,7 @@
       "slug": "daytona",
       "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#daytona",
       "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/daytona/",
-      "description": "Elastic dev environments for AI-generated code: workspaces, Git, previews—infra harness between \"the model wrote a patch\" and \"it ran in a real machine.\"",
+      "description": "Elastic dev environments for AI-generated code: workspaces, Git, previews—infra harness between \"the model wrote a patch\" and \"it ran in a real machine.\" ⚠️ Public repo unmaintained since June 2026: core development moved to a private codebase (final open release v0.190.0, AGPL-3.0).",
       "category": "libraries-sdks",
       "category_title": "Libraries and SDKs",
       "stars": 72017,

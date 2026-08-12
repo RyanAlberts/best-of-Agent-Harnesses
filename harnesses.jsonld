@@ -1730,7 +1730,7 @@
           "@type": "SoftwareApplication",
           "name": "Daytona",
           "url": "https://github.com/daytonaio/daytona",
-          "description": "Elastic dev environments for AI-generated code: workspaces, Git, previews—infra harness between \"the model wrote a patch\" and \"it ran in a real machine.\"",
+          "description": "Elastic dev environments for AI-generated code: workspaces, Git, previews—infra harness between \"the model wrote a patch\" and \"it ran in a real machine.\" ⚠️ Public repo unmaintained since June 2026: core development moved to a private codebase (final open release v0.190.0, AGPL-3.0).",
           "applicationCategory": "DeveloperApplication",
           "keywords": "sandbox"
         }
