@@ -9,9 +9,7 @@
 </p>
 
 <p align="center">
-    <a href="https://best-of.org" title="Best-of Badge"><img src="http://bit.ly/3o3EHNN"></a>
     <a href="#contents" title="Project Count"><img src="https://img.shields.io/badge/projects-158-blue.svg?color=5ac4bf"></a>
-    <a href="https://ryanalberts.github.io/best-of-Agent-Harnesses/" title="Browse the searchable site"><img src="https://img.shields.io/badge/website-live-5ac4bf.svg"></a>
     <a href="#for-agents" title="Agents can query this list — MCP server, llms.txt & JSON"><img src="https://img.shields.io/badge/agents-query%20this%20list-5ac4bf.svg"></a>
     <a href="#contribution" title="Contributions welcome"><img src="https://img.shields.io/badge/contributions-welcome-green.svg"></a>
     <a href="https://github.com/RyanAlberts/best-of-Agent-Harnesses/commits/main" title="Updates"><img src="https://img.shields.io/github/last-commit/RyanAlberts/best-of-Agent-Harnesses?color=green&label=updated"></a>
@@ -23,12 +21,6 @@
 
 <p align="center">
     🤖 <strong>Agents can query this list</strong> — an <a href="#for-agents">MCP server</a> (<code>recommend</code>, <code>pick_harness</code>, …), <a href="llms.txt">llms.txt</a> &amp; <a href="harnesses.json">JSON</a>, so your agent recommends harnesses too.
-</p>
-
-<p align="center">
-    🧡 <strong>A curated list is only as good as the people who stop mid-scroll to point at what it's missing.</strong><br>
-    These folks did exactly that — found a gap, wrote it up, and made the list better than one maintainer ever could.
-    <a href="#-thank-you-contributors"><strong>Meet the 24 →</strong></a>
 </p>
 
 ## What is an agent harness?
