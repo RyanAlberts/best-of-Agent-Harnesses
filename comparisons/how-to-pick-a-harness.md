@@ -35,3 +35,5 @@ Prefer harnesses where your investment ports: instructions in open file formats 
 ---
 
 _Part of [best-of-Agent-Harnesses](https://github.com/RyanAlberts/best-of-Agent-Harnesses). The same data is queryable by agents via the [MCP server](../mcp/): `pick_harness(use_case, max_complexity, min_autonomy, min_recovery)` automates questions 1-4._
+
+_Agents can query this page's data directly: `claude mcp add agent-harnesses -- uvx agent-harnesses-mcp` ([MCP server](../mcp/))._

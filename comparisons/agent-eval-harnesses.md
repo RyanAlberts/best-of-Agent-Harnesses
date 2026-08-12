@@ -31,8 +31,10 @@ Three failure modes to check before trusting any benchmark score. **Aging**: pub
 
 ## The adjacent purchase
 
-Everything on this page is open source. The place money changes hands in evals is one layer up: hosted platforms that trace what your agent did in production and score it continuously. That decision (Langfuse vs LangSmith vs Braintrust vs Arize) is [the most-compared pairing in the whole space](https://www.marktechpost.com/2026/08/09/top-llm-observability-and-evaluation-platforms-in-2026-langfuse-langsmith-braintrust-arize-and-more-compared/); this list covers the open-source pieces of it, [Langfuse and MLflow](../README.md#observability-and-eval-ops), in the observability category.
+Everything on this page is open source. The place money changes hands in evals is one layer up: hosted platforms that trace what your agent did in production and score it continuously. That decision, the most-compared purchase in the whole space, gets its own guide: [Eval and observability platforms](eval-platforms.md) (Langfuse vs LangSmith vs Braintrust vs Phoenix).
 
 ---
 
 _Part of [best-of-Agent-Harnesses](https://github.com/RyanAlberts/best-of-Agent-Harnesses). New to this decision? Start with [How to pick a harness](how-to-pick-a-harness.md). Spot an error or a stale claim? [Open an issue](https://github.com/RyanAlberts/best-of-Agent-Harnesses/issues)._
+
+_Agents can query this page's data directly: `claude mcp add agent-harnesses -- uvx agent-harnesses-mcp` ([MCP server](../mcp/))._

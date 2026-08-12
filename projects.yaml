@@ -581,6 +581,14 @@ projects:
     github_id: mlflow/mlflow
     labels: ["python"]
     category: "observability"
+  - name: Opik
+    github_id: comet-ml/opik
+    labels: ["python"]
+    category: "observability"
+  - name: Arize Phoenix
+    github_id: Arize-ai/phoenix
+    labels: ["python"]
+    category: "observability"
   # Research and task-specific harnesses
   - name: gpt-researcher
     github_id: assafelovic/gpt-researcher
@@ -642,6 +650,9 @@ projects:
   - name: E2B
     github_id: e2b-dev/E2B
     labels: ["python"]
+    category: "libraries-sdks"
+  - name: Steel
+    github_id: steel-dev/steel-browser
     category: "libraries-sdks"
   - name: Agent Sandbox
     github_id: kubernetes-sigs/agent-sandbox

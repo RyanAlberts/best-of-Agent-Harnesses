@@ -1,6 +1,6 @@
 # Best of Agent Harnesses
 
-> Hand-curated, ranked list of 158 AI agent harnesses — the runtimes that close the loop between a stateless model and the outside world. 12 categories, a 4-tier adoption-surface rating (simplicity ↔ capability), capability tags, a license signal, and one concrete example link per project. Stars captured 2026-08-09.
+> Hand-curated, ranked list of 161 AI agent harnesses — the runtimes that close the loop between a stateless model and the outside world. 12 categories, a 4-tier adoption-surface rating (simplicity ↔ capability), capability tags, a license signal, and one concrete example link per project. Stars captured 2026-08-09.
 
 Maintained at https://github.com/RyanAlberts/best-of-Agent-Harnesses (CC-BY-SA-4.0).
 Structured data: https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/harnesses.json
@@ -27,7 +27,9 @@ Tiers, least to most adoption surface: super simple → mostly simple → slight
 
 - Agent evals: SWE-bench vs inspect_ai vs Terminal-Bench: https://ryanalberts.github.io/best-of-Agent-Harnesses/compare/agent-eval-harnesses/ — You changed your agent: new model, new prompt, new tools. Did it get better or worse? An eval is how you answer that with a number instead of a feeling. The word covers two different products, and knowing which one you need is most of the decision. A **benchmark** is a fixed public exam with a leade
 - Browser agents: browser-use vs Stagehand vs Playwright MCP vs chrome-devtools-mcp: https://ryanalberts.github.io/best-of-Agent-Harnesses/compare/browser-agents/ — "Browser agent" covers three different kinds of product, and most bad picks here come from comparing across the lanes instead of within one. **Agent libraries** own the whole job: you hand them a goal in plain language ("find the cheapest flight, fill the form") and they decide every click. browser-
+- Browser infrastructure for agents: Browserbase vs Steel vs Hyperbrowser: https://ryanalberts.github.io/best-of-Agent-Harnesses/compare/browser-infrastructure/ — Agent libraries like browser-use and Stagehand decide what to click; something still has to run the browsers they click in. At small scale that's Chrome on your own machine. At production scale it becomes its own operations problem: hundreds of concurrent sessions, sites that block automation, CAPTC
 - Claude Code skill packs: superpowers vs GStack vs get-shit-done vs Anthropic Skills: https://ryanalberts.github.io/best-of-Agent-Harnesses/compare/claude-code-skill-packs/ — A skill is a folder of instructions (a SKILL.md file, plus any scripts it needs) that a coding agent loads only when the task matches, instead of carrying every instruction all the time. A skill pack is a curated bundle of them: someone else's working habits for your agent, installed as files. Nothi
+- Eval and observability platforms: Langfuse vs LangSmith vs Braintrust vs Phoenix: https://ryanalberts.github.io/best-of-Agent-Harnesses/compare/eval-platforms/ — Benchmarks tell you how a model ranks; your production agent still fails in ways no public exam covers. An eval and observability platform is where teams watch what their agent actually did (tracing: recording every step, tool call, and token of a run) and score it continuously (evals: checks that r
 - How to pick a harness: https://ryanalberts.github.io/best-of-Agent-Harnesses/compare/how-to-pick-a-harness/ — This is the decision guide for [best-of-Agent-Harnesses](../README.md), a curated, ranked list of the runtimes that turn an AI model into a working agent: the software that decides what the model's thinking is allowed to touch. Six questions, in order. Each one eliminates most of the list; by the en
 - Agent memory layers: Mem0 vs Zep vs Letta vs claude-mem: https://ryanalberts.github.io/best-of-Agent-Harnesses/compare/memory-layers/ — Agents forget. A model keeps nothing between sessions, so anything your agent should still know tomorrow (who the user is, what was decided, what failed last time) has to live in a memory system outside the model. "Add memory to my agent" then hides genuinely different products, and picking by star 
 - Multi-agent orchestration: OpenAI Agents SDK vs CrewAI vs AutoGen vs Agent Framework vs LangGraph: https://ryanalberts.github.io/best-of-Agent-Harnesses/compare/multi-agent-orchestration/ — Orchestration is the layer that coordinates several AI agents working on one job: who acts next, what they share, and what happens when a step fails. The five frameworks here answer that with genuinely different architectures, and the pick is expensive to get wrong because the coordination model sha
@@ -87,7 +89,7 @@ Harnesses designed for unattended runs, batches, and fleets: opencode, OpenHands
 Harnesses whose execution state persists across restarts: langgraph-bigtool, n8n, langgraph, mastra, letta, deepagents, pydantic-ai, Cloudflare Agents.
 
 ### How many of these agent harnesses are open source?
-116 of 158 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.
+118 of 161 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.
 
 ### What is an agent harness?
 The runtime that turns a model into an agent: it decides what the model's reasoning is allowed to touch, and supplies the orchestration, tool wiring, memory, error recovery, and guardrails around per-turn inference.
@@ -280,12 +282,14 @@ Agentic eval systems, reasoning benchmarks, and open agent benchmarks.
 - [SUPER](https://github.com/allenai/super-benchmark) — ⭐57, slightly complex, autonomy: headless, recovery: none, open-source: Agents that set up and run ML/NLP from GitHub repos; 45 expert problems, 152 masked tasks, 602 AutoGen tasks; Docker-based. [sandbox, python]
 - [TRAIL](https://github.com/patronus-ai/trail-benchmark) — ⭐22, mostly simple, autonomy: n/a, recovery: n/a, open-source: Trace reasoning and agentic issue localization; 148 long-context traces, 841 errors, 20+ error types; Hugging Face dataset.
 
-## Observability and eval-ops (2 projects)
+## Observability and eval-ops (4 projects)
 
 Tracing, monitoring, and production evaluation for live agent runs: capture every step, tool call, and token, then score and debug in the loop. Distinct from the fixed-task benchmarks above—this is what you run against your own traffic.
 
 - [Langfuse](https://github.com/langfuse/langfuse) — ⭐32.8k, slightly complex, autonomy: n/a, recovery: n/a, open-source: Open-source LLM engineering platform: full-trace observability, online and offline evals, prompt management, and cost metrics for agent runs in production—the monitoring layer most harnesses lack out of the box. [evals, typescript]
 - [MLflow](https://github.com/mlflow/mlflow) — ⭐27.4k, complex, autonomy: n/a, recovery: n/a, open-source: Mature ML platform now covering GenAI: MLflow Tracing captures every agent step, tool call, and token, with built-in LLM evals and prompt versioning—observability for teams already standardized on MLflow. [evals, python]
+- [Opik](https://github.com/comet-ml/opik) — ⭐21.3k, slightly complex, autonomy: n/a, recovery: n/a, open-source: Comet's open-source agent observability and evaluation platform: tracing, scoring, and experiment comparison with the whole core feature set free to self-host under Apache-2.0. [evals, python]
+- [Arize Phoenix](https://github.com/Arize-ai/phoenix) — ⭐11k, slightly complex, autonomy: n/a, recovery: n/a, restricted (Elastic-2.0): Arize's source-available, local-first tracing and eval layer: run it on your laptop or your own infra, and graduate to the managed Arize AX platform only when you need it. [evals, python]
 
 ## Research and task-specific harnesses (5 projects)
 
@@ -297,7 +301,7 @@ Deep research, document QA, and domain-specific agent loops.
 - [MiroThinker](https://github.com/MiroMindAI/MiroThinker) — ⭐8.4k, slightly complex, autonomy: headless, recovery: retry, unknown: Deep-research **harness** tuned for long browsing-and-reasoning chains; benchmarked on BrowseComp, GAIA, and HLE by pairing a dedicated agent loop with its own MiroThinker models rather than bolting search onto a generic chat agent. [evals]
 - [openagents](https://github.com/OpenAgentsInc/openagents) — ⭐445, complex, autonomy: headless, recovery: resumable, open-source: Platform for autonomous agents and autopilot-style workflows; decentralized/Nostr-oriented (Pylon runtime, actively shipped in 2026).
 
-## Libraries and SDKs (14 projects)
+## Libraries and SDKs (15 projects)
 
 Lightweight runtimes, tool loops, and provider-agnostic harness primitives.
 
@@ -309,6 +313,7 @@ Lightweight runtimes, tool loops, and provider-agnostic harness primitives.
 - [vercel/ai](https://github.com/vercel/ai) — ⭐26.1k, slightly complex, autonomy: bounded, recovery: retry, open-source: React and Node SDK for streaming, tool calls, and agent-style UIs; provider-agnostic. [provider-agnostic, typescript]
 - [pydantic-ai](https://github.com/pydantic/pydantic-ai) — ⭐19.2k, slightly complex, autonomy: bounded, recovery: durable, open-source: Type-safe Python agents with Pydantic I/O; multi-provider, MCP, Logfire observability, and human-in-the-loop. [mcp, typed, provider-agnostic, python]
 - [E2B](https://github.com/e2b-dev/E2B) — ⭐13.3k, slightly complex, autonomy: n/a, recovery: n/a, open-source: Firecracker sandboxes for executing agent-generated code; the hosted isolation layer many tool-calling demos use instead of running arbitrary LLM output on your laptop. [sandbox, python]
+- [Steel](https://github.com/steel-dev/steel-browser) — ⭐7.5k, slightly complex, autonomy: n/a, recovery: n/a, open-source: Open-source browser API for agents: cloud or self-hosted Chrome sessions with stealth, residential proxies, CAPTCHA solving, and persistent profiles. The only open-source core in the hosted browser-infrastructure lane (Browserbase and Hyperbrowser are closed). [memory, browser, local]
 - [strands-agents](https://github.com/strands-agents/harness-sdk) — ⭐6.9k, mostly simple, autonomy: bounded, recovery: resumable, open-source: Model-driven Python SDK; decorators for tools, native MCP, multi-agent; "minimal code" without sacrificing provider choice. [mcp, multi-agent, typed, python]
 - [Cloudflare Agents](https://github.com/cloudflare/agents) — ⭐5.4k, slightly complex, autonomy: headless, recovery: durable, open-source: Persistent, stateful agents on Durable Objects: state, websockets, scheduling, and AI chat baked in. The serverless answer to "where does the agent live?" [memory, typescript]
 - [openai-agents-js](https://github.com/openai/openai-agents-js) — ⭐3.6k, slightly complex, autonomy: bounded, recovery: resumable, open-source: Official OpenAI Agents SDK for Node/TS: handoffs, guardrails, voice; the JS counterpart to openai-agents-python. [multi-agent, voice, typescript]

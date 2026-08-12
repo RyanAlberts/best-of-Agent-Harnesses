@@ -22,7 +22,7 @@ _Stars as captured for the main list; rating definitions live in the [guide to r
 - **You want the agent to draft the automation, then pin it down** → **Stagehand**. Its bet is mixing plain-language steps with regular Playwright code in one script, so what starts flexible can end deterministic and repeatable. The browser-use vs Stagehand choice is [the most-written-about matchup in the lane](https://scrapfly.io/blog/posts/stagehand-vs-browser-use).
 - **Your coding agent needs browser hands** (end-to-end tests, scraping, form-driving from inside Claude Code, opencode, or Cursor) → **Playwright MCP**. First-party from the Playwright team; acting on the accessibility tree keeps actions structured and fast. The default answer inside a harness you already run.
 - **Your agent needs to see why the page broke** (console errors, failed requests, slow traces) → **chrome-devtools-mcp**. First-party from the Chrome team; it turns the DevTools panel into tool calls. It complements Playwright MCP rather than replacing it, and running both (one to act, one to inspect) is a natural pairing.
-- **The site fights automation** → [puppeteer-real-browser-mcp-server](https://github.com/withLinda/puppeteer-real-browser-mcp-server) adds real-browser and anti-detection modes (its own README says no automation is invisible), and the infrastructure lane ([Browserbase vs Steel vs Hyperbrowser](https://apiscout.dev/guides/browserbase-vs-steel-vs-hyperbrowser-browser-infrastructure-2026)) sells hosted stealth browsers at scale. For vision-first form filling, [Skyvern](https://github.com/Skyvern-AI/skyvern) is the common third name next to browser-use and Stagehand.
+- **The site fights automation** → [puppeteer-real-browser-mcp-server](https://github.com/withLinda/puppeteer-real-browser-mcp-server) adds real-browser and anti-detection modes (its own README says no automation is invisible), and the infrastructure lane ([Browserbase vs Steel vs Hyperbrowser](browser-infrastructure.md)) sells hosted stealth browsers at scale. For vision-first form filling, [Skyvern](https://github.com/Skyvern-AI/skyvern) is the common third name next to browser-use and Stagehand.
 
 ## Agent or tool?
 
@@ -31,3 +31,5 @@ If you already run a coding harness, you rarely need a second agent with its own
 ---
 
 _Part of [best-of-Agent-Harnesses](https://github.com/RyanAlberts/best-of-Agent-Harnesses). New to this decision? Start with [How to pick a harness](how-to-pick-a-harness.md). Spot an error or a stale claim? [Open an issue](https://github.com/RyanAlberts/best-of-Agent-Harnesses/issues)._
+
+_Agents can query this page's data directly: `claude mcp add agent-harnesses -- uvx agent-harnesses-mcp` ([MCP server](../mcp/))._

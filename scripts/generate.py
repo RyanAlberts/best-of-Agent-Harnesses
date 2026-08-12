@@ -591,6 +591,12 @@ PROJECTS: dict[str, list[Project]] = {
         Project("MLflow", "mlflow/mlflow",
                 "Mature ML platform now covering GenAI: MLflow Tracing captures every agent step, tool call, and token, with built-in LLM evals and prompt versioning—observability for teams already standardized on MLflow.",
                 "complex (full ML + GenAI platform)", labels=["python"]),
+        Project("Opik", "comet-ml/opik",
+                "Comet's open-source agent observability and evaluation platform: tracing, scoring, and experiment comparison with the whole core feature set free to self-host under Apache-2.0.",
+                "slightly complex (tracing + evals platform)", labels=["python"]),
+        Project("Arize Phoenix", "Arize-ai/phoenix",
+                "Arize's source-available, local-first tracing and eval layer: run it on your laptop or your own infra, and graduate to the managed Arize AX platform only when you need it.",
+                "slightly complex (local-first tracing + evals)", oss="⚠️ Elastic-2.0", labels=["python"]),
     ],
     "research-task": [
         Project("gpt-researcher", "assafelovic/gpt-researcher",
@@ -643,6 +649,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("E2B", "e2b-dev/E2B",
                 "Firecracker sandboxes for executing agent-generated code; the hosted isolation layer many tool-calling demos use instead of running arbitrary LLM output on your laptop.",
                 "slightly complex (sandbox API, code execution)", labels=["python"]),
+        Project("Steel", "steel-dev/steel-browser",
+                "Open-source browser API for agents: cloud or self-hosted Chrome sessions with stealth, residential proxies, CAPTCHA solving, and persistent profiles. The only open-source core in the hosted browser-infrastructure lane (Browserbase and Hyperbrowser are closed).",
+                "slightly complex (browser sessions API, self-hostable)"),
         Project("Agent Sandbox", "kubernetes-sigs/agent-sandbox",
                 "Kubernetes-native sandbox primitive for agent runtimes: a Sandbox resource plus warm pools and claims for fast-start, isolated, stateful workloads. The self-hosted answer to hosted sandbox APIs, from the Kubernetes SIGs org.",
                 "slightly complex (Kubernetes resource, warm pools)"),
@@ -820,6 +829,7 @@ META: dict[str, tuple[int, str, str]] = {
     "e2b-dev/E2B": (13315, "https://github.com/e2b-dev/e2b-cookbook/tree/main/examples/anthropic-claude-code-in-sandbox-python", "Claude Code in sandbox"),
     "daytonaio/daytona": (72017, "https://github.com/daytonaio/daytona/tree/main/examples/python/charts", "Charts in sandbox"),
     "kubernetes-sigs/agent-sandbox": (3491, "https://github.com/kubernetes-sigs/agent-sandbox#readme", "Sandbox resource quickstart"),
+    "steel-dev/steel-browser": (7471, "https://docs.steel.dev", "Sessions API docs"),
     "brandonhimpfen/awesome-ai-agents": (15, "https://github.com/brandonhimpfen/awesome-ai-agents#frameworks", "Frameworks section"),
     # memory
     "topoteretes/cognee": (29890, "https://github.com/topoteretes/cognee#readme", "Quickstart"),
@@ -828,6 +838,8 @@ META: dict[str, tuple[int, str, str]] = {
     # observability
     "langfuse/langfuse": (32778, "https://langfuse.com/docs", "Docs"),
     "mlflow/mlflow": (27429, "https://mlflow.org", "Docs"),
+    "comet-ml/opik": (21337, "https://www.comet.com/docs/opik/", "Docs"),
+    "Arize-ai/phoenix": (11019, "https://arize.com/docs/phoenix", "Docs"),
     # plugins-mcp-cli (MCP infrastructure)
     "modelcontextprotocol/servers": (89366, "https://github.com/modelcontextprotocol/servers#readme", "Server catalog"),
     "upstash/context7": (60479, "https://context7.com", "Docs"),
@@ -1176,6 +1188,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     # libraries-sdks
     "daytonaio/daytona": ("n/a", "n/a"),
     "kubernetes-sigs/agent-sandbox": ("n/a", "n/a"),
+    "steel-dev/steel-browser": ("n/a", "n/a"),
     "mem0ai/mem0": ("n/a", "n/a"),
     "BerriAI/litellm": ("n/a", "retry"),
     "ComposioHQ/composio": ("n/a", "n/a"),
@@ -1196,6 +1209,8 @@ AXES: "dict[str, tuple[str, str]]" = {
     # observability (tracing/eval-ops infra — no agent loop of their own)
     "langfuse/langfuse": ("n/a", "n/a"),
     "mlflow/mlflow": ("n/a", "n/a"),
+    "comet-ml/opik": ("n/a", "n/a"),
+    "Arize-ai/phoenix": ("n/a", "n/a"),
     # plugins-mcp-cli (MCP infrastructure — tools/servers, not loops)
     "modelcontextprotocol/servers": ("n/a", "n/a"),
     "upstash/context7": ("n/a", "n/a"),
@@ -1577,11 +1592,11 @@ def generate_readme() -> str:
         "",
         "## The landscape at a glance",
         "",
-        "[![The Agent Harness Landscape — all projects plotted by adoption surface area against GitHub stars](assets/landscape.svg)](assets/landscape.svg)",
+        "[![The Agent Harness Landscape — all projects plotted by adoption surface area against GitHub stars](assets/landscape.svg)](landscape.md)",
         "",
         f"_Every project in the list, plotted by adoption surface area (the [simplicity ↔ capability axis](#guide-to-rankings)) against GitHub stars. Colors are categories; the largest projects in each tier are labeled._",
         "",
-        "[![Autonomy × Recovery — every loop-owning project placed by designed autonomy regime and failure-recovery tier](assets/axes-grid.svg)](assets/axes-grid.svg)",
+        "[![Autonomy × Recovery — every loop-owning project placed by designed autonomy regime and failure-recovery tier](assets/axes-grid.svg)](landscape.md)",
         "",
         "_The same projects placed by how much unsupervised rope they're designed to give (autonomy) and what happens when a run dies (recovery). In the tables below, ★ marks headless-ready projects and ✱ marks durable ones. Both charts regenerate from the list data on every refresh._",
         "",
@@ -1596,7 +1611,9 @@ def generate_readme() -> str:
         "- [**Agent memory layers** — Mem0 vs Letta vs claude-mem](comparisons/memory-layers.md)",
         "- [**Agent sandboxing**: what it is, the key concepts, and the field (E2B vs Daytona vs Modal and more)](comparisons/sandboxed-code-execution.md)",
         "- [**Agent evals** (SWE-bench vs inspect_ai vs Terminal-Bench)](comparisons/agent-eval-harnesses.md)",
+        "- [**Eval and observability platforms** (Langfuse vs LangSmith vs Braintrust vs Phoenix)](comparisons/eval-platforms.md)",
         "- [**Browser agents** (browser-use vs Stagehand vs Playwright MCP vs chrome-devtools-mcp)](comparisons/browser-agents.md)",
+        "- [**Browser infrastructure** (Browserbase vs Steel vs Hyperbrowser)](comparisons/browser-infrastructure.md)",
         "- [**Claude Code skill packs** (superpowers vs GStack vs get-shit-done vs Anthropic Skills)](comparisons/claude-code-skill-packs.md)",
         "- [**Context files for agents** (AGENTS.md vs CLAUDE.md vs skills vs MCP tool search)](comparisons/progressive-disclosure.md)",
         "",
@@ -2423,6 +2440,40 @@ def generate_social_svg() -> str:
     ])
 
 
+def generate_landscape_md() -> str:
+    """landscape.md: a real page around the two charts. The bare SVG file was
+    the #3 landing asset in the Aug 2026 traffic data with no navigation or
+    context around it; this page gives chart visitors the axes explained and
+    somewhere to go next. Regenerated with the charts on every refresh."""
+    total = count_projects()
+    guides = "\n".join(
+        f"- [{c['title']}](comparisons/{c['slug']}.md)" for c in comparisons_index())
+    return f"""# The agent harness landscape, in two charts
+
+Both charts plot every project in [best-of-Agent-Harnesses](README.md), a curated list of {total} agent harnesses: the runtimes that turn an AI model into a working agent. They regenerate from the list data on every weekly refresh, so what you see is current.
+
+## Adoption surface vs. stars
+
+[![The Agent Harness Landscape: all projects plotted by adoption surface area against GitHub stars](assets/landscape.svg)](assets/landscape.svg)
+
+Left to right is the simplicity-to-capability scale: how much you take on by adopting a project, from **super simple** (a file format, nothing to run) to **complex** (a platform with its own runtime and ecosystem). Height is GitHub stars. Colors are categories; the largest projects in each tier are labeled. The practical read: pick the *lowest* tier that solves your job, because every step right is something you will maintain, secure, and eventually migrate off.
+
+## Autonomy vs. recovery
+
+[![Autonomy and Recovery: every loop-owning project placed by designed autonomy and failure-recovery tier](assets/axes-grid.svg)](assets/axes-grid.svg)
+
+Across is autonomy: how unattended each harness is designed to run, from **step-gated** (asks before every action) to **headless** (built for nobody watching). Up is recovery: what survives a dead run, from **none** (start over) to **durable** (execution state persists across restarts). The top-right corner is the short list for anything long-running and unattended; a harness that is headless with no recovery story is an incident generator.
+
+## Where to go next
+
+Start with [How to pick a harness](comparisons/how-to-pick-a-harness.md), or jump into the head-to-head decision guides:
+
+{guides}
+
+Agents can query the same data: the [MCP server](mcp/) (`claude mcp add agent-harnesses -- uvx agent-harnesses-mcp`), [llms.txt](llms.txt), and [harnesses.json](harnesses.json).
+"""
+
+
 def main():
     all_ids = {p.github_id for plist in PROJECTS.values() for p in plist}
     orphans = set(AXES) - all_ids
@@ -2443,6 +2494,7 @@ def main():
     (REPO_ROOT / "assets").mkdir(exist_ok=True)
     (REPO_ROOT / "assets" / "landscape.svg").write_text(generate_landscape_svg())
     (REPO_ROOT / "assets" / "axes-grid.svg").write_text(generate_axes_svg())
+    (REPO_ROOT / "landscape.md").write_text(generate_landscape_md())
     (REPO_ROOT / "assets" / "social-preview.svg").write_text(generate_social_svg())
     refreshed = refresh_comparisons()
     if refreshed:

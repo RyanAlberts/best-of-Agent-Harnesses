@@ -29,7 +29,7 @@
   ],
   "mainEntity": {
     "@type": "ItemList",
-    "numberOfItems": 158,
+    "numberOfItems": 161,
     "itemListElement": [
       {
         "@type": "ListItem",
@@ -1704,6 +1704,30 @@
         "position": 140,
         "item": {
           "@type": "SoftwareApplication",
+          "name": "Opik",
+          "url": "https://github.com/comet-ml/opik",
+          "description": "Comet's open-source agent observability and evaluation platform: tracing, scoring, and experiment comparison with the whole core feature set free to self-host under Apache-2.0.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "evals, python"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 141,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "Arize Phoenix",
+          "url": "https://github.com/Arize-ai/phoenix",
+          "description": "Arize's source-available, local-first tracing and eval layer: run it on your laptop or your own infra, and graduate to the managed Arize AX platform only when you need it.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "evals, python"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 142,
+        "item": {
+          "@type": "SoftwareApplication",
           "name": "DeerFlow",
           "url": "https://github.com/bytedance/deer-flow",
           "description": "ByteDance's long-horizon research **harness**: a LangGraph-based agent loop that researches, codes, and creates using sandboxes, memory, tools, and subagents behind a message gateway—an alternative to the reference gpt-researcher stack for multi-hour tasks.",
@@ -1713,7 +1737,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 141,
+        "position": 143,
         "item": {
           "@type": "SoftwareApplication",
           "name": "gpt-researcher",
@@ -1725,7 +1749,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 142,
+        "position": 144,
         "item": {
           "@type": "SoftwareApplication",
           "name": "AutoResearchClaw",
@@ -1737,7 +1761,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 143,
+        "position": 145,
         "item": {
           "@type": "SoftwareApplication",
           "name": "MiroThinker",
@@ -1749,7 +1773,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 144,
+        "position": 146,
         "item": {
           "@type": "SoftwareApplication",
           "name": "openagents",
@@ -1761,7 +1785,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 145,
+        "position": 147,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Daytona",
@@ -1773,7 +1797,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 146,
+        "position": 148,
         "item": {
           "@type": "SoftwareApplication",
           "name": "LiteLLM",
@@ -1785,7 +1809,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 147,
+        "position": 149,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Composio",
@@ -1797,7 +1821,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 148,
+        "position": 150,
         "item": {
           "@type": "SoftwareApplication",
           "name": "smolagents",
@@ -1809,7 +1833,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 149,
+        "position": 151,
         "item": {
           "@type": "SoftwareApplication",
           "name": "deepagents",
@@ -1821,7 +1845,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 150,
+        "position": 152,
         "item": {
           "@type": "SoftwareApplication",
           "name": "vercel/ai",
@@ -1833,7 +1857,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 151,
+        "position": 153,
         "item": {
           "@type": "SoftwareApplication",
           "name": "pydantic-ai",
@@ -1845,7 +1869,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 152,
+        "position": 154,
         "item": {
           "@type": "SoftwareApplication",
           "name": "E2B",
@@ -1857,7 +1881,19 @@
       },
       {
         "@type": "ListItem",
-        "position": 153,
+        "position": 155,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "Steel",
+          "url": "https://github.com/steel-dev/steel-browser",
+          "description": "Open-source browser API for agents: cloud or self-hosted Chrome sessions with stealth, residential proxies, CAPTCHA solving, and persistent profiles. The only open-source core in the hosted browser-infrastructure lane (Browserbase and Hyperbrowser are closed).",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "memory, browser, local"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 156,
         "item": {
           "@type": "SoftwareApplication",
           "name": "strands-agents",
@@ -1869,7 +1905,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 154,
+        "position": 157,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Cloudflare Agents",
@@ -1881,7 +1917,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 155,
+        "position": 158,
         "item": {
           "@type": "SoftwareApplication",
           "name": "openai-agents-js",
@@ -1893,7 +1929,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 156,
+        "position": 159,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Agent Sandbox",
@@ -1905,7 +1941,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 157,
+        "position": 160,
         "item": {
           "@type": "SoftwareApplication",
           "name": "open-harness",
@@ -1917,7 +1953,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 158,
+        "position": 161,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Community-curated agent lists",

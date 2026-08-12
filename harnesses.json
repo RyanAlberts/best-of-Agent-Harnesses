@@ -9,7 +9,7 @@
     "feed_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/feed.json",
     "license": "CC-BY-SA-4.0",
     "stars_captured": "2026-08-09",
-    "project_count": 158,
+    "project_count": 161,
     "graveyard_count": 3,
     "tiers": [
       "super simple",
@@ -376,7 +376,7 @@
     {
       "kind": "derived",
       "q": "How many of these agent harnesses are open source?",
-      "a": "116 of 158 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
+      "a": "118 of 161 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
       "slug": "how-many-of-these-agent-harnesses-are-open-source"
     },
     {
@@ -414,11 +414,25 @@
       "raw_url": "https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/comparisons/browser-agents.md"
     },
     {
+      "slug": "browser-infrastructure",
+      "title": "Browser infrastructure for agents: Browserbase vs Steel vs Hyperbrowser",
+      "summary": "Agent libraries like browser-use and Stagehand decide what to click; something still has to run the browsers they click in. At small scale that's Chrome on your own machine. At production scale it becomes its own operations problem: hundreds of concurrent sessions, sites that block automation, CAPTC",
+      "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/comparisons/browser-infrastructure.md",
+      "raw_url": "https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/comparisons/browser-infrastructure.md"
+    },
+    {
       "slug": "claude-code-skill-packs",
       "title": "Claude Code skill packs: superpowers vs GStack vs get-shit-done vs Anthropic Skills",
       "summary": "A skill is a folder of instructions (a SKILL.md file, plus any scripts it needs) that a coding agent loads only when the task matches, instead of carrying every instruction all the time. A skill pack is a curated bundle of them: someone else's working habits for your agent, installed as files. Nothi",
       "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/comparisons/claude-code-skill-packs.md",
       "raw_url": "https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/comparisons/claude-code-skill-packs.md"
+    },
+    {
+      "slug": "eval-platforms",
+      "title": "Eval and observability platforms: Langfuse vs LangSmith vs Braintrust vs Phoenix",
+      "summary": "Benchmarks tell you how a model ranks; your production agent still fails in ways no public exam covers. An eval and observability platform is where teams watch what their agent actually did (tracing: recording every step, tool call, and token of a run) and score it continuously (evals: checks that r",
+      "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/comparisons/eval-platforms.md",
+      "raw_url": "https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/comparisons/eval-platforms.md"
     },
     {
       "slug": "how-to-pick-a-harness",
@@ -7257,6 +7271,64 @@
       "deep_dive": null
     },
     {
+      "name": "Opik",
+      "github_id": "comet-ml/opik",
+      "url": "https://github.com/comet-ml/opik",
+      "slug": "opik",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#opik",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/opik/",
+      "description": "Comet's open-source agent observability and evaluation platform: tracing, scoring, and experiment comparison with the whole core feature set free to self-host under Apache-2.0.",
+      "category": "observability",
+      "category_title": "Observability and eval-ops",
+      "stars": 21337,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (tracing + evals platform)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [
+        "evals",
+        "python"
+      ],
+      "example": {
+        "label": "Docs",
+        "url": "https://www.comet.com/docs/opik/"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "Arize Phoenix",
+      "github_id": "Arize-ai/phoenix",
+      "url": "https://github.com/Arize-ai/phoenix",
+      "slug": "phoenix",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#phoenix",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/phoenix/",
+      "description": "Arize's source-available, local-first tracing and eval layer: run it on your laptop or your own infra, and graduate to the managed Arize AX platform only when you need it.",
+      "category": "observability",
+      "category_title": "Observability and eval-ops",
+      "stars": 11019,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (local-first tracing + evals)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "restricted (Elastic-2.0)",
+      "tags": [
+        "evals",
+        "python"
+      ],
+      "example": {
+        "label": "Docs",
+        "url": "https://arize.com/docs/phoenix"
+      },
+      "deep_dive": null
+    },
+    {
       "name": "DeerFlow",
       "github_id": "bytedance/deer-flow",
       "url": "https://github.com/bytedance/deer-flow",
@@ -7696,6 +7768,36 @@
       "example": {
         "label": "Claude Code in sandbox",
         "url": "https://github.com/e2b-dev/e2b-cookbook/tree/main/examples/anthropic-claude-code-in-sandbox-python"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "Steel",
+      "github_id": "steel-dev/steel-browser",
+      "url": "https://github.com/steel-dev/steel-browser",
+      "slug": "steel-browser",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#steel-browser",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/steel-browser/",
+      "description": "Open-source browser API for agents: cloud or self-hosted Chrome sessions with stealth, residential proxies, CAPTCHA solving, and persistent profiles. The only open-source core in the hosted browser-infrastructure lane (Browserbase and Hyperbrowser are closed).",
+      "category": "libraries-sdks",
+      "category_title": "Libraries and SDKs",
+      "stars": 7471,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (browser sessions API, self-hostable)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [
+        "memory",
+        "browser",
+        "local"
+      ],
+      "example": {
+        "label": "Sessions API docs",
+        "url": "https://docs.steel.dev"
       },
       "deep_dive": null
     },

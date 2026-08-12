@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-    <a href="#contents" title="Project Count"><img src="https://img.shields.io/badge/projects-158-blue.svg?color=5ac4bf"></a>
+    <a href="#contents" title="Project Count"><img src="https://img.shields.io/badge/projects-161-blue.svg?color=5ac4bf"></a>
     <a href="#for-agents" title="Agents can query this list — MCP server, llms.txt & JSON"><img src="https://img.shields.io/badge/agents-query%20this%20list-5ac4bf.svg"></a>
     <a href="#contribution" title="Contributions welcome"><img src="https://img.shields.io/badge/contributions-welcome-green.svg"></a>
     <a href="https://github.com/RyanAlberts/best-of-Agent-Harnesses/commits/main" title="Updates"><img src="https://img.shields.io/github/last-commit/RyanAlberts/best-of-Agent-Harnesses?color=green&label=updated"></a>
@@ -39,11 +39,11 @@ That is the problem the [MCP server](#for-agents) in this repo solves. Point you
 
 ## The landscape at a glance
 
-[![The Agent Harness Landscape — all projects plotted by adoption surface area against GitHub stars](assets/landscape.svg)](assets/landscape.svg)
+[![The Agent Harness Landscape — all projects plotted by adoption surface area against GitHub stars](assets/landscape.svg)](landscape.md)
 
 _Every project in the list, plotted by adoption surface area (the [simplicity ↔ capability axis](#guide-to-rankings)) against GitHub stars. Colors are categories; the largest projects in each tier are labeled._
 
-[![Autonomy × Recovery — every loop-owning project placed by designed autonomy regime and failure-recovery tier](assets/axes-grid.svg)](assets/axes-grid.svg)
+[![Autonomy × Recovery — every loop-owning project placed by designed autonomy regime and failure-recovery tier](assets/axes-grid.svg)](landscape.md)
 
 _The same projects placed by how much unsupervised rope they're designed to give (autonomy) and what happens when a run dies (recovery). In the tables below, ★ marks headless-ready projects and ✱ marks durable ones. Both charts regenerate from the list data on every refresh._
 
@@ -58,7 +58,9 @@ _Start with the guide, then the head-to-head decision pages — grounded in the 
 - [**Agent memory layers** — Mem0 vs Letta vs claude-mem](comparisons/memory-layers.md)
 - [**Agent sandboxing**: what it is, the key concepts, and the field (E2B vs Daytona vs Modal and more)](comparisons/sandboxed-code-execution.md)
 - [**Agent evals** (SWE-bench vs inspect_ai vs Terminal-Bench)](comparisons/agent-eval-harnesses.md)
+- [**Eval and observability platforms** (Langfuse vs LangSmith vs Braintrust vs Phoenix)](comparisons/eval-platforms.md)
 - [**Browser agents** (browser-use vs Stagehand vs Playwright MCP vs chrome-devtools-mcp)](comparisons/browser-agents.md)
+- [**Browser infrastructure** (Browserbase vs Steel vs Hyperbrowser)](comparisons/browser-infrastructure.md)
 - [**Claude Code skill packs** (superpowers vs GStack vs get-shit-done vs Anthropic Skills)](comparisons/claude-code-skill-packs.md)
 - [**Context files for agents** (AGENTS.md vs CLAUDE.md vs skills vs MCP tool search)](comparisons/progressive-disclosure.md)
 
@@ -121,9 +123,9 @@ curl -fsSL https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses
 - [Plugins, MCPs, CLI tools](#plugins-mcps-cli-tools) _19 projects_
 - [Memory and state](#memory-and-state) _5 projects_
 - [Evaluation and benchmarking harnesses](#evaluation-and-benchmarking-harnesses) _18 projects_
-- [Observability and eval-ops](#observability-and-eval-ops) _2 projects_
+- [Observability and eval-ops](#observability-and-eval-ops) _4 projects_
 - [Research and task-specific harnesses](#research-and-task-specific-harnesses) _5 projects_
-- [Libraries and SDKs](#libraries-and-sdks) _14 projects_
+- [Libraries and SDKs](#libraries-and-sdks) _15 projects_
 
 ## Guide to rankings
 
@@ -367,6 +369,8 @@ _Tracing, monitoring, and production evaluation for live agent runs: capture eve
 |---|---------|---------|-------------|-------------|-------------------------|----------|
 | 1 | <a name="langfuse"></a>[**Langfuse**](https://github.com/langfuse/langfuse) | [32.8k](https://github.com/langfuse/langfuse/stargazers) | Open-source LLM engineering platform: full-trace observability, online and offline evals, prompt management, and cost metrics for agent runs in production—the monitoring layer most harnesses lack out of the box. <sup>`evals` · `typescript`</sup> | ✅ | slightly complex (tracing + evals platform) | [Docs](https://langfuse.com/docs) |
 | 2 | <a name="mlflow"></a>[**MLflow**](https://github.com/mlflow/mlflow) | [27.4k](https://github.com/mlflow/mlflow/stargazers) | Mature ML platform now covering GenAI: MLflow Tracing captures every agent step, tool call, and token, with built-in LLM evals and prompt versioning—observability for teams already standardized on MLflow. <sup>`evals` · `python`</sup> | ✅ | complex (full ML + GenAI platform) | [Docs](https://mlflow.org) |
+| 3 | <a name="opik"></a>[**Opik**](https://github.com/comet-ml/opik) | [21.3k](https://github.com/comet-ml/opik/stargazers) | Comet's open-source agent observability and evaluation platform: tracing, scoring, and experiment comparison with the whole core feature set free to self-host under Apache-2.0. <sup>`evals` · `python`</sup> | ✅ | slightly complex (tracing + evals platform) | [Docs](https://www.comet.com/docs/opik/) |
+| 4 | <a name="phoenix"></a>[**Arize Phoenix**](https://github.com/Arize-ai/phoenix) | [11k](https://github.com/Arize-ai/phoenix/stargazers) | Arize's source-available, local-first tracing and eval layer: run it on your laptop or your own infra, and graduate to the managed Arize AX platform only when you need it. <sup>`evals` · `python`</sup> | ⚠️ Elastic-2.0 | slightly complex (local-first tracing + evals) | [Docs](https://arize.com/docs/phoenix) |
 
 ## Research and task-specific harnesses
 
@@ -398,12 +402,13 @@ _Lightweight runtimes, tool loops, and provider-agnostic harness primitives._
 | 6 | <a name="ai"></a>[**vercel/ai**](https://github.com/vercel/ai) | [26.1k](https://github.com/vercel/ai/stargazers) | React and Node SDK for streaming, tool calls, and agent-style UIs; provider-agnostic. <sup>`provider-agnostic` · `typescript`</sup> | ✅ | slightly complex (React/Node SDK, provider-agnostic) | [Next.js agent example](https://github.com/vercel/ai/tree/main/examples/next-agent) |
 | 7 | <a name="pydantic-ai"></a>[**pydantic-ai**](https://github.com/pydantic/pydantic-ai)&#8202;✱ | [19.2k](https://github.com/pydantic/pydantic-ai/stargazers) | Type-safe Python agents with Pydantic I/O; multi-provider, MCP, Logfire observability, and human-in-the-loop. <sup>`mcp` · `typed` · `provider-agnostic` · `python`</sup> | ✅ | slightly complex (type-safe, MCP, Logfire) | [Bank support agent](https://github.com/pydantic/pydantic-ai/blob/main/examples/pydantic_ai_examples/bank_support.py) |
 | 8 | <a name="e2b"></a>[**E2B**](https://github.com/e2b-dev/E2B) | [13.3k](https://github.com/e2b-dev/E2B/stargazers) | Firecracker sandboxes for executing agent-generated code; the hosted isolation layer many tool-calling demos use instead of running arbitrary LLM output on your laptop. <sup>`sandbox` · `python`</sup> | ✅ | slightly complex (sandbox API, code execution) | [Claude Code in sandbox](https://github.com/e2b-dev/e2b-cookbook/tree/main/examples/anthropic-claude-code-in-sandbox-python) |
-| 9 | <a name="harness-sdk"></a>[**strands-agents**](https://github.com/strands-agents/harness-sdk) | [6.9k](https://github.com/strands-agents/harness-sdk/stargazers) | Model-driven Python SDK; decorators for tools, native MCP, multi-agent; "minimal code" without sacrificing provider choice. <sup>`mcp` · `multi-agent` · `typed` · `python`</sup> | ✅ | mostly simple (decorators, MCP, minimal code) | [First agent tutorial](https://github.com/strands-agents/samples/tree/main/python/01-learn/01-first-agent) |
-| 10 | <a name="agents-2"></a>[**Cloudflare Agents**](https://github.com/cloudflare/agents)&#8202;★&#8202;✱ | [5.4k](https://github.com/cloudflare/agents/stargazers) | Persistent, stateful agents on Durable Objects: state, websockets, scheduling, and AI chat baked in. The serverless answer to "where does the agent live?" <sup>`memory` · `typescript`</sup> | ✅ | slightly complex (Durable Objects, stateful) | [SDK playground app](https://github.com/cloudflare/agents/tree/main/examples/playground) |
-| 11 | <a name="openai-agents-js"></a>[**openai-agents-js**](https://github.com/openai/openai-agents-js) | [3.6k](https://github.com/openai/openai-agents-js/stargazers) | Official OpenAI Agents SDK for Node/TS: handoffs, guardrails, voice; the JS counterpart to openai-agents-python. <sup>`multi-agent` · `voice` · `typescript`</sup> | ✅ | slightly complex (handoffs, guardrails, voice) | [Financial research agent](https://github.com/openai/openai-agents-js/tree/main/examples/financial-research-agent) |
-| 12 | <a name="agent-sandbox"></a>[**Agent Sandbox**](https://github.com/kubernetes-sigs/agent-sandbox) | [3.5k](https://github.com/kubernetes-sigs/agent-sandbox/stargazers) | Kubernetes-native sandbox primitive for agent runtimes: a Sandbox resource plus warm pools and claims for fast-start, isolated, stateful workloads. The self-hosted answer to hosted sandbox APIs, from the Kubernetes SIGs org. <sup>`memory` · `sandbox` · `local`</sup> | ✅ | slightly complex (Kubernetes resource, warm pools) | [Sandbox resource quickstart](https://github.com/kubernetes-sigs/agent-sandbox#readme) |
-| 13 | <a name="open-harness"></a>[**open-harness**](https://github.com/MaxGfeller/open-harness) | [594](https://github.com/MaxGfeller/open-harness/stargazers) | TypeScript Agent class on Vercel AI SDK; streaming events, filesystem/bash tools, MCP, and subagent delegation. <sup>`mcp` · `multi-agent` · `typescript`</sup> | ✅ | slightly complex (streaming, tools, subagents) | [Terminal CLI agent](https://github.com/MaxGfeller/open-harness/tree/main/examples/cli) |
-| 14 | <a name="awesome-ai-agents"></a>[**Community-curated agent lists**](https://github.com/brandonhimpfen/awesome-ai-agents) | [15](https://github.com/brandonhimpfen/awesome-ai-agents/stargazers) | Broader directories: e.g. [brandonhimpfen/awesome-ai-agents](https://github.com/brandonhimpfen/awesome-ai-agents), [axioma-ai-labs/awesome-ai-agent-frameworks](https://github.com/axioma-ai-labs/awesome-ai-agent-frameworks), [mb-mal/awesome-ai-agents-frameworks](https://github.com/mb-mal/awesome-ai-agents-frameworks)—differ by scope and update cadence. | ❓ | super simple (curated lists) | [Frameworks section](https://github.com/brandonhimpfen/awesome-ai-agents#frameworks) |
+| 9 | <a name="steel-browser"></a>[**Steel**](https://github.com/steel-dev/steel-browser) | [7.5k](https://github.com/steel-dev/steel-browser/stargazers) | Open-source browser API for agents: cloud or self-hosted Chrome sessions with stealth, residential proxies, CAPTCHA solving, and persistent profiles. The only open-source core in the hosted browser-infrastructure lane (Browserbase and Hyperbrowser are closed). <sup>`memory` · `browser` · `local`</sup> | ✅ | slightly complex (browser sessions API, self-hostable) | [Sessions API docs](https://docs.steel.dev) |
+| 10 | <a name="harness-sdk"></a>[**strands-agents**](https://github.com/strands-agents/harness-sdk) | [6.9k](https://github.com/strands-agents/harness-sdk/stargazers) | Model-driven Python SDK; decorators for tools, native MCP, multi-agent; "minimal code" without sacrificing provider choice. <sup>`mcp` · `multi-agent` · `typed` · `python`</sup> | ✅ | mostly simple (decorators, MCP, minimal code) | [First agent tutorial](https://github.com/strands-agents/samples/tree/main/python/01-learn/01-first-agent) |
+| 11 | <a name="agents-2"></a>[**Cloudflare Agents**](https://github.com/cloudflare/agents)&#8202;★&#8202;✱ | [5.4k](https://github.com/cloudflare/agents/stargazers) | Persistent, stateful agents on Durable Objects: state, websockets, scheduling, and AI chat baked in. The serverless answer to "where does the agent live?" <sup>`memory` · `typescript`</sup> | ✅ | slightly complex (Durable Objects, stateful) | [SDK playground app](https://github.com/cloudflare/agents/tree/main/examples/playground) |
+| 12 | <a name="openai-agents-js"></a>[**openai-agents-js**](https://github.com/openai/openai-agents-js) | [3.6k](https://github.com/openai/openai-agents-js/stargazers) | Official OpenAI Agents SDK for Node/TS: handoffs, guardrails, voice; the JS counterpart to openai-agents-python. <sup>`multi-agent` · `voice` · `typescript`</sup> | ✅ | slightly complex (handoffs, guardrails, voice) | [Financial research agent](https://github.com/openai/openai-agents-js/tree/main/examples/financial-research-agent) |
+| 13 | <a name="agent-sandbox"></a>[**Agent Sandbox**](https://github.com/kubernetes-sigs/agent-sandbox) | [3.5k](https://github.com/kubernetes-sigs/agent-sandbox/stargazers) | Kubernetes-native sandbox primitive for agent runtimes: a Sandbox resource plus warm pools and claims for fast-start, isolated, stateful workloads. The self-hosted answer to hosted sandbox APIs, from the Kubernetes SIGs org. <sup>`memory` · `sandbox` · `local`</sup> | ✅ | slightly complex (Kubernetes resource, warm pools) | [Sandbox resource quickstart](https://github.com/kubernetes-sigs/agent-sandbox#readme) |
+| 14 | <a name="open-harness"></a>[**open-harness**](https://github.com/MaxGfeller/open-harness) | [594](https://github.com/MaxGfeller/open-harness/stargazers) | TypeScript Agent class on Vercel AI SDK; streaming events, filesystem/bash tools, MCP, and subagent delegation. <sup>`mcp` · `multi-agent` · `typescript`</sup> | ✅ | slightly complex (streaming, tools, subagents) | [Terminal CLI agent](https://github.com/MaxGfeller/open-harness/tree/main/examples/cli) |
+| 15 | <a name="awesome-ai-agents"></a>[**Community-curated agent lists**](https://github.com/brandonhimpfen/awesome-ai-agents) | [15](https://github.com/brandonhimpfen/awesome-ai-agents/stargazers) | Broader directories: e.g. [brandonhimpfen/awesome-ai-agents](https://github.com/brandonhimpfen/awesome-ai-agents), [axioma-ai-labs/awesome-ai-agent-frameworks](https://github.com/axioma-ai-labs/awesome-ai-agent-frameworks), [mb-mal/awesome-ai-agents-frameworks](https://github.com/mb-mal/awesome-ai-agents-frameworks)—differ by scope and update cadence. | ❓ | super simple (curated lists) | [Frameworks section](https://github.com/brandonhimpfen/awesome-ai-agents#frameworks) |
 
 ## ⚰️ Graveyard
 
@@ -447,7 +452,7 @@ Harnesses whose execution state persists across restarts: langgraph-bigtool, n8n
 
 ### How many of these agent harnesses are open source?
 
-116 of 158 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.
+118 of 161 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.
 
 ### What is an agent harness?
 
