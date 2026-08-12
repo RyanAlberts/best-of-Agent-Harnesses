@@ -353,6 +353,10 @@ projects:
     github_id: browser-use/browser-use
     labels: ["python"]
     category: "frameworks"
+  - name: Stagehand
+    github_id: browserbase/stagehand
+    labels: ["javascript"]
+    category: "frameworks"
   - name: youtu-agent
     github_id: TencentCloudADP/youtu-agent
     category: "frameworks"
@@ -527,6 +531,10 @@ projects:
     github_id: SWE-bench/SWE-bench
     labels: ["python"]
     category: "evaluation"
+  - name: Terminal-Bench
+    github_id: harbor-framework/terminal-bench
+    labels: ["python"]
+    category: "evaluation"
   - name: SWE-Gym
     github_id: SWE-Gym/SWE-Gym
     labels: ["python"]
@@ -630,6 +638,9 @@ projects:
   - name: E2B
     github_id: e2b-dev/E2B
     labels: ["python"]
+    category: "libraries-sdks"
+  - name: Agent Sandbox
+    github_id: kubernetes-sigs/agent-sandbox
     category: "libraries-sdks"
   - name: Daytona
     github_id: daytonaio/daytona

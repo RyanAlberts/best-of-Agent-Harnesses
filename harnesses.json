@@ -9,7 +9,7 @@
     "feed_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/feed.json",
     "license": "CC-BY-SA-4.0",
     "stars_captured": "2026-08-09",
-    "project_count": 154,
+    "project_count": 157,
     "graveyard_count": 3,
     "tiers": [
       "super simple",
@@ -229,6 +229,7 @@
       "intent": "I want browser-using agents",
       "picks": [
         "browser-use/browser-use",
+        "browserbase/stagehand",
         "MinorJerry/WebVoyager",
         "withLinda/puppeteer-real-browser-mcp-server"
       ],
@@ -238,6 +239,7 @@
       "intent": "I want sandboxed code execution for agent-generated code",
       "picks": [
         "e2b-dev/E2B",
+        "kubernetes-sigs/agent-sandbox",
         "daytonaio/daytona",
         "huggingface/smolagents",
         "OpenHands/OpenHands"
@@ -248,10 +250,10 @@
       "intent": "I want to evaluate or benchmark agents",
       "picks": [
         "SWE-bench/SWE-bench",
+        "harbor-framework/terminal-bench",
         "GAIR-NLP/AgencyBench",
         "UKGovernmentBEIS/inspect_ai",
         "web-arena-x/webarena",
-        "arcprize/ARC-AGI-2",
         "meituan-longcat/vitabench"
       ],
       "category_title": "Evaluation and benchmarking harnesses"
@@ -332,19 +334,19 @@
     {
       "kind": "use-case",
       "q": "What is the best agent harness if I want browser-using agents?",
-      "a": "Top picks: browser-use, WebVoyager, puppeteer-real-browser-mcp. See the “Plugins, MCPs, CLI tools” category for the full ranked list.",
+      "a": "Top picks: browser-use, Stagehand, WebVoyager. See the “Plugins, MCPs, CLI tools” category for the full ranked list.",
       "slug": "what-is-the-best-agent-harness-if-i-want-browser-using-agents"
     },
     {
       "kind": "use-case",
       "q": "What is the best agent harness if I want sandboxed code execution for agent-generated code?",
-      "a": "Top picks: E2B, Daytona, smolagents. See the “Libraries and SDKs” category for the full ranked list.",
+      "a": "Top picks: E2B, Agent Sandbox, Daytona. See the “Libraries and SDKs” category for the full ranked list.",
       "slug": "what-is-the-best-agent-harness-if-i-want-sandboxed-code-execution-for-agent-generated-code"
     },
     {
       "kind": "use-case",
       "q": "What is the best agent harness if I want to evaluate or benchmark agents?",
-      "a": "Top picks: SWE-bench, AgencyBench, inspect_ai. See the “Evaluation and benchmarking harnesses” category for the full ranked list.",
+      "a": "Top picks: SWE-bench, Terminal-Bench, AgencyBench. See the “Evaluation and benchmarking harnesses” category for the full ranked list.",
       "slug": "what-is-the-best-agent-harness-if-i-want-to-evaluate-or-benchmark-agents"
     },
     {
@@ -374,7 +376,7 @@
     {
       "kind": "derived",
       "q": "How many of these agent harnesses are open source?",
-      "a": "112 of 154 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
+      "a": "115 of 157 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
       "slug": "how-many-of-these-agent-harnesses-are-open-source"
     },
     {
@@ -399,22 +401,22 @@
   "comparisons": [
     {
       "slug": "agent-eval-harnesses",
-      "title": "Agent eval harnesses: SWE-bench vs inspect_ai vs AgentBench",
-      "summary": "\"Evaluate my agent\" hides two different products. A benchmark is a fixed exam with a leaderboard: SWE-bench and AgentBench tell you where a model or harness ranks against the field, on tasks someone else wrote. An eval framework is tooling for writing your own exam: inspect_ai measures your agent on",
+      "title": "Agent evals: SWE-bench vs inspect_ai vs Terminal-Bench",
+      "summary": "You changed your agent: new model, new prompt, new tools. Did it get better or worse? An eval is how you answer that with a number instead of a feeling. The word covers two different products, and knowing which one you need is most of the decision. A **benchmark** is a fixed public exam with a leade",
       "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/comparisons/agent-eval-harnesses.md",
       "raw_url": "https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/comparisons/agent-eval-harnesses.md"
     },
     {
       "slug": "browser-agents",
-      "title": "Browser agents: browser-use vs Playwright MCP vs chrome-devtools-mcp",
-      "summary": "One of these is an agent and two are tools, and the two tools barely overlap. browser-use owns an agent loop: hand it a goal and it drives the browser. Playwright MCP and chrome-devtools-mcp are MCP servers: the agent you already run keeps the loop and gains browser hands. Even then the servers spli",
+      "title": "Browser agents: browser-use vs Stagehand vs Playwright MCP vs chrome-devtools-mcp",
+      "summary": "\"Browser agent\" covers three different kinds of product, and most bad picks here come from comparing across the lanes instead of within one. **Agent libraries** own the whole job: you hand them a goal in plain language (\"find the cheapest flight, fill the form\") and they decide every click. browser-",
       "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/comparisons/browser-agents.md",
       "raw_url": "https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/comparisons/browser-agents.md"
     },
     {
       "slug": "claude-code-skill-packs",
-      "title": "Claude Code skill packs: superpowers vs GStack vs Anthropic Skills vs addyosmani/agent-skills",
-      "summary": "Skill packs are the cheapest tier on this whole list: folders of markdown the harness loads when relevant, with no runtime, no new agent loop, and switching costs near zero. That is why [How to pick a harness](how-to-pick-a-harness.md) tells you to start at this tier. The four big packs are not four",
+      "title": "Claude Code skill packs: superpowers vs GStack vs get-shit-done vs Anthropic Skills",
+      "summary": "A skill is a folder of instructions (a SKILL.md file, plus any scripts it needs) that a coding agent loads only when the task matches, instead of carrying every instruction all the time. A skill pack is a curated bundle of them: someone else's working habits for your agent, installed as files. Nothi",
       "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/comparisons/claude-code-skill-packs.md",
       "raw_url": "https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/comparisons/claude-code-skill-packs.md"
     },
@@ -448,15 +450,15 @@
     },
     {
       "slug": "progressive-disclosure",
-      "title": "Progressive disclosure: agents.md vs MCP-Zero vs langgraph-bigtool vs context-mode",
-      "summary": "Context bloat enters through three doors: instructions the agent might need, tool schemas it might call, and tool output it already produced. Progressive disclosure is one principle (give the model a map first, details only on demand) applied at each door. These four projects guard different doors, ",
+      "title": "Context files for agents: AGENTS.md vs CLAUDE.md vs skills vs MCP tool search",
+      "summary": "A model has a context window: a fixed amount of text it can consider at once. Everything competes for that space: your instructions, the definitions of every tool the agent could call, and the output of every tool it already called. Context bloat is what happens when the \"might need it\" pile crowds ",
       "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/comparisons/progressive-disclosure.md",
       "raw_url": "https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/comparisons/progressive-disclosure.md"
     },
     {
       "slug": "sandboxed-code-execution",
-      "title": "Sandboxed code execution: E2B vs Daytona vs smolagents",
-      "summary": "\"Run agent-written code somewhere safe\" names two different purchases, and this trio spans both. E2B and Daytona are sandbox infrastructure: they sit below the agent loop and never call a model. smolagents is an agent library whose actions are Python code, and it plugs *into* sandboxes (E2B among th",
+      "title": "Agent sandboxing: what it is and how to pick",
+      "summary": "An AI agent does not just suggest code. It runs code, opens web pages, and edits files on a real computer. Agent sandboxing means making that computer a disposable one, so that when the agent makes a mistake, or a malicious web page talks it into one, the damage lands in a box you can throw away ins",
       "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/comparisons/sandboxed-code-execution.md",
       "raw_url": "https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/comparisons/sandboxed-code-execution.md"
     },
@@ -565,7 +567,7 @@
       "slug": "agentsmd",
       "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#agentsmd",
       "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/agentsmd/",
-      "description": "Open format for repo-scoped agent briefings; v1.1 adds hierarchical scope and progressive disclosure so agents get a map of what exists, then load only what's relevant.",
+      "description": "Open format for repo-scoped agent briefings; nested AGENTS.md files scope instructions per directory, so agents get a map of what exists and load only what's relevant. Read by 20+ tools including Codex, Cursor, and Copilot.",
       "category": "progressive-disclosure",
       "category_title": "Progressive disclosure harnesses",
       "stars": 23528,
@@ -578,6 +580,7 @@
       "recovery_rank": 0,
       "license_signal": "open-source",
       "tags": [
+        "ide",
         "typescript"
       ],
       "example": {
@@ -636,7 +639,7 @@
       "autonomy_rank": 0,
       "recovery": "n/a",
       "recovery_rank": 0,
-      "license_signal": "unknown",
+      "license_signal": "restricted (Elastic-2.0)",
       "tags": [
         "mcp",
         "memory",
@@ -2168,7 +2171,7 @@
       "slug": "superpowers",
       "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#superpowers",
       "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/superpowers/",
-      "description": "Performance-oriented harness pack for Claude Code, Codex, OpenCode, Cursor: skills, instincts, memory, security, research-first workflows. Treats harness engineering itself as the performance lever.",
+      "description": "Performance-oriented harness pack for Claude Code and 13 other harnesses (Codex, Cursor, OpenCode, Gemini CLI, more): skills, instincts, memory, security, research-first workflows. Treats harness engineering itself as the performance lever.",
       "category": "coding-harness-configs",
       "category_title": "Coding harness configs and SDKs",
       "stars": 269582,
@@ -2182,6 +2185,7 @@
       "license_signal": "open-source",
       "tags": [
         "memory",
+        "cli",
         "ide"
       ],
       "example": {
@@ -3964,20 +3968,19 @@
       "slug": "browser-use",
       "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#browser-use",
       "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/browser-use/",
-      "description": "Python layer over Playwright: natural-language goals become browser actions—web-agent loop without hand-rolling MCP or a custom driver for every site.",
+      "description": "Python web-agent **harness**: natural-language goals become browser actions, driven directly over the Chrome DevTools Protocol (it dropped Playwright in August 2025). The biggest community in the browser-agent category.",
       "category": "frameworks",
       "category_title": "Frameworks",
       "stars": 108441,
       "tier": "slightly complex",
       "tier_rank": 3,
-      "axis": "slightly complex (LLM + browser, Playwright)",
+      "axis": "slightly complex (LLM + browser, CDP)",
       "autonomy": "bounded",
       "autonomy_rank": 3,
       "recovery": "retry",
       "recovery_rank": 2,
       "license_signal": "open-source",
       "tags": [
-        "mcp",
         "browser",
         "python"
       ],
@@ -4475,6 +4478,35 @@
           "evidence": "https://docs.letta.com/guides/selfhosting"
         }
       }
+    },
+    {
+      "name": "Stagehand",
+      "github_id": "browserbase/stagehand",
+      "url": "https://github.com/browserbase/stagehand",
+      "slug": "stagehand",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#stagehand",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/stagehand/",
+      "description": "Browserbase's SDK for browser agents: natural-language actions (act, extract, observe) and deterministic Playwright code mix in one script, so agent flexibility and repeatable automation live in the same **harness**.",
+      "category": "frameworks",
+      "category_title": "Frameworks",
+      "stars": 23920,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (NL + code browser SDK)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "none",
+      "recovery_rank": 1,
+      "license_signal": "open-source",
+      "tags": [
+        "browser",
+        "typescript"
+      ],
+      "example": {
+        "label": "Act/extract/observe quickstart",
+        "url": "https://github.com/browserbase/stagehand#readme"
+      },
+      "deep_dive": null
     },
     {
       "name": "rasa",
@@ -6904,6 +6936,36 @@
       "deep_dive": null
     },
     {
+      "name": "Terminal-Bench",
+      "github_id": "harbor-framework/terminal-bench",
+      "url": "https://github.com/harbor-framework/terminal-bench",
+      "slug": "terminal-bench",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#terminal-bench",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/terminal-bench/",
+      "description": "The terminal-task benchmark coding agents now cite next to SWE-bench: hard, containerized terminal tasks scored end to end. Terminal-Bench 2.0 runs on the harbor evaluation framework; the 1.0 tasks live on in the org's terminal-bench-1 repo.",
+      "category": "evaluation",
+      "category_title": "Evaluation and benchmarking harnesses",
+      "stars": 482,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (containerized terminal tasks)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "none",
+      "recovery_rank": 1,
+      "license_signal": "open-source",
+      "tags": [
+        "evals",
+        "cli",
+        "python"
+      ],
+      "example": {
+        "label": "Terminal-Bench leaderboard",
+        "url": "https://www.tbench.ai/leaderboard"
+      },
+      "deep_dive": null
+    },
+    {
       "name": "arc-agi-benchmarking",
       "github_id": "arcprize/arc-agi-benchmarking",
       "url": "https://github.com/arcprize/arc-agi-benchmarking",
@@ -7693,6 +7755,36 @@
       "example": {
         "label": "Financial research agent",
         "url": "https://github.com/openai/openai-agents-js/tree/main/examples/financial-research-agent"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "Agent Sandbox",
+      "github_id": "kubernetes-sigs/agent-sandbox",
+      "url": "https://github.com/kubernetes-sigs/agent-sandbox",
+      "slug": "agent-sandbox",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#agent-sandbox",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/agent-sandbox/",
+      "description": "Kubernetes-native sandbox primitive for agent runtimes: a Sandbox resource plus warm pools and claims for fast-start, isolated, stateful workloads. The self-hosted answer to hosted sandbox APIs, from the Kubernetes SIGs org.",
+      "category": "libraries-sdks",
+      "category_title": "Libraries and SDKs",
+      "stars": 3491,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (Kubernetes resource, warm pools)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [
+        "memory",
+        "sandbox",
+        "local"
+      ],
+      "example": {
+        "label": "Sandbox resource quickstart",
+        "url": "https://github.com/kubernetes-sigs/agent-sandbox#readme"
       },
       "deep_dive": null
     },

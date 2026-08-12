@@ -1,30 +1,37 @@
-# Agent eval harnesses: SWE-bench vs inspect_ai vs AgentBench
+# Agent evals: SWE-bench vs inspect_ai vs Terminal-Bench
 
-"Evaluate my agent" hides two different products. A benchmark is a fixed exam with a leaderboard: SWE-bench and AgentBench tell you where a model or harness ranks against the field, on tasks someone else wrote. An eval framework is tooling for writing your own exam: inspect_ai measures your agent on your tasks. Star counts mislead in this category; these are small repos and load-bearing standards at the same time.
+You changed your agent: new model, new prompt, new tools. Did it get better or worse? An eval is how you answer that with a number instead of a feeling. The word covers two different products, and knowing which one you need is most of the decision. A **benchmark** is a fixed public exam with a leaderboard: it tells you how a model or agent ranks against the field on tasks someone else wrote. An **eval framework** is a test runner for exams you write yourself: it tells you whether your agent works on your tasks. SWE-bench and Terminal-Bench are benchmarks; inspect_ai is a framework.
 
-| | [SWE-bench](https://github.com/SWE-bench/SWE-bench) | [inspect_ai](https://github.com/UKGovernmentBEIS/inspect_ai) | [AgentBench](https://github.com/THUDM/AgentBench) |
+Why it matters: shipping on a public number alone has burned people. OpenAI [stopped reporting SWE-bench Verified results](https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified/) after an audit found flawed test cases in a majority of the problems it sampled, and the loudest threads in this space are about [benchmark exploits](https://news.ycombinator.com/item?id=47733217), not benchmark scores.
+
+| | [SWE-bench](https://github.com/SWE-bench/SWE-bench) | [inspect_ai](https://github.com/UKGovernmentBEIS/inspect_ai) | [Terminal-Bench](https://github.com/harbor-framework/terminal-bench) |
 |---|---|---|---|
-| ⭐ Stars | 5.6k | 2.5k | 3.7k |
-| Shape | Benchmark: real GitHub issues + Docker harness | Eval framework: composable tasks, scorers, sandboxes, multi-model runs | Benchmark: multi-environment suite (OS, DB, knowledge graphs, webshop, AlfWorld) |
-| The question it answers | Can this agent resolve real GitHub issues? | Whatever question you write a task for | How does this LLM perform as a general agent across domains? ([ICLR'24 paper](https://arxiv.org/abs/2308.03688)) |
-| Steward | SWE-bench org | UK AI Security Institute (AISI) | THUDM (Tsinghua) |
-| Maintenance (checked 2026-08-12) | Active | Active | Quiet since February 2026 |
+| ⭐ Stars | 5.6k | 2.5k | 482 |
+| Shape | Benchmark: real GitHub issues, Docker harness | Framework: write tasks, attach scorers, run sandboxed across models | Benchmark: hard terminal tasks in containers |
+| The question it answers | Can this agent fix real reported bugs in real repos? | Whatever question you write a task for | Can this agent do real work in a command-line shell? |
+| Steward | The SWE-bench org (Princeton and Stanford researchers) | UK AI Security Institute, the UK government body that tests frontier models | The harbor-framework org |
+| Maintenance (checked 2026-08-12) | Active | Active | Active |
 | License | MIT | MIT | Apache-2.0 |
-| Autonomy (list axis) | headless | headless | headless |
-| Recovery (list axis) | resumable | resumable | none |
-| Adoption surface (list tier) | slightly complex | complex (product suite) | complex (product suite) |
 
-_Stars as captured for the main list (see [README](../README.md#guide-to-rankings) for the capture date)._
+_Stars as captured for the main list. Star counts mislead here: these are small repos and field standards at the same time, and Terminal-Bench's count understates it (the same org's 1.0 task repo and its harbor runner hold several thousand more). Rating definitions for this site live in the [guide to rankings](../README.md#guide-to-rankings)._
 
 ## Pick by situation
 
-- **You build a coding agent and want a number the field respects** → **SWE-bench**. Real GitHub issues resolved inside a Docker harness; the [Verified leaderboard](https://www.swebench.com/verified.html) is the score every coding-agent launch cites. Its siblings extend the line: [SWE-smith](https://github.com/SWE-bench/SWE-smith) generates training data (50k+ instances across 128 repos), and [SWE-agent](https://github.com/SWE-agent/SWE-agent) is the reference harness built against the benchmark.
-- **You ship an agent product and need to measure it before users do** → **inspect_ai**. The framework behind the UK AISI's evaluations: you write tasks, attach scorers (rule-based or model-graded), and run them sandboxed across models. [inspect_evals](https://github.com/UKGovernmentBEIS/inspect_evals) adds ready-made suites (GAIA and others) when you want standard tasks inside the same tooling.
-- **You research general agent ability across domains** → **AgentBench**. Environments from OS shells to web shops in one Docker Compose suite; the ICLR'24 landmark of the genre. The repo has been quiet since February 2026, so treat it as a reference exam rather than a live target.
+- **You build a coding agent and want a number the field respects** → **SWE-bench**. Real GitHub issues, resolved or not, in a Docker harness. Know the family: [SWE-bench Verified](https://www.swebench.com/verified.html) is the 500-problem human-checked subset every launch cites, and [SWE-bench Pro](https://scale.com/blog/swe-bench-pro) is Scale's harder successor, built partly because the original's tasks have been public long enough to leak into training data.
+- **You ship an agent product and need to know it works before users do** → **inspect_ai**. You define tasks, attach scorers (a scorer marks each attempt: either a scripted check or a second model grading the output, called model-graded), and run them in sandboxes across models. It is the framework behind the UK AISI's own evaluations, and [ready-made suites exist](https://github.com/UKGovernmentBEIS/inspect_evals) so you don't start from zero.
+- **Your agent lives in a terminal** → **Terminal-Bench**. Containerized command-line tasks scored end to end, with a [public leaderboard](https://www.tbench.ai/leaderboard). This is the benchmark people now weigh [directly against SWE-bench](https://www.digitalapplied.com/blog/swe-bench-terminal-bench-benchmark-guide-2026) when the work is broader than fixing GitHub issues.
 
-## Benchmark scores are not your eval
+## A score is the model plus the harness
 
-A leaderboard number tells you how a model plus its harness performed on someone else's tasks at some point in the past. Two cautions follow. Fixed public exams age: their tasks live on the internet models train on, and a quiet benchmark (see the maintenance row) no longer patches what the field learns to exploit. And your product fails in ways no public suite covers. The durable setup is a benchmark for choosing your base model, plus a framework like inspect_ai holding the tasks only you can write. For the gaps between these three, [AgencyBench](https://github.com/GAIR-NLP/AgencyBench) covers long-horizon work (~1M tokens, ~90 tool calls per scenario) and [WebArena](https://github.com/web-arena-x/webarena) covers end-to-end web tasks.
+The same model produces different scores depending on the agent software (the harness) that drives it: one tracking site shows [Claude Opus 4.5 scoring 73.2 to 77.6 on SWE-bench Verified](https://tensorfeed.ai/harnesses/openhands) depending on whether SWE-agent, mini-SWE-agent, or OpenHands runs it. So read every leaderboard number as a stack number, not a model number, and when you compare your own runs, hold the harness constant. [SWE-agent](https://github.com/SWE-agent/SWE-agent) exists exactly for this: the reference harness published next to the benchmark.
+
+## When the number lies
+
+Three failure modes to check before trusting any benchmark score. **Aging**: public tasks end up in training data, so old exams flatter new models. **Broken tests**: OpenAI's audit found the majority of sampled SWE-bench Verified problems could be "solved" for the wrong reasons. **Gaming**: a [588-point Hacker News study](https://news.ycombinator.com/item?id=47733217) showed the major agent benchmarks can be exploited outright. This is also where AgentBench belongs now: the [ICLR 2024](https://arxiv.org/abs/2308.03688) benchmark (ICLR is a major machine-learning conference) that first scored LLMs as agents across eight environments, from OS shells to web shops. Its [leaderboard has run cold since 2025](https://benchmarkingagents.com/agentbench/), so treat it as the field's history, not a live target. For gaps these three don't cover, [AgencyBench](https://github.com/GAIR-NLP/AgencyBench) tests long tasks (about a million tokens and ninety tool calls per scenario) and [WebArena](https://github.com/web-arena-x/webarena) tests end-to-end web work.
+
+## The adjacent purchase
+
+Everything on this page is open source. The place money changes hands in evals is one layer up: hosted platforms that trace what your agent did in production and score it continuously. That decision (Langfuse vs LangSmith vs Braintrust vs Arize) is [the most-compared pairing in the whole space](https://www.marktechpost.com/2026/08/09/top-llm-observability-and-evaluation-platforms-in-2026-langfuse-langsmith-braintrust-arize-and-more-compared/); this list covers the open-source pieces of it, [Langfuse and MLflow](../README.md#observability-and-eval-ops), in the observability category.
 
 ---
 
