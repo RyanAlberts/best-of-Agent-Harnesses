@@ -42,6 +42,9 @@ jobs:
         run: |
           set -euo pipefail
           python3 scripts/refresh_stars.py | tee /tmp/refresh.log
+          # contributors refresh keeps the intro's "Meet the N" roster live,
+          # so the count can never go stale between hand edits.
+          python3 scripts/refresh_contributors.py | tee -a /tmp/refresh.log
           # discover runs BEFORE generate so the README/site radar section
           # hydrates from this week's queue, not last week's.
           python3 scripts/discover_candidates.py

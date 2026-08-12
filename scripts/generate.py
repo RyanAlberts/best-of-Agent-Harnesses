@@ -876,15 +876,56 @@ INTEGRITY_FLAGGED: "dict[str, tuple[str, str]]" = {
 # thank-you block at the top of the README. Add a tuple when a submission
 # lands (as a listing or a radar pin); this is deliberately hand-curated
 # because co-authored commits don't show up in GitHub's contributors API.
-CONTRIBUTORS: "list[tuple[str, str]]" = [
-    ("oldschoola", "oh-my-pi"),
-    ("madarco", "AgentBox"),
-    ("pranshuchittora", "agent-qa"),
-    ("claudiusthebot", "Talon"),
-    ("liviux", "LoopTroop"),
-    ("rishabhpoddar", "TeamCopilot, on the radar"),
-    ("ShukantPal", "Proliferate"),
-]
+# Thank-you roster. Hydrates from contributors.json, which is rewritten from
+# the live GitHub issues/PRs API by scripts/refresh_contributors.py (run weekly
+# by the weekly-rescore Action), so the "Meet the N" count in the intro can
+# never go stale again. Editorial control stays here: CONTRIB_NOTES overrides
+# the displayed label for a login, CONTRIB_EXCLUDE hides promo-only authors,
+# and everyone else gets a label derived from their first issue/PR titles.
+CONTRIB_NOTES: dict = {
+    "oldschoola": "oh-my-pi",
+    "madarco": "AgentBox",
+    "pranshuchittora": "agent-qa",
+    "claudiusthebot": "Talon",
+    "liviux": "LoopTroop",
+    "rishabhpoddar": "TeamCopilot, on the radar",
+    "ShukantPal": "Proliferate",
+}
+CONTRIB_EXCLUDE = {"mseep-ai"}  # promo-only (badge PR)
+
+
+def _contrib_label(c: dict) -> str:
+    t = c["title"]
+    for prefix in ("Add project: ", "Update project: ", "feat: add ", "Add "):
+        if t.startswith(prefix):
+            t = t[len(prefix):]
+            break
+    t = t.split(" — ")[0].split(": ")[0].split(" to ")[0].strip().rstrip(".")
+    # Issue/PR titles are untrusted input rendered into README markdown:
+    # strip anything markdown- or HTML-active so a crafted title can't inject
+    # links, images, or tags into the generated page.
+    t = re.sub(r"[\[\]()<>`|!#*_~\\\n\r]", "", t).strip()
+    if not t or len(t) > 40:
+        return f"{'PR' if c['kind'] == 'pr' else 'issue'} #{c['number']}"
+    return t
+
+
+def load_contributors() -> "list[tuple[str, str]]":
+    import json
+    f = REPO_ROOT / "contributors.json"
+    if not f.exists():  # fresh checkout before the first refresh run
+        return sorted(CONTRIB_NOTES.items())
+    out = []
+    for p in json.loads(f.read_text()):
+        if p["login"] in CONTRIB_EXCLUDE:
+            continue
+        label = CONTRIB_NOTES.get(p["login"]) or ", ".join(
+            dict.fromkeys(_contrib_label(c) for c in p["contributions"]))
+        out.append((p["login"], label))
+    return out
+
+
+CONTRIBUTORS: "list[tuple[str, str]]" = load_contributors()
 
 # ---------------------------------------------------------------------------
 # On the radar — up-and-coming candidates surfaced publicly before they clear
@@ -1525,13 +1566,13 @@ def generate_readme() -> str:
         "",
         "## What is an agent harness?",
         "",
-        "A model answers; an agent acts. An agent harness is the runtime that turns one into the other — the model thinks; the harness decides what that thinking is allowed to touch.",
+        "A model answers; an agent acts. An agent harness is the runtime that turns one into the other: the model thinks, the harness decides what that thinking is allowed to touch.",
         "",
-        "Every prior wave of automation was constrained by brittleness: you scripted exact behavior, and when the world deviated, the system broke. Foundation models inverted that problem—they're flexible but directionless, stateless, and disconnected from anything real. The agent harness exists to bridge that gap: it is the orchestration infrastructure that converts a model's per-turn reasoning into sustained, tool-using, error-recovering, goal-directed behavior across time. Architecturally, it plays the role the kernel played in operating systems or the controller played in industrial robotics—mediating between raw capability and a messy environment—but with a critical difference: the \"capability\" it governs is general-purpose cognition, which means the harness is simultaneously a scheduler, a permission system, a memory manager, and a policy enforcement layer, all under-specified and evolving in real time.",
+        "[Simon Willison's definition](https://simonwillison.net/2025/Sep/18/agents/) of the agent itself is the cleanest: \"an LLM agent runs tools in a loop to achieve a goal.\" The harness is everything around that loop: which tools exist, what needs approval, what the model sees each turn, what survives a crash. [Andrej Karpathy](https://x.com/karpathy/status/1707437820045062561) named the architecture back in 2023: the model is \"the kernel process of a new Operating System\", and the harness is the rest of that OS, its scheduler, permissions, and memory. The [SWE-agent paper](https://arxiv.org/abs/2405.15793) proved the stakes by coining the *agent-computer interface*: how tools and feedback are presented changes what a model can do, independent of the model. The field's advice has since converged on investing here rather than in framework plumbing, from [Anthropic's build-simple guidance](https://www.anthropic.com/engineering/building-effective-agents) to Jerry Liu's argument that [the framework era is over](https://venturebeat.com/infrastructure/the-ai-scaffolding-layer-is-collapsing-llamaindexs-ceo-explains-what-survives) and the layers that matter now are skills, tools, and context quality. Those are the layers this list catalogs.",
         "",
         "## Why harnesses matter",
         "",
-        "Better models make harnesses more important: more capabilities mean more failure modes, and production needs retry logic, fallbacks, and validation. Harness quality—not just model quality—determines whether agents actually ship. This list ranks projects by relevance to harness concerns (environment, orchestration, lifecycle, guardrails) and by stars/activity.",
+        "Better models make harnesses more important: more capabilities mean more failure modes, and production needs retry logic, fallbacks, and validation. Harness quality, not just model quality, determines whether agents actually ship. This list ranks projects by relevance to harness concerns (environment, orchestration, lifecycle, guardrails) and by stars/activity.",
         "",
         "The benchmark data now backs this up. On SWE-bench Pro, \"swapping the agent harness changed pass@1 more than many model upgrades do\" ([AINews, Aug 8 2026](https://www.latent.space/p/ainews-zawinskis-law-of-multiagents), citing analysis by [@joelniklaus](https://x.com/joelniklaus/status/2085725862142623875)). Same model, different harness: 23% to 52% pass@1 on GLM-5.2, and 15% to 36% on Gemma 4 26B. Harness rankings barely transfer across models (rank correlation -0.05), so a small model in the right harness can approach a much larger model in the wrong one.",
         "",
@@ -1759,9 +1800,9 @@ def generate_header_md() -> str:
         "\n"
         "## What is an agent harness?\n"
         "\n"
-        "A model answers; an agent acts. An agent harness is the runtime that turns one into the other — the model thinks; the harness decides what that thinking is allowed to touch.\n"
+        "A model answers; an agent acts. An agent harness is the runtime that turns one into the other: the model thinks, the harness decides what that thinking is allowed to touch.\n"
         "\n"
-        "Every prior wave of automation was constrained by brittleness: you scripted exact behavior, and when the world deviated, the system broke. Foundation models inverted that problem—they're flexible but directionless, stateless, and disconnected from anything real. The agent harness exists to bridge that gap: it is the orchestration infrastructure that converts a model's per-turn reasoning into sustained, tool-using, error-recovering, goal-directed behavior across time. Architecturally, it plays the role the kernel played in operating systems or the controller played in industrial robotics—mediating between raw capability and a messy environment—but with a critical difference: the \"capability\" it governs is general-purpose cognition, which means the harness is simultaneously a scheduler, a permission system, a memory manager, and a policy enforcement layer, all under-specified and evolving in real time.\n"
+        "Simon Willison's definition of the agent itself is the cleanest: \"an LLM agent runs tools in a loop to achieve a goal\" (simonwillison.net). The harness is everything around that loop: which tools exist, what needs approval, what the model sees each turn, what survives a crash. Andrej Karpathy named the architecture back in 2023: the model is \"the kernel process of a new Operating System\", and the harness is the rest of that OS, its scheduler, permissions, and memory. The SWE-agent paper (arXiv:2405.15793) proved the stakes by coining the agent-computer interface: how tools and feedback are presented changes what a model can do, independent of the model. The field's advice has since converged on investing here rather than in framework plumbing, from Anthropic's build-simple guidance to Jerry Liu's argument that the framework era is over and the layers that matter now are skills, tools, and context quality. Those are the layers this list catalogs.\n"
         "\n"
         "If you want to add or update projects, open an [issue](https://github.com/RyanAlberts/best-of-Agent-Harnesses/issues), submit a [pull request](https://github.com/RyanAlberts/best-of-Agent-Harnesses/pulls), or edit [projects.yaml](https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/projects.yaml). Contributions are welcome!\n"
     )

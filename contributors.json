@@ -1,0 +1,267 @@
+[
+  {
+    "login": "baskduf",
+    "contributions": [
+      {
+        "kind": "pr",
+        "number": 11,
+        "title": "Add harness-starter-kit"
+      }
+    ]
+  },
+  {
+    "login": "ahwurm",
+    "contributions": [
+      {
+        "kind": "pr",
+        "number": 16,
+        "title": "Add project: LocalHarness"
+      }
+    ]
+  },
+  {
+    "login": "liviux",
+    "contributions": [
+      {
+        "kind": "pr",
+        "number": 20,
+        "title": "Add project: LoopTroop"
+      }
+    ]
+  },
+  {
+    "login": "rishabhpoddar",
+    "contributions": [
+      {
+        "kind": "pr",
+        "number": 21,
+        "title": "Add project: TeamCopilot"
+      }
+    ]
+  },
+  {
+    "login": "oldschoola",
+    "contributions": [
+      {
+        "kind": "pr",
+        "number": 27,
+        "title": "Add project: oh-my-pi"
+      }
+    ]
+  },
+  {
+    "login": "pranshuchittora",
+    "contributions": [
+      {
+        "kind": "pr",
+        "number": 29,
+        "title": "Add project: agent-qa"
+      }
+    ]
+  },
+  {
+    "login": "mseep-ai",
+    "contributions": [
+      {
+        "kind": "pr",
+        "number": 32,
+        "title": "Add MseeP.ai badge"
+      }
+    ]
+  },
+  {
+    "login": "claudiusthebot",
+    "contributions": [
+      {
+        "kind": "pr",
+        "number": 38,
+        "title": "Add Talon"
+      }
+    ]
+  },
+  {
+    "login": "madarco",
+    "contributions": [
+      {
+        "kind": "pr",
+        "number": 39,
+        "title": "Add AgentBox to projects.yaml (coding-agent-products)"
+      }
+    ]
+  },
+  {
+    "login": "jmthomasofficial",
+    "contributions": [
+      {
+        "kind": "pr",
+        "number": 40,
+        "title": "feat: add JMT x402 Agent Tools"
+      }
+    ]
+  },
+  {
+    "login": "ShukantPal",
+    "contributions": [
+      {
+        "kind": "pr",
+        "number": 41,
+        "title": "Add Proliferate"
+      }
+    ]
+  },
+  {
+    "login": "hjqcan",
+    "contributions": [
+      {
+        "kind": "issue",
+        "number": 44,
+        "title": "Add project: GoodMemory"
+      }
+    ]
+  },
+  {
+    "login": "777genius",
+    "contributions": [
+      {
+        "kind": "issue",
+        "number": 45,
+        "title": "Add project: Agent Teams AI"
+      }
+    ]
+  },
+  {
+    "login": "S1LV3RJ1NX",
+    "contributions": [
+      {
+        "kind": "issue",
+        "number": 46,
+        "title": "Add project: mcp-guardian"
+      }
+    ]
+  },
+  {
+    "login": "AmariahAK",
+    "contributions": [
+      {
+        "kind": "issue",
+        "number": 48,
+        "title": "Atlarix — the open-weight frontier harness"
+      }
+    ]
+  },
+  {
+    "login": "hardness1020",
+    "contributions": [
+      {
+        "kind": "issue",
+        "number": 49,
+        "title": "Add project: awesome-agent-architecture"
+      }
+    ]
+  },
+  {
+    "login": "razzant",
+    "contributions": [
+      {
+        "kind": "issue",
+        "number": 55,
+        "title": "Add project: Claudexor"
+      },
+      {
+        "kind": "issue",
+        "number": 65,
+        "title": "Add project: Ouroboros"
+      }
+    ]
+  },
+  {
+    "login": "allenshi16",
+    "contributions": [
+      {
+        "kind": "issue",
+        "number": 56,
+        "title": "Add Nexus AI Pulse: Daily AI news, in-depth analysis, and expert commentary on artificial intelligen"
+      },
+      {
+        "kind": "issue",
+        "number": 57,
+        "title": "Add HomeOffice AI: AI-powered productivity tools and resources for remote work. Guides on using AI "
+      }
+    ]
+  },
+  {
+    "login": "ryanpettry",
+    "contributions": [
+      {
+        "kind": "issue",
+        "number": 58,
+        "title": "Add project: fractal"
+      }
+    ]
+  },
+  {
+    "login": "reacher-z",
+    "contributions": [
+      {
+        "kind": "pr",
+        "number": 60,
+        "title": "Add ClawBench evaluation harness"
+      }
+    ]
+  },
+  {
+    "login": "HelpMatey",
+    "contributions": [
+      {
+        "kind": "pr",
+        "number": 61,
+        "title": "Pin mcp<2 to retain pre-2.0 fastmcp import path"
+      }
+    ]
+  },
+  {
+    "login": "rxdt",
+    "contributions": [
+      {
+        "kind": "pr",
+        "number": 69,
+        "title": "Add L∞pGate"
+      }
+    ]
+  },
+  {
+    "login": "msaleme",
+    "contributions": [
+      {
+        "kind": "issue",
+        "number": 72,
+        "title": "Add project: red-team-blue-team-agent-fabric"
+      }
+    ]
+  },
+  {
+    "login": "JackChen-me",
+    "contributions": [
+      {
+        "kind": "issue",
+        "number": 74,
+        "title": "Update project: Open Multi-Agent"
+      }
+    ]
+  },
+  {
+    "login": "Q00",
+    "contributions": [
+      {
+        "kind": "issue",
+        "number": 75,
+        "title": "Add project: Ouroboros"
+      },
+      {
+        "kind": "issue",
+        "number": 76,
+        "title": "Add project: Ouroboros"
+      }
+    ]
+  }
+]

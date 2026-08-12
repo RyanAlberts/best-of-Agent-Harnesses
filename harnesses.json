@@ -444,7 +444,7 @@
     {
       "slug": "openclaw-vs-hermes",
       "title": "OpenClaw vs Hermes: the always-on personal-agent debate",
-      "summary": "The loudest harness argument of 2026. Both are open-source (MIT), self-hosted, always-on personal agents you talk to from chat apps — and they're two of the most-starred projects on this entire list. The flame war treats them as rivals; the architecture says they're opposite design philosophies that",
+      "summary": "An always-on personal agent is a program that runs all day on your own machine, talks to you through the chat apps you already use (WhatsApp, Telegram, Slack, Discord), and keeps acting between your messages: watching inboxes, running scheduled jobs, remembering what you told it last month. OpenClaw",
       "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/comparisons/openclaw-vs-hermes.md",
       "raw_url": "https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/comparisons/openclaw-vs-hermes.md"
     },
