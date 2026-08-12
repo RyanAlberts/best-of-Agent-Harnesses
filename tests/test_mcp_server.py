@@ -198,3 +198,58 @@ def test_compare_real_data(server):
     assert len(out["projects"]) == 2
     assert out["see_also"]["slug"] == "openclaw-vs-hermes"
     assert out["edges"]["most_stars"]
+
+
+def test_pick_infrastructure_curated_and_level(server):
+    server._data = DATA
+    out = json.loads(server.pick_infrastructure(
+        "an always-on personal agent runtime", include_live_search=False))
+    assert out["level"]["id"] == "harness"
+    assert out["level"]["how"] == "inferred"
+    assert out["curated_picks"], "curated picks must come from the list"
+    assert out["live_discovery"]["status"] == "skipped"
+
+
+def test_pick_infrastructure_unknown_level_errors(server):
+    server._data = DATA
+    out = json.loads(server.pick_infrastructure("anything", level="nonsense"))
+    assert "error" in out
+    assert "sandboxing" in out["levels"]
+
+
+def test_pick_infrastructure_live_dedups_and_labels(server, monkeypatch):
+    server._data = DATA
+
+    def fake_http(url, timeout=8):
+        if "api.github.com" in url:
+            return {"items": [
+                {"full_name": "alpha/alphaclaw", "html_url": "u", "stargazers_count": 1,
+                 "license": None, "pushed_at": "2026-08-01T00:00:00Z",
+                 "description": "already listed"},
+                {"full_name": "new/shiny", "html_url": "https://github.com/new/shiny",
+                 "stargazers_count": 321, "license": {"spdx_id": "MIT"},
+                 "pushed_at": "2026-08-01T00:00:00Z", "description": "brand new sandbox"},
+            ]}
+        return {"hits": [{"title": "Shiny sandbox launches", "points": 99,
+                          "created_at": "2026-08-01T12:00:00Z", "objectID": "1"}]}
+
+    monkeypatch.setattr(server, "_http_json", fake_http)
+    out = json.loads(server.pick_infrastructure("sandboxed code execution"))
+    assert out["level"]["id"] == "sandboxing"
+    gids = [r["github_id"] for r in out["live_discovery"]["github_new"]]
+    assert "alpha/alphaclaw" not in gids and "new/shiny" in gids
+    assert all(r["status"] == "unvetted" for r in out["live_discovery"]["github_new"])
+    assert out["live_discovery"]["community_signals"][0]["points"] == 99
+
+
+def test_pick_infrastructure_degrades_offline(server, monkeypatch):
+    server._data = DATA
+
+    def boom(url, timeout=8):
+        raise OSError("offline")
+
+    monkeypatch.setattr(server, "_http_json", boom)
+    out = json.loads(server.pick_infrastructure("agent memory layer"))
+    assert out["live_discovery"]["status"] == "unavailable"
+    assert out["live_discovery"]["github_error"].startswith("OSError")
+    assert "curated_picks" in out

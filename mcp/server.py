@@ -7,6 +7,7 @@
 
 Serves the curated list (harnesses.json) as tools so agents can recommend
 agent harnesses: recommend, compare, compare_for, pick_harness,
+pick_infrastructure (curated picks plus live GitHub/Hacker News discovery),
 search_harnesses, get_harness, list_categories.
 
 Run directly from GitHub (no clone needed):
@@ -385,6 +386,223 @@ def compare_for(use_case: str, limit: int = 3, open_source_only: bool = False) -
     payload = dict({"use_case": use_case}, **payload)
     payload["why_picked"] = {p["name"]: reason for _, p, reason in top}
     return json.dumps(payload, indent=2, ensure_ascii=False)
+
+
+# ---------------------------------------------------------------------------
+# pick_infrastructure: full-stack picks, curated list first, live web second
+# ---------------------------------------------------------------------------
+
+STACK_LEVELS: list = [
+    {"id": "model-access", "title": "Model access and routing", "live_terms": "llm gateway router",
+     "hints": "provider providers routing router gateway litellm inference endpoint openrouter pipe multi-provider"},
+    {"id": "harness", "title": "Agent harnesses and runtimes", "live_terms": "agent harness",
+     "hints": "harness harnesses coding terminal cli ide assistant runtime always-on personal copilot"},
+    {"id": "orchestration", "title": "Multi-agent orchestration", "live_terms": "multi-agent orchestration",
+     "hints": "orchestration orchestrate multi-agent crew swarm handoff handoffs pipeline coordinate team workers"},
+    {"id": "sandboxing", "title": "Sandboxed code execution", "live_terms": "agent sandbox",
+     "hints": "sandbox sandboxed sandboxing isolation isolated microvm firecracker gvisor execute execution interpreter container safe safely untrusted disposable"},
+    {"id": "browser", "title": "Browser agents and infrastructure", "live_terms": "browser agent",
+     "hints": "browser browsers web scrape scraping crawl crawling playwright puppeteer chrome headless stealth captcha"},
+    {"id": "memory", "title": "Memory and state", "live_terms": "agent memory",
+     "hints": "memory memories remember recall knowledge persistent stateful session sessions forget"},
+    {"id": "context", "title": "Context management", "live_terms": "agent context engineering",
+     "hints": "context window tokens bloat compaction disclosure instructions briefing claude.md agents.md skill.md"},
+    {"id": "tools", "title": "Tools and MCP servers", "live_terms": "mcp server",
+     "hints": "mcp tool tools server servers integration integrations connector connectors plugin registry"},
+    {"id": "evals", "title": "Evals and benchmarks", "live_terms": "agent benchmark eval",
+     "hints": "eval evals evaluate evaluation benchmark benchmarks score scoring regression grader graded suite"},
+    {"id": "observability", "title": "Observability and eval platforms", "live_terms": "llm observability tracing",
+     "hints": "observability tracing traces trace monitor monitoring telemetry logging dashboards production"},
+    {"id": "security", "title": "Security and governance", "live_terms": "agent security guardrails",
+     "hints": "security secure credentials secrets vault governance policy permission permissions guardrail guardrails trust"},
+    {"id": "skills", "title": "Skills and configuration packs", "live_terms": "agent skills",
+     "hints": "skill skills slash commands pack packs config configs subagent subagents prompts"},
+]
+
+
+def _infer_level(need: str):
+    """Best-overlap stack level for a need. Returns (level|None, runner_up_ids)."""
+    q = _tokens(need)
+    scored = sorted(((len(_overlap(q, _tokens(lv["hints"]))), lv) for lv in STACK_LEVELS),
+                    key=lambda t: -t[0])
+    top_n, top_lv = scored[0]
+    if top_n == 0:
+        return None, []
+    runners = [lv["id"] for n, lv in scored[1:3] if n == top_n]
+    return top_lv, runners
+
+
+def _http_json(url: str, timeout: int = 8) -> dict:
+    """GET a JSON API. GH_TOKEN/GITHUB_TOKEN (optional) raises the GitHub
+    rate limit; no other credentials are ever read or sent."""
+    import os
+    req = urllib.request.Request(url, headers={
+        "Accept": "application/vnd.github+json",
+        "User-Agent": "agent-harnesses-mcp"})
+    token = os.environ.get("GH_TOKEN") or os.environ.get("GITHUB_TOKEN")
+    if token and url.startswith("https://api.github.com/"):
+        req.add_header("Authorization", f"Bearer {token}")
+    with urllib.request.urlopen(req, timeout=timeout) as r:
+        return json.loads(r.read().decode())
+
+
+def _live_github(query: str, known: set, limit: int = 5) -> list:
+    """Fresh, unvetted repos for the query: pushed in the last 18 months,
+    star-ranked, minus anything already on the list or in the graveyard."""
+    import urllib.parse
+    from datetime import date, timedelta
+    since = (date.today() - timedelta(days=548)).isoformat()
+    q = urllib.parse.quote_plus(f"{query} pushed:>{since}")
+    items = _http_json("https://api.github.com/search/repositories?"
+                       f"q={q}&sort=stars&order=desc&per_page=20").get("items", [])
+    out = []
+    for it in items:
+        gid = it.get("full_name") or ""
+        if not gid or gid.lower() in known:
+            continue
+        out.append({
+            "github_id": gid,
+            "url": it.get("html_url"),
+            "stars": it.get("stargazers_count", 0),
+            "license": (it.get("license") or {}).get("spdx_id"),
+            "last_push": (it.get("pushed_at") or "")[:10],
+            "description": (it.get("description") or "")[:200],
+            "status": "unvetted",
+        })
+        if len(out) >= limit:
+            break
+    return out
+
+
+def _live_hn(query: str, limit: int = 5) -> list:
+    """Recent high-signal Hacker News stories for the query (last 120 days,
+    20+ points): capability news the curated list may not carry yet."""
+    import time
+    import urllib.parse
+    since = int(time.time()) - 120 * 86400
+    hits = _http_json("https://hn.algolia.com/api/v1/search?"
+                      f"query={urllib.parse.quote_plus(query)}&tags=story"
+                      f"&numericFilters=created_at_i%3E{since},points%3E20").get("hits", [])
+    return [{
+        "title": h.get("title"),
+        "points": h.get("points"),
+        "date": (h.get("created_at") or "")[:10],
+        "url": h.get("url") or f"https://news.ycombinator.com/item?id={h.get('objectID')}",
+    } for h in hits[:limit]]
+
+
+@mcp.tool()
+def pick_infrastructure(need: str, level: str = "", include_live_search: bool = True,
+                        open_source_only: bool = False, limit: int = 5) -> str:
+    """Pick agent infrastructure at any level of the stack: curated list first,
+    live web discovery second, so the answer is never limited to the list.
+
+    Where pick_harness ranks only the curated list, this tool adds a live
+    discovery pass for capabilities newer than the list: a GitHub repository
+    search (recently pushed, star-ranked, already-listed and graveyard repos
+    removed) and a Hacker News search (recent stories, 20+ points). Live
+    results are labeled "unvetted": they have NOT passed the list's curation
+    bar, so treat them as leads to evaluate, not recommendations.
+
+    need: plain language, e.g. "somewhere safe to run agent-written code",
+    "trace and score my agent in production", "hosted browsers for a scraping
+    agent", "stop tool schemas from eating my context window".
+    level: optional stack level; inferred from the need when omitted. One of:
+    model-access, harness, orchestration, sandboxing, browser, memory,
+    context, tools, evals, observability, security, skills.
+    include_live_search: set False for a fully offline, curated-only answer.
+    Live search sends only the need text to api.github.com and hn.algolia.com;
+    an optional GH_TOKEN/GITHUB_TOKEN env var raises the GitHub rate limit.
+    Returns JSON: {need, level, curated_picks, avoid, decision_guides,
+    live_discovery, source, stars_captured}. Degrades gracefully: when live
+    search is off or unreachable, curated results still return and
+    live_discovery.status says why.
+    """
+    d = data()
+    q = _tokens(need)
+
+    if level:
+        lv = next((x for x in STACK_LEVELS if x["id"] == level.strip().lower()), None)
+        if lv is None:
+            return json.dumps({"error": f"unknown level: {level}",
+                               "levels": [x["id"] for x in STACK_LEVELS]})
+        level_info = {"id": lv["id"], "title": lv["title"], "how": "specified"}
+    else:
+        lv, runners = _infer_level(need)
+        level_info = ({"id": lv["id"], "title": lv["title"], "how": "inferred"}
+                      if lv else {"id": None, "title": None, "how": "no confident level match"})
+        if lv and runners:
+            level_info["also_considered"] = runners
+
+    # Rank against the need enriched with the level's vocabulary, so "somewhere
+    # safe to run agent-written code" finds the sandboxing entries even though
+    # the words don't overlap the descriptions directly.
+    ranking_query = f"{need} {lv['hints']}" if lv else need
+    scored = _ranked(d, ranking_query, open_source_only=open_source_only)
+    picks = [_brief(p, reason) for _, p, reason in scored[:limit]]
+
+    # Graveyard names matching the need: the trap picks a raw search would
+    # return. Generic short tokens ("code") are not enough on their own —
+    # require either two overlapping tokens or one distinctive (6+ char) one.
+    avoid = []
+    for g in d.get("graveyard", []):
+        hay = _tokens(f"{g.get('name', '')} {g.get('github_id', '')}".replace("-", " ").replace("/", " "))
+        hits = _overlap(q, hay)
+        if len(hits) >= 2 or any(len(h) >= 6 for h in hits):
+            avoid.append({"name": g.get("name"), "github_id": g.get("github_id"),
+                          "stars": g.get("last_stars"),
+                          "reason": g.get("reason", "in the graveyard — not recommended")})
+    avoid.sort(key=lambda g: g.get("stars") or 0, reverse=True)
+
+    guide_q = _tokens(f"{need} {lv['title'] if lv else ''}")
+
+    def _guide_hits(c: dict) -> int:
+        # Slug tokens are the guide's own topic keywords — weigh them double so
+        # "sandboxed-code-execution" beats a guide that merely mentions code.
+        slug_hits = _overlap(guide_q, _tokens(c["slug"].replace("-", " ")))
+        text_hits = _overlap(guide_q, _tokens(f"{c['title']} {c.get('summary', '')}"))
+        return 2 * len(slug_hits) + len(text_hits)
+
+    guides = sorted(d.get("comparisons", []), key=lambda c: -_guide_hits(c))
+    decision_guides = [{"slug": c["slug"], "title": c["title"],
+                        "how": "fetch full text with get_comparison(slug)"}
+                       for c in guides[:2] if _guide_hits(c)]
+
+    if not include_live_search:
+        live = {"status": "skipped", "note": "include_live_search=False"}
+    else:
+        known = {p["github_id"].lower() for p in d["projects"]}
+        known |= {g.get("github_id", "").lower() for g in d.get("graveyard", [])}
+        # GitHub search ANDs every word, so prose queries return nothing.
+        # Use the level's short search terms; fall back to the need's first
+        # few content words when no level matched.
+        live_query = lv["live_terms"] if lv else " ".join(sorted(q)[:4])
+        live = {"status": "ok",
+                "note": "unvetted: found by live search, NOT curated — apply your own "
+                        "bar (license, maintenance, real usage) before adopting"}
+        try:
+            live["github_new"] = _live_github(live_query, known)
+        except Exception as e:  # noqa: BLE001 — degrade, never fail the tool
+            live["github_new"] = []
+            live["status"] = "partial"
+            live["github_error"] = f"{type(e).__name__}: {e}"
+        try:
+            live["community_signals"] = _live_hn(live_query)
+        except Exception as e:  # noqa: BLE001
+            live["community_signals"] = []
+            live["status"] = "unavailable" if live["status"] == "partial" else "partial"
+            live["hn_error"] = f"{type(e).__name__}: {e}"
+
+    return json.dumps({
+        "need": need,
+        "level": level_info,
+        "curated_picks": picks,
+        "avoid": avoid[:2],
+        "decision_guides": decision_guides,
+        "live_discovery": live,
+        "source": d["meta"]["url"],
+        "stars_captured": d["meta"]["stars_captured"],
+    }, indent=2, ensure_ascii=False)
 
 
 @mcp.tool()
