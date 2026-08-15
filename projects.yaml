@@ -83,6 +83,9 @@ projects:
   - name: Headroom
     github_id: headroomlabs-ai/headroom
     category: "progressive-disclosure"
+  - name: DESIGN.md
+    github_id: google-labs-code/design.md
+    category: "progressive-disclosure"
   # Coding agent products (IDEs, CLIs, full suites)
   - name: oh-my-pi
     github_id: can1357/oh-my-pi
@@ -165,6 +168,12 @@ projects:
     github_id: NanmiCoder/cc-haha
     labels: ["javascript"]
     category: "coding-agent-products"
+  - name: grok-build
+    github_id: xai-org/grok-build
+    category: "coding-agent-products"
+  - name: cmux
+    github_id: manaflow-ai/cmux
+    category: "coding-agent-products"
   # Coding harness configs and SDKs
   - name: LoopTroop
     github_id: looptroop-ai/LoopTroop
@@ -222,6 +231,10 @@ projects:
     category: "coding-harness-configs"
   - name: Meta-Harness
     github_id: stanford-iris-lab/meta-harness
+    category: "coding-harness-configs"
+  - name: mini-coding-agent
+    github_id: rasbt/mini-coding-agent
+    labels: ["python"]
     category: "coding-harness-configs"
   # Personal agent runtimes
   - name: Talon
@@ -362,6 +375,10 @@ projects:
     category: "frameworks"
   - name: Haystack
     github_id: deepset-ai/haystack
+    labels: ["python"]
+    category: "frameworks"
+  - name: Upsonic
+    github_id: Upsonic/Upsonic
     labels: ["python"]
     category: "frameworks"
   # Multi-agent and orchestration
@@ -607,10 +624,20 @@ projects:
   - name: AutoResearchClaw
     github_id: aiming-lab/AutoResearchClaw
     category: "research-task"
+  - name: MiroFlow
+    github_id: MiroMindAI/MiroFlow
+    category: "research-task"
+  - name: evo
+    github_id: evo-hq/evo
+    category: "research-task"
   # Libraries and SDKs
   - name: deepagents
     github_id: langchain-ai/deepagents
     labels: ["python"]
+    category: "libraries-sdks"
+  - name: deepagents.js
+    github_id: langchain-ai/deepagentsjs
+    labels: ["javascript"]
     category: "libraries-sdks"
   - name: pydantic-ai
     github_id: pydantic/pydantic-ai

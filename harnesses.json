@@ -9,7 +9,7 @@
     "feed_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/feed.json",
     "license": "CC-BY-SA-4.0",
     "stars_captured": "2026-08-09",
-    "project_count": 161,
+    "project_count": 169,
     "graveyard_count": 3,
     "tiers": [
       "super simple",
@@ -376,7 +376,7 @@
     {
       "kind": "derived",
       "q": "How many of these agent harnesses are open source?",
-      "a": "118 of 161 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
+      "a": "119 of 169 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
       "slug": "how-many-of-these-agent-harnesses-are-open-source"
     },
     {
@@ -580,6 +580,32 @@
           "evidence": "https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/HEAD/README.md"
         }
       }
+    },
+    {
+      "name": "DESIGN.md",
+      "github_id": "google-labs-code/design.md",
+      "url": "https://github.com/google-labs-code/design.md",
+      "slug": "designmd",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#designmd",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/designmd/",
+      "description": "Google Labs' format spec for describing a visual identity—palette, type, spacing—to coding agents in layers, so design context loads on demand instead of getting pasted whole into every prompt; the design counterpart to agents.md.",
+      "category": "progressive-disclosure",
+      "category_title": "Progressive disclosure harnesses",
+      "stars": 27086,
+      "tier": "super simple",
+      "tier_rank": 1,
+      "axis": "super simple (format only)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "unknown",
+      "tags": [],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/google-labs-code/design.md#readme"
+      },
+      "deep_dive": null
     },
     {
       "name": "agents.md",
@@ -1780,6 +1806,64 @@
       }
     },
     {
+      "name": "cmux",
+      "github_id": "manaflow-ai/cmux",
+      "url": "https://github.com/manaflow-ai/cmux",
+      "slug": "cmux",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#cmux",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/cmux/",
+      "description": "Ghostty-based macOS terminal built for running Claude Code, Codex, Gemini, and other CLIs side by side. The **harness** contribution is the multi-pane session/notification fan-out layer; each pane's agent still owns its own loop.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 25831,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (terminal multiplexer, parallel agents)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "unknown",
+      "tags": [
+        "cli"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/manaflow-ai/cmux#readme"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "grok-build",
+      "github_id": "xai-org/grok-build",
+      "url": "https://github.com/xai-org/grok-build",
+      "slug": "grok-build",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#grok-build",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/grok-build/",
+      "description": "xAI's own terminal coding agent. The **harness** is a Grok-tuned sandboxed tool-call loop; the fullscreen, mouse-interactive TUI is the shell—xAI's parallel to Codex and Gemini CLI.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 24513,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (official CLI, Grok-tuned)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "unknown",
+      "tags": [
+        "sandbox",
+        "cli",
+        "tui"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/xai-org/grok-build#readme"
+      },
+      "deep_dive": null
+    },
+    {
       "name": "Roo Code",
       "github_id": "RooCodeInc/Roo-Code",
       "url": "https://github.com/RooCodeInc/Roo-Code",
@@ -2874,6 +2958,34 @@
       "example": {
         "label": "Project README",
         "url": "https://github.com/stanford-iris-lab/meta-harness#readme"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "mini-coding-agent",
+      "github_id": "rasbt/mini-coding-agent",
+      "url": "https://github.com/rasbt/mini-coding-agent",
+      "slug": "mini-coding-agent",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#mini-coding-agent",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/mini-coding-agent/",
+      "description": "Minimal, readable coding-agent **harness** in plain Python by ML educator Sebastian Raschka (rasbt)—built to be read end-to-end rather than installed, to show what a tool-call loop actually is.",
+      "category": "coding-harness-configs",
+      "category_title": "Coding harness configs and SDKs",
+      "stars": 1092,
+      "tier": "super simple",
+      "tier_rank": 1,
+      "axis": "super simple (readable reference implementation)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "unknown",
+      "tags": [
+        "python"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/rasbt/mini-coding-agent#readme"
       },
       "deep_dive": null
     },
@@ -4775,6 +4887,35 @@
           "evidence": "https://raw.githubusercontent.com/SciPhi-AI/R2R/main/py/README.md"
         }
       }
+    },
+    {
+      "name": "Upsonic",
+      "github_id": "Upsonic/Upsonic",
+      "url": "https://github.com/Upsonic/Upsonic",
+      "slug": "upsonic",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#upsonic",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/upsonic/",
+      "description": "Python framework whose **harness** wires computer-use and MCP tool loops directly into autonomous agents, instead of exposing raw prompt-chaining primitives you assemble yourself.",
+      "category": "frameworks",
+      "category_title": "Frameworks",
+      "stars": 7936,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (computer-use, MCP-native)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "unknown",
+      "tags": [
+        "mcp",
+        "python"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/Upsonic/Upsonic#readme"
+      },
+      "deep_dive": null
     },
     {
       "name": "agent-squad",
@@ -7484,6 +7625,62 @@
       "deep_dive": null
     },
     {
+      "name": "MiroFlow",
+      "github_id": "MiroMindAI/MiroFlow",
+      "url": "https://github.com/MiroMindAI/MiroFlow",
+      "slug": "miroflow",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#miroflow",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/miroflow/",
+      "description": "Deep-research **harness** from the MiroThinker team: orchestrates web-and-tool loops across Claude, Kimi, and OpenAI backends behind a web UI, rather than pairing search with one fixed model.",
+      "category": "research-task",
+      "category_title": "Research and task-specific harnesses",
+      "stars": 3090,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (multi-backend research loop, web UI)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "retry",
+      "recovery_rank": 2,
+      "license_signal": "unknown",
+      "tags": [],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/MiroMindAI/MiroFlow#readme"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "evo",
+      "github_id": "evo-hq/evo",
+      "url": "https://github.com/evo-hq/evo",
+      "slug": "evo",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#evo",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/evo/",
+      "description": "Turns a codebase into an autoresearch loop: discovers what to measure, instruments the benchmark, then runs tree search with parallel Claude Code/Codex subagents. The **harness** is the search-and-instrument loop; the CLI agents just execute the steps it hands them.",
+      "category": "research-task",
+      "category_title": "Research and task-specific harnesses",
+      "stars": 1361,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (autoresearch loop, parallel subagents)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "retry",
+      "recovery_rank": 2,
+      "license_signal": "unknown",
+      "tags": [
+        "multi-agent",
+        "evals",
+        "cli"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/evo-hq/evo#readme"
+      },
+      "deep_dive": null
+    },
+    {
       "name": "openagents",
       "github_id": "OpenAgentsInc/openagents",
       "url": "https://github.com/OpenAgentsInc/openagents",
@@ -7925,6 +8122,36 @@
       "example": {
         "label": "Sandbox resource quickstart",
         "url": "https://github.com/kubernetes-sigs/agent-sandbox#readme"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "deepagents.js",
+      "github_id": "langchain-ai/deepagentsjs",
+      "url": "https://github.com/langchain-ai/deepagentsjs",
+      "slug": "deepagentsjs",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#deepagentsjs",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/deepagentsjs/",
+      "description": "TypeScript port of LangChain's deepagents: the same planning tool, virtual filesystem, and sub-agent-spawning **harness** on LangGraph.js, for teams building in Node instead of Python.",
+      "category": "libraries-sdks",
+      "category_title": "Libraries and SDKs",
+      "stars": 1470,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (planning, files, sub-agents)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "durable",
+      "recovery_rank": 4,
+      "license_signal": "open-source",
+      "tags": [
+        "multi-agent",
+        "python",
+        "typescript"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/langchain-ai/deepagentsjs#readme"
       },
       "deep_dive": null
     },

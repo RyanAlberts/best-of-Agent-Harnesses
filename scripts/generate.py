@@ -172,6 +172,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("Headroom", "headroomlabs-ai/headroom",
                 "Compresses tool outputs, logs, files, and RAG chunks with content-aware compressors before they reach the model—claimed 20% fewer tokens for coding agents and 60–95% fewer for JSON, same answers. Ships as a library, HTTP proxy, or MCP server, so it drops in front of whatever harness you already run.",
                 "mostly simple (compression library/proxy/MCP server)"),
+        Project("DESIGN.md", "google-labs-code/design.md",
+                "Google Labs' format spec for describing a visual identity—palette, type, spacing—to coding agents in layers, so design context loads on demand instead of getting pasted whole into every prompt; the design counterpart to agents.md.",
+                "super simple (format only)", oss="❓"),
     ],
     "coding-agent-products": [
         Project("oh-my-pi", "can1357/oh-my-pi",
@@ -243,6 +246,12 @@ PROJECTS: dict[str, list[Project]] = {
         Project("cc-haha", "NanmiCoder/cc-haha",
                 "Local-first desktop workspace **harness** for Claude Code and other agents: multi-agent sessions, Git worktrees, code diffs, a skill marketplace, and chat-app access (WeChat, Telegram, WhatsApp).",
                 "complex (desktop workspace, multi-agent — product suite)", oss="❓", labels=["javascript"]),
+        Project("grok-build", "xai-org/grok-build",
+                "xAI's own terminal coding agent. The **harness** is a Grok-tuned sandboxed tool-call loop; the fullscreen, mouse-interactive TUI is the shell—xAI's parallel to Codex and Gemini CLI.",
+                "slightly complex (official CLI, Grok-tuned)", oss="❓"),
+        Project("cmux", "manaflow-ai/cmux",
+                "Ghostty-based macOS terminal built for running Claude Code, Codex, Gemini, and other CLIs side by side. The **harness** contribution is the multi-pane session/notification fan-out layer; each pane's agent still owns its own loop.",
+                "slightly complex (terminal multiplexer, parallel agents)", oss="❓"),
     ],
     "coding-harness-configs": [
         Project("LoopTroop", "looptroop-ai/LoopTroop",
@@ -299,6 +308,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("Meta-Harness", "stanford-iris-lab/meta-harness",
                 "Reference implementation from the Meta-Harness paper: an academic testbed for harness-engineering research, not a product—useful as a citation-grade baseline rather than something you'd run in production.",
                 "slightly complex (research reference implementation)", oss="❓"),
+        Project("mini-coding-agent", "rasbt/mini-coding-agent",
+                "Minimal, readable coding-agent **harness** in plain Python by ML educator Sebastian Raschka (rasbt)—built to be read end-to-end rather than installed, to show what a tool-call loop actually is.",
+                "super simple (readable reference implementation)", oss="❓", labels=["python"]),
     ],
     "personal-agent-runtimes": [
         Project("Talon", "dylanneve1/talon",
@@ -413,6 +425,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("Haystack", "deepset-ai/haystack",
                 "Open-source orchestration framework for context-engineered LLM apps: modular pipelines and agent workflows with explicit control over retrieval, routing, memory, and generation—closer to LangChain's territory than a coding-agent harness.",
                 "complex (modular pipelines, RAG + agents — product suite)", labels=["python"]),
+        Project("Upsonic", "Upsonic/Upsonic",
+                "Python framework whose **harness** wires computer-use and MCP tool loops directly into autonomous agents, instead of exposing raw prompt-chaining primitives you assemble yourself.",
+                "slightly complex (computer-use, MCP-native)", oss="❓", labels=["python"]),
     ],
     "multi-agent": [
         Project("openai-agents-python", "openai/openai-agents-python",
@@ -614,11 +629,20 @@ PROJECTS: dict[str, list[Project]] = {
         Project("AutoResearchClaw", "aiming-lab/AutoResearchClaw",
                 "Fully autonomous, self-evolving research **harness**: multi-agent debate and citation verification carry a project from idea to a written paper without a human in the loop.",
                 "complex (autonomous research, multi-agent debate — product suite)", oss="❓"),
+        Project("MiroFlow", "MiroMindAI/MiroFlow",
+                "Deep-research **harness** from the MiroThinker team: orchestrates web-and-tool loops across Claude, Kimi, and OpenAI backends behind a web UI, rather than pairing search with one fixed model.",
+                "slightly complex (multi-backend research loop, web UI)", oss="❓"),
+        Project("evo", "evo-hq/evo",
+                "Turns a codebase into an autoresearch loop: discovers what to measure, instruments the benchmark, then runs tree search with parallel Claude Code/Codex subagents. The **harness** is the search-and-instrument loop; the CLI agents just execute the steps it hands them.",
+                "slightly complex (autoresearch loop, parallel subagents)", oss="❓"),
     ],
     "libraries-sdks": [
         Project("deepagents", "langchain-ai/deepagents",
                 "LangChain's Python+TypeScript agent harness on top of LangGraph: planning tool, virtual filesystem, shell sandbox, sub-agent spawning—the \"Claude Code-style\" harness as a reusable library.",
                 "slightly complex (planning, files, sub-agents)", labels=["python"]),
+        Project("deepagents.js", "langchain-ai/deepagentsjs",
+                "TypeScript port of LangChain's deepagents: the same planning tool, virtual filesystem, and sub-agent-spawning **harness** on LangGraph.js, for teams building in Node instead of Python.",
+                "slightly complex (planning, files, sub-agents)", labels=["javascript"]),
         Project("pydantic-ai", "pydantic/pydantic-ai",
                 "Type-safe Python agents with Pydantic I/O; multi-provider, MCP, Logfire observability, and human-in-the-loop.",
                 "slightly complex (type-safe, MCP, Logfire)", labels=["python"]),
@@ -681,6 +705,7 @@ META: dict[str, tuple[int, str, str]] = {
     "antl3x/ToolRAG": (30, "https://github.com/antl3x/ToolRAG/blob/main/packages/%40antl3x-toolrag/README.md", "MCP server retrieval"),
     "mksglu/context-mode": (19740, "https://github.com/mksglu/context-mode#readme", "Project README"),
     "headroomlabs-ai/headroom": (65606, "https://github.com/headroomlabs-ai/headroom#readme", "Project README"),
+    "google-labs-code/design.md": (27086, "https://github.com/google-labs-code/design.md#readme", "Project README"),
     # coding-agent-products
     "can1357/oh-my-pi": (23205, "https://github.com/can1357/oh-my-pi/blob/main/docs/lsp-config.md", "LSP wired into edits"),
     "earendil-works/pi": (85866, "https://github.com/earendil-works/pi#readme", "Project README"),
@@ -704,6 +729,8 @@ META: dict[str, tuple[int, str, str]] = {
     "esengine/DeepSeek-Reasonix": (33360, "https://github.com/esengine/DeepSeek-Reasonix#readme", "Project README"),
     "1jehuang/jcode": (16564, "https://github.com/1jehuang/jcode#readme", "Project README"),
     "NanmiCoder/cc-haha": (14009, "https://github.com/NanmiCoder/cc-haha#readme", "Project README"),
+    "xai-org/grok-build": (24513, "https://github.com/xai-org/grok-build#readme", "Project README"),
+    "manaflow-ai/cmux": (25831, "https://github.com/manaflow-ai/cmux#readme", "Project README"),
     # coding-harness-configs
     "looptroop-ai/LoopTroop": (116, "https://github.com/looptroop-ai/LoopTroop#readme", "Council → loop → worktree pipeline"),
     "open-gsd/gsd-core": (7949, "https://github.com/open-gsd/gsd-core/blob/next/commands/gsd/ship.md", "gsd:ship command"),
@@ -723,6 +750,7 @@ META: dict[str, tuple[int, str, str]] = {
     "addyosmani/agent-skills": (84907, "https://github.com/addyosmani/agent-skills#readme", "Project README"),
     "OthmanAdi/planning-with-files": (26068, "https://github.com/OthmanAdi/planning-with-files#readme", "Project README"),
     "stanford-iris-lab/meta-harness": (1382, "https://github.com/stanford-iris-lab/meta-harness#readme", "Project README"),
+    "rasbt/mini-coding-agent": (1092, "https://github.com/rasbt/mini-coding-agent#readme", "Project README"),
     # frameworks
     "langchain-ai/langgraph": (39286, "https://github.com/langchain-ai/langgraph/blob/main/examples/customer-support/customer-support.ipynb", "Customer support agent"),
     "langchain-ai/langchain": (143787, "https://github.com/langchain-ai/langchain-academy/blob/main/module-1/agent.ipynb", "Build an agent notebook"),
@@ -764,6 +792,7 @@ META: dict[str, tuple[int, str, str]] = {
     "TencentCloudADP/youtu-agent": (4594, "https://github.com/TencentCloudADP/youtu-agent#readme", "Project README"),
     "deepset-ai/haystack": (26158, "https://github.com/deepset-ai/haystack#readme", "Project README"),
     "ag2ai/ag2": (4847, "https://github.com/ag2ai/ag2#readme", "Project README"),
+    "Upsonic/Upsonic": (7936, "https://github.com/Upsonic/Upsonic#readme", "Project README"),
     # multi-agent
     "openai/openai-agents-python": (28507, "https://github.com/openai/openai-agents-python/blob/main/examples/customer_service/main.py", "Airline customer service handoffs"),
     "crewAIInc/crewAI": (56851, "https://github.com/crewAIInc/crewAI-examples/blob/main/crews/trip_planner/trip_agents.py", "Trip planner crew"),
@@ -814,8 +843,11 @@ META: dict[str, tuple[int, str, str]] = {
     "bytedance/deer-flow": (79596, "https://github.com/bytedance/deer-flow#readme", "Project README"),
     "MiroMindAI/MiroThinker": (8368, "https://github.com/MiroMindAI/MiroThinker#readme", "Project README"),
     "aiming-lab/AutoResearchClaw": (13988, "https://github.com/aiming-lab/AutoResearchClaw#readme", "Project README"),
+    "MiroMindAI/MiroFlow": (3090, "https://github.com/MiroMindAI/MiroFlow#readme", "Project README"),
+    "evo-hq/evo": (1361, "https://github.com/evo-hq/evo#readme", "Project README"),
     # libraries-sdks
     "langchain-ai/deepagents": (27545, "https://github.com/langchain-ai/deepagents/tree/main/examples/deep_research", "Deep research agent"),
+    "langchain-ai/deepagentsjs": (1470, "https://github.com/langchain-ai/deepagentsjs#readme", "Project README"),
     "pydantic/pydantic-ai": (19169, "https://github.com/pydantic/pydantic-ai/blob/main/examples/pydantic_ai_examples/bank_support.py", "Bank support agent"),
     "MaxGfeller/open-harness": (594, "https://github.com/MaxGfeller/open-harness/tree/main/examples/cli", "Terminal CLI agent"),
     "vercel/ai": (26092, "https://github.com/vercel/ai/tree/main/examples/next-agent", "Next.js agent example"),
@@ -1052,6 +1084,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "antl3x/ToolRAG": ("n/a", "n/a"),
     "mksglu/context-mode": ("n/a", "n/a"),
     "headroomlabs-ai/headroom": ("n/a", "n/a"),
+    "google-labs-code/design.md": ("n/a", "n/a"),
     # coding-agent-products
     "can1357/oh-my-pi": ("bounded", "resumable"),
     "earendil-works/pi": ("bounded", "resumable"),
@@ -1075,6 +1108,8 @@ AXES: "dict[str, tuple[str, str]]" = {
     "esengine/DeepSeek-Reasonix": ("n/a", "n/a"),
     "1jehuang/jcode": ("n/a", "n/a"),
     "NanmiCoder/cc-haha": ("n/a", "n/a"),
+    "xai-org/grok-build": ("bounded", "resumable"),
+    "manaflow-ai/cmux": ("n/a", "n/a"),
     # coding-harness-configs
     "looptroop-ai/LoopTroop": ("bounded", "retry"),
     "obra/superpowers": ("n/a", "n/a"),
@@ -1094,6 +1129,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "RyanAlberts/pmstack": ("n/a", "n/a"),
     "OthmanAdi/planning-with-files": ("n/a", "n/a"),
     "stanford-iris-lab/meta-harness": ("n/a", "n/a"),
+    "rasbt/mini-coding-agent": ("n/a", "n/a"),
     # frameworks
     "n8n-io/n8n": ("headless", "durable"),
     "Significant-Gravitas/AutoGPT": ("headless", "resumable"),
@@ -1135,6 +1171,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "zhayujie/CowAgent": ("n/a", "n/a"),
     "deepset-ai/haystack": ("n/a", "n/a"),
     "ag2ai/ag2": ("n/a", "n/a"),
+    "Upsonic/Upsonic": ("bounded", "resumable"),
     # multi-agent
     "microsoft/autogen": ("bounded", "resumable"),
     "crewAIInc/crewAI": ("bounded", "resumable"),
@@ -1185,6 +1222,8 @@ AXES: "dict[str, tuple[str, str]]" = {
     "bytedance/deer-flow": ("headless", "resumable"),
     "MiroMindAI/MiroThinker": ("headless", "retry"),
     "aiming-lab/AutoResearchClaw": ("n/a", "n/a"),
+    "MiroMindAI/MiroFlow": ("headless", "retry"),
+    "evo-hq/evo": ("bounded", "retry"),
     # libraries-sdks
     "daytonaio/daytona": ("n/a", "n/a"),
     "kubernetes-sigs/agent-sandbox": ("n/a", "n/a"),
@@ -1195,6 +1234,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "huggingface/smolagents": ("bounded", "none"),
     "vercel/ai": ("bounded", "retry"),
     "langchain-ai/deepagents": ("bounded", "durable"),
+    "langchain-ai/deepagentsjs": ("bounded", "durable"),
     "pydantic/pydantic-ai": ("bounded", "durable"),
     "e2b-dev/E2B": ("n/a", "n/a"),
     "strands-agents/harness-sdk": ("bounded", "resumable"),
