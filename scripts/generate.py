@@ -299,6 +299,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("Meta-Harness", "stanford-iris-lab/meta-harness",
                 "Reference implementation from the Meta-Harness paper: an academic testbed for harness-engineering research, not a product—useful as a citation-grade baseline rather than something you'd run in production.",
                 "slightly complex (research reference implementation)", oss="❓"),
+        Project("learn-claude-code", "shareAI-lab/learn-claude-code",
+                "Nano, from-zero reimplementation of a Claude-Code-style agent **harness**: a bash-only core loop built as a teaching artifact rather than a product—the most-starred entry in the \"rebuild it to understand it\" genre.",
+                "mostly simple (nano educational harness)", oss="❓"),
     ],
     "personal-agent-runtimes": [
         Project("Talon", "dylanneve1/talon",
@@ -333,6 +336,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("CowAgent", "zhayujie/CowAgent",
                 "Self-hosted **harness** (formerly chatgpt-on-wechat) that plans tasks, runs tools/skills, and self-evolves via memory; multi-model, multi-channel (WeChat, Telegram, etc.), one-line install.",
                 "slightly complex (multi-channel, self-evolving)", oss="❓", labels=["python"]),
+        Project("AnythingLLM", "Mintplex-Labs/anything-llm",
+                "Self-hosted, local-first workspace whose **harness** wires RAG retrieval, agent skills, and tool use around any LLM; the desktop/web/Docker UI is the shell. Long-established alternative to hosted \"AI second brain\" products.",
+                "complex (server + UI, RAG + agents — product suite)", labels=["javascript"]),
     ],
     "frameworks": [
         Project("langgraph", "langchain-ai/langgraph",
@@ -451,6 +457,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("omnigent", "omnigent-ai/omnigent",
                 "Open-source meta-**harness**: orchestrates Claude Code, Codex, Cursor, Pi, and custom agents behind one policy/sandboxing layer so teams swap harnesses without rewriting workflows.",
                 "complex (meta-harness, policy + sandboxing — product suite)", oss="❓", labels=["python"]),
+        Project("OASIS", "camel-ai/oasis",
+                "CAMEL-AI's large-scale multi-agent social-simulation **harness**: up to a million LLM agents interacting in a shared environment, coordinating and reacting like a live platform—the scale sibling of the already-listed AgentVerse.",
+                "complex (million-agent simulation — product suite)"),
     ],
     "plugins-mcp-cli": [
         Project("aider", "Aider-AI/aider",
@@ -583,6 +592,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("Agent Lightning", "microsoft/agent-lightning",
                 "Microsoft's training-oriented harness: optimization loops for agent behavior—when you need to improve policies over rollouts, not only score a fixed prompt.",
                 "complex (agent training, Microsoft stack — product suite)", labels=["python"]),
+        Project("AssetOpsBench", "IBM/AssetOpsBench",
+                "IBM's domain-specific eval **harness** for Industry 4.0 asset-operations agents: 460+ scenarios across 5 specialist agents (IoT, FMSR, TSFM, Work Order) plus multi-agent orchestration blueprints (MetaAgent, AgentHive) over MCP.",
+                "complex (460+ scenarios, multi-agent — product suite)", oss="❓"),
     ],
     "observability": [
         Project("Langfuse", "langfuse/langfuse",
@@ -617,8 +629,11 @@ PROJECTS: dict[str, list[Project]] = {
     ],
     "libraries-sdks": [
         Project("deepagents", "langchain-ai/deepagents",
-                "LangChain's Python+TypeScript agent harness on top of LangGraph: planning tool, virtual filesystem, shell sandbox, sub-agent spawning—the \"Claude Code-style\" harness as a reusable library.",
+                "LangChain's Python + [TypeScript](https://github.com/langchain-ai/deepagentsjs) agent harness on top of LangGraph: planning tool, virtual filesystem, shell sandbox, sub-agent spawning—the \"Claude Code-style\" harness as a reusable library.",
                 "slightly complex (planning, files, sub-agents)", labels=["python"]),
+        Project("LLMCompiler", "SqueezeAILab/LLMCompiler",
+                "ICML 2024 tool-execution **harness** primitive: compiles a task into a DAG of tool calls and runs independent branches in parallel instead of one-at-a-time ReAct-style looping.",
+                "slightly complex (DAG scheduler for tool calls)", oss="❓", labels=["python"]),
         Project("pydantic-ai", "pydantic/pydantic-ai",
                 "Type-safe Python agents with Pydantic I/O; multi-provider, MCP, Logfire observability, and human-in-the-loop.",
                 "slightly complex (type-safe, MCP, Logfire)", labels=["python"]),
@@ -723,6 +738,7 @@ META: dict[str, tuple[int, str, str]] = {
     "addyosmani/agent-skills": (84907, "https://github.com/addyosmani/agent-skills#readme", "Project README"),
     "OthmanAdi/planning-with-files": (26068, "https://github.com/OthmanAdi/planning-with-files#readme", "Project README"),
     "stanford-iris-lab/meta-harness": (1382, "https://github.com/stanford-iris-lab/meta-harness#readme", "Project README"),
+    "shareAI-lab/learn-claude-code": (73638, "https://github.com/shareAI-lab/learn-claude-code#readme", "Project README"),
     # frameworks
     "langchain-ai/langgraph": (39286, "https://github.com/langchain-ai/langgraph/blob/main/examples/customer-support/customer-support.ipynb", "Customer support agent"),
     "langchain-ai/langchain": (143787, "https://github.com/langchain-ai/langchain-academy/blob/main/module-1/agent.ipynb", "Build an agent notebook"),
@@ -751,6 +767,7 @@ META: dict[str, tuple[int, str, str]] = {
     "OpenBMB/ChatDev": (33967, "https://github.com/OpenBMB/ChatDev#readme", "Company simulation quickstart"),
     "microsoft/agent-framework": (12694, "https://github.com/microsoft/agent-framework/tree/main/python/samples", "Python samples"),
     "khoj-ai/khoj": (36403, "https://github.com/khoj-ai/khoj#readme", "Feature tour"),
+    "Mintplex-Labs/anything-llm": (64520, "https://github.com/Mintplex-Labs/anything-llm#readme", "Project README"),
     "elizaOS/eliza": (18984, "https://github.com/elizaOS/eliza#readme", "Agent quickstart"),
     "agent0ai/agent-zero": (18813, "https://github.com/agent0ai/agent-zero#readme", "Framework tour"),
     "OpenBMB/AgentVerse": (5100, "https://github.com/OpenBMB/AgentVerse/blob/main/agentverse/tasks/simulation/nlp_classroom_9players/config.yaml", "NLP classroom sim"),
@@ -772,6 +789,7 @@ META: dict[str, tuple[int, str, str]] = {
     "THUDM/AgentRL": (337, "https://github.com/THUDM/AgentRL/blob/main/examples/training/async_trainer.py", "Async GRPO trainer"),
     "aden-hive/hive": (10887, "https://github.com/aden-hive/hive#readme", "Project README"),
     "omnigent-ai/omnigent": (8421, "https://github.com/omnigent-ai/omnigent#readme", "Project README"),
+    "camel-ai/oasis": (5009, "https://github.com/camel-ai/oasis#readme", "Project README"),
     # plugins-mcp-cli
     "Aider-AI/aider": (48075, "https://github.com/Aider-AI/aider/blob/main/aider/repomap.py", "Repo map source"),
     "RyanAlberts/agentlog": (1, "https://github.com/RyanAlberts/agentlog/blob/main/example-log/decisions.jsonl", "Sample decisions.jsonl"),
@@ -808,6 +826,7 @@ META: dict[str, tuple[int, str, str]] = {
     "UKGovernmentBEIS/inspect_evals": (616, "https://github.com/UKGovernmentBEIS/inspect_evals/blob/main/src/inspect_evals/swe_bench/README.md", "inspect SWE-bench eval"),
     "UKGovernmentBEIS/inspect_ai": (2510, "https://inspect.aisi.org.uk/tutorial.html", "Inspect tutorial example"),
     "microsoft/agent-lightning": (17461, "https://github.com/microsoft/agent-lightning/blob/main/examples/apo/README.md", "APO room-booking example"),
+    "IBM/AssetOpsBench": (2100, "https://github.com/IBM/AssetOpsBench#readme", "Project README"),
     # research-task
     "assafelovic/gpt-researcher": (28900, "https://github.com/assafelovic/gpt-researcher/blob/master/docs/blog/2024-05-19-gptr-langgraph/index.md", "Multi-agent LangGraph walkthrough"),
     "OpenAgentsInc/openagents": (445, "https://github.com/OpenAgentsInc/openagents/blob/main/docs/reports/nexus/2026-04-23-autopilot-pylon-production-earning-proof.md", "Production earning proof"),
@@ -816,6 +835,7 @@ META: dict[str, tuple[int, str, str]] = {
     "aiming-lab/AutoResearchClaw": (13988, "https://github.com/aiming-lab/AutoResearchClaw#readme", "Project README"),
     # libraries-sdks
     "langchain-ai/deepagents": (27545, "https://github.com/langchain-ai/deepagents/tree/main/examples/deep_research", "Deep research agent"),
+    "SqueezeAILab/LLMCompiler": (1872, "https://github.com/SqueezeAILab/LLMCompiler#readme", "Project README"),
     "pydantic/pydantic-ai": (19169, "https://github.com/pydantic/pydantic-ai/blob/main/examples/pydantic_ai_examples/bank_support.py", "Bank support agent"),
     "MaxGfeller/open-harness": (594, "https://github.com/MaxGfeller/open-harness/tree/main/examples/cli", "Terminal CLI agent"),
     "vercel/ai": (26092, "https://github.com/vercel/ai/tree/main/examples/next-agent", "Next.js agent example"),
@@ -1094,6 +1114,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "RyanAlberts/pmstack": ("n/a", "n/a"),
     "OthmanAdi/planning-with-files": ("n/a", "n/a"),
     "stanford-iris-lab/meta-harness": ("n/a", "n/a"),
+    "shareAI-lab/learn-claude-code": ("n/a", "n/a"),
     # frameworks
     "n8n-io/n8n": ("headless", "durable"),
     "Significant-Gravitas/AutoGPT": ("headless", "resumable"),
@@ -1128,6 +1149,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "OpenBMB/ChatDev": ("headless", "none"),
     "microsoft/agent-framework": ("bounded", "resumable"),
     "khoj-ai/khoj": ("headless", "resumable"),
+    "Mintplex-Labs/anything-llm": ("bounded", "retry"),
     "elizaOS/eliza": ("headless", "resumable"),
     "agent0ai/agent-zero": ("bounded", "resumable"),
     "superagentxai/superagentx": ("bounded", "none"),
@@ -1143,6 +1165,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "THUDM/AgentRL": ("headless", "resumable"),
     "aden-hive/hive": ("bounded", "resumable"),
     "omnigent-ai/omnigent": ("n/a", "n/a"),
+    "camel-ai/oasis": ("n/a", "n/a"),
     # plugins-mcp-cli
     "thedotmack/claude-mem": ("n/a", "n/a"),
     "Aider-AI/aider": ("checkpoint-gated", "resumable"),
@@ -1179,6 +1202,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "letta-ai/letta-evals": ("headless", "none"),
     "allenai/super-benchmark": ("headless", "none"),
     "patronus-ai/trail-benchmark": ("n/a", "n/a"),
+    "IBM/AssetOpsBench": ("headless", "none"),
     # research-task
     "assafelovic/gpt-researcher": ("bounded", "retry"),
     "OpenAgentsInc/openagents": ("headless", "resumable"),
@@ -1190,6 +1214,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "kubernetes-sigs/agent-sandbox": ("n/a", "n/a"),
     "steel-dev/steel-browser": ("n/a", "n/a"),
     "mem0ai/mem0": ("n/a", "n/a"),
+    "SqueezeAILab/LLMCompiler": ("n/a", "n/a"),
     "BerriAI/litellm": ("n/a", "retry"),
     "ComposioHQ/composio": ("n/a", "n/a"),
     "huggingface/smolagents": ("bounded", "none"),

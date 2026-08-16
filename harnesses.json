@@ -9,7 +9,7 @@
     "feed_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/feed.json",
     "license": "CC-BY-SA-4.0",
     "stars_captured": "2026-08-09",
-    "project_count": 161,
+    "project_count": 166,
     "graveyard_count": 3,
     "tiers": [
       "super simple",
@@ -376,7 +376,7 @@
     {
       "kind": "derived",
       "q": "How many of these agent harnesses are open source?",
-      "a": "118 of 161 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
+      "a": "120 of 166 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
       "slug": "how-many-of-these-agent-harnesses-are-open-source"
     },
     {
@@ -2395,6 +2395,32 @@
       "deep_dive": null
     },
     {
+      "name": "learn-claude-code",
+      "github_id": "shareAI-lab/learn-claude-code",
+      "url": "https://github.com/shareAI-lab/learn-claude-code",
+      "slug": "learn-claude-code",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#learn-claude-code",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/learn-claude-code/",
+      "description": "Nano, from-zero reimplementation of a Claude-Code-style agent **harness**: a bash-only core loop built as a teaching artifact rather than a product—the most-starred entry in the \"rebuild it to understand it\" genre.",
+      "category": "coding-harness-configs",
+      "category_title": "Coding harness configs and SDKs",
+      "stars": 73638,
+      "tier": "mostly simple",
+      "tier_rank": 2,
+      "axis": "mostly simple (nano educational harness)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "unknown",
+      "tags": [],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/shareAI-lab/learn-claude-code#readme"
+      },
+      "deep_dive": null
+    },
+    {
       "name": "awesome-claude-code",
       "github_id": "hesreallyhim/awesome-claude-code",
       "url": "https://github.com/hesreallyhim/awesome-claude-code",
@@ -3243,6 +3269,37 @@
           "evidence": "https://github.com/NousResearch/hermes-agent/blob/main/README.md"
         }
       }
+    },
+    {
+      "name": "AnythingLLM",
+      "github_id": "Mintplex-Labs/anything-llm",
+      "url": "https://github.com/Mintplex-Labs/anything-llm",
+      "slug": "anything-llm",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#anything-llm",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/anything-llm/",
+      "description": "Self-hosted, local-first workspace whose **harness** wires RAG retrieval, agent skills, and tool use around any LLM; the desktop/web/Docker UI is the shell. Long-established alternative to hosted \"AI second brain\" products.",
+      "category": "personal-agent-runtimes",
+      "category_title": "Personal agent runtimes",
+      "stars": 64520,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (server + UI, RAG + agents — product suite)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "retry",
+      "recovery_rank": 2,
+      "license_signal": "open-source",
+      "tags": [
+        "sandbox",
+        "rag",
+        "provider-agnostic",
+        "typescript"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/Mintplex-Labs/anything-llm#readme"
+      },
+      "deep_dive": null
     },
     {
       "name": "nanobot",
@@ -5775,6 +5832,34 @@
       "deep_dive": null
     },
     {
+      "name": "OASIS",
+      "github_id": "camel-ai/oasis",
+      "url": "https://github.com/camel-ai/oasis",
+      "slug": "oasis",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#oasis",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/oasis/",
+      "description": "CAMEL-AI's large-scale multi-agent social-simulation **harness**: up to a million LLM agents interacting in a shared environment, coordinating and reacting like a live platform—the scale sibling of the already-listed AgentVerse.",
+      "category": "multi-agent",
+      "category_title": "Multi-agent and orchestration",
+      "stars": 5009,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (million-agent simulation — product suite)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [
+        "multi-agent"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/camel-ai/oasis#readme"
+      },
+      "deep_dive": null
+    },
+    {
       "name": "AG2",
       "github_id": "ag2ai/ag2",
       "url": "https://github.com/ag2ai/ag2",
@@ -6817,6 +6902,36 @@
       "deep_dive": null
     },
     {
+      "name": "AssetOpsBench",
+      "github_id": "IBM/AssetOpsBench",
+      "url": "https://github.com/IBM/AssetOpsBench",
+      "slug": "assetopsbench",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#assetopsbench",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/assetopsbench/",
+      "description": "IBM's domain-specific eval **harness** for Industry 4.0 asset-operations agents: 460+ scenarios across 5 specialist agents (IoT, FMSR, TSFM, Work Order) plus multi-agent orchestration blueprints (MetaAgent, AgentHive) over MCP.",
+      "category": "evaluation",
+      "category_title": "Evaluation and benchmarking harnesses",
+      "stars": 2100,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (460+ scenarios, multi-agent — product suite)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "none",
+      "recovery_rank": 1,
+      "license_signal": "unknown",
+      "tags": [
+        "mcp",
+        "multi-agent",
+        "evals"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/IBM/AssetOpsBench#readme"
+      },
+      "deep_dive": null
+    },
+    {
       "name": "WebArena",
       "github_id": "web-arena-x/webarena",
       "url": "https://github.com/web-arena-x/webarena",
@@ -7665,7 +7780,7 @@
       "slug": "deepagents",
       "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#deepagents",
       "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/deepagents/",
-      "description": "LangChain's Python+TypeScript agent harness on top of LangGraph: planning tool, virtual filesystem, shell sandbox, sub-agent spawning—the \"Claude Code-style\" harness as a reusable library.",
+      "description": "LangChain's Python + [TypeScript](https://github.com/langchain-ai/deepagentsjs) agent harness on top of LangGraph: planning tool, virtual filesystem, shell sandbox, sub-agent spawning—the \"Claude Code-style\" harness as a reusable library.",
       "category": "libraries-sdks",
       "category_title": "Libraries and SDKs",
       "stars": 27545,
@@ -7925,6 +8040,35 @@
       "example": {
         "label": "Sandbox resource quickstart",
         "url": "https://github.com/kubernetes-sigs/agent-sandbox#readme"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "LLMCompiler",
+      "github_id": "SqueezeAILab/LLMCompiler",
+      "url": "https://github.com/SqueezeAILab/LLMCompiler",
+      "slug": "llmcompiler",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#llmcompiler",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/llmcompiler/",
+      "description": "ICML 2024 tool-execution **harness** primitive: compiles a task into a DAG of tool calls and runs independent branches in parallel instead of one-at-a-time ReAct-style looping.",
+      "category": "libraries-sdks",
+      "category_title": "Libraries and SDKs",
+      "stars": 1872,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (DAG scheduler for tool calls)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "unknown",
+      "tags": [
+        "low-code",
+        "python"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/SqueezeAILab/LLMCompiler#readme"
       },
       "deep_dive": null
     },

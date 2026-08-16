@@ -1,6 +1,6 @@
 # Best of Agent Harnesses
 
-> Hand-curated, ranked list of 161 AI agent harnesses — the runtimes that close the loop between a stateless model and the outside world. 12 categories, a 4-tier adoption-surface rating (simplicity ↔ capability), capability tags, a license signal, and one concrete example link per project. Stars captured 2026-08-09.
+> Hand-curated, ranked list of 166 AI agent harnesses — the runtimes that close the loop between a stateless model and the outside world. 12 categories, a 4-tier adoption-surface rating (simplicity ↔ capability), capability tags, a license signal, and one concrete example link per project. Stars captured 2026-08-09.
 
 Maintained at https://github.com/RyanAlberts/best-of-Agent-Harnesses (CC-BY-SA-4.0).
 Structured data: https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/harnesses.json
@@ -90,7 +90,7 @@ Harnesses designed for unattended runs, batches, and fleets: opencode, OpenHands
 Harnesses whose execution state persists across restarts: langgraph-bigtool, n8n, langgraph, mastra, letta, deepagents, pydantic-ai, Cloudflare Agents.
 
 ### How many of these agent harnesses are open source?
-118 of 161 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.
+120 of 166 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.
 
 ### What is an agent harness?
 The runtime that turns a model into an agent: it decides what the model's reasoning is allowed to touch, and supplies the orchestration, tool wiring, memory, error recovery, and guardrails around per-turn inference.
@@ -141,7 +141,7 @@ Turnkey coding agents you install and run: IDE extensions, terminal CLIs, Docker
 - [AgentBox](https://github.com/madarco/agentbox) — ⭐339, slightly complex, autonomy: n/a, recovery: n/a, open-source: Runs multiple coding agents in parallel, each in its own sandboxed VM, locally or in the cloud, from one command. The **harness** contribution is the VM-per-agent isolation and fleet fan-out layer; whichever agent runs inside owns the loop. [sandbox, typescript]
 - [Proliferate](https://github.com/proliferate-ai/proliferate) — ⭐161, complex, autonomy: bounded, recovery: resumable, open-source: Open-source AI IDE for Claude Code, Codex, OpenCode, and more. The **harness** contribution is the workspace/session orchestration layer: run multiple coding agents in parallel, locally or in the cloud, with isolated workspaces, reusable workflows, and shared team context. [multi-agent, sandbox, ide, typescript]
 
-## Coding harness configs and SDKs (17 projects)
+## Coding harness configs and SDKs (18 projects)
 
 Skill packs, slash-command libraries, meta-prompting frameworks, and official SDKs that give you the harness (the agent loop, planning, memory, hooks) without bundling a specific IDE or CLI shell.
 
@@ -149,6 +149,7 @@ Skill packs, slash-command libraries, meta-prompting frameworks, and official SD
 - [Anthropic Skills](https://github.com/anthropics/skills) — ⭐167k, mostly simple, autonomy: n/a, recovery: n/a, restricted (Anthropic terms): Anthropic's official Agent Skills repository: SKILL.md-based folders (instructions, scripts, resources) Claude dynamically loads on Claude Code, Claude.ai, and the API. The reference for progressive-disclosure skill packs in 2026.
 - [GStack](https://github.com/garrytan/gstack) — ⭐127k, slightly complex, autonomy: n/a, recovery: n/a, open-source: Garry Tan's Claude Code skill stack: 23 slash-command modes (CEO/eng/design review, QA, ship, browse, retro, …) that structure one assistant as a virtual engineering team. Daily driver while running YC. [typescript]
 - [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) — ⭐84.9k, mostly simple, autonomy: n/a, recovery: n/a, open-source: Addy Osmani's production-grade skill pack: 24 engineering skills and 4 specialist agent personas that encode senior-dev workflows (spec through deploy) across 70+ coding agents including Claude Code, Cursor, and Copilot. The **harness** contribution is the skill/workflow layer, not a new agent loop. [workflow, ide]
+- [learn-claude-code](https://github.com/shareAI-lab/learn-claude-code) — ⭐73.6k, mostly simple, autonomy: n/a, recovery: n/a, unknown: Nano, from-zero reimplementation of a Claude-Code-style agent **harness**: a bash-only core loop built as a teaching artifact rather than a product—the most-starred entry in the "rebuild it to understand it" genre.
 - [awesome-claude-code](https://github.com/hesreallyhim/awesome-claude-code) — ⭐52k, super simple, autonomy: n/a, recovery: n/a, unknown: Large community-curated index of Claude Code skills, slash commands, status lines, and plugins—resources for extending the harness, not a harness itself, but the most-followed catalog of the genre.
 - [wshobson/agents](https://github.com/wshobson/agents) — ⭐38.6k, super simple, autonomy: n/a, recovery: n/a, open-source: Cross-harness marketplace of drop-in subagents and skills for Claude Code, Codex CLI, Cursor, OpenCode, and Copilot; specialized, production-ready agent definitions you install rather than hand-write. [multi-agent, cli, ide]
 - [planning-with-files](https://github.com/OthmanAdi/planning-with-files) — ⭐26.1k, mostly simple, autonomy: n/a, recovery: n/a, unknown: Skill for persistent, file-based planning across long-running coding-agent sessions: crash-proof markdown plans, session recovery after `/clear`/compaction, and a deterministic completion gate—Manus-style planning as a drop-in **harness** layer via the Agent Skills standard. [memory]
@@ -163,12 +164,13 @@ Skill packs, slash-command libraries, meta-prompting frameworks, and official SD
 - [LoopTroop](https://github.com/looptroop-ai/LoopTroop) — ⭐116, mostly simple, autonomy: bounded, recovery: retry, open-source: Config layer that chains LLM councils for planning, Ralph loops for iterative refinement, and OpenCode worktrees for shipping. The **harness** contribution is the council → loop → worktree pipeline; OpenCode underneath executes. [typescript]
 - [pmstack](https://github.com/RyanAlberts/pmstack) — ⭐8, super simple, autonomy: n/a, recovery: n/a, open-source: Claude Code config for AI product managers: CLAUDE.md plus skills for competitive analysis, PRD-from-signal, metric frameworks, stakeholder briefs, and agent eval design. "GStack for PMs." [evals]
 
-## Personal agent runtimes (10 projects)
+## Personal agent runtimes (11 projects)
 
 Always-on, self-hosted agents you run as a daemon and talk to from chat apps: gateway runtimes, second brains, and self-improving assistants. The agent as a product you operate, not a library you build with.
 
 - [OpenClaw](https://github.com/openclaw/openclaw) — ⭐386k, complex, autonomy: headless, recovery: resumable, open-source: Self-hosted, always-on personal agent (formerly Clawdbot/Moltbot): a gateway + event-loop runtime that treats messages, heartbeats, crons, and webhooks as one input queue, persists state to local files, and lives in your chat apps (WhatsApp, Telegram, Slack, Discord). 13,700+ community skills; the fastest-growing repo in GitHub history. [typescript, multi-agent]
 - [Hermes](https://github.com/NousResearch/hermes-agent) — ⭐228k, slightly complex, autonomy: headless, recovery: resumable, open-source: Nous Research's self-improving agent: a learning loop turns experience into reusable skills, builds a persistent user model across sessions, and checkpoints state to disk with rollback; lean enough for a $5 VPS, driven from chat, and model-agnostic (Nous Portal, OpenRouter, OpenAI, or any endpoint). [memory, python, provider-agnostic]
+- [AnythingLLM](https://github.com/Mintplex-Labs/anything-llm) — ⭐64.5k, complex, autonomy: bounded, recovery: retry, open-source: Self-hosted, local-first workspace whose **harness** wires RAG retrieval, agent skills, and tool use around any LLM; the desktop/web/Docker UI is the shell. Long-established alternative to hosted "AI second brain" products. [sandbox, rag, provider-agnostic, typescript]
 - [nanobot](https://github.com/HKUDS/nanobot) — ⭐46.8k, mostly simple, autonomy: n/a, recovery: n/a, unknown: Ultra-lightweight, self-hosted personal agent framework: the **harness** is a Python daemon wiring tools, memory, and MCP into chat/webhook front ends (Telegram, Discord, web); minimal footprint alternative to heavier personal-runtime stacks. [mcp, memory, local, python]
 - [CowAgent](https://github.com/zhayujie/CowAgent) — ⭐46.4k, slightly complex, autonomy: n/a, recovery: n/a, unknown: Self-hosted **harness** (formerly chatgpt-on-wechat) that plans tasks, runs tools/skills, and self-evolves via memory; multi-model, multi-channel (WeChat, Telegram, etc.), one-line install. [memory, python]
 - [Khoj](https://github.com/khoj-ai/khoj) — ⭐36.4k, complex, autonomy: headless, recovery: resumable, open-source: Self-hostable "AI second brain": answers over your docs and the web, custom agents, scheduled automations, and multi-client reach (web, Obsidian, Emacs, WhatsApp). A personal-agent harness with retrieval at the core. [python]
@@ -209,7 +211,7 @@ General-purpose agent and LLM application frameworks (the app layer, not harness
 - [AgentSilex](https://github.com/howl-anderson/agentsilex) — ⭐453, super simple, autonomy: bounded, recovery: none, open-source: ~300 lines of readable agent code on top of LiteLLM; the "I want to see the whole loop" option for learning or minimal production. [python]
 - [SuperAgentX](https://github.com/superagentxai/superagentx) — ⭐203, mostly simple, autonomy: bounded, recovery: none, open-source: Lightweight multi-agent orchestrator with an AGI-angle; minimal surface, docs-first, for teams that want orchestration without the kitchen sink. [multi-agent, python]
 
-## Multi-agent and orchestration (12 projects)
+## Multi-agent and orchestration (13 projects)
 
 Harnesses and patterns for multi-agent coordination and handoffs.
 
@@ -223,6 +225,7 @@ Harnesses and patterns for multi-agent coordination and handoffs.
 - [hive](https://github.com/aden-hive/hive) — ⭐10.9k, complex, autonomy: bounded, recovery: resumable, unknown: Self-hosted multi-agent **harness** aimed at production workloads: human-in-the-loop checkpoints and a self-improving agent loop, distinct from single-session coding-agent shells. [multi-agent, python]
 - [PraisonAI](https://github.com/MervinPraison/PraisonAI) — ⭐8.8k, mostly simple, autonomy: bounded, recovery: none, open-source: Autonomous multi-agent teams with a single entry point; emphasis on minimal config. [multi-agent, python]
 - [omnigent](https://github.com/omnigent-ai/omnigent) — ⭐8.4k, complex, autonomy: n/a, recovery: n/a, unknown: Open-source meta-**harness**: orchestrates Claude Code, Codex, Cursor, Pi, and custom agents behind one policy/sandboxing layer so teams swap harnesses without rewriting workflows. [sandbox, ide, python]
+- [OASIS](https://github.com/camel-ai/oasis) — ⭐5k, complex, autonomy: n/a, recovery: n/a, open-source: CAMEL-AI's large-scale multi-agent social-simulation **harness**: up to a million LLM agents interacting in a shared environment, coordinating and reacting like a live platform—the scale sibling of the already-listed AgentVerse. [multi-agent]
 - [AG2](https://github.com/ag2ai/ag2) — ⭐4.8k, complex, autonomy: n/a, recovery: n/a, unknown: AG2 (formerly AutoGen): the community-governed continuation of the original AutoGen project after Microsoft's fork diverged—conversable multi-agent groups, code execution, and human-in-the-loop under an open-source AgentOS banner. Graduated off the radar this cycle. [multi-agent, python]
 - [AgentRL](https://github.com/THUDM/AgentRL) — ⭐337, complex, autonomy: headless, recovery: resumable, open-source: Multitask, multiturn RL for LLM agents; Ray-based scaling, rollout/actor workers—for teams that want to train agents, not just run them. [training, python]
 
@@ -260,7 +263,7 @@ Persistent memory layers that give agents recall across turns and sessions: know
 - [Graphiti (Zep)](https://github.com/getzep/graphiti) — ⭐29.9k, slightly complex, autonomy: n/a, recovery: n/a, open-source: Zep's open-source memory engine: real-time temporal knowledge graphs that track how facts about users and entities change over time, so agents can answer "what was true when." The layer behind Zep's hosted memory platform. [memory, rag, workflow, python]
 - [beads](https://github.com/gastownhall/beads) — ⭐26.1k, mostly simple, autonomy: n/a, recovery: n/a, unknown: Portable persistent-memory layer for coding agents: tracks decisions and task state outside the harness's own context window so it survives session resets and model swaps. [memory]
 
-## Evaluation and benchmarking harnesses (18 projects)
+## Evaluation and benchmarking harnesses (19 projects)
 
 Agentic eval systems, reasoning benchmarks, and open agent benchmarks.
 
@@ -268,6 +271,7 @@ Agentic eval systems, reasoning benchmarks, and open agent benchmarks.
 - [SWE-bench](https://github.com/SWE-bench/SWE-bench) — ⭐5.6k, slightly complex, autonomy: headless, recovery: resumable, open-source: LMs resolve real GitHub issues; Docker harness, instance IDs; standard for code-agent evals. [evals, sandbox, python]
 - [AgentBench](https://github.com/THUDM/AgentBench) — ⭐3.7k, complex, autonomy: headless, recovery: none, open-source: ICLR'24 benchmark: agents across AlfWorld, DB, knowledge graphs, OS, webshop; Docker Compose, function-calling interface. [evals, sandbox, rag, workflow, python]
 - [inspect_ai](https://github.com/UKGovernmentBEIS/inspect_ai) — ⭐2.5k, complex, autonomy: headless, recovery: resumable, open-source: Inspect AI core: composable eval tasks, sandboxes, scorers, and multi-model runs; the framework behind inspect_evals, not just the task bundle. [evals, sandbox, python]
+- [AssetOpsBench](https://github.com/IBM/AssetOpsBench) — ⭐2.1k, complex, autonomy: headless, recovery: none, unknown: IBM's domain-specific eval **harness** for Industry 4.0 asset-operations agents: 460+ scenarios across 5 specialist agents (IoT, FMSR, TSFM, Work Order) plus multi-agent orchestration blueprints (MetaAgent, AgentHive) over MCP. [mcp, multi-agent, evals]
 - [WebArena](https://github.com/web-arena-x/webarena) — ⭐1.6k, complex, autonomy: headless, recovery: none, open-source: Realistic web env (e.g. e‑commerce, CMS, dev tools); 812 tasks; measures end-to-end web agent success. [python]
 - [WebVoyager](https://github.com/MinorJerry/WebVoyager) — ⭐1.1k, slightly complex, autonomy: headless, recovery: none, open-source: End-to-end web agent with LMMs: screenshots + actions on real sites; benchmark on 15 sites, GPT-4V for automatic eval. [evals, vision]
 - [ARC-AGI-2](https://github.com/arcprize/ARC-AGI-2) — ⭐733, super simple, autonomy: n/a, recovery: n/a, open-source: ARC Prize task set: grid-based abstraction/reasoning; public and private splits for generalization.
@@ -302,7 +306,7 @@ Deep research, document QA, and domain-specific agent loops.
 - [MiroThinker](https://github.com/MiroMindAI/MiroThinker) — ⭐8.4k, slightly complex, autonomy: headless, recovery: retry, unknown: Deep-research **harness** tuned for long browsing-and-reasoning chains; benchmarked on BrowseComp, GAIA, and HLE by pairing a dedicated agent loop with its own MiroThinker models rather than bolting search onto a generic chat agent. [evals]
 - [openagents](https://github.com/OpenAgentsInc/openagents) — ⭐445, complex, autonomy: headless, recovery: resumable, open-source: Platform for autonomous agents and autopilot-style workflows; decentralized/Nostr-oriented (Pylon runtime, actively shipped in 2026).
 
-## Libraries and SDKs (15 projects)
+## Libraries and SDKs (16 projects)
 
 Lightweight runtimes, tool loops, and provider-agnostic harness primitives.
 
@@ -310,7 +314,7 @@ Lightweight runtimes, tool loops, and provider-agnostic harness primitives.
 - [LiteLLM](https://github.com/BerriAI/litellm) — ⭐55.9k, mostly simple, autonomy: n/a, recovery: retry, open-source: One interface to 100+ LLMs; routing, caching, budgets. Not an agent framework—the pipe every agent framework uses. [provider-agnostic, python]
 - [Composio](https://github.com/ComposioHQ/composio) — ⭐29.6k, complex, autonomy: n/a, recovery: n/a, open-source: 1,000+ toolkits with auth, tool search, and a sandboxed workbench—drop-in tool layer so agents stop reinventing OAuth + integrations. Python and TypeScript. [sandbox, tool-discovery, python, typescript]
 - [smolagents](https://github.com/huggingface/smolagents) — ⭐28.7k, mostly simple, autonomy: bounded, recovery: none, open-source: Code-as-action agents: model outputs Python executed in sandbox (E2B, Modal, etc.); ~1k LOC core. [sandbox, python]
-- [deepagents](https://github.com/langchain-ai/deepagents) — ⭐27.5k, slightly complex, autonomy: bounded, recovery: durable, open-source: LangChain's Python+TypeScript agent harness on top of LangGraph: planning tool, virtual filesystem, shell sandbox, sub-agent spawning—the "Claude Code-style" harness as a reusable library. [multi-agent, sandbox, python, typescript]
+- [deepagents](https://github.com/langchain-ai/deepagents) — ⭐27.5k, slightly complex, autonomy: bounded, recovery: durable, open-source: LangChain's Python + [TypeScript](https://github.com/langchain-ai/deepagentsjs) agent harness on top of LangGraph: planning tool, virtual filesystem, shell sandbox, sub-agent spawning—the "Claude Code-style" harness as a reusable library. [multi-agent, sandbox, python, typescript]
 - [vercel/ai](https://github.com/vercel/ai) — ⭐26.1k, slightly complex, autonomy: bounded, recovery: retry, open-source: React and Node SDK for streaming, tool calls, and agent-style UIs; provider-agnostic. [provider-agnostic, typescript]
 - [pydantic-ai](https://github.com/pydantic/pydantic-ai) — ⭐19.2k, slightly complex, autonomy: bounded, recovery: durable, open-source: Type-safe Python agents with Pydantic I/O; multi-provider, MCP, Logfire observability, and human-in-the-loop. [mcp, typed, provider-agnostic, python]
 - [E2B](https://github.com/e2b-dev/E2B) — ⭐13.3k, slightly complex, autonomy: n/a, recovery: n/a, open-source: Firecracker sandboxes for executing agent-generated code; the hosted isolation layer many tool-calling demos use instead of running arbitrary LLM output on your laptop. [sandbox, python]
@@ -319,5 +323,6 @@ Lightweight runtimes, tool loops, and provider-agnostic harness primitives.
 - [Cloudflare Agents](https://github.com/cloudflare/agents) — ⭐5.4k, slightly complex, autonomy: headless, recovery: durable, open-source: Persistent, stateful agents on Durable Objects: state, websockets, scheduling, and AI chat baked in. The serverless answer to "where does the agent live?" [memory, typescript]
 - [openai-agents-js](https://github.com/openai/openai-agents-js) — ⭐3.6k, slightly complex, autonomy: bounded, recovery: resumable, open-source: Official OpenAI Agents SDK for Node/TS: handoffs, guardrails, voice; the JS counterpart to openai-agents-python. [multi-agent, voice, typescript]
 - [Agent Sandbox](https://github.com/kubernetes-sigs/agent-sandbox) — ⭐3.5k, slightly complex, autonomy: n/a, recovery: n/a, open-source: Kubernetes-native sandbox primitive for agent runtimes: a Sandbox resource plus warm pools and claims for fast-start, isolated, stateful workloads. The self-hosted answer to hosted sandbox APIs, from the Kubernetes SIGs org. [memory, sandbox, local]
+- [LLMCompiler](https://github.com/SqueezeAILab/LLMCompiler) — ⭐1.9k, slightly complex, autonomy: n/a, recovery: n/a, unknown: ICML 2024 tool-execution **harness** primitive: compiles a task into a DAG of tool calls and runs independent branches in parallel instead of one-at-a-time ReAct-style looping. [low-code, python]
 - [open-harness](https://github.com/MaxGfeller/open-harness) — ⭐594, slightly complex, autonomy: bounded, recovery: none, open-source: TypeScript Agent class on Vercel AI SDK; streaming events, filesystem/bash tools, MCP, and subagent delegation. [mcp, multi-agent, typescript]
 - [Community-curated agent lists](https://github.com/brandonhimpfen/awesome-ai-agents) — ⭐15, super simple, autonomy: n/a, recovery: n/a, unknown: Broader directories: e.g. [brandonhimpfen/awesome-ai-agents](https://github.com/brandonhimpfen/awesome-ai-agents), [axioma-ai-labs/awesome-ai-agent-frameworks](https://github.com/axioma-ai-labs/awesome-ai-agent-frameworks), [mb-mal/awesome-ai-agents-frameworks](https://github.com/mb-mal/awesome-ai-agents-frameworks)—differ by scope and update cadence.

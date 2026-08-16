@@ -223,6 +223,9 @@ projects:
   - name: Meta-Harness
     github_id: stanford-iris-lab/meta-harness
     category: "coding-harness-configs"
+  - name: learn-claude-code
+    github_id: shareAI-lab/learn-claude-code
+    category: "coding-harness-configs"
   # Personal agent runtimes
   - name: Talon
     github_id: dylanneve1/talon
@@ -262,6 +265,10 @@ projects:
   - name: CowAgent
     github_id: zhayujie/CowAgent
     labels: ["python"]
+    category: "personal-agent-runtimes"
+  - name: AnythingLLM
+    github_id: Mintplex-Labs/anything-llm
+    labels: ["javascript"]
     category: "personal-agent-runtimes"
   # Frameworks
   - name: langgraph
@@ -412,6 +419,9 @@ projects:
   - name: omnigent
     github_id: omnigent-ai/omnigent
     labels: ["python"]
+    category: "multi-agent"
+  - name: OASIS
+    github_id: camel-ai/oasis
     category: "multi-agent"
   # Plugins, MCPs, CLI tools
   - name: aider
@@ -572,6 +582,9 @@ projects:
     github_id: microsoft/agent-lightning
     labels: ["python"]
     category: "evaluation"
+  - name: AssetOpsBench
+    github_id: IBM/AssetOpsBench
+    category: "evaluation"
   # Observability and eval-ops
   - name: Langfuse
     github_id: langfuse/langfuse
@@ -610,6 +623,10 @@ projects:
   # Libraries and SDKs
   - name: deepagents
     github_id: langchain-ai/deepagents
+    labels: ["python"]
+    category: "libraries-sdks"
+  - name: LLMCompiler
+    github_id: SqueezeAILab/LLMCompiler
     labels: ["python"]
     category: "libraries-sdks"
   - name: pydantic-ai

@@ -29,8 +29,8 @@
 <text x="397.5" y="387.0" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">3</text>
 <text x="1050.0" y="387.0" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">23</text>
 <text x="615.0" y="652.0" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">1</text>
-<text x="832.5" y="519.5" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">8</text>
-<text x="1050.0" y="652.0" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">13</text>
+<text x="832.5" y="519.5" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">9</text>
+<text x="1050.0" y="652.0" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">14</text>
 <text x="1050.0" y="254.5" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">4</text>
 <text x="1050.0" y="519.5" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">7</text>
 <text x="615.0" y="387.0" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">2</text>
@@ -60,6 +60,7 @@
 <circle cx="1016.7" cy="582.5" r="5.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>WebVoyager — ⭐1.1k</title></circle>
 <circle cx="658.2" cy="622.8" r="5.5" fill="#0ea5e9" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>AIlice — ⭐1.4k</title></circle>
 <circle cx="1002.7" cy="580.0" r="5.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>WebArena — ⭐1.6k</title></circle>
+<circle cx="927.2" cy="556.5" r="5.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>AssetOpsBench — ⭐2.1k</title></circle>
 <circle cx="1000.1" cy="367.1" r="5.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>inspect_ai — ⭐2.5k</title></circle>
 <circle cx="798.9" cy="291.5" r="5.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Bee Agent Framework — ⭐3.4k</title></circle>
 <circle cx="678.2" cy="321.4" r="5.5" fill="#a16207" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>openai-agents-js — ⭐3.6k</title></circle>
@@ -113,6 +114,7 @@
 <circle cx="780.9" cy="364.0" r="5.5" fill="#ec4899" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>crewAI — ⭐56.9k</title></circle>
 <circle cx="694.8" cy="581.0" r="5.5" fill="#ec4899" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>OpenManus — ⭐57.9k</title></circle>
 <circle cx="755.4" cy="364.4" r="5.5" fill="#ec4899" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>autogen — ⭐60.3k</title></circle>
+<circle cx="748.8" cy="421.7" r="5.5" fill="#0ea5e9" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>AnythingLLM — ⭐64.5k</title></circle>
 <circle cx="261.3" cy="323.4" r="5.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Cline — ⭐65.9k</title></circle>
 <circle cx="680.5" cy="305.9" r="5.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Open Interpreter — ⭐67.9k</title></circle>
 <circle cx="927.3" cy="319.3" r="5.5" fill="#ec4899" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>MetaGPT — ⭐69.7k</title></circle>
@@ -141,5 +143,5 @@
 <text x="993.7" y="164.6" text-anchor="end" font-size="12.5" font-weight="600" fill="#1f2937">n8n</text>
 <text x="1004.2" y="448.5" text-anchor="end" font-size="12.5" font-weight="600" fill="#1f2937">langflow</text>
 <text x="534.2" y="313.2" text-anchor="start" font-size="12.5" font-weight="600" fill="#1f2937">aider</text>
-<text x="1060" y="784" text-anchor="end" font-size="12" fill="#9ca3af">96 loop-owning projects shown · 65 format/component entries (n/a) omitted · full tiers in harnesses.json</text>
+<text x="1060" y="784" text-anchor="end" font-size="12" fill="#9ca3af">98 loop-owning projects shown · 68 format/component entries (n/a) omitted · full tiers in harnesses.json</text>
 </svg>
