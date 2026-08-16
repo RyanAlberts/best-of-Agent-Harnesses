@@ -1942,6 +1942,20 @@ def load_deep_dives(attr_dir=None) -> dict:
     out, errors = {}, []
     by_slug = {project_slug(p.github_id): p.github_id
                for cat_id, _, _ in CATEGORIES for p in live_projects(cat_id)}
+    # Researched projects that have since been routed to the Graveyard keep
+    # their file on disk. Being archived upstream is not a research error, and
+    # generate_harnesses_json only ever reads deep dives for live_projects, so
+    # the entry is inert either way. Without this, the week a researched repo
+    # gets archived, refresh_stars.py adds it to ARCHIVED and the very next
+    # integrity check fails the build — which is exactly how the 2026-08-16
+    # rescore died on flowise.json. project_slug covers live projects only, so
+    # these are matched on the same base slug it derives.
+    graveyard_by_slug = {
+        (slug(p.github_id.split("/")[-1]) or slug(p.github_id.replace("/", "-"))):
+            p.github_id
+        for cat_id, _, _ in CATEGORIES for p in PROJECTS[cat_id]
+        if is_graveyard(p.github_id)
+    }
     for f in sorted(attr_dir.glob("*.json")):
         try:
             raw = json.loads(f.read_text())
@@ -1950,6 +1964,9 @@ def load_deep_dives(attr_dir=None) -> dict:
             continue
         gid = by_slug.get(f.stem)
         if gid is None or raw.get("github_id") != gid:
+            buried = graveyard_by_slug.get(f.stem)
+            if buried is not None and raw.get("github_id") == buried:
+                continue
             errors.append(f"{f.name}: no live project with slug {f.stem!r} and "
                           f"github_id {raw.get('github_id')!r}")
             continue
