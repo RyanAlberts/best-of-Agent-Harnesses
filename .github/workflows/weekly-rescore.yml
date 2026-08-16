@@ -48,7 +48,17 @@ jobs:
           # traffic snapshot: GitHub only retains 14 days of traffic data, so
           # this appends a weekly record to traffic-history.jsonl for real
           # trend analysis over time.
-          python3 scripts/snapshot_traffic.py | tee -a /tmp/refresh.log
+          #
+          # NON-FATAL on purpose. The traffic API needs admin-level access, which
+          # the secrets.GITHUB_TOKEN fallback does not have — it 403s and, under
+          # `set -euo pipefail`, took the whole 2026-08-16 rescore down with it
+          # (152 refreshed star counts thrown away because an optional telemetry
+          # step failed). A missing week of traffic history is a nuisance; a
+          # missing weekly rescore is the point of this workflow. The 403 still
+          # lands in the log and the run summary so it stays visible.
+          python3 scripts/snapshot_traffic.py 2>&1 | tee -a /tmp/refresh.log \
+            || echo "WARNING: traffic snapshot skipped (see error above) — rescore continues" \
+               | tee -a /tmp/refresh.log
           # discover runs BEFORE generate so the README/site radar section
           # hydrates from this week's queue, not last week's.
           python3 scripts/discover_candidates.py
