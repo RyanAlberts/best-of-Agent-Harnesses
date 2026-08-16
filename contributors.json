@@ -263,5 +263,35 @@
         "title": "Add project: Ouroboros"
       }
     ]
+  },
+  {
+    "login": "danawoodman",
+    "contributions": [
+      {
+        "kind": "pr",
+        "number": 78,
+        "title": "Remove Roo Code as a recommendation as it is archived"
+      }
+    ]
+  },
+  {
+    "login": "JanYork",
+    "contributions": [
+      {
+        "kind": "issue",
+        "number": 79,
+        "title": "Add project: LWC (Local Wiki CLI)"
+      }
+    ]
+  },
+  {
+    "login": "labmimors",
+    "contributions": [
+      {
+        "kind": "issue",
+        "number": 81,
+        "title": "Add project: MCP Lens"
+      }
+    ]
   }
 ]

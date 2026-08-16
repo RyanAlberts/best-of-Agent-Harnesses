@@ -1,6 +1,6 @@
 # The agent harness landscape, in two charts
 
-Both charts plot every project in [best-of-Agent-Harnesses](README.md), a curated list of 161 agent harnesses: the runtimes that turn an AI model into a working agent. They regenerate from the list data on every weekly refresh, so what you see is current.
+Both charts plot every project in [best-of-Agent-Harnesses](README.md), a curated list of 160 agent harnesses: the runtimes that turn an AI model into a working agent. They regenerate from the list data on every weekly refresh, so what you see is current.
 
 ## Adoption surface vs. stars
 

@@ -4,7 +4,7 @@ Orchestration is the layer that coordinates several AI agents working on one job
 
 | | [openai-agents-python](https://github.com/openai/openai-agents-python) | [CrewAI](https://github.com/crewAIInc/crewAI) | [AutoGen](https://github.com/microsoft/autogen) | [Agent Framework](https://github.com/microsoft/agent-framework) | [LangGraph](https://github.com/langchain-ai/langgraph) |
 |---|---|---|---|---|---|
-| ⭐ Stars | 28.5k | 56.9k | 60.3k | 12.7k | 39.3k |
+| ⭐ Stars | 28.7k | 57.2k | 60.5k | 12.8k | 39.8k |
 | Coordination model | **Handoffs**: one agent passes the whole conversation to another, like a call-center transfer | **Roles**: agents defined by role, goal, and backstory collaborate in Crews; Flows (its event-driven control layer) steer production paths | **Conversation**: agents talk in a group chat until a stop condition ends it | **Workflows**: graph-based workflows merging the AutoGen and Semantic Kernel lines, in Python and .NET | **Graph**: you draw an explicit map of states and steps; agents are nodes on it |
 | Status (checked 2026-08-12) | Active | Active | ⚠️ Maintenance mode: its own README says no new features and points new users at Agent Framework | Active: the designated successor, 1.0 GA in April 2026 | Active |
 | How visible is the control flow | Medium: it emerges from the handoff rules you wrote | Low to medium: declarative, the framework decides | Low: it emerges from the dialogue | High: workflows are explicit | Highest: you drew the map yourself |
