@@ -9,8 +9,8 @@
     "feed_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/feed.json",
     "license": "CC-BY-SA-4.0",
     "stars_captured": "2026-08-16",
-    "project_count": 160,
-    "graveyard_count": 4,
+    "project_count": 162,
+    "graveyard_count": 3,
     "tiers": [
       "super simple",
       "mostly simple",
@@ -219,6 +219,7 @@
       "intent": "I want low-code / visual workflows",
       "picks": [
         "langflow-ai/langflow",
+        "FlowiseAI/Flowise",
         "langgenius/dify",
         "n8n-io/n8n"
       ],
@@ -327,7 +328,7 @@
     {
       "kind": "use-case",
       "q": "What is the best agent harness if I want low-code / visual workflows?",
-      "a": "Top picks: langflow, Dify, n8n. See the “Frameworks” category for the full ranked list.",
+      "a": "Top picks: langflow, Flowise, Dify. See the “Frameworks” category for the full ranked list.",
       "slug": "what-is-the-best-agent-harness-if-i-want-low-code-visual-workflows"
     },
     {
@@ -375,7 +376,7 @@
     {
       "kind": "derived",
       "q": "How many of these agent harnesses are open source?",
-      "a": "118 of 160 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
+      "a": "119 of 162 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
       "slug": "how-many-of-these-agent-harnesses-are-open-source"
     },
     {
@@ -4039,6 +4040,67 @@
           "label": "blueprint",
           "detail": "The repo installs a self-hosted Python Agent class that already implements the ReAct-style browser loop (you configure task/llm/tools rather than write the loop); Browser Use Cloud is a named fully-hosted managed alternative.",
           "evidence": "https://raw.githubusercontent.com/browser-use/browser-use/HEAD/README.md"
+        }
+      }
+    },
+    {
+      "name": "Flowise",
+      "github_id": "FlowiseAI/Flowise",
+      "url": "https://github.com/FlowiseAI/Flowise",
+      "slug": "flowise",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#flowise",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/flowise/",
+      "description": "Drag-and-drop LangChain UI; deploy flows without code. The low-code sibling to Langflow, with a different component and hosting story.",
+      "category": "frameworks",
+      "category_title": "Frameworks",
+      "stars": 55379,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (low-code, drag-drop — product suite)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "retry",
+      "recovery_rank": 2,
+      "license_signal": "restricted (Apache+CLA)",
+      "tags": [
+        "low-code",
+        "typescript"
+      ],
+      "example": {
+        "label": "Agentic RAG flow",
+        "url": "https://github.com/FlowiseAI/Flowise/blob/main/packages/server/marketplaces/agentflowsv2/Agentic%20RAG.json"
+      },
+      "deep_dive": {
+        "researched": "2026-07-19",
+        "tooling_sandboxing": {
+          "rating": "strong",
+          "rank": 3,
+          "detail": "Custom Function/Tool nodes execute JavaScript inside NodeVM, \"an isolated V8 context with a custom module loader that enforces dependency and built-in module allowlists\"; built-in modules, external packages, and filesystem access are all denied by default unless explicitly whitelisted via TOOL_FUNCTION_BUILTIN_DEP/TOOL_FUNCTION_EXTERNAL_DEP/ALLOW_BUILTIN_DEP.",
+          "evidence": "https://deepwiki.com/FlowiseAI/Flowise/6.3-sandbox-security"
+        },
+        "context_memory": {
+          "rating": "strong",
+          "rank": 3,
+          "detail": "Chat memory nodes persist conversation history in the chat_message database table (or external Redis/DynamoDB/MongoDB Atlas/Zep backends) keyed by a sessionId, surviving app restarts rather than living only in the request.",
+          "evidence": "https://docs.flowiseai.com/integrations/langchain/memory/buffer-window-memory"
+        },
+        "lifecycle_hooks": {
+          "rating": "full",
+          "rank": 3,
+          "detail": "Simple Prompt Moderation uses an LLM to check a user query against a deny list and, on a match, outputs a default error message instead of forwarding it, preventing the problematic input from ever reaching the primary LLM/tool call.",
+          "evidence": "https://docs.flowiseai.com/integrations/langchain/moderation/simple-prompt-moderation"
+        },
+        "prompt_optimization": {
+          "rating": "configurable",
+          "rank": 2,
+          "detail": "Chat Prompt Template nodes expose editable system/human messages with prompt-value variables, and overrideConfig.systemMessagePrompt lets callers override the system message per API call; no automatic prompt-tuning loop is documented.",
+          "evidence": "https://docs.flowiseai.com/integrations/langchain/prompts/chat-prompt-template"
+        },
+        "build_vs_buy": {
+          "tier": 2,
+          "label": "blueprint",
+          "detail": "Repo installs the self-hostable, config/flow-driven LangChain UI (deployable to AWS/Azure/GCP/DO); Flowise Cloud is a named managed hosting alternative, not the primary installed artifact.",
+          "evidence": "https://raw.githubusercontent.com/FlowiseAI/Flowise/HEAD/README.md"
         }
       }
     },
@@ -7867,6 +7929,35 @@
       "deep_dive": null
     },
     {
+      "name": "deepagents.js",
+      "github_id": "langchain-ai/deepagentsjs",
+      "url": "https://github.com/langchain-ai/deepagentsjs",
+      "slug": "deepagentsjs",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#deepagentsjs",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/deepagentsjs/",
+      "description": "The JS/TS counterpart to deepagents: same planning-tool, virtual-filesystem, and sub-agent-spawning harness on LangGraph.js, for Node projects that skip a separate backend runtime.",
+      "category": "libraries-sdks",
+      "category_title": "Libraries and SDKs",
+      "stars": 1482,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (planning, files, sub-agents)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "durable",
+      "recovery_rank": 4,
+      "license_signal": "open-source",
+      "tags": [
+        "multi-agent",
+        "typescript"
+      ],
+      "example": {
+        "label": "Examples",
+        "url": "https://github.com/langchain-ai/deepagentsjs#readme"
+      },
+      "deep_dive": null
+    },
+    {
       "name": "open-harness",
       "github_id": "MaxGfeller/open-harness",
       "url": "https://github.com/MaxGfeller/open-harness",
@@ -7930,13 +8021,6 @@
       "last_stars": 240416,
       "since": "2026-07-11",
       "reason": "suspected star manipulation — ~228k stars / ~35k forks on a repo created 2026-01 with no matching install base, dependents, or discussion; fork-to-star ratio and growth curve are inconsistent with organic adoption"
-    },
-    {
-      "github_id": "FlowiseAI/Flowise",
-      "name": "Flowise",
-      "last_stars": 55379,
-      "since": "2026-08-16",
-      "reason": "archived upstream — kept for citation"
     },
     {
       "github_id": "spring-ai-community/spring-ai-tool-search-tool",

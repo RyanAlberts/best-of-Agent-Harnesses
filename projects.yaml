@@ -345,6 +345,10 @@ projects:
     github_id: howl-anderson/agentsilex
     labels: ["python"]
     category: "frameworks"
+  - name: Flowise
+    github_id: FlowiseAI/Flowise
+    labels: ["javascript"]
+    category: "frameworks"
   - name: browser-use
     github_id: browser-use/browser-use
     labels: ["python"]
@@ -607,6 +611,10 @@ projects:
   - name: deepagents
     github_id: langchain-ai/deepagents
     labels: ["python"]
+    category: "libraries-sdks"
+  - name: deepagents.js
+    github_id: langchain-ai/deepagentsjs
+    labels: ["javascript"]
     category: "libraries-sdks"
   - name: pydantic-ai
     github_id: pydantic/pydantic-ai

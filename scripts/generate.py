@@ -619,6 +619,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("deepagents", "langchain-ai/deepagents",
                 "LangChain's Python+TypeScript agent harness on top of LangGraph: planning tool, virtual filesystem, shell sandbox, sub-agent spawning—the \"Claude Code-style\" harness as a reusable library.",
                 "slightly complex (planning, files, sub-agents)", labels=["python"]),
+        Project("deepagents.js", "langchain-ai/deepagentsjs",
+                "The JS/TS counterpart to deepagents: same planning-tool, virtual-filesystem, and sub-agent-spawning harness on LangGraph.js, for Node projects that skip a separate backend runtime.",
+                "slightly complex (planning, files, sub-agents)", labels=["javascript"]),
         Project("pydantic-ai", "pydantic/pydantic-ai",
                 "Type-safe Python agents with Pydantic I/O; multi-provider, MCP, Logfire observability, and human-in-the-loop.",
                 "slightly complex (type-safe, MCP, Logfire)", labels=["python"]),
@@ -816,6 +819,7 @@ META: dict[str, tuple[int, str, str]] = {
     "aiming-lab/AutoResearchClaw": (14029, "https://github.com/aiming-lab/AutoResearchClaw#readme", "Project README"),
     # libraries-sdks
     "langchain-ai/deepagents": (27811, "https://github.com/langchain-ai/deepagents/tree/main/examples/deep_research", "Deep research agent"),
+    "langchain-ai/deepagentsjs": (1482, "", ""),
     "pydantic/pydantic-ai": (19331, "https://github.com/pydantic/pydantic-ai/blob/main/examples/pydantic_ai_examples/bank_support.py", "Bank support agent"),
     "MaxGfeller/open-harness": (598, "https://github.com/MaxGfeller/open-harness/tree/main/examples/cli", "Terminal CLI agent"),
     "vercel/ai": (26222, "https://github.com/vercel/ai/tree/main/examples/next-agent", "Next.js agent example"),
@@ -873,6 +877,12 @@ KEEP_DESPITE_ARCHIVED: "set[str]" = {
     # widely referenced/forked (see Kilo Code, its direct successor, added
     # this cycle). Historically important enough to keep out of the Graveyard.
     "RooCodeInc/Roo-Code",
+    # 55k+ stars, one of the earliest and most-forked low-code agent/LLM
+    # workflow builders (peer to Langflow, Dify); archived upstream
+    # 2026-08-16. Still widely deployed and referenced — historically
+    # important enough to keep out of the Graveyard pending maintainer
+    # signal on the archival.
+    "FlowiseAI/Flowise",
 }
 
 # Repos routed to the Graveyard for a curation-integrity reason rather than
@@ -1196,6 +1206,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "huggingface/smolagents": ("bounded", "none"),
     "vercel/ai": ("bounded", "retry"),
     "langchain-ai/deepagents": ("bounded", "durable"),
+    "langchain-ai/deepagentsjs": ("bounded", "durable"),
     "pydantic/pydantic-ai": ("bounded", "durable"),
     "e2b-dev/E2B": ("n/a", "n/a"),
     "strands-agents/harness-sdk": ("bounded", "resumable"),
