@@ -873,6 +873,13 @@ KEEP_DESPITE_ARCHIVED: "set[str]" = {
     # widely referenced/forked (see Kilo Code, its direct successor, added
     # this cycle). Historically important enough to keep out of the Graveyard.
     "RooCodeInc/Roo-Code",
+    # 55k+ stars, one of the category-defining low-code agent-workflow
+    # builders (see Langflow, n8n in the same tier); archived upstream
+    # 2026-08-16. Still an actively commercialized product (FlowiseAI Cloud)
+    # with heavy adoption — proposed here rather than confirmed; flagged in
+    # the PR for a decision since a corporate repo going archived while the
+    # product is still sold is more likely a restructure than abandonment.
+    "FlowiseAI/Flowise",
 }
 
 # Repos routed to the Graveyard for a curation-integrity reason rather than
