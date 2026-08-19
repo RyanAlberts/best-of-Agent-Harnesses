@@ -604,6 +604,10 @@ projects:
     github_id: aiming-lab/AutoResearchClaw
     category: "research-task"
   # Libraries and SDKs
+  - name: SandBase Harness
+    github_id: sandbaseai/sandbase-harness
+    labels: ["javascript"]
+    category: "libraries-sdks"
   - name: deepagents
     github_id: langchain-ai/deepagents
     labels: ["python"]

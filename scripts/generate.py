@@ -616,6 +616,9 @@ PROJECTS: dict[str, list[Project]] = {
                 "complex (autonomous research, multi-agent debate — product suite)", oss="❓"),
     ],
     "libraries-sdks": [
+        Project("SandBase Harness", "sandbaseai/sandbase-harness",
+                "Local-first runtime layer for AI agents: persistent sessions, MCP toolsets, permission policies, memory, audit trails, and local/Docker/Kubernetes sandbox boundaries behind a Claude Managed Agents-style API. The **harness** contribution is the governed execution and session substrate around an SDK-owned model loop, not another model SDK.",
+                "complex (managed runtime, sandbox backends — product suite)", labels=["javascript"]),
         Project("deepagents", "langchain-ai/deepagents",
                 "LangChain's Python+TypeScript agent harness on top of LangGraph: planning tool, virtual filesystem, shell sandbox, sub-agent spawning—the \"Claude Code-style\" harness as a reusable library.",
                 "slightly complex (planning, files, sub-agents)", labels=["python"]),
@@ -815,6 +818,7 @@ META: dict[str, tuple[int, str, str]] = {
     "MiroMindAI/MiroThinker": (8357, "https://github.com/MiroMindAI/MiroThinker#readme", "Project README"),
     "aiming-lab/AutoResearchClaw": (14029, "https://github.com/aiming-lab/AutoResearchClaw#readme", "Project README"),
     # libraries-sdks
+    "sandbaseai/sandbase-harness": (621, "https://github.com/sandbaseai/sandbase-harness/tree/main/examples/deepseek-harness", "DeepSeek Harness bridge"),
     "langchain-ai/deepagents": (27811, "https://github.com/langchain-ai/deepagents/tree/main/examples/deep_research", "Deep research agent"),
     "pydantic/pydantic-ai": (19331, "https://github.com/pydantic/pydantic-ai/blob/main/examples/pydantic_ai_examples/bank_support.py", "Bank support agent"),
     "MaxGfeller/open-harness": (598, "https://github.com/MaxGfeller/open-harness/tree/main/examples/cli", "Terminal CLI agent"),
@@ -1195,6 +1199,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "ComposioHQ/composio": ("n/a", "n/a"),
     "huggingface/smolagents": ("bounded", "none"),
     "vercel/ai": ("bounded", "retry"),
+    "sandbaseai/sandbase-harness": ("n/a", "n/a"),
     "langchain-ai/deepagents": ("bounded", "durable"),
     "pydantic/pydantic-ai": ("bounded", "durable"),
     "e2b-dev/E2B": ("n/a", "n/a"),

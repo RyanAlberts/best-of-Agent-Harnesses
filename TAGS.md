@@ -1,13 +1,13 @@
 <!-- markdownlint-disable -->
 # Tags — cross-reference
 
-_Auto-generated from `scripts/generate.py`. 160 projects across 22 canonical tags. Edit projects in `generate.py` (not here) and rerun the script._
+_Auto-generated from `scripts/generate.py`. 161 projects across 22 canonical tags. Edit projects in `generate.py` (not here) and rerun the script._
 
 Tag chips appear next to each project in [README.md](README.md). This page lists every tag once with the projects that carry it, grouped by category and sorted by GitHub stars within each category.
 
 ## All tags
 
-[`mcp`](#mcp) (33) · [`memory`](#memory) (35) · [`multi-agent`](#multi-agent) (27) · [`evals`](#evals) (21) · [`voice`](#voice) (2) · [`vision`](#vision) (3) · [`browser`](#browser) (9) · [`sandbox`](#sandbox) (27) · [`low-code`](#low-code) (3) · [`rag`](#rag) (8) · [`tool-discovery`](#tool-discovery) (5) · [`training`](#training) (5) · [`workflow`](#workflow) (10) · [`typed`](#typed) (3) · [`local`](#local) (6) · [`provider-agnostic`](#provider-agnostic) (11) · [`cli`](#cli) (22) · [`ide`](#ide) (13) · [`tui`](#tui) (4) · [`rust`](#rust) (5) · [`python`](#python) (79) · [`typescript`](#typescript) (40)
+[`mcp`](#mcp) (34) · [`memory`](#memory) (36) · [`multi-agent`](#multi-agent) (27) · [`evals`](#evals) (21) · [`voice`](#voice) (2) · [`vision`](#vision) (3) · [`browser`](#browser) (9) · [`sandbox`](#sandbox) (28) · [`low-code`](#low-code) (3) · [`rag`](#rag) (8) · [`tool-discovery`](#tool-discovery) (5) · [`training`](#training) (5) · [`workflow`](#workflow) (10) · [`typed`](#typed) (3) · [`local`](#local) (6) · [`provider-agnostic`](#provider-agnostic) (11) · [`cli`](#cli) (22) · [`ide`](#ide) (13) · [`tui`](#tui) (4) · [`rust`](#rust) (5) · [`python`](#python) (79) · [`typescript`](#typescript) (41)
 
 ---
 
@@ -68,6 +68,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 - [pydantic-ai](https://github.com/pydantic/pydantic-ai) — ⭐19.3k — Type-safe Python agents with Pydantic I/O; multi-provider, MCP, Logfire observability, and human-in-the-loop.
 - [strands-agents](https://github.com/strands-agents/harness-sdk) — ⭐6.9k — Model-driven Python SDK; decorators for tools, native MCP, multi-agent; "minimal code" without sacrificing provider choice.
+- [SandBase Harness](https://github.com/sandbaseai/sandbase-harness) — ⭐621 — Local-first runtime layer for AI agents: persistent sessions, MCP toolsets, permission policies, memory, audit trails, and local/Docker/Kubernetes sandbox boundaries behind a Claude Managed Agents-style API. The **harness** contribution is the governed execution and session substrate around an SDK-owned model loop, not another model SDK.
 - [open-harness](https://github.com/MaxGfeller/open-harness) — ⭐598 — TypeScript Agent class on Vercel AI SDK; streaming events, filesystem/bash tools, MCP, and subagent delegation.
 
 ---
@@ -138,6 +139,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [Steel](https://github.com/steel-dev/steel-browser) — ⭐7.5k — Open-source browser API for agents: cloud or self-hosted Chrome sessions with stealth, residential proxies, CAPTCHA solving, and persistent profiles. The only open-source core in the hosted browser-infrastructure lane (Browserbase and Hyperbrowser are closed).
 - [Cloudflare Agents](https://github.com/cloudflare/agents) — ⭐5.4k — Persistent, stateful agents on Durable Objects: state, websockets, scheduling, and AI chat baked in. The serverless answer to "where does the agent live?"
 - [Agent Sandbox](https://github.com/kubernetes-sigs/agent-sandbox) — ⭐3.5k — Kubernetes-native sandbox primitive for agent runtimes: a Sandbox resource plus warm pools and claims for fast-start, isolated, stateful workloads. The self-hosted answer to hosted sandbox APIs, from the Kubernetes SIGs org.
+- [SandBase Harness](https://github.com/sandbaseai/sandbase-harness) — ⭐621 — Local-first runtime layer for AI agents: persistent sessions, MCP toolsets, permission policies, memory, audit trails, and local/Docker/Kubernetes sandbox boundaries behind a Claude Managed Agents-style API. The **harness** contribution is the governed execution and session substrate around an SDK-owned model loop, not another model SDK.
 
 ---
 
@@ -344,6 +346,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [deepagents](https://github.com/langchain-ai/deepagents) — ⭐27.8k — LangChain's Python+TypeScript agent harness on top of LangGraph: planning tool, virtual filesystem, shell sandbox, sub-agent spawning—the "Claude Code-style" harness as a reusable library.
 - [E2B](https://github.com/e2b-dev/E2B) — ⭐13.4k — Firecracker sandboxes for executing agent-generated code; the hosted isolation layer many tool-calling demos use instead of running arbitrary LLM output on your laptop.
 - [Agent Sandbox](https://github.com/kubernetes-sigs/agent-sandbox) — ⭐3.5k — Kubernetes-native sandbox primitive for agent runtimes: a Sandbox resource plus warm pools and claims for fast-start, isolated, stateful workloads. The self-hosted answer to hosted sandbox APIs, from the Kubernetes SIGs org.
+- [SandBase Harness](https://github.com/sandbaseai/sandbase-harness) — ⭐621 — Local-first runtime layer for AI agents: persistent sessions, MCP toolsets, permission policies, memory, audit trails, and local/Docker/Kubernetes sandbox boundaries behind a Claude Managed Agents-style API. The **harness** contribution is the governed execution and session substrate around an SDK-owned model loop, not another model SDK.
 
 ---
 
@@ -796,6 +799,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [vercel/ai](https://github.com/vercel/ai) — ⭐26.2k — React and Node SDK for streaming, tool calls, and agent-style UIs; provider-agnostic.
 - [Cloudflare Agents](https://github.com/cloudflare/agents) — ⭐5.4k — Persistent, stateful agents on Durable Objects: state, websockets, scheduling, and AI chat baked in. The serverless answer to "where does the agent live?"
 - [openai-agents-js](https://github.com/openai/openai-agents-js) — ⭐3.6k — Official OpenAI Agents SDK for Node/TS: handoffs, guardrails, voice; the JS counterpart to openai-agents-python.
+- [SandBase Harness](https://github.com/sandbaseai/sandbase-harness) — ⭐621 — Local-first runtime layer for AI agents: persistent sessions, MCP toolsets, permission policies, memory, audit trails, and local/Docker/Kubernetes sandbox boundaries behind a Claude Managed Agents-style API. The **harness** contribution is the governed execution and session substrate around an SDK-owned model loop, not another model SDK.
 - [open-harness](https://github.com/MaxGfeller/open-harness) — ⭐598 — TypeScript Agent class on Vercel AI SDK; streaming events, filesystem/bash tools, MCP, and subagent delegation.
 
 ---
@@ -986,4 +990,5 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [vercel/ai](https://github.com/vercel/ai) — ⭐26.2k — React and Node SDK for streaming, tool calls, and agent-style UIs; provider-agnostic.
 - [Cloudflare Agents](https://github.com/cloudflare/agents) — ⭐5.4k — Persistent, stateful agents on Durable Objects: state, websockets, scheduling, and AI chat baked in. The serverless answer to "where does the agent live?"
 - [openai-agents-js](https://github.com/openai/openai-agents-js) — ⭐3.6k — Official OpenAI Agents SDK for Node/TS: handoffs, guardrails, voice; the JS counterpart to openai-agents-python.
+- [SandBase Harness](https://github.com/sandbaseai/sandbase-harness) — ⭐621 — Local-first runtime layer for AI agents: persistent sessions, MCP toolsets, permission policies, memory, audit trails, and local/Docker/Kubernetes sandbox boundaries behind a Claude Managed Agents-style API. The **harness** contribution is the governed execution and session substrate around an SDK-owned model loop, not another model SDK.
 - [open-harness](https://github.com/MaxGfeller/open-harness) — ⭐598 — TypeScript Agent class on Vercel AI SDK; streaming events, filesystem/bash tools, MCP, and subagent delegation.
