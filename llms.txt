@@ -1,6 +1,6 @@
 # Best of Agent Harnesses
 
-> Hand-curated, ranked list of 160 AI agent harnesses — the runtimes that close the loop between a stateless model and the outside world. 12 categories, a 4-tier adoption-surface rating (simplicity ↔ capability), capability tags, a license signal, and one concrete example link per project. Stars captured 2026-08-16.
+> Hand-curated, ranked list of 161 AI agent harnesses — the runtimes that close the loop between a stateless model and the outside world. 12 categories, a 4-tier adoption-surface rating (simplicity ↔ capability), capability tags, a license signal, and one concrete example link per project. Stars captured 2026-08-16.
 
 Maintained at https://github.com/RyanAlberts/best-of-Agent-Harnesses (CC-BY-SA-4.0).
 Structured data: https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/harnesses.json
@@ -90,7 +90,7 @@ Harnesses designed for unattended runs, batches, and fleets: opencode, OpenHands
 Harnesses whose execution state persists across restarts: langgraph-bigtool, n8n, langgraph, mastra, letta, deepagents, pydantic-ai, Cloudflare Agents.
 
 ### How many of these agent harnesses are open source?
-118 of 160 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.
+119 of 161 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.
 
 ### What is an agent harness?
 The runtime that turns a model into an agent: it decides what the model's reasoning is allowed to touch, and supplies the orchestration, tool wiring, memory, error recovery, and guardrails around per-turn inference.
@@ -301,7 +301,7 @@ Deep research, document QA, and domain-specific agent loops.
 - [MiroThinker](https://github.com/MiroMindAI/MiroThinker) — ⭐8.4k, slightly complex, autonomy: headless, recovery: retry, unknown: Deep-research **harness** tuned for long browsing-and-reasoning chains; benchmarked on BrowseComp, GAIA, and HLE by pairing a dedicated agent loop with its own MiroThinker models rather than bolting search onto a generic chat agent. [evals]
 - [openagents](https://github.com/OpenAgentsInc/openagents) — ⭐446, complex, autonomy: headless, recovery: resumable, open-source: Platform for autonomous agents and autopilot-style workflows; decentralized/Nostr-oriented (Pylon runtime, actively shipped in 2026).
 
-## Libraries and SDKs (15 projects)
+## Libraries and SDKs (16 projects)
 
 Lightweight runtimes, tool loops, and provider-agnostic harness primitives.
 
@@ -318,5 +318,6 @@ Lightweight runtimes, tool loops, and provider-agnostic harness primitives.
 - [Cloudflare Agents](https://github.com/cloudflare/agents) — ⭐5.4k, slightly complex, autonomy: headless, recovery: durable, open-source: Persistent, stateful agents on Durable Objects: state, websockets, scheduling, and AI chat baked in. The serverless answer to "where does the agent live?" [memory, typescript]
 - [openai-agents-js](https://github.com/openai/openai-agents-js) — ⭐3.6k, slightly complex, autonomy: bounded, recovery: resumable, open-source: Official OpenAI Agents SDK for Node/TS: handoffs, guardrails, voice; the JS counterpart to openai-agents-python. [multi-agent, voice, typescript]
 - [Agent Sandbox](https://github.com/kubernetes-sigs/agent-sandbox) — ⭐3.5k, slightly complex, autonomy: n/a, recovery: n/a, open-source: Kubernetes-native sandbox primitive for agent runtimes: a Sandbox resource plus warm pools and claims for fast-start, isolated, stateful workloads. The self-hosted answer to hosted sandbox APIs, from the Kubernetes SIGs org. [memory, sandbox, local]
+- [SandBase Harness](https://github.com/sandbaseai/sandbase-harness) — ⭐621, complex, autonomy: n/a, recovery: n/a, open-source: Local-first runtime layer for AI agents: persistent sessions, MCP toolsets, permission policies, memory, audit trails, and local/Docker/Kubernetes sandbox boundaries behind a Claude Managed Agents-style API. The **harness** contribution is the governed execution and session substrate around an SDK-owned model loop, not another model SDK. [mcp, memory, sandbox, typescript]
 - [open-harness](https://github.com/MaxGfeller/open-harness) — ⭐598, slightly complex, autonomy: bounded, recovery: none, open-source: TypeScript Agent class on Vercel AI SDK; streaming events, filesystem/bash tools, MCP, and subagent delegation. [mcp, multi-agent, typescript]
 - [Community-curated agent lists](https://github.com/brandonhimpfen/awesome-ai-agents) — ⭐15, super simple, autonomy: n/a, recovery: n/a, unknown: Broader directories: e.g. [brandonhimpfen/awesome-ai-agents](https://github.com/brandonhimpfen/awesome-ai-agents), [axioma-ai-labs/awesome-ai-agent-frameworks](https://github.com/axioma-ai-labs/awesome-ai-agent-frameworks), [mb-mal/awesome-ai-agents-frameworks](https://github.com/mb-mal/awesome-ai-agents-frameworks)—differ by scope and update cadence.

@@ -9,7 +9,7 @@
     "feed_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/feed.json",
     "license": "CC-BY-SA-4.0",
     "stars_captured": "2026-08-16",
-    "project_count": 160,
+    "project_count": 161,
     "graveyard_count": 4,
     "tiers": [
       "super simple",
@@ -375,7 +375,7 @@
     {
       "kind": "derived",
       "q": "How many of these agent harnesses are open source?",
-      "a": "118 of 160 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
+      "a": "119 of 161 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
       "slug": "how-many-of-these-agent-harnesses-are-open-source"
     },
     {
@@ -7863,6 +7863,37 @@
       "example": {
         "label": "Sandbox resource quickstart",
         "url": "https://github.com/kubernetes-sigs/agent-sandbox#readme"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "SandBase Harness",
+      "github_id": "sandbaseai/sandbase-harness",
+      "url": "https://github.com/sandbaseai/sandbase-harness",
+      "slug": "sandbase-harness",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#sandbase-harness",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/sandbase-harness/",
+      "description": "Local-first runtime layer for AI agents: persistent sessions, MCP toolsets, permission policies, memory, audit trails, and local/Docker/Kubernetes sandbox boundaries behind a Claude Managed Agents-style API. The **harness** contribution is the governed execution and session substrate around an SDK-owned model loop, not another model SDK.",
+      "category": "libraries-sdks",
+      "category_title": "Libraries and SDKs",
+      "stars": 621,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (managed runtime, sandbox backends — product suite)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [
+        "mcp",
+        "memory",
+        "sandbox",
+        "typescript"
+      ],
+      "example": {
+        "label": "DeepSeek Harness bridge",
+        "url": "https://github.com/sandbaseai/sandbase-harness/tree/main/examples/deepseek-harness"
       },
       "deep_dive": null
     },

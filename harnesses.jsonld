@@ -29,7 +29,7 @@
   ],
   "mainEntity": {
     "@type": "ItemList",
-    "numberOfItems": 160,
+    "numberOfItems": 161,
     "itemListElement": [
       {
         "@type": "ListItem",
@@ -1932,6 +1932,18 @@
         "position": 159,
         "item": {
           "@type": "SoftwareApplication",
+          "name": "SandBase Harness",
+          "url": "https://github.com/sandbaseai/sandbase-harness",
+          "description": "Local-first runtime layer for AI agents: persistent sessions, MCP toolsets, permission policies, memory, audit trails, and local/Docker/Kubernetes sandbox boundaries behind a Claude Managed Agents-style API. The **harness** contribution is the governed execution and session substrate around an SDK-owned model loop, not another model SDK.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "mcp, memory, sandbox, typescript"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 160,
+        "item": {
+          "@type": "SoftwareApplication",
           "name": "open-harness",
           "url": "https://github.com/MaxGfeller/open-harness",
           "description": "TypeScript Agent class on Vercel AI SDK; streaming events, filesystem/bash tools, MCP, and subagent delegation.",
@@ -1941,7 +1953,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 160,
+        "position": 161,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Community-curated agent lists",
