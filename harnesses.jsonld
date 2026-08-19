@@ -29,7 +29,7 @@
   ],
   "mainEntity": {
     "@type": "ItemList",
-    "numberOfItems": 160,
+    "numberOfItems": 216,
     "itemListElement": [
       {
         "@type": "ListItem",
@@ -228,6 +228,30 @@
         "position": 17,
         "item": {
           "@type": "SoftwareApplication",
+          "name": "Orca",
+          "url": "https://github.com/stablyai/orca",
+          "description": "Cross-platform Agent Development Environment that wraps multiple coding-agent **harnesses** (Claude Code, Codex, Cursor, Copilot), each in its own git worktree, adding a unified desktop/mobile/VPS shell, computer-use, and fan-out/merge tooling on top.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "multi-agent, ide"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 18,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "CodeWhale",
+          "url": "https://github.com/Hmbown/CodeWhale",
+          "description": "Rust TUI/CLI **harness** that reads code, edits files, runs shell commands, and checks its own work across DeepSeek, OpenRouter, Hugging Face, and local model providers, with approval-gated tools, OS sandboxing, and per-role model pinning.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "sandbox, provider-agnostic, cli, tui, rust"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 19,
+        "item": {
+          "@type": "SoftwareApplication",
           "name": "DeepSeek-Reasonix",
           "url": "https://github.com/esengine/DeepSeek-Reasonix",
           "description": "DeepSeek-native terminal coding agent. The **harness** is engineered around prefix-cache stability for long-running sessions; the TUI is the shell.",
@@ -237,7 +261,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 18,
+        "position": 20,
         "item": {
           "@type": "SoftwareApplication",
           "name": "vibe-kanban",
@@ -249,7 +273,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 19,
+        "position": 21,
         "item": {
           "@type": "SoftwareApplication",
           "name": "crush",
@@ -261,7 +285,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 20,
+        "position": 22,
         "item": {
           "@type": "SoftwareApplication",
           "name": "qwen-code",
@@ -273,7 +297,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 21,
+        "position": 23,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Kilo Code",
@@ -285,7 +309,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 22,
+        "position": 24,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Symphony",
@@ -297,7 +321,31 @@
       },
       {
         "@type": "ListItem",
-        "position": 23,
+        "position": 25,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "cmux",
+          "url": "https://github.com/manaflow-ai/cmux",
+          "description": "Ghostty-based terminal shell that wraps Claude Code, Codex, Gemini, and other coding-agent CLIs with vertical tabs, a socket/CLI scripting API, and browser panes for computer-use—a multiplexer around each agent's own **harness** rather than a harness itself.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "browser, cli"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 26,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "Grok Build",
+          "url": "https://github.com/xai-org/grok-build",
+          "description": "xAI's official terminal coding agent: the **harness** is a full-screen, mouse-interactive TUI loop that edits files, runs shell commands, browses the web, and manages long-running tasks against the Grok model lineup.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "cli, tui"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 27,
         "item": {
           "@type": "SoftwareApplication",
           "name": "oh-my-pi",
@@ -309,7 +357,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 24,
+        "position": 28,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Roo Code",
@@ -321,7 +369,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 25,
+        "position": 29,
         "item": {
           "@type": "SoftwareApplication",
           "name": "jcode",
@@ -333,7 +381,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 26,
+        "position": 30,
         "item": {
           "@type": "SoftwareApplication",
           "name": "eigent",
@@ -345,7 +393,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 27,
+        "position": 31,
         "item": {
           "@type": "SoftwareApplication",
           "name": "cc-haha",
@@ -357,7 +405,91 @@
       },
       {
         "@type": "ListItem",
-        "position": 28,
+        "position": 32,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "VibeSDK",
+          "url": "https://github.com/cloudflare/vibesdk",
+          "description": "Cloudflare's open-source vibe-coding **harness**/runtime—the agent loop, sandboxed code execution, and orchestration built on Workers/Durable Objects—for standing up your own text-to-app coding-agent platform, not just a UI shell.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "sandbox"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 33,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "Command Code",
+          "url": "https://github.com/CommandCodeAI/command-code",
+          "description": "CLI coding agent product whose **harness** is built to learn a developer's coding taste over time, shipped by a dedicated startup rather than as a community wrapper around another agent.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "cli"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 34,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "Grok CLI (superagent-ai)",
+          "url": "https://github.com/superagent-ai/grok-cli",
+          "description": "Community-built terminal **harness** for xAI's Grok API, with sub-agents on by default and remote control via Telegram; explicitly unaffiliated with xAI itself.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "multi-agent, cli"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 35,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "little-coder",
+          "url": "https://github.com/itayinbarr/little-coder",
+          "description": "Offline, pi-based coding-agent **harness** purpose-tuned for small local LLMs—the same scaffold runs Aider-Polyglot, Terminal-Bench, and GAIA tasks entirely on a laptop GPU with no cloud dependency.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": ""
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 36,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "ATLAS",
+          "url": "https://github.com/itigges22/ATLAS",
+          "description": "Local coding-agent **harness** that wraps small open-weight models with a planning/candidate-generation/verification/repair loop (test-time compute) to reach frontier-model-level coding benchmarks on consumer hardware, no API required.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "evals, cli, tui"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 37,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "Open Cowork",
+          "url": "https://github.com/OpenCoworkAI/open-cowork",
+          "description": "Open-source desktop app that packages Claude Code, MCP tools, and Skills behind a one-click GUI **harness** with sandbox isolation—the shell around several existing agent harnesses rather than a new one.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "mcp, sandbox"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 38,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "Antigravity CLI",
+          "url": "https://github.com/google-antigravity/antigravity-cli",
+          "description": "Google's official terminal surface for the Antigravity agent **harness**: shares the same underlying reasoning/execution/orchestration harness as the Antigravity IDE and desktop app, exposed via a keyboard-driven CLI shell instead of a GUI.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "cli, ide"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 39,
         "item": {
           "@type": "SoftwareApplication",
           "name": "claw-code-agent",
@@ -369,7 +501,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 29,
+        "position": 40,
         "item": {
           "@type": "SoftwareApplication",
           "name": "AgentBox",
@@ -381,7 +513,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 30,
+        "position": 41,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Proliferate",
@@ -393,7 +525,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 31,
+        "position": 42,
         "item": {
           "@type": "SoftwareApplication",
           "name": "superpowers",
@@ -405,7 +537,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 32,
+        "position": 43,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Anthropic Skills",
@@ -417,7 +549,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 33,
+        "position": 44,
         "item": {
           "@type": "SoftwareApplication",
           "name": "GStack",
@@ -429,7 +561,19 @@
       },
       {
         "@type": "ListItem",
-        "position": 34,
+        "position": 45,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "Ponytail",
+          "url": "https://github.com/DietrichGebert/ponytail",
+          "description": "YAGNI-enforcing skill/plugin—a short instruction set the **harness** loads into context rather than a runtime of its own—that pushes coding agents (Claude Code, Cursor, Codex) to check for existing solutions before generating new code. An early viral code-reduction claim was publicly challenged and corrected downward; treat the headline number skeptically.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "ide"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 46,
         "item": {
           "@type": "SoftwareApplication",
           "name": "addyosmani/agent-skills",
@@ -441,7 +585,19 @@
       },
       {
         "@type": "ListItem",
-        "position": 35,
+        "position": 47,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "Learn Claude Code",
+          "url": "https://github.com/shareAI-lab/learn-claude-code",
+          "description": "From-scratch, bash-only educational build of a Claude-Code-like agent **harness**, walking through the tool wiring, permissions, and workflow loop that turns a base model into an autonomous coding agent.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "workflow"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 48,
         "item": {
           "@type": "SoftwareApplication",
           "name": "awesome-claude-code",
@@ -453,7 +609,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 36,
+        "position": 49,
         "item": {
           "@type": "SoftwareApplication",
           "name": "wshobson/agents",
@@ -465,7 +621,19 @@
       },
       {
         "@type": "ListItem",
-        "position": 37,
+        "position": 50,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "DESIGN.md",
+          "url": "https://github.com/google-labs-code/design.md",
+          "description": "Format specification (YAML design tokens + markdown rationale) that gives coding agents a persistent, structured reference for a project's visual design system—a config file the **harness** loads rather than a tool it calls.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "memory"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 51,
         "item": {
           "@type": "SoftwareApplication",
           "name": "planning-with-files",
@@ -477,7 +645,19 @@
       },
       {
         "@type": "ListItem",
-        "position": 38,
+        "position": 52,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "Claude Skills (alirezarezvani)",
+          "url": "https://github.com/alirezarezvani/claude-skills",
+          "description": "Large aggregated pack of slash-command and skill definitions for Claude Code and other coding-agent CLIs—configuration content layered onto an existing **harness**, not a harness of its own.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": ""
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 53,
         "item": {
           "@type": "SoftwareApplication",
           "name": "SWE-agent",
@@ -489,7 +669,19 @@
       },
       {
         "@type": "ListItem",
-        "position": 39,
+        "position": 54,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "Trellis",
+          "url": "https://github.com/mindfold-ai/Trellis",
+          "description": "Spec/task/memory config layer that persists PRDs, review context, and journals into the repo and drives a plan-implement-verify loop of skills and sub-agents across 22 coding-agent CLIs, rather than shipping its own IDE or CLI.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "memory, multi-agent, workflow, cli, ide"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 55,
         "item": {
           "@type": "SoftwareApplication",
           "name": "get-shit-done",
@@ -501,7 +693,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 40,
+        "position": 56,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Claude Agent SDK",
@@ -513,7 +705,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 41,
+        "position": 57,
         "item": {
           "@type": "SoftwareApplication",
           "name": "agents-cli",
@@ -525,7 +717,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 42,
+        "position": 58,
         "item": {
           "@type": "SoftwareApplication",
           "name": "skillhub",
@@ -537,7 +729,67 @@
       },
       {
         "@type": "ListItem",
-        "position": 43,
+        "position": 59,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "Antigravity SDK (Python)",
+          "url": "https://github.com/google-antigravity/antigravity-sdk-python",
+          "description": "Python SDK for building custom agents on top of Google's Antigravity agent-first development platform and Gemini models, exposing Antigravity's agentic loop and state management as a library rather than shipping its own CLI.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "cli, ide, python"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 60,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "Desloppify",
+          "url": "https://github.com/peteromallet/desloppify",
+          "description": "**Harness** add-on that gives an existing coding agent the tools and workflow to identify and systematically clean up \"slop\" code, rather than replacing the agent's own harness.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "workflow"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 61,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "Agent Toolkit",
+          "url": "https://github.com/softaworks/agent-toolkit",
+          "description": "Curated collection of packaged skills (instructions + scripts) that extend coding-agent capabilities across development, documentation, planning, and professional workflows without bundling any IDE or CLI of its own.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "cli, ide"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 62,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "Harmonist",
+          "url": "https://github.com/GammaLabTechnologies/harmonist",
+          "description": "Drop-in, zero-runtime-dependency config layer of 186 curated agents and hook-driven protocol enforcement (memory checks, reviewer gating) that plugs into Cursor, Claude Code, Copilot, Windsurf, and Aider, rather than shipping its own IDE or CLI.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "memory, cli, ide"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 63,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "Fable Method",
+          "url": "https://github.com/Sahir619/fable-method",
+          "description": "Claude Code plugin distilling a classify → define-done → gather-evidence → commit → verify → report workflow into four installable skills, so a mid-tier model can follow the same disciplined loop, with a built-in eval to keep it honest—a **harness**-config skill pack, not a standalone agent.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "evals, workflow"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 64,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Meta-Harness",
@@ -549,7 +801,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 44,
+        "position": 65,
         "item": {
           "@type": "SoftwareApplication",
           "name": "RepoMaster",
@@ -561,7 +813,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 45,
+        "position": 66,
         "item": {
           "@type": "SoftwareApplication",
           "name": "AutoHarness",
@@ -573,7 +825,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 46,
+        "position": 67,
         "item": {
           "@type": "SoftwareApplication",
           "name": "LoopTroop",
@@ -585,7 +837,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 47,
+        "position": 68,
         "item": {
           "@type": "SoftwareApplication",
           "name": "pmstack",
@@ -597,7 +849,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 48,
+        "position": 69,
         "item": {
           "@type": "SoftwareApplication",
           "name": "OpenClaw",
@@ -609,7 +861,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 49,
+        "position": 70,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Hermes",
@@ -621,7 +873,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 50,
+        "position": 71,
         "item": {
           "@type": "SoftwareApplication",
           "name": "nanobot",
@@ -633,7 +885,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 51,
+        "position": 72,
         "item": {
           "@type": "SoftwareApplication",
           "name": "CowAgent",
@@ -645,7 +897,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 52,
+        "position": 73,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Khoj",
@@ -657,7 +909,19 @@
       },
       {
         "@type": "ListItem",
-        "position": 53,
+        "position": 74,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "agenticSeek",
+          "url": "https://github.com/Fosowl/agenticSeek",
+          "description": "Fully local autonomous-agent **harness** that plans, browses the web, and writes code using self-hosted models, with no cloud API dependency.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "browser, local"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 75,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Eliza",
@@ -669,7 +933,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 54,
+        "position": 76,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Agent Zero",
@@ -681,7 +945,19 @@
       },
       {
         "@type": "ListItem",
-        "position": 55,
+        "position": 77,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "OpenFang",
+          "url": "https://github.com/RightNow-AI/openfang",
+          "description": "Rust-built, single-binary \"agent operating system\" that runs autonomous agents on schedules across 40+ chat channels (Telegram, Slack, Discord, etc.), acting as a persistent daemon **harness** rather than a one-shot CLI. Pre-1.0 and still finding its footing.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "memory, sandbox, cli, rust"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 78,
         "item": {
           "@type": "SoftwareApplication",
           "name": "OpenHarness (HKUDS)",
@@ -693,7 +969,31 @@
       },
       {
         "@type": "ListItem",
-        "position": 56,
+        "position": 79,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "QM",
+          "url": "https://github.com/yc-software/qm",
+          "description": "Y Combinator's open-sourced multiplayer agent **harness**—a headless TypeScript/Postgres daemon giving every person and Slack/web room scoped memory, files, credentials, crons, and durable sandboxes, running Claude Code, OpenCode, Codex, or Pi as pluggable execution engines rather than being one coding-agent UI.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "memory, browser, sandbox, typescript"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 80,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "Kun",
+          "url": "https://github.com/KunAgent/Kun",
+          "description": "Local-first agent runtime—one persistent agent loop behind both an Electron desktop GUI and a terminal TUI—that carries project context, resumes sessions, and serves chat, coding, writing/design, phone connections, and scheduled tasks, functioning as a full personal **harness** rather than a thin chat UI.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "memory, cli, tui"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 81,
         "item": {
           "@type": "SoftwareApplication",
           "name": "AIlice",
@@ -705,7 +1005,19 @@
       },
       {
         "@type": "ListItem",
-        "position": 57,
+        "position": 82,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "waku-agent",
+          "url": "https://github.com/ShenSeanChen/waku-agent",
+          "description": "Local-first personal agent **harness**—its own loop, memory, and eval code—built to stay legible and hackable as it grows, rather than a hosted black-box assistant.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "memory, evals"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 83,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Talon",
@@ -717,7 +1029,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 58,
+        "position": 84,
         "item": {
           "@type": "SoftwareApplication",
           "name": "n8n",
@@ -729,7 +1041,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 59,
+        "position": 85,
         "item": {
           "@type": "SoftwareApplication",
           "name": "AutoGPT",
@@ -741,7 +1053,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 60,
+        "position": 86,
         "item": {
           "@type": "SoftwareApplication",
           "name": "langflow",
@@ -753,7 +1065,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 61,
+        "position": 87,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Dify",
@@ -765,7 +1077,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 62,
+        "position": 88,
         "item": {
           "@type": "SoftwareApplication",
           "name": "langchain",
@@ -777,7 +1089,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 63,
+        "position": 89,
         "item": {
           "@type": "SoftwareApplication",
           "name": "browser-use",
@@ -789,7 +1101,31 @@
       },
       {
         "@type": "ListItem",
-        "position": 64,
+        "position": 90,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "AnythingLLM",
+          "url": "https://github.com/Mintplex-Labs/anything-llm",
+          "description": "Full-stack, local-first LLM application **harness**—chat UI, agent orchestration, RAG pipeline, and vector DB—that you self-host instead of renting a hosted assistant.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "rag"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 91,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "Flowise",
+          "url": "https://github.com/FlowiseAI/Flowise",
+          "description": "Drag-and-drop LangChain UI; deploy flows without code. The low-code sibling to Langflow, with a different component and hosting story.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "low-code, typescript"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 92,
         "item": {
           "@type": "SoftwareApplication",
           "name": "llama-index",
@@ -801,7 +1137,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 65,
+        "position": 93,
         "item": {
           "@type": "SoftwareApplication",
           "name": "agno",
@@ -813,7 +1149,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 66,
+        "position": 94,
         "item": {
           "@type": "SoftwareApplication",
           "name": "langgraph",
@@ -825,7 +1161,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 67,
+        "position": 95,
         "item": {
           "@type": "SoftwareApplication",
           "name": "semantic-kernel",
@@ -837,7 +1173,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 68,
+        "position": 96,
         "item": {
           "@type": "SoftwareApplication",
           "name": "mastra",
@@ -849,7 +1185,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 69,
+        "position": 97,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Haystack",
@@ -861,7 +1197,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 70,
+        "position": 98,
         "item": {
           "@type": "SoftwareApplication",
           "name": "letta",
@@ -873,7 +1209,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 71,
+        "position": 99,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Stagehand",
@@ -885,7 +1221,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 72,
+        "position": 100,
         "item": {
           "@type": "SoftwareApplication",
           "name": "rasa",
@@ -897,7 +1233,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 73,
+        "position": 101,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Google ADK",
@@ -909,7 +1245,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 74,
+        "position": 102,
         "item": {
           "@type": "SoftwareApplication",
           "name": "botpress",
@@ -921,7 +1257,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 75,
+        "position": 103,
         "item": {
           "@type": "SoftwareApplication",
           "name": "R2R",
@@ -933,7 +1269,19 @@
       },
       {
         "@type": "ListItem",
-        "position": 76,
+        "position": 104,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "Upsonic",
+          "url": "https://github.com/Upsonic/Upsonic",
+          "description": "Python framework for building autonomous agents with MCP tool support, reliability/guardrail features, and multi-provider LLM backing.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "mcp, provider-agnostic, python"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 105,
         "item": {
           "@type": "SoftwareApplication",
           "name": "agent-squad",
@@ -945,7 +1293,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 77,
+        "position": 106,
         "item": {
           "@type": "SoftwareApplication",
           "name": "AgentVerse",
@@ -957,7 +1305,31 @@
       },
       {
         "@type": "ListItem",
-        "position": 78,
+        "position": 107,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "AgentScope (Java)",
+          "url": "https://github.com/agentscope-ai/agentscope-java",
+          "description": "Java port of Alibaba Tongyi Lab's AgentScope framework for building distributed, production-grade, long-running agents with built-in permissioning, sandboxing, and multi-agent orchestration.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "multi-agent, sandbox"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 108,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "Eko",
+          "url": "https://github.com/FellouAI/eko",
+          "description": "JS/TS agentic-workflow framework for compiling production agent loops from natural-language task descriptions, spanning browser automation and computer-use tools.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "browser, workflow, typescript"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 109,
         "item": {
           "@type": "SoftwareApplication",
           "name": "youtu-agent",
@@ -969,7 +1341,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 79,
+        "position": 110,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Bee Agent Framework",
@@ -981,7 +1353,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 80,
+        "position": 111,
         "item": {
           "@type": "SoftwareApplication",
           "name": "AgentStack",
@@ -993,7 +1365,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 81,
+        "position": 112,
         "item": {
           "@type": "SoftwareApplication",
           "name": "AgentSilex",
@@ -1005,7 +1377,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 82,
+        "position": 113,
         "item": {
           "@type": "SoftwareApplication",
           "name": "SuperAgentX",
@@ -1017,7 +1389,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 83,
+        "position": 114,
         "item": {
           "@type": "SoftwareApplication",
           "name": "MetaGPT",
@@ -1029,7 +1401,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 84,
+        "position": 115,
         "item": {
           "@type": "SoftwareApplication",
           "name": "autogen",
@@ -1041,7 +1413,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 85,
+        "position": 116,
         "item": {
           "@type": "SoftwareApplication",
           "name": "OpenManus",
@@ -1053,7 +1425,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 86,
+        "position": 117,
         "item": {
           "@type": "SoftwareApplication",
           "name": "crewAI",
@@ -1065,7 +1437,19 @@
       },
       {
         "@type": "ListItem",
-        "position": 87,
+        "position": 118,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "Multica",
+          "url": "https://github.com/multica-ai/multica",
+          "description": "Self-hostable dashboard that assigns issues to 20+ different coding-agent CLIs (Claude Code, Codex, Cursor, etc.) as a fleet of teammates, tracking each agent's execution logs and progress independent of any single vendor's **harness**.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "multi-agent, sandbox, local, ide"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 119,
         "item": {
           "@type": "SoftwareApplication",
           "name": "ChatDev",
@@ -1077,7 +1461,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 88,
+        "position": 120,
         "item": {
           "@type": "SoftwareApplication",
           "name": "openai-agents-python",
@@ -1089,7 +1473,19 @@
       },
       {
         "@type": "ListItem",
-        "position": 89,
+        "position": 121,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "DeepCode",
+          "url": "https://github.com/HKUDS/DeepCode",
+          "description": "Open agentic-coding system whose **harness** implements paper-to-code and text-to-web pipelines through explicit multi-agent orchestration and loop engineering, distinct from any single-agent chat surface.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "multi-agent"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 122,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Microsoft Agent Framework",
@@ -1101,7 +1497,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 90,
+        "position": 123,
         "item": {
           "@type": "SoftwareApplication",
           "name": "hive",
@@ -1113,7 +1509,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 91,
+        "position": 124,
         "item": {
           "@type": "SoftwareApplication",
           "name": "omnigent",
@@ -1125,7 +1521,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 92,
+        "position": 125,
         "item": {
           "@type": "SoftwareApplication",
           "name": "PraisonAI",
@@ -1137,7 +1533,19 @@
       },
       {
         "@type": "ListItem",
-        "position": 93,
+        "position": 126,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "Open Multi-Agent",
+          "url": "https://github.com/open-multi-agent/open-multi-agent",
+          "description": "TypeScript agent-orchestration framework that drops into any Node.js app: a coordinator plans a task DAG from a stated goal at runtime and a deterministic scheduler executes it across a team of agents on any LLM, functioning as the orchestration layer above each agent's own **harness**.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "low-code, provider-agnostic, typescript"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 127,
         "item": {
           "@type": "SoftwareApplication",
           "name": "AG2",
@@ -1149,7 +1557,31 @@
       },
       {
         "@type": "ListItem",
-        "position": 94,
+        "position": 128,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "Claude Codex Bridge (ccb)",
+          "url": "https://github.com/SeemSeam/claude_codex_bridge",
+          "description": "tmux-based, visible multi-agent CLI workspace that runs Codex, Claude, Gemini, and other coding-agent CLIs side by side as full native terminals with a persistent background daemon and a shared-memory file for agent handoff—an orchestration shell around each agent's own **harness**.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "memory, multi-agent, cli"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 129,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "Agent Teams AI",
+          "url": "https://github.com/777genius/agent-teams-ai",
+          "description": "Desktop app that assembles teams of coding agents (Claude Code, Codex, Cursor, OpenCode, GitHub Copilot, etc.) with distinct roles that message each other and review each other's work, coordinating each agent's individual **harness** through a shared kanban board.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "ide"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 130,
         "item": {
           "@type": "SoftwareApplication",
           "name": "AgentRL",
@@ -1161,7 +1593,19 @@
       },
       {
         "@type": "ListItem",
-        "position": 95,
+        "position": 131,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "Firecrawl",
+          "url": "https://github.com/firecrawl/firecrawl",
+          "description": "Hosted scraping/crawling API and official MCP server that gives coding and research agents a **harness**-callable tool for turning arbitrary web pages into clean markdown or JSON, including an autonomous \"agent search\" mode for open-ended data gathering.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "mcp"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 132,
         "item": {
           "@type": "SoftwareApplication",
           "name": "MCP Servers",
@@ -1173,7 +1617,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 96,
+        "position": 133,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Context7",
@@ -1185,7 +1629,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 97,
+        "position": 134,
         "item": {
           "@type": "SoftwareApplication",
           "name": "chrome-devtools-mcp",
@@ -1197,7 +1641,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 98,
+        "position": 135,
         "item": {
           "@type": "SoftwareApplication",
           "name": "aider",
@@ -1209,7 +1653,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 99,
+        "position": 136,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Playwright MCP",
@@ -1221,7 +1665,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 100,
+        "position": 137,
         "item": {
           "@type": "SoftwareApplication",
           "name": "continue",
@@ -1233,7 +1677,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 101,
+        "position": 138,
         "item": {
           "@type": "SoftwareApplication",
           "name": "github-mcp-server",
@@ -1245,7 +1689,19 @@
       },
       {
         "@type": "ListItem",
-        "position": 102,
+        "position": 139,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "herdr",
+          "url": "https://github.com/herdrdev/herdr",
+          "description": "Rust terminal **harness**/multiplexer that runs underneath other coding-agent CLIs (Claude Code, Codex, Cursor, OpenCode), tracking pane state and letting agents spawn and coordinate with each other over a CLI/socket API.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "memory, cli, ide, rust"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 140,
         "item": {
           "@type": "SoftwareApplication",
           "name": "MCP Python SDK",
@@ -1257,7 +1713,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 103,
+        "position": 141,
         "item": {
           "@type": "SoftwareApplication",
           "name": "MCP TypeScript SDK",
@@ -1269,7 +1725,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 104,
+        "position": 142,
         "item": {
           "@type": "SoftwareApplication",
           "name": "MCP Inspector",
@@ -1281,7 +1737,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 105,
+        "position": 143,
         "item": {
           "@type": "SoftwareApplication",
           "name": "MCP Registry",
@@ -1293,7 +1749,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 106,
+        "position": 144,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Agent Governance Toolkit",
@@ -1305,7 +1761,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 107,
+        "position": 145,
         "item": {
           "@type": "SoftwareApplication",
           "name": "mcp-context-forge",
@@ -1317,7 +1773,19 @@
       },
       {
         "@type": "ListItem",
-        "position": 108,
+        "position": 146,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "Mirage",
+          "url": "https://github.com/strukto-ai/mirage",
+          "description": "Unified virtual filesystem that mounts S3, Google Drive, Slack, and other services as ordinary paths, giving coding agents' file-based **harness** tools access to external services without bespoke API integrations.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "python, typescript"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 147,
         "item": {
           "@type": "SoftwareApplication",
           "name": "cocoindex-code",
@@ -1329,7 +1797,19 @@
       },
       {
         "@type": "ListItem",
-        "position": 109,
+        "position": 148,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "Qwen-MM-Plugins",
+          "url": "https://github.com/QwenLM/Qwen-MM-Plugins",
+          "description": "Official Qwen team plugin set that makes any existing agent **harness** multimodal-native, adding image/audio/video tool plugins rather than a new agent runtime.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "vision"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 149,
         "item": {
           "@type": "SoftwareApplication",
           "name": "agent-vault",
@@ -1341,7 +1821,19 @@
       },
       {
         "@type": "ListItem",
-        "position": 110,
+        "position": 150,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "Stripe AI",
+          "url": "https://github.com/stripe/ai",
+          "description": "Stripe's official collection of agent skills, plugins, and a hosted MCP server that give coding agents (Claude Code, Codex, Cursor, Grok Build) direct tool access to billing and payments infrastructure.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "mcp, ide"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 151,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Docker MCP Gateway",
@@ -1353,7 +1845,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 111,
+        "position": 152,
         "item": {
           "@type": "SoftwareApplication",
           "name": "puppeteer-real-browser-mcp",
@@ -1365,7 +1857,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 112,
+        "position": 153,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Better-OpenCodeMCP",
@@ -1377,7 +1869,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 113,
+        "position": 154,
         "item": {
           "@type": "SoftwareApplication",
           "name": "agentlog",
@@ -1389,7 +1881,19 @@
       },
       {
         "@type": "ListItem",
-        "position": 114,
+        "position": 155,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "Graphify",
+          "url": "https://github.com/Graphify-Labs/graphify",
+          "description": "Local, deterministic skill that parses your codebase with tree-sitter into a queryable knowledge graph—no vector store, no LLM calls for extraction—installable into Claude Code, Cursor, Codex, and Gemini CLI as a `/graphify` command, contrasting with typical embedding-based RAG **harness** setups.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "multi-agent, rag, workflow, cli, ide"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 156,
         "item": {
           "@type": "SoftwareApplication",
           "name": "claude-mem",
@@ -1401,7 +1905,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 115,
+        "position": 157,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Mem0",
@@ -1413,7 +1917,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 116,
+        "position": 158,
         "item": {
           "@type": "SoftwareApplication",
           "name": "cognee",
@@ -1425,7 +1929,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 117,
+        "position": 159,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Graphiti (Zep)",
@@ -1437,7 +1941,19 @@
       },
       {
         "@type": "ListItem",
-        "position": 118,
+        "position": 160,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "AgentMemory",
+          "url": "https://github.com/rohitg00/agentmemory",
+          "description": "Persistent-memory MCP layer (54 tools, benchmark-backed retrieval) that plugs into a coding agent's **harness** as an external memory store rather than being a harness itself.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "mcp, memory, evals"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 161,
         "item": {
           "@type": "SoftwareApplication",
           "name": "beads",
@@ -1449,7 +1965,43 @@
       },
       {
         "@type": "ListItem",
-        "position": 119,
+        "position": 162,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "Kungfu",
+          "url": "https://github.com/kungfu-systems/kungfu",
+          "description": "Durable memory and continuity layer that sits underneath coding-agent **harnesses** (Codex, Claude, OpenCode)—recording, ordering, and verifying \"work facts and Episodes\" so a fresh agent session can resume the same task instead of reconstructing context from conversation history.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "memory"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 163,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "MIRIX",
+          "url": "https://github.com/Mirix-AI/MIRIX",
+          "description": "Multi-agent memory system that captures real-time screen activity and consolidates it into structured, queryable memories for a personal assistant.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "memory, multi-agent"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 164,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "DataClaw",
+          "url": "https://github.com/peteromallet/dataclaw",
+          "description": "CLI/Python package that exports and publishes agent chat session history from Claude Code, Cursor, Codex, Gemini CLI, and OpenCode as structured Hugging Face datasets (messages, tool calls, thinking blocks, token counts)—turning ordinary coding-agent sessions into reusable, versioned session-capture data.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "memory, multi-agent, cli, ide, python"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 165,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Agent Lightning",
@@ -1461,7 +2013,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 120,
+        "position": 166,
         "item": {
           "@type": "SoftwareApplication",
           "name": "SWE-bench",
@@ -1473,7 +2025,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 121,
+        "position": 167,
         "item": {
           "@type": "SoftwareApplication",
           "name": "AgentBench",
@@ -1485,7 +2037,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 122,
+        "position": 168,
         "item": {
           "@type": "SoftwareApplication",
           "name": "inspect_ai",
@@ -1497,7 +2049,19 @@
       },
       {
         "@type": "ListItem",
-        "position": 123,
+        "position": 169,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "AssetOpsBench",
+          "url": "https://github.com/IBM/AssetOpsBench",
+          "description": "IBM's benchmark and framework for building, orchestrating, and evaluating domain-specific industrial-maintenance agents, with 460+ scenarios and multi-agent orchestration blueprints over MCP.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "mcp, multi-agent, evals"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 170,
         "item": {
           "@type": "SoftwareApplication",
           "name": "WebArena",
@@ -1509,7 +2073,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 124,
+        "position": 171,
         "item": {
           "@type": "SoftwareApplication",
           "name": "WebVoyager",
@@ -1521,7 +2085,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 125,
+        "position": 172,
         "item": {
           "@type": "SoftwareApplication",
           "name": "agent-qa",
@@ -1533,7 +2097,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 126,
+        "position": 173,
         "item": {
           "@type": "SoftwareApplication",
           "name": "swe-smith",
@@ -1545,7 +2109,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 127,
+        "position": 174,
         "item": {
           "@type": "SoftwareApplication",
           "name": "ARC-AGI-2",
@@ -1557,7 +2121,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 128,
+        "position": 175,
         "item": {
           "@type": "SoftwareApplication",
           "name": "SWE-Gym",
@@ -1569,7 +2133,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 129,
+        "position": 176,
         "item": {
           "@type": "SoftwareApplication",
           "name": "inspect_evals",
@@ -1581,7 +2145,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 130,
+        "position": 177,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Terminal-Bench",
@@ -1593,7 +2157,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 131,
+        "position": 178,
         "item": {
           "@type": "SoftwareApplication",
           "name": "arc-agi-benchmarking",
@@ -1605,7 +2169,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 132,
+        "position": 179,
         "item": {
           "@type": "SoftwareApplication",
           "name": "VitaBench",
@@ -1617,7 +2181,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 133,
+        "position": 180,
         "item": {
           "@type": "SoftwareApplication",
           "name": "AgencyBench",
@@ -1629,7 +2193,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 134,
+        "position": 181,
         "item": {
           "@type": "SoftwareApplication",
           "name": "letta-evals",
@@ -1641,7 +2205,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 135,
+        "position": 182,
         "item": {
           "@type": "SoftwareApplication",
           "name": "SUPER",
@@ -1653,7 +2217,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 136,
+        "position": 183,
         "item": {
           "@type": "SoftwareApplication",
           "name": "TRAIL",
@@ -1665,7 +2229,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 137,
+        "position": 184,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Langfuse",
@@ -1677,7 +2241,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 138,
+        "position": 185,
         "item": {
           "@type": "SoftwareApplication",
           "name": "MLflow",
@@ -1689,7 +2253,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 139,
+        "position": 186,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Opik",
@@ -1701,7 +2265,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 140,
+        "position": 187,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Arize Phoenix",
@@ -1713,7 +2277,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 141,
+        "position": 188,
         "item": {
           "@type": "SoftwareApplication",
           "name": "DeerFlow",
@@ -1725,7 +2289,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 142,
+        "position": 189,
         "item": {
           "@type": "SoftwareApplication",
           "name": "gpt-researcher",
@@ -1737,7 +2301,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 143,
+        "position": 190,
         "item": {
           "@type": "SoftwareApplication",
           "name": "AutoResearchClaw",
@@ -1749,7 +2313,19 @@
       },
       {
         "@type": "ListItem",
-        "position": 144,
+        "position": 191,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "PocketFlow Codebase-to-Tutorial",
+          "url": "https://github.com/The-Pocket/PocketFlow-Tutorial-Codebase-Knowledge",
+          "description": "Agentic pipeline that crawls a codebase and drives an LLM through a research-and-write loop to produce a beginner-friendly tutorial—a concrete domain-specific **harness** built on the minimal PocketFlow agent framework.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": ""
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 192,
         "item": {
           "@type": "SoftwareApplication",
           "name": "MiroThinker",
@@ -1761,7 +2337,67 @@
       },
       {
         "@type": "ListItem",
-        "position": 145,
+        "position": 193,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "OpenEvolve",
+          "url": "https://github.com/algorithmicsuperintelligence/openevolve",
+          "description": "Open reimplementation of DeepMind's AlphaEvolve—an LLM-driven evolutionary **harness** that runs MAP-Elites/island-based population search, mutating and automatically scoring candidate code across generations, rather than doing single-shot code generation.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "evals"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 194,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "MiroFlow",
+          "url": "https://github.com/MiroMindAI/MiroFlow",
+          "description": "MiroMind's open-source deep-research agent **harness**—a modular orchestration layer with an agent graph, hierarchical sub-agents, and fault-tolerant tool execution—reproducing state-of-the-art results on GAIA, HLE, BrowseComp, and xBench using MiroThinker, Claude, Kimi, or OpenAI models.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "multi-agent, evals, workflow"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 195,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "FAROS",
+          "url": "https://github.com/OpenNSWM-Lab/FAROS",
+          "description": "Blueprint-driven AutoResearch runtime that orchestrates AI research workflows end-to-end, from idea generation and experiments through paper writing and peer review.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": ""
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 196,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "Visa Vulnerability Agentic Harness",
+          "url": "https://github.com/visa/visa-vulnerability-agentic-harness",
+          "description": "Visa's open-source eleven-stage agentic **harness** for security research—threat modeling, adversarial multi-lens verification, and automated fix generation over a codebase, producing SARIF/Markdown findings for human review.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": ""
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 197,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "Evo",
+          "url": "https://github.com/evo-hq/evo",
+          "description": "Turns a codebase into an autoresearch loop—it discovers what to measure, instruments the benchmark, then runs tree-search experiments across parallel subagents (each in its own git worktree), keeping runs that improve the score and discarding ones that fail pass/fail \"gates\"—an experiment-orchestration **harness** rather than a single coding assistant.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "multi-agent, evals"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 198,
         "item": {
           "@type": "SoftwareApplication",
           "name": "openagents",
@@ -1773,7 +2409,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 146,
+        "position": 199,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Daytona",
@@ -1785,7 +2421,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 147,
+        "position": 200,
         "item": {
           "@type": "SoftwareApplication",
           "name": "LiteLLM",
@@ -1797,7 +2433,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 148,
+        "position": 201,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Composio",
@@ -1809,7 +2445,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 149,
+        "position": 202,
         "item": {
           "@type": "SoftwareApplication",
           "name": "smolagents",
@@ -1821,7 +2457,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 150,
+        "position": 203,
         "item": {
           "@type": "SoftwareApplication",
           "name": "deepagents",
@@ -1833,7 +2469,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 151,
+        "position": 204,
         "item": {
           "@type": "SoftwareApplication",
           "name": "vercel/ai",
@@ -1845,7 +2481,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 152,
+        "position": 205,
         "item": {
           "@type": "SoftwareApplication",
           "name": "pydantic-ai",
@@ -1857,7 +2493,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 153,
+        "position": 206,
         "item": {
           "@type": "SoftwareApplication",
           "name": "E2B",
@@ -1869,7 +2505,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 154,
+        "position": 207,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Steel",
@@ -1881,7 +2517,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 155,
+        "position": 208,
         "item": {
           "@type": "SoftwareApplication",
           "name": "strands-agents",
@@ -1893,7 +2529,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 156,
+        "position": 209,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Cloudflare Agents",
@@ -1905,7 +2541,19 @@
       },
       {
         "@type": "ListItem",
-        "position": 157,
+        "position": 210,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "fast-agent",
+          "url": "https://github.com/evalstate/fast-agent",
+          "description": "Python **harness**/toolkit for composing, running, and evaluating MCP-native agents with end-to-end tested Sampling/Elicitation support and ACP/A2A/skills interop, rather than a full IDE product.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "mcp, evals, ide, python"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 211,
         "item": {
           "@type": "SoftwareApplication",
           "name": "openai-agents-js",
@@ -1917,7 +2565,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 158,
+        "position": 212,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Agent Sandbox",
@@ -1929,7 +2577,31 @@
       },
       {
         "@type": "ListItem",
-        "position": 159,
+        "position": 213,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "LLMCompiler",
+          "url": "https://github.com/SqueezeAILab/LLMCompiler",
+          "description": "Peer-reviewed (ICML 2024) execution engine that plans and runs LLM function/tool calls in parallel as a DAG, functioning as a low-level tool-orchestration primitive rather than a full agent product.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "low-code"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 214,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "Deep Agents (JS)",
+          "url": "https://github.com/langchain-ai/deepagentsjs",
+          "description": "LangChain's official JS/TS agent **harness** primitive—a planning tool, filesystem backend, and subagent spawning built on LangGraph—a provider-agnostic library rather than a packaged product.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "multi-agent, provider-agnostic, typescript"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 215,
         "item": {
           "@type": "SoftwareApplication",
           "name": "open-harness",
@@ -1941,7 +2613,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 160,
+        "position": 216,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Community-curated agent lists",

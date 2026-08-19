@@ -165,6 +165,39 @@ projects:
     github_id: NanmiCoder/cc-haha
     labels: ["javascript"]
     category: "coding-agent-products"
+  - name: Grok Build
+    github_id: xai-org/grok-build
+    category: "coding-agent-products"
+  - name: Grok CLI (superagent-ai)
+    github_id: superagent-ai/grok-cli
+    category: "coding-agent-products"
+  - name: ATLAS
+    github_id: itigges22/ATLAS
+    category: "coding-agent-products"
+  - name: CodeWhale
+    github_id: Hmbown/CodeWhale
+    category: "coding-agent-products"
+  - name: Open Cowork
+    github_id: OpenCoworkAI/open-cowork
+    category: "coding-agent-products"
+  - name: Antigravity CLI
+    github_id: google-antigravity/antigravity-cli
+    category: "coding-agent-products"
+  - name: Command Code
+    github_id: CommandCodeAI/command-code
+    category: "coding-agent-products"
+  - name: VibeSDK
+    github_id: cloudflare/vibesdk
+    category: "coding-agent-products"
+  - name: Orca
+    github_id: stablyai/orca
+    category: "coding-agent-products"
+  - name: cmux
+    github_id: manaflow-ai/cmux
+    category: "coding-agent-products"
+  - name: little-coder
+    github_id: itayinbarr/little-coder
+    category: "coding-agent-products"
   # Coding harness configs and SDKs
   - name: LoopTroop
     github_id: looptroop-ai/LoopTroop
@@ -223,6 +256,36 @@ projects:
   - name: Meta-Harness
     github_id: stanford-iris-lab/meta-harness
     category: "coding-harness-configs"
+  - name: Ponytail
+    github_id: DietrichGebert/ponytail
+    category: "coding-harness-configs"
+  - name: Learn Claude Code
+    github_id: shareAI-lab/learn-claude-code
+    category: "coding-harness-configs"
+  - name: DESIGN.md
+    github_id: google-labs-code/design.md
+    category: "coding-harness-configs"
+  - name: Antigravity SDK (Python)
+    github_id: google-antigravity/antigravity-sdk-python
+    category: "coding-harness-configs"
+  - name: Agent Toolkit
+    github_id: softaworks/agent-toolkit
+    category: "coding-harness-configs"
+  - name: Claude Skills (alirezarezvani)
+    github_id: alirezarezvani/claude-skills
+    category: "coding-harness-configs"
+  - name: Desloppify
+    github_id: peteromallet/desloppify
+    category: "coding-harness-configs"
+  - name: Trellis
+    github_id: mindfold-ai/Trellis
+    category: "coding-harness-configs"
+  - name: Harmonist
+    github_id: GammaLabTechnologies/harmonist
+    category: "coding-harness-configs"
+  - name: Fable Method
+    github_id: Sahir619/fable-method
+    category: "coding-harness-configs"
   # Personal agent runtimes
   - name: Talon
     github_id: dylanneve1/talon
@@ -262,6 +325,21 @@ projects:
   - name: CowAgent
     github_id: zhayujie/CowAgent
     labels: ["python"]
+    category: "personal-agent-runtimes"
+  - name: agenticSeek
+    github_id: Fosowl/agenticSeek
+    category: "personal-agent-runtimes"
+  - name: OpenFang
+    github_id: RightNow-AI/openfang
+    category: "personal-agent-runtimes"
+  - name: waku-agent
+    github_id: ShenSeanChen/waku-agent
+    category: "personal-agent-runtimes"
+  - name: QM
+    github_id: yc-software/qm
+    category: "personal-agent-runtimes"
+  - name: Kun
+    github_id: KunAgent/Kun
     category: "personal-agent-runtimes"
   # Frameworks
   - name: langgraph
@@ -345,6 +423,10 @@ projects:
     github_id: howl-anderson/agentsilex
     labels: ["python"]
     category: "frameworks"
+  - name: Flowise
+    github_id: FlowiseAI/Flowise
+    labels: ["javascript"]
+    category: "frameworks"
   - name: browser-use
     github_id: browser-use/browser-use
     labels: ["python"]
@@ -359,6 +441,18 @@ projects:
   - name: Haystack
     github_id: deepset-ai/haystack
     labels: ["python"]
+    category: "frameworks"
+  - name: Upsonic
+    github_id: Upsonic/Upsonic
+    category: "frameworks"
+  - name: Eko
+    github_id: FellouAI/eko
+    category: "frameworks"
+  - name: AgentScope (Java)
+    github_id: agentscope-ai/agentscope-java
+    category: "frameworks"
+  - name: AnythingLLM
+    github_id: Mintplex-Labs/anything-llm
     category: "frameworks"
   # Multi-agent and orchestration
   - name: openai-agents-python
@@ -408,6 +502,21 @@ projects:
   - name: omnigent
     github_id: omnigent-ai/omnigent
     labels: ["python"]
+    category: "multi-agent"
+  - name: Multica
+    github_id: multica-ai/multica
+    category: "multi-agent"
+  - name: Open Multi-Agent
+    github_id: open-multi-agent/open-multi-agent
+    category: "multi-agent"
+  - name: DeepCode
+    github_id: HKUDS/DeepCode
+    category: "multi-agent"
+  - name: Agent Teams AI
+    github_id: 777genius/agent-teams-ai
+    category: "multi-agent"
+  - name: Claude Codex Bridge (ccb)
+    github_id: SeemSeam/claude_codex_bridge
     category: "multi-agent"
   # Plugins, MCPs, CLI tools
   - name: aider
@@ -481,6 +590,21 @@ projects:
     github_id: IBM/mcp-context-forge
     labels: ["python"]
     category: "plugins-mcp-cli"
+  - name: Firecrawl
+    github_id: firecrawl/firecrawl
+    category: "plugins-mcp-cli"
+  - name: Mirage
+    github_id: strukto-ai/mirage
+    category: "plugins-mcp-cli"
+  - name: Stripe AI
+    github_id: stripe/ai
+    category: "plugins-mcp-cli"
+  - name: herdr
+    github_id: herdrdev/herdr
+    category: "plugins-mcp-cli"
+  - name: Qwen-MM-Plugins
+    github_id: QwenLM/Qwen-MM-Plugins
+    category: "plugins-mcp-cli"
   # Memory and state
   - name: Graphiti (Zep)
     github_id: getzep/graphiti
@@ -499,6 +623,21 @@ projects:
     category: "memory"
   - name: beads
     github_id: gastownhall/beads
+    category: "memory"
+  - name: AgentMemory
+    github_id: rohitg00/agentmemory
+    category: "memory"
+  - name: MIRIX
+    github_id: Mirix-AI/MIRIX
+    category: "memory"
+  - name: Graphify
+    github_id: Graphify-Labs/graphify
+    category: "memory"
+  - name: Kungfu
+    github_id: kungfu-systems/kungfu
+    category: "memory"
+  - name: DataClaw
+    github_id: peteromallet/dataclaw
     category: "memory"
   # Evaluation and benchmarking harnesses
   - name: agent-qa
@@ -568,6 +707,9 @@ projects:
     github_id: microsoft/agent-lightning
     labels: ["python"]
     category: "evaluation"
+  - name: AssetOpsBench
+    github_id: IBM/AssetOpsBench
+    category: "evaluation"
   # Observability and eval-ops
   - name: Langfuse
     github_id: langfuse/langfuse
@@ -602,6 +744,24 @@ projects:
     category: "research-task"
   - name: AutoResearchClaw
     github_id: aiming-lab/AutoResearchClaw
+    category: "research-task"
+  - name: PocketFlow Codebase-to-Tutorial
+    github_id: The-Pocket/PocketFlow-Tutorial-Codebase-Knowledge
+    category: "research-task"
+  - name: Visa Vulnerability Agentic Harness
+    github_id: visa/visa-vulnerability-agentic-harness
+    category: "research-task"
+  - name: FAROS
+    github_id: OpenNSWM-Lab/FAROS
+    category: "research-task"
+  - name: MiroFlow
+    github_id: MiroMindAI/MiroFlow
+    category: "research-task"
+  - name: OpenEvolve
+    github_id: algorithmicsuperintelligence/openevolve
+    category: "research-task"
+  - name: Evo
+    github_id: evo-hq/evo
     category: "research-task"
   # Libraries and SDKs
   - name: deepagents
@@ -658,4 +818,13 @@ projects:
     category: "libraries-sdks"
   - name: Community-curated agent lists
     github_id: brandonhimpfen/awesome-ai-agents
+    category: "libraries-sdks"
+  - name: Deep Agents (JS)
+    github_id: langchain-ai/deepagentsjs
+    category: "libraries-sdks"
+  - name: fast-agent
+    github_id: evalstate/fast-agent
+    category: "libraries-sdks"
+  - name: LLMCompiler
+    github_id: SqueezeAILab/LLMCompiler
     category: "libraries-sdks"

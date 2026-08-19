@@ -9,8 +9,8 @@
     "feed_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/feed.json",
     "license": "CC-BY-SA-4.0",
     "stars_captured": "2026-08-16",
-    "project_count": 160,
-    "graveyard_count": 4,
+    "project_count": 216,
+    "graveyard_count": 3,
     "tiers": [
       "super simple",
       "mostly simple",
@@ -219,6 +219,7 @@
       "intent": "I want low-code / visual workflows",
       "picks": [
         "langflow-ai/langflow",
+        "FlowiseAI/Flowise",
         "langgenius/dify",
         "n8n-io/n8n"
       ],
@@ -327,7 +328,7 @@
     {
       "kind": "use-case",
       "q": "What is the best agent harness if I want low-code / visual workflows?",
-      "a": "Top picks: langflow, Dify, n8n. See the “Frameworks” category for the full ranked list.",
+      "a": "Top picks: langflow, Flowise, Dify. See the “Frameworks” category for the full ranked list.",
       "slug": "what-is-the-best-agent-harness-if-i-want-low-code-visual-workflows"
     },
     {
@@ -369,13 +370,13 @@
     {
       "kind": "derived",
       "q": "Which agent harnesses survive a crash mid-task (durable)?",
-      "a": "Harnesses whose execution state persists across restarts: langgraph-bigtool, n8n, langgraph, mastra, letta, deepagents, pydantic-ai, Cloudflare Agents.",
+      "a": "Harnesses whose execution state persists across restarts: langgraph-bigtool, VibeSDK, OpenFang, QM, n8n, langgraph, mastra, letta.",
       "slug": "which-agent-harnesses-survive-a-crash-mid-task-durable"
     },
     {
       "kind": "derived",
       "q": "How many of these agent harnesses are open source?",
-      "a": "118 of 160 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
+      "a": "161 of 216 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
       "slug": "how-many-of-these-agent-harnesses-are-open-source"
     },
     {
@@ -1443,6 +1444,67 @@
       }
     },
     {
+      "name": "Orca",
+      "github_id": "stablyai/orca",
+      "url": "https://github.com/stablyai/orca",
+      "slug": "orca",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#orca",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/orca/",
+      "description": "Cross-platform Agent Development Environment that wraps multiple coding-agent **harnesses** (Claude Code, Codex, Cursor, Copilot), each in its own git worktree, adding a unified desktop/mobile/VPS shell, computer-use, and fan-out/merge tooling on top.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 46434,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (multi-agent orchestration, worktrees, computer-use, cross-platform)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "retry",
+      "recovery_rank": 2,
+      "license_signal": "open-source",
+      "tags": [
+        "multi-agent",
+        "ide"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/stablyai/orca#readme"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "CodeWhale",
+      "github_id": "Hmbown/CodeWhale",
+      "url": "https://github.com/Hmbown/CodeWhale",
+      "slug": "codewhale",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#codewhale",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/codewhale/",
+      "description": "Rust TUI/CLI **harness** that reads code, edits files, runs shell commands, and checks its own work across DeepSeek, OpenRouter, Hugging Face, and local model providers, with approval-gated tools, OS sandboxing, and per-role model pinning.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 40817,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (multi-provider CLI/TUI, approval-gated tools, sandboxing)",
+      "autonomy": "checkpoint-gated",
+      "autonomy_rank": 2,
+      "recovery": "retry",
+      "recovery_rank": 2,
+      "license_signal": "open-source",
+      "tags": [
+        "sandbox",
+        "provider-agnostic",
+        "cli",
+        "tui",
+        "rust"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/Hmbown/CodeWhale#readme"
+      },
+      "deep_dive": null
+    },
+    {
       "name": "DeepSeek-Reasonix",
       "github_id": "esengine/DeepSeek-Reasonix",
       "url": "https://github.com/esengine/DeepSeek-Reasonix",
@@ -1779,6 +1841,64 @@
       }
     },
     {
+      "name": "cmux",
+      "github_id": "manaflow-ai/cmux",
+      "url": "https://github.com/manaflow-ai/cmux",
+      "slug": "cmux",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#cmux",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/cmux/",
+      "description": "Ghostty-based terminal shell that wraps Claude Code, Codex, Gemini, and other coding-agent CLIs with vertical tabs, a socket/CLI scripting API, and browser panes for computer-use—a multiplexer around each agent's own **harness** rather than a harness itself.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 26106,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (terminal multiplexer shell, CLI + socket scriptability)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [
+        "browser",
+        "cli"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/manaflow-ai/cmux#readme"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "Grok Build",
+      "github_id": "xai-org/grok-build",
+      "url": "https://github.com/xai-org/grok-build",
+      "slug": "grok-build",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#grok-build",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/grok-build/",
+      "description": "xAI's official terminal coding agent: the **harness** is a full-screen, mouse-interactive TUI loop that edits files, runs shell commands, browses the web, and manages long-running tasks against the Grok model lineup.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 25356,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (TUI CLI, single-vendor model)",
+      "autonomy": "checkpoint-gated",
+      "autonomy_rank": 2,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "open-source",
+      "tags": [
+        "cli",
+        "tui"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/xai-org/grok-build#readme"
+      },
+      "deep_dive": null
+    },
+    {
       "name": "oh-my-pi",
       "github_id": "can1357/oh-my-pi",
       "url": "https://github.com/can1357/oh-my-pi",
@@ -1994,6 +2114,205 @@
       "example": {
         "label": "Project README",
         "url": "https://github.com/NanmiCoder/cc-haha#readme"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "VibeSDK",
+      "github_id": "cloudflare/vibesdk",
+      "url": "https://github.com/cloudflare/vibesdk",
+      "slug": "vibesdk",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#vibesdk",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/vibesdk/",
+      "description": "Cloudflare's open-source vibe-coding **harness**/runtime—the agent loop, sandboxed code execution, and orchestration built on Workers/Durable Objects—for standing up your own text-to-app coding-agent platform, not just a UI shell.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 5322,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (durable-object runtime, sandboxed execution, multi-format app generation)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "durable",
+      "recovery_rank": 4,
+      "license_signal": "open-source",
+      "tags": [
+        "sandbox"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/cloudflare/vibesdk#readme"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "Command Code",
+      "github_id": "CommandCodeAI/command-code",
+      "url": "https://github.com/CommandCodeAI/command-code",
+      "slug": "command-code",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#command-code",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/command-code/",
+      "description": "CLI coding agent product whose **harness** is built to learn a developer's coding taste over time, shipped by a dedicated startup rather than as a community wrapper around another agent.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 3685,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (CLI agent, full-stack build/test/refactor loop, hosted docs & desktop companion app)",
+      "autonomy": "checkpoint-gated",
+      "autonomy_rank": 2,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "open-source",
+      "tags": [
+        "cli"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/CommandCodeAI/command-code#readme"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "Grok CLI (superagent-ai)",
+      "github_id": "superagent-ai/grok-cli",
+      "url": "https://github.com/superagent-ai/grok-cli",
+      "slug": "grok-cli",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#grok-cli",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/grok-cli/",
+      "description": "Community-built terminal **harness** for xAI's Grok API, with sub-agents on by default and remote control via Telegram; explicitly unaffiliated with xAI itself.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 3405,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (CLI, sub-agents, remote control)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "retry",
+      "recovery_rank": 2,
+      "license_signal": "open-source",
+      "tags": [
+        "multi-agent",
+        "cli"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/superagent-ai/grok-cli#readme"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "little-coder",
+      "github_id": "itayinbarr/little-coder",
+      "url": "https://github.com/itayinbarr/little-coder",
+      "slug": "little-coder",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#little-coder",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/little-coder/",
+      "description": "Offline, pi-based coding-agent **harness** purpose-tuned for small local LLMs—the same scaffold runs Aider-Polyglot, Terminal-Bench, and GAIA tasks entirely on a laptop GPU with no cloud dependency.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 2419,
+      "tier": "mostly simple",
+      "tier_rank": 2,
+      "axis": "mostly simple (single offline agent loop, small-model-optimized, npm package)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "none",
+      "recovery_rank": 1,
+      "license_signal": "unknown",
+      "tags": [],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/itayinbarr/little-coder#readme"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "ATLAS",
+      "github_id": "itigges22/ATLAS",
+      "url": "https://github.com/itigges22/ATLAS",
+      "slug": "atlas",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#atlas",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/atlas/",
+      "description": "Local coding-agent **harness** that wraps small open-weight models with a planning/candidate-generation/verification/repair loop (test-time compute) to reach frontier-model-level coding benchmarks on consumer hardware, no API required.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 2076,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (local-first CLI/TUI, single-GPU inference)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "retry",
+      "recovery_rank": 2,
+      "license_signal": "open-source",
+      "tags": [
+        "evals",
+        "cli",
+        "tui"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/itigges22/ATLAS#readme"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "Open Cowork",
+      "github_id": "OpenCoworkAI/open-cowork",
+      "url": "https://github.com/OpenCoworkAI/open-cowork",
+      "slug": "open-cowork",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#open-cowork",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/open-cowork/",
+      "description": "Open-source desktop app that packages Claude Code, MCP tools, and Skills behind a one-click GUI **harness** with sandbox isolation—the shell around several existing agent harnesses rather than a new one.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 2031,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (Electron-style desktop shell, sandboxing, multi-model support)",
+      "autonomy": "checkpoint-gated",
+      "autonomy_rank": 2,
+      "recovery": "retry",
+      "recovery_rank": 2,
+      "license_signal": "open-source",
+      "tags": [
+        "mcp",
+        "sandbox"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/OpenCoworkAI/open-cowork#readme"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "Antigravity CLI",
+      "github_id": "google-antigravity/antigravity-cli",
+      "url": "https://github.com/google-antigravity/antigravity-cli",
+      "slug": "antigravity-cli",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#antigravity-cli",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/antigravity-cli/",
+      "description": "Google's official terminal surface for the Antigravity agent **harness**: shares the same underlying reasoning/execution/orchestration harness as the Antigravity IDE and desktop app, exposed via a keyboard-driven CLI shell instead of a GUI.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 1925,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (shared server-side harness across CLI/IDE/desktop/SDK surfaces)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "unknown",
+      "tags": [
+        "cli",
+        "ide"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/google-antigravity/antigravity-cli#readme"
       },
       "deep_dive": null
     },
@@ -2365,6 +2684,34 @@
       }
     },
     {
+      "name": "Ponytail",
+      "github_id": "DietrichGebert/ponytail",
+      "url": "https://github.com/DietrichGebert/ponytail",
+      "slug": "ponytail",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#ponytail",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/ponytail/",
+      "description": "YAGNI-enforcing skill/plugin—a short instruction set the **harness** loads into context rather than a runtime of its own—that pushes coding agents (Claude Code, Cursor, Codex) to check for existing solutions before generating new code. An early viral code-reduction claim was publicly challenged and corrected downward; treat the headline number skeptically.",
+      "category": "coding-harness-configs",
+      "category_title": "Coding harness configs and SDKs",
+      "stars": 103870,
+      "tier": "super simple",
+      "tier_rank": 1,
+      "axis": "super simple (skill/prompt pack, no runtime)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [
+        "ide"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/DietrichGebert/ponytail#readme"
+      },
+      "deep_dive": null
+    },
+    {
       "name": "addyosmani/agent-skills",
       "github_id": "addyosmani/agent-skills",
       "url": "https://github.com/addyosmani/agent-skills",
@@ -2390,6 +2737,34 @@
       "example": {
         "label": "Project README",
         "url": "https://github.com/addyosmani/agent-skills#readme"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "Learn Claude Code",
+      "github_id": "shareAI-lab/learn-claude-code",
+      "url": "https://github.com/shareAI-lab/learn-claude-code",
+      "slug": "learn-claude-code",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#learn-claude-code",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/learn-claude-code/",
+      "description": "From-scratch, bash-only educational build of a Claude-Code-like agent **harness**, walking through the tool wiring, permissions, and workflow loop that turns a base model into an autonomous coding agent.",
+      "category": "coding-harness-configs",
+      "category_title": "Coding harness configs and SDKs",
+      "stars": 74369,
+      "tier": "mostly simple",
+      "tier_rank": 2,
+      "axis": "mostly simple (educational reference harness, bash-only)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [
+        "workflow"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/shareAI-lab/learn-claude-code#readme"
       },
       "deep_dive": null
     },
@@ -2514,6 +2889,34 @@
       }
     },
     {
+      "name": "DESIGN.md",
+      "github_id": "google-labs-code/design.md",
+      "url": "https://github.com/google-labs-code/design.md",
+      "slug": "designmd",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#designmd",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/designmd/",
+      "description": "Format specification (YAML design tokens + markdown rationale) that gives coding agents a persistent, structured reference for a project's visual design system—a config file the **harness** loads rather than a tool it calls.",
+      "category": "coding-harness-configs",
+      "category_title": "Coding harness configs and SDKs",
+      "stars": 27271,
+      "tier": "super simple",
+      "tier_rank": 1,
+      "axis": "super simple (format spec, YAML + markdown, no runtime)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [
+        "memory"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/google-labs-code/design.md#readme"
+      },
+      "deep_dive": null
+    },
+    {
       "name": "planning-with-files",
       "github_id": "OthmanAdi/planning-with-files",
       "url": "https://github.com/OthmanAdi/planning-with-files",
@@ -2538,6 +2941,32 @@
       "example": {
         "label": "Project README",
         "url": "https://github.com/OthmanAdi/planning-with-files#readme"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "Claude Skills (alirezarezvani)",
+      "github_id": "alirezarezvani/claude-skills",
+      "url": "https://github.com/alirezarezvani/claude-skills",
+      "slug": "claude-skills",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#claude-skills",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/claude-skills/",
+      "description": "Large aggregated pack of slash-command and skill definitions for Claude Code and other coding-agent CLIs—configuration content layered onto an existing **harness**, not a harness of its own.",
+      "category": "coding-harness-configs",
+      "category_title": "Coding harness configs and SDKs",
+      "stars": 24509,
+      "tier": "mostly simple",
+      "tier_rank": 2,
+      "axis": "mostly simple (skill/config files only, zero-dependency scripts)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/alirezarezvani/claude-skills#readme"
       },
       "deep_dive": null
     },
@@ -2602,6 +3031,38 @@
           "evidence": "https://raw.githubusercontent.com/SWE-agent/SWE-agent/main/README.md"
         }
       }
+    },
+    {
+      "name": "Trellis",
+      "github_id": "mindfold-ai/Trellis",
+      "url": "https://github.com/mindfold-ai/Trellis",
+      "slug": "trellis",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#trellis",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/trellis/",
+      "description": "Spec/task/memory config layer that persists PRDs, review context, and journals into the repo and drives a plan-implement-verify loop of skills and sub-agents across 22 coding-agent CLIs, rather than shipping its own IDE or CLI.",
+      "category": "coding-harness-configs",
+      "category_title": "Coding harness configs and SDKs",
+      "stars": 13954,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (skill/config layer, 4-phase workflow, multi-platform)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [
+        "memory",
+        "multi-agent",
+        "workflow",
+        "cli",
+        "ide"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/mindfold-ai/Trellis#readme"
+      },
+      "deep_dive": null
     },
     {
       "name": "get-shit-done",
@@ -2849,6 +3310,152 @@
           "evidence": "https://github.com/iflytek/skillhub#readme"
         }
       }
+    },
+    {
+      "name": "Antigravity SDK (Python)",
+      "github_id": "google-antigravity/antigravity-sdk-python",
+      "url": "https://github.com/google-antigravity/antigravity-sdk-python",
+      "slug": "antigravity-sdk-python",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#antigravity-sdk-python",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/antigravity-sdk-python/",
+      "description": "Python SDK for building custom agents on top of Google's Antigravity agent-first development platform and Gemini models, exposing Antigravity's agentic loop and state management as a library rather than shipping its own CLI.",
+      "category": "coding-harness-configs",
+      "category_title": "Coding harness configs and SDKs",
+      "stars": 3045,
+      "tier": "mostly simple",
+      "tier_rank": 2,
+      "axis": "mostly simple (SDK only, no bundled IDE/CLI)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [
+        "cli",
+        "ide",
+        "python"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/google-antigravity/antigravity-sdk-python#readme"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "Desloppify",
+      "github_id": "peteromallet/desloppify",
+      "url": "https://github.com/peteromallet/desloppify",
+      "slug": "desloppify",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#desloppify",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/desloppify/",
+      "description": "**Harness** add-on that gives an existing coding agent the tools and workflow to identify and systematically clean up \"slop\" code, rather than replacing the agent's own harness.",
+      "category": "coding-harness-configs",
+      "category_title": "Coding harness configs and SDKs",
+      "stars": 3020,
+      "tier": "mostly simple",
+      "tier_rank": 2,
+      "axis": "mostly simple (code-quality workflow/toolset layered on an existing agent)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "restricted (OSNL v0.2 (non-commercial))",
+      "tags": [
+        "workflow"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/peteromallet/desloppify#readme"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "Agent Toolkit",
+      "github_id": "softaworks/agent-toolkit",
+      "url": "https://github.com/softaworks/agent-toolkit",
+      "slug": "agent-toolkit",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#agent-toolkit",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/agent-toolkit/",
+      "description": "Curated collection of packaged skills (instructions + scripts) that extend coding-agent capabilities across development, documentation, planning, and professional workflows without bundling any IDE or CLI of its own.",
+      "category": "coding-harness-configs",
+      "category_title": "Coding harness configs and SDKs",
+      "stars": 2342,
+      "tier": "super simple",
+      "tier_rank": 1,
+      "axis": "super simple (skill pack, multiple install channels)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [
+        "cli",
+        "ide"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/softaworks/agent-toolkit#readme"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "Harmonist",
+      "github_id": "GammaLabTechnologies/harmonist",
+      "url": "https://github.com/GammaLabTechnologies/harmonist",
+      "slug": "harmonist",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#harmonist",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/harmonist/",
+      "description": "Drop-in, zero-runtime-dependency config layer of 186 curated agents and hook-driven protocol enforcement (memory checks, reviewer gating) that plugs into Cursor, Claude Code, Copilot, Windsurf, and Aider, rather than shipping its own IDE or CLI.",
+      "category": "coding-harness-configs",
+      "category_title": "Coding harness configs and SDKs",
+      "stars": 2269,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (large agent catalog, hook-based enforcement, multi-tool)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "unknown",
+      "tags": [
+        "memory",
+        "cli",
+        "ide"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/GammaLabTechnologies/harmonist#readme"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "Fable Method",
+      "github_id": "Sahir619/fable-method",
+      "url": "https://github.com/Sahir619/fable-method",
+      "slug": "fable-method",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#fable-method",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/fable-method/",
+      "description": "Claude Code plugin distilling a classify → define-done → gather-evidence → commit → verify → report workflow into four installable skills, so a mid-tier model can follow the same disciplined loop, with a built-in eval to keep it honest—a **harness**-config skill pack, not a standalone agent.",
+      "category": "coding-harness-configs",
+      "category_title": "Coding harness configs and SDKs",
+      "stars": 2222,
+      "tier": "super simple",
+      "tier_rank": 1,
+      "axis": "super simple (skill-pack config, plugin-installable, model-agnostic)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "unknown",
+      "tags": [
+        "evals",
+        "workflow"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/Sahir619/fable-method#readme"
+      },
+      "deep_dive": null
     },
     {
       "name": "Meta-Harness",
@@ -3364,6 +3971,35 @@
       }
     },
     {
+      "name": "agenticSeek",
+      "github_id": "Fosowl/agenticSeek",
+      "url": "https://github.com/Fosowl/agenticSeek",
+      "slug": "agenticseek",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#agenticseek",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/agenticseek/",
+      "description": "Fully local autonomous-agent **harness** that plans, browses the web, and writes code using self-hosted models, with no cloud API dependency.",
+      "category": "personal-agent-runtimes",
+      "category_title": "Personal agent runtimes",
+      "stars": 26866,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (local planning, browser + code execution loop)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "none",
+      "recovery_rank": 1,
+      "license_signal": "open-source",
+      "tags": [
+        "browser",
+        "local"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/Fosowl/agenticSeek#readme"
+      },
+      "deep_dive": null
+    },
+    {
       "name": "Eliza",
       "github_id": "elizaOS/eliza",
       "url": "https://github.com/elizaOS/eliza",
@@ -3490,6 +4126,37 @@
       }
     },
     {
+      "name": "OpenFang",
+      "github_id": "RightNow-AI/openfang",
+      "url": "https://github.com/RightNow-AI/openfang",
+      "slug": "openfang",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#openfang",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/openfang/",
+      "description": "Rust-built, single-binary \"agent operating system\" that runs autonomous agents on schedules across 40+ chat channels (Telegram, Slack, Discord, etc.), acting as a persistent daemon **harness** rather than a one-shot CLI. Pre-1.0 and still finding its footing.",
+      "category": "personal-agent-runtimes",
+      "category_title": "Personal agent runtimes",
+      "stars": 18115,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (24/7 daemon, WASM sandboxing, many channel adapters)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "durable",
+      "recovery_rank": 4,
+      "license_signal": "open-source",
+      "tags": [
+        "memory",
+        "sandbox",
+        "cli",
+        "rust"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/RightNow-AI/openfang#readme"
+      },
+      "deep_dive": null
+    },
+    {
       "name": "OpenHarness (HKUDS)",
       "github_id": "HKUDS/OpenHarness",
       "url": "https://github.com/HKUDS/OpenHarness",
@@ -3551,6 +4218,67 @@
       }
     },
     {
+      "name": "QM",
+      "github_id": "yc-software/qm",
+      "url": "https://github.com/yc-software/qm",
+      "slug": "qm",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#qm",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/qm/",
+      "description": "Y Combinator's open-sourced multiplayer agent **harness**—a headless TypeScript/Postgres daemon giving every person and Slack/web room scoped memory, files, credentials, crons, and durable sandboxes, running Claude Code, OpenCode, Codex, or Pi as pluggable execution engines rather than being one coding-agent UI.",
+      "category": "personal-agent-runtimes",
+      "category_title": "Personal agent runtimes",
+      "stars": 13680,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (multi-user daemon, Slack/web surfaces, durable sandboxes, pluggable harnesses, tiered approval modes)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "durable",
+      "recovery_rank": 4,
+      "license_signal": "open-source",
+      "tags": [
+        "memory",
+        "browser",
+        "sandbox",
+        "typescript"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/yc-software/qm#readme"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "Kun",
+      "github_id": "KunAgent/Kun",
+      "url": "https://github.com/KunAgent/Kun",
+      "slug": "kun",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#kun",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/kun/",
+      "description": "Local-first agent runtime—one persistent agent loop behind both an Electron desktop GUI and a terminal TUI—that carries project context, resumes sessions, and serves chat, coding, writing/design, phone connections, and scheduled tasks, functioning as a full personal **harness** rather than a thin chat UI.",
+      "category": "personal-agent-runtimes",
+      "category_title": "Personal agent runtimes",
+      "stars": 6123,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (local-first runtime, dual GUI/TUI surfaces, scheduled/always-on tasks)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "unknown",
+      "tags": [
+        "memory",
+        "cli",
+        "tui"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/KunAgent/Kun#readme"
+      },
+      "deep_dive": null
+    },
+    {
       "name": "AIlice",
       "github_id": "myshell-ai/AIlice",
       "url": "https://github.com/myshell-ai/AIlice",
@@ -3610,6 +4338,35 @@
           "evidence": "https://github.com/myshell-ai/AIlice#readme"
         }
       }
+    },
+    {
+      "name": "waku-agent",
+      "github_id": "ShenSeanChen/waku-agent",
+      "url": "https://github.com/ShenSeanChen/waku-agent",
+      "slug": "waku-agent",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#waku-agent",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/waku-agent/",
+      "description": "Local-first personal agent **harness**—its own loop, memory, and eval code—built to stay legible and hackable as it grows, rather than a hosted black-box assistant.",
+      "category": "personal-agent-runtimes",
+      "category_title": "Personal agent runtimes",
+      "stars": 1382,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (transparent, code-first loop/memory/eval)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "none",
+      "recovery_rank": 1,
+      "license_signal": "unknown",
+      "tags": [
+        "memory",
+        "evals"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/ShenSeanChen/waku-agent#readme"
+      },
+      "deep_dive": null
     },
     {
       "name": "Talon",
@@ -4039,6 +4796,95 @@
           "label": "blueprint",
           "detail": "The repo installs a self-hosted Python Agent class that already implements the ReAct-style browser loop (you configure task/llm/tools rather than write the loop); Browser Use Cloud is a named fully-hosted managed alternative.",
           "evidence": "https://raw.githubusercontent.com/browser-use/browser-use/HEAD/README.md"
+        }
+      }
+    },
+    {
+      "name": "AnythingLLM",
+      "github_id": "Mintplex-Labs/anything-llm",
+      "url": "https://github.com/Mintplex-Labs/anything-llm",
+      "slug": "anything-llm",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#anything-llm",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/anything-llm/",
+      "description": "Full-stack, local-first LLM application **harness**—chat UI, agent orchestration, RAG pipeline, and vector DB—that you self-host instead of renting a hosted assistant.",
+      "category": "frameworks",
+      "category_title": "Frameworks",
+      "stars": 64765,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (multi-user, agents, RAG, vector DB, desktop/docker)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "retry",
+      "recovery_rank": 2,
+      "license_signal": "open-source",
+      "tags": [
+        "rag"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/Mintplex-Labs/anything-llm#readme"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "Flowise",
+      "github_id": "FlowiseAI/Flowise",
+      "url": "https://github.com/FlowiseAI/Flowise",
+      "slug": "flowise",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#flowise",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/flowise/",
+      "description": "Drag-and-drop LangChain UI; deploy flows without code. The low-code sibling to Langflow, with a different component and hosting story.",
+      "category": "frameworks",
+      "category_title": "Frameworks",
+      "stars": 55379,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (low-code, drag-drop — product suite)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "retry",
+      "recovery_rank": 2,
+      "license_signal": "restricted (Apache+CLA)",
+      "tags": [
+        "low-code",
+        "typescript"
+      ],
+      "example": {
+        "label": "Agentic RAG flow",
+        "url": "https://github.com/FlowiseAI/Flowise/blob/main/packages/server/marketplaces/agentflowsv2/Agentic%20RAG.json"
+      },
+      "deep_dive": {
+        "researched": "2026-07-19",
+        "tooling_sandboxing": {
+          "rating": "strong",
+          "rank": 3,
+          "detail": "Custom Function/Tool nodes execute JavaScript inside NodeVM, \"an isolated V8 context with a custom module loader that enforces dependency and built-in module allowlists\"; built-in modules, external packages, and filesystem access are all denied by default unless explicitly whitelisted via TOOL_FUNCTION_BUILTIN_DEP/TOOL_FUNCTION_EXTERNAL_DEP/ALLOW_BUILTIN_DEP.",
+          "evidence": "https://deepwiki.com/FlowiseAI/Flowise/6.3-sandbox-security"
+        },
+        "context_memory": {
+          "rating": "strong",
+          "rank": 3,
+          "detail": "Chat memory nodes persist conversation history in the chat_message database table (or external Redis/DynamoDB/MongoDB Atlas/Zep backends) keyed by a sessionId, surviving app restarts rather than living only in the request.",
+          "evidence": "https://docs.flowiseai.com/integrations/langchain/memory/buffer-window-memory"
+        },
+        "lifecycle_hooks": {
+          "rating": "full",
+          "rank": 3,
+          "detail": "Simple Prompt Moderation uses an LLM to check a user query against a deny list and, on a match, outputs a default error message instead of forwarding it, preventing the problematic input from ever reaching the primary LLM/tool call.",
+          "evidence": "https://docs.flowiseai.com/integrations/langchain/moderation/simple-prompt-moderation"
+        },
+        "prompt_optimization": {
+          "rating": "configurable",
+          "rank": 2,
+          "detail": "Chat Prompt Template nodes expose editable system/human messages with prompt-value variables, and overrideConfig.systemMessagePrompt lets callers override the system message per API call; no automatic prompt-tuning loop is documented.",
+          "evidence": "https://docs.flowiseai.com/integrations/langchain/prompts/chat-prompt-template"
+        },
+        "build_vs_buy": {
+          "tier": 2,
+          "label": "blueprint",
+          "detail": "Repo installs the self-hostable, config/flow-driven LangChain UI (deployable to AWS/Azure/GCP/DO); Flowise Cloud is a named managed hosting alternative, not the primary installed artifact.",
+          "evidence": "https://raw.githubusercontent.com/FlowiseAI/Flowise/HEAD/README.md"
         }
       }
     },
@@ -4715,6 +5561,36 @@
       }
     },
     {
+      "name": "Upsonic",
+      "github_id": "Upsonic/Upsonic",
+      "url": "https://github.com/Upsonic/Upsonic",
+      "slug": "upsonic",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#upsonic",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/upsonic/",
+      "description": "Python framework for building autonomous agents with MCP tool support, reliability/guardrail features, and multi-provider LLM backing.",
+      "category": "frameworks",
+      "category_title": "Frameworks",
+      "stars": 7939,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (Python SDK, MCP-native, reliability layer)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "retry",
+      "recovery_rank": 2,
+      "license_signal": "open-source",
+      "tags": [
+        "mcp",
+        "provider-agnostic",
+        "python"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/Upsonic/Upsonic#readme"
+      },
+      "deep_dive": null
+    },
+    {
       "name": "agent-squad",
       "github_id": "2FastLabs/agent-squad",
       "url": "https://github.com/2FastLabs/agent-squad",
@@ -4834,6 +5710,65 @@
           "evidence": "https://raw.githubusercontent.com/OpenBMB/AgentVerse/main/README.md"
         }
       }
+    },
+    {
+      "name": "AgentScope (Java)",
+      "github_id": "agentscope-ai/agentscope-java",
+      "url": "https://github.com/agentscope-ai/agentscope-java",
+      "slug": "agentscope-java",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#agentscope-java",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/agentscope-java/",
+      "description": "Java port of Alibaba Tongyi Lab's AgentScope framework for building distributed, production-grade, long-running agents with built-in permissioning, sandboxing, and multi-agent orchestration.",
+      "category": "frameworks",
+      "category_title": "Frameworks",
+      "stars": 5084,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (distributed, enterprise-oriented runtime)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "durable",
+      "recovery_rank": 4,
+      "license_signal": "open-source",
+      "tags": [
+        "multi-agent",
+        "sandbox"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/agentscope-ai/agentscope-java#readme"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "Eko",
+      "github_id": "FellouAI/eko",
+      "url": "https://github.com/FellouAI/eko",
+      "slug": "eko",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#eko",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/eko/",
+      "description": "JS/TS agentic-workflow framework for compiling production agent loops from natural-language task descriptions, spanning browser automation and computer-use tools.",
+      "category": "frameworks",
+      "category_title": "Frameworks",
+      "stars": 4949,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (natural-language workflow compiler, browser/computer-use tool integration)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "retry",
+      "recovery_rank": 2,
+      "license_signal": "open-source",
+      "tags": [
+        "browser",
+        "workflow",
+        "typescript"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/FellouAI/eko#readme"
+      },
+      "deep_dive": null
     },
     {
       "name": "youtu-agent",
@@ -5379,6 +6314,37 @@
       }
     },
     {
+      "name": "Multica",
+      "github_id": "multica-ai/multica",
+      "url": "https://github.com/multica-ai/multica",
+      "slug": "multica",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#multica",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/multica/",
+      "description": "Self-hostable dashboard that assigns issues to 20+ different coding-agent CLIs (Claude Code, Codex, Cursor, etc.) as a fleet of teammates, tracking each agent's execution logs and progress independent of any single vendor's **harness**.",
+      "category": "multi-agent",
+      "category_title": "Multi-agent and orchestration",
+      "stars": 46178,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (multi-agent fleet ops, self-hosted, Docker/Helm)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "restricted (Multica License (Apache-2.0 + additional conditions))",
+      "tags": [
+        "multi-agent",
+        "sandbox",
+        "local",
+        "ide"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/multica-ai/multica#readme"
+      },
+      "deep_dive": null
+    },
+    {
       "name": "ChatDev",
       "github_id": "OpenBMB/ChatDev",
       "url": "https://github.com/OpenBMB/ChatDev",
@@ -5497,6 +6463,34 @@
           "evidence": "https://raw.githubusercontent.com/openai/openai-agents-python/main/README.md"
         }
       }
+    },
+    {
+      "name": "DeepCode",
+      "github_id": "HKUDS/DeepCode",
+      "url": "https://github.com/HKUDS/DeepCode",
+      "slug": "deepcode",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#deepcode",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/deepcode/",
+      "description": "Open agentic-coding system whose **harness** implements paper-to-code and text-to-web pipelines through explicit multi-agent orchestration and loop engineering, distinct from any single-agent chat surface.",
+      "category": "multi-agent",
+      "category_title": "Multi-agent and orchestration",
+      "stars": 16359,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (multi-agent orchestration, Paper2Code + Text2Web pipelines)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "retry",
+      "recovery_rank": 2,
+      "license_signal": "open-source",
+      "tags": [
+        "multi-agent"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/HKUDS/DeepCode#readme"
+      },
+      "deep_dive": null
     },
     {
       "name": "Microsoft Agent Framework",
@@ -5713,6 +6707,36 @@
       }
     },
     {
+      "name": "Open Multi-Agent",
+      "github_id": "open-multi-agent/open-multi-agent",
+      "url": "https://github.com/open-multi-agent/open-multi-agent",
+      "slug": "open-multi-agent",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#open-multi-agent",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/open-multi-agent/",
+      "description": "TypeScript agent-orchestration framework that drops into any Node.js app: a coordinator plans a task DAG from a stated goal at runtime and a deterministic scheduler executes it across a team of agents on any LLM, functioning as the orchestration layer above each agent's own **harness**.",
+      "category": "multi-agent",
+      "category_title": "Multi-agent and orchestration",
+      "stars": 6780,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (library, DAG scheduler, provider-agnostic)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "retry",
+      "recovery_rank": 2,
+      "license_signal": "open-source",
+      "tags": [
+        "low-code",
+        "provider-agnostic",
+        "typescript"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/open-multi-agent/open-multi-agent#readme"
+      },
+      "deep_dive": null
+    },
+    {
       "name": "AG2",
       "github_id": "ag2ai/ag2",
       "url": "https://github.com/ag2ai/ag2",
@@ -5738,6 +6762,64 @@
       "example": {
         "label": "Project README",
         "url": "https://github.com/ag2ai/ag2#readme"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "Claude Codex Bridge (ccb)",
+      "github_id": "SeemSeam/claude_codex_bridge",
+      "url": "https://github.com/SeemSeam/claude_codex_bridge",
+      "slug": "claude_codex_bridge",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#claude_codex_bridge",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/claude_codex_bridge/",
+      "description": "tmux-based, visible multi-agent CLI workspace that runs Codex, Claude, Gemini, and other coding-agent CLIs side by side as full native terminals with a persistent background daemon and a shared-memory file for agent handoff—an orchestration shell around each agent's own **harness**.",
+      "category": "multi-agent",
+      "category_title": "Multi-agent and orchestration",
+      "stars": 3407,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (tmux multiplexer, shared-memory handoff file, persistent daemon)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "unknown",
+      "tags": [
+        "memory",
+        "multi-agent",
+        "cli"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/SeemSeam/claude_codex_bridge#readme"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "Agent Teams AI",
+      "github_id": "777genius/agent-teams-ai",
+      "url": "https://github.com/777genius/agent-teams-ai",
+      "slug": "agent-teams-ai",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#agent-teams-ai",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/agent-teams-ai/",
+      "description": "Desktop app that assembles teams of coding agents (Claude Code, Codex, Cursor, OpenCode, GitHub Copilot, etc.) with distinct roles that message each other and review each other's work, coordinating each agent's individual **harness** through a shared kanban board.",
+      "category": "multi-agent",
+      "category_title": "Multi-agent and orchestration",
+      "stars": 1934,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (Electron desktop app, cross-vendor orchestration, up to 30 teammates)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "retry",
+      "recovery_rank": 2,
+      "license_signal": "open-source",
+      "tags": [
+        "ide"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/777genius/agent-teams-ai#readme"
       },
       "deep_dive": null
     },
@@ -5801,6 +6883,34 @@
           "evidence": "https://raw.githubusercontent.com/THUDM/AgentRL/main/README.md"
         }
       }
+    },
+    {
+      "name": "Firecrawl",
+      "github_id": "firecrawl/firecrawl",
+      "url": "https://github.com/firecrawl/firecrawl",
+      "slug": "firecrawl",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#firecrawl",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/firecrawl/",
+      "description": "Hosted scraping/crawling API and official MCP server that gives coding and research agents a **harness**-callable tool for turning arbitrary web pages into clean markdown or JSON, including an autonomous \"agent search\" mode for open-ended data gathering.",
+      "category": "plugins-mcp-cli",
+      "category_title": "Plugins, MCPs, CLI tools",
+      "stars": 168068,
+      "tier": "mostly simple",
+      "tier_rank": 2,
+      "axis": "mostly simple (hosted API + MCP server, no local agent loop)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [
+        "mcp"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/firecrawl/firecrawl#readme"
+      },
+      "deep_dive": null
     },
     {
       "name": "MCP Servers",
@@ -6011,6 +7121,37 @@
       "deep_dive": null
     },
     {
+      "name": "herdr",
+      "github_id": "herdrdev/herdr",
+      "url": "https://github.com/herdrdev/herdr",
+      "slug": "herdr",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#herdr",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/herdr/",
+      "description": "Rust terminal **harness**/multiplexer that runs underneath other coding-agent CLIs (Claude Code, Codex, Cursor, OpenCode), tracking pane state and letting agents spawn and coordinate with each other over a CLI/socket API.",
+      "category": "plugins-mcp-cli",
+      "category_title": "Plugins, MCPs, CLI tools",
+      "stars": 29676,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (session-persistent multiplexer, agent-aware panes, CLI + socket API)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [
+        "memory",
+        "cli",
+        "ide",
+        "rust"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/herdrdev/herdr#readme"
+      },
+      "deep_dive": null
+    },
+    {
       "name": "MCP Python SDK",
       "github_id": "modelcontextprotocol/python-sdk",
       "url": "https://github.com/modelcontextprotocol/python-sdk",
@@ -6184,6 +7325,35 @@
       "deep_dive": null
     },
     {
+      "name": "Mirage",
+      "github_id": "strukto-ai/mirage",
+      "url": "https://github.com/strukto-ai/mirage",
+      "slug": "mirage",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#mirage",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/mirage/",
+      "description": "Unified virtual filesystem that mounts S3, Google Drive, Slack, and other services as ordinary paths, giving coding agents' file-based **harness** tools access to external services without bespoke API integrations.",
+      "category": "plugins-mcp-cli",
+      "category_title": "Plugins, MCPs, CLI tools",
+      "stars": 3466,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (FUSE-based VFS, Python/TS SDKs)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [
+        "python",
+        "typescript"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/strukto-ai/mirage#readme"
+      },
+      "deep_dive": null
+    },
+    {
       "name": "cocoindex-code",
       "github_id": "cocoindex-io/cocoindex-code",
       "url": "https://github.com/cocoindex-io/cocoindex-code",
@@ -6213,6 +7383,34 @@
       "deep_dive": null
     },
     {
+      "name": "Qwen-MM-Plugins",
+      "github_id": "QwenLM/Qwen-MM-Plugins",
+      "url": "https://github.com/QwenLM/Qwen-MM-Plugins",
+      "slug": "qwen-mm-plugins",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#qwen-mm-plugins",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/qwen-mm-plugins/",
+      "description": "Official Qwen team plugin set that makes any existing agent **harness** multimodal-native, adding image/audio/video tool plugins rather than a new agent runtime.",
+      "category": "plugins-mcp-cli",
+      "category_title": "Plugins, MCPs, CLI tools",
+      "stars": 2613,
+      "tier": "super simple",
+      "tier_rank": 1,
+      "axis": "super simple (plugin/tool add-on layer)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [
+        "vision"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/QwenLM/Qwen-MM-Plugins#readme"
+      },
+      "deep_dive": null
+    },
+    {
       "name": "agent-vault",
       "github_id": "Infisical/agent-vault",
       "url": "https://github.com/Infisical/agent-vault",
@@ -6235,6 +7433,35 @@
       "example": {
         "label": "Project README",
         "url": "https://github.com/Infisical/agent-vault#readme"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "Stripe AI",
+      "github_id": "stripe/ai",
+      "url": "https://github.com/stripe/ai",
+      "slug": "ai",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#ai",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/ai/",
+      "description": "Stripe's official collection of agent skills, plugins, and a hosted MCP server that give coding agents (Claude Code, Codex, Cursor, Grok Build) direct tool access to billing and payments infrastructure.",
+      "category": "plugins-mcp-cli",
+      "category_title": "Plugins, MCPs, CLI tools",
+      "stars": 1748,
+      "tier": "mostly simple",
+      "tier_rank": 2,
+      "axis": "mostly simple (MCP server + skills/plugins, no standalone harness)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [
+        "mcp",
+        "ide"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/stripe/ai#readme"
       },
       "deep_dive": null
     },
@@ -6354,6 +7581,38 @@
       "example": {
         "label": "Sample decisions.jsonl",
         "url": "https://github.com/RyanAlberts/agentlog/blob/main/example-log/decisions.jsonl"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "Graphify",
+      "github_id": "Graphify-Labs/graphify",
+      "url": "https://github.com/Graphify-Labs/graphify",
+      "slug": "graphify",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#graphify",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/graphify/",
+      "description": "Local, deterministic skill that parses your codebase with tree-sitter into a queryable knowledge graph—no vector store, no LLM calls for extraction—installable into Claude Code, Cursor, Codex, and Gemini CLI as a `/graphify` command, contrasting with typical embedding-based RAG **harness** setups.",
+      "category": "memory",
+      "category_title": "Memory and state",
+      "stars": 106982,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (local AST parsing, knowledge-graph skill, multi-agent support)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [
+        "multi-agent",
+        "rag",
+        "workflow",
+        "cli",
+        "ide"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/Graphify-Labs/graphify#readme"
       },
       "deep_dive": null
     },
@@ -6573,6 +7832,36 @@
       "deep_dive": null
     },
     {
+      "name": "AgentMemory",
+      "github_id": "rohitg00/agentmemory",
+      "url": "https://github.com/rohitg00/agentmemory",
+      "slug": "agentmemory",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#agentmemory",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/agentmemory/",
+      "description": "Persistent-memory MCP layer (54 tools, benchmark-backed retrieval) that plugs into a coding agent's **harness** as an external memory store rather than being a harness itself.",
+      "category": "memory",
+      "category_title": "Memory and state",
+      "stars": 27076,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (MCP server + benchmark suite, 20+ agent integrations)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [
+        "mcp",
+        "memory",
+        "evals"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/rohitg00/agentmemory#readme"
+      },
+      "deep_dive": null
+    },
+    {
       "name": "beads",
       "github_id": "gastownhall/beads",
       "url": "https://github.com/gastownhall/beads",
@@ -6631,6 +7920,95 @@
           "evidence": "https://raw.githubusercontent.com/gastownhall/beads/main/README.md"
         }
       }
+    },
+    {
+      "name": "Kungfu",
+      "github_id": "kungfu-systems/kungfu",
+      "url": "https://github.com/kungfu-systems/kungfu",
+      "slug": "kungfu",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#kungfu",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/kungfu/",
+      "description": "Durable memory and continuity layer that sits underneath coding-agent **harnesses** (Codex, Claude, OpenCode)—recording, ordering, and verifying \"work facts and Episodes\" so a fresh agent session can resume the same task instead of reconstructing context from conversation history.",
+      "category": "memory",
+      "category_title": "Memory and state",
+      "stars": 4468,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (durable event log, cross-harness continuity, no execution engine of its own)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "unknown",
+      "tags": [
+        "memory"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/kungfu-systems/kungfu#readme"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "MIRIX",
+      "github_id": "Mirix-AI/MIRIX",
+      "url": "https://github.com/Mirix-AI/MIRIX",
+      "slug": "mirix",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#mirix",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/mirix/",
+      "description": "Multi-agent memory system that captures real-time screen activity and consolidates it into structured, queryable memories for a personal assistant.",
+      "category": "memory",
+      "category_title": "Memory and state",
+      "stars": 3431,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (multi-agent memory consolidation pipeline)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [
+        "memory",
+        "multi-agent"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/Mirix-AI/MIRIX#readme"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "DataClaw",
+      "github_id": "peteromallet/dataclaw",
+      "url": "https://github.com/peteromallet/dataclaw",
+      "slug": "dataclaw",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#dataclaw",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/dataclaw/",
+      "description": "CLI/Python package that exports and publishes agent chat session history from Claude Code, Cursor, Codex, Gemini CLI, and OpenCode as structured Hugging Face datasets (messages, tool calls, thinking blocks, token counts)—turning ordinary coding-agent sessions into reusable, versioned session-capture data.",
+      "category": "memory",
+      "category_title": "Memory and state",
+      "stars": 2108,
+      "tier": "mostly simple",
+      "tier_rank": 2,
+      "axis": "mostly simple (export/CLI tool, multi-agent session capture, pip-installable)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [
+        "memory",
+        "multi-agent",
+        "cli",
+        "ide",
+        "python"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/peteromallet/dataclaw#readme"
+      },
+      "deep_dive": null
     },
     {
       "name": "Agent Lightning",
@@ -6751,6 +8129,36 @@
       "example": {
         "label": "Inspect tutorial example",
         "url": "https://inspect.aisi.org.uk/tutorial.html"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "AssetOpsBench",
+      "github_id": "IBM/AssetOpsBench",
+      "url": "https://github.com/IBM/AssetOpsBench",
+      "slug": "assetopsbench",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#assetopsbench",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/assetopsbench/",
+      "description": "IBM's benchmark and framework for building, orchestrating, and evaluating domain-specific industrial-maintenance agents, with 460+ scenarios and multi-agent orchestration blueprints over MCP.",
+      "category": "evaluation",
+      "category_title": "Evaluation and benchmarking harnesses",
+      "stars": 2161,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (460+ scenario benchmark, 5 specialist agents, MCP orchestration)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [
+        "mcp",
+        "multi-agent",
+        "evals"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/IBM/AssetOpsBench#readme"
       },
       "deep_dive": null
     },
@@ -7394,6 +8802,32 @@
       "deep_dive": null
     },
     {
+      "name": "PocketFlow Codebase-to-Tutorial",
+      "github_id": "The-Pocket/PocketFlow-Tutorial-Codebase-Knowledge",
+      "url": "https://github.com/The-Pocket/PocketFlow-Tutorial-Codebase-Knowledge",
+      "slug": "pocketflow-tutorial-codebase-knowledge",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#pocketflow-tutorial-codebase-knowledge",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/pocketflow-tutorial-codebase-knowledge/",
+      "description": "Agentic pipeline that crawls a codebase and drives an LLM through a research-and-write loop to produce a beginner-friendly tutorial—a concrete domain-specific **harness** built on the minimal PocketFlow agent framework.",
+      "category": "research-task",
+      "category_title": "Research and task-specific harnesses",
+      "stars": 12618,
+      "tier": "mostly simple",
+      "tier_rank": 2,
+      "axis": "mostly simple (single-purpose pipeline)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "none",
+      "recovery_rank": 1,
+      "license_signal": "open-source",
+      "tags": [],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/The-Pocket/PocketFlow-Tutorial-Codebase-Knowledge#readme"
+      },
+      "deep_dive": null
+    },
+    {
       "name": "MiroThinker",
       "github_id": "MiroMindAI/MiroThinker",
       "url": "https://github.com/MiroMindAI/MiroThinker",
@@ -7418,6 +8852,145 @@
       "example": {
         "label": "Project README",
         "url": "https://github.com/MiroMindAI/MiroThinker#readme"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "OpenEvolve",
+      "github_id": "algorithmicsuperintelligence/openevolve",
+      "url": "https://github.com/algorithmicsuperintelligence/openevolve",
+      "slug": "openevolve",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#openevolve",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/openevolve/",
+      "description": "Open reimplementation of DeepMind's AlphaEvolve—an LLM-driven evolutionary **harness** that runs MAP-Elites/island-based population search, mutating and automatically scoring candidate code across generations, rather than doing single-shot code generation.",
+      "category": "research-task",
+      "category_title": "Research and task-specific harnesses",
+      "stars": 7193,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (evolutionary loop, multi-model ensemble, benchmark-driven scoring)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "retry",
+      "recovery_rank": 2,
+      "license_signal": "open-source",
+      "tags": [
+        "evals"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/algorithmicsuperintelligence/openevolve#readme"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "MiroFlow",
+      "github_id": "MiroMindAI/MiroFlow",
+      "url": "https://github.com/MiroMindAI/MiroFlow",
+      "slug": "miroflow",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#miroflow",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/miroflow/",
+      "description": "MiroMind's open-source deep-research agent **harness**—a modular orchestration layer with an agent graph, hierarchical sub-agents, and fault-tolerant tool execution—reproducing state-of-the-art results on GAIA, HLE, BrowseComp, and xBench using MiroThinker, Claude, Kimi, or OpenAI models.",
+      "category": "research-task",
+      "category_title": "Research and task-specific harnesses",
+      "stars": 3094,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (multi-agent orchestration, benchmark-reproducible, model-agnostic backends)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "retry",
+      "recovery_rank": 2,
+      "license_signal": "open-source",
+      "tags": [
+        "multi-agent",
+        "evals",
+        "workflow"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/MiroMindAI/MiroFlow#readme"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "FAROS",
+      "github_id": "OpenNSWM-Lab/FAROS",
+      "url": "https://github.com/OpenNSWM-Lab/FAROS",
+      "slug": "faros",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#faros",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/faros/",
+      "description": "Blueprint-driven AutoResearch runtime that orchestrates AI research workflows end-to-end, from idea generation and experiments through paper writing and peer review.",
+      "category": "research-task",
+      "category_title": "Research and task-specific harnesses",
+      "stars": 2991,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (multi-stage research pipeline: ideation → experiments → paper → review)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "none",
+      "recovery_rank": 1,
+      "license_signal": "unknown",
+      "tags": [],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/OpenNSWM-Lab/FAROS#readme"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "Visa Vulnerability Agentic Harness",
+      "github_id": "visa/visa-vulnerability-agentic-harness",
+      "url": "https://github.com/visa/visa-vulnerability-agentic-harness",
+      "slug": "visa-vulnerability-agentic-harness",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#visa-vulnerability-agentic-harness",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/visa-vulnerability-agentic-harness/",
+      "description": "Visa's open-source eleven-stage agentic **harness** for security research—threat modeling, adversarial multi-lens verification, and automated fix generation over a codebase, producing SARIF/Markdown findings for human review.",
+      "category": "research-task",
+      "category_title": "Research and task-specific harnesses",
+      "stars": 2553,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (multi-stage pipeline, multiple LLM backends)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "none",
+      "recovery_rank": 1,
+      "license_signal": "open-source",
+      "tags": [],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/visa/visa-vulnerability-agentic-harness#readme"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "Evo",
+      "github_id": "evo-hq/evo",
+      "url": "https://github.com/evo-hq/evo",
+      "slug": "evo",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#evo",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/evo/",
+      "description": "Turns a codebase into an autoresearch loop—it discovers what to measure, instruments the benchmark, then runs tree-search experiments across parallel subagents (each in its own git worktree), keeping runs that improve the score and discarding ones that fail pass/fail \"gates\"—an experiment-orchestration **harness** rather than a single coding assistant.",
+      "category": "research-task",
+      "category_title": "Research and task-specific harnesses",
+      "stars": 1372,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (tree-search over experiments, parallel subagents, gated safety checks)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "retry",
+      "recovery_rank": 2,
+      "license_signal": "open-source",
+      "tags": [
+        "multi-agent",
+        "evals"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/evo-hq/evo#readme"
       },
       "deep_dive": null
     },
@@ -7631,9 +9204,9 @@
       "name": "vercel/ai",
       "github_id": "vercel/ai",
       "url": "https://github.com/vercel/ai",
-      "slug": "ai",
-      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#ai",
-      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/ai/",
+      "slug": "ai-2",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#ai-2",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/ai-2/",
       "description": "React and Node SDK for streaming, tool calls, and agent-style UIs; provider-agnostic.",
       "category": "libraries-sdks",
       "category_title": "Libraries and SDKs",
@@ -7807,6 +9380,37 @@
       "deep_dive": null
     },
     {
+      "name": "fast-agent",
+      "github_id": "evalstate/fast-agent",
+      "url": "https://github.com/evalstate/fast-agent",
+      "slug": "fast-agent",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#fast-agent",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/fast-agent/",
+      "description": "Python **harness**/toolkit for composing, running, and evaluating MCP-native agents with end-to-end tested Sampling/Elicitation support and ACP/A2A/skills interop, rather than a full IDE product.",
+      "category": "libraries-sdks",
+      "category_title": "Libraries and SDKs",
+      "stars": 3890,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (MCP-first agent composition, eval tooling, multi-protocol)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "retry",
+      "recovery_rank": 2,
+      "license_signal": "open-source",
+      "tags": [
+        "mcp",
+        "evals",
+        "ide",
+        "python"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/evalstate/fast-agent#readme"
+      },
+      "deep_dive": null
+    },
+    {
       "name": "openai-agents-js",
       "github_id": "openai/openai-agents-js",
       "url": "https://github.com/openai/openai-agents-js",
@@ -7863,6 +9467,64 @@
       "example": {
         "label": "Sandbox resource quickstart",
         "url": "https://github.com/kubernetes-sigs/agent-sandbox#readme"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "LLMCompiler",
+      "github_id": "SqueezeAILab/LLMCompiler",
+      "url": "https://github.com/SqueezeAILab/LLMCompiler",
+      "slug": "llmcompiler",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#llmcompiler",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/llmcompiler/",
+      "description": "Peer-reviewed (ICML 2024) execution engine that plans and runs LLM function/tool calls in parallel as a DAG, functioning as a low-level tool-orchestration primitive rather than a full agent product.",
+      "category": "libraries-sdks",
+      "category_title": "Libraries and SDKs",
+      "stars": 1873,
+      "tier": "mostly simple",
+      "tier_rank": 2,
+      "axis": "mostly simple (parallel function-calling execution engine)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "unknown",
+      "tags": [
+        "low-code"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/SqueezeAILab/LLMCompiler#readme"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "Deep Agents (JS)",
+      "github_id": "langchain-ai/deepagentsjs",
+      "url": "https://github.com/langchain-ai/deepagentsjs",
+      "slug": "deepagentsjs",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#deepagentsjs",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/deepagentsjs/",
+      "description": "LangChain's official JS/TS agent **harness** primitive—a planning tool, filesystem backend, and subagent spawning built on LangGraph—a provider-agnostic library rather than a packaged product.",
+      "category": "libraries-sdks",
+      "category_title": "Libraries and SDKs",
+      "stars": 1482,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (library/SDK, batteries-included primitives on LangGraph)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "open-source",
+      "tags": [
+        "multi-agent",
+        "provider-agnostic",
+        "typescript"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/langchain-ai/deepagentsjs#readme"
       },
       "deep_dive": null
     },
@@ -7932,13 +9594,6 @@
       "reason": "suspected star manipulation — ~228k stars / ~35k forks on a repo created 2026-01 with no matching install base, dependents, or discussion; fork-to-star ratio and growth curve are inconsistent with organic adoption"
     },
     {
-      "github_id": "FlowiseAI/Flowise",
-      "name": "Flowise",
-      "last_stars": 55379,
-      "since": "2026-08-16",
-      "reason": "archived upstream — kept for citation"
-    },
-    {
       "github_id": "spring-ai-community/spring-ai-tool-search-tool",
       "name": "spring-ai-tool-search-tool",
       "last_stars": 78,
@@ -7955,75 +9610,15 @@
   ],
   "radar": [
     {
-      "github_id": "Fosowl/agenticSeek",
-      "stars": 26866,
-      "desc": "Fully Local Manus AI. No APIs, No $200 monthly bills. Enjoy an autonomous agent that thinks, browses the web, and code for the sole cost of electricity.",
-      "via": "weekly discovery"
-    },
-    {
-      "github_id": "RightNow-AI/openfang",
-      "stars": 18115,
-      "desc": "Open-source Agent Operating System",
-      "via": "weekly discovery"
-    },
-    {
       "github_id": "EvoMap/evolver",
       "stars": 8978,
       "desc": "The GEP-powered self-evolving engine for AI agents. Auditable evolution with Genes, Capsules, and Events. \\| evomap.ai",
       "via": "weekly discovery"
     },
     {
-      "github_id": "algorithmicsuperintelligence/openevolve",
-      "stars": 7193,
-      "desc": "Open-source implementation of AlphaEvolve",
-      "via": "weekly discovery"
-    },
-    {
-      "github_id": "open-multi-agent/open-multi-agent",
-      "stars": 6780,
-      "desc": "TypeScript AI agent orchestration framework with dynamic workflows. Describe the goal, not the graph: a coordinator plans the task DAG at runtime and runs it…",
-      "via": "weekly discovery"
-    },
-    {
       "github_id": "crestalnetwork/intentkit",
       "stars": 6507,
       "desc": "IntentKit is an open-source, self-hosted cloud agent cluster that manages a collaborative team of AI agents for you.",
-      "via": "weekly discovery"
-    },
-    {
-      "github_id": "cloudflare/vibesdk",
-      "stars": 5322,
-      "desc": "An open-source vibe coding platform that helps you build your own vibe-coding platform, built entirely on Cloudflare stack",
-      "via": "weekly discovery"
-    },
-    {
-      "github_id": "agentscope-ai/agentscope-java",
-      "stars": 5084,
-      "desc": "Build distributed, production-grade, long-running agents.",
-      "via": "weekly discovery"
-    },
-    {
-      "github_id": "FellouAI/eko",
-      "stars": 4949,
-      "desc": "Eko (Eko Keeps Operating) - Build Production-ready Agentic Workflow with Natural Language - eko.fellou.ai",
-      "via": "weekly discovery"
-    },
-    {
-      "github_id": "evalstate/fast-agent",
-      "stars": 3890,
-      "desc": "Code, Build and Evaluate agents - excellent Model and Skills/MCP/ACP/A2A Support",
-      "via": "weekly discovery"
-    },
-    {
-      "github_id": "Mirix-AI/MIRIX",
-      "stars": 3431,
-      "desc": "Mirix is a multi-agent personal assistant designed to track on-screen activities and answer user questions intelligently. By capturing real-time visual data…",
-      "via": "weekly discovery"
-    },
-    {
-      "github_id": "google-antigravity/antigravity-cli",
-      "stars": 1925,
-      "desc": "Antigravity CLI brings the reasoning, execution, and orchestration capabilities of Antigravity agent harness directly into your terminal.",
       "via": "weekly discovery"
     },
     {
