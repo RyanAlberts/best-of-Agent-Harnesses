@@ -9,8 +9,8 @@
     "feed_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/feed.json",
     "license": "CC-BY-SA-4.0",
     "stars_captured": "2026-08-16",
-    "project_count": 160,
-    "graveyard_count": 4,
+    "project_count": 167,
+    "graveyard_count": 3,
     "tiers": [
       "super simple",
       "mostly simple",
@@ -219,6 +219,7 @@
       "intent": "I want low-code / visual workflows",
       "picks": [
         "langflow-ai/langflow",
+        "FlowiseAI/Flowise",
         "langgenius/dify",
         "n8n-io/n8n"
       ],
@@ -327,7 +328,7 @@
     {
       "kind": "use-case",
       "q": "What is the best agent harness if I want low-code / visual workflows?",
-      "a": "Top picks: langflow, Dify, n8n. See the “Frameworks” category for the full ranked list.",
+      "a": "Top picks: langflow, Flowise, Dify. See the “Frameworks” category for the full ranked list.",
       "slug": "what-is-the-best-agent-harness-if-i-want-low-code-visual-workflows"
     },
     {
@@ -375,7 +376,7 @@
     {
       "kind": "derived",
       "q": "How many of these agent harnesses are open source?",
-      "a": "118 of 160 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
+      "a": "118 of 167 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
       "slug": "how-many-of-these-agent-harnesses-are-open-source"
     },
     {
@@ -579,6 +580,32 @@
           "evidence": "https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/HEAD/README.md"
         }
       }
+    },
+    {
+      "name": "DESIGN.md",
+      "github_id": "google-labs-code/design.md",
+      "url": "https://github.com/google-labs-code/design.md",
+      "slug": "designmd",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#designmd",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/designmd/",
+      "description": "Google Labs' open format for describing a visual design system to coding agents—brand tokens and UI conventions loaded progressively into the harness, the same layered-disclosure pattern as AGENTS.md applied to design instead of general instructions.",
+      "category": "progressive-disclosure",
+      "category_title": "Progressive disclosure harnesses",
+      "stars": 27271,
+      "tier": "super simple",
+      "tier_rank": 1,
+      "axis": "super simple (format only)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "unknown",
+      "tags": [],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/google-labs-code/design.md#readme"
+      },
+      "deep_dive": null
     },
     {
       "name": "agents.md",
@@ -2851,6 +2878,67 @@
       }
     },
     {
+      "name": "awesome-harness-engineering",
+      "github_id": "ai-boost/awesome-harness-engineering",
+      "url": "https://github.com/ai-boost/awesome-harness-engineering",
+      "slug": "awesome-harness-engineering",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#awesome-harness-engineering",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/awesome-harness-engineering/",
+      "description": "Curated index scoped to the harness layer specifically—tool routing, evals, memory, MCP, permissions, observability—rather than agents or LLMs in general.",
+      "category": "coding-harness-configs",
+      "category_title": "Coding harness configs and SDKs",
+      "stars": 3592,
+      "tier": "super simple",
+      "tier_rank": 1,
+      "axis": "super simple (curated resource index)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "unknown",
+      "tags": [
+        "mcp",
+        "memory",
+        "evals",
+        "tool-discovery"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/ai-boost/awesome-harness-engineering#readme"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "Antigravity SDK (Python)",
+      "github_id": "google-antigravity/antigravity-sdk-python",
+      "url": "https://github.com/google-antigravity/antigravity-sdk-python",
+      "slug": "antigravity-sdk-python",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#antigravity-sdk-python",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/antigravity-sdk-python/",
+      "description": "Google's official Python SDK for the Antigravity platform: the **harness** primitives—tool registration, skills, MCP wiring, agent loop—as a library you build against, without the Antigravity IDE shell.",
+      "category": "coding-harness-configs",
+      "category_title": "Coding harness configs and SDKs",
+      "stars": 3045,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (official SDK, no bundled shell)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "retry",
+      "recovery_rank": 2,
+      "license_signal": "unknown",
+      "tags": [
+        "mcp",
+        "ide",
+        "python"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/google-antigravity/antigravity-sdk-python#readme"
+      },
+      "deep_dive": null
+    },
+    {
       "name": "Meta-Harness",
       "github_id": "stanford-iris-lab/meta-harness",
       "url": "https://github.com/stanford-iris-lab/meta-harness",
@@ -4043,6 +4131,67 @@
       }
     },
     {
+      "name": "Flowise",
+      "github_id": "FlowiseAI/Flowise",
+      "url": "https://github.com/FlowiseAI/Flowise",
+      "slug": "flowise",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#flowise",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/flowise/",
+      "description": "Drag-and-drop LangChain UI; deploy flows without code. The low-code sibling to Langflow, with a different component and hosting story. ⚠️ Archived upstream 2026-08-16 — kept in the live list for its install base and citation weight, but expect no further releases; Langflow or Dify are the maintained equivalents.",
+      "category": "frameworks",
+      "category_title": "Frameworks",
+      "stars": 55379,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (low-code, drag-drop — product suite)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "retry",
+      "recovery_rank": 2,
+      "license_signal": "restricted (Apache+CLA)",
+      "tags": [
+        "low-code",
+        "typescript"
+      ],
+      "example": {
+        "label": "Agentic RAG flow",
+        "url": "https://github.com/FlowiseAI/Flowise/blob/main/packages/server/marketplaces/agentflowsv2/Agentic%20RAG.json"
+      },
+      "deep_dive": {
+        "researched": "2026-07-19",
+        "tooling_sandboxing": {
+          "rating": "strong",
+          "rank": 3,
+          "detail": "Custom Function/Tool nodes execute JavaScript inside NodeVM, \"an isolated V8 context with a custom module loader that enforces dependency and built-in module allowlists\"; built-in modules, external packages, and filesystem access are all denied by default unless explicitly whitelisted via TOOL_FUNCTION_BUILTIN_DEP/TOOL_FUNCTION_EXTERNAL_DEP/ALLOW_BUILTIN_DEP.",
+          "evidence": "https://deepwiki.com/FlowiseAI/Flowise/6.3-sandbox-security"
+        },
+        "context_memory": {
+          "rating": "strong",
+          "rank": 3,
+          "detail": "Chat memory nodes persist conversation history in the chat_message database table (or external Redis/DynamoDB/MongoDB Atlas/Zep backends) keyed by a sessionId, surviving app restarts rather than living only in the request.",
+          "evidence": "https://docs.flowiseai.com/integrations/langchain/memory/buffer-window-memory"
+        },
+        "lifecycle_hooks": {
+          "rating": "full",
+          "rank": 3,
+          "detail": "Simple Prompt Moderation uses an LLM to check a user query against a deny list and, on a match, outputs a default error message instead of forwarding it, preventing the problematic input from ever reaching the primary LLM/tool call.",
+          "evidence": "https://docs.flowiseai.com/integrations/langchain/moderation/simple-prompt-moderation"
+        },
+        "prompt_optimization": {
+          "rating": "configurable",
+          "rank": 2,
+          "detail": "Chat Prompt Template nodes expose editable system/human messages with prompt-value variables, and overrideConfig.systemMessagePrompt lets callers override the system message per API call; no automatic prompt-tuning loop is documented.",
+          "evidence": "https://docs.flowiseai.com/integrations/langchain/prompts/chat-prompt-template"
+        },
+        "build_vs_buy": {
+          "tier": 2,
+          "label": "blueprint",
+          "detail": "Repo installs the self-hostable, config/flow-driven LangChain UI (deployable to AWS/Azure/GCP/DO); Flowise Cloud is a named managed hosting alternative, not the primary installed artifact.",
+          "evidence": "https://raw.githubusercontent.com/FlowiseAI/Flowise/HEAD/README.md"
+        }
+      }
+    },
+    {
       "name": "llama-index",
       "github_id": "run-llama/llama_index",
       "url": "https://github.com/run-llama/llama_index",
@@ -4713,6 +4862,35 @@
           "evidence": "https://raw.githubusercontent.com/SciPhi-AI/R2R/main/py/README.md"
         }
       }
+    },
+    {
+      "name": "Upsonic",
+      "github_id": "Upsonic/Upsonic",
+      "url": "https://github.com/Upsonic/Upsonic",
+      "slug": "upsonic",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#upsonic",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/upsonic/",
+      "description": "Python framework for autonomous agents with native MCP tool support and computer-use; the distinguishing **harness** piece is a reliability layer that validates agent output before a task is treated as done.",
+      "category": "frameworks",
+      "category_title": "Frameworks",
+      "stars": 7939,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (MCP, computer-use, output validation)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "retry",
+      "recovery_rank": 2,
+      "license_signal": "unknown",
+      "tags": [
+        "mcp",
+        "python"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/Upsonic/Upsonic#readme"
+      },
+      "deep_dive": null
     },
     {
       "name": "agent-squad",
@@ -6755,6 +6933,36 @@
       "deep_dive": null
     },
     {
+      "name": "AssetOpsBench",
+      "github_id": "IBM/AssetOpsBench",
+      "url": "https://github.com/IBM/AssetOpsBench",
+      "slug": "assetopsbench",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#assetopsbench",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/assetopsbench/",
+      "description": "IBM's benchmark and orchestration **harness** for industrial-maintenance agents: 460+ scenarios, five specialist agents, and MetaAgent/AgentHive orchestration blueprints running over MCP—a domain-grounded alternative to generic tool-use benchmarks.",
+      "category": "evaluation",
+      "category_title": "Evaluation and benchmarking harnesses",
+      "stars": 2161,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (benchmark + orchestration blueprints)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "retry",
+      "recovery_rank": 2,
+      "license_signal": "unknown",
+      "tags": [
+        "mcp",
+        "evals",
+        "python"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/IBM/AssetOpsBench#readme"
+      },
+      "deep_dive": null
+    },
+    {
       "name": "WebArena",
       "github_id": "web-arena-x/webarena",
       "url": "https://github.com/web-arena-x/webarena",
@@ -7603,7 +7811,7 @@
       "slug": "deepagents",
       "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#deepagents",
       "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/deepagents/",
-      "description": "LangChain's Python+TypeScript agent harness on top of LangGraph: planning tool, virtual filesystem, shell sandbox, sub-agent spawning—the \"Claude Code-style\" harness as a reusable library.",
+      "description": "LangChain's agent harness on top of LangGraph (Python, plus [TypeScript](https://github.com/langchain-ai/deepagentsjs)): planning tool, virtual filesystem, shell sandbox, sub-agent spawning—the \"Claude Code-style\" harness as a reusable library.",
       "category": "libraries-sdks",
       "category_title": "Libraries and SDKs",
       "stars": 27811,
@@ -7867,6 +8075,35 @@
       "deep_dive": null
     },
     {
+      "name": "LLMCompiler",
+      "github_id": "SqueezeAILab/LLMCompiler",
+      "url": "https://github.com/SqueezeAILab/LLMCompiler",
+      "slug": "llmcompiler",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#llmcompiler",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/llmcompiler/",
+      "description": "ICML 2024 execution **harness** that compiles a task into a DAG of function calls and dispatches independent calls in parallel, instead of the one-call-at-a-time ReAct loop—latency and token wins on multi-tool tasks.",
+      "category": "libraries-sdks",
+      "category_title": "Libraries and SDKs",
+      "stars": 1873,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (parallel function-calling planner)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "retry",
+      "recovery_rank": 2,
+      "license_signal": "unknown",
+      "tags": [
+        "low-code",
+        "python"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/SqueezeAILab/LLMCompiler#readme"
+      },
+      "deep_dive": null
+    },
+    {
       "name": "open-harness",
       "github_id": "MaxGfeller/open-harness",
       "url": "https://github.com/MaxGfeller/open-harness",
@@ -7932,13 +8169,6 @@
       "reason": "suspected star manipulation — ~228k stars / ~35k forks on a repo created 2026-01 with no matching install base, dependents, or discussion; fork-to-star ratio and growth curve are inconsistent with organic adoption"
     },
     {
-      "github_id": "FlowiseAI/Flowise",
-      "name": "Flowise",
-      "last_stars": 55379,
-      "since": "2026-08-16",
-      "reason": "archived upstream — kept for citation"
-    },
-    {
       "github_id": "spring-ai-community/spring-ai-tool-search-tool",
       "name": "spring-ai-tool-search-tool",
       "last_stars": 78,
@@ -7955,9 +8185,21 @@
   ],
   "radar": [
     {
+      "github_id": "herdrdev/herdr",
+      "stars": 29676,
+      "desc": "the runtime your coding agents live on",
+      "via": "weekly discovery"
+    },
+    {
       "github_id": "Fosowl/agenticSeek",
       "stars": 26866,
       "desc": "Fully Local Manus AI. No APIs, No $200 monthly bills. Enjoy an autonomous agent that thinks, browses the web, and code for the sole cost of electricity.",
+      "via": "weekly discovery"
+    },
+    {
+      "github_id": "manaflow-ai/cmux",
+      "stars": 26106,
+      "desc": "Open source Ghostty-based macOS terminal with vertical tabs and notifications for AI coding agents. Built for multitasking, organization, and programmability.",
       "via": "weekly discovery"
     },
     {
@@ -8018,6 +8260,24 @@
       "github_id": "Mirix-AI/MIRIX",
       "stars": 3431,
       "desc": "Mirix is a multi-agent personal assistant designed to track on-screen activities and answer user questions intelligently. By capturing real-time visual data…",
+      "via": "weekly discovery"
+    },
+    {
+      "github_id": "superagent-ai/grok-cli",
+      "stars": 3405,
+      "desc": "An open-source coding agent for the Grok API",
+      "via": "weekly discovery"
+    },
+    {
+      "github_id": "QwenLM/Qwen-MM-Plugins",
+      "stars": 2613,
+      "desc": "Make any agent harness multimodal-native.",
+      "via": "weekly discovery"
+    },
+    {
+      "github_id": "visa/visa-vulnerability-agentic-harness",
+      "stars": 2553,
+      "desc": "Visa Vulnerability Agentic Harness",
       "via": "weekly discovery"
     },
     {

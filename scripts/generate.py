@@ -172,6 +172,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("Headroom", "headroomlabs-ai/headroom",
                 "Compresses tool outputs, logs, files, and RAG chunks with content-aware compressors before they reach the model—claimed 20% fewer tokens for coding agents and 60–95% fewer for JSON, same answers. Ships as a library, HTTP proxy, or MCP server, so it drops in front of whatever harness you already run.",
                 "mostly simple (compression library/proxy/MCP server)"),
+        Project("DESIGN.md", "google-labs-code/design.md",
+                "Google Labs' open format for describing a visual design system to coding agents—brand tokens and UI conventions loaded progressively into the harness, the same layered-disclosure pattern as AGENTS.md applied to design instead of general instructions.",
+                "super simple (format only)", oss="❓"),
     ],
     "coding-agent-products": [
         Project("oh-my-pi", "can1357/oh-my-pi",
@@ -299,6 +302,12 @@ PROJECTS: dict[str, list[Project]] = {
         Project("Meta-Harness", "stanford-iris-lab/meta-harness",
                 "Reference implementation from the Meta-Harness paper: an academic testbed for harness-engineering research, not a product—useful as a citation-grade baseline rather than something you'd run in production.",
                 "slightly complex (research reference implementation)", oss="❓"),
+        Project("Antigravity SDK (Python)", "google-antigravity/antigravity-sdk-python",
+                "Google's official Python SDK for the Antigravity platform: the **harness** primitives—tool registration, skills, MCP wiring, agent loop—as a library you build against, without the Antigravity IDE shell.",
+                "slightly complex (official SDK, no bundled shell)", oss="❓", labels=["python"]),
+        Project("awesome-harness-engineering", "ai-boost/awesome-harness-engineering",
+                "Curated index scoped to the harness layer specifically—tool routing, evals, memory, MCP, permissions, observability—rather than agents or LLMs in general.",
+                "super simple (curated resource index)", oss="❓"),
     ],
     "personal-agent-runtimes": [
         Project("Talon", "dylanneve1/talon",
@@ -399,7 +408,7 @@ PROJECTS: dict[str, list[Project]] = {
                 "~300 lines of readable agent code on top of LiteLLM; the \"I want to see the whole loop\" option for learning or minimal production.",
                 "super simple (~300 LOC)", labels=["python"]),
         Project("Flowise", "FlowiseAI/Flowise",
-                "Drag-and-drop LangChain UI; deploy flows without code. The low-code sibling to Langflow, with a different component and hosting story.",
+                "Drag-and-drop LangChain UI; deploy flows without code. The low-code sibling to Langflow, with a different component and hosting story. ⚠️ Archived upstream 2026-08-16 — kept in the live list for its install base and citation weight, but expect no further releases; Langflow or Dify are the maintained equivalents.",
                 "complex (low-code, drag-drop — product suite)", oss="⚠️ Apache+CLA", labels=["javascript"]),
         Project("browser-use", "browser-use/browser-use",
                 "Python web-agent **harness**: natural-language goals become browser actions, driven directly over the Chrome DevTools Protocol (it dropped Playwright in August 2025). The biggest community in the browser-agent category.",
@@ -413,6 +422,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("Haystack", "deepset-ai/haystack",
                 "Open-source orchestration framework for context-engineered LLM apps: modular pipelines and agent workflows with explicit control over retrieval, routing, memory, and generation—closer to LangChain's territory than a coding-agent harness.",
                 "complex (modular pipelines, RAG + agents — product suite)", labels=["python"]),
+        Project("Upsonic", "Upsonic/Upsonic",
+                "Python framework for autonomous agents with native MCP tool support and computer-use; the distinguishing **harness** piece is a reliability layer that validates agent output before a task is treated as done.",
+                "slightly complex (MCP, computer-use, output validation)", oss="❓", labels=["python"]),
     ],
     "multi-agent": [
         Project("openai-agents-python", "openai/openai-agents-python",
@@ -583,6 +595,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("Agent Lightning", "microsoft/agent-lightning",
                 "Microsoft's training-oriented harness: optimization loops for agent behavior—when you need to improve policies over rollouts, not only score a fixed prompt.",
                 "complex (agent training, Microsoft stack — product suite)", labels=["python"]),
+        Project("AssetOpsBench", "IBM/AssetOpsBench",
+                "IBM's benchmark and orchestration **harness** for industrial-maintenance agents: 460+ scenarios, five specialist agents, and MetaAgent/AgentHive orchestration blueprints running over MCP—a domain-grounded alternative to generic tool-use benchmarks.",
+                "complex (benchmark + orchestration blueprints)", oss="❓", labels=["python"]),
     ],
     "observability": [
         Project("Langfuse", "langfuse/langfuse",
@@ -617,7 +632,7 @@ PROJECTS: dict[str, list[Project]] = {
     ],
     "libraries-sdks": [
         Project("deepagents", "langchain-ai/deepagents",
-                "LangChain's Python+TypeScript agent harness on top of LangGraph: planning tool, virtual filesystem, shell sandbox, sub-agent spawning—the \"Claude Code-style\" harness as a reusable library.",
+                "LangChain's agent harness on top of LangGraph (Python, plus [TypeScript](https://github.com/langchain-ai/deepagentsjs)): planning tool, virtual filesystem, shell sandbox, sub-agent spawning—the \"Claude Code-style\" harness as a reusable library.",
                 "slightly complex (planning, files, sub-agents)", labels=["python"]),
         Project("pydantic-ai", "pydantic/pydantic-ai",
                 "Type-safe Python agents with Pydantic I/O; multi-provider, MCP, Logfire observability, and human-in-the-loop.",
@@ -658,6 +673,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("Daytona", "daytonaio/daytona",
                 "Elastic dev environments for AI-generated code: workspaces, Git, previews—infra harness between \"the model wrote a patch\" and \"it ran in a real machine.\" ⚠️ Public repo unmaintained since June 2026: core development moved to a private codebase (final open release v0.190.0, AGPL-3.0).",
                 "slightly complex (dev env API, isolation)"),
+        Project("LLMCompiler", "SqueezeAILab/LLMCompiler",
+                "ICML 2024 execution **harness** that compiles a task into a DAG of function calls and dispatches independent calls in parallel, instead of the one-call-at-a-time ReAct loop—latency and token wins on multi-tool tasks.",
+                "slightly complex (parallel function-calling planner)", oss="❓", labels=["python"]),
         Project("Community-curated agent lists", "brandonhimpfen/awesome-ai-agents",
                 "Broader directories: e.g. [brandonhimpfen/awesome-ai-agents](https://github.com/brandonhimpfen/awesome-ai-agents), [axioma-ai-labs/awesome-ai-agent-frameworks](https://github.com/axioma-ai-labs/awesome-ai-agent-frameworks), [mb-mal/awesome-ai-agents-frameworks](https://github.com/mb-mal/awesome-ai-agents-frameworks)—differ by scope and update cadence.",
                 "super simple (curated lists)", oss="❓"),
@@ -681,6 +699,7 @@ META: dict[str, tuple[int, str, str]] = {
     "antl3x/ToolRAG": (33, "https://github.com/antl3x/ToolRAG/blob/main/packages/%40antl3x-toolrag/README.md", "MCP server retrieval"),
     "mksglu/context-mode": (19898, "https://github.com/mksglu/context-mode#readme", "Project README"),
     "headroomlabs-ai/headroom": (66507, "https://github.com/headroomlabs-ai/headroom#readme", "Project README"),
+    "google-labs-code/design.md": (27271, "https://github.com/google-labs-code/design.md#readme", "Project README"),
     # coding-agent-products
     "can1357/oh-my-pi": (25170, "https://github.com/can1357/oh-my-pi/blob/main/docs/lsp-config.md", "LSP wired into edits"),
     "earendil-works/pi": (91323, "https://github.com/earendil-works/pi#readme", "Project README"),
@@ -723,6 +742,8 @@ META: dict[str, tuple[int, str, str]] = {
     "addyosmani/agent-skills": (87668, "https://github.com/addyosmani/agent-skills#readme", "Project README"),
     "OthmanAdi/planning-with-files": (26198, "https://github.com/OthmanAdi/planning-with-files#readme", "Project README"),
     "stanford-iris-lab/meta-harness": (1417, "https://github.com/stanford-iris-lab/meta-harness#readme", "Project README"),
+    "google-antigravity/antigravity-sdk-python": (3045, "https://github.com/google-antigravity/antigravity-sdk-python#readme", "Project README"),
+    "ai-boost/awesome-harness-engineering": (3592, "https://github.com/ai-boost/awesome-harness-engineering#readme", "Project README"),
     # frameworks
     "langchain-ai/langgraph": (39797, "https://github.com/langchain-ai/langgraph/blob/main/examples/customer-support/customer-support.ipynb", "Customer support agent"),
     "langchain-ai/langchain": (144337, "https://github.com/langchain-ai/langchain-academy/blob/main/module-1/agent.ipynb", "Build an agent notebook"),
@@ -763,6 +784,7 @@ META: dict[str, tuple[int, str, str]] = {
     "browserbase/stagehand": (23953, "https://github.com/browserbase/stagehand#readme", "Act/extract/observe quickstart"),
     "TencentCloudADP/youtu-agent": (4600, "https://github.com/TencentCloudADP/youtu-agent#readme", "Project README"),
     "deepset-ai/haystack": (26222, "https://github.com/deepset-ai/haystack#readme", "Project README"),
+    "Upsonic/Upsonic": (7939, "https://github.com/Upsonic/Upsonic#readme", "Project README"),
     "ag2ai/ag2": (4866, "https://github.com/ag2ai/ag2#readme", "Project README"),
     # multi-agent
     "openai/openai-agents-python": (28673, "https://github.com/openai/openai-agents-python/blob/main/examples/customer_service/main.py", "Airline customer service handoffs"),
@@ -808,6 +830,7 @@ META: dict[str, tuple[int, str, str]] = {
     "UKGovernmentBEIS/inspect_evals": (627, "https://github.com/UKGovernmentBEIS/inspect_evals/blob/main/src/inspect_evals/swe_bench/README.md", "inspect SWE-bench eval"),
     "UKGovernmentBEIS/inspect_ai": (2559, "https://inspect.aisi.org.uk/tutorial.html", "Inspect tutorial example"),
     "microsoft/agent-lightning": (17487, "https://github.com/microsoft/agent-lightning/blob/main/examples/apo/README.md", "APO room-booking example"),
+    "IBM/AssetOpsBench": (2161, "https://github.com/IBM/AssetOpsBench#readme", "Project README"),
     # research-task
     "assafelovic/gpt-researcher": (29004, "https://github.com/assafelovic/gpt-researcher/blob/master/docs/blog/2024-05-19-gptr-langgraph/index.md", "Multi-agent LangGraph walkthrough"),
     "OpenAgentsInc/openagents": (446, "https://github.com/OpenAgentsInc/openagents/blob/main/docs/reports/nexus/2026-04-23-autopilot-pylon-production-earning-proof.md", "Production earning proof"),
@@ -830,6 +853,7 @@ META: dict[str, tuple[int, str, str]] = {
     "daytonaio/daytona": (71999, "https://github.com/daytonaio/daytona/tree/main/examples/python/charts", "Charts in sandbox"),
     "kubernetes-sigs/agent-sandbox": (3533, "https://github.com/kubernetes-sigs/agent-sandbox#readme", "Sandbox resource quickstart"),
     "steel-dev/steel-browser": (7493, "https://docs.steel.dev", "Sessions API docs"),
+    "SqueezeAILab/LLMCompiler": (1873, "https://github.com/SqueezeAILab/LLMCompiler#readme", "Project README"),
     "brandonhimpfen/awesome-ai-agents": (15, "https://github.com/brandonhimpfen/awesome-ai-agents#frameworks", "Frameworks section"),
     # memory
     "topoteretes/cognee": (30061, "https://github.com/topoteretes/cognee#readme", "Quickstart"),
@@ -977,6 +1001,14 @@ RADAR: "list[dict]" = [
     {"id": "Mirix-AI/MIRIX", "via": "weekly discovery"},
     {"id": "cloudflare/vibesdk", "via": "weekly discovery"},
     {"id": "algorithmicsuperintelligence/openevolve", "via": "weekly discovery"},
+    # Added 2026-08-20 biweekly curation pass — trusted orgs or plausible
+    # products whose repo descriptions are still too thin to write a
+    # harness-focused listing from; watching for another cycle.
+    {"id": "QwenLM/Qwen-MM-Plugins", "via": "weekly discovery"},
+    {"id": "visa/visa-vulnerability-agentic-harness", "via": "weekly discovery"},
+    {"id": "superagent-ai/grok-cli", "via": "weekly discovery"},
+    {"id": "manaflow-ai/cmux", "via": "weekly discovery"},
+    {"id": "herdrdev/herdr", "via": "weekly discovery"},
 ]
 
 
@@ -1058,6 +1090,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "antl3x/ToolRAG": ("n/a", "n/a"),
     "mksglu/context-mode": ("n/a", "n/a"),
     "headroomlabs-ai/headroom": ("n/a", "n/a"),
+    "google-labs-code/design.md": ("n/a", "n/a"),
     # coding-agent-products
     "can1357/oh-my-pi": ("bounded", "resumable"),
     "earendil-works/pi": ("bounded", "resumable"),
@@ -1100,6 +1133,8 @@ AXES: "dict[str, tuple[str, str]]" = {
     "RyanAlberts/pmstack": ("n/a", "n/a"),
     "OthmanAdi/planning-with-files": ("n/a", "n/a"),
     "stanford-iris-lab/meta-harness": ("n/a", "n/a"),
+    "google-antigravity/antigravity-sdk-python": ("bounded", "retry"),
+    "ai-boost/awesome-harness-engineering": ("n/a", "n/a"),
     # frameworks
     "n8n-io/n8n": ("headless", "durable"),
     "Significant-Gravitas/AutoGPT": ("headless", "resumable"),
@@ -1140,6 +1175,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "HKUDS/nanobot": ("n/a", "n/a"),
     "zhayujie/CowAgent": ("n/a", "n/a"),
     "deepset-ai/haystack": ("n/a", "n/a"),
+    "Upsonic/Upsonic": ("bounded", "retry"),
     "ag2ai/ag2": ("n/a", "n/a"),
     # multi-agent
     "microsoft/autogen": ("bounded", "resumable"),
@@ -1169,6 +1205,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     # evaluation
     "vostride/agent-qa": ("headless", "retry"),
     "microsoft/agent-lightning": ("headless", "resumable"),
+    "IBM/AssetOpsBench": ("headless", "retry"),
     "SWE-bench/SWE-bench": ("headless", "resumable"),
     "harbor-framework/terminal-bench": ("headless", "none"),
     "THUDM/AgentBench": ("headless", "none"),
@@ -1207,6 +1244,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "cloudflare/agents": ("headless", "durable"),
     "openai/openai-agents-js": ("bounded", "resumable"),
     "MaxGfeller/open-harness": ("bounded", "none"),
+    "SqueezeAILab/LLMCompiler": ("bounded", "retry"),
     "brandonhimpfen/awesome-ai-agents": ("n/a", "n/a"),
     # memory (state layers — no agent loop of their own)
     "topoteretes/cognee": ("n/a", "n/a"),

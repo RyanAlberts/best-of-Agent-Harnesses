@@ -83,6 +83,9 @@ projects:
   - name: Headroom
     github_id: headroomlabs-ai/headroom
     category: "progressive-disclosure"
+  - name: DESIGN.md
+    github_id: google-labs-code/design.md
+    category: "progressive-disclosure"
   # Coding agent products (IDEs, CLIs, full suites)
   - name: oh-my-pi
     github_id: can1357/oh-my-pi
@@ -223,6 +226,13 @@ projects:
   - name: Meta-Harness
     github_id: stanford-iris-lab/meta-harness
     category: "coding-harness-configs"
+  - name: Antigravity SDK (Python)
+    github_id: google-antigravity/antigravity-sdk-python
+    labels: ["python"]
+    category: "coding-harness-configs"
+  - name: awesome-harness-engineering
+    github_id: ai-boost/awesome-harness-engineering
+    category: "coding-harness-configs"
   # Personal agent runtimes
   - name: Talon
     github_id: dylanneve1/talon
@@ -345,6 +355,10 @@ projects:
     github_id: howl-anderson/agentsilex
     labels: ["python"]
     category: "frameworks"
+  - name: Flowise
+    github_id: FlowiseAI/Flowise
+    labels: ["javascript"]
+    category: "frameworks"
   - name: browser-use
     github_id: browser-use/browser-use
     labels: ["python"]
@@ -358,6 +372,10 @@ projects:
     category: "frameworks"
   - name: Haystack
     github_id: deepset-ai/haystack
+    labels: ["python"]
+    category: "frameworks"
+  - name: Upsonic
+    github_id: Upsonic/Upsonic
     labels: ["python"]
     category: "frameworks"
   # Multi-agent and orchestration
@@ -568,6 +586,10 @@ projects:
     github_id: microsoft/agent-lightning
     labels: ["python"]
     category: "evaluation"
+  - name: AssetOpsBench
+    github_id: IBM/AssetOpsBench
+    labels: ["python"]
+    category: "evaluation"
   # Observability and eval-ops
   - name: Langfuse
     github_id: langfuse/langfuse
@@ -655,6 +677,10 @@ projects:
     category: "libraries-sdks"
   - name: Daytona
     github_id: daytonaio/daytona
+    category: "libraries-sdks"
+  - name: LLMCompiler
+    github_id: SqueezeAILab/LLMCompiler
+    labels: ["python"]
     category: "libraries-sdks"
   - name: Community-curated agent lists
     github_id: brandonhimpfen/awesome-ai-agents
