@@ -873,6 +873,11 @@ KEEP_DESPITE_ARCHIVED: "set[str]" = {
     # widely referenced/forked (see Kilo Code, its direct successor, added
     # this cycle). Historically important enough to keep out of the Graveyard.
     "RooCodeInc/Roo-Code",
+    # 55k+ stars, the long-standing low-code/drag-drop sibling to Langflow in
+    # the LangChain UI-builder space; archived upstream 2026-08-16. One of the
+    # most widely deployed no-code agent-flow tools, still referenced across
+    # the ecosystem. Historically important enough to keep out of the Graveyard.
+    "FlowiseAI/Flowise",
 }
 
 # Repos routed to the Graveyard for a curation-integrity reason rather than
