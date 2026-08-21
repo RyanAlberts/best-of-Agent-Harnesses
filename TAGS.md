@@ -1,13 +1,13 @@
 <!-- markdownlint-disable -->
 # Tags — cross-reference
 
-_Auto-generated from `scripts/generate.py`. 160 projects across 22 canonical tags. Edit projects in `generate.py` (not here) and rerun the script._
+_Auto-generated from `scripts/generate.py`. 163 projects across 22 canonical tags. Edit projects in `generate.py` (not here) and rerun the script._
 
 Tag chips appear next to each project in [README.md](README.md). This page lists every tag once with the projects that carry it, grouped by category and sorted by GitHub stars within each category.
 
 ## All tags
 
-[`mcp`](#mcp) (33) · [`memory`](#memory) (35) · [`multi-agent`](#multi-agent) (27) · [`evals`](#evals) (21) · [`voice`](#voice) (2) · [`vision`](#vision) (3) · [`browser`](#browser) (9) · [`sandbox`](#sandbox) (27) · [`low-code`](#low-code) (3) · [`rag`](#rag) (8) · [`tool-discovery`](#tool-discovery) (5) · [`training`](#training) (5) · [`workflow`](#workflow) (10) · [`typed`](#typed) (3) · [`local`](#local) (6) · [`provider-agnostic`](#provider-agnostic) (11) · [`cli`](#cli) (22) · [`ide`](#ide) (13) · [`tui`](#tui) (4) · [`rust`](#rust) (5) · [`python`](#python) (79) · [`typescript`](#typescript) (40)
+[`mcp`](#mcp) (33) · [`memory`](#memory) (35) · [`multi-agent`](#multi-agent) (28) · [`evals`](#evals) (21) · [`voice`](#voice) (2) · [`vision`](#vision) (3) · [`browser`](#browser) (9) · [`sandbox`](#sandbox) (27) · [`low-code`](#low-code) (4) · [`rag`](#rag) (8) · [`tool-discovery`](#tool-discovery) (5) · [`training`](#training) (5) · [`workflow`](#workflow) (10) · [`typed`](#typed) (3) · [`local`](#local) (6) · [`provider-agnostic`](#provider-agnostic) (11) · [`cli`](#cli) (24) · [`ide`](#ide) (14) · [`tui`](#tui) (5) · [`rust`](#rust) (5) · [`python`](#python) (79) · [`typescript`](#typescript) (41)
 
 ---
 
@@ -152,6 +152,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 **Coding harness configs and SDKs**
 
 - [wshobson/agents](https://github.com/wshobson/agents) — ⭐38.9k — Cross-harness marketplace of drop-in subagents and skills for Claude Code, Codex CLI, Cursor, OpenCode, and Copilot; specialized, production-ready agent definitions you install rather than hand-write.
+- [DeepCode](https://github.com/HKUDS/DeepCode) — ⭐16.4k — HKUDS's open agentic-coding **harness**: loop engineering and multi-agent orchestration for a coding session, without bundling an IDE or CLI shell—same research-lab lineage as the org's OpenHarness.
 - [AutoHarness](https://github.com/aiming-lab/AutoHarness) — ⭐367 — Lightweight governance harness: wraps any LLM client in ~2 lines for automated harness engineering—6–14 step pipeline, YAML constitution, risk-pattern matching, session persistence with cost tracking, multi-agent profiles.
 
 **Personal agent runtimes**
@@ -353,6 +354,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 - [langflow](https://github.com/langflow-ai/langflow) — ⭐153k — Low-code UI to build and deploy LangChain/LangGraph flows; visual DAG editor and one-click run.
 - [Dify](https://github.com/langgenius/dify) — ⭐153k — One-stop LLM app platform: visual workflows, RAG pipeline, 50+ tools, model management; "ship from prototype to prod" in a single UI.
+- [Flowise](https://github.com/FlowiseAI/Flowise) — ⭐55.4k — Drag-and-drop LangChain UI; deploy flows without code. The low-code sibling to Langflow, with a different component and hosting story.
 - [botpress](https://github.com/botpress/botpress) — ⭐14.9k — Visual bot builder and runtime; multi-channel, open-source alternative to commercial bot platforms.
 
 ---
@@ -526,6 +528,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [crush](https://github.com/charmbracelet/crush) — ⭐27.4k — Charm's terminal coding agent (Charm's fork of the original OpenCode). The **harness** is the tool-calling loop with session persistence; the Bubble Tea TUI is the shell.
 - [qwen-code](https://github.com/QwenLM/qwen-code) — ⭐27.1k — Alibaba's official terminal coding agent, forked from Gemini CLI's agent loop and retuned for Qwen models. The **harness** is the same sandboxed tool-call loop as its upstream; the terminal is the shell.
 - [Kilo Code](https://github.com/Kilo-Org/kilocode) — ⭐26.9k — VS Code extension and CLI in the Cline/Roo-Code lineage — a natural pick now that Roo-Code is archived upstream. The **harness** is an approval-gated autonomous-mode loop with a provider/tool marketplace; the IDE is the shell.
+- [grok-build](https://github.com/xai-org/grok-build) — ⭐25.4k — xAI's official terminal coding agent. The **harness** is the tool-call loop; a fullscreen, mouse-interactive TUI is the shell. Official CLI parallel to Codex, Gemini CLI, and qwen-code.
 - [oh-my-pi](https://github.com/can1357/oh-my-pi) — ⭐25.2k — Terminal coding agent (fork of Pi) that wires the IDE into the **harness**: hash-anchored edits, a 32-tool loop tuned per-model, LSP rename/references/diagnostics on every write, a real DAP debugger (lldb/dlv/debugpy), long-lived Python + Bun execution kernels that call back into the agent's tools, browser control, and 40+ providers (Claude/OpenAI/Gemini/local). ~55k-line Rust core.
 - [jcode](https://github.com/1jehuang/jcode) — ⭐17.7k — Rust terminal coding agent pitched as the most RAM-efficient **harness** in its class; MCP support, multi-provider (Claude/OpenAI).
 
@@ -533,6 +536,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 - [superpowers](https://github.com/obra/superpowers) — ⭐273k — Performance-oriented harness pack for Claude Code and 13 other harnesses (Codex, Cursor, OpenCode, Gemini CLI, more): skills, instincts, memory, security, research-first workflows. Treats harness engineering itself as the performance lever.
 - [wshobson/agents](https://github.com/wshobson/agents) — ⭐38.9k — Cross-harness marketplace of drop-in subagents and skills for Claude Code, Codex CLI, Cursor, OpenCode, and Copilot; specialized, production-ready agent definitions you install rather than hand-write.
+- [DeepCode](https://github.com/HKUDS/DeepCode) — ⭐16.4k — HKUDS's open agentic-coding **harness**: loop engineering and multi-agent orchestration for a coding session, without bundling an IDE or CLI shell—same research-lab lineage as the org's OpenHarness.
 - [get-shit-done](https://github.com/open-gsd/gsd-core) — ⭐8.3k — Goal-backward planning and wave-based execution over fresh context windows; avoids context rot by design. Python/JS meta-prompting for Claude Code, OpenCode, Gemini CLI.
 - [agents-cli](https://github.com/google/agents-cli) — ⭐5.6k — Google's official CLI and skill pack that layers agent-creation, evaluation, and deployment skills on top of whatever coding assistant you already run, rather than shipping its own agent loop—the **harness** as a config/skills add-on, not a new runtime.
 - [skillhub](https://github.com/iflytek/skillhub) — ⭐4.9k — iFlytek's self-hosted registry for publishing, versioning, and governing agent skill packages—the **harness** config layer treated as an enterprise artifact store rather than a CLI or IDE shell.
@@ -575,6 +579,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [superpowers](https://github.com/obra/superpowers) — ⭐273k — Performance-oriented harness pack for Claude Code and 13 other harnesses (Codex, Cursor, OpenCode, Gemini CLI, more): skills, instincts, memory, security, research-first workflows. Treats harness engineering itself as the performance lever.
 - [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) — ⭐87.7k — Addy Osmani's production-grade skill pack: 24 engineering skills and 4 specialist agent personas that encode senior-dev workflows (spec through deploy) across 70+ coding agents including Claude Code, Cursor, and Copilot. The **harness** contribution is the skill/workflow layer, not a new agent loop.
 - [wshobson/agents](https://github.com/wshobson/agents) — ⭐38.9k — Cross-harness marketplace of drop-in subagents and skills for Claude Code, Codex CLI, Cursor, OpenCode, and Copilot; specialized, production-ready agent definitions you install rather than hand-write.
+- [DeepCode](https://github.com/HKUDS/DeepCode) — ⭐16.4k — HKUDS's open agentic-coding **harness**: loop engineering and multi-agent orchestration for a coding session, without bundling an IDE or CLI shell—same research-lab lineage as the org's OpenHarness.
 - [skillhub](https://github.com/iflytek/skillhub) — ⭐4.9k — iFlytek's self-hosted registry for publishing, versioning, and governing agent skill packages—the **harness** config layer treated as an enterprise artifact store rather than a CLI or IDE shell.
 
 **Multi-agent and orchestration**
@@ -595,6 +600,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [pi](https://github.com/earendil-works/pi) — ⭐91.3k — The upstream AI agent toolkit behind this list's oh-my-pi fork: a unified multi-provider LLM API, agent loop, and TUI shell providing the **harness** that oh-my-pi's Rust rewrite builds on.
 - [DeepSeek-Reasonix](https://github.com/esengine/DeepSeek-Reasonix) — ⭐34.6k — DeepSeek-native terminal coding agent. The **harness** is engineered around prefix-cache stability for long-running sessions; the TUI is the shell.
 - [crush](https://github.com/charmbracelet/crush) — ⭐27.4k — Charm's terminal coding agent (Charm's fork of the original OpenCode). The **harness** is the tool-calling loop with session persistence; the Bubble Tea TUI is the shell.
+- [grok-build](https://github.com/xai-org/grok-build) — ⭐25.4k — xAI's official terminal coding agent. The **harness** is the tool-call loop; a fullscreen, mouse-interactive TUI is the shell. Official CLI parallel to Codex, Gemini CLI, and qwen-code.
 
 ---
 
@@ -764,6 +770,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 **Frameworks**
 
 - [n8n](https://github.com/n8n-io/n8n) — ⭐201k — Fair-code workflow engine with 400+ nodes and native AI nodes; the self-hosted Zapier that actually does agents and LangChain.
+- [Flowise](https://github.com/FlowiseAI/Flowise) — ⭐55.4k — Drag-and-drop LangChain UI; deploy flows without code. The low-code sibling to Langflow, with a different component and hosting story.
 - [mastra](https://github.com/mastra-ai/mastra) — ⭐27.2k — TypeScript-first; agents, tools, and workflows with a single runtime and minimal boilerplate.
 - [Stagehand](https://github.com/browserbase/stagehand) — ⭐24k — Browserbase's SDK for browser agents: natural-language actions (act, extract, observe) and deterministic Playwright code mix in one script, so agent flexibility and repeatable automation live in the same **harness**.
 - [botpress](https://github.com/botpress/botpress) — ⭐14.9k — Visual bot builder and runtime; multi-channel, open-source alternative to commercial bot platforms.
@@ -954,6 +961,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 **Frameworks**
 
 - [n8n](https://github.com/n8n-io/n8n) — ⭐201k — Fair-code workflow engine with 400+ nodes and native AI nodes; the self-hosted Zapier that actually does agents and LangChain.
+- [Flowise](https://github.com/FlowiseAI/Flowise) — ⭐55.4k — Drag-and-drop LangChain UI; deploy flows without code. The low-code sibling to Langflow, with a different component and hosting story.
 - [mastra](https://github.com/mastra-ai/mastra) — ⭐27.2k — TypeScript-first; agents, tools, and workflows with a single runtime and minimal boilerplate.
 - [Stagehand](https://github.com/browserbase/stagehand) — ⭐24k — Browserbase's SDK for browser agents: natural-language actions (act, extract, observe) and deterministic Playwright code mix in one script, so agent flexibility and repeatable automation live in the same **harness**.
 - [botpress](https://github.com/botpress/botpress) — ⭐14.9k — Visual bot builder and runtime; multi-channel, open-source alternative to commercial bot platforms.

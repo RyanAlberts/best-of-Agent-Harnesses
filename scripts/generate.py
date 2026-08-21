@@ -243,6 +243,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("cc-haha", "NanmiCoder/cc-haha",
                 "Local-first desktop workspace **harness** for Claude Code and other agents: multi-agent sessions, Git worktrees, code diffs, a skill marketplace, and chat-app access (WeChat, Telegram, WhatsApp).",
                 "complex (desktop workspace, multi-agent — product suite)", oss="❓", labels=["javascript"]),
+        Project("grok-build", "xai-org/grok-build",
+                "xAI's official terminal coding agent. The **harness** is the tool-call loop; a fullscreen, mouse-interactive TUI is the shell. Official CLI parallel to Codex, Gemini CLI, and qwen-code.",
+                "slightly complex (official CLI, TUI)", oss="❓"),
     ],
     "coding-harness-configs": [
         Project("LoopTroop", "looptroop-ai/LoopTroop",
@@ -299,6 +302,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("Meta-Harness", "stanford-iris-lab/meta-harness",
                 "Reference implementation from the Meta-Harness paper: an academic testbed for harness-engineering research, not a product—useful as a citation-grade baseline rather than something you'd run in production.",
                 "slightly complex (research reference implementation)", oss="❓"),
+        Project("DeepCode", "HKUDS/DeepCode",
+                "HKUDS's open agentic-coding **harness**: loop engineering and multi-agent orchestration for a coding session, without bundling an IDE or CLI shell—same research-lab lineage as the org's OpenHarness.",
+                "slightly complex (loop engineering, multi-agent orchestration)", oss="❓"),
     ],
     "personal-agent-runtimes": [
         Project("Talon", "dylanneve1/talon",
@@ -704,6 +710,7 @@ META: dict[str, tuple[int, str, str]] = {
     "esengine/DeepSeek-Reasonix": (34639, "https://github.com/esengine/DeepSeek-Reasonix#readme", "Project README"),
     "1jehuang/jcode": (17717, "https://github.com/1jehuang/jcode#readme", "Project README"),
     "NanmiCoder/cc-haha": (14136, "https://github.com/NanmiCoder/cc-haha#readme", "Project README"),
+    "xai-org/grok-build": (25356, "https://github.com/xai-org/grok-build#readme", "Project README"),
     # coding-harness-configs
     "looptroop-ai/LoopTroop": (119, "https://github.com/looptroop-ai/LoopTroop#readme", "Council → loop → worktree pipeline"),
     "open-gsd/gsd-core": (8316, "https://github.com/open-gsd/gsd-core/blob/next/commands/gsd/ship.md", "gsd:ship command"),
@@ -723,6 +730,7 @@ META: dict[str, tuple[int, str, str]] = {
     "addyosmani/agent-skills": (87668, "https://github.com/addyosmani/agent-skills#readme", "Project README"),
     "OthmanAdi/planning-with-files": (26198, "https://github.com/OthmanAdi/planning-with-files#readme", "Project README"),
     "stanford-iris-lab/meta-harness": (1417, "https://github.com/stanford-iris-lab/meta-harness#readme", "Project README"),
+    "HKUDS/DeepCode": (16359, "https://github.com/HKUDS/DeepCode#readme", "Project README"),
     # frameworks
     "langchain-ai/langgraph": (39797, "https://github.com/langchain-ai/langgraph/blob/main/examples/customer-support/customer-support.ipynb", "Customer support agent"),
     "langchain-ai/langchain": (144337, "https://github.com/langchain-ai/langchain-academy/blob/main/module-1/agent.ipynb", "Build an agent notebook"),
@@ -873,6 +881,12 @@ KEEP_DESPITE_ARCHIVED: "set[str]" = {
     # widely referenced/forked (see Kilo Code, its direct successor, added
     # this cycle). Historically important enough to keep out of the Graveyard.
     "RooCodeInc/Roo-Code",
+    # 55k+ stars, one of the earliest and most widely adopted low-code/visual
+    # agent-workflow builders (drag-and-drop LLM orchestration); archived
+    # upstream 2026-08-16 but still the reference low-code entry point many
+    # other tools in the "frameworks" category are compared against.
+    # Historically important enough to keep out of the Graveyard.
+    "FlowiseAI/Flowise",
 }
 
 # Repos routed to the Graveyard for a curation-integrity reason rather than
@@ -1076,6 +1090,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "esengine/DeepSeek-Reasonix": ("n/a", "n/a"),
     "1jehuang/jcode": ("n/a", "n/a"),
     "NanmiCoder/cc-haha": ("n/a", "n/a"),
+    "xai-org/grok-build": ("bounded", "resumable"),
     # coding-harness-configs
     "looptroop-ai/LoopTroop": ("bounded", "retry"),
     "obra/superpowers": ("n/a", "n/a"),
@@ -1092,6 +1107,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "anthropics/claude-agent-sdk-python": ("headless", "resumable"),
     "QuantaAlpha/RepoMaster": ("headless", "none"),
     "aiming-lab/AutoHarness": ("bounded", "none"),
+    "HKUDS/DeepCode": ("bounded", "none"),
     "RyanAlberts/pmstack": ("n/a", "n/a"),
     "OthmanAdi/planning-with-files": ("n/a", "n/a"),
     "stanford-iris-lab/meta-harness": ("n/a", "n/a"),
