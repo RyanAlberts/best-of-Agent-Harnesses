@@ -83,6 +83,9 @@ projects:
   - name: Headroom
     github_id: headroomlabs-ai/headroom
     category: "progressive-disclosure"
+  - name: DESIGN.md
+    github_id: google-labs-code/design.md
+    category: "progressive-disclosure"
   # Coding agent products (IDEs, CLIs, full suites)
   - name: oh-my-pi
     github_id: can1357/oh-my-pi
@@ -165,6 +168,22 @@ projects:
     github_id: NanmiCoder/cc-haha
     labels: ["javascript"]
     category: "coding-agent-products"
+  - name: Grok CLI
+    github_id: superagent-ai/grok-cli
+    category: "coding-agent-products"
+  - name: Ante
+    github_id: AntigmaLabs/ante
+    labels: ["rust"]
+    category: "coding-agent-products"
+  - name: Antigravity CLI
+    github_id: google-antigravity/antigravity-cli
+    category: "coding-agent-products"
+  - name: agent-teams-ai
+    github_id: 777genius/agent-teams-ai
+    category: "coding-agent-products"
+  - name: open-cowork
+    github_id: OpenCoworkAI/open-cowork
+    category: "coding-agent-products"
   # Coding harness configs and SDKs
   - name: LoopTroop
     github_id: looptroop-ai/LoopTroop
@@ -223,6 +242,9 @@ projects:
   - name: Meta-Harness
     github_id: stanford-iris-lab/meta-harness
     category: "coding-harness-configs"
+  - name: DeepCode
+    github_id: HKUDS/DeepCode
+    category: "coding-harness-configs"
   # Personal agent runtimes
   - name: Talon
     github_id: dylanneve1/talon
@@ -262,6 +284,9 @@ projects:
   - name: CowAgent
     github_id: zhayujie/CowAgent
     labels: ["python"]
+    category: "personal-agent-runtimes"
+  - name: agenticSeek
+    github_id: Fosowl/agenticSeek
     category: "personal-agent-runtimes"
   # Frameworks
   - name: langgraph
@@ -413,6 +438,13 @@ projects:
     github_id: omnigent-ai/omnigent
     labels: ["python"]
     category: "multi-agent"
+  - name: open-multi-agent
+    github_id: open-multi-agent/open-multi-agent
+    labels: ["javascript"]
+    category: "multi-agent"
+  - name: claude_codex_bridge
+    github_id: SeemSeam/claude_codex_bridge
+    category: "multi-agent"
   # Plugins, MCPs, CLI tools
   - name: aider
     github_id: Aider-AI/aider
@@ -504,6 +536,9 @@ projects:
   - name: beads
     github_id: gastownhall/beads
     category: "memory"
+  - name: MIRIX
+    github_id: Mirix-AI/MIRIX
+    category: "memory"
   # Evaluation and benchmarking harnesses
   - name: agent-qa
     github_id: vostride/agent-qa
@@ -572,6 +607,9 @@ projects:
     github_id: microsoft/agent-lightning
     labels: ["python"]
     category: "evaluation"
+  - name: AssetOpsBench
+    github_id: IBM/AssetOpsBench
+    category: "evaluation"
   # Observability and eval-ops
   - name: Langfuse
     github_id: langfuse/langfuse
@@ -606,6 +644,9 @@ projects:
     category: "research-task"
   - name: AutoResearchClaw
     github_id: aiming-lab/AutoResearchClaw
+    category: "research-task"
+  - name: FAROS
+    github_id: OpenNSWM-Lab/FAROS
     category: "research-task"
   # Libraries and SDKs
   - name: deepagents
@@ -659,6 +700,10 @@ projects:
     category: "libraries-sdks"
   - name: Daytona
     github_id: daytonaio/daytona
+    category: "libraries-sdks"
+  - name: fast-agent
+    github_id: evalstate/fast-agent
+    labels: ["python"]
     category: "libraries-sdks"
   - name: Community-curated agent lists
     github_id: brandonhimpfen/awesome-ai-agents

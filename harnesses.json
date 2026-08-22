@@ -9,7 +9,7 @@
     "feed_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/feed.json",
     "license": "CC-BY-SA-4.0",
     "stars_captured": "2026-08-16",
-    "project_count": 161,
+    "project_count": 175,
     "graveyard_count": 3,
     "tiers": [
       "super simple",
@@ -376,7 +376,7 @@
     {
       "kind": "derived",
       "q": "How many of these agent harnesses are open source?",
-      "a": "118 of 161 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
+      "a": "118 of 175 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
       "slug": "how-many-of-these-agent-harnesses-are-open-source"
     },
     {
@@ -580,6 +580,32 @@
           "evidence": "https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/HEAD/README.md"
         }
       }
+    },
+    {
+      "name": "DESIGN.md",
+      "github_id": "google-labs-code/design.md",
+      "url": "https://github.com/google-labs-code/design.md",
+      "slug": "designmd",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#designmd",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/designmd/",
+      "description": "Format spec for describing a visual identity to coding agents: a structured DESIGN.md file agents load in layers so brand and UI conventions travel with the repo instead of being re-explained per prompt—the design-system sibling to agents.md.",
+      "category": "progressive-disclosure",
+      "category_title": "Progressive disclosure harnesses",
+      "stars": 27271,
+      "tier": "super simple",
+      "tier_rank": 1,
+      "axis": "super simple (format only)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "unknown",
+      "tags": [],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/google-labs-code/design.md#readme"
+      },
+      "deep_dive": null
     },
     {
       "name": "agents.md",
@@ -1999,6 +2025,151 @@
       "deep_dive": null
     },
     {
+      "name": "Grok CLI",
+      "github_id": "superagent-ai/grok-cli",
+      "url": "https://github.com/superagent-ai/grok-cli",
+      "slug": "grok-cli",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#grok-cli",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/grok-cli/",
+      "description": "Terminal coding agent for the Grok API from Superagent. The **harness** is a straightforward tool-call loop; the CLI is the shell.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 3405,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (terminal agent, single-provider)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "unknown",
+      "tags": [
+        "cli"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/superagent-ai/grok-cli#readme"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "open-cowork",
+      "github_id": "OpenCoworkAI/open-cowork",
+      "url": "https://github.com/OpenCoworkAI/open-cowork",
+      "slug": "open-cowork",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#open-cowork",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/open-cowork/",
+      "description": "Open-source desktop **harness** positioned as a self-hosted alternative to Claude Cowork: one-click Claude Code/MCP/Skills install with sandbox isolation, multi-model support, and Feishu/Slack integration.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 2031,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (desktop multi-model workspace — product suite)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "unknown",
+      "tags": [
+        "mcp",
+        "sandbox",
+        "local"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/OpenCoworkAI/open-cowork#readme"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "agent-teams-ai",
+      "github_id": "777genius/agent-teams-ai",
+      "url": "https://github.com/777genius/agent-teams-ai",
+      "slug": "agent-teams-ai",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#agent-teams-ai",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/agent-teams-ai/",
+      "description": "Kanban fleet manager where agents message each other and review each other's work across 75+ LLM providers (Codex, Claude, OpenCode, Cursor, Copilot, and more). The **harness** contribution is the task-board/inter-agent-messaging layer, not a new agent loop.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 1934,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (multi-agent kanban, 75+ providers — product suite)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "unknown",
+      "tags": [
+        "multi-agent",
+        "ide"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/777genius/agent-teams-ai#readme"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "Antigravity CLI",
+      "github_id": "google-antigravity/antigravity-cli",
+      "url": "https://github.com/google-antigravity/antigravity-cli",
+      "slug": "antigravity-cli",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#antigravity-cli",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/antigravity-cli/",
+      "description": "Google's official terminal front end for the Antigravity agent **harness**: brings the reasoning/execution/orchestration loop from Google's agentic IDE into the terminal, parallel to Gemini CLI but for the Antigravity product line.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 1925,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (official CLI, IDE harness ported to terminal)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "unknown",
+      "tags": [
+        "cli",
+        "ide"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/google-antigravity/antigravity-cli#readme"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "Ante",
+      "github_id": "AntigmaLabs/ante",
+      "url": "https://github.com/AntigmaLabs/ante",
+      "slug": "ante",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#ante",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/ante/",
+      "description": "Self-contained Rust terminal coding agent pitched as a dependency-free, model-unconstrained alternative to Claude Code or Codex. The **harness** is a standalone core with no upstream ties.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 1783,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (terminal agent, zero deps)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "unknown",
+      "tags": [
+        "cli",
+        "rust"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/AntigmaLabs/ante#readme"
+      },
+      "deep_dive": null
+    },
+    {
       "name": "claw-code-agent",
       "github_id": "HarnessLab/claw-code-agent",
       "url": "https://github.com/HarnessLab/claw-code-agent",
@@ -2603,6 +2774,34 @@
           "evidence": "https://raw.githubusercontent.com/SWE-agent/SWE-agent/main/README.md"
         }
       }
+    },
+    {
+      "name": "DeepCode",
+      "github_id": "HKUDS/DeepCode",
+      "url": "https://github.com/HKUDS/DeepCode",
+      "slug": "deepcode",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#deepcode",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/deepcode/",
+      "description": "HKUDS's open agentic-coding **harness**: explicit loop engineering and multi-agent orchestration for coding tasks, from the same lab behind this list's OpenHarness and nanobot entries.",
+      "category": "coding-harness-configs",
+      "category_title": "Coding harness configs and SDKs",
+      "stars": 16359,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (loop engineering, multi-agent)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "unknown",
+      "tags": [
+        "multi-agent"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/HKUDS/DeepCode#readme"
+      },
+      "deep_dive": null
     },
     {
       "name": "get-shit-done",
@@ -3363,6 +3562,32 @@
           "evidence": "https://github.com/khoj-ai/khoj#readme"
         }
       }
+    },
+    {
+      "name": "agenticSeek",
+      "github_id": "Fosowl/agenticSeek",
+      "url": "https://github.com/Fosowl/agenticSeek",
+      "slug": "agenticseek",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#agenticseek",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/agenticseek/",
+      "description": "Fully local, API-free autonomous agent **harness**: one loop that thinks, browses the web, and writes code against local models—no cloud calls, no subscription.",
+      "category": "personal-agent-runtimes",
+      "category_title": "Personal agent runtimes",
+      "stars": 26866,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (local-only autonomous loop)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "retry",
+      "recovery_rank": 2,
+      "license_signal": "unknown",
+      "tags": [],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/Fosowl/agenticSeek#readme"
+      },
+      "deep_dive": null
     },
     {
       "name": "Eliza",
@@ -5775,6 +6000,37 @@
       }
     },
     {
+      "name": "open-multi-agent",
+      "github_id": "open-multi-agent/open-multi-agent",
+      "url": "https://github.com/open-multi-agent/open-multi-agent",
+      "slug": "open-multi-agent",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#open-multi-agent",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/open-multi-agent/",
+      "description": "TypeScript orchestration **harness** where a coordinator plans the task DAG at runtime instead of a hand-authored graph (\"describe the goal, not the graph\"), running on Claude, GPT, Gemini, DeepSeek, or local models—pitched as a CrewAI/LangGraph alternative.",
+      "category": "multi-agent",
+      "category_title": "Multi-agent and orchestration",
+      "stars": 6780,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (runtime DAG planning, multi-provider)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "retry",
+      "recovery_rank": 2,
+      "license_signal": "unknown",
+      "tags": [
+        "low-code",
+        "workflow",
+        "provider-agnostic",
+        "typescript"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/open-multi-agent/open-multi-agent#readme"
+      },
+      "deep_dive": null
+    },
+    {
       "name": "AG2",
       "github_id": "ag2ai/ag2",
       "url": "https://github.com/ag2ai/ag2",
@@ -5800,6 +6056,35 @@
       "example": {
         "label": "Project README",
         "url": "https://github.com/ag2ai/ag2#readme"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "claude_codex_bridge",
+      "github_id": "SeemSeam/claude_codex_bridge",
+      "url": "https://github.com/SeemSeam/claude_codex_bridge",
+      "slug": "claude_codex_bridge",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#claude_codex_bridge",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/claude_codex_bridge/",
+      "description": "tmux-based **harness** for running Codex, Claude, Gemini, Kimi, Qwen, Cursor, Copilot, Pi, and OpenCode side by side in one visible multi-agent workspace instead of switching terminals per agent.",
+      "category": "multi-agent",
+      "category_title": "Multi-agent and orchestration",
+      "stars": 3407,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (tmux multi-agent workspace)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "unknown",
+      "tags": [
+        "multi-agent",
+        "ide"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/SeemSeam/claude_codex_bridge#readme"
       },
       "deep_dive": null
     },
@@ -6695,6 +6980,34 @@
       }
     },
     {
+      "name": "MIRIX",
+      "github_id": "Mirix-AI/MIRIX",
+      "url": "https://github.com/Mirix-AI/MIRIX",
+      "slug": "mirix",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#mirix",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/mirix/",
+      "description": "Multi-agent personal-assistant **harness** that captures real-time on-screen activity and consolidates it into structured, queryable memory rather than raw logs—memory as the loop's core, not a bolt-on store.",
+      "category": "memory",
+      "category_title": "Memory and state",
+      "stars": 3431,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (screen capture, structured memory)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "unknown",
+      "tags": [
+        "memory"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/Mirix-AI/MIRIX#readme"
+      },
+      "deep_dive": null
+    },
+    {
       "name": "Agent Lightning",
       "github_id": "microsoft/agent-lightning",
       "url": "https://github.com/microsoft/agent-lightning",
@@ -6813,6 +7126,36 @@
       "example": {
         "label": "Inspect tutorial example",
         "url": "https://inspect.aisi.org.uk/tutorial.html"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "AssetOpsBench",
+      "github_id": "IBM/AssetOpsBench",
+      "url": "https://github.com/IBM/AssetOpsBench",
+      "slug": "assetopsbench",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#assetopsbench",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/assetopsbench/",
+      "description": "IBM's benchmark-and-orchestration harness for domain-specific Industry 4.0 agents: 460+ scenarios across five specialist agents (IoT, FMSR, TSFM, Work Order) plus MetaAgent/AgentHive orchestration blueprints over MCP.",
+      "category": "evaluation",
+      "category_title": "Evaluation and benchmarking harnesses",
+      "stars": 2161,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (multi-agent benchmark + orchestration blueprints)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "unknown",
+      "tags": [
+        "mcp",
+        "multi-agent",
+        "evals"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/IBM/AssetOpsBench#readme"
       },
       "deep_dive": null
     },
@@ -7484,6 +7827,32 @@
       "deep_dive": null
     },
     {
+      "name": "FAROS",
+      "github_id": "OpenNSWM-Lab/FAROS",
+      "url": "https://github.com/OpenNSWM-Lab/FAROS",
+      "slug": "faros",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#faros",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/faros/",
+      "description": "Blueprint-driven AutoResearch runtime that orchestrates the full research lifecycle as an agent **harness**: idea generation, experiments, paper writing, and peer review as one pipeline rather than separate tools.",
+      "category": "research-task",
+      "category_title": "Research and task-specific harnesses",
+      "stars": 2991,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (multi-stage research pipeline)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "unknown",
+      "tags": [],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/OpenNSWM-Lab/FAROS#readme"
+      },
+      "deep_dive": null
+    },
+    {
       "name": "openagents",
       "github_id": "OpenAgentsInc/openagents",
       "url": "https://github.com/OpenAgentsInc/openagents",
@@ -7869,6 +8238,35 @@
       "deep_dive": null
     },
     {
+      "name": "fast-agent",
+      "github_id": "evalstate/fast-agent",
+      "url": "https://github.com/evalstate/fast-agent",
+      "slug": "fast-agent",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#fast-agent",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/fast-agent/",
+      "description": "Lean Python **harness** for building and evaluating agents with MCP, ACP, and A2A protocol support native to the loop rather than bolted on.",
+      "category": "libraries-sdks",
+      "category_title": "Libraries and SDKs",
+      "stars": 3890,
+      "tier": "mostly simple",
+      "tier_rank": 2,
+      "axis": "mostly simple (MCP/ACP/A2A-native loop)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "none",
+      "recovery_rank": 1,
+      "license_signal": "unknown",
+      "tags": [
+        "mcp",
+        "python"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/evalstate/fast-agent#readme"
+      },
+      "deep_dive": null
+    },
+    {
       "name": "openai-agents-js",
       "github_id": "openai/openai-agents-js",
       "url": "https://github.com/openai/openai-agents-js",
@@ -8010,12 +8408,6 @@
   ],
   "radar": [
     {
-      "github_id": "Fosowl/agenticSeek",
-      "stars": 26866,
-      "desc": "Fully Local Manus AI. No APIs, No $200 monthly bills. Enjoy an autonomous agent that thinks, browses the web, and code for the sole cost of electricity.",
-      "via": "weekly discovery"
-    },
-    {
       "github_id": "RightNow-AI/openfang",
       "stars": 18115,
       "desc": "Open-source Agent Operating System",
@@ -8031,12 +8423,6 @@
       "github_id": "algorithmicsuperintelligence/openevolve",
       "stars": 7193,
       "desc": "Open-source implementation of AlphaEvolve",
-      "via": "weekly discovery"
-    },
-    {
-      "github_id": "open-multi-agent/open-multi-agent",
-      "stars": 6780,
-      "desc": "TypeScript AI agent orchestration framework with dynamic workflows. Describe the goal, not the graph: a coordinator plans the task DAG at runtime and runs it…",
       "via": "weekly discovery"
     },
     {
@@ -8061,24 +8447,6 @@
       "github_id": "FellouAI/eko",
       "stars": 4949,
       "desc": "Eko (Eko Keeps Operating) - Build Production-ready Agentic Workflow with Natural Language - eko.fellou.ai",
-      "via": "weekly discovery"
-    },
-    {
-      "github_id": "evalstate/fast-agent",
-      "stars": 3890,
-      "desc": "Code, Build and Evaluate agents - excellent Model and Skills/MCP/ACP/A2A Support",
-      "via": "weekly discovery"
-    },
-    {
-      "github_id": "Mirix-AI/MIRIX",
-      "stars": 3431,
-      "desc": "Mirix is a multi-agent personal assistant designed to track on-screen activities and answer user questions intelligently. By capturing real-time visual data…",
-      "via": "weekly discovery"
-    },
-    {
-      "github_id": "google-antigravity/antigravity-cli",
-      "stars": 1925,
-      "desc": "Antigravity CLI brings the reasoning, execution, and orchestration capabilities of Antigravity agent harness directly into your terminal.",
       "via": "weekly discovery"
     },
     {
