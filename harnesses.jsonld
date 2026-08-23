@@ -11,7 +11,7 @@
     "name": "Ryan Alberts",
     "url": "https://github.com/RyanAlberts"
   },
-  "dateModified": "2026-08-16",
+  "dateModified": "2026-08-23",
   "keywords": [
     "agent harness",
     "AI agents",
@@ -144,11 +144,11 @@
         "position": 10,
         "item": {
           "@type": "SoftwareApplication",
-          "name": "Gemini CLI",
-          "url": "https://github.com/google-gemini/gemini-cli",
-          "description": "Google's first-party terminal agent for Gemini. The **harness** is the plugin/MCP tool-call loop; the terminal is the shell—Google's parallel to Claude Code / Codex, not just an API.",
+          "name": "Codex",
+          "url": "https://github.com/openai/codex",
+          "description": "OpenAI's terminal coding agent. The **harness** is the sandboxed tool-call loop with multi-provider support; the CLI is the shell. Reference implementation for \"official CLI that ships code.\"",
           "applicationCategory": "DeveloperApplication",
-          "keywords": "mcp, cli, typescript"
+          "keywords": "sandbox, provider-agnostic, cli"
         }
       },
       {
@@ -156,11 +156,11 @@
         "position": 11,
         "item": {
           "@type": "SoftwareApplication",
-          "name": "Codex",
-          "url": "https://github.com/openai/codex",
-          "description": "OpenAI's terminal coding agent. The **harness** is the sandboxed tool-call loop with multi-provider support; the CLI is the shell. Reference implementation for \"official CLI that ships code.\"",
+          "name": "Gemini CLI",
+          "url": "https://github.com/google-gemini/gemini-cli",
+          "description": "Google's first-party terminal agent for Gemini. The **harness** is the plugin/MCP tool-call loop; the terminal is the shell—Google's parallel to Claude Code / Codex, not just an API.",
           "applicationCategory": "DeveloperApplication",
-          "keywords": "sandbox, provider-agnostic, cli"
+          "keywords": "mcp, cli, typescript"
         }
       },
       {
@@ -1416,9 +1416,9 @@
         "position": 116,
         "item": {
           "@type": "SoftwareApplication",
-          "name": "cognee",
-          "url": "https://github.com/topoteretes/cognee",
-          "description": "Open-source memory layer for agents: an extract–cognify–load pipeline that turns your data into a queryable knowledge graph plus vector store, so agents recall facts and relationships across sessions instead of re-reading context.",
+          "name": "Graphiti (Zep)",
+          "url": "https://github.com/getzep/graphiti",
+          "description": "Zep's open-source memory engine: real-time temporal knowledge graphs that track how facts about users and entities change over time, so agents can answer \"what was true when.\" The layer behind Zep's hosted memory platform.",
           "applicationCategory": "DeveloperApplication",
           "keywords": "memory, rag, workflow, python"
         }
@@ -1428,9 +1428,9 @@
         "position": 117,
         "item": {
           "@type": "SoftwareApplication",
-          "name": "Graphiti (Zep)",
-          "url": "https://github.com/getzep/graphiti",
-          "description": "Zep's open-source memory engine: real-time temporal knowledge graphs that track how facts about users and entities change over time, so agents can answer \"what was true when.\" The layer behind Zep's hosted memory platform.",
+          "name": "cognee",
+          "url": "https://github.com/topoteretes/cognee",
+          "description": "Open-source memory layer for agents: an extract–cognify–load pipeline that turns your data into a queryable knowledge graph plus vector store, so agents recall facts and relationships across sessions instead of re-reading context.",
           "applicationCategory": "DeveloperApplication",
           "keywords": "memory, rag, workflow, python"
         }

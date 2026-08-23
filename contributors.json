@@ -60,16 +60,6 @@
     ]
   },
   {
-    "login": "mseep-ai",
-    "contributions": [
-      {
-        "kind": "pr",
-        "number": 32,
-        "title": "Add MseeP.ai badge"
-      }
-    ]
-  },
-  {
     "login": "claudiusthebot",
     "contributions": [
       {
@@ -291,6 +281,26 @@
         "kind": "issue",
         "number": 81,
         "title": "Add project: MCP Lens"
+      }
+    ]
+  },
+  {
+    "login": "elmariachi111",
+    "contributions": [
+      {
+        "kind": "issue",
+        "number": 86,
+        "title": "Add project: Prime Agent"
+      }
+    ]
+  },
+  {
+    "login": "denial123789",
+    "contributions": [
+      {
+        "kind": "pr",
+        "number": 89,
+        "title": "feat: add SandBase Harness"
       }
     ]
   }
