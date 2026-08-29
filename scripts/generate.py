@@ -873,6 +873,11 @@ KEEP_DESPITE_ARCHIVED: "set[str]" = {
     # widely referenced/forked (see Kilo Code, its direct successor, added
     # this cycle). Historically important enough to keep out of the Graveyard.
     "RooCodeInc/Roo-Code",
+    # 55k+ stars, one of the most widely adopted low-code agent/LLM workflow
+    # builders (the Frameworks-category sibling to Langflow); archived upstream
+    # 2026-08-16. Far too significant a reference point to graveyard after two
+    # weeks — proposed 2026-08-29 biweekly curation pass, see PR for rationale.
+    "FlowiseAI/Flowise",
 }
 
 # Repos routed to the Graveyard for a curation-integrity reason rather than
@@ -972,6 +977,19 @@ RADAR: "list[dict]" = [
     {"id": "Mirix-AI/MIRIX", "via": "weekly discovery"},
     {"id": "cloudflare/vibesdk", "via": "weekly discovery"},
     {"id": "algorithmicsuperintelligence/openevolve", "via": "weekly discovery"},
+    # Added 2026-08-29 biweekly curation pass — modest-star, on-topic harness
+    # candidates from curation-queue.json with no integrity red flags; not yet
+    # vetted for license/examples so pinned rather than graduated. See PR body
+    # for the much larger set of queue candidates deliberately left off (either
+    # off-topic for this list or carrying star-inflation red flags).
+    {"id": "google-antigravity/antigravity-sdk-python", "via": "weekly discovery"},
+    {"id": "truefoundry/trueforge", "via": "weekly discovery"},
+    {"id": "kungfu-systems/kungfu", "via": "weekly discovery"},
+    {"id": "onecli/onecli", "via": "weekly discovery"},
+    {"id": "teaql/teaql-agent-kit", "via": "weekly discovery"},
+    {"id": "AntigmaLabs/ante", "via": "weekly discovery"},
+    {"id": "ai-boost/awesome-harness-engineering", "via": "weekly discovery"},
+    {"id": "ShenSeanChen/waku-agent", "via": "weekly discovery"},
 ]
 
 
