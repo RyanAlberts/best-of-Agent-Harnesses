@@ -303,5 +303,50 @@
         "title": "feat: add SandBase Harness"
       }
     ]
+  },
+  {
+    "login": "vshulcz",
+    "contributions": [
+      {
+        "kind": "issue",
+        "number": 94,
+        "title": "Add project: deja"
+      }
+    ]
+  },
+  {
+    "login": "hasmcp-dev",
+    "contributions": [
+      {
+        "kind": "issue",
+        "number": 95,
+        "title": "MCP spec conformance: 10 requirement(s) violated (via @hasmcp/mcp-spec-test) — spec 2026-07-28"
+      },
+      {
+        "kind": "issue",
+        "number": 96,
+        "title": "MCP spec conformance: 5 requirement(s) violated (via @hasmcp/mcp-spec-test) — spec 2025-11-25"
+      }
+    ]
+  },
+  {
+    "login": "kuanzema",
+    "contributions": [
+      {
+        "kind": "issue",
+        "number": 97,
+        "title": "Add project: HarnessRouter"
+      }
+    ]
+  },
+  {
+    "login": "liyangbing",
+    "contributions": [
+      {
+        "kind": "pr",
+        "number": 99,
+        "title": "Add SandBase Harness"
+      }
+    ]
   }
 ]

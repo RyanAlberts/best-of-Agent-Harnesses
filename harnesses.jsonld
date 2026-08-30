@@ -11,7 +11,7 @@
     "name": "Ryan Alberts",
     "url": "https://github.com/RyanAlberts"
   },
-  "dateModified": "2026-08-23",
+  "dateModified": "2026-08-30",
   "keywords": [
     "agent harness",
     "AI agents",
@@ -240,6 +240,18 @@
         "position": 18,
         "item": {
           "@type": "SoftwareApplication",
+          "name": "oh-my-pi",
+          "url": "https://github.com/can1357/oh-my-pi",
+          "description": "Terminal coding agent (fork of Pi) that wires the IDE into the **harness**: hash-anchored edits, a 32-tool loop tuned per-model, LSP rename/references/diagnostics on every write, a real DAP debugger (lldb/dlv/debugpy), long-lived Python + Bun execution kernels that call back into the agent's tools, browser control, and 40+ providers (Claude/OpenAI/Gemini/local). ~55k-line Rust core.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "browser, provider-agnostic, cli, ide, rust, python"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 19,
+        "item": {
+          "@type": "SoftwareApplication",
           "name": "vibe-kanban",
           "url": "https://github.com/BloopAI/vibe-kanban",
           "description": "Kanban-style fleet manager for running Claude Code, Codex, or any coding agent across many tasks at once. The **harness** contribution is the task-queue/review layer on top of whichever agent executes; not an agent loop itself.",
@@ -249,7 +261,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 19,
+        "position": 20,
         "item": {
           "@type": "SoftwareApplication",
           "name": "crush",
@@ -261,7 +273,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 20,
+        "position": 21,
         "item": {
           "@type": "SoftwareApplication",
           "name": "qwen-code",
@@ -273,7 +285,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 21,
+        "position": 22,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Kilo Code",
@@ -285,7 +297,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 22,
+        "position": 23,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Symphony",
@@ -293,18 +305,6 @@
           "description": "OpenAI's harness for fanning a task out into many isolated, autonomous coding-agent implementation runs and surfacing the ones that pass, so a team manages outcomes instead of supervising each session.",
           "applicationCategory": "DeveloperApplication",
           "keywords": "sandbox"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 23,
-        "item": {
-          "@type": "SoftwareApplication",
-          "name": "oh-my-pi",
-          "url": "https://github.com/can1357/oh-my-pi",
-          "description": "Terminal coding agent (fork of Pi) that wires the IDE into the **harness**: hash-anchored edits, a 32-tool loop tuned per-model, LSP rename/references/diagnostics on every write, a real DAP debugger (lldb/dlv/debugpy), long-lived Python + Bun execution kernels that call back into the agent's tools, browser control, and 40+ providers (Claude/OpenAI/Gemini/local). ~55k-line Rust core.",
-          "applicationCategory": "DeveloperApplication",
-          "keywords": "browser, provider-agnostic, cli, ide, rust, python"
         }
       },
       {
@@ -372,11 +372,11 @@
         "position": 29,
         "item": {
           "@type": "SoftwareApplication",
-          "name": "AgentBox",
-          "url": "https://github.com/madarco/agentbox",
-          "description": "Runs multiple coding agents in parallel, each in its own sandboxed VM, locally or in the cloud, from one command. The **harness** contribution is the VM-per-agent isolation and fleet fan-out layer; whichever agent runs inside owns the loop.",
+          "name": "Proliferate",
+          "url": "https://github.com/proliferate-ai/proliferate",
+          "description": "Open-source AI IDE for Claude Code, Codex, OpenCode, and more. The **harness** contribution is the workspace/session orchestration layer: run multiple coding agents in parallel, locally or in the cloud, with isolated workspaces, reusable workflows, and shared team context.",
           "applicationCategory": "DeveloperApplication",
-          "keywords": "sandbox, typescript"
+          "keywords": "multi-agent, sandbox, ide, typescript"
         }
       },
       {
@@ -384,11 +384,11 @@
         "position": 30,
         "item": {
           "@type": "SoftwareApplication",
-          "name": "Proliferate",
-          "url": "https://github.com/proliferate-ai/proliferate",
-          "description": "Open-source AI IDE for Claude Code, Codex, OpenCode, and more. The **harness** contribution is the workspace/session orchestration layer: run multiple coding agents in parallel, locally or in the cloud, with isolated workspaces, reusable workflows, and shared team context.",
+          "name": "AgentBox",
+          "url": "https://github.com/madarco/agentbox",
+          "description": "Runs multiple coding agents in parallel, each in its own sandboxed VM, locally or in the cloud, from one command. The **harness** contribution is the VM-per-agent isolation and fleet fan-out layer; whichever agent runs inside owns the loop.",
           "applicationCategory": "DeveloperApplication",
-          "keywords": "multi-agent, sandbox, ide, typescript"
+          "keywords": "sandbox, typescript"
         }
       },
       {
@@ -744,11 +744,11 @@
         "position": 60,
         "item": {
           "@type": "SoftwareApplication",
-          "name": "langflow",
-          "url": "https://github.com/langflow-ai/langflow",
-          "description": "Low-code UI to build and deploy LangChain/LangGraph flows; visual DAG editor and one-click run.",
+          "name": "Dify",
+          "url": "https://github.com/langgenius/dify",
+          "description": "One-stop LLM app platform: visual workflows, RAG pipeline, 50+ tools, model management; \"ship from prototype to prod\" in a single UI.",
           "applicationCategory": "DeveloperApplication",
-          "keywords": "low-code, python"
+          "keywords": "low-code, rag, python"
         }
       },
       {
@@ -756,11 +756,11 @@
         "position": 61,
         "item": {
           "@type": "SoftwareApplication",
-          "name": "Dify",
-          "url": "https://github.com/langgenius/dify",
-          "description": "One-stop LLM app platform: visual workflows, RAG pipeline, 50+ tools, model management; \"ship from prototype to prod\" in a single UI.",
+          "name": "langflow",
+          "url": "https://github.com/langflow-ai/langflow",
+          "description": "Low-code UI to build and deploy LangChain/LangGraph flows; visual DAG editor and one-click run.",
           "applicationCategory": "DeveloperApplication",
-          "keywords": "low-code, rag, python"
+          "keywords": "low-code, python"
         }
       },
       {
@@ -888,11 +888,11 @@
         "position": 72,
         "item": {
           "@type": "SoftwareApplication",
-          "name": "rasa",
-          "url": "https://github.com/RasaHQ/rasa",
-          "description": "Conversational AI stack (NLU, dialogue, actions); long-standing OSS choice for chat and voice bots.",
+          "name": "Google ADK",
+          "url": "https://github.com/google/adk-python",
+          "description": "Google's official Agent Development Kit: code-first Python toolkit for building, evaluating, and deploying agents. Optimized for Gemini but model-agnostic; deploys to Cloud Run / Vertex AI; ships a dev UI with eval and a code-execution sandbox.",
           "applicationCategory": "DeveloperApplication",
-          "keywords": "voice, python"
+          "keywords": "evals, sandbox, python"
         }
       },
       {
@@ -900,11 +900,11 @@
         "position": 73,
         "item": {
           "@type": "SoftwareApplication",
-          "name": "Google ADK",
-          "url": "https://github.com/google/adk-python",
-          "description": "Google's official Agent Development Kit: code-first Python toolkit for building, evaluating, and deploying agents. Optimized for Gemini but model-agnostic; deploys to Cloud Run / Vertex AI; ships a dev UI with eval and a code-execution sandbox.",
+          "name": "rasa",
+          "url": "https://github.com/RasaHQ/rasa",
+          "description": "Conversational AI stack (NLU, dialogue, actions); long-standing OSS choice for chat and voice bots.",
           "applicationCategory": "DeveloperApplication",
-          "keywords": "evals, sandbox, python"
+          "keywords": "voice, python"
         }
       },
       {

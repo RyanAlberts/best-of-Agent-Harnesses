@@ -6,7 +6,7 @@ Why it matters: browser automation fails in production for unglamorous reasons: 
 
 | | [browser-use](https://github.com/browser-use/browser-use) | [Stagehand](https://github.com/browserbase/stagehand) | [Playwright MCP](https://github.com/microsoft/playwright-mcp) | [chrome-devtools-mcp](https://github.com/ChromeDevTools/chrome-devtools-mcp) |
 |---|---|---|---|---|
-| ⭐ Stars | 110k | 24k | 36.4k | 49.6k |
+| ⭐ Stars | 112k | 24.1k | 36.6k | 50.2k |
 | Lane | Agent library | Agent library / SDK | Tool server (acts) | Tool server (inspects) |
 | You write | A goal in plain language | Plain-language actions mixed with Playwright code | Nothing: your agent calls it | Nothing: your agent calls it |
 | How it reads pages | Chrome DevTools Protocol, the browser's own remote-control wire (it [dropped Playwright in August 2025](https://browser-use.com/changelog/19-8-2025)) | Playwright, with plain-language act/extract/observe on top | The accessibility tree: the structured outline browsers build for screen readers, so actions are text lookups, not pixel guessing | Chrome DevTools surfaces: console, network, performance traces |
