@@ -3,728 +3,503 @@
   "movers": [
     {
       "id": "agentsmd/agents.md",
-      "from": 23804,
-      "to": 23991
-    },
-    {
-      "id": "PatrickJS/awesome-cursorrules",
-      "from": 40646,
-      "to": 40681
-    },
-    {
-      "id": "xfey/MCP-Zero",
-      "from": 511,
-      "to": 512
-    },
-    {
-      "id": "antl3x/ToolRAG",
-      "from": 33,
-      "to": 32
+      "from": 23991,
+      "to": 23993
     },
     {
       "id": "mksglu/context-mode",
-      "from": 20102,
-      "to": 20252
+      "from": 20252,
+      "to": 20254
     },
     {
       "id": "headroomlabs-ai/headroom",
-      "from": 67250,
-      "to": 68080
+      "from": 68080,
+      "to": 68093
     },
     {
       "id": "can1357/oh-my-pi",
-      "from": 26658,
-      "to": 28430
+      "from": 28430,
+      "to": 28453
     },
     {
       "id": "earendil-works/pi",
-      "from": 95747,
-      "to": 99310
-    },
-    {
-      "id": "madarco/agentbox",
-      "from": 374,
-      "to": 378
+      "from": 99310,
+      "to": 99360
     },
     {
       "id": "proliferate-ai/proliferate",
-      "from": 310,
-      "to": 441
+      "from": 441,
+      "to": 443
     },
     {
       "id": "cline/cline",
-      "from": 66707,
-      "to": 67165
-    },
-    {
-      "id": "RooCodeInc/Roo-Code",
-      "from": 24326,
-      "to": 24320
+      "from": 67165,
+      "to": 67173
     },
     {
       "id": "openai/codex",
-      "from": 114837,
-      "to": 120009
+      "from": 120009,
+      "to": 120044
     },
     {
       "id": "google-gemini/gemini-cli",
-      "from": 106626,
-      "to": 106750
+      "from": 106750,
+      "to": 106749
     },
     {
       "id": "charmbracelet/crush",
-      "from": 27601,
-      "to": 27803
+      "from": 27803,
+      "to": 27804
     },
     {
       "id": "anomalyco/opencode",
-      "from": 200557,
-      "to": 202521
+      "from": 202521,
+      "to": 202546
     },
     {
       "id": "OpenHands/OpenHands",
-      "from": 84844,
-      "to": 85626
+      "from": 85626,
+      "to": 85647
     },
     {
       "id": "aaif-goose/goose",
-      "from": 53295,
-      "to": 53694
-    },
-    {
-      "id": "HarnessLab/claw-code-agent",
-      "from": 543,
-      "to": 544
+      "from": 53694,
+      "to": 53698
     },
     {
       "id": "QwenLM/qwen-code",
-      "from": 27310,
-      "to": 27506
+      "from": 27506,
+      "to": 27510
     },
     {
       "id": "Kilo-Org/kilocode",
-      "from": 26978,
-      "to": 27080
-    },
-    {
-      "id": "openai/symphony",
-      "from": 26812,
-      "to": 26939
+      "from": 27080,
+      "to": 27083
     },
     {
       "id": "BloopAI/vibe-kanban",
-      "from": 27893,
-      "to": 27954
+      "from": 27954,
+      "to": 27958
     },
     {
       "id": "eigent-ai/eigent",
-      "from": 15083,
-      "to": 15158
+      "from": 15158,
+      "to": 15159
     },
     {
       "id": "esengine/DeepSeek-Reasonix",
-      "from": 35065,
-      "to": 35258
+      "from": 35258,
+      "to": 35264
     },
     {
       "id": "1jehuang/jcode",
-      "from": 18308,
-      "to": 18820
+      "from": 18820,
+      "to": 18827
     },
     {
       "id": "NanmiCoder/cc-haha",
-      "from": 14189,
-      "to": 14246
-    },
-    {
-      "id": "looptroop-ai/LoopTroop",
-      "from": 123,
-      "to": 129
+      "from": 14246,
+      "to": 14247
     },
     {
       "id": "open-gsd/gsd-core",
-      "from": 8617,
-      "to": 8907
+      "from": 8907,
+      "to": 8913
     },
     {
       "id": "garrytan/gstack",
-      "from": 129281,
-      "to": 130422
+      "from": 130422,
+      "to": 130441
     },
     {
       "id": "affaan-m/ECC",
-      "from": 242388,
-      "to": 244528
+      "from": 244528,
+      "to": 244582
     },
     {
       "id": "obra/superpowers",
-      "from": 276518,
-      "to": 279581
-    },
-    {
-      "id": "anthropics/claude-agent-sdk-python",
-      "from": 7957,
-      "to": 8004
-    },
-    {
-      "id": "aiming-lab/AutoHarness",
-      "from": 368,
-      "to": 369
-    },
-    {
-      "id": "SWE-agent/SWE-agent",
-      "from": 20112,
-      "to": 20172
+      "from": 279581,
+      "to": 279617
     },
     {
       "id": "HKUDS/OpenHarness",
-      "from": 15492,
-      "to": 15582
+      "from": 15582,
+      "to": 15584
     },
     {
       "id": "anthropics/skills",
-      "from": 171127,
-      "to": 172591
+      "from": 172591,
+      "to": 172614
     },
     {
       "id": "google/agents-cli",
-      "from": 5708,
-      "to": 5759
+      "from": 5759,
+      "to": 5760
     },
     {
       "id": "iflytek/skillhub",
-      "from": 4891,
-      "to": 4910
+      "from": 4910,
+      "to": 4914
     },
     {
       "id": "hesreallyhim/awesome-claude-code",
-      "from": 52857,
-      "to": 53219
+      "from": 53219,
+      "to": 53228
     },
     {
       "id": "addyosmani/agent-skills",
-      "from": 89221,
-      "to": 90885
+      "from": 90885,
+      "to": 90895
     },
     {
       "id": "OthmanAdi/planning-with-files",
-      "from": 26305,
-      "to": 26427
-    },
-    {
-      "id": "stanford-iris-lab/meta-harness",
-      "from": 1448,
-      "to": 1478
+      "from": 26427,
+      "to": 26433
     },
     {
       "id": "langchain-ai/langgraph",
-      "from": 40276,
-      "to": 40712
+      "from": 40712,
+      "to": 40719
     },
     {
       "id": "langchain-ai/langchain",
-      "from": 144822,
-      "to": 145286
+      "from": 145286,
+      "to": 145291
     },
     {
       "id": "run-llama/llama_index",
-      "from": 51815,
-      "to": 51919
+      "from": 51919,
+      "to": 51922
     },
     {
       "id": "microsoft/semantic-kernel",
-      "from": 28481,
-      "to": 28517
+      "from": 28517,
+      "to": 28518
     },
     {
       "id": "mastra-ai/mastra",
-      "from": 27375,
-      "to": 27572
-    },
-    {
-      "id": "agno-agi/agno",
-      "from": 41848,
-      "to": 41969
-    },
-    {
-      "id": "letta-ai/letta",
-      "from": 24360,
-      "to": 24496
+      "from": 27572,
+      "to": 27573
     },
     {
       "id": "langflow-ai/langflow",
-      "from": 153582,
-      "to": 153896
+      "from": 153896,
+      "to": 153909
     },
     {
       "id": "RasaHQ/rasa",
-      "from": 21302,
-      "to": 21311
-    },
-    {
-      "id": "botpress/botpress",
-      "from": 14876,
-      "to": 14882
+      "from": 21311,
+      "to": 21310
     },
     {
       "id": "langgenius/dify",
-      "from": 153269,
-      "to": 153898
+      "from": 153898,
+      "to": 153906
     },
     {
       "id": "n8n-io/n8n",
-      "from": 202069,
-      "to": 202848
+      "from": 202848,
+      "to": 202868
     },
     {
       "id": "Significant-Gravitas/AutoGPT",
-      "from": 186806,
-      "to": 187005
+      "from": 187005,
+      "to": 187013
     },
     {
       "id": "HKUDS/nanobot",
-      "from": 47301,
-      "to": 47535
-    },
-    {
-      "id": "zhayujie/CowAgent",
-      "from": 46642,
-      "to": 46726
+      "from": 47535,
+      "to": 47536
     },
     {
       "id": "i-am-bee/beeai-framework",
-      "from": 3383,
-      "to": 3382
+      "from": 3382,
+      "to": 3383
     },
     {
       "id": "2FastLabs/agent-squad",
-      "from": 7742,
-      "to": 7751
+      "from": 7751,
+      "to": 7750
     },
     {
       "id": "openclaw/openclaw",
-      "from": 387220,
-      "to": 388057
+      "from": 388057,
+      "to": 388079
     },
     {
       "id": "NousResearch/hermes-agent",
-      "from": 234688,
-      "to": 238368
-    },
-    {
-      "id": "dylanneve1/talon",
-      "from": 71,
-      "to": 75
+      "from": 238368,
+      "to": 238428
     },
     {
       "id": "openinterpreter/openinterpreter",
-      "from": 68121,
-      "to": 68200
+      "from": 68200,
+      "to": 68205
     },
     {
       "id": "FoundationAgents/MetaGPT",
-      "from": 69962,
-      "to": 70096
+      "from": 70096,
+      "to": 70099
     },
     {
       "id": "OpenBMB/ChatDev",
-      "from": 34103,
-      "to": 34152
+      "from": 34152,
+      "to": 34157
     },
     {
       "id": "microsoft/agent-framework",
-      "from": 13060,
-      "to": 13219
+      "from": 13219,
+      "to": 13222
     },
     {
       "id": "khoj-ai/khoj",
-      "from": 36674,
-      "to": 36795
+      "from": 36795,
+      "to": 36797
     },
     {
       "id": "elizaOS/eliza",
-      "from": 19137,
-      "to": 19210
+      "from": 19210,
+      "to": 19214
     },
     {
       "id": "agent0ai/agent-zero",
-      "from": 18943,
-      "to": 19027
-    },
-    {
-      "id": "OpenBMB/AgentVerse",
-      "from": 5113,
-      "to": 5117
-    },
-    {
-      "id": "SciPhi-AI/R2R",
-      "from": 7973,
-      "to": 7980
+      "from": 19027,
+      "to": 19029
     },
     {
       "id": "google/adk-python",
-      "from": 21234,
-      "to": 21332
-    },
-    {
-      "id": "agentstack-ai/AgentStack",
-      "from": 2185,
-      "to": 2188
+      "from": 21332,
+      "to": 21333
     },
     {
       "id": "FlowiseAI/Flowise",
-      "from": 55385,
-      "to": 55397
+      "from": 55397,
+      "to": 55398
     },
     {
       "id": "browser-use/browser-use",
-      "from": 110219,
-      "to": 111723
+      "from": 111723,
+      "to": 111736
     },
     {
       "id": "browserbase/stagehand",
-      "from": 24023,
-      "to": 24096
-    },
-    {
-      "id": "TencentCloudADP/youtu-agent",
-      "from": 4601,
-      "to": 4606
+      "from": 24096,
+      "to": 24097
     },
     {
       "id": "deepset-ai/haystack",
-      "from": 26293,
-      "to": 26364
-    },
-    {
-      "id": "ag2ai/ag2",
-      "from": 4883,
-      "to": 4894
+      "from": 26364,
+      "to": 26366
     },
     {
       "id": "openai/openai-agents-python",
-      "from": 28887,
-      "to": 29070
+      "from": 29070,
+      "to": 29072
     },
     {
       "id": "crewAIInc/crewAI",
-      "from": 57501,
-      "to": 57827
+      "from": 57827,
+      "to": 57831
     },
     {
       "id": "microsoft/autogen",
-      "from": 60585,
-      "to": 60700
+      "from": 60700,
+      "to": 60703
     },
     {
       "id": "MervinPraison/PraisonAI",
-      "from": 8947,
-      "to": 8991
+      "from": 8991,
+      "to": 8993
     },
     {
       "id": "aden-hive/hive",
-      "from": 10949,
-      "to": 10985
+      "from": 10985,
+      "to": 10986
     },
     {
       "id": "omnigent-ai/omnigent",
-      "from": 9189,
-      "to": 9508
+      "from": 9508,
+      "to": 9513
     },
     {
       "id": "Aider-AI/aider",
-      "from": 48420,
-      "to": 48604
+      "from": 48604,
+      "to": 48605
     },
     {
       "id": "thedotmack/claude-mem",
-      "from": 91578,
-      "to": 92631
+      "from": 92631,
+      "to": 92649
     },
     {
       "id": "modelcontextprotocol/python-sdk",
-      "from": 24090,
-      "to": 24160
+      "from": 24160,
+      "to": 24161
     },
     {
       "id": "modelcontextprotocol/typescript-sdk",
-      "from": 13230,
-      "to": 13281
+      "from": 13281,
+      "to": 13282
     },
     {
       "id": "continuedev/continue",
-      "from": 35601,
-      "to": 35699
+      "from": 35699,
+      "to": 35701
     },
     {
       "id": "modelcontextprotocol/inspector",
-      "from": 10730,
-      "to": 10789
-    },
-    {
-      "id": "github/github-mcp-server",
-      "from": 32440,
-      "to": 32608
-    },
-    {
-      "id": "modelcontextprotocol/registry",
-      "from": 7185,
-      "to": 7202
-    },
-    {
-      "id": "docker/mcp-gateway",
-      "from": 1537,
-      "to": 1546
+      "from": 10789,
+      "to": 10791
     },
     {
       "id": "Infisical/agent-vault",
-      "from": 2124,
-      "to": 2162
+      "from": 2162,
+      "to": 2164
     },
     {
       "id": "microsoft/agent-governance-toolkit",
-      "from": 6091,
-      "to": 6153
-    },
-    {
-      "id": "cocoindex-io/cocoindex-code",
-      "from": 2670,
-      "to": 2682
-    },
-    {
-      "id": "IBM/mcp-context-forge",
-      "from": 4350,
-      "to": 4386
-    },
-    {
-      "id": "vostride/agent-qa",
-      "from": 936,
-      "to": 896
-    },
-    {
-      "id": "THUDM/AgentBench",
-      "from": 3682,
-      "to": 3703
-    },
-    {
-      "id": "web-arena-x/webarena",
-      "from": 1584,
-      "to": 1590
+      "from": 6153,
+      "to": 6154
     },
     {
       "id": "SWE-bench/SWE-bench",
-      "from": 5691,
-      "to": 5738
-    },
-    {
-      "id": "harbor-framework/terminal-bench",
-      "from": 533,
-      "to": 567
-    },
-    {
-      "id": "SWE-Gym/SWE-Gym",
-      "from": 723,
-      "to": 728
-    },
-    {
-      "id": "SWE-bench/SWE-smith",
-      "from": 748,
-      "to": 756
-    },
-    {
-      "id": "meituan-longcat/vitabench",
-      "from": 164,
-      "to": 167
-    },
-    {
-      "id": "letta-ai/letta-evals",
-      "from": 83,
-      "to": 82
-    },
-    {
-      "id": "MinorJerry/WebVoyager",
-      "from": 1122,
-      "to": 1123
-    },
-    {
-      "id": "UKGovernmentBEIS/inspect_evals",
-      "from": 639,
-      "to": 650
-    },
-    {
-      "id": "UKGovernmentBEIS/inspect_ai",
-      "from": 2606,
-      "to": 2663
+      "from": 5738,
+      "to": 5741
     },
     {
       "id": "microsoft/agent-lightning",
-      "from": 17609,
-      "to": 17923
-    },
-    {
-      "id": "assafelovic/gpt-researcher",
-      "from": 29099,
-      "to": 29206
-    },
-    {
-      "id": "OpenAgentsInc/openagents",
-      "from": 447,
-      "to": 446
+      "from": 17923,
+      "to": 17924
     },
     {
       "id": "bytedance/deer-flow",
-      "from": 80648,
-      "to": 81128
-    },
-    {
-      "id": "MiroMindAI/MiroThinker",
-      "from": 8359,
-      "to": 8362
+      "from": 81128,
+      "to": 81132
     },
     {
       "id": "aiming-lab/AutoResearchClaw",
-      "from": 14071,
-      "to": 14285
+      "from": 14285,
+      "to": 14287
     },
     {
       "id": "langchain-ai/deepagents",
-      "from": 28172,
-      "to": 28721
+      "from": 28721,
+      "to": 28723
     },
     {
       "id": "pydantic/pydantic-ai",
-      "from": 19453,
-      "to": 19586
-    },
-    {
-      "id": "MaxGfeller/open-harness",
-      "from": 599,
-      "to": 603
+      "from": 19586,
+      "to": 19588
     },
     {
       "id": "vercel/ai",
-      "from": 26368,
-      "to": 26496
+      "from": 26496,
+      "to": 26498
     },
     {
       "id": "huggingface/smolagents",
-      "from": 28938,
-      "to": 29050
+      "from": 29050,
+      "to": 29055
     },
     {
       "id": "strands-agents/harness-sdk",
-      "from": 6984,
-      "to": 7053
+      "from": 7053,
+      "to": 7058
     },
     {
       "id": "openai/openai-agents-js",
-      "from": 3685,
-      "to": 3738
+      "from": 3738,
+      "to": 3739
     },
     {
       "id": "BerriAI/litellm",
-      "from": 57066,
-      "to": 57580
+      "from": 57580,
+      "to": 57595
     },
     {
       "id": "ComposioHQ/composio",
-      "from": 29840,
-      "to": 29945
+      "from": 29945,
+      "to": 29950
     },
     {
       "id": "mem0ai/mem0",
-      "from": 63868,
-      "to": 64359
-    },
-    {
-      "id": "cloudflare/agents",
-      "from": 5478,
-      "to": 5498
+      "from": 64359,
+      "to": 64366
     },
     {
       "id": "e2b-dev/E2B",
-      "from": 13523,
-      "to": 13592
+      "from": 13592,
+      "to": 13594
     },
     {
       "id": "daytonaio/daytona",
-      "from": 71914,
-      "to": 71856
+      "from": 71856,
+      "to": 71855
     },
     {
       "id": "kubernetes-sigs/agent-sandbox",
-      "from": 3591,
-      "to": 3680
-    },
-    {
-      "id": "steel-dev/steel-browser",
-      "from": 7529,
-      "to": 7565
+      "from": 3680,
+      "to": 3681
     },
     {
       "id": "topoteretes/cognee",
-      "from": 30194,
-      "to": 30349
+      "from": 30349,
+      "to": 30350
     },
     {
       "id": "getzep/graphiti",
-      "from": 30212,
-      "to": 30419
+      "from": 30419,
+      "to": 30423
     },
     {
       "id": "gastownhall/beads",
-      "from": 26534,
-      "to": 26724
+      "from": 26724,
+      "to": 26729
     },
     {
       "id": "langfuse/langfuse",
-      "from": 33575,
-      "to": 33928
+      "from": 33928,
+      "to": 33932
     },
     {
       "id": "mlflow/mlflow",
-      "from": 27630,
-      "to": 27736
+      "from": 27736,
+      "to": 27738
     },
     {
       "id": "comet-ml/opik",
-      "from": 21549,
-      "to": 21684
-    },
-    {
-      "id": "Arize-ai/phoenix",
-      "from": 11148,
-      "to": 11247
+      "from": 21684,
+      "to": 21692
     },
     {
       "id": "modelcontextprotocol/servers",
-      "from": 89798,
-      "to": 89967
+      "from": 89967,
+      "to": 89971
     },
     {
       "id": "upstash/context7",
-      "from": 61104,
-      "to": 61412
+      "from": 61412,
+      "to": 61417
     },
     {
       "id": "ChromeDevTools/chrome-devtools-mcp",
-      "from": 49601,
-      "to": 50197
+      "from": 50197,
+      "to": 50205
     },
     {
       "id": "microsoft/playwright-mcp",
-      "from": 36382,
-      "to": 36625
+      "from": 36625,
+      "to": 36630
     },
     {
       "id": "FoundationAgents/OpenManus",
-      "from": 58048,
-      "to": 58121
+      "from": 58121,
+      "to": 58120
     },
     {
       "id": "wshobson/agents",
-      "from": 39042,
-      "to": 39263
+      "from": 39263,
+      "to": 39269
     }
   ],
   "moved": [],
@@ -747,14 +522,14 @@
     {
       "id": "FlowiseAI/Flowise",
       "since": "2026-08-16",
-      "stars": 55397
+      "stars": 55398
     }
   ],
   "failed": [],
   "candidates": [
     {
       "id": "deepseek-ai/deepseek-harness",
-      "stars": 204345,
+      "stars": 204520,
       "topics": [
         "ai-agents",
         "cordis",
@@ -765,7 +540,7 @@
     },
     {
       "id": "firecrawl/firecrawl",
-      "stars": 174307,
+      "stars": 174364,
       "topics": [
         "ai",
         "ai-agents",
@@ -791,7 +566,7 @@
     },
     {
       "id": "DietrichGebert/ponytail",
-      "stars": 116896,
+      "stars": 117009,
       "topics": [
         "agent-skills",
         "ai-agents",
@@ -808,7 +583,7 @@
     },
     {
       "id": "Graphify-Labs/graphify",
-      "stars": 112516,
+      "stars": 112560,
       "topics": [
         "ai-agents",
         "antigravity",
@@ -834,7 +609,7 @@
     },
     {
       "id": "infiniflow/ragflow",
-      "stars": 89645,
+      "stars": 89657,
       "topics": [
         "agent-harness",
         "agentic-ai",
@@ -855,7 +630,7 @@
     },
     {
       "id": "dair-ai/Prompt-Engineering-Guide",
-      "stars": 77893,
+      "stars": 77906,
       "topics": [
         "agent",
         "agents",
@@ -873,7 +648,7 @@
     },
     {
       "id": "ComposioHQ/awesome-claude-skills",
-      "stars": 74048,
+      "stars": 74055,
       "topics": [
         "agent-skills",
         "ai-agents",
@@ -897,7 +672,7 @@
     },
     {
       "id": "thedaviddias/Front-End-Checklist",
-      "stars": 73954,
+      "stars": 73964,
       "topics": [
         "ai-agent",
         "ai-agents",
@@ -919,7 +694,7 @@
     },
     {
       "id": "microsoft/ai-agents-for-beginners",
-      "stars": 73516,
+      "stars": 73524,
       "topics": [
         "agentic-ai",
         "agentic-framework",
@@ -937,7 +712,7 @@
     },
     {
       "id": "ruvnet/ruflo",
-      "stars": 69787,
+      "stars": 69802,
       "topics": [
         "agentic-ai",
         "agentic-framework",
@@ -964,7 +739,7 @@
     },
     {
       "id": "code-yeongyu/oh-my-openagent",
-      "stars": 68517,
+      "stars": 68523,
       "topics": [
         "ai",
         "ai-agents",
@@ -986,7 +761,7 @@
     },
     {
       "id": "shanraisshan/claude-code-best-practice",
-      "stars": 65381,
+      "stars": 65388,
       "topics": [
         "agentic-ai",
         "agentic-coding",
@@ -1013,7 +788,7 @@
     },
     {
       "id": "Mintplex-Labs/anything-llm",
-      "stars": 65380,
+      "stars": 65382,
       "topics": [
         "agent-computer",
         "agent-harness",
@@ -1036,7 +811,7 @@
     },
     {
       "id": "asgeirtj/system_prompts_leaks",
-      "stars": 63833,
+      "stars": 63838,
       "topics": [
         "ai",
         "ai-agents",
@@ -1063,7 +838,7 @@
     },
     {
       "id": "diegosouzapw/OmniRoute",
-      "stars": 58417,
+      "stars": 58498,
       "topics": [
         "a2a",
         "ai-agents",
@@ -1090,7 +865,7 @@
     },
     {
       "id": "stablyai/orca",
-      "stars": 57127,
+      "stars": 57214,
       "topics": [
         "ade",
         "agent-ide",
@@ -1115,7 +890,7 @@
     },
     {
       "id": "rohitg00/ai-engineering-from-scratch",
-      "stars": 51168,
+      "stars": 51216,
       "topics": [
         "agents",
         "ai",
@@ -1142,7 +917,7 @@
     },
     {
       "id": "chatanywhere/GPT_API_free",
-      "stars": 41450,
+      "stars": 41459,
       "topics": [
         "api",
         "chatgpt",
@@ -1192,7 +967,7 @@
     },
     {
       "id": "WenyuChiou/awesome-agentic-ai-zh",
-      "stars": 6517,
+      "stars": 6521,
       "topics": [
         "agentic-ai",
         "agentic-workflows",
@@ -1272,7 +1047,7 @@
     },
     {
       "id": "strukto-ai/mirage",
-      "stars": 3585,
+      "stars": 3586,
       "topics": [
         "agent-sandbox",
         "agent-tools",
@@ -1304,7 +1079,7 @@
     },
     {
       "id": "google-antigravity/antigravity-sdk-python",
-      "stars": 3229,
+      "stars": 3231,
       "topics": [
         "ai-agents",
         "antigravity",
@@ -1430,7 +1205,7 @@
     },
     {
       "id": "Lumiwealth/lumibot",
-      "stars": 2012,
+      "stars": 2013,
       "topics": [
         "ai-agents",
         "algorithmic-trading",
@@ -1457,7 +1232,7 @@
     },
     {
       "id": "vonzosten/awesome-LangGraph",
-      "stars": 1984,
+      "stars": 1985,
       "topics": [
         "ai",
         "awesome",
@@ -1492,7 +1267,7 @@
     },
     {
       "id": "stripe/ai",
-      "stars": 1779,
+      "stars": 1780,
       "topics": [
         "ai",
         "gemini-cli-extension",
@@ -1507,7 +1282,7 @@
     },
     {
       "id": "HKUDS/VideoAgent",
-      "stars": 1770,
+      "stars": 1771,
       "topics": [
         "agents",
         "audio-editing",
@@ -1588,7 +1363,7 @@
     },
     {
       "id": "666ghj/BettaFish",
-      "stars": 42114,
+      "stars": 42113,
       "topics": [
         "agent-framework",
         "data-analysis",
@@ -1646,7 +1421,7 @@
     },
     {
       "id": "EvoMap/evolver",
-      "stars": 9023,
+      "stars": 9026,
       "topics": [
         "a2a",
         "agent-evolution",
@@ -1695,7 +1470,7 @@
     },
     {
       "id": "open-multi-agent/open-multi-agent",
-      "stars": 6842,
+      "stars": 6844,
       "topics": [
         "agent-framework",
         "agent-orchestration",
@@ -1738,7 +1513,7 @@
     },
     {
       "id": "rllm-org/rllm",
-      "stars": 5808,
+      "stars": 5809,
       "topics": [
         "agent-framework",
         "agentic-workflow",
@@ -1786,7 +1561,7 @@
     },
     {
       "id": "didilili/ai-agents-from-zero",
-      "stars": 4180,
+      "stars": 4182,
       "topics": [
         "agent",
         "agent-framework",
@@ -1891,7 +1666,7 @@
     },
     {
       "id": "lioensky/VCPToolBox",
-      "stars": 2275,
+      "stars": 2276,
       "topics": [
         "agent-framework",
         "ai-agent",
@@ -1915,7 +1690,7 @@
     },
     {
       "id": "bojieli/ai-agent-book",
-      "stars": 43588,
+      "stars": 43621,
       "topics": [
         "agent",
         "agent-memory",
@@ -1935,7 +1710,7 @@
     },
     {
       "id": "Hmbown/CodeWhale",
-      "stars": 40865,
+      "stars": 40869,
       "topics": [
         "agent-orchestration",
         "ai-agent",
@@ -1953,7 +1728,7 @@
     },
     {
       "id": "YaoApp/yao",
-      "stars": 7843,
+      "stars": 7844,
       "topics": [
         "agent-harness",
         "agent-orchestration",
@@ -1977,7 +1752,7 @@
     },
     {
       "id": "algorithmicsuperintelligence/openevolve",
-      "stars": 7289,
+      "stars": 7290,
       "topics": [
         "alpha-evolve",
         "alphacode",
@@ -2029,7 +1804,7 @@
     },
     {
       "id": "Q00/ouroboros",
-      "stars": 5730,
+      "stars": 5733,
       "topics": [
         "agent-os",
         "agentic-ai",
@@ -2068,7 +1843,7 @@
     },
     {
       "id": "nexu-io/html-video",
-      "stars": 4480,
+      "stars": 4482,
       "topics": [
         "ai-agent",
         "apache-2",
@@ -2090,7 +1865,7 @@
     },
     {
       "id": "CommandCodeAI/command-code",
-      "stars": 3832,
+      "stars": 3834,
       "topics": [
         "ai",
         "ai-agent",
@@ -2110,7 +1885,7 @@
     },
     {
       "id": "tutti-os/tutti",
-      "stars": 3632,
+      "stars": 3633,
       "topics": [
         "agent-collaboration",
         "agent-orchestration",
@@ -2137,7 +1912,7 @@
     },
     {
       "id": "Windy3f3f3f3f/how-claude-code-works",
-      "stars": 3557,
+      "stars": 3559,
       "topics": [
         "ai",
         "ai-agent",
@@ -2154,7 +1929,7 @@
     },
     {
       "id": "SeemSeam/claude_codex_bridge",
-      "stars": 3462,
+      "stars": 3463,
       "topics": [
         "ai-coding",
         "ai-collaboration",
@@ -2195,7 +1970,7 @@
     },
     {
       "id": "fuxicodex/Fuxi",
-      "stars": 2963,
+      "stars": 3007,
       "topics": [
         "agent",
         "ai",
@@ -2222,7 +1997,7 @@
     },
     {
       "id": "JetBrains/go-modern-guidelines",
-      "stars": 2959,
+      "stars": 2961,
       "topics": [
         "ai-agents",
         "coding-agent",
@@ -2254,7 +2029,7 @@
     },
     {
       "id": "ccch1mneyyy/dsh-TUI",
-      "stars": 2709,
+      "stars": 2717,
       "topics": [
         "claude-code",
         "coding-agent",
@@ -2328,7 +2103,7 @@
     },
     {
       "id": "shareAI-lab/learn-claude-code",
-      "stars": 75661,
+      "stars": 75668,
       "topics": [
         "agent",
         "agent-development",
@@ -2345,7 +2120,7 @@
     },
     {
       "id": "xai-org/grok-build",
-      "stars": 26251,
+      "stars": 26254,
       "topics": [],
       "desc": "SpaceXAI's coding agent harness and TUI. Fullscreen, mouse interactive, extensible."
     },
@@ -2366,7 +2141,7 @@
     },
     {
       "id": "HKUDS/DeepCode",
-      "stars": 16449,
+      "stars": 16450,
       "topics": [
         "agentic-coding",
         "harness-engineering",
@@ -2376,7 +2151,7 @@
     },
     {
       "id": "yc-software/qm",
-      "stars": 14358,
+      "stars": 14363,
       "topics": [
         "ai",
         "assistant",
@@ -2387,7 +2162,7 @@
     },
     {
       "id": "mindfold-ai/Trellis",
-      "stars": 14320,
+      "stars": 14322,
       "topics": [
         "agentic-coding",
         "ai-workflow",
@@ -2399,7 +2174,7 @@
     },
     {
       "id": "chaitanyagiri/munder-difflin",
-      "stars": 5591,
+      "stars": 5626,
       "topics": [
         "agents",
         "claude-code",
@@ -2412,7 +2187,7 @@
     },
     {
       "id": "truefoundry/trueforge",
-      "stars": 4932,
+      "stars": 4937,
       "topics": [
         "agent",
         "agentic-ai",
@@ -2440,7 +2215,7 @@
     },
     {
       "id": "ai-boost/awesome-harness-engineering",
-      "stars": 3907,
+      "stars": 3909,
       "topics": [
         "agent-harness",
         "agent-memory",
@@ -2456,7 +2231,7 @@
     },
     {
       "id": "onecli/onecli",
-      "stars": 3427,
+      "stars": 3428,
       "topics": [
         "ai-agents",
         "cli",
@@ -2473,7 +2248,7 @@
     },
     {
       "id": "code-yeongyu/lazycodex",
-      "stars": 3349,
+      "stars": 3351,
       "topics": [
         "ai",
         "ai-agents",
@@ -2508,13 +2283,13 @@
     },
     {
       "id": "visa/visa-vulnerability-agentic-harness",
-      "stars": 2657,
+      "stars": 2658,
       "topics": [],
       "desc": "Visa Vulnerability Agentic Harness"
     },
     {
       "id": "DenisSergeevitch/agents-best-practices",
-      "stars": 2252,
+      "stars": 2253,
       "topics": [
         "agent-skill",
         "agent-skills",
@@ -2587,7 +2362,7 @@
     },
     {
       "id": "FailproofAI/failproofai",
-      "stars": 1546,
+      "stars": 1560,
       "topics": [
         "agent-failure",
         "agent-harness",
@@ -2614,7 +2389,7 @@
     },
     {
       "id": "VoltAgent/awesome-design-md",
-      "stars": 111443,
+      "stars": 111539,
       "topics": [
         "awesome-list",
         "design-md",
@@ -2631,7 +2406,7 @@
     },
     {
       "id": "nexu-io/open-design",
-      "stars": 92768,
+      "stars": 92796,
       "topics": [
         "agent-skills",
         "ai-design",
@@ -2658,7 +2433,7 @@
     },
     {
       "id": "herdrdev/herdr",
-      "stars": 33571,
+      "stars": 33608,
       "topics": [
         "agent",
         "agent-orchestration",
@@ -2683,7 +2458,7 @@
     },
     {
       "id": "JCodesMore/ai-website-cloner-template",
-      "stars": 33404,
+      "stars": 33420,
       "topics": [
         "ai",
         "ai-agents",
@@ -2709,7 +2484,7 @@
     },
     {
       "id": "zarazhangrui/frontend-slides",
-      "stars": 28395,
+      "stars": 28403,
       "topics": [
         "ai-slides",
         "anthropic",
@@ -2726,7 +2501,7 @@
     },
     {
       "id": "rohitg00/agentmemory",
-      "stars": 27772,
+      "stars": 27786,
       "topics": [
         "agentmemory",
         "agents",
@@ -2746,13 +2521,13 @@
     },
     {
       "id": "google-labs-code/design.md",
-      "stars": 27605,
+      "stars": 27606,
       "topics": [],
       "desc": "A format specification for describing a visual identity to coding agents. DESIGN.md gives agents a persistent, structured understanding of a design system."
     },
     {
       "id": "manaflow-ai/cmux",
-      "stars": 26602,
+      "stars": 26603,
       "topics": [
         "amp",
         "claude-code",
@@ -2777,7 +2552,7 @@
     },
     {
       "id": "ayghri/i-have-adhd",
-      "stars": 25693,
+      "stars": 25720,
       "topics": [
         "adhd",
         "claude-",

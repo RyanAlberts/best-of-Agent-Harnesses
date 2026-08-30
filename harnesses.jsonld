@@ -744,11 +744,11 @@
         "position": 60,
         "item": {
           "@type": "SoftwareApplication",
-          "name": "Dify",
-          "url": "https://github.com/langgenius/dify",
-          "description": "One-stop LLM app platform: visual workflows, RAG pipeline, 50+ tools, model management; \"ship from prototype to prod\" in a single UI.",
+          "name": "langflow",
+          "url": "https://github.com/langflow-ai/langflow",
+          "description": "Low-code UI to build and deploy LangChain/LangGraph flows; visual DAG editor and one-click run.",
           "applicationCategory": "DeveloperApplication",
-          "keywords": "low-code, rag, python"
+          "keywords": "low-code, python"
         }
       },
       {
@@ -756,11 +756,11 @@
         "position": 61,
         "item": {
           "@type": "SoftwareApplication",
-          "name": "langflow",
-          "url": "https://github.com/langflow-ai/langflow",
-          "description": "Low-code UI to build and deploy LangChain/LangGraph flows; visual DAG editor and one-click run.",
+          "name": "Dify",
+          "url": "https://github.com/langgenius/dify",
+          "description": "One-stop LLM app platform: visual workflows, RAG pipeline, 50+ tools, model management; \"ship from prototype to prod\" in a single UI.",
           "applicationCategory": "DeveloperApplication",
-          "keywords": "low-code, python"
+          "keywords": "low-code, rag, python"
         }
       },
       {
