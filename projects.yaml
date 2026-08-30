@@ -481,6 +481,9 @@ projects:
     github_id: IBM/mcp-context-forge
     labels: ["python"]
     category: "plugins-mcp-cli"
+  - name: SandBase Harness
+    github_id: sandbaseai/sandbase-harness
+    category: "plugins-mcp-cli"
   # Memory and state
   - name: Graphiti (Zep)
     github_id: getzep/graphiti
