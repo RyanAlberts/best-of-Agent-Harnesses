@@ -25,7 +25,7 @@
 <text x="44" y="395" font-size="13" fill="#6b7280" transform="rotate(-90 44 395)" text-anchor="middle">recovery: crash = start over&#160;&#160;→&#160;&#160;survives restarts</text>
 <text x="832.5" y="652.0" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">10</text>
 <text x="832.5" y="254.5" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">4</text>
-<text x="832.5" y="387.0" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">21</text>
+<text x="832.5" y="387.0" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">22</text>
 <text x="397.5" y="387.0" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">3</text>
 <text x="1050.0" y="387.0" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">23</text>
 <text x="615.0" y="652.0" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">1</text>
@@ -53,6 +53,7 @@
 <circle cx="788.3" cy="164.4" r="5.5" fill="#8b5cf6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>langgraph-bigtool — ⭐556</title></circle>
 <circle cx="881.4" cy="613.2" r="5.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Terminal-Bench — ⭐567</title></circle>
 <circle cx="714.3" cy="605.3" r="5.5" fill="#a16207" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>open-harness — ⭐603</title></circle>
+<circle cx="776.5" cy="343.3" r="5.5" fill="#10b981" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>SandBase Harness — ⭐640</title></circle>
 <circle cx="878.8" cy="329.7" r="5.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>inspect_evals — ⭐650</title></circle>
 <circle cx="1012.9" cy="584.1" r="5.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>SWE-Gym — ⭐728</title></circle>
 <circle cx="910.3" cy="622.1" r="5.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>swe-smith — ⭐756</title></circle>
@@ -140,5 +141,5 @@
 <text x="993.7" y="164.6" text-anchor="end" font-size="12.5" font-weight="600" fill="#1f2937">n8n</text>
 <text x="1004.2" y="448.5" text-anchor="end" font-size="12.5" font-weight="600" fill="#1f2937">langflow</text>
 <text x="534.2" y="313.2" text-anchor="start" font-size="12.5" font-weight="600" fill="#1f2937">aider</text>
-<text x="1060" y="784" text-anchor="end" font-size="12" fill="#9ca3af">95 loop-owning projects shown · 65 format/component entries (n/a) omitted · full tiers in harnesses.json</text>
+<text x="1060" y="784" text-anchor="end" font-size="12" fill="#9ca3af">96 loop-owning projects shown · 65 format/component entries (n/a) omitted · full tiers in harnesses.json</text>
 </svg>

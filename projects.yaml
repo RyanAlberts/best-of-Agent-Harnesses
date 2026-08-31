@@ -444,6 +444,9 @@ projects:
   - name: MCP Registry
     github_id: modelcontextprotocol/registry
     category: "plugins-mcp-cli"
+  - name: SandBase Harness
+    github_id: sandbaseai/sandbase-harness
+    category: "plugins-mcp-cli"
   - name: Docker MCP Gateway
     github_id: docker/mcp-gateway
     category: "plugins-mcp-cli"

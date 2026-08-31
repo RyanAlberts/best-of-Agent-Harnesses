@@ -9,7 +9,7 @@
     "feed_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/feed.json",
     "license": "CC-BY-SA-4.0",
     "stars_captured": "2026-08-30",
-    "project_count": 160,
+    "project_count": 161,
     "graveyard_count": 4,
     "tiers": [
       "super simple",
@@ -375,7 +375,7 @@
     {
       "kind": "derived",
       "q": "How many of these agent harnesses are open source?",
-      "a": "118 of 160 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
+      "a": "119 of 161 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
       "slug": "how-many-of-these-agent-harnesses-are-open-source"
     },
     {
@@ -6265,6 +6265,37 @@
       "example": {
         "label": "Gateway usage walkthrough",
         "url": "https://github.com/docker/mcp-gateway/blob/main/docs/mcp-gateway.md"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "SandBase Harness",
+      "github_id": "sandbaseai/sandbase-harness",
+      "url": "https://github.com/sandbaseai/sandbase-harness",
+      "slug": "sandbase-harness",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#sandbase-harness",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/sandbase-harness/",
+      "description": "Local-first, self-hosted AI agent runtime and MCP bridge with sandboxed sessions, memory, credentials, approvals, audit/replay, and selectable execution backends.",
+      "category": "plugins-mcp-cli",
+      "category_title": "Plugins, MCPs, CLI tools",
+      "stars": 640,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (runtime, MCP bridge, local Console)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "open-source",
+      "tags": [
+        "mcp",
+        "memory",
+        "sandbox",
+        "local"
+      ],
+      "example": {
+        "label": "Installation guide",
+        "url": "https://github.com/sandbaseai/sandbase-harness/blob/main/docs/installation.md"
       },
       "deep_dive": null
     },
