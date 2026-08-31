@@ -1,13 +1,13 @@
 <!-- markdownlint-disable -->
 # Tags — cross-reference
 
-_Auto-generated from `scripts/generate.py`. 160 projects across 22 canonical tags. Edit projects in `generate.py` (not here) and rerun the script._
+_Auto-generated from `scripts/generate.py`. 161 projects across 22 canonical tags. Edit projects in `generate.py` (not here) and rerun the script._
 
 Tag chips appear next to each project in [README.md](README.md). This page lists every tag once with the projects that carry it, grouped by category and sorted by GitHub stars within each category.
 
 ## All tags
 
-[`mcp`](#mcp) (33) · [`memory`](#memory) (35) · [`multi-agent`](#multi-agent) (27) · [`evals`](#evals) (21) · [`voice`](#voice) (2) · [`vision`](#vision) (3) · [`browser`](#browser) (9) · [`sandbox`](#sandbox) (27) · [`low-code`](#low-code) (3) · [`rag`](#rag) (8) · [`tool-discovery`](#tool-discovery) (5) · [`training`](#training) (5) · [`workflow`](#workflow) (10) · [`typed`](#typed) (3) · [`local`](#local) (6) · [`provider-agnostic`](#provider-agnostic) (11) · [`cli`](#cli) (22) · [`ide`](#ide) (13) · [`tui`](#tui) (4) · [`rust`](#rust) (5) · [`python`](#python) (79) · [`typescript`](#typescript) (40)
+[`mcp`](#mcp) (34) · [`memory`](#memory) (36) · [`multi-agent`](#multi-agent) (27) · [`evals`](#evals) (21) · [`voice`](#voice) (2) · [`vision`](#vision) (3) · [`browser`](#browser) (9) · [`sandbox`](#sandbox) (28) · [`low-code`](#low-code) (3) · [`rag`](#rag) (8) · [`tool-discovery`](#tool-discovery) (5) · [`training`](#training) (5) · [`workflow`](#workflow) (10) · [`typed`](#typed) (3) · [`local`](#local) (7) · [`provider-agnostic`](#provider-agnostic) (11) · [`cli`](#cli) (22) · [`ide`](#ide) (13) · [`tui`](#tui) (4) · [`rust`](#rust) (5) · [`python`](#python) (79) · [`typescript`](#typescript) (40)
 
 ---
 
@@ -57,6 +57,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [mcp-context-forge](https://github.com/IBM/mcp-context-forge) — ⭐4.4k — IBM's official AI gateway/registry/proxy that sits in front of any MCP, A2A, or REST/gRPC API: unified endpoint, centralized discovery, guardrails, and plugin support—the enterprise front door for **harness** tool calling. Graduated off the radar this cycle.
 - [cocoindex-code](https://github.com/cocoindex-io/cocoindex-code) — ⭐2.7k — Embedded, tree-sitter/AST-based code-search CLI and MCP server that gives coding agents fast semantic lookups over a repo instead of grepping or re-reading whole files into context.
 - [Docker MCP Gateway](https://github.com/docker/mcp-gateway) — ⭐1.5k — Docker's official MCP CLI plugin / gateway; container-aware MCP tooling from Docker (replaces deprecated `docker/mcp-servers` path).
+- [SandBase Harness](https://github.com/sandbaseai/sandbase-harness) — ⭐640 — Local-first, self-hosted AI agent runtime and MCP bridge with sandboxed sessions, memory, credentials, approvals, audit/replay, and selectable execution backends.
 - [puppeteer-real-browser-mcp](https://github.com/withLinda/puppeteer-real-browser-mcp-server) — ⭐26 — Puppeteer MCP with real-browser and anti-detection; for agents that need to drive sites that block headless.
 - [Better-OpenCodeMCP](https://github.com/ajhcs/Better-OpenCodeMCP) — ⭐9 — MCP server for OpenCode/Crush: async task execution, model bridging (e.g. Claude→Gemini), process pooling.
 
@@ -114,6 +115,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 **Plugins, MCPs, CLI tools**
 
 - [MCP Servers](https://github.com/modelcontextprotocol/servers) — ⭐90k — The official reference collection of Model Context Protocol servers (filesystem, git, fetch, memory, time, and more)—the canonical, vetted toolset agents connect to, and the pattern every other MCP server is measured against.
+- [SandBase Harness](https://github.com/sandbaseai/sandbase-harness) — ⭐640 — Local-first, self-hosted AI agent runtime and MCP bridge with sandboxed sessions, memory, credentials, approvals, audit/replay, and selectable execution backends.
 - [agentlog](https://github.com/RyanAlberts/agentlog) — ⭐1 — Persistent decision memory for any project: `remember`, `recall`, `reflect`. Single-file Python CLI that stores decisions as JSONL and uses Claude or Gemini to retrieve and synthesize patterns—Karpathy's LLM Wiki concept as a CLI.
 
 **Memory and state**
@@ -321,6 +323,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 - [Agent Governance Toolkit](https://github.com/microsoft/agent-governance-toolkit) — ⭐6.2k — Microsoft's policy-enforcement layer for autonomous agents: zero-trust identity, execution sandboxing, and OWASP Agentic Top-10 coverage sit in front of the agent loop as a **harness** security layer—the governance counterpart to Infisical's agent-vault.
 - [Docker MCP Gateway](https://github.com/docker/mcp-gateway) — ⭐1.5k — Docker's official MCP CLI plugin / gateway; container-aware MCP tooling from Docker (replaces deprecated `docker/mcp-servers` path).
+- [SandBase Harness](https://github.com/sandbaseai/sandbase-harness) — ⭐640 — Local-first, self-hosted AI agent runtime and MCP bridge with sandboxed sessions, memory, credentials, approvals, audit/replay, and selectable execution backends.
 
 **Evaluation and benchmarking harnesses**
 
@@ -476,6 +479,10 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 **Frameworks**
 
 - [n8n](https://github.com/n8n-io/n8n) — ⭐203k — Fair-code workflow engine with 400+ nodes and native AI nodes; the self-hosted Zapier that actually does agents and LangChain.
+
+**Plugins, MCPs, CLI tools**
+
+- [SandBase Harness](https://github.com/sandbaseai/sandbase-harness) — ⭐640 — Local-first, self-hosted AI agent runtime and MCP bridge with sandboxed sessions, memory, credentials, approvals, audit/replay, and selectable execution backends.
 
 **Libraries and SDKs**
 

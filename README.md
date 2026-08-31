@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-    <a href="#contents" title="Project Count"><img src="https://img.shields.io/badge/projects-160-blue.svg?color=5ac4bf"></a>
+    <a href="#contents" title="Project Count"><img src="https://img.shields.io/badge/projects-161-blue.svg?color=5ac4bf"></a>
     <a href="#for-agents" title="Agents can query this list — MCP server, llms.txt & JSON"><img src="https://img.shields.io/badge/agents-query%20this%20list-5ac4bf.svg"></a>
     <a href="#contribution" title="Contributions welcome"><img src="https://img.shields.io/badge/contributions-welcome-green.svg"></a>
     <a href="https://github.com/RyanAlberts/best-of-Agent-Harnesses/commits/main" title="Updates"><img src="https://img.shields.io/github/last-commit/RyanAlberts/best-of-Agent-Harnesses?color=green&label=updated"></a>
@@ -121,7 +121,7 @@ curl -fsSL https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses
 - [Personal agent runtimes](#personal-agent-runtimes) _10 projects_
 - [Frameworks](#frameworks) _25 projects_
 - [Multi-agent and orchestration](#multi-agent-and-orchestration) _12 projects_
-- [Plugins, MCPs, CLI tools](#plugins-mcps-cli-tools) _19 projects_
+- [Plugins, MCPs, CLI tools](#plugins-mcps-cli-tools) _20 projects_
 - [Memory and state](#memory-and-state) _5 projects_
 - [Evaluation and benchmarking harnesses](#evaluation-and-benchmarking-harnesses) _18 projects_
 - [Observability and eval-ops](#observability-and-eval-ops) _4 projects_
@@ -314,9 +314,10 @@ _IDE plugins, concrete MCP servers, and CLI tools that give agents tools and con
 | 14 | <a name="cocoindex-code"></a>[**cocoindex-code**](https://github.com/cocoindex-io/cocoindex-code) | [2.7k](https://github.com/cocoindex-io/cocoindex-code/stargazers) | Embedded, tree-sitter/AST-based code-search CLI and MCP server that gives coding agents fast semantic lookups over a repo instead of grepping or re-reading whole files into context. <sup>`mcp` · `cli`</sup> | ❓ | mostly simple (embedded CLI + MCP server) | [Project README](https://github.com/cocoindex-io/cocoindex-code#readme) |
 | 15 | <a name="agent-vault"></a>[**agent-vault**](https://github.com/Infisical/agent-vault) | [2.2k](https://github.com/Infisical/agent-vault/stargazers) | Infisical's HTTP credential proxy that fronts secrets for Claude Code, OpenClaw, and other agent harnesses so the agent's tool calls never see raw credentials—a **harness** security layer, not an agent loop itself. | ❓ | mostly simple (credential proxy) | [Project README](https://github.com/Infisical/agent-vault#readme) |
 | 16 | <a name="mcp-gateway"></a>[**Docker MCP Gateway**](https://github.com/docker/mcp-gateway) | [1.5k](https://github.com/docker/mcp-gateway/stargazers) | Docker's official MCP CLI plugin / gateway; container-aware MCP tooling from Docker (replaces deprecated `docker/mcp-servers` path). <sup>`mcp` · `sandbox` · `cli`</sup> | ✅ | slightly complex (Docker-aware MCPs) | [Gateway usage walkthrough](https://github.com/docker/mcp-gateway/blob/main/docs/mcp-gateway.md) |
-| 17 | <a name="puppeteer-real-browser-mcp-server"></a>[**puppeteer-real-browser-mcp**](https://github.com/withLinda/puppeteer-real-browser-mcp-server) | [26](https://github.com/withLinda/puppeteer-real-browser-mcp-server/stargazers) | Puppeteer MCP with real-browser and anti-detection; for agents that need to drive sites that block headless. <sup>`mcp` · `browser` · `typescript`</sup> | ❓ | mostly simple (real browser, anti-detect) | [11 anti-detection tools](https://github.com/withLinda/puppeteer-real-browser-mcp-server/blob/main/README.md) |
-| 18 | <a name="better-opencodemcp"></a>[**Better-OpenCodeMCP**](https://github.com/ajhcs/Better-OpenCodeMCP) | [9](https://github.com/ajhcs/Better-OpenCodeMCP/stargazers) | MCP server for OpenCode/Crush: async task execution, model bridging (e.g. Claude→Gemini), process pooling. <sup>`mcp` · `typescript`</sup> | ✅ | mostly simple (MCP server, model bridging) | [opencode delegate tool](https://github.com/ajhcs/Better-OpenCodeMCP/blob/main/src/tools/opencode.tool.ts) |
-| 19 | <a name="agentlog"></a>[**agentlog**](https://github.com/RyanAlberts/agentlog) | [1](https://github.com/RyanAlberts/agentlog/stargazers) | Persistent decision memory for any project: `remember`, `recall`, `reflect`. Single-file Python CLI that stores decisions as JSONL and uses Claude or Gemini to retrieve and synthesize patterns—Karpathy's LLM Wiki concept as a CLI. <sup>`memory` · `cli` · `python`</sup> | ✅ | super simple (one file, three commands) | [Sample decisions.jsonl](https://github.com/RyanAlberts/agentlog/blob/main/example-log/decisions.jsonl) |
+| 17 | <a name="sandbase-harness"></a>[**SandBase Harness**](https://github.com/sandbaseai/sandbase-harness) | [640](https://github.com/sandbaseai/sandbase-harness/stargazers) | Local-first, self-hosted AI agent runtime and MCP bridge with sandboxed sessions, memory, credentials, approvals, audit/replay, and selectable execution backends. <sup>`mcp` · `memory` · `sandbox` · `local`</sup> | ✅ | complex (runtime, MCP bridge, local Console) | [Installation guide](https://github.com/sandbaseai/sandbase-harness/blob/main/docs/installation.md) |
+| 18 | <a name="puppeteer-real-browser-mcp-server"></a>[**puppeteer-real-browser-mcp**](https://github.com/withLinda/puppeteer-real-browser-mcp-server) | [26](https://github.com/withLinda/puppeteer-real-browser-mcp-server/stargazers) | Puppeteer MCP with real-browser and anti-detection; for agents that need to drive sites that block headless. <sup>`mcp` · `browser` · `typescript`</sup> | ❓ | mostly simple (real browser, anti-detect) | [11 anti-detection tools](https://github.com/withLinda/puppeteer-real-browser-mcp-server/blob/main/README.md) |
+| 19 | <a name="better-opencodemcp"></a>[**Better-OpenCodeMCP**](https://github.com/ajhcs/Better-OpenCodeMCP) | [9](https://github.com/ajhcs/Better-OpenCodeMCP/stargazers) | MCP server for OpenCode/Crush: async task execution, model bridging (e.g. Claude→Gemini), process pooling. <sup>`mcp` · `typescript`</sup> | ✅ | mostly simple (MCP server, model bridging) | [opencode delegate tool](https://github.com/ajhcs/Better-OpenCodeMCP/blob/main/src/tools/opencode.tool.ts) |
+| 20 | <a name="agentlog"></a>[**agentlog**](https://github.com/RyanAlberts/agentlog) | [1](https://github.com/RyanAlberts/agentlog/stargazers) | Persistent decision memory for any project: `remember`, `recall`, `reflect`. Single-file Python CLI that stores decisions as JSONL and uses Claude or Gemini to retrieve and synthesize patterns—Karpathy's LLM Wiki concept as a CLI. <sup>`memory` · `cli` · `python`</sup> | ✅ | super simple (one file, three commands) | [Sample decisions.jsonl](https://github.com/RyanAlberts/agentlog/blob/main/example-log/decisions.jsonl) |
 
 ## Memory and state
 
@@ -453,7 +454,7 @@ Harnesses whose execution state persists across restarts: langgraph-bigtool, n8n
 
 ### How many of these agent harnesses are open source?
 
-118 of 160 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.
+119 of 161 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.
 
 ### What is an agent harness?
 

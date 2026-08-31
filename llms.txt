@@ -1,6 +1,6 @@
 # Best of Agent Harnesses
 
-> Hand-curated, ranked list of 160 AI agent harnesses — the runtimes that close the loop between a stateless model and the outside world. 12 categories, a 4-tier adoption-surface rating (simplicity ↔ capability), capability tags, a license signal, and one concrete example link per project. Stars captured 2026-08-30.
+> Hand-curated, ranked list of 161 AI agent harnesses — the runtimes that close the loop between a stateless model and the outside world. 12 categories, a 4-tier adoption-surface rating (simplicity ↔ capability), capability tags, a license signal, and one concrete example link per project. Stars captured 2026-08-30.
 
 Maintained at https://github.com/RyanAlberts/best-of-Agent-Harnesses (CC-BY-SA-4.0).
 Structured data: https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/harnesses.json
@@ -90,7 +90,7 @@ Harnesses designed for unattended runs, batches, and fleets: opencode, OpenHands
 Harnesses whose execution state persists across restarts: langgraph-bigtool, n8n, langgraph, mastra, letta, deepagents, pydantic-ai, Cloudflare Agents.
 
 ### How many of these agent harnesses are open source?
-118 of 160 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.
+119 of 161 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.
 
 ### What is an agent harness?
 The runtime that turns a model into an agent: it decides what the model's reasoning is allowed to touch, and supplies the orchestration, tool wiring, memory, error recovery, and guardrails around per-turn inference.
@@ -225,7 +225,7 @@ Harnesses and patterns for multi-agent coordination and handoffs.
 - [AG2](https://github.com/ag2ai/ag2) — ⭐4.9k, complex, autonomy: n/a, recovery: n/a, unknown: AG2 (formerly AutoGen): the community-governed continuation of the original AutoGen project after Microsoft's fork diverged—conversable multi-agent groups, code execution, and human-in-the-loop under an open-source AgentOS banner. Graduated off the radar this cycle. [multi-agent, python]
 - [AgentRL](https://github.com/THUDM/AgentRL) — ⭐347, complex, autonomy: headless, recovery: resumable, open-source: Multitask, multiturn RL for LLM agents; Ray-based scaling, rollout/actor workers—for teams that want to train agents, not just run them. [training, python]
 
-## Plugins, MCPs, CLI tools (19 projects)
+## Plugins, MCPs, CLI tools (20 projects)
 
 IDE plugins, concrete MCP servers, and CLI tools that give agents tools and context.
 
@@ -245,6 +245,7 @@ IDE plugins, concrete MCP servers, and CLI tools that give agents tools and cont
 - [cocoindex-code](https://github.com/cocoindex-io/cocoindex-code) — ⭐2.7k, mostly simple, autonomy: n/a, recovery: n/a, unknown: Embedded, tree-sitter/AST-based code-search CLI and MCP server that gives coding agents fast semantic lookups over a repo instead of grepping or re-reading whole files into context. [mcp, cli]
 - [agent-vault](https://github.com/Infisical/agent-vault) — ⭐2.2k, mostly simple, autonomy: n/a, recovery: n/a, unknown: Infisical's HTTP credential proxy that fronts secrets for Claude Code, OpenClaw, and other agent harnesses so the agent's tool calls never see raw credentials—a **harness** security layer, not an agent loop itself.
 - [Docker MCP Gateway](https://github.com/docker/mcp-gateway) — ⭐1.5k, slightly complex, autonomy: n/a, recovery: n/a, open-source: Docker's official MCP CLI plugin / gateway; container-aware MCP tooling from Docker (replaces deprecated `docker/mcp-servers` path). [mcp, sandbox, cli]
+- [SandBase Harness](https://github.com/sandbaseai/sandbase-harness) — ⭐640, complex, autonomy: bounded, recovery: resumable, open-source: Local-first, self-hosted AI agent runtime and MCP bridge with sandboxed sessions, memory, credentials, approvals, audit/replay, and selectable execution backends. [mcp, memory, sandbox, local]
 - [puppeteer-real-browser-mcp](https://github.com/withLinda/puppeteer-real-browser-mcp-server) — ⭐26, mostly simple, autonomy: n/a, recovery: n/a, unknown: Puppeteer MCP with real-browser and anti-detection; for agents that need to drive sites that block headless. [mcp, browser, typescript]
 - [Better-OpenCodeMCP](https://github.com/ajhcs/Better-OpenCodeMCP) — ⭐9, mostly simple, autonomy: n/a, recovery: n/a, open-source: MCP server for OpenCode/Crush: async task execution, model bridging (e.g. Claude→Gemini), process pooling. [mcp, typescript]
 - [agentlog](https://github.com/RyanAlberts/agentlog) — ⭐1, super simple, autonomy: n/a, recovery: n/a, open-source: Persistent decision memory for any project: `remember`, `recall`, `reflect`. Single-file Python CLI that stores decisions as JSONL and uses Claude or Gemini to retrieve and synthesize patterns—Karpathy's LLM Wiki concept as a CLI. [memory, cli, python]
