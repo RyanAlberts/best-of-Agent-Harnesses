@@ -9,8 +9,8 @@
     "feed_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/feed.json",
     "license": "CC-BY-SA-4.0",
     "stars_captured": "2026-08-30",
-    "project_count": 160,
-    "graveyard_count": 4,
+    "project_count": 172,
+    "graveyard_count": 3,
     "tiers": [
       "super simple",
       "mostly simple",
@@ -219,6 +219,7 @@
       "intent": "I want low-code / visual workflows",
       "picks": [
         "langflow-ai/langflow",
+        "FlowiseAI/Flowise",
         "langgenius/dify",
         "n8n-io/n8n"
       ],
@@ -327,7 +328,7 @@
     {
       "kind": "use-case",
       "q": "What is the best agent harness if I want low-code / visual workflows?",
-      "a": "Top picks: langflow, Dify, n8n. See the “Frameworks” category for the full ranked list.",
+      "a": "Top picks: langflow, Flowise, Dify. See the “Frameworks” category for the full ranked list.",
       "slug": "what-is-the-best-agent-harness-if-i-want-low-code-visual-workflows"
     },
     {
@@ -375,7 +376,7 @@
     {
       "kind": "derived",
       "q": "How many of these agent harnesses are open source?",
-      "a": "118 of 160 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
+      "a": "129 of 172 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
       "slug": "how-many-of-these-agent-harnesses-are-open-source"
     },
     {
@@ -1998,6 +1999,60 @@
       "deep_dive": null
     },
     {
+      "name": "VibeSDK",
+      "github_id": "cloudflare/vibesdk",
+      "url": "https://github.com/cloudflare/vibesdk",
+      "slug": "vibesdk",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#vibesdk",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/vibesdk/",
+      "description": "Cloudflare's open-source vibe-coding platform: a deployable **harness** (Durable Objects + Workers) for text-to-app generation that you can run as your own hosted product rather than renting one.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 5338,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (durable multi-tenant runtime — product suite)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/cloudflare/vibesdk#readme"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "grok-cli",
+      "github_id": "superagent-ai/grok-cli",
+      "url": "https://github.com/superagent-ai/grok-cli",
+      "slug": "grok-cli",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#grok-cli",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/grok-cli/",
+      "description": "Open-source terminal coding agent built specifically for the Grok API — the Grok-native peer to Claude Code, Codex CLI, and Gemini CLI.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 3441,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (terminal agent, single-provider)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [
+        "cli"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/superagent-ai/grok-cli#readme"
+      },
+      "deep_dive": null
+    },
+    {
       "name": "claw-code-agent",
       "github_id": "HarnessLab/claw-code-agent",
       "url": "https://github.com/HarnessLab/claw-code-agent",
@@ -3244,6 +3299,36 @@
       }
     },
     {
+      "name": "AnythingLLM",
+      "github_id": "Mintplex-Labs/anything-llm",
+      "url": "https://github.com/Mintplex-Labs/anything-llm",
+      "slug": "anything-llm",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#anything-llm",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/anything-llm/",
+      "description": "All-in-one, self-hosted **harness** for running a private LLM workspace: agent orchestration, computer-use tools, and RAG over your own documents behind one desktop/server app and API.",
+      "category": "personal-agent-runtimes",
+      "category_title": "Personal agent runtimes",
+      "stars": 65382,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (agent orchestration + RAG + computer-use — product suite)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [
+        "rag",
+        "local",
+        "typescript"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/Mintplex-Labs/anything-llm#readme"
+      },
+      "deep_dive": null
+    },
+    {
       "name": "nanobot",
       "github_id": "HKUDS/nanobot",
       "url": "https://github.com/HKUDS/nanobot",
@@ -4043,6 +4128,97 @@
       }
     },
     {
+      "name": "RAGFlow",
+      "github_id": "infiniflow/ragflow",
+      "url": "https://github.com/infiniflow/ragflow",
+      "slug": "ragflow",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#ragflow",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/ragflow/",
+      "description": "Deep-document-understanding RAG engine with an agentic workflow layer on top: chunking/retrieval pipelines plus agent orchestration for grounding responses in your own corpus.",
+      "category": "frameworks",
+      "category_title": "Frameworks",
+      "stars": 89657,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (RAG engine + agentic workflow — product suite)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [
+        "rag",
+        "workflow",
+        "python"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/infiniflow/ragflow#readme"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "Flowise",
+      "github_id": "FlowiseAI/Flowise",
+      "url": "https://github.com/FlowiseAI/Flowise",
+      "slug": "flowise",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#flowise",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/flowise/",
+      "description": "Drag-and-drop LangChain UI; deploy flows without code. The low-code sibling to Langflow, with a different component and hosting story.",
+      "category": "frameworks",
+      "category_title": "Frameworks",
+      "stars": 55398,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (low-code, drag-drop — product suite)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "retry",
+      "recovery_rank": 2,
+      "license_signal": "restricted (Apache+CLA)",
+      "tags": [
+        "low-code",
+        "typescript"
+      ],
+      "example": {
+        "label": "Agentic RAG flow",
+        "url": "https://github.com/FlowiseAI/Flowise/blob/main/packages/server/marketplaces/agentflowsv2/Agentic%20RAG.json"
+      },
+      "deep_dive": {
+        "researched": "2026-07-19",
+        "tooling_sandboxing": {
+          "rating": "strong",
+          "rank": 3,
+          "detail": "Custom Function/Tool nodes execute JavaScript inside NodeVM, \"an isolated V8 context with a custom module loader that enforces dependency and built-in module allowlists\"; built-in modules, external packages, and filesystem access are all denied by default unless explicitly whitelisted via TOOL_FUNCTION_BUILTIN_DEP/TOOL_FUNCTION_EXTERNAL_DEP/ALLOW_BUILTIN_DEP.",
+          "evidence": "https://deepwiki.com/FlowiseAI/Flowise/6.3-sandbox-security"
+        },
+        "context_memory": {
+          "rating": "strong",
+          "rank": 3,
+          "detail": "Chat memory nodes persist conversation history in the chat_message database table (or external Redis/DynamoDB/MongoDB Atlas/Zep backends) keyed by a sessionId, surviving app restarts rather than living only in the request.",
+          "evidence": "https://docs.flowiseai.com/integrations/langchain/memory/buffer-window-memory"
+        },
+        "lifecycle_hooks": {
+          "rating": "full",
+          "rank": 3,
+          "detail": "Simple Prompt Moderation uses an LLM to check a user query against a deny list and, on a match, outputs a default error message instead of forwarding it, preventing the problematic input from ever reaching the primary LLM/tool call.",
+          "evidence": "https://docs.flowiseai.com/integrations/langchain/moderation/simple-prompt-moderation"
+        },
+        "prompt_optimization": {
+          "rating": "configurable",
+          "rank": 2,
+          "detail": "Chat Prompt Template nodes expose editable system/human messages with prompt-value variables, and overrideConfig.systemMessagePrompt lets callers override the system message per API call; no automatic prompt-tuning loop is documented.",
+          "evidence": "https://docs.flowiseai.com/integrations/langchain/prompts/chat-prompt-template"
+        },
+        "build_vs_buy": {
+          "tier": 2,
+          "label": "blueprint",
+          "detail": "Repo installs the self-hostable, config/flow-driven LangChain UI (deployable to AWS/Azure/GCP/DO); Flowise Cloud is a named managed hosting alternative, not the primary installed artifact.",
+          "evidence": "https://raw.githubusercontent.com/FlowiseAI/Flowise/HEAD/README.md"
+        }
+      }
+    },
+    {
       "name": "llama-index",
       "github_id": "run-llama/llama_index",
       "url": "https://github.com/run-llama/llama_index",
@@ -4713,6 +4889,35 @@
           "evidence": "https://raw.githubusercontent.com/SciPhi-AI/R2R/main/py/README.md"
         }
       }
+    },
+    {
+      "name": "Upsonic",
+      "github_id": "Upsonic/Upsonic",
+      "url": "https://github.com/Upsonic/Upsonic",
+      "slug": "upsonic",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#upsonic",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/upsonic/",
+      "description": "Python framework for autonomous agents with computer-use and MCP tool support built in; an opinionated **harness** layer (tasks, teams, verification) over direct LLM calls rather than a bare orchestration primitive.",
+      "category": "frameworks",
+      "category_title": "Frameworks",
+      "stars": 7947,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (opinionated agent/task layer)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [
+        "mcp",
+        "python"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/Upsonic/Upsonic#readme"
+      },
+      "deep_dive": null
     },
     {
       "name": "agent-squad",
@@ -5713,6 +5918,64 @@
       }
     },
     {
+      "name": "AgentScope (Java)",
+      "github_id": "agentscope-ai/agentscope-java",
+      "url": "https://github.com/agentscope-ai/agentscope-java",
+      "slug": "agentscope-java",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#agentscope-java",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/agentscope-java/",
+      "description": "Alibaba AgentScope's Java runtime for distributed, production-grade, long-running multi-agent systems; the JVM-side sibling to the Python AgentScope **harness**.",
+      "category": "multi-agent",
+      "category_title": "Multi-agent and orchestration",
+      "stars": 5352,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (distributed, long-running agents)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [
+        "multi-agent",
+        "python"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/agentscope-ai/agentscope-java#readme"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "OASIS",
+      "github_id": "camel-ai/oasis",
+      "url": "https://github.com/camel-ai/oasis",
+      "slug": "oasis",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#oasis",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/oasis/",
+      "description": "CAMEL-AI's large-scale multi-agent simulation **harness**: coordinates up to a million LLM social agents over recommendation/interaction loops to study emergent group behavior.",
+      "category": "multi-agent",
+      "category_title": "Multi-agent and orchestration",
+      "stars": 5080,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (million-agent simulation runtime)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [
+        "multi-agent",
+        "python"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/camel-ai/oasis#readme"
+      },
+      "deep_dive": null
+    },
+    {
       "name": "AG2",
       "github_id": "ag2ai/ag2",
       "url": "https://github.com/ag2ai/ag2",
@@ -6235,6 +6498,34 @@
       "example": {
         "label": "Project README",
         "url": "https://github.com/Infisical/agent-vault#readme"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "stripe/ai",
+      "github_id": "stripe/ai",
+      "url": "https://github.com/stripe/ai",
+      "slug": "ai",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#ai",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/ai/",
+      "description": "Stripe's official toolkit for wiring payments and billing into agent harnesses: MCP server plus SDKs so an agent's tool calls can create charges, manage subscriptions, and query Stripe data directly.",
+      "category": "plugins-mcp-cli",
+      "category_title": "Plugins, MCPs, CLI tools",
+      "stars": 1780,
+      "tier": "mostly simple",
+      "tier_rank": 2,
+      "axis": "mostly simple (payments MCP + SDKs)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [
+        "mcp"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/stripe/ai#readme"
       },
       "deep_dive": null
     },
@@ -7631,9 +7922,9 @@
       "name": "vercel/ai",
       "github_id": "vercel/ai",
       "url": "https://github.com/vercel/ai",
-      "slug": "ai",
-      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#ai",
-      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/ai/",
+      "slug": "ai-2",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#ai-2",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/ai-2/",
       "description": "React and Node SDK for streaming, tool calls, and agent-style UIs; provider-agnostic.",
       "category": "libraries-sdks",
       "category_title": "Libraries and SDKs",
@@ -7684,6 +7975,35 @@
       "example": {
         "label": "Bank support agent",
         "url": "https://github.com/pydantic/pydantic-ai/blob/main/examples/pydantic_ai_examples/bank_support.py"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "DeepCode",
+      "github_id": "HKUDS/DeepCode",
+      "url": "https://github.com/HKUDS/DeepCode",
+      "slug": "deepcode",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#deepcode",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/deepcode/",
+      "description": "HKUDS's open agentic-coding **harness**: loop engineering and multi-agent orchestration as a reusable library, not a packaged interface.",
+      "category": "libraries-sdks",
+      "category_title": "Libraries and SDKs",
+      "stars": 16450,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (loop engineering, multi-agent library)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [
+        "multi-agent",
+        "python"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/HKUDS/DeepCode#readme"
       },
       "deep_dive": null
     },
@@ -7807,6 +8127,36 @@
       "deep_dive": null
     },
     {
+      "name": "fast-agent",
+      "github_id": "evalstate/fast-agent",
+      "url": "https://github.com/evalstate/fast-agent",
+      "slug": "fast-agent",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#fast-agent",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/fast-agent/",
+      "description": "Python **harness** for building and evaluating MCP-native agents: full Skills/MCP/ACP/A2A support so tool wiring and multi-agent handoffs go through open protocols rather than framework-specific glue.",
+      "category": "libraries-sdks",
+      "category_title": "Libraries and SDKs",
+      "stars": 3904,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (MCP/ACP/A2A protocol support)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [
+        "mcp",
+        "multi-agent",
+        "python"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/evalstate/fast-agent#readme"
+      },
+      "deep_dive": null
+    },
+    {
       "name": "openai-agents-js",
       "github_id": "openai/openai-agents-js",
       "url": "https://github.com/openai/openai-agents-js",
@@ -7863,6 +8213,35 @@
       "example": {
         "label": "Sandbox resource quickstart",
         "url": "https://github.com/kubernetes-sigs/agent-sandbox#readme"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "LLMCompiler",
+      "github_id": "SqueezeAILab/LLMCompiler",
+      "url": "https://github.com/SqueezeAILab/LLMCompiler",
+      "slug": "llmcompiler",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#llmcompiler",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/llmcompiler/",
+      "description": "Berkeley SqueezeAILab's compiler for parallel function calling (ICML 2024): plans a dependency graph of tool calls up front and executes independent branches concurrently instead of one call at a time.",
+      "category": "libraries-sdks",
+      "category_title": "Libraries and SDKs",
+      "stars": 1880,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (dependency-graph planner, parallel tool calls)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [
+        "workflow",
+        "python"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/SqueezeAILab/LLMCompiler#readme"
       },
       "deep_dive": null
     },
@@ -7932,13 +8311,6 @@
       "reason": "suspected star manipulation — ~228k stars / ~35k forks on a repo created 2026-01 with no matching install base, dependents, or discussion; fork-to-star ratio and growth curve are inconsistent with organic adoption"
     },
     {
-      "github_id": "FlowiseAI/Flowise",
-      "name": "Flowise",
-      "last_stars": 55398,
-      "since": "2026-08-16",
-      "reason": "archived upstream — kept for citation"
-    },
-    {
       "github_id": "spring-ai-community/spring-ai-tool-search-tool",
       "name": "spring-ai-tool-search-tool",
       "last_stars": 78,
@@ -7991,27 +8363,9 @@
       "via": "weekly discovery"
     },
     {
-      "github_id": "agentscope-ai/agentscope-java",
-      "stars": 5352,
-      "desc": "Build distributed, production-grade, long-running agents.",
-      "via": "weekly discovery"
-    },
-    {
-      "github_id": "cloudflare/vibesdk",
-      "stars": 5338,
-      "desc": "An open-source vibe coding platform that helps you build your own vibe-coding platform, built entirely on Cloudflare stack",
-      "via": "weekly discovery"
-    },
-    {
       "github_id": "FellouAI/eko",
       "stars": 4952,
       "desc": "Eko (Eko Keeps Operating) - Build Production-ready Agentic Workflow with Natural Language - eko.fellou.ai",
-      "via": "weekly discovery"
-    },
-    {
-      "github_id": "evalstate/fast-agent",
-      "stars": 3904,
-      "desc": "Code, Build and Evaluate agents - excellent Model and Skills/MCP/ACP/A2A Support",
       "via": "weekly discovery"
     },
     {

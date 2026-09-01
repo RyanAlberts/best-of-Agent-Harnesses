@@ -243,6 +243,12 @@ PROJECTS: dict[str, list[Project]] = {
         Project("cc-haha", "NanmiCoder/cc-haha",
                 "Local-first desktop workspace **harness** for Claude Code and other agents: multi-agent sessions, Git worktrees, code diffs, a skill marketplace, and chat-app access (WeChat, Telegram, WhatsApp).",
                 "complex (desktop workspace, multi-agent — product suite)", oss="❓", labels=["javascript"]),
+        Project("VibeSDK", "cloudflare/vibesdk",
+                "Cloudflare's open-source vibe-coding platform: a deployable **harness** (Durable Objects + Workers) for text-to-app generation that you can run as your own hosted product rather than renting one.",
+                "complex (durable multi-tenant runtime — product suite)", labels=["typescript"]),
+        Project("grok-cli", "superagent-ai/grok-cli",
+                "Open-source terminal coding agent built specifically for the Grok API — the Grok-native peer to Claude Code, Codex CLI, and Gemini CLI.",
+                "slightly complex (terminal agent, single-provider)", labels=["typescript"]),
     ],
     "coding-harness-configs": [
         Project("LoopTroop", "looptroop-ai/LoopTroop",
@@ -333,6 +339,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("CowAgent", "zhayujie/CowAgent",
                 "Self-hosted **harness** (formerly chatgpt-on-wechat) that plans tasks, runs tools/skills, and self-evolves via memory; multi-model, multi-channel (WeChat, Telegram, etc.), one-line install.",
                 "slightly complex (multi-channel, self-evolving)", oss="❓", labels=["python"]),
+        Project("AnythingLLM", "Mintplex-Labs/anything-llm",
+                "All-in-one, self-hosted **harness** for running a private LLM workspace: agent orchestration, computer-use tools, and RAG over your own documents behind one desktop/server app and API.",
+                "complex (agent orchestration + RAG + computer-use — product suite)", labels=["javascript"]),
     ],
     "frameworks": [
         Project("langgraph", "langchain-ai/langgraph",
@@ -413,6 +422,12 @@ PROJECTS: dict[str, list[Project]] = {
         Project("Haystack", "deepset-ai/haystack",
                 "Open-source orchestration framework for context-engineered LLM apps: modular pipelines and agent workflows with explicit control over retrieval, routing, memory, and generation—closer to LangChain's territory than a coding-agent harness.",
                 "complex (modular pipelines, RAG + agents — product suite)", labels=["python"]),
+        Project("Upsonic", "Upsonic/Upsonic",
+                "Python framework for autonomous agents with computer-use and MCP tool support built in; an opinionated **harness** layer (tasks, teams, verification) over direct LLM calls rather than a bare orchestration primitive.",
+                "slightly complex (opinionated agent/task layer)", labels=["python"]),
+        Project("RAGFlow", "infiniflow/ragflow",
+                "Deep-document-understanding RAG engine with an agentic workflow layer on top: chunking/retrieval pipelines plus agent orchestration for grounding responses in your own corpus.",
+                "complex (RAG engine + agentic workflow — product suite)", labels=["python"]),
     ],
     "multi-agent": [
         Project("openai-agents-python", "openai/openai-agents-python",
@@ -451,6 +466,12 @@ PROJECTS: dict[str, list[Project]] = {
         Project("omnigent", "omnigent-ai/omnigent",
                 "Open-source meta-**harness**: orchestrates Claude Code, Codex, Cursor, Pi, and custom agents behind one policy/sandboxing layer so teams swap harnesses without rewriting workflows.",
                 "complex (meta-harness, policy + sandboxing — product suite)", oss="❓", labels=["python"]),
+        Project("OASIS", "camel-ai/oasis",
+                "CAMEL-AI's large-scale multi-agent simulation **harness**: coordinates up to a million LLM social agents over recommendation/interaction loops to study emergent group behavior.",
+                "complex (million-agent simulation runtime)", labels=["python"]),
+        Project("AgentScope (Java)", "agentscope-ai/agentscope-java",
+                "Alibaba AgentScope's Java runtime for distributed, production-grade, long-running multi-agent systems; the JVM-side sibling to the Python AgentScope **harness**.",
+                "complex (distributed, long-running agents)"),
     ],
     "plugins-mcp-cli": [
         Project("aider", "Aider-AI/aider",
@@ -510,6 +531,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("mcp-context-forge", "IBM/mcp-context-forge",
                 "IBM's official AI gateway/registry/proxy that sits in front of any MCP, A2A, or REST/gRPC API: unified endpoint, centralized discovery, guardrails, and plugin support—the enterprise front door for **harness** tool calling. Graduated off the radar this cycle.",
                 "complex (gateway, federation, guardrails — product suite)", oss="❓", labels=["python"]),
+        Project("stripe/ai", "stripe/ai",
+                "Stripe's official toolkit for wiring payments and billing into agent harnesses: MCP server plus SDKs so an agent's tool calls can create charges, manage subscriptions, and query Stripe data directly.",
+                "mostly simple (payments MCP + SDKs)", link_name="stripe/ai"),
     ],
     "memory": [
         Project("Graphiti (Zep)", "getzep/graphiti",
@@ -637,6 +661,15 @@ PROJECTS: dict[str, list[Project]] = {
         Project("openai-agents-js", "openai/openai-agents-js",
                 "Official OpenAI Agents SDK for Node/TS: handoffs, guardrails, voice; the JS counterpart to openai-agents-python.",
                 "slightly complex (handoffs, guardrails, voice)", labels=["javascript"]),
+        Project("fast-agent", "evalstate/fast-agent",
+                "Python **harness** for building and evaluating MCP-native agents: full Skills/MCP/ACP/A2A support so tool wiring and multi-agent handoffs go through open protocols rather than framework-specific glue.",
+                "slightly complex (MCP/ACP/A2A protocol support)", labels=["python"]),
+        Project("LLMCompiler", "SqueezeAILab/LLMCompiler",
+                "Berkeley SqueezeAILab's compiler for parallel function calling (ICML 2024): plans a dependency graph of tool calls up front and executes independent branches concurrently instead of one call at a time.",
+                "slightly complex (dependency-graph planner, parallel tool calls)", labels=["python"]),
+        Project("DeepCode", "HKUDS/DeepCode",
+                "HKUDS's open agentic-coding **harness**: loop engineering and multi-agent orchestration as a reusable library, not a packaged interface.",
+                "slightly complex (loop engineering, multi-agent library)", labels=["python"]),
         Project("LiteLLM", "BerriAI/litellm",
                 "One interface to 100+ LLMs; routing, caching, budgets. Not an agent framework—the pipe every agent framework uses.",
                 "mostly simple (LLM pipe only)", labels=["python"]),
@@ -704,6 +737,8 @@ META: dict[str, tuple[int, str, str]] = {
     "esengine/DeepSeek-Reasonix": (35264, "https://github.com/esengine/DeepSeek-Reasonix#readme", "Project README"),
     "1jehuang/jcode": (18827, "https://github.com/1jehuang/jcode#readme", "Project README"),
     "NanmiCoder/cc-haha": (14247, "https://github.com/NanmiCoder/cc-haha#readme", "Project README"),
+    "cloudflare/vibesdk": (5338, "https://github.com/cloudflare/vibesdk#readme", "Project README"),
+    "superagent-ai/grok-cli": (3441, "https://github.com/superagent-ai/grok-cli#readme", "Project README"),
     # coding-harness-configs
     "looptroop-ai/LoopTroop": (129, "https://github.com/looptroop-ai/LoopTroop#readme", "Council → loop → worktree pipeline"),
     "open-gsd/gsd-core": (8913, "https://github.com/open-gsd/gsd-core/blob/next/commands/gsd/ship.md", "gsd:ship command"),
@@ -740,6 +775,7 @@ META: dict[str, tuple[int, str, str]] = {
     "myshell-ai/AIlice": (1411, "https://github.com/myshell-ai/AIlice#cool-things-we-can-do", "Task showcase"),
     "HKUDS/nanobot": (47536, "https://github.com/HKUDS/nanobot#readme", "Project README"),
     "zhayujie/CowAgent": (46726, "https://github.com/zhayujie/CowAgent#readme", "Project README"),
+    "Mintplex-Labs/anything-llm": (65382, "https://github.com/Mintplex-Labs/anything-llm#readme", "Project README"),
     "i-am-bee/beeai-framework": (3383, "https://github.com/i-am-bee/beeai-framework/blob/main/python/examples/agents/react.py", "ReAct agent example"),
     "2FastLabs/agent-squad": (7750, "https://github.com/2FastLabs/agent-squad/tree/main/examples/ecommerce-support-simulator", "E-commerce support sim"),
     "superagentxai/superagentx": (203, "https://github.com/superagentxai/superagentx/blob/master/examples/agents/parallel_agents.py", "Parallel marketing agents"),
@@ -764,6 +800,8 @@ META: dict[str, tuple[int, str, str]] = {
     "TencentCloudADP/youtu-agent": (4606, "https://github.com/TencentCloudADP/youtu-agent#readme", "Project README"),
     "deepset-ai/haystack": (26366, "https://github.com/deepset-ai/haystack#readme", "Project README"),
     "ag2ai/ag2": (4894, "https://github.com/ag2ai/ag2#readme", "Project README"),
+    "Upsonic/Upsonic": (7947, "https://github.com/Upsonic/Upsonic#readme", "Project README"),
+    "infiniflow/ragflow": (89657, "https://github.com/infiniflow/ragflow#readme", "Project README"),
     # multi-agent
     "openai/openai-agents-python": (29072, "https://github.com/openai/openai-agents-python/blob/main/examples/customer_service/main.py", "Airline customer service handoffs"),
     "crewAIInc/crewAI": (57831, "https://github.com/crewAIInc/crewAI-examples/blob/main/crews/trip_planner/trip_agents.py", "Trip planner crew"),
@@ -772,6 +810,8 @@ META: dict[str, tuple[int, str, str]] = {
     "THUDM/AgentRL": (347, "https://github.com/THUDM/AgentRL/blob/main/examples/training/async_trainer.py", "Async GRPO trainer"),
     "aden-hive/hive": (10986, "https://github.com/aden-hive/hive#readme", "Project README"),
     "omnigent-ai/omnigent": (9513, "https://github.com/omnigent-ai/omnigent#readme", "Project README"),
+    "camel-ai/oasis": (5080, "https://github.com/camel-ai/oasis#readme", "Project README"),
+    "agentscope-ai/agentscope-java": (5352, "https://github.com/agentscope-ai/agentscope-java#readme", "Project README"),
     # plugins-mcp-cli
     "Aider-AI/aider": (48605, "https://github.com/Aider-AI/aider/blob/main/aider/repomap.py", "Repo map source"),
     "RyanAlberts/agentlog": (1, "https://github.com/RyanAlberts/agentlog/blob/main/example-log/decisions.jsonl", "Sample decisions.jsonl"),
@@ -789,6 +829,7 @@ META: dict[str, tuple[int, str, str]] = {
     "microsoft/agent-governance-toolkit": (6154, "https://github.com/microsoft/agent-governance-toolkit#readme", "Project README"),
     "cocoindex-io/cocoindex-code": (2682, "https://github.com/cocoindex-io/cocoindex-code#readme", "Project README"),
     "IBM/mcp-context-forge": (4386, "https://github.com/IBM/mcp-context-forge#readme", "Project README"),
+    "stripe/ai": (1780, "https://github.com/stripe/ai#readme", "Project README"),
     # evaluation
     "vostride/agent-qa": (896, "https://github.com/vostride/agent-qa#readme", "Natural-language QA harness"),
     "arcprize/ARC-AGI-2": (734, "https://arcprize.org/leaderboard", "ARC Prize leaderboard"),
@@ -831,6 +872,9 @@ META: dict[str, tuple[int, str, str]] = {
     "kubernetes-sigs/agent-sandbox": (3681, "https://github.com/kubernetes-sigs/agent-sandbox#readme", "Sandbox resource quickstart"),
     "steel-dev/steel-browser": (7565, "https://docs.steel.dev", "Sessions API docs"),
     "brandonhimpfen/awesome-ai-agents": (15, "https://github.com/brandonhimpfen/awesome-ai-agents#frameworks", "Frameworks section"),
+    "evalstate/fast-agent": (3904, "https://github.com/evalstate/fast-agent#readme", "Project README"),
+    "SqueezeAILab/LLMCompiler": (1880, "https://github.com/SqueezeAILab/LLMCompiler#readme", "Project README"),
+    "HKUDS/DeepCode": (16450, "https://github.com/HKUDS/DeepCode#readme", "Project README"),
     # memory
     "topoteretes/cognee": (30350, "https://github.com/topoteretes/cognee#readme", "Quickstart"),
     "getzep/graphiti": (30423, "https://github.com/getzep/graphiti#readme", "Temporal graph quickstart"),
@@ -873,6 +917,11 @@ KEEP_DESPITE_ARCHIVED: "set[str]" = {
     # widely referenced/forked (see Kilo Code, its direct successor, added
     # this cycle). Historically important enough to keep out of the Graveyard.
     "RooCodeInc/Roo-Code",
+    # 55k+ stars, the low-code/drag-drop sibling to Langflow and one of the
+    # most widely deployed LangChain-based UIs; archived upstream 2026-08-16
+    # but still the reference point this list's own Langflow entry compares
+    # against. Historically important enough to keep out of the Graveyard.
+    "FlowiseAI/Flowise",
 }
 
 # Repos routed to the Graveyard for a curation-integrity reason rather than
@@ -1076,6 +1125,8 @@ AXES: "dict[str, tuple[str, str]]" = {
     "esengine/DeepSeek-Reasonix": ("n/a", "n/a"),
     "1jehuang/jcode": ("n/a", "n/a"),
     "NanmiCoder/cc-haha": ("n/a", "n/a"),
+    "cloudflare/vibesdk": ("n/a", "n/a"),
+    "superagent-ai/grok-cli": ("n/a", "n/a"),
     # coding-harness-configs
     "looptroop-ai/LoopTroop": ("bounded", "retry"),
     "obra/superpowers": ("n/a", "n/a"),
@@ -1136,6 +1187,9 @@ AXES: "dict[str, tuple[str, str]]" = {
     "zhayujie/CowAgent": ("n/a", "n/a"),
     "deepset-ai/haystack": ("n/a", "n/a"),
     "ag2ai/ag2": ("n/a", "n/a"),
+    "Mintplex-Labs/anything-llm": ("n/a", "n/a"),
+    "Upsonic/Upsonic": ("n/a", "n/a"),
+    "infiniflow/ragflow": ("n/a", "n/a"),
     # multi-agent
     "microsoft/autogen": ("bounded", "resumable"),
     "crewAIInc/crewAI": ("bounded", "resumable"),
@@ -1144,6 +1198,8 @@ AXES: "dict[str, tuple[str, str]]" = {
     "THUDM/AgentRL": ("headless", "resumable"),
     "aden-hive/hive": ("bounded", "resumable"),
     "omnigent-ai/omnigent": ("n/a", "n/a"),
+    "camel-ai/oasis": ("n/a", "n/a"),
+    "agentscope-ai/agentscope-java": ("n/a", "n/a"),
     # plugins-mcp-cli
     "thedotmack/claude-mem": ("n/a", "n/a"),
     "Aider-AI/aider": ("checkpoint-gated", "resumable"),
@@ -1161,6 +1217,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "microsoft/agent-governance-toolkit": ("n/a", "n/a"),
     "cocoindex-io/cocoindex-code": ("n/a", "n/a"),
     "IBM/mcp-context-forge": ("n/a", "n/a"),
+    "stripe/ai": ("n/a", "n/a"),
     # evaluation
     "vostride/agent-qa": ("headless", "retry"),
     "microsoft/agent-lightning": ("headless", "resumable"),
@@ -1203,6 +1260,9 @@ AXES: "dict[str, tuple[str, str]]" = {
     "openai/openai-agents-js": ("bounded", "resumable"),
     "MaxGfeller/open-harness": ("bounded", "none"),
     "brandonhimpfen/awesome-ai-agents": ("n/a", "n/a"),
+    "evalstate/fast-agent": ("n/a", "n/a"),
+    "SqueezeAILab/LLMCompiler": ("n/a", "n/a"),
+    "HKUDS/DeepCode": ("n/a", "n/a"),
     # memory (state layers — no agent loop of their own)
     "topoteretes/cognee": ("n/a", "n/a"),
     "getzep/graphiti": ("n/a", "n/a"),

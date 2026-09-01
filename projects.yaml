@@ -165,6 +165,14 @@ projects:
     github_id: NanmiCoder/cc-haha
     labels: ["javascript"]
     category: "coding-agent-products"
+  - name: VibeSDK
+    github_id: cloudflare/vibesdk
+    labels: ["typescript"]
+    category: "coding-agent-products"
+  - name: grok-cli
+    github_id: superagent-ai/grok-cli
+    labels: ["typescript"]
+    category: "coding-agent-products"
   # Coding harness configs and SDKs
   - name: LoopTroop
     github_id: looptroop-ai/LoopTroop
@@ -263,6 +271,10 @@ projects:
     github_id: zhayujie/CowAgent
     labels: ["python"]
     category: "personal-agent-runtimes"
+  - name: AnythingLLM
+    github_id: Mintplex-Labs/anything-llm
+    labels: ["javascript"]
+    category: "personal-agent-runtimes"
   # Frameworks
   - name: langgraph
     github_id: langchain-ai/langgraph
@@ -345,6 +357,10 @@ projects:
     github_id: howl-anderson/agentsilex
     labels: ["python"]
     category: "frameworks"
+  - name: Flowise
+    github_id: FlowiseAI/Flowise
+    labels: ["javascript"]
+    category: "frameworks"
   - name: browser-use
     github_id: browser-use/browser-use
     labels: ["python"]
@@ -358,6 +374,14 @@ projects:
     category: "frameworks"
   - name: Haystack
     github_id: deepset-ai/haystack
+    labels: ["python"]
+    category: "frameworks"
+  - name: Upsonic
+    github_id: Upsonic/Upsonic
+    labels: ["python"]
+    category: "frameworks"
+  - name: RAGFlow
+    github_id: infiniflow/ragflow
     labels: ["python"]
     category: "frameworks"
   # Multi-agent and orchestration
@@ -408,6 +432,13 @@ projects:
   - name: omnigent
     github_id: omnigent-ai/omnigent
     labels: ["python"]
+    category: "multi-agent"
+  - name: OASIS
+    github_id: camel-ai/oasis
+    labels: ["python"]
+    category: "multi-agent"
+  - name: AgentScope (Java)
+    github_id: agentscope-ai/agentscope-java
     category: "multi-agent"
   # Plugins, MCPs, CLI tools
   - name: aider
@@ -480,6 +511,9 @@ projects:
   - name: mcp-context-forge
     github_id: IBM/mcp-context-forge
     labels: ["python"]
+    category: "plugins-mcp-cli"
+  - name: stripe/ai
+    github_id: stripe/ai
     category: "plugins-mcp-cli"
   # Memory and state
   - name: Graphiti (Zep)
@@ -631,6 +665,18 @@ projects:
   - name: openai-agents-js
     github_id: openai/openai-agents-js
     labels: ["javascript"]
+    category: "libraries-sdks"
+  - name: fast-agent
+    github_id: evalstate/fast-agent
+    labels: ["python"]
+    category: "libraries-sdks"
+  - name: LLMCompiler
+    github_id: SqueezeAILab/LLMCompiler
+    labels: ["python"]
+    category: "libraries-sdks"
+  - name: DeepCode
+    github_id: HKUDS/DeepCode
+    labels: ["python"]
     category: "libraries-sdks"
   - name: LiteLLM
     github_id: BerriAI/litellm
