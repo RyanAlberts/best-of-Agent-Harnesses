@@ -243,6 +243,12 @@ PROJECTS: dict[str, list[Project]] = {
         Project("cc-haha", "NanmiCoder/cc-haha",
                 "Local-first desktop workspace **harness** for Claude Code and other agents: multi-agent sessions, Git worktrees, code diffs, a skill marketplace, and chat-app access (WeChat, Telegram, WhatsApp).",
                 "complex (desktop workspace, multi-agent — product suite)", oss="❓", labels=["javascript"]),
+        Project("grok-build", "xai-org/grok-build",
+                "xAI's first-party terminal coding agent. The **harness** is a sandboxed tool-call loop tuned for Grok; the fullscreen, mouse-interactive TUI is the shell — xAI's parallel to Codex and Gemini CLI.",
+                "slightly complex (official CLI, TUI)", oss="❓"),
+        Project("DeepCode", "HKUDS/DeepCode",
+                "HKUDS's open agentic coding system, with loop engineering and multi-agent orchestration foregrounded as the **harness** rather than treated as an implementation detail.",
+                "complex (multi-agent orchestration — product suite)", oss="❓"),
     ],
     "coding-harness-configs": [
         Project("LoopTroop", "looptroop-ai/LoopTroop",
@@ -299,6 +305,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("Meta-Harness", "stanford-iris-lab/meta-harness",
                 "Reference implementation from the Meta-Harness paper: an academic testbed for harness-engineering research, not a product—useful as a citation-grade baseline rather than something you'd run in production.",
                 "slightly complex (research reference implementation)", oss="❓"),
+        Project("learn-claude-code", "shareAI-lab/learn-claude-code",
+                "Minimal, dependency-light reimplementation of the Claude Code **harness** built from scratch in Bash—a nano agent loop you can read end to end, aimed at understanding the harness rather than shipping a product.",
+                "mostly simple (nano harness, educational)", oss="❓"),
     ],
     "personal-agent-runtimes": [
         Project("Talon", "dylanneve1/talon",
@@ -451,6 +460,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("omnigent", "omnigent-ai/omnigent",
                 "Open-source meta-**harness**: orchestrates Claude Code, Codex, Cursor, Pi, and custom agents behind one policy/sandboxing layer so teams swap harnesses without rewriting workflows.",
                 "complex (meta-harness, policy + sandboxing — product suite)", oss="❓", labels=["python"]),
+        Project("ruflo", "ruvnet/ruflo",
+                "Meta-harness for deploying multi-player agent swarms and coordinating autonomous work across them; the **harness** is the swarm coordination layer, not a single agent loop.",
+                "complex (multi-agent swarm coordination — product suite)", oss="❓"),
     ],
     "plugins-mcp-cli": [
         Project("aider", "Aider-AI/aider",
@@ -510,6 +522,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("mcp-context-forge", "IBM/mcp-context-forge",
                 "IBM's official AI gateway/registry/proxy that sits in front of any MCP, A2A, or REST/gRPC API: unified endpoint, centralized discovery, guardrails, and plugin support—the enterprise front door for **harness** tool calling. Graduated off the radar this cycle.",
                 "complex (gateway, federation, guardrails — product suite)", oss="❓", labels=["python"]),
+        Project("Qwen-MM-Plugins", "QwenLM/Qwen-MM-Plugins",
+                "Alibaba's official Qwen team plugin pack that makes any agent harness multimodal-native—a tool-layer addition, not a new agent loop.",
+                "mostly simple (multimodal tool plugins)", oss="❓"),
     ],
     "memory": [
         Project("Graphiti (Zep)", "getzep/graphiti",
@@ -597,6 +612,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("Arize Phoenix", "Arize-ai/phoenix",
                 "Arize's source-available, local-first tracing and eval layer: run it on your laptop or your own infra, and graduate to the managed Arize AX platform only when you need it.",
                 "slightly complex (local-first tracing + evals)", oss="⚠️ Elastic-2.0", labels=["python"]),
+        Project("failproofai", "FailproofAI/failproofai",
+                "Observability and enforcement layer purpose-built for agent harnesses: captures every run and checks runtime reliability, rather than general LLM tracing retrofitted onto agents.",
+                "slightly complex (harness-specific observability)", oss="❓"),
     ],
     "research-task": [
         Project("gpt-researcher", "assafelovic/gpt-researcher",
@@ -704,6 +722,8 @@ META: dict[str, tuple[int, str, str]] = {
     "esengine/DeepSeek-Reasonix": (35264, "https://github.com/esengine/DeepSeek-Reasonix#readme", "Project README"),
     "1jehuang/jcode": (18827, "https://github.com/1jehuang/jcode#readme", "Project README"),
     "NanmiCoder/cc-haha": (14247, "https://github.com/NanmiCoder/cc-haha#readme", "Project README"),
+    "xai-org/grok-build": (26254, "https://github.com/xai-org/grok-build#readme", "Project README"),
+    "HKUDS/DeepCode": (16450, "https://github.com/HKUDS/DeepCode#readme", "Project README"),
     # coding-harness-configs
     "looptroop-ai/LoopTroop": (129, "https://github.com/looptroop-ai/LoopTroop#readme", "Council → loop → worktree pipeline"),
     "open-gsd/gsd-core": (8913, "https://github.com/open-gsd/gsd-core/blob/next/commands/gsd/ship.md", "gsd:ship command"),
@@ -722,6 +742,7 @@ META: dict[str, tuple[int, str, str]] = {
     "hesreallyhim/awesome-claude-code": (53228, "https://github.com/hesreallyhim/awesome-claude-code#readme", "Project README"),
     "addyosmani/agent-skills": (90895, "https://github.com/addyosmani/agent-skills#readme", "Project README"),
     "OthmanAdi/planning-with-files": (26433, "https://github.com/OthmanAdi/planning-with-files#readme", "Project README"),
+    "shareAI-lab/learn-claude-code": (75668, "https://github.com/shareAI-lab/learn-claude-code#readme", "Project README"),
     "stanford-iris-lab/meta-harness": (1478, "https://github.com/stanford-iris-lab/meta-harness#readme", "Project README"),
     # frameworks
     "langchain-ai/langgraph": (40719, "https://github.com/langchain-ai/langgraph/blob/main/examples/customer-support/customer-support.ipynb", "Customer support agent"),
@@ -772,6 +793,7 @@ META: dict[str, tuple[int, str, str]] = {
     "THUDM/AgentRL": (347, "https://github.com/THUDM/AgentRL/blob/main/examples/training/async_trainer.py", "Async GRPO trainer"),
     "aden-hive/hive": (10986, "https://github.com/aden-hive/hive#readme", "Project README"),
     "omnigent-ai/omnigent": (9513, "https://github.com/omnigent-ai/omnigent#readme", "Project README"),
+    "ruvnet/ruflo": (69802, "https://github.com/ruvnet/ruflo#readme", "Project README"),
     # plugins-mcp-cli
     "Aider-AI/aider": (48605, "https://github.com/Aider-AI/aider/blob/main/aider/repomap.py", "Repo map source"),
     "RyanAlberts/agentlog": (1, "https://github.com/RyanAlberts/agentlog/blob/main/example-log/decisions.jsonl", "Sample decisions.jsonl"),
@@ -789,6 +811,7 @@ META: dict[str, tuple[int, str, str]] = {
     "microsoft/agent-governance-toolkit": (6154, "https://github.com/microsoft/agent-governance-toolkit#readme", "Project README"),
     "cocoindex-io/cocoindex-code": (2682, "https://github.com/cocoindex-io/cocoindex-code#readme", "Project README"),
     "IBM/mcp-context-forge": (4386, "https://github.com/IBM/mcp-context-forge#readme", "Project README"),
+    "QwenLM/Qwen-MM-Plugins": (2783, "https://github.com/QwenLM/Qwen-MM-Plugins#readme", "Project README"),
     # evaluation
     "vostride/agent-qa": (896, "https://github.com/vostride/agent-qa#readme", "Natural-language QA harness"),
     "arcprize/ARC-AGI-2": (734, "https://arcprize.org/leaderboard", "ARC Prize leaderboard"),
@@ -840,6 +863,7 @@ META: dict[str, tuple[int, str, str]] = {
     "mlflow/mlflow": (27738, "https://mlflow.org", "Docs"),
     "comet-ml/opik": (21692, "https://www.comet.com/docs/opik/", "Docs"),
     "Arize-ai/phoenix": (11247, "https://arize.com/docs/phoenix", "Docs"),
+    "FailproofAI/failproofai": (1560, "https://github.com/FailproofAI/failproofai#readme", "Project README"),
     # plugins-mcp-cli (MCP infrastructure)
     "modelcontextprotocol/servers": (89971, "https://github.com/modelcontextprotocol/servers#readme", "Server catalog"),
     "upstash/context7": (61417, "https://context7.com", "Docs"),
@@ -873,6 +897,12 @@ KEEP_DESPITE_ARCHIVED: "set[str]" = {
     # widely referenced/forked (see Kilo Code, its direct successor, added
     # this cycle). Historically important enough to keep out of the Graveyard.
     "RooCodeInc/Roo-Code",
+    # 55k+ stars, a long-standing low-code sibling to Langflow with its own
+    # component/hosting story; archived upstream 2026-08-16 but still the
+    # most-referenced drag-drop LangChain UI in the ecosystem. Historically
+    # important enough to keep out of the Graveyard — proposed 2026-09-03
+    # biweekly curation pass, pending confirmation the archival is durable.
+    "FlowiseAI/Flowise",
 }
 
 # Repos routed to the Graveyard for a curation-integrity reason rather than
@@ -972,6 +1002,14 @@ RADAR: "list[dict]" = [
     {"id": "Mirix-AI/MIRIX", "via": "weekly discovery"},
     {"id": "cloudflare/vibesdk", "via": "weekly discovery"},
     {"id": "algorithmicsuperintelligence/openevolve", "via": "weekly discovery"},
+    # Added 2026-09-03 biweekly curation pass — promising but not yet clearing
+    # the bar (thin description, needs another cycle to watch, or ambiguous
+    # fit against an existing entry).
+    {"id": "google-antigravity/antigravity-sdk-python", "via": "weekly discovery"},
+    {"id": "onecli/onecli", "via": "weekly discovery"},
+    {"id": "code-yeongyu/oh-my-openagent", "via": "weekly discovery"},
+    {"id": "visa/visa-vulnerability-agentic-harness", "via": "weekly discovery"},
+    {"id": "AntigmaLabs/ante", "via": "weekly discovery"},
 ]
 
 
@@ -1076,6 +1114,8 @@ AXES: "dict[str, tuple[str, str]]" = {
     "esengine/DeepSeek-Reasonix": ("n/a", "n/a"),
     "1jehuang/jcode": ("n/a", "n/a"),
     "NanmiCoder/cc-haha": ("n/a", "n/a"),
+    "xai-org/grok-build": ("n/a", "n/a"),
+    "HKUDS/DeepCode": ("n/a", "n/a"),
     # coding-harness-configs
     "looptroop-ai/LoopTroop": ("bounded", "retry"),
     "obra/superpowers": ("n/a", "n/a"),
@@ -1094,6 +1134,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "aiming-lab/AutoHarness": ("bounded", "none"),
     "RyanAlberts/pmstack": ("n/a", "n/a"),
     "OthmanAdi/planning-with-files": ("n/a", "n/a"),
+    "shareAI-lab/learn-claude-code": ("n/a", "n/a"),
     "stanford-iris-lab/meta-harness": ("n/a", "n/a"),
     # frameworks
     "n8n-io/n8n": ("headless", "durable"),
@@ -1144,6 +1185,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "THUDM/AgentRL": ("headless", "resumable"),
     "aden-hive/hive": ("bounded", "resumable"),
     "omnigent-ai/omnigent": ("n/a", "n/a"),
+    "ruvnet/ruflo": ("n/a", "n/a"),
     # plugins-mcp-cli
     "thedotmack/claude-mem": ("n/a", "n/a"),
     "Aider-AI/aider": ("checkpoint-gated", "resumable"),
@@ -1161,6 +1203,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "microsoft/agent-governance-toolkit": ("n/a", "n/a"),
     "cocoindex-io/cocoindex-code": ("n/a", "n/a"),
     "IBM/mcp-context-forge": ("n/a", "n/a"),
+    "QwenLM/Qwen-MM-Plugins": ("n/a", "n/a"),
     # evaluation
     "vostride/agent-qa": ("headless", "retry"),
     "microsoft/agent-lightning": ("headless", "resumable"),
@@ -1212,6 +1255,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "mlflow/mlflow": ("n/a", "n/a"),
     "comet-ml/opik": ("n/a", "n/a"),
     "Arize-ai/phoenix": ("n/a", "n/a"),
+    "FailproofAI/failproofai": ("n/a", "n/a"),
     # plugins-mcp-cli (MCP infrastructure — tools/servers, not loops)
     "modelcontextprotocol/servers": ("n/a", "n/a"),
     "upstash/context7": ("n/a", "n/a"),

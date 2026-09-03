@@ -165,6 +165,12 @@ projects:
     github_id: NanmiCoder/cc-haha
     labels: ["javascript"]
     category: "coding-agent-products"
+  - name: grok-build
+    github_id: xai-org/grok-build
+    category: "coding-agent-products"
+  - name: DeepCode
+    github_id: HKUDS/DeepCode
+    category: "coding-agent-products"
   # Coding harness configs and SDKs
   - name: LoopTroop
     github_id: looptroop-ai/LoopTroop
@@ -222,6 +228,9 @@ projects:
     category: "coding-harness-configs"
   - name: Meta-Harness
     github_id: stanford-iris-lab/meta-harness
+    category: "coding-harness-configs"
+  - name: learn-claude-code
+    github_id: shareAI-lab/learn-claude-code
     category: "coding-harness-configs"
   # Personal agent runtimes
   - name: Talon
@@ -345,6 +354,10 @@ projects:
     github_id: howl-anderson/agentsilex
     labels: ["python"]
     category: "frameworks"
+  - name: Flowise
+    github_id: FlowiseAI/Flowise
+    labels: ["javascript"]
+    category: "frameworks"
   - name: browser-use
     github_id: browser-use/browser-use
     labels: ["python"]
@@ -408,6 +421,9 @@ projects:
   - name: omnigent
     github_id: omnigent-ai/omnigent
     labels: ["python"]
+    category: "multi-agent"
+  - name: ruflo
+    github_id: ruvnet/ruflo
     category: "multi-agent"
   # Plugins, MCPs, CLI tools
   - name: aider
@@ -480,6 +496,9 @@ projects:
   - name: mcp-context-forge
     github_id: IBM/mcp-context-forge
     labels: ["python"]
+    category: "plugins-mcp-cli"
+  - name: Qwen-MM-Plugins
+    github_id: QwenLM/Qwen-MM-Plugins
     category: "plugins-mcp-cli"
   # Memory and state
   - name: Graphiti (Zep)
@@ -584,6 +603,9 @@ projects:
   - name: Arize Phoenix
     github_id: Arize-ai/phoenix
     labels: ["python"]
+    category: "observability"
+  - name: failproofai
+    github_id: FailproofAI/failproofai
     category: "observability"
   # Research and task-specific harnesses
   - name: gpt-researcher
