@@ -1,13 +1,13 @@
 <!-- markdownlint-disable -->
 # Tags — cross-reference
 
-_Auto-generated from `scripts/generate.py`. 160 projects across 22 canonical tags. Edit projects in `generate.py` (not here) and rerun the script._
+_Auto-generated from `scripts/generate.py`. 165 projects across 22 canonical tags. Edit projects in `generate.py` (not here) and rerun the script._
 
 Tag chips appear next to each project in [README.md](README.md). This page lists every tag once with the projects that carry it, grouped by category and sorted by GitHub stars within each category.
 
 ## All tags
 
-[`mcp`](#mcp) (33) · [`memory`](#memory) (35) · [`multi-agent`](#multi-agent) (27) · [`evals`](#evals) (21) · [`voice`](#voice) (2) · [`vision`](#vision) (3) · [`browser`](#browser) (9) · [`sandbox`](#sandbox) (27) · [`low-code`](#low-code) (3) · [`rag`](#rag) (8) · [`tool-discovery`](#tool-discovery) (5) · [`training`](#training) (5) · [`workflow`](#workflow) (10) · [`typed`](#typed) (3) · [`local`](#local) (6) · [`provider-agnostic`](#provider-agnostic) (11) · [`cli`](#cli) (22) · [`ide`](#ide) (13) · [`tui`](#tui) (4) · [`rust`](#rust) (5) · [`python`](#python) (79) · [`typescript`](#typescript) (40)
+[`mcp`](#mcp) (33) · [`memory`](#memory) (36) · [`multi-agent`](#multi-agent) (29) · [`evals`](#evals) (21) · [`voice`](#voice) (2) · [`vision`](#vision) (3) · [`browser`](#browser) (9) · [`sandbox`](#sandbox) (27) · [`low-code`](#low-code) (4) · [`rag`](#rag) (9) · [`tool-discovery`](#tool-discovery) (5) · [`training`](#training) (5) · [`workflow`](#workflow) (10) · [`typed`](#typed) (3) · [`local`](#local) (6) · [`provider-agnostic`](#provider-agnostic) (11) · [`cli`](#cli) (23) · [`ide`](#ide) (13) · [`tui`](#tui) (5) · [`rust`](#rust) (5) · [`python`](#python) (79) · [`typescript`](#typescript) (41)
 
 ---
 
@@ -111,6 +111,10 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [Haystack](https://github.com/deepset-ai/haystack) — ⭐26.4k — Open-source orchestration framework for context-engineered LLM apps: modular pipelines and agent workflows with explicit control over retrieval, routing, memory, and generation—closer to LangChain's territory than a coding-agent harness.
 - [letta](https://github.com/letta-ai/letta) — ⭐24.5k — Python agent runtime with tool use and control flow; lean API; stateful agents with long-horizon memory.
 
+**Multi-agent and orchestration**
+
+- [ruflo](https://github.com/ruvnet/ruflo) — ⭐69.8k — Meta-**harness** for deploying multi-agent swarms: an orchestration layer with adaptive memory and RAG that sits on top of Claude Code, Codex, Hermes, and other agent backends rather than owning its own single-agent loop.
+
 **Plugins, MCPs, CLI tools**
 
 - [MCP Servers](https://github.com/modelcontextprotocol/servers) — ⭐90k — The official reference collection of Model Context Protocol servers (filesystem, git, fetch, memory, time, and more)—the canonical, vetted toolset agents connect to, and the pattern every other MCP server is measured against.
@@ -145,6 +149,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 **Coding agent products (IDEs, CLIs, full suites)**
 
+- [DeepCode](https://github.com/HKUDS/DeepCode) — ⭐16.4k — HKUDS's open agentic-coding **harness**: agent loop engineering plus multi-agent orchestration for autonomous coding tasks, from the lab behind OpenHarness.
 - [eigent](https://github.com/eigent-ai/eigent) — ⭐15.2k — Open-source desktop **harness** positioned as a local, free alternative to Claude Cowork and Codex: multi-agent workspace orchestration in a self-hosted app rather than a hosted product.
 - [cc-haha](https://github.com/NanmiCoder/cc-haha) — ⭐14.2k — Local-first desktop workspace **harness** for Claude Code and other agents: multi-agent sessions, Git worktrees, code diffs, a skill marketplace, and chat-app access (WeChat, Telegram, WhatsApp).
 - [Proliferate](https://github.com/proliferate-ai/proliferate) — ⭐443 — Open-source AI IDE for Claude Code, Codex, OpenCode, and more. The **harness** contribution is the workspace/session orchestration layer: run multiple coding agents in parallel, locally or in the cloud, with isolated workspaces, reusable workflows, and shared team context.
@@ -171,6 +176,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 **Multi-agent and orchestration**
 
 - [MetaGPT](https://github.com/FoundationAgents/MetaGPT) — ⭐70.1k — The "AI software company" multi-agent framework: role-played PM, architect, and engineer agents turn a one-line requirement into specs, designs, and code along an SOP assembly line. The landmark of the genre; development pace has slowed in 2026.
+- [ruflo](https://github.com/ruvnet/ruflo) — ⭐69.8k — Meta-**harness** for deploying multi-agent swarms: an orchestration layer with adaptive memory and RAG that sits on top of Claude Code, Codex, Hermes, and other agent backends rather than owning its own single-agent loop.
 - [autogen](https://github.com/microsoft/autogen) — ⭐60.7k — Conversable agents and group chats; code execution and human-in-the-loop; Microsoft origin, AG2 ecosystem. ⚠️ In maintenance mode since late 2025: no new features, and Microsoft directs new users to Agent Framework.
 - [OpenManus](https://github.com/FoundationAgents/OpenManus) — ⭐58.1k — Open, invite-free general agent from the MetaGPT team: planning plus tool use over a multi-agent loop, aimed at reproducing Manus-style autonomous task completion on your own keys.
 - [Microsoft Agent Framework](https://github.com/microsoft/agent-framework) — ⭐13.2k — Microsoft's convergence of AutoGen and Semantic Kernel: build, orchestrate, and deploy agents and multi-agent workflows in Python and .NET, with graph-based workflows and checkpointing — the designated successor harness for both lines.
@@ -353,6 +359,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 - [langflow](https://github.com/langflow-ai/langflow) — ⭐154k — Low-code UI to build and deploy LangChain/LangGraph flows; visual DAG editor and one-click run.
 - [Dify](https://github.com/langgenius/dify) — ⭐154k — One-stop LLM app platform: visual workflows, RAG pipeline, 50+ tools, model management; "ship from prototype to prod" in a single UI.
+- [Flowise](https://github.com/FlowiseAI/Flowise) — ⭐55.4k — Drag-and-drop LangChain UI; deploy flows without code. The low-code sibling to Langflow, with a different component and hosting story.
 - [botpress](https://github.com/botpress/botpress) — ⭐14.9k — Visual bot builder and runtime; multi-channel, open-source alternative to commercial bot platforms.
 
 ---
@@ -369,6 +376,10 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [llama-index](https://github.com/run-llama/llama_index) — ⭐51.9k — Data-centric: indexing, RAG, and query engines; agent abstractions sit on top of your data pipelines.
 - [Haystack](https://github.com/deepset-ai/haystack) — ⭐26.4k — Open-source orchestration framework for context-engineered LLM apps: modular pipelines and agent workflows with explicit control over retrieval, routing, memory, and generation—closer to LangChain's territory than a coding-agent harness.
 - [R2R](https://github.com/SciPhi-AI/R2R) — ⭐8k — RAG-first: hybrid search, knowledge graphs, multimodal; the framework for "production RAG" when you care more about retrieval than chat UI.
+
+**Multi-agent and orchestration**
+
+- [ruflo](https://github.com/ruvnet/ruflo) — ⭐69.8k — Meta-**harness** for deploying multi-agent swarms: an orchestration layer with adaptive memory and RAG that sits on top of Claude Code, Codex, Hermes, and other agent backends rather than owning its own single-agent loop.
 
 **Memory and state**
 
@@ -527,6 +538,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [crush](https://github.com/charmbracelet/crush) — ⭐27.8k — Charm's terminal coding agent (Charm's fork of the original OpenCode). The **harness** is the tool-calling loop with session persistence; the Bubble Tea TUI is the shell.
 - [qwen-code](https://github.com/QwenLM/qwen-code) — ⭐27.5k — Alibaba's official terminal coding agent, forked from Gemini CLI's agent loop and retuned for Qwen models. The **harness** is the same sandboxed tool-call loop as its upstream; the terminal is the shell.
 - [Kilo Code](https://github.com/Kilo-Org/kilocode) — ⭐27.1k — VS Code extension and CLI in the Cline/Roo-Code lineage — a natural pick now that Roo-Code is archived upstream. The **harness** is an approval-gated autonomous-mode loop with a provider/tool marketplace; the IDE is the shell.
+- [grok-build](https://github.com/xai-org/grok-build) — ⭐26.3k — xAI's official coding-agent **harness** and fullscreen, mouse-interactive terminal UI; the TUI is the shell over an extensible agent loop.
 - [jcode](https://github.com/1jehuang/jcode) — ⭐18.8k — Rust terminal coding agent pitched as the most RAM-efficient **harness** in its class; MCP support, multi-provider (Claude/OpenAI).
 
 **Coding harness configs and SDKs**
@@ -595,6 +607,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [pi](https://github.com/earendil-works/pi) — ⭐99.4k — The upstream AI agent toolkit behind this list's oh-my-pi fork: a unified multi-provider LLM API, agent loop, and TUI shell providing the **harness** that oh-my-pi's Rust rewrite builds on.
 - [DeepSeek-Reasonix](https://github.com/esengine/DeepSeek-Reasonix) — ⭐35.3k — DeepSeek-native terminal coding agent. The **harness** is engineered around prefix-cache stability for long-running sessions; the TUI is the shell.
 - [crush](https://github.com/charmbracelet/crush) — ⭐27.8k — Charm's terminal coding agent (Charm's fork of the original OpenCode). The **harness** is the tool-calling loop with session persistence; the Bubble Tea TUI is the shell.
+- [grok-build](https://github.com/xai-org/grok-build) — ⭐26.3k — xAI's official coding-agent **harness** and fullscreen, mouse-interactive terminal UI; the TUI is the shell over an extensible agent loop.
 
 ---
 
@@ -764,6 +777,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 **Frameworks**
 
 - [n8n](https://github.com/n8n-io/n8n) — ⭐203k — Fair-code workflow engine with 400+ nodes and native AI nodes; the self-hosted Zapier that actually does agents and LangChain.
+- [Flowise](https://github.com/FlowiseAI/Flowise) — ⭐55.4k — Drag-and-drop LangChain UI; deploy flows without code. The low-code sibling to Langflow, with a different component and hosting story.
 - [mastra](https://github.com/mastra-ai/mastra) — ⭐27.6k — TypeScript-first; agents, tools, and workflows with a single runtime and minimal boilerplate.
 - [Stagehand](https://github.com/browserbase/stagehand) — ⭐24.1k — Browserbase's SDK for browser agents: natural-language actions (act, extract, observe) and deterministic Playwright code mix in one script, so agent flexibility and repeatable automation live in the same **harness**.
 - [botpress](https://github.com/botpress/botpress) — ⭐14.9k — Visual bot builder and runtime; multi-channel, open-source alternative to commercial bot platforms.
@@ -954,6 +968,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 **Frameworks**
 
 - [n8n](https://github.com/n8n-io/n8n) — ⭐203k — Fair-code workflow engine with 400+ nodes and native AI nodes; the self-hosted Zapier that actually does agents and LangChain.
+- [Flowise](https://github.com/FlowiseAI/Flowise) — ⭐55.4k — Drag-and-drop LangChain UI; deploy flows without code. The low-code sibling to Langflow, with a different component and hosting story.
 - [mastra](https://github.com/mastra-ai/mastra) — ⭐27.6k — TypeScript-first; agents, tools, and workflows with a single runtime and minimal boilerplate.
 - [Stagehand](https://github.com/browserbase/stagehand) — ⭐24.1k — Browserbase's SDK for browser agents: natural-language actions (act, extract, observe) and deterministic Playwright code mix in one script, so agent flexibility and repeatable automation live in the same **harness**.
 - [botpress](https://github.com/botpress/botpress) — ⭐14.9k — Visual bot builder and runtime; multi-channel, open-source alternative to commercial bot platforms.

@@ -243,6 +243,15 @@ PROJECTS: dict[str, list[Project]] = {
         Project("cc-haha", "NanmiCoder/cc-haha",
                 "Local-first desktop workspace **harness** for Claude Code and other agents: multi-agent sessions, Git worktrees, code diffs, a skill marketplace, and chat-app access (WeChat, Telegram, WhatsApp).",
                 "complex (desktop workspace, multi-agent — product suite)", oss="❓", labels=["javascript"]),
+        Project("DeepSeek Harness", "deepseek-ai/deepseek-harness",
+                "DeepSeek's official coding-agent **harness**, built as a plugin-first runtime (\"cordis\") where every capability — including the agent loop itself — installs as a swappable dsh-plugin.",
+                "slightly complex (plugin runtime, official)", oss="❓"),
+        Project("grok-build", "xai-org/grok-build",
+                "xAI's official coding-agent **harness** and fullscreen, mouse-interactive terminal UI; the TUI is the shell over an extensible agent loop.",
+                "slightly complex (official CLI/TUI)", oss="❓"),
+        Project("DeepCode", "HKUDS/DeepCode",
+                "HKUDS's open agentic-coding **harness**: agent loop engineering plus multi-agent orchestration for autonomous coding tasks, from the lab behind OpenHarness.",
+                "slightly complex (agent loop + multi-agent orchestration)", oss="❓"),
     ],
     "coding-harness-configs": [
         Project("LoopTroop", "looptroop-ai/LoopTroop",
@@ -415,6 +424,9 @@ PROJECTS: dict[str, list[Project]] = {
                 "complex (modular pipelines, RAG + agents — product suite)", labels=["python"]),
     ],
     "multi-agent": [
+        Project("ruflo", "ruvnet/ruflo",
+                "Meta-**harness** for deploying multi-agent swarms: an orchestration layer with adaptive memory and RAG that sits on top of Claude Code, Codex, Hermes, and other agent backends rather than owning its own single-agent loop.",
+                "complex (swarm orchestration, pluggable backends — product suite)", oss="❓", labels=["typescript"]),
         Project("openai-agents-python", "openai/openai-agents-python",
                 "Handoffs, guardrails, and multi-LLM routing; minimal surface so you own the loop.",
                 "mostly simple (minimal surface)", labels=["python"]),
@@ -704,6 +716,9 @@ META: dict[str, tuple[int, str, str]] = {
     "esengine/DeepSeek-Reasonix": (35264, "https://github.com/esengine/DeepSeek-Reasonix#readme", "Project README"),
     "1jehuang/jcode": (18827, "https://github.com/1jehuang/jcode#readme", "Project README"),
     "NanmiCoder/cc-haha": (14247, "https://github.com/NanmiCoder/cc-haha#readme", "Project README"),
+    "deepseek-ai/deepseek-harness": (204520, "https://github.com/deepseek-ai/deepseek-harness#readme", "Project README"),
+    "xai-org/grok-build": (26254, "https://github.com/xai-org/grok-build#readme", "Project README"),
+    "HKUDS/DeepCode": (16450, "https://github.com/HKUDS/DeepCode#readme", "Project README"),
     # coding-harness-configs
     "looptroop-ai/LoopTroop": (129, "https://github.com/looptroop-ai/LoopTroop#readme", "Council → loop → worktree pipeline"),
     "open-gsd/gsd-core": (8913, "https://github.com/open-gsd/gsd-core/blob/next/commands/gsd/ship.md", "gsd:ship command"),
@@ -765,6 +780,7 @@ META: dict[str, tuple[int, str, str]] = {
     "deepset-ai/haystack": (26366, "https://github.com/deepset-ai/haystack#readme", "Project README"),
     "ag2ai/ag2": (4894, "https://github.com/ag2ai/ag2#readme", "Project README"),
     # multi-agent
+    "ruvnet/ruflo": (69802, "https://github.com/ruvnet/ruflo#readme", "Project README"),
     "openai/openai-agents-python": (29072, "https://github.com/openai/openai-agents-python/blob/main/examples/customer_service/main.py", "Airline customer service handoffs"),
     "crewAIInc/crewAI": (57831, "https://github.com/crewAIInc/crewAI-examples/blob/main/crews/trip_planner/trip_agents.py", "Trip planner crew"),
     "microsoft/autogen": (60703, "https://github.com/microsoft/autogen/tree/main/python/samples/core_distributed-group-chat", "Distributed group chat"),
@@ -873,6 +889,11 @@ KEEP_DESPITE_ARCHIVED: "set[str]" = {
     # widely referenced/forked (see Kilo Code, its direct successor, added
     # this cycle). Historically important enough to keep out of the Graveyard.
     "RooCodeInc/Roo-Code",
+    # 55k+ stars, one of the earliest and most widely adopted no-code/low-code
+    # agent-workflow builders (alongside Langflow, n8n); archived upstream
+    # 2026-08-16 but still a landmark reference point for the visual-agent-
+    # builder genre. Historically important enough to keep out of the Graveyard.
+    "FlowiseAI/Flowise",
 }
 
 # Repos routed to the Graveyard for a curation-integrity reason rather than
@@ -1076,6 +1097,9 @@ AXES: "dict[str, tuple[str, str]]" = {
     "esengine/DeepSeek-Reasonix": ("n/a", "n/a"),
     "1jehuang/jcode": ("n/a", "n/a"),
     "NanmiCoder/cc-haha": ("n/a", "n/a"),
+    "deepseek-ai/deepseek-harness": ("n/a", "n/a"),
+    "xai-org/grok-build": ("n/a", "n/a"),
+    "HKUDS/DeepCode": ("n/a", "n/a"),
     # coding-harness-configs
     "looptroop-ai/LoopTroop": ("bounded", "retry"),
     "obra/superpowers": ("n/a", "n/a"),
@@ -1137,6 +1161,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "deepset-ai/haystack": ("n/a", "n/a"),
     "ag2ai/ag2": ("n/a", "n/a"),
     # multi-agent
+    "ruvnet/ruflo": ("n/a", "n/a"),
     "microsoft/autogen": ("bounded", "resumable"),
     "crewAIInc/crewAI": ("bounded", "resumable"),
     "openai/openai-agents-python": ("bounded", "resumable"),

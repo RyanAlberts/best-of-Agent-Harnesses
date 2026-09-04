@@ -165,6 +165,15 @@ projects:
     github_id: NanmiCoder/cc-haha
     labels: ["javascript"]
     category: "coding-agent-products"
+  - name: DeepSeek Harness
+    github_id: deepseek-ai/deepseek-harness
+    category: "coding-agent-products"
+  - name: grok-build
+    github_id: xai-org/grok-build
+    category: "coding-agent-products"
+  - name: DeepCode
+    github_id: HKUDS/DeepCode
+    category: "coding-agent-products"
   # Coding harness configs and SDKs
   - name: LoopTroop
     github_id: looptroop-ai/LoopTroop
@@ -345,6 +354,10 @@ projects:
     github_id: howl-anderson/agentsilex
     labels: ["python"]
     category: "frameworks"
+  - name: Flowise
+    github_id: FlowiseAI/Flowise
+    labels: ["javascript"]
+    category: "frameworks"
   - name: browser-use
     github_id: browser-use/browser-use
     labels: ["python"]
@@ -361,6 +374,10 @@ projects:
     labels: ["python"]
     category: "frameworks"
   # Multi-agent and orchestration
+  - name: ruflo
+    github_id: ruvnet/ruflo
+    labels: ["typescript"]
+    category: "multi-agent"
   - name: openai-agents-python
     github_id: openai/openai-agents-python
     labels: ["python"]
