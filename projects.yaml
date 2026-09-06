@@ -255,6 +255,10 @@ projects:
     github_id: myshell-ai/AIlice
     labels: ["python"]
     category: "personal-agent-runtimes"
+  - name: AgenticSeek
+    github_id: Fosowl/agenticSeek
+    labels: ["python"]
+    category: "personal-agent-runtimes"
   - name: nanobot
     github_id: HKUDS/nanobot
     labels: ["python"]
@@ -316,6 +320,10 @@ projects:
     github_id: Significant-Gravitas/AutoGPT
     labels: ["python"]
     category: "frameworks"
+  - name: fast-agent
+    github_id: evalstate/fast-agent
+    labels: ["python"]
+    category: "frameworks"
   - name: Bee Agent Framework
     github_id: i-am-bee/beeai-framework
     category: "frameworks"
@@ -344,6 +352,10 @@ projects:
   - name: AgentSilex
     github_id: howl-anderson/agentsilex
     labels: ["python"]
+    category: "frameworks"
+  - name: Flowise
+    github_id: FlowiseAI/Flowise
+    labels: ["javascript"]
     category: "frameworks"
   - name: browser-use
     github_id: browser-use/browser-use

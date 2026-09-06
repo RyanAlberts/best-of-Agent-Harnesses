@@ -1,13 +1,13 @@
 <!-- markdownlint-disable -->
 # Tags — cross-reference
 
-_Auto-generated from `scripts/generate.py`. 160 projects across 22 canonical tags. Edit projects in `generate.py` (not here) and rerun the script._
+_Auto-generated from `scripts/generate.py`. 163 projects across 22 canonical tags. Edit projects in `generate.py` (not here) and rerun the script._
 
 Tag chips appear next to each project in [README.md](README.md). This page lists every tag once with the projects that carry it, grouped by category and sorted by GitHub stars within each category.
 
 ## All tags
 
-[`mcp`](#mcp) (33) · [`memory`](#memory) (35) · [`multi-agent`](#multi-agent) (27) · [`evals`](#evals) (21) · [`voice`](#voice) (2) · [`vision`](#vision) (3) · [`browser`](#browser) (9) · [`sandbox`](#sandbox) (27) · [`low-code`](#low-code) (3) · [`rag`](#rag) (8) · [`tool-discovery`](#tool-discovery) (5) · [`training`](#training) (5) · [`workflow`](#workflow) (10) · [`typed`](#typed) (3) · [`local`](#local) (6) · [`provider-agnostic`](#provider-agnostic) (11) · [`cli`](#cli) (22) · [`ide`](#ide) (13) · [`tui`](#tui) (4) · [`rust`](#rust) (5) · [`python`](#python) (79) · [`typescript`](#typescript) (40)
+[`mcp`](#mcp) (34) · [`memory`](#memory) (35) · [`multi-agent`](#multi-agent) (27) · [`evals`](#evals) (21) · [`voice`](#voice) (2) · [`vision`](#vision) (3) · [`browser`](#browser) (10) · [`sandbox`](#sandbox) (27) · [`low-code`](#low-code) (4) · [`rag`](#rag) (8) · [`tool-discovery`](#tool-discovery) (5) · [`training`](#training) (5) · [`workflow`](#workflow) (10) · [`typed`](#typed) (3) · [`local`](#local) (6) · [`provider-agnostic`](#provider-agnostic) (11) · [`cli`](#cli) (22) · [`ide`](#ide) (13) · [`tui`](#tui) (4) · [`rust`](#rust) (5) · [`python`](#python) (81) · [`typescript`](#typescript) (41)
 
 ---
 
@@ -40,6 +40,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 **Frameworks**
 
+- [fast-agent](https://github.com/evalstate/fast-agent) — ⭐3.9k — Decorator-driven Python **harness** for defining, composing, and evaluating MCP-native agents; first-class support for MCP, Skills, ACP, and A2A alongside multi-model orchestration.
 - [Bee Agent Framework](https://github.com/i-am-bee/beeai-framework) — ⭐3.4k — Python + TypeScript, LF AI–backed; MCP/ACP, workflows, Requirement Agent; the one that pushes "production multi-agent" without LangChain.
 
 **Plugins, MCPs, CLI tools**
@@ -270,6 +271,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 **Personal agent runtimes**
 
+- [AgenticSeek](https://github.com/Fosowl/agenticSeek) — ⭐27.1k — Fully local Manus-style autonomous agent: browsing, coding, and file/task planning run entirely on your machine against a local model, no API keys or monthly bills required.
 - [Agent Zero](https://github.com/agent0ai/agent-zero) — ⭐19k — Organic, prompt-defined personal agent framework: hierarchical sub-agents, persistent memory, browser and code tools, and self-modifying behavior; runs in Docker with a web UI.
 
 **Frameworks**
@@ -353,6 +355,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 - [langflow](https://github.com/langflow-ai/langflow) — ⭐154k — Low-code UI to build and deploy LangChain/LangGraph flows; visual DAG editor and one-click run.
 - [Dify](https://github.com/langgenius/dify) — ⭐154k — One-stop LLM app platform: visual workflows, RAG pipeline, 50+ tools, model management; "ship from prototype to prod" in a single UI.
+- [Flowise](https://github.com/FlowiseAI/Flowise) — ⭐55.4k — Drag-and-drop LangChain UI; deploy flows without code. The low-code sibling to Langflow, with a different component and hosting story.
 - [botpress](https://github.com/botpress/botpress) — ⭐14.9k — Visual bot builder and runtime; multi-channel, open-source alternative to commercial bot platforms.
 
 ---
@@ -638,6 +641,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [nanobot](https://github.com/HKUDS/nanobot) — ⭐47.5k — Ultra-lightweight, self-hosted personal agent framework: the **harness** is a Python daemon wiring tools, memory, and MCP into chat/webhook front ends (Telegram, Discord, web); minimal footprint alternative to heavier personal-runtime stacks.
 - [CowAgent](https://github.com/zhayujie/CowAgent) — ⭐46.7k — Self-hosted **harness** (formerly chatgpt-on-wechat) that plans tasks, runs tools/skills, and self-evolves via memory; multi-model, multi-channel (WeChat, Telegram, etc.), one-line install.
 - [Khoj](https://github.com/khoj-ai/khoj) — ⭐36.8k — Self-hostable "AI second brain": answers over your docs and the web, custom agents, scheduled automations, and multi-client reach (web, Obsidian, Emacs, WhatsApp). A personal-agent harness with retrieval at the core.
+- [AgenticSeek](https://github.com/Fosowl/agenticSeek) — ⭐27.1k — Fully local Manus-style autonomous agent: browsing, coding, and file/task planning run entirely on your machine against a local model, no API keys or monthly bills required.
 - [Agent Zero](https://github.com/agent0ai/agent-zero) — ⭐19k — Organic, prompt-defined personal agent framework: hierarchical sub-agents, persistent memory, browser and code tools, and self-modifying behavior; runs in Docker with a web UI.
 - [AIlice](https://github.com/myshell-ai/AIlice) — ⭐1.4k — Fully autonomous general-purpose agent; one binary, Docker-ready, for when you want "set goal and walk away" without a framework.
 
@@ -658,6 +662,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [rasa](https://github.com/RasaHQ/rasa) — ⭐21.3k — Conversational AI stack (NLU, dialogue, actions); long-standing OSS choice for chat and voice bots.
 - [R2R](https://github.com/SciPhi-AI/R2R) — ⭐8k — RAG-first: hybrid search, knowledge graphs, multimodal; the framework for "production RAG" when you care more about retrieval than chat UI.
 - [AgentVerse](https://github.com/OpenBMB/AgentVerse) — ⭐5.1k — Task-solving and simulation envs for multi-LLM agents; deploy many agents in custom environments without building infra from scratch.
+- [fast-agent](https://github.com/evalstate/fast-agent) — ⭐3.9k — Decorator-driven Python **harness** for defining, composing, and evaluating MCP-native agents; first-class support for MCP, Skills, ACP, and A2A alongside multi-model orchestration.
 - [Bee Agent Framework](https://github.com/i-am-bee/beeai-framework) — ⭐3.4k — Python + TypeScript, LF AI–backed; MCP/ACP, workflows, Requirement Agent; the one that pushes "production multi-agent" without LangChain.
 - [AgentSilex](https://github.com/howl-anderson/agentsilex) — ⭐454 — ~300 lines of readable agent code on top of LiteLLM; the "I want to see the whole loop" option for learning or minimal production.
 - [SuperAgentX](https://github.com/superagentxai/superagentx) — ⭐203 — Lightweight multi-agent orchestrator with an AGI-angle; minimal surface, docs-first, for teams that want orchestration without the kitchen sink.
@@ -764,6 +769,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 **Frameworks**
 
 - [n8n](https://github.com/n8n-io/n8n) — ⭐203k — Fair-code workflow engine with 400+ nodes and native AI nodes; the self-hosted Zapier that actually does agents and LangChain.
+- [Flowise](https://github.com/FlowiseAI/Flowise) — ⭐55.4k — Drag-and-drop LangChain UI; deploy flows without code. The low-code sibling to Langflow, with a different component and hosting story.
 - [mastra](https://github.com/mastra-ai/mastra) — ⭐27.6k — TypeScript-first; agents, tools, and workflows with a single runtime and minimal boilerplate.
 - [Stagehand](https://github.com/browserbase/stagehand) — ⭐24.1k — Browserbase's SDK for browser agents: natural-language actions (act, extract, observe) and deterministic Playwright code mix in one script, so agent flexibility and repeatable automation live in the same **harness**.
 - [botpress](https://github.com/botpress/botpress) — ⭐14.9k — Visual bot builder and runtime; multi-channel, open-source alternative to commercial bot platforms.
@@ -828,6 +834,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [nanobot](https://github.com/HKUDS/nanobot) — ⭐47.5k — Ultra-lightweight, self-hosted personal agent framework: the **harness** is a Python daemon wiring tools, memory, and MCP into chat/webhook front ends (Telegram, Discord, web); minimal footprint alternative to heavier personal-runtime stacks.
 - [CowAgent](https://github.com/zhayujie/CowAgent) — ⭐46.7k — Self-hosted **harness** (formerly chatgpt-on-wechat) that plans tasks, runs tools/skills, and self-evolves via memory; multi-model, multi-channel (WeChat, Telegram, etc.), one-line install.
 - [Khoj](https://github.com/khoj-ai/khoj) — ⭐36.8k — Self-hostable "AI second brain": answers over your docs and the web, custom agents, scheduled automations, and multi-client reach (web, Obsidian, Emacs, WhatsApp). A personal-agent harness with retrieval at the core.
+- [AgenticSeek](https://github.com/Fosowl/agenticSeek) — ⭐27.1k — Fully local Manus-style autonomous agent: browsing, coding, and file/task planning run entirely on your machine against a local model, no API keys or monthly bills required.
 - [Agent Zero](https://github.com/agent0ai/agent-zero) — ⭐19k — Organic, prompt-defined personal agent framework: hierarchical sub-agents, persistent memory, browser and code tools, and self-modifying behavior; runs in Docker with a web UI.
 - [AIlice](https://github.com/myshell-ai/AIlice) — ⭐1.4k — Fully autonomous general-purpose agent; one binary, Docker-ready, for when you want "set goal and walk away" without a framework.
 
@@ -848,6 +855,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [rasa](https://github.com/RasaHQ/rasa) — ⭐21.3k — Conversational AI stack (NLU, dialogue, actions); long-standing OSS choice for chat and voice bots.
 - [R2R](https://github.com/SciPhi-AI/R2R) — ⭐8k — RAG-first: hybrid search, knowledge graphs, multimodal; the framework for "production RAG" when you care more about retrieval than chat UI.
 - [AgentVerse](https://github.com/OpenBMB/AgentVerse) — ⭐5.1k — Task-solving and simulation envs for multi-LLM agents; deploy many agents in custom environments without building infra from scratch.
+- [fast-agent](https://github.com/evalstate/fast-agent) — ⭐3.9k — Decorator-driven Python **harness** for defining, composing, and evaluating MCP-native agents; first-class support for MCP, Skills, ACP, and A2A alongside multi-model orchestration.
 - [Bee Agent Framework](https://github.com/i-am-bee/beeai-framework) — ⭐3.4k — Python + TypeScript, LF AI–backed; MCP/ACP, workflows, Requirement Agent; the one that pushes "production multi-agent" without LangChain.
 - [AgentSilex](https://github.com/howl-anderson/agentsilex) — ⭐454 — ~300 lines of readable agent code on top of LiteLLM; the "I want to see the whole loop" option for learning or minimal production.
 - [SuperAgentX](https://github.com/superagentxai/superagentx) — ⭐203 — Lightweight multi-agent orchestrator with an AGI-angle; minimal surface, docs-first, for teams that want orchestration without the kitchen sink.
@@ -954,6 +962,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 **Frameworks**
 
 - [n8n](https://github.com/n8n-io/n8n) — ⭐203k — Fair-code workflow engine with 400+ nodes and native AI nodes; the self-hosted Zapier that actually does agents and LangChain.
+- [Flowise](https://github.com/FlowiseAI/Flowise) — ⭐55.4k — Drag-and-drop LangChain UI; deploy flows without code. The low-code sibling to Langflow, with a different component and hosting story.
 - [mastra](https://github.com/mastra-ai/mastra) — ⭐27.6k — TypeScript-first; agents, tools, and workflows with a single runtime and minimal boilerplate.
 - [Stagehand](https://github.com/browserbase/stagehand) — ⭐24.1k — Browserbase's SDK for browser agents: natural-language actions (act, extract, observe) and deterministic Playwright code mix in one script, so agent flexibility and repeatable automation live in the same **harness**.
 - [botpress](https://github.com/botpress/botpress) — ⭐14.9k — Visual bot builder and runtime; multi-channel, open-source alternative to commercial bot platforms.

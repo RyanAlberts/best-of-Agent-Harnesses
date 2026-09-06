@@ -327,6 +327,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("AIlice", "myshell-ai/AIlice",
                 "Fully autonomous general-purpose agent; one binary, Docker-ready, for when you want \"set goal and walk away\" without a framework.",
                 "slightly complex (autonomous, one binary)", labels=["python"]),
+        Project("AgenticSeek", "Fosowl/agenticSeek",
+                "Fully local Manus-style autonomous agent: browsing, coding, and file/task planning run entirely on your machine against a local model, no API keys or monthly bills required.",
+                "slightly complex (local model, browser + code + planning)", oss="❓", labels=["python"]),
         Project("nanobot", "HKUDS/nanobot",
                 "Ultra-lightweight, self-hosted personal agent framework: the **harness** is a Python daemon wiring tools, memory, and MCP into chat/webhook front ends (Telegram, Discord, web); minimal footprint alternative to heavier personal-runtime stacks.",
                 "mostly simple (lightweight daemon, chat/MCP)", oss="❓", labels=["python"]),
@@ -374,6 +377,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("AutoGPT", "Significant-Gravitas/AutoGPT",
                 "The original autonomous loop: goal in, agent iterates with tools and memory; Forge is the dev framework, Benchmark the eval harness.",
                 "complex (autonomous loop, tools, memory — product suite)", oss="⚠️ Polyform-SU", labels=["python"]),
+        Project("fast-agent", "evalstate/fast-agent",
+                "Decorator-driven Python **harness** for defining, composing, and evaluating MCP-native agents; first-class support for MCP, Skills, ACP, and A2A alongside multi-model orchestration.",
+                "mostly simple (decorators, MCP-native)", oss="❓", labels=["python"]),
         Project("Bee Agent Framework", "i-am-bee/beeai-framework",
                 "Python + TypeScript, LF AI–backed; MCP/ACP, workflows, Requirement Agent; the one that pushes \"production multi-agent\" without LangChain.",
                 "complex (production multi-agent — product suite)"),
@@ -738,6 +744,8 @@ META: dict[str, tuple[int, str, str]] = {
     "n8n-io/n8n": (202868, "https://github.com/n8n-io/n8n-docs/blob/main/docs/advanced-ai/examples/agent-chain-comparison.md", "Agent vs chain workflow"),
     "Significant-Gravitas/AutoGPT": (187013, "https://github.com/Significant-Gravitas/AutoGPT/blob/master/autogpt_platform/graph_templates/Medium%20Blogger_v28.json", "Medium blogger graph"),
     "myshell-ai/AIlice": (1411, "https://github.com/myshell-ai/AIlice#cool-things-we-can-do", "Task showcase"),
+    "Fosowl/agenticSeek": (27067, "https://github.com/Fosowl/agenticSeek#readme", "Project README"),
+    "evalstate/fast-agent": (3904, "https://github.com/evalstate/fast-agent#readme", "Project README"),
     "HKUDS/nanobot": (47536, "https://github.com/HKUDS/nanobot#readme", "Project README"),
     "zhayujie/CowAgent": (46726, "https://github.com/zhayujie/CowAgent#readme", "Project README"),
     "i-am-bee/beeai-framework": (3383, "https://github.com/i-am-bee/beeai-framework/blob/main/python/examples/agents/react.py", "ReAct agent example"),
@@ -873,6 +881,12 @@ KEEP_DESPITE_ARCHIVED: "set[str]" = {
     # widely referenced/forked (see Kilo Code, its direct successor, added
     # this cycle). Historically important enough to keep out of the Graveyard.
     "RooCodeInc/Roo-Code",
+    # 55k+ stars, one of the earliest and most widely deployed low-code
+    # LangChain UIs (drag-and-drop flow builder); archived upstream
+    # 2026-08-16 but still the reference point competitors like Langflow
+    # are compared against. Historically important enough to keep out of
+    # the Graveyard.
+    "FlowiseAI/Flowise",
 }
 
 # Repos routed to the Graveyard for a curation-integrity reason rather than
@@ -1120,7 +1134,9 @@ AXES: "dict[str, tuple[str, str]]" = {
     "i-am-bee/beeai-framework": ("bounded", "resumable"),
     "agentstack-ai/AgentStack": ("n/a", "n/a"),
     "myshell-ai/AIlice": ("bounded", "none"),
+    "Fosowl/agenticSeek": ("bounded", "none"),
     "howl-anderson/agentsilex": ("bounded", "none"),
+    "evalstate/fast-agent": ("bounded", "retry"),
     "openclaw/openclaw": ("headless", "resumable"),
     "NousResearch/hermes-agent": ("headless", "resumable"),
     "dylanneve1/talon": ("headless", "resumable"),
