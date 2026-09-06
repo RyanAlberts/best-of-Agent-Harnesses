@@ -346,6 +346,21 @@
         "kind": "pr",
         "number": 99,
         "title": "Add SandBase Harness"
+      },
+      {
+        "kind": "issue",
+        "number": 100,
+        "title": "Add project: SandBase Harness"
+      }
+    ]
+  },
+  {
+    "login": "BlueSkyID666",
+    "contributions": [
+      {
+        "kind": "issue",
+        "number": 104,
+        "title": "Add project: Orkas"
       }
     ]
   }

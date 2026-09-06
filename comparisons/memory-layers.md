@@ -4,7 +4,7 @@ Agents forget. A model keeps nothing between sessions, so anything your agent sh
 
 | | [Mem0](https://github.com/mem0ai/mem0) | [Graphiti / Zep](https://github.com/getzep/graphiti) | [Letta](https://github.com/letta-ai/letta) | [claude-mem](https://github.com/thedotmack/claude-mem) |
 |---|---|---|---|---|
-| ⭐ Stars | 64.4k | 30.4k | 24.5k | 92.6k |
+| ⭐ Stars | 64.8k | 30.6k | 24.6k | 93.3k |
 | Shape | Memory layer / API | Memory layer / engine | Agent runtime with built-in memory | Harness plugin |
 | Works with | Any agent or framework | Any agent or framework | Agents you build *inside* Letta | Claude Code, Codex, OpenClaw, Gemini, Copilot, and more |
 | Memory model | Extracted facts, scoped per user, agent, or session, retrieved on demand | A temporal knowledge graph: facts about people and things, plus *when* they were true, so answers can change as facts change | Self-editing memory (the MemGPT research lineage): the agent maintains its own memory as part of how it thinks | Captures what a session did, compresses it with AI, and injects the relevant parts when you resume |

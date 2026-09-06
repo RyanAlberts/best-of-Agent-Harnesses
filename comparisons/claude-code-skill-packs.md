@@ -8,7 +8,7 @@ If you're deciding between a skill and the other extension points, the split is:
 
 | | [superpowers](https://github.com/obra/superpowers) | [GStack](https://github.com/garrytan/gstack) | [get-shit-done](https://github.com/open-gsd/gsd-core) | [Anthropic Skills](https://github.com/anthropics/skills) |
 |---|---|---|---|---|
-| ⭐ Stars | 280k | 130k | 8.9k | 173k |
+| ⭐ Stars | 282k | 132k | 9.2k | 175k |
 | The bet | **Process**: test-driven development, systematic debugging, verification before claiming done | **Roles**: 23 slash-command modes (CEO review, eng review, design, QA, ship) that structure one assistant as a virtual team | **Plans**: goal-backward plans on disk, executed in waves over fresh context windows | **The format**: the official reference skills, plus document production (docx, pdf, pptx, xlsx) |
 | Runs on | Claude Code plus 13 other harnesses (Codex, Cursor, OpenCode, Gemini CLI, more) | Claude Code | Claude Code, OpenCode, Gemini CLI | Claude Code, Claude.ai, the API |
 | How it enforces itself | A startup hook re-injects its rules when a session begins and after compaction (when a long session gets compressed and standing instructions usually fall out) | Checkpoint mode auto-commits work as it goes; /freeze and /careful guardrails; its browser tool only allows pre-approved commands | The plan is a file on disk, so execution survives a dead session and picks back up | It doesn't: pure content, the host platform decides |
