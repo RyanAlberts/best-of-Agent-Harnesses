@@ -363,5 +363,15 @@
         "title": "Add project: Orkas"
       }
     ]
+  },
+  {
+    "login": "jackispm",
+    "contributions": [
+      {
+        "kind": "issue",
+        "number": 108,
+        "title": "Add project: Nausicaa"
+      }
+    ]
   }
 ]

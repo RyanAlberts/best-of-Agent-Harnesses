@@ -35,7 +35,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 **Personal agent runtimes**
 
-- [nanobot](https://github.com/HKUDS/nanobot) — ⭐47.7k — Ultra-lightweight, self-hosted personal agent framework: the **harness** is a Python daemon wiring tools, memory, and MCP into chat/webhook front ends (Telegram, Discord, web); minimal footprint alternative to heavier personal-runtime stacks.
+- [nanobot](https://github.com/HKUDS/nanobot) — ⭐47.8k — Ultra-lightweight, self-hosted personal agent framework: the **harness** is a Python daemon wiring tools, memory, and MCP into chat/webhook front ends (Telegram, Discord, web); minimal footprint alternative to heavier personal-runtime stacks.
 - [Talon](https://github.com/dylanneve1/talon) — ⭐75 — Multi-platform personal agent living in Telegram, Discord, Teams, and the terminal. The **harness** is a pluggable-backend loop (Claude, Kilo, OpenCode, Codex, OpenAI Agents) with full MCP tool access and persistent background agents (Goals, Heartbeat, Dream); the chat apps are shells.
 
 **Frameworks**
@@ -92,12 +92,12 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [planning-with-files](https://github.com/OthmanAdi/planning-with-files) — ⭐26.7k — Skill for persistent, file-based planning across long-running coding-agent sessions: crash-proof markdown plans, session recovery after `/clear`/compaction, and a deterministic completion gate—Manus-style planning as a drop-in **harness** layer via the Agent Skills standard.
 - [SWE-agent](https://github.com/SWE-agent/SWE-agent) — ⭐20.3k — LM-driven harness built for SWE-bench: edit state, command execution, and issue-focused loop—the reference agent stack next to the benchmark itself.
 - [Claude Agent SDK](https://github.com/anthropics/claude-agent-sdk-python) — ⭐8k — Official Anthropic SDK (Python + [TypeScript](https://github.com/anthropics/claude-agent-sdk-typescript), [demos](https://github.com/anthropics/claude-agent-sdk-demos), [quickstarts](https://github.com/anthropics/claude-quickstarts)): built-in tools, MCP, long-running coding agents with session bridging.
-- [AutoHarness](https://github.com/aiming-lab/AutoHarness) — ⭐369 — Lightweight governance harness: wraps any LLM client in ~2 lines for automated harness engineering—6–14 step pipeline, YAML constitution, risk-pattern matching, session persistence with cost tracking, multi-agent profiles.
+- [AutoHarness](https://github.com/aiming-lab/AutoHarness) — ⭐370 — Lightweight governance harness: wraps any LLM client in ~2 lines for automated harness engineering—6–14 step pipeline, YAML constitution, risk-pattern matching, session persistence with cost tracking, multi-agent profiles.
 
 **Personal agent runtimes**
 
 - [Hermes](https://github.com/NousResearch/hermes-agent) — ⭐242k — Nous Research's self-improving agent: a learning loop turns experience into reusable skills, builds a persistent user model across sessions, and checkpoints state to disk with rollback; lean enough for a $5 VPS, driven from chat, and model-agnostic (Nous Portal, OpenRouter, OpenAI, or any endpoint).
-- [nanobot](https://github.com/HKUDS/nanobot) — ⭐47.7k — Ultra-lightweight, self-hosted personal agent framework: the **harness** is a Python daemon wiring tools, memory, and MCP into chat/webhook front ends (Telegram, Discord, web); minimal footprint alternative to heavier personal-runtime stacks.
+- [nanobot](https://github.com/HKUDS/nanobot) — ⭐47.8k — Ultra-lightweight, self-hosted personal agent framework: the **harness** is a Python daemon wiring tools, memory, and MCP into chat/webhook front ends (Telegram, Discord, web); minimal footprint alternative to heavier personal-runtime stacks.
 - [CowAgent](https://github.com/zhayujie/CowAgent) — ⭐46.8k — Self-hosted **harness** (formerly chatgpt-on-wechat) that plans tasks, runs tools/skills, and self-evolves via memory; multi-model, multi-channel (WeChat, Telegram, etc.), one-line install.
 - [Eliza](https://github.com/elizaOS/eliza) — ⭐19.3k — Open "agentic operating system" (elizaOS): persistent multi-agent runtime with character files, a plugin ecosystem, and social/platform integrations — the harness behind a large share of autonomous social agents.
 - [Agent Zero](https://github.com/agent0ai/agent-zero) — ⭐19.1k — Organic, prompt-defined personal agent framework: hierarchical sub-agents, persistent memory, browser and code tools, and self-modifying behavior; runs in Docker with a web UI.
@@ -152,7 +152,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 **Coding harness configs and SDKs**
 
 - [wshobson/agents](https://github.com/wshobson/agents) — ⭐39.5k — Cross-harness marketplace of drop-in subagents and skills for Claude Code, Codex CLI, Cursor, OpenCode, and Copilot; specialized, production-ready agent definitions you install rather than hand-write.
-- [AutoHarness](https://github.com/aiming-lab/AutoHarness) — ⭐369 — Lightweight governance harness: wraps any LLM client in ~2 lines for automated harness engineering—6–14 step pipeline, YAML constitution, risk-pattern matching, session persistence with cost tracking, multi-agent profiles.
+- [AutoHarness](https://github.com/aiming-lab/AutoHarness) — ⭐370 — Lightweight governance harness: wraps any LLM client in ~2 lines for automated harness engineering—6–14 step pipeline, YAML constitution, risk-pattern matching, session persistence with cost tracking, multi-agent profiles.
 
 **Personal agent runtimes**
 
@@ -471,7 +471,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 **Personal agent runtimes**
 
-- [nanobot](https://github.com/HKUDS/nanobot) — ⭐47.7k — Ultra-lightweight, self-hosted personal agent framework: the **harness** is a Python daemon wiring tools, memory, and MCP into chat/webhook front ends (Telegram, Discord, web); minimal footprint alternative to heavier personal-runtime stacks.
+- [nanobot](https://github.com/HKUDS/nanobot) — ⭐47.8k — Ultra-lightweight, self-hosted personal agent framework: the **harness** is a Python daemon wiring tools, memory, and MCP into chat/webhook front ends (Telegram, Discord, web); minimal footprint alternative to heavier personal-runtime stacks.
 
 **Frameworks**
 
@@ -496,7 +496,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 **Coding harness configs and SDKs**
 
-- [AutoHarness](https://github.com/aiming-lab/AutoHarness) — ⭐369 — Lightweight governance harness: wraps any LLM client in ~2 lines for automated harness engineering—6–14 step pipeline, YAML constitution, risk-pattern matching, session persistence with cost tracking, multi-agent profiles.
+- [AutoHarness](https://github.com/aiming-lab/AutoHarness) — ⭐370 — Lightweight governance harness: wraps any LLM client in ~2 lines for automated harness engineering—6–14 step pipeline, YAML constitution, risk-pattern matching, session persistence with cost tracking, multi-agent profiles.
 
 **Personal agent runtimes**
 
@@ -508,7 +508,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 **Libraries and SDKs**
 
-- [LiteLLM](https://github.com/BerriAI/litellm) — ⭐58.1k — One interface to 100+ LLMs; routing, caching, budgets. Not an agent framework—the pipe every agent framework uses.
+- [LiteLLM](https://github.com/BerriAI/litellm) — ⭐58.2k — One interface to 100+ LLMs; routing, caching, budgets. Not an agent framework—the pipe every agent framework uses.
 - [vercel/ai](https://github.com/vercel/ai) — ⭐26.6k — React and Node SDK for streaming, tool calls, and agent-style UIs; provider-agnostic.
 - [pydantic-ai](https://github.com/pydantic/pydantic-ai) — ⭐19.7k — Type-safe Python agents with Pydantic I/O; multi-provider, MCP, Logfire observability, and human-in-the-loop.
 
@@ -630,14 +630,14 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [get-shit-done](https://github.com/open-gsd/gsd-core) — ⭐9.2k — Goal-backward planning and wave-based execution over fresh context windows; avoids context rot by design. Python/JS meta-prompting for Claude Code, OpenCode, Gemini CLI.
 - [Claude Agent SDK](https://github.com/anthropics/claude-agent-sdk-python) — ⭐8k — Official Anthropic SDK (Python + [TypeScript](https://github.com/anthropics/claude-agent-sdk-typescript), [demos](https://github.com/anthropics/claude-agent-sdk-demos), [quickstarts](https://github.com/anthropics/claude-quickstarts)): built-in tools, MCP, long-running coding agents with session bridging.
 - [RepoMaster](https://github.com/QuantaAlpha/RepoMaster) — ⭐544 — Repo-scoped research harness: builds function-call and module-dependency graphs to explore only what's needed; large relative gains on MLE-bench and GitTaskBench with lower token use.
-- [AutoHarness](https://github.com/aiming-lab/AutoHarness) — ⭐369 — Lightweight governance harness: wraps any LLM client in ~2 lines for automated harness engineering—6–14 step pipeline, YAML constitution, risk-pattern matching, session persistence with cost tracking, multi-agent profiles.
+- [AutoHarness](https://github.com/aiming-lab/AutoHarness) — ⭐370 — Lightweight governance harness: wraps any LLM client in ~2 lines for automated harness engineering—6–14 step pipeline, YAML constitution, risk-pattern matching, session persistence with cost tracking, multi-agent profiles.
 
 **Personal agent runtimes**
 
 - [Hermes](https://github.com/NousResearch/hermes-agent) — ⭐242k — Nous Research's self-improving agent: a learning loop turns experience into reusable skills, builds a persistent user model across sessions, and checkpoints state to disk with rollback; lean enough for a $5 VPS, driven from chat, and model-agnostic (Nous Portal, OpenRouter, OpenAI, or any endpoint).
-- [nanobot](https://github.com/HKUDS/nanobot) — ⭐47.7k — Ultra-lightweight, self-hosted personal agent framework: the **harness** is a Python daemon wiring tools, memory, and MCP into chat/webhook front ends (Telegram, Discord, web); minimal footprint alternative to heavier personal-runtime stacks.
+- [nanobot](https://github.com/HKUDS/nanobot) — ⭐47.8k — Ultra-lightweight, self-hosted personal agent framework: the **harness** is a Python daemon wiring tools, memory, and MCP into chat/webhook front ends (Telegram, Discord, web); minimal footprint alternative to heavier personal-runtime stacks.
 - [CowAgent](https://github.com/zhayujie/CowAgent) — ⭐46.8k — Self-hosted **harness** (formerly chatgpt-on-wechat) that plans tasks, runs tools/skills, and self-evolves via memory; multi-model, multi-channel (WeChat, Telegram, etc.), one-line install.
-- [Khoj](https://github.com/khoj-ai/khoj) — ⭐37.1k — Self-hostable "AI second brain": answers over your docs and the web, custom agents, scheduled automations, and multi-client reach (web, Obsidian, Emacs, WhatsApp). A personal-agent harness with retrieval at the core.
+- [Khoj](https://github.com/khoj-ai/khoj) — ⭐37.2k — Self-hostable "AI second brain": answers over your docs and the web, custom agents, scheduled automations, and multi-client reach (web, Obsidian, Emacs, WhatsApp). A personal-agent harness with retrieval at the core.
 - [Agent Zero](https://github.com/agent0ai/agent-zero) — ⭐19.1k — Organic, prompt-defined personal agent framework: hierarchical sub-agents, persistent memory, browser and code tools, and self-modifying behavior; runs in Docker with a web UI.
 - [AIlice](https://github.com/myshell-ai/AIlice) — ⭐1.4k — Fully autonomous general-purpose agent; one binary, Docker-ready, for when you want "set goal and walk away" without a framework.
 
@@ -719,7 +719,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 **Libraries and SDKs**
 
-- [LiteLLM](https://github.com/BerriAI/litellm) — ⭐58.1k — One interface to 100+ LLMs; routing, caching, budgets. Not an agent framework—the pipe every agent framework uses.
+- [LiteLLM](https://github.com/BerriAI/litellm) — ⭐58.2k — One interface to 100+ LLMs; routing, caching, budgets. Not an agent framework—the pipe every agent framework uses.
 - [Composio](https://github.com/ComposioHQ/composio) — ⭐30.1k — 1,000+ toolkits with auth, tool search, and a sandboxed workbench—drop-in tool layer so agents stop reinventing OAuth + integrations. Python and TypeScript.
 - [smolagents](https://github.com/huggingface/smolagents) — ⭐29.2k — Code-as-action agents: model outputs Python executed in sandbox (E2B, Modal, etc.); ~1k LOC core.
 - [deepagents](https://github.com/langchain-ai/deepagents) — ⭐29.1k — LangChain's Python+TypeScript agent harness on top of LangGraph: planning tool, virtual filesystem, shell sandbox, sub-agent spawning—the "Claude Code-style" harness as a reusable library.
@@ -820,14 +820,14 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [get-shit-done](https://github.com/open-gsd/gsd-core) — ⭐9.2k — Goal-backward planning and wave-based execution over fresh context windows; avoids context rot by design. Python/JS meta-prompting for Claude Code, OpenCode, Gemini CLI.
 - [Claude Agent SDK](https://github.com/anthropics/claude-agent-sdk-python) — ⭐8k — Official Anthropic SDK (Python + [TypeScript](https://github.com/anthropics/claude-agent-sdk-typescript), [demos](https://github.com/anthropics/claude-agent-sdk-demos), [quickstarts](https://github.com/anthropics/claude-quickstarts)): built-in tools, MCP, long-running coding agents with session bridging.
 - [RepoMaster](https://github.com/QuantaAlpha/RepoMaster) — ⭐544 — Repo-scoped research harness: builds function-call and module-dependency graphs to explore only what's needed; large relative gains on MLE-bench and GitTaskBench with lower token use.
-- [AutoHarness](https://github.com/aiming-lab/AutoHarness) — ⭐369 — Lightweight governance harness: wraps any LLM client in ~2 lines for automated harness engineering—6–14 step pipeline, YAML constitution, risk-pattern matching, session persistence with cost tracking, multi-agent profiles.
+- [AutoHarness](https://github.com/aiming-lab/AutoHarness) — ⭐370 — Lightweight governance harness: wraps any LLM client in ~2 lines for automated harness engineering—6–14 step pipeline, YAML constitution, risk-pattern matching, session persistence with cost tracking, multi-agent profiles.
 
 **Personal agent runtimes**
 
 - [Hermes](https://github.com/NousResearch/hermes-agent) — ⭐242k — Nous Research's self-improving agent: a learning loop turns experience into reusable skills, builds a persistent user model across sessions, and checkpoints state to disk with rollback; lean enough for a $5 VPS, driven from chat, and model-agnostic (Nous Portal, OpenRouter, OpenAI, or any endpoint).
-- [nanobot](https://github.com/HKUDS/nanobot) — ⭐47.7k — Ultra-lightweight, self-hosted personal agent framework: the **harness** is a Python daemon wiring tools, memory, and MCP into chat/webhook front ends (Telegram, Discord, web); minimal footprint alternative to heavier personal-runtime stacks.
+- [nanobot](https://github.com/HKUDS/nanobot) — ⭐47.8k — Ultra-lightweight, self-hosted personal agent framework: the **harness** is a Python daemon wiring tools, memory, and MCP into chat/webhook front ends (Telegram, Discord, web); minimal footprint alternative to heavier personal-runtime stacks.
 - [CowAgent](https://github.com/zhayujie/CowAgent) — ⭐46.8k — Self-hosted **harness** (formerly chatgpt-on-wechat) that plans tasks, runs tools/skills, and self-evolves via memory; multi-model, multi-channel (WeChat, Telegram, etc.), one-line install.
-- [Khoj](https://github.com/khoj-ai/khoj) — ⭐37.1k — Self-hostable "AI second brain": answers over your docs and the web, custom agents, scheduled automations, and multi-client reach (web, Obsidian, Emacs, WhatsApp). A personal-agent harness with retrieval at the core.
+- [Khoj](https://github.com/khoj-ai/khoj) — ⭐37.2k — Self-hostable "AI second brain": answers over your docs and the web, custom agents, scheduled automations, and multi-client reach (web, Obsidian, Emacs, WhatsApp). A personal-agent harness with retrieval at the core.
 - [Agent Zero](https://github.com/agent0ai/agent-zero) — ⭐19.1k — Organic, prompt-defined personal agent framework: hierarchical sub-agents, persistent memory, browser and code tools, and self-modifying behavior; runs in Docker with a web UI.
 - [AIlice](https://github.com/myshell-ai/AIlice) — ⭐1.4k — Fully autonomous general-purpose agent; one binary, Docker-ready, for when you want "set goal and walk away" without a framework.
 
@@ -909,7 +909,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 **Libraries and SDKs**
 
-- [LiteLLM](https://github.com/BerriAI/litellm) — ⭐58.1k — One interface to 100+ LLMs; routing, caching, budgets. Not an agent framework—the pipe every agent framework uses.
+- [LiteLLM](https://github.com/BerriAI/litellm) — ⭐58.2k — One interface to 100+ LLMs; routing, caching, budgets. Not an agent framework—the pipe every agent framework uses.
 - [Composio](https://github.com/ComposioHQ/composio) — ⭐30.1k — 1,000+ toolkits with auth, tool search, and a sandboxed workbench—drop-in tool layer so agents stop reinventing OAuth + integrations. Python and TypeScript.
 - [smolagents](https://github.com/huggingface/smolagents) — ⭐29.2k — Code-as-action agents: model outputs Python executed in sandbox (E2B, Modal, etc.); ~1k LOC core.
 - [deepagents](https://github.com/langchain-ai/deepagents) — ⭐29.1k — LangChain's Python+TypeScript agent harness on top of LangGraph: planning tool, virtual filesystem, shell sandbox, sub-agent spawning—the "Claude Code-style" harness as a reusable library.
