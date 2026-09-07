@@ -110,6 +110,10 @@ projects:
   - name: Codex
     github_id: openai/codex
     category: "coding-agent-products"
+  - name: DeepSeek Harness
+    github_id: deepseek-ai/deepseek-harness
+    labels: ["typescript"]
+    category: "coding-agent-products"
   - name: Gemini CLI
     github_id: google-gemini/gemini-cli
     labels: ["javascript"]
@@ -263,6 +267,10 @@ projects:
     github_id: zhayujie/CowAgent
     labels: ["python"]
     category: "personal-agent-runtimes"
+  - name: AnythingLLM
+    github_id: Mintplex-Labs/anything-llm
+    labels: ["javascript"]
+    category: "personal-agent-runtimes"
   # Frameworks
   - name: langgraph
     github_id: langchain-ai/langgraph
@@ -344,6 +352,10 @@ projects:
   - name: AgentSilex
     github_id: howl-anderson/agentsilex
     labels: ["python"]
+    category: "frameworks"
+  - name: Flowise
+    github_id: FlowiseAI/Flowise
+    labels: ["javascript"]
     category: "frameworks"
   - name: browser-use
     github_id: browser-use/browser-use

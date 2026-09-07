@@ -195,6 +195,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("Codex", "openai/codex",
                 "OpenAI's terminal coding agent. The **harness** is the sandboxed tool-call loop with multi-provider support; the CLI is the shell. Reference implementation for \"official CLI that ships code.\"",
                 "slightly complex (reference CLI, sandboxed)"),
+        Project("DeepSeek Harness", "deepseek-ai/deepseek-harness",
+                "DeepSeek's official agent harness: an everything-is-a-plugin architecture (built on the Cordis framework) wiring tool calls, memory, and multi-agent orchestration into one loop, with a growing third-party plugin ecosystem. Developer preview — expect breaking changes.",
+                "complex (plugin architecture, developer preview)", labels=["typescript"]),
         Project("Gemini CLI", "google-gemini/gemini-cli",
                 "Google's first-party terminal agent for Gemini. The **harness** is the plugin/MCP tool-call loop; the terminal is the shell—Google's parallel to Claude Code / Codex, not just an API.",
                 "slightly complex (official CLI, plugins, MCP)", labels=["javascript"]),
@@ -333,6 +336,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("CowAgent", "zhayujie/CowAgent",
                 "Self-hosted **harness** (formerly chatgpt-on-wechat) that plans tasks, runs tools/skills, and self-evolves via memory; multi-model, multi-channel (WeChat, Telegram, etc.), one-line install.",
                 "slightly complex (multi-channel, self-evolving)", oss="❓", labels=["python"]),
+        Project("AnythingLLM", "Mintplex-Labs/anything-llm",
+                "Self-hosted \"AI second brain\" **harness**: chat with your documents, run built-in agent skills (web search, code execution, browsing), and manage multi-user workspaces with a bundled vector DB — no separate RAG stack to wire up.",
+                "complex (server + desktop + multi-user — product suite)", labels=["javascript"]),
     ],
     "frameworks": [
         Project("langgraph", "langchain-ai/langgraph",
@@ -689,6 +695,7 @@ META: dict[str, tuple[int, str, str]] = {
     "cline/cline": (67567, "https://docs.cline.bot/features/plan-and-act", "Plan & Act mode"),
     "RooCodeInc/Roo-Code": (24308, "https://docs.roocode.com/features/custom-modes", "Custom modes guide"),
     "openai/codex": (121923, "https://developers.openai.com/codex/concepts/sandboxing", "Sandboxing concept"),
+    "deepseek-ai/deepseek-harness": (213863, "https://github.com/deepseek-ai/deepseek-harness#readme", "Project README"),
     "google-gemini/gemini-cli": (106833, "https://github.com/google-gemini/gemini-cli/blob/main/docs/tools/mcp-server.md", "MCP server setup"),
     "charmbracelet/crush": (27933, "https://charm.land/blog/crush-comes-home/", "Crush launch post"),
     "anomalyco/opencode": (205065, "https://opencode.ai/docs/agents/", "Agent system page"),
@@ -740,6 +747,7 @@ META: dict[str, tuple[int, str, str]] = {
     "myshell-ai/AIlice": (1414, "https://github.com/myshell-ai/AIlice#cool-things-we-can-do", "Task showcase"),
     "HKUDS/nanobot": (47754, "https://github.com/HKUDS/nanobot#readme", "Project README"),
     "zhayujie/CowAgent": (46790, "https://github.com/zhayujie/CowAgent#readme", "Project README"),
+    "Mintplex-Labs/anything-llm": (65687, "https://github.com/Mintplex-Labs/anything-llm#readme", "Project README"),
     "i-am-bee/beeai-framework": (3391, "https://github.com/i-am-bee/beeai-framework/blob/main/python/examples/agents/react.py", "ReAct agent example"),
     "2FastLabs/agent-squad": (7756, "https://github.com/2FastLabs/agent-squad/tree/main/examples/ecommerce-support-simulator", "E-commerce support sim"),
     "superagentxai/superagentx": (204, "https://github.com/superagentxai/superagentx/blob/master/examples/agents/parallel_agents.py", "Parallel marketing agents"),
@@ -873,6 +881,11 @@ KEEP_DESPITE_ARCHIVED: "set[str]" = {
     # widely referenced/forked (see Kilo Code, its direct successor, added
     # this cycle). Historically important enough to keep out of the Graveyard.
     "RooCodeInc/Roo-Code",
+    # 55k+ stars, the low-code sibling to Langflow and one of the most
+    # widely deployed drag-and-drop LLM/agent builders; archived upstream
+    # 2026-08-16 but still the reference point for the "no-code flow" genre.
+    # Historically important enough to keep out of the Graveyard.
+    "FlowiseAI/Flowise",
 }
 
 # Repos routed to the Graveyard for a curation-integrity reason rather than
@@ -972,6 +985,8 @@ RADAR: "list[dict]" = [
     {"id": "Mirix-AI/MIRIX", "via": "weekly discovery"},
     {"id": "cloudflare/vibesdk", "via": "weekly discovery"},
     {"id": "algorithmicsuperintelligence/openevolve", "via": "weekly discovery"},
+    # Added 2026-09-07 biweekly curation pass.
+    {"id": "google-antigravity/antigravity-sdk-python", "via": "weekly discovery"},
 ]
 
 
@@ -1061,6 +1076,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "anomalyco/opencode": ("headless", "resumable"),
     "google-gemini/gemini-cli": ("bounded", "resumable"),
     "openai/codex": ("bounded", "resumable"),
+    "deepseek-ai/deepseek-harness": ("bounded", "resumable"),
     "OpenHands/OpenHands": ("headless", "resumable"),
     "cline/cline": ("step-gated", "resumable"),
     "aaif-goose/goose": ("headless", "resumable"),
@@ -1134,6 +1150,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "superagentxai/superagentx": ("bounded", "none"),
     "HKUDS/nanobot": ("n/a", "n/a"),
     "zhayujie/CowAgent": ("n/a", "n/a"),
+    "Mintplex-Labs/anything-llm": ("headless", "resumable"),
     "deepset-ai/haystack": ("n/a", "n/a"),
     "ag2ai/ag2": ("n/a", "n/a"),
     # multi-agent

@@ -9,8 +9,8 @@
     "feed_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/feed.json",
     "license": "CC-BY-SA-4.0",
     "stars_captured": "2026-09-06",
-    "project_count": 160,
-    "graveyard_count": 4,
+    "project_count": 163,
+    "graveyard_count": 3,
     "tiers": [
       "super simple",
       "mostly simple",
@@ -219,6 +219,7 @@
       "intent": "I want low-code / visual workflows",
       "picks": [
         "langflow-ai/langflow",
+        "FlowiseAI/Flowise",
         "langgenius/dify",
         "n8n-io/n8n"
       ],
@@ -327,7 +328,7 @@
     {
       "kind": "use-case",
       "q": "What is the best agent harness if I want low-code / visual workflows?",
-      "a": "Top picks: langflow, Dify, n8n. See the “Frameworks” category for the full ranked list.",
+      "a": "Top picks: langflow, Flowise, Dify. See the “Frameworks” category for the full ranked list.",
       "slug": "what-is-the-best-agent-harness-if-i-want-low-code-visual-workflows"
     },
     {
@@ -375,7 +376,7 @@
     {
       "kind": "derived",
       "q": "How many of these agent harnesses are open source?",
-      "a": "118 of 160 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
+      "a": "120 of 163 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
       "slug": "how-many-of-these-agent-harnesses-are-open-source"
     },
     {
@@ -945,6 +946,35 @@
           "evidence": "https://raw.githubusercontent.com/antl3x/ToolRAG/HEAD/README.md"
         }
       }
+    },
+    {
+      "name": "DeepSeek Harness",
+      "github_id": "deepseek-ai/deepseek-harness",
+      "url": "https://github.com/deepseek-ai/deepseek-harness",
+      "slug": "deepseek-harness",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#deepseek-harness",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/deepseek-harness/",
+      "description": "DeepSeek's official agent harness: an everything-is-a-plugin architecture (built on the Cordis framework) wiring tool calls, memory, and multi-agent orchestration into one loop, with a growing third-party plugin ecosystem. Developer preview — expect breaking changes.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 213863,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (plugin architecture, developer preview)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "open-source",
+      "tags": [
+        "memory",
+        "multi-agent"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/deepseek-ai/deepseek-harness#readme"
+      },
+      "deep_dive": null
     },
     {
       "name": "opencode",
@@ -3244,6 +3274,35 @@
       }
     },
     {
+      "name": "AnythingLLM",
+      "github_id": "Mintplex-Labs/anything-llm",
+      "url": "https://github.com/Mintplex-Labs/anything-llm",
+      "slug": "anything-llm",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#anything-llm",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/anything-llm/",
+      "description": "Self-hosted \"AI second brain\" **harness**: chat with your documents, run built-in agent skills (web search, code execution, browsing), and manage multi-user workspaces with a bundled vector DB — no separate RAG stack to wire up.",
+      "category": "personal-agent-runtimes",
+      "category_title": "Personal agent runtimes",
+      "stars": 65687,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (server + desktop + multi-user — product suite)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "open-source",
+      "tags": [
+        "rag",
+        "typescript"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/Mintplex-Labs/anything-llm#readme"
+      },
+      "deep_dive": null
+    },
+    {
       "name": "nanobot",
       "github_id": "HKUDS/nanobot",
       "url": "https://github.com/HKUDS/nanobot",
@@ -4039,6 +4098,67 @@
           "label": "blueprint",
           "detail": "The repo installs a self-hosted Python Agent class that already implements the ReAct-style browser loop (you configure task/llm/tools rather than write the loop); Browser Use Cloud is a named fully-hosted managed alternative.",
           "evidence": "https://raw.githubusercontent.com/browser-use/browser-use/HEAD/README.md"
+        }
+      }
+    },
+    {
+      "name": "Flowise",
+      "github_id": "FlowiseAI/Flowise",
+      "url": "https://github.com/FlowiseAI/Flowise",
+      "slug": "flowise",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#flowise",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/flowise/",
+      "description": "Drag-and-drop LangChain UI; deploy flows without code. The low-code sibling to Langflow, with a different component and hosting story.",
+      "category": "frameworks",
+      "category_title": "Frameworks",
+      "stars": 55430,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (low-code, drag-drop — product suite)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "retry",
+      "recovery_rank": 2,
+      "license_signal": "restricted (Apache+CLA)",
+      "tags": [
+        "low-code",
+        "typescript"
+      ],
+      "example": {
+        "label": "Agentic RAG flow",
+        "url": "https://github.com/FlowiseAI/Flowise/blob/main/packages/server/marketplaces/agentflowsv2/Agentic%20RAG.json"
+      },
+      "deep_dive": {
+        "researched": "2026-07-19",
+        "tooling_sandboxing": {
+          "rating": "strong",
+          "rank": 3,
+          "detail": "Custom Function/Tool nodes execute JavaScript inside NodeVM, \"an isolated V8 context with a custom module loader that enforces dependency and built-in module allowlists\"; built-in modules, external packages, and filesystem access are all denied by default unless explicitly whitelisted via TOOL_FUNCTION_BUILTIN_DEP/TOOL_FUNCTION_EXTERNAL_DEP/ALLOW_BUILTIN_DEP.",
+          "evidence": "https://deepwiki.com/FlowiseAI/Flowise/6.3-sandbox-security"
+        },
+        "context_memory": {
+          "rating": "strong",
+          "rank": 3,
+          "detail": "Chat memory nodes persist conversation history in the chat_message database table (or external Redis/DynamoDB/MongoDB Atlas/Zep backends) keyed by a sessionId, surviving app restarts rather than living only in the request.",
+          "evidence": "https://docs.flowiseai.com/integrations/langchain/memory/buffer-window-memory"
+        },
+        "lifecycle_hooks": {
+          "rating": "full",
+          "rank": 3,
+          "detail": "Simple Prompt Moderation uses an LLM to check a user query against a deny list and, on a match, outputs a default error message instead of forwarding it, preventing the problematic input from ever reaching the primary LLM/tool call.",
+          "evidence": "https://docs.flowiseai.com/integrations/langchain/moderation/simple-prompt-moderation"
+        },
+        "prompt_optimization": {
+          "rating": "configurable",
+          "rank": 2,
+          "detail": "Chat Prompt Template nodes expose editable system/human messages with prompt-value variables, and overrideConfig.systemMessagePrompt lets callers override the system message per API call; no automatic prompt-tuning loop is documented.",
+          "evidence": "https://docs.flowiseai.com/integrations/langchain/prompts/chat-prompt-template"
+        },
+        "build_vs_buy": {
+          "tier": 2,
+          "label": "blueprint",
+          "detail": "Repo installs the self-hostable, config/flow-driven LangChain UI (deployable to AWS/Azure/GCP/DO); Flowise Cloud is a named managed hosting alternative, not the primary installed artifact.",
+          "evidence": "https://raw.githubusercontent.com/FlowiseAI/Flowise/HEAD/README.md"
         }
       }
     },
@@ -7932,13 +8052,6 @@
       "reason": "suspected star manipulation — ~228k stars / ~35k forks on a repo created 2026-01 with no matching install base, dependents, or discussion; fork-to-star ratio and growth curve are inconsistent with organic adoption"
     },
     {
-      "github_id": "FlowiseAI/Flowise",
-      "name": "Flowise",
-      "last_stars": 55430,
-      "since": "2026-08-16",
-      "reason": "archived upstream — kept for citation"
-    },
-    {
       "github_id": "spring-ai-community/spring-ai-tool-search-tool",
       "name": "spring-ai-tool-search-tool",
       "last_stars": 78,
@@ -8018,6 +8131,12 @@
       "github_id": "Mirix-AI/MIRIX",
       "stars": 3440,
       "desc": "Mirix is a multi-agent personal assistant designed to track on-screen activities and answer user questions intelligently. By capturing real-time visual data…",
+      "via": "weekly discovery"
+    },
+    {
+      "github_id": "google-antigravity/antigravity-sdk-python",
+      "stars": 3314,
+      "desc": "A Python library for building AI agents that leverage the full power of Google Antigravity.",
       "via": "weekly discovery"
     },
     {
