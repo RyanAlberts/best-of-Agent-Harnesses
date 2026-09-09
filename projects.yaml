@@ -165,6 +165,10 @@ projects:
     github_id: NanmiCoder/cc-haha
     labels: ["javascript"]
     category: "coding-agent-products"
+  - name: YYLO
+    github_id: yylo-dev/yylo
+    labels: ["javascript"]
+    category: "coding-agent-products"
   # Coding harness configs and SDKs
   - name: LoopTroop
     github_id: looptroop-ai/LoopTroop
