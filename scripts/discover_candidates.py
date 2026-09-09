@@ -10,6 +10,7 @@ Auth: GH_TOKEN or GITHUB_TOKEN env var, same as refresh_stars.py.
 
 import json
 import os
+import re
 import sys
 import urllib.parse
 import urllib.request
@@ -42,6 +43,71 @@ def _search(query: str, token: str) -> dict:
     )
     with urllib.request.urlopen(req, timeout=20) as r:
         return json.loads(r.read().decode())
+
+
+ISSUE_REPO_URL = re.compile(r"github\.com/([A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+)")
+
+
+def _api(path: str, token: str) -> object:
+    """Single GitHub REST call, `path` relative to https://api.github.com.
+    The HTTP boundary for issue_submissions() — monkeypatched in tests."""
+    req = urllib.request.Request(
+        "https://api.github.com" + path,
+        headers={
+            "Authorization": f"token {token}",
+            "Accept": "application/vnd.github+json",
+            "User-Agent": "best-of-agent-harnesses-discover",
+        },
+    )
+    with urllib.request.urlopen(req, timeout=30) as resp:
+        return json.load(resp)
+
+
+def issue_submissions(token: str, repo: str, known_ids: set[str]) -> list[dict]:
+    """Open "Add project" issues on `repo`, resolved to candidate entries.
+
+    Same shape as find() plus "via": "issue #N", so the biweekly improve
+    routine vets community submissions from the queue with real repo data
+    instead of leaving the issues unanswered. No star floor on purpose: a
+    submission below the bar earns a radar pin or a reply, never silence.
+    """
+    known_lower = {k.lower() for k in known_ids}
+    out: list[dict] = []
+    seen: set[str] = set()
+    try:
+        issues = _api(f"/repos/{repo}/issues?state=open&per_page=100", token)
+    except Exception as e:  # rate limit/network — the search queries still run
+        print(f"issue listing failed, skipping submissions: {e}", file=sys.stderr)
+        return out
+    for issue in issues:
+        if issue.get("pull_request"):
+            continue
+        labels = {lab.get("name") for lab in issue.get("labels", [])}
+        title = issue.get("title") or ""
+        if "add-project" not in labels and not title.startswith("Add project:"):
+            continue
+        m = ISSUE_REPO_URL.search(issue.get("body") or "")
+        if not m:
+            continue
+        gid = m.group(1).removesuffix(".git")
+        if gid.lower() in known_lower or gid.lower() in seen:
+            continue
+        try:
+            r = _api(f"/repos/{gid}", token)
+        except Exception as e:
+            print(f"submission #{issue.get('number')}: {gid} unreachable ({e})", file=sys.stderr)
+            continue
+        if r.get("archived"):
+            continue
+        seen.add(gid.lower())
+        out.append({
+            "id": r.get("full_name") or gid,
+            "stars": r.get("stargazers_count", 0),
+            "topics": r.get("topics", []),
+            "desc": r.get("description") or "",
+            "via": f"issue #{issue.get('number')}",
+        })
+    return out
 
 
 def find(token: str, known_ids: set[str], min_stars: int = 300) -> list[dict]:
@@ -92,12 +158,15 @@ def main() -> None:
     if not token:
         sys.exit("BLOCKED: set GH_TOKEN or GITHUB_TOKEN.")
     known = {p.github_id for plist in generate.PROJECTS.values() for p in plist} | set(generate.ARCHIVED)
-    candidates = find(token, known)
+    repo = os.environ.get("GITHUB_REPOSITORY", "RyanAlberts/best-of-Agent-Harnesses")
+    submitted = issue_submissions(token, repo, known)
+    submitted_ids = {c["id"].lower() for c in submitted}
+    candidates = submitted + [c for c in find(token, known) if c["id"].lower() not in submitted_ids]
     queue_path = pathlib.Path(__file__).resolve().parent.parent / "curation-queue.json"
     data = json.loads(queue_path.read_text()) if queue_path.exists() else {}
     data["candidates"] = candidates
     write_queue.write(data, queue_path)
-    print(f"discovered {len(candidates)} candidate(s)")
+    print(f"discovered {len(candidates)} candidate(s), {len(submitted)} from open issues")
 
 
 if __name__ == "__main__":

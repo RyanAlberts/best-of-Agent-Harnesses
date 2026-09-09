@@ -103,3 +103,65 @@ def test_find_survives_one_failed_query(monkeypatch):
     assert calls["count"] == len(discover_candidates.QUERIES)
     assert len(result) == 1
     assert result[0]["id"] == "cool/new-harness"
+
+
+def _fake_api_factory(issues, repos):
+    def fake_api(path, token):
+        if path.startswith("/repos/") and "/issues" in path:
+            return issues
+        gid = path[len("/repos/"):]
+        if gid not in repos:
+            raise RuntimeError("404")
+        return repos[gid]
+    return fake_api
+
+
+def test_issue_submissions_resolve_open_add_project_issues(monkeypatch):
+    issues = [
+        {"number": 86, "title": "Add project: Prime Agent", "labels": [{"name": "add-project"}],
+         "body": "### Repo URL\n\nhttps://github.com/PrimeIntellect-ai/prime-agent\n"},
+        {"number": 74, "title": "Update project: X", "labels": [{"name": "update-project"}],
+         "body": "https://github.com/some/other"},                        # not a submission
+        {"number": 90, "title": "Add project: dupe", "labels": [],
+         "body": "https://github.com/Known/Already-Listed"},               # already listed
+        {"number": 57, "title": "Add project: no link", "labels": [{"name": "add-project"}],
+         "body": "no repo url in the body"},                               # nothing to resolve
+        {"number": 99, "title": "Add project: PR", "labels": [{"name": "add-project"}],
+         "pull_request": {"url": "x"}, "body": "https://github.com/a/b"},  # PRs are not issues
+        {"number": 12, "title": "Add project: gone", "labels": [{"name": "add-project"}],
+         "body": "https://github.com/dead/archived-repo"},                # archived upstream
+        {"number": 13, "title": "Add project: vanished", "labels": [{"name": "add-project"}],
+         "body": "https://github.com/no/such-repo"},                      # 404 on lookup
+    ]
+    repos = {
+        "PrimeIntellect-ai/prime-agent": {
+            "full_name": "PrimeIntellect-ai/prime-agent", "stargazers_count": 20386,
+            "topics": ["agents"], "description": "Coding and research agent", "archived": False,
+        },
+        "dead/archived-repo": {
+            "full_name": "dead/archived-repo", "stargazers_count": 9000,
+            "topics": [], "description": "", "archived": True,
+        },
+    }
+    monkeypatch.setattr(discover_candidates, "_api", _fake_api_factory(issues, repos))
+
+    result = discover_candidates.issue_submissions("fake-token", "o/r", {"known/already-listed"})
+
+    assert result == [
+        {
+            "id": "PrimeIntellect-ai/prime-agent",
+            "stars": 20386,
+            "topics": ["agents"],
+            "desc": "Coding and research agent",
+            "via": "issue #86",
+        }
+    ]
+
+
+def test_issue_submissions_survive_listing_failure(monkeypatch):
+    def boom(path, token):
+        raise RuntimeError("secondary rate limit exceeded")
+
+    monkeypatch.setattr(discover_candidates, "_api", boom)
+
+    assert discover_candidates.issue_submissions("fake-token", "o/r", set()) == []
