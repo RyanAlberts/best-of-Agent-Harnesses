@@ -9,8 +9,8 @@
     "feed_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/feed.json",
     "license": "CC-BY-SA-4.0",
     "stars_captured": "2026-09-06",
-    "project_count": 161,
-    "graveyard_count": 4,
+    "project_count": 164,
+    "graveyard_count": 3,
     "tiers": [
       "super simple",
       "mostly simple",
@@ -132,8 +132,7 @@
         "openai/codex",
         "google-gemini/gemini-cli",
         "OpenHands/OpenHands",
-        "charmbracelet/crush",
-        "RooCodeInc/Roo-Code"
+        "charmbracelet/crush"
       ],
       "category_title": "Coding agent products (IDEs, CLIs, full suites)"
     },
@@ -219,6 +218,7 @@
       "intent": "I want low-code / visual workflows",
       "picks": [
         "langflow-ai/langflow",
+        "FlowiseAI/Flowise",
         "langgenius/dify",
         "n8n-io/n8n"
       ],
@@ -327,7 +327,7 @@
     {
       "kind": "use-case",
       "q": "What is the best agent harness if I want low-code / visual workflows?",
-      "a": "Top picks: langflow, Dify, n8n. See the “Frameworks” category for the full ranked list.",
+      "a": "Top picks: langflow, Flowise, Dify. See the “Frameworks” category for the full ranked list.",
       "slug": "what-is-the-best-agent-harness-if-i-want-low-code-visual-workflows"
     },
     {
@@ -375,7 +375,7 @@
     {
       "kind": "derived",
       "q": "How many of these agent harnesses are open source?",
-      "a": "119 of 161 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
+      "a": "121 of 164 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
       "slug": "how-many-of-these-agent-harnesses-are-open-source"
     },
     {
@@ -3273,6 +3273,35 @@
       }
     },
     {
+      "name": "AnythingLLM",
+      "github_id": "Mintplex-Labs/anything-llm",
+      "url": "https://github.com/Mintplex-Labs/anything-llm",
+      "slug": "anything-llm",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#anything-llm",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/anything-llm/",
+      "description": "Self-hosted \"AI second brain\" **harness**: chat with your documents, run built-in agent skills (web search, code execution, browsing), and manage multi-user workspaces with a bundled vector DB, so there is no separate RAG stack to wire up.",
+      "category": "personal-agent-runtimes",
+      "category_title": "Personal agent runtimes",
+      "stars": 65834,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (server + desktop + multi-user; product suite)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "open-source",
+      "tags": [
+        "rag",
+        "typescript"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/Mintplex-Labs/anything-llm#readme"
+      },
+      "deep_dive": null
+    },
+    {
       "name": "nanobot",
       "github_id": "HKUDS/nanobot",
       "url": "https://github.com/HKUDS/nanobot",
@@ -4068,6 +4097,67 @@
           "label": "blueprint",
           "detail": "The repo installs a self-hosted Python Agent class that already implements the ReAct-style browser loop (you configure task/llm/tools rather than write the loop); Browser Use Cloud is a named fully-hosted managed alternative.",
           "evidence": "https://raw.githubusercontent.com/browser-use/browser-use/HEAD/README.md"
+        }
+      }
+    },
+    {
+      "name": "Flowise",
+      "github_id": "FlowiseAI/Flowise",
+      "url": "https://github.com/FlowiseAI/Flowise",
+      "slug": "flowise",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#flowise",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/flowise/",
+      "description": "Drag-and-drop LangChain UI; deploy flows without code. The low-code sibling to Langflow, with a different component and hosting story.",
+      "category": "frameworks",
+      "category_title": "Frameworks",
+      "stars": 55430,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (low-code, drag-drop — product suite)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "retry",
+      "recovery_rank": 2,
+      "license_signal": "restricted (Apache+CLA)",
+      "tags": [
+        "low-code",
+        "typescript"
+      ],
+      "example": {
+        "label": "Agentic RAG flow",
+        "url": "https://github.com/FlowiseAI/Flowise/blob/main/packages/server/marketplaces/agentflowsv2/Agentic%20RAG.json"
+      },
+      "deep_dive": {
+        "researched": "2026-07-19",
+        "tooling_sandboxing": {
+          "rating": "strong",
+          "rank": 3,
+          "detail": "Custom Function/Tool nodes execute JavaScript inside NodeVM, \"an isolated V8 context with a custom module loader that enforces dependency and built-in module allowlists\"; built-in modules, external packages, and filesystem access are all denied by default unless explicitly whitelisted via TOOL_FUNCTION_BUILTIN_DEP/TOOL_FUNCTION_EXTERNAL_DEP/ALLOW_BUILTIN_DEP.",
+          "evidence": "https://deepwiki.com/FlowiseAI/Flowise/6.3-sandbox-security"
+        },
+        "context_memory": {
+          "rating": "strong",
+          "rank": 3,
+          "detail": "Chat memory nodes persist conversation history in the chat_message database table (or external Redis/DynamoDB/MongoDB Atlas/Zep backends) keyed by a sessionId, surviving app restarts rather than living only in the request.",
+          "evidence": "https://docs.flowiseai.com/integrations/langchain/memory/buffer-window-memory"
+        },
+        "lifecycle_hooks": {
+          "rating": "full",
+          "rank": 3,
+          "detail": "Simple Prompt Moderation uses an LLM to check a user query against a deny list and, on a match, outputs a default error message instead of forwarding it, preventing the problematic input from ever reaching the primary LLM/tool call.",
+          "evidence": "https://docs.flowiseai.com/integrations/langchain/moderation/simple-prompt-moderation"
+        },
+        "prompt_optimization": {
+          "rating": "configurable",
+          "rank": 2,
+          "detail": "Chat Prompt Template nodes expose editable system/human messages with prompt-value variables, and overrideConfig.systemMessagePrompt lets callers override the system message per API call; no automatic prompt-tuning loop is documented.",
+          "evidence": "https://docs.flowiseai.com/integrations/langchain/prompts/chat-prompt-template"
+        },
+        "build_vs_buy": {
+          "tier": 2,
+          "label": "blueprint",
+          "detail": "Repo installs the self-hostable, config/flow-driven LangChain UI (deployable to AWS/Azure/GCP/DO); Flowise Cloud is a named managed hosting alternative, not the primary installed artifact.",
+          "evidence": "https://raw.githubusercontent.com/FlowiseAI/Flowise/HEAD/README.md"
         }
       }
     },
@@ -6958,6 +7048,37 @@
       "deep_dive": null
     },
     {
+      "name": "ClawBench",
+      "github_id": "TIGER-AI-Lab/ClawBench",
+      "url": "https://github.com/TIGER-AI-Lab/ClawBench",
+      "slug": "clawbench",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#clawbench",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/clawbench/",
+      "description": "Open web-agent evaluation **harness**: runs selectable agents in isolated Docker containers across 153 live-site tasks (plus 130 in V2), intercepts irreversible requests, and records video, screenshots, HTTP traffic, actions, and agent messages for replayable scoring.",
+      "category": "evaluation",
+      "category_title": "Evaluation and benchmarking harnesses",
+      "stars": 693,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (live websites, Docker, multi-harness benchmark; product suite)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "none",
+      "recovery_rank": 1,
+      "license_signal": "open-source",
+      "tags": [
+        "evals",
+        "vision",
+        "sandbox",
+        "python"
+      ],
+      "example": {
+        "label": "ClawBench live leaderboard",
+        "url": "https://claw-bench.com/leaderboard"
+      },
+      "deep_dive": null
+    },
+    {
       "name": "inspect_evals",
       "github_id": "UKGovernmentBEIS/inspect_evals",
       "url": "https://github.com/UKGovernmentBEIS/inspect_evals",
@@ -7961,13 +8082,6 @@
       "reason": "suspected star manipulation — ~228k stars / ~35k forks on a repo created 2026-01 with no matching install base, dependents, or discussion; fork-to-star ratio and growth curve are inconsistent with organic adoption"
     },
     {
-      "github_id": "FlowiseAI/Flowise",
-      "name": "Flowise",
-      "last_stars": 55430,
-      "since": "2026-08-16",
-      "reason": "archived upstream — kept for citation"
-    },
-    {
       "github_id": "spring-ai-community/spring-ai-tool-search-tool",
       "name": "spring-ai-tool-search-tool",
       "last_stars": 78,
@@ -7983,6 +8097,12 @@
     }
   ],
   "radar": [
+    {
+      "github_id": "deepseek-ai/deepseek-harness",
+      "stars": 213863,
+      "desc": "DeepSeek Harness: Everything is a Plugin.",
+      "via": "weekly discovery"
+    },
     {
       "github_id": "Fosowl/agenticSeek",
       "stars": 27162,
@@ -8050,16 +8170,70 @@
       "via": "weekly discovery"
     },
     {
+      "github_id": "google-antigravity/antigravity-sdk-python",
+      "stars": 3314,
+      "desc": "A Python library for building AI agents that leverage the full power of Google Antigravity.",
+      "via": "weekly discovery"
+    },
+    {
       "github_id": "google-antigravity/antigravity-cli",
       "stars": 2177,
       "desc": "Antigravity CLI brings the reasoning, execution, and orchestration capabilities of Antigravity agent harness directly into your terminal.",
       "via": "weekly discovery"
     },
     {
+      "github_id": "Continuum-AI-Corp/OrcaReplay",
+      "stars": 178,
+      "desc": "Record, replay, fork, and debug any agent run with any model; time travel for AI agents.",
+      "via": "community · issue #109"
+    },
+    {
+      "github_id": "JanYork/llm-wiki-cli",
+      "stars": 53,
+      "desc": "Proactive memory CLI for AI agents: recall, maintain, and evolve persistent, source-grounded knowledge across sessions.",
+      "via": "community · issue #79"
+    },
+    {
+      "github_id": "msaleme/red-team-blue-team-agent-fabric",
+      "stars": 30,
+      "desc": "AI agent security harness for adversarial testing: 600+ executable tests across MCP, A2A, x402/L402, and decision governance.",
+      "via": "community · issue #72"
+    },
+    {
+      "github_id": "rxdt/loopgate_harness",
+      "stars": 21,
+      "desc": "Run any CLI agent in a loop against specs: fresh context each iteration, the repo as durable memory, lint/types/tests/security enforced by git hooks so bad c…",
+      "via": "community · PR #69"
+    },
+    {
+      "github_id": "hjqcan/GoodMemory",
+      "stars": 17,
+      "desc": "Local-first, auditable memory layer for AI apps and coding agents (Codex, Claude Code, MCP, HTTP).",
+      "via": "community · issue #44"
+    },
+    {
       "github_id": "rishabhpoddar/teamcopilot",
       "stars": 14,
       "desc": "Deploy AI agents for your team to automate business workflows and coding.",
       "via": "community · PR #21"
+    },
+    {
+      "github_id": "jackispm/nausicaa-harness",
+      "stars": 12,
+      "desc": "Treats an agent run as a dynamic topology of lanes instead of one linear loop; the model decides when to observe or fan out.",
+      "via": "community · issue #108"
+    },
+    {
+      "github_id": "labmimors/dsh-mcp-lens",
+      "stars": 8,
+      "desc": "MCP tool search for large catalogs: 1,000 tools behind 2 schemas, exact-schema calls, allow/deny controls.",
+      "via": "community · issue #81"
+    },
+    {
+      "github_id": "S1LV3RJ1NX/mcp-guardian",
+      "stars": 0,
+      "desc": "MCP proxy for tool scoping and context compression: progressive discovery with 3 meta-tools.",
+      "via": "community · issue #46"
     }
   ]
 }

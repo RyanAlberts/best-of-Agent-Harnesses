@@ -336,6 +336,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("CowAgent", "zhayujie/CowAgent",
                 "Self-hosted **harness** (formerly chatgpt-on-wechat) that plans tasks, runs tools/skills, and self-evolves via memory; multi-model, multi-channel (WeChat, Telegram, etc.), one-line install.",
                 "slightly complex (multi-channel, self-evolving)", oss="❓", labels=["python"]),
+        Project("AnythingLLM", "Mintplex-Labs/anything-llm",
+                "Self-hosted \"AI second brain\" **harness**: chat with your documents, run built-in agent skills (web search, code execution, browsing), and manage multi-user workspaces with a bundled vector DB, so there is no separate RAG stack to wire up.",
+                "complex (server + desktop + multi-user; product suite)", labels=["javascript"]),
     ],
     "frameworks": [
         Project("langgraph", "langchain-ai/langgraph",
@@ -556,6 +559,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("SWE-bench", "SWE-bench/SWE-bench",
                 "LMs resolve real GitHub issues; Docker harness, instance IDs; standard for code-agent evals.",
                 "slightly complex (real GitHub issues, standard)", labels=["python"]),
+        Project("ClawBench", "TIGER-AI-Lab/ClawBench",
+                "Open web-agent evaluation **harness**: runs selectable agents in isolated Docker containers across 153 live-site tasks (plus 130 in V2), intercepts irreversible requests, and records video, screenshots, HTTP traffic, actions, and agent messages for replayable scoring.",
+                "complex (live websites, Docker, multi-harness benchmark; product suite)", labels=["python"]),
         Project("Terminal-Bench", "harbor-framework/terminal-bench",
                 "The terminal-task benchmark coding agents now cite next to SWE-bench: hard, containerized terminal tasks scored end to end. Terminal-Bench 2.0 runs on the harbor evaluation framework; the 1.0 tasks live on in the org's terminal-bench-1 repo.",
                 "slightly complex (containerized terminal tasks)", labels=["python"]),
@@ -744,6 +750,7 @@ META: dict[str, tuple[int, str, str]] = {
     "myshell-ai/AIlice": (1414, "https://github.com/myshell-ai/AIlice#cool-things-we-can-do", "Task showcase"),
     "HKUDS/nanobot": (47754, "https://github.com/HKUDS/nanobot#readme", "Project README"),
     "zhayujie/CowAgent": (46790, "https://github.com/zhayujie/CowAgent#readme", "Project README"),
+    "Mintplex-Labs/anything-llm": (65834, "https://github.com/Mintplex-Labs/anything-llm#readme", "Project README"),
     "i-am-bee/beeai-framework": (3391, "https://github.com/i-am-bee/beeai-framework/blob/main/python/examples/agents/react.py", "ReAct agent example"),
     "2FastLabs/agent-squad": (7756, "https://github.com/2FastLabs/agent-squad/tree/main/examples/ecommerce-support-simulator", "E-commerce support sim"),
     "superagentxai/superagentx": (204, "https://github.com/superagentxai/superagentx/blob/master/examples/agents/parallel_agents.py", "Parallel marketing agents"),
@@ -803,6 +810,7 @@ META: dict[str, tuple[int, str, str]] = {
     "web-arena-x/webarena": (1601, "https://docs.google.com/spreadsheets/d/1M801lEpBbKSNwP-vDBkC_pF7LdyGU1f_ufZb_NWNBZQ/edit", "WebArena leaderboard"),
     "SWE-bench/SWE-bench": (5783, "https://www.swebench.com/verified.html", "SWE-bench Verified leaderboard"),
     "harbor-framework/terminal-bench": (626, "https://www.tbench.ai/leaderboard", "Terminal-Bench leaderboard"),
+    "TIGER-AI-Lab/ClawBench": (693, "https://claw-bench.com/leaderboard", "ClawBench live leaderboard"),
     "SWE-Gym/SWE-Gym": (731, "https://arxiv.org/abs/2412.21139", "SWE-Gym ICML 2025 paper"),
     "SWE-bench/SWE-smith": (759, "https://huggingface.co/datasets/SWE-bench/SWE-smith-trajectories", "SWE-smith trajectories"),
     "allenai/super-benchmark": (58, "https://arxiv.org/abs/2409.07440", "SUPER EMNLP paper"),
@@ -877,6 +885,11 @@ KEEP_DESPITE_ARCHIVED: "set[str]" = {
     # widely referenced/forked (see Kilo Code, its direct successor, added
     # this cycle). Historically important enough to keep out of the Graveyard.
     "RooCodeInc/Roo-Code",
+    # 55k+ stars, the low-code sibling to Langflow and one of the most
+    # widely deployed drag-and-drop LLM/agent builders; archived upstream
+    # 2026-08-16 but still the reference point for the "no-code flow" genre.
+    # Historically important enough to keep out of the Graveyard.
+    "FlowiseAI/Flowise",
 }
 
 # Repos routed to the Graveyard for a curation-integrity reason rather than
@@ -976,6 +989,30 @@ RADAR: "list[dict]" = [
     {"id": "Mirix-AI/MIRIX", "via": "weekly discovery"},
     {"id": "cloudflare/vibesdk", "via": "weekly discovery"},
     {"id": "algorithmicsuperintelligence/openevolve", "via": "weekly discovery"},
+    # Added 2026-09-07 biweekly curation pass.
+    {"id": "google-antigravity/antigravity-sdk-python", "via": "weekly discovery"},
+    # 2026-09-09 maintainer decision: radar, not ranked. 217k stars in 27 days
+    # on 930 watchers with issues disabled, and its dsh/cordis topic cluster
+    # spans 7 other high-star candidates. Re-check star velocity on 2026-10-07
+    # before promoting it or moving it to INTEGRITY_FLAGGED.
+    {"id": "deepseek-ai/deepseek-harness", "via": "weekly discovery"},
+    # Community submissions below the ranked-table bar (2026-09-09 triage).
+    {"id": "rxdt/loopgate_harness", "via": "community · PR #69", "stars": 21,
+     "desc": "Run any CLI agent in a loop against specs: fresh context each iteration, the repo as durable memory, lint/types/tests/security enforced by git hooks so bad changes never land."},
+    {"id": "Continuum-AI-Corp/OrcaReplay", "via": "community · issue #109", "stars": 178,
+     "desc": "Record, replay, fork, and debug any agent run with any model; time travel for AI agents."},
+    {"id": "JanYork/llm-wiki-cli", "via": "community · issue #79", "stars": 53,
+     "desc": "Proactive memory CLI for AI agents: recall, maintain, and evolve persistent, source-grounded knowledge across sessions."},
+    {"id": "msaleme/red-team-blue-team-agent-fabric", "via": "community · issue #72", "stars": 30,
+     "desc": "AI agent security harness for adversarial testing: 600+ executable tests across MCP, A2A, x402/L402, and decision governance."},
+    {"id": "hjqcan/GoodMemory", "via": "community · issue #44", "stars": 17,
+     "desc": "Local-first, auditable memory layer for AI apps and coding agents (Codex, Claude Code, MCP, HTTP)."},
+    {"id": "jackispm/nausicaa-harness", "via": "community · issue #108", "stars": 12,
+     "desc": "Treats an agent run as a dynamic topology of lanes instead of one linear loop; the model decides when to observe or fan out."},
+    {"id": "labmimors/dsh-mcp-lens", "via": "community · issue #81", "stars": 8,
+     "desc": "MCP tool search for large catalogs: 1,000 tools behind 2 schemas, exact-schema calls, allow/deny controls."},
+    {"id": "S1LV3RJ1NX/mcp-guardian", "via": "community · issue #46", "stars": 0,
+     "desc": "MCP proxy for tool scoping and context compression: progressive discovery with 3 meta-tools."},
 ]
 
 
@@ -1139,6 +1176,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "superagentxai/superagentx": ("bounded", "none"),
     "HKUDS/nanobot": ("n/a", "n/a"),
     "zhayujie/CowAgent": ("n/a", "n/a"),
+    "Mintplex-Labs/anything-llm": ("headless", "resumable"),
     "deepset-ai/haystack": ("n/a", "n/a"),
     "ag2ai/ag2": ("n/a", "n/a"),
     # multi-agent
@@ -1171,6 +1209,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "microsoft/agent-lightning": ("headless", "resumable"),
     "SWE-bench/SWE-bench": ("headless", "resumable"),
     "harbor-framework/terminal-bench": ("headless", "none"),
+    "TIGER-AI-Lab/ClawBench": ("headless", "none"),
     "THUDM/AgentBench": ("headless", "none"),
     "UKGovernmentBEIS/inspect_ai": ("headless", "resumable"),
     "web-arena-x/webarena": ("headless", "none"),
@@ -1281,7 +1320,7 @@ USE_CASES: "list[tuple[str, list[str], str]]" = [
     ("I want a turnkey coding agent today",
      ["anomalyco/opencode", "cline/cline", "openai/codex",
       "google-gemini/gemini-cli", "OpenHands/OpenHands",
-      "charmbracelet/crush", "RooCodeInc/Roo-Code"],
+      "charmbracelet/crush"],
      "Coding agent products (IDEs, CLIs, full suites)"),
     ("I want an always-on personal agent that lives in my chat apps",
      ["openclaw/openclaw", "NousResearch/hermes-agent", "khoj-ai/khoj",
