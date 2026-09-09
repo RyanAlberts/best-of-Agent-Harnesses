@@ -60,16 +60,6 @@
     ]
   },
   {
-    "login": "claudiusthebot",
-    "contributions": [
-      {
-        "kind": "pr",
-        "number": 38,
-        "title": "Add Talon"
-      }
-    ]
-  },
-  {
     "login": "madarco",
     "contributions": [
       {
@@ -371,6 +361,26 @@
         "kind": "issue",
         "number": 108,
         "title": "Add project: Nausicaa"
+      }
+    ]
+  },
+  {
+    "login": "xizhuomengcontin",
+    "contributions": [
+      {
+        "kind": "issue",
+        "number": 109,
+        "title": "Add project: OrcaReplay"
+      }
+    ]
+  },
+  {
+    "login": "InsightFactoryAPP",
+    "contributions": [
+      {
+        "kind": "pr",
+        "number": 111,
+        "title": "Add YYLO"
       }
     ]
   }

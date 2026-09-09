@@ -11,7 +11,7 @@
     "name": "Ryan Alberts",
     "url": "https://github.com/RyanAlberts"
   },
-  "dateModified": "2026-09-06",
+  "dateModified": "2026-09-09",
   "keywords": [
     "agent harness",
     "AI agents",
@@ -1080,11 +1080,11 @@
         "position": 88,
         "item": {
           "@type": "SoftwareApplication",
-          "name": "OpenManus",
-          "url": "https://github.com/FoundationAgents/OpenManus",
-          "description": "Open, invite-free general agent from the MetaGPT team: planning plus tool use over a multi-agent loop, aimed at reproducing Manus-style autonomous task completion on your own keys.",
+          "name": "crewAI",
+          "url": "https://github.com/crewAIInc/crewAI",
+          "description": "Role-based agents (roles, goals, backstories) in Crews; Flows add event-driven and hierarchical control for production.",
           "applicationCategory": "DeveloperApplication",
-          "keywords": "multi-agent, python"
+          "keywords": "python"
         }
       },
       {
@@ -1092,11 +1092,11 @@
         "position": 89,
         "item": {
           "@type": "SoftwareApplication",
-          "name": "crewAI",
-          "url": "https://github.com/crewAIInc/crewAI",
-          "description": "Role-based agents (roles, goals, backstories) in Crews; Flows add event-driven and hierarchical control for production.",
+          "name": "OpenManus",
+          "url": "https://github.com/FoundationAgents/OpenManus",
+          "description": "Open, invite-free general agent from the MetaGPT team: planning plus tool use over a multi-agent loop, aimed at reproducing Manus-style autonomous task completion on your own keys.",
           "applicationCategory": "DeveloperApplication",
-          "keywords": "python"
+          "keywords": "multi-agent, python"
         }
       },
       {
@@ -1956,11 +1956,11 @@
         "position": 161,
         "item": {
           "@type": "SoftwareApplication",
-          "name": "openai-agents-js",
-          "url": "https://github.com/openai/openai-agents-js",
-          "description": "Official OpenAI Agents SDK for Node/TS: handoffs, guardrails, voice; the JS counterpart to openai-agents-python.",
+          "name": "Agent Sandbox",
+          "url": "https://github.com/kubernetes-sigs/agent-sandbox",
+          "description": "Kubernetes-native sandbox primitive for agent runtimes: a Sandbox resource plus warm pools and claims for fast-start, isolated, stateful workloads. The self-hosted answer to hosted sandbox APIs, from the Kubernetes SIGs org.",
           "applicationCategory": "DeveloperApplication",
-          "keywords": "multi-agent, voice, typescript"
+          "keywords": "memory, sandbox, local"
         }
       },
       {
@@ -1968,11 +1968,11 @@
         "position": 162,
         "item": {
           "@type": "SoftwareApplication",
-          "name": "Agent Sandbox",
-          "url": "https://github.com/kubernetes-sigs/agent-sandbox",
-          "description": "Kubernetes-native sandbox primitive for agent runtimes: a Sandbox resource plus warm pools and claims for fast-start, isolated, stateful workloads. The self-hosted answer to hosted sandbox APIs, from the Kubernetes SIGs org.",
+          "name": "openai-agents-js",
+          "url": "https://github.com/openai/openai-agents-js",
+          "description": "Official OpenAI Agents SDK for Node/TS: handoffs, guardrails, voice; the JS counterpart to openai-agents-python.",
           "applicationCategory": "DeveloperApplication",
-          "keywords": "memory, sandbox, local"
+          "keywords": "multi-agent, voice, typescript"
         }
       },
       {

@@ -31,7 +31,7 @@ Start with the open-source anchors this list tracks:
 
 | | [E2B](https://github.com/e2b-dev/E2B) | [Daytona](https://github.com/daytonaio/daytona) | [Agent Sandbox](https://github.com/kubernetes-sigs/agent-sandbox) |
 |---|---|---|---|
-| ⭐ Stars | 13.7k | 71.8k | 3.8k |
+| ⭐ Stars | 13.7k | 71.7k | 3.8k |
 | License | Apache-2.0 | ⚠️ AGPL-3.0 at v0.190.0, the final open release | Apache-2.0 |
 | Maintenance (checked 2026-08-12) | Active | ⚠️ Unmaintained since June 2026 | Active |
 
