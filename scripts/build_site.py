@@ -67,7 +67,9 @@ def page(title: str, description: str, canonical_path: str, body: str,
         f'<a href="{u("radar")}">Radar</a>'
         f'<a href="{u()}#compare">Compare</a>'
         f'<a href="{u()}#agents">For agents</a>'
-        f'<a href="https://github.com/RyanAlberts/best-of-Agent-Harnesses">GitHub ↗</a>'
+        f'<a href="https://github.com/RyanAlberts/best-of-Agent-Harnesses" title="Star this list on GitHub">'
+        f'<img src="https://img.shields.io/github/stars/RyanAlberts/best-of-Agent-Harnesses?style=social&label=Star" '
+        f'alt="Star best-of-Agent-Harnesses on GitHub" height="20" style="vertical-align:middle"></a>'
     )
     return f"""<!DOCTYPE html>
 <html lang="en">
