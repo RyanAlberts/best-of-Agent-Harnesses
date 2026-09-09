@@ -452,6 +452,7 @@ _Up-and-coming candidates — surfaced by the weekly discovery scan or submitted
 | [**teamcopilot**](https://github.com/rishabhpoddar/teamcopilot) | [14](https://github.com/rishabhpoddar/teamcopilot/stargazers) | Deploy AI agents for your team to automate business workflows and coding. | community · PR #21 |
 | [**nausicaa-harness**](https://github.com/jackispm/nausicaa-harness) | [12](https://github.com/jackispm/nausicaa-harness/stargazers) | Treats an agent run as a dynamic topology of lanes instead of one linear loop; the model decides when to observe or fan out. | community · issue #108 |
 | [**dsh-mcp-lens**](https://github.com/labmimors/dsh-mcp-lens) | [8](https://github.com/labmimors/dsh-mcp-lens/stargazers) | MCP tool search for large catalogs: 1,000 tools behind 2 schemas, exact-schema calls, allow/deny controls. | community · issue #81 |
+| [**atlarix-releases**](https://github.com/AmariahAK/atlarix-releases) | [8](https://github.com/AmariahAK/atlarix-releases/stargazers) | Atlarix: open-weight frontier harness, release repository. | community · issue #48 |
 | [**mcp-guardian**](https://github.com/S1LV3RJ1NX/mcp-guardian) | — | MCP proxy for tool scoping and context compression: progressive discovery with 3 meta-tools. | community · issue #46 |
 
 ## FAQ

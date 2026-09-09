@@ -8230,6 +8230,12 @@
       "via": "community · issue #81"
     },
     {
+      "github_id": "AmariahAK/atlarix-releases",
+      "stars": 8,
+      "desc": "Atlarix: open-weight frontier harness, release repository.",
+      "via": "community · issue #48"
+    },
+    {
       "github_id": "S1LV3RJ1NX/mcp-guardian",
       "stars": 0,
       "desc": "MCP proxy for tool scoping and context compression: progressive discovery with 3 meta-tools.",

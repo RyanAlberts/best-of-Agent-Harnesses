@@ -1013,6 +1013,8 @@ RADAR: "list[dict]" = [
      "desc": "MCP tool search for large catalogs: 1,000 tools behind 2 schemas, exact-schema calls, allow/deny controls."},
     {"id": "S1LV3RJ1NX/mcp-guardian", "via": "community · issue #46", "stars": 0,
      "desc": "MCP proxy for tool scoping and context compression: progressive discovery with 3 meta-tools."},
+    {"id": "AmariahAK/atlarix-releases", "via": "community · issue #48", "stars": 8,
+     "desc": "Atlarix: open-weight frontier harness, release repository."},
 ]
 
 
