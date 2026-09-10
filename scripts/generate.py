@@ -459,6 +459,9 @@ PROJECTS: dict[str, list[Project]] = {
                 "complex (meta-harness, policy + sandboxing — product suite)", oss="❓", labels=["python"]),
     ],
     "plugins-mcp-cli": [
+        Project("Gram", "speakeasy-api/gram",
+                "Open-source AI control plane that connects agents to MCPs, Skills, Plugins, and Assistants. Its **harness** contribution is the policy and tool-wiring layer: role-scoped team, server, and tool permissions determine which connections an agent can use; it does not own the agent loop.",
+                "slightly complex (MCP control plane, role-scoped access)"),
         Project("aider", "Aider-AI/aider",
                 "Git-aware CLI pair programmer; edits in-repo, supports multiple models and MCP so agents see version control and tools.",
                 "slightly complex (CLI, git-aware, MCP)", labels=["python"]),
@@ -784,6 +787,7 @@ META: dict[str, tuple[int, str, str]] = {
     "aden-hive/hive": (11024, "https://github.com/aden-hive/hive#readme", "Project README"),
     "omnigent-ai/omnigent": (9806, "https://github.com/omnigent-ai/omnigent#readme", "Project README"),
     # plugins-mcp-cli
+    "speakeasy-api/gram": (266, "https://www.speakeasy.com/docs/ai-control-plane", "AI control plane documentation"),
     "Aider-AI/aider": (48852, "https://github.com/Aider-AI/aider/blob/main/aider/repomap.py", "Repo map source"),
     "RyanAlberts/agentlog": (1, "https://github.com/RyanAlberts/agentlog/blob/main/example-log/decisions.jsonl", "Sample decisions.jsonl"),
     "thedotmack/claude-mem": (93568, "https://github.com/thedotmack/claude-mem/blob/main/plugin/hooks/hooks.json", "Lifecycle hooks config"),
@@ -1190,6 +1194,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "aden-hive/hive": ("bounded", "resumable"),
     "omnigent-ai/omnigent": ("n/a", "n/a"),
     # plugins-mcp-cli
+    "speakeasy-api/gram": ("n/a", "n/a"),
     "thedotmack/claude-mem": ("n/a", "n/a"),
     "Aider-AI/aider": ("checkpoint-gated", "resumable"),
     "continuedev/continue": ("checkpoint-gated", "resumable"),
