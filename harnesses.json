@@ -9,7 +9,7 @@
     "feed_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/feed.json",
     "license": "CC-BY-SA-4.0",
     "stars_captured": "2026-09-09",
-    "project_count": 164,
+    "project_count": 165,
     "graveyard_count": 3,
     "tiers": [
       "super simple",
@@ -375,7 +375,7 @@
     {
       "kind": "derived",
       "q": "How many of these agent harnesses are open source?",
-      "a": "121 of 164 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
+      "a": "122 of 165 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
       "slug": "how-many-of-these-agent-harnesses-are-open-source"
     },
     {
@@ -6384,6 +6384,34 @@
       "example": {
         "label": "Gateway usage walkthrough",
         "url": "https://github.com/docker/mcp-gateway/blob/main/docs/mcp-gateway.md"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "Gram",
+      "github_id": "speakeasy-api/gram",
+      "url": "https://github.com/speakeasy-api/gram",
+      "slug": "gram",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#gram",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/gram/",
+      "description": "Open-source AI control plane that connects agents to MCPs, Skills, Plugins, and Assistants. Its **harness** contribution is the policy and tool-wiring layer: role-scoped team, server, and tool permissions determine which connections an agent can use; it does not own the agent loop.",
+      "category": "plugins-mcp-cli",
+      "category_title": "Plugins, MCPs, CLI tools",
+      "stars": 266,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (MCP control plane, role-scoped access)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [
+        "mcp"
+      ],
+      "example": {
+        "label": "AI control plane documentation",
+        "url": "https://www.speakeasy.com/docs/ai-control-plane"
       },
       "deep_dive": null
     },

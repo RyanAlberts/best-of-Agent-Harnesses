@@ -422,6 +422,9 @@ projects:
     labels: ["python"]
     category: "multi-agent"
   # Plugins, MCPs, CLI tools
+  - name: Gram
+    github_id: speakeasy-api/gram
+    category: "plugins-mcp-cli"
   - name: aider
     github_id: Aider-AI/aider
     labels: ["python"]

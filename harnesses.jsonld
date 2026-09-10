@@ -29,7 +29,7 @@
   ],
   "mainEntity": {
     "@type": "ItemList",
-    "numberOfItems": 164,
+    "numberOfItems": 165,
     "itemListElement": [
       {
         "@type": "ListItem",
@@ -1392,6 +1392,18 @@
         "position": 114,
         "item": {
           "@type": "SoftwareApplication",
+          "name": "Gram",
+          "url": "https://github.com/speakeasy-api/gram",
+          "description": "Open-source AI control plane that connects agents to MCPs, Skills, Plugins, and Assistants. Its **harness** contribution is the policy and tool-wiring layer: role-scoped team, server, and tool permissions determine which connections an agent can use; it does not own the agent loop.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "mcp"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 115,
+        "item": {
+          "@type": "SoftwareApplication",
           "name": "puppeteer-real-browser-mcp",
           "url": "https://github.com/withLinda/puppeteer-real-browser-mcp-server",
           "description": "Puppeteer MCP with real-browser and anti-detection; for agents that need to drive sites that block headless.",
@@ -1401,7 +1413,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 115,
+        "position": 116,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Better-OpenCodeMCP",
@@ -1413,7 +1425,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 116,
+        "position": 117,
         "item": {
           "@type": "SoftwareApplication",
           "name": "agentlog",
@@ -1425,7 +1437,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 117,
+        "position": 118,
         "item": {
           "@type": "SoftwareApplication",
           "name": "claude-mem",
@@ -1437,7 +1449,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 118,
+        "position": 119,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Mem0",
@@ -1449,7 +1461,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 119,
+        "position": 120,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Graphiti (Zep)",
@@ -1461,7 +1473,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 120,
+        "position": 121,
         "item": {
           "@type": "SoftwareApplication",
           "name": "cognee",
@@ -1473,7 +1485,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 121,
+        "position": 122,
         "item": {
           "@type": "SoftwareApplication",
           "name": "beads",
@@ -1485,7 +1497,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 122,
+        "position": 123,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Agent Lightning",
@@ -1497,7 +1509,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 123,
+        "position": 124,
         "item": {
           "@type": "SoftwareApplication",
           "name": "SWE-bench",
@@ -1509,7 +1521,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 124,
+        "position": 125,
         "item": {
           "@type": "SoftwareApplication",
           "name": "AgentBench",
@@ -1521,7 +1533,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 125,
+        "position": 126,
         "item": {
           "@type": "SoftwareApplication",
           "name": "inspect_ai",
@@ -1533,7 +1545,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 126,
+        "position": 127,
         "item": {
           "@type": "SoftwareApplication",
           "name": "WebArena",
@@ -1545,7 +1557,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 127,
+        "position": 128,
         "item": {
           "@type": "SoftwareApplication",
           "name": "WebVoyager",
@@ -1557,7 +1569,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 128,
+        "position": 129,
         "item": {
           "@type": "SoftwareApplication",
           "name": "agent-qa",
@@ -1569,7 +1581,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 129,
+        "position": 130,
         "item": {
           "@type": "SoftwareApplication",
           "name": "swe-smith",
@@ -1581,7 +1593,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 130,
+        "position": 131,
         "item": {
           "@type": "SoftwareApplication",
           "name": "ARC-AGI-2",
@@ -1593,7 +1605,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 131,
+        "position": 132,
         "item": {
           "@type": "SoftwareApplication",
           "name": "SWE-Gym",
@@ -1605,7 +1617,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 132,
+        "position": 133,
         "item": {
           "@type": "SoftwareApplication",
           "name": "ClawBench",
@@ -1617,7 +1629,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 133,
+        "position": 134,
         "item": {
           "@type": "SoftwareApplication",
           "name": "inspect_evals",
@@ -1629,7 +1641,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 134,
+        "position": 135,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Terminal-Bench",
@@ -1641,7 +1653,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 135,
+        "position": 136,
         "item": {
           "@type": "SoftwareApplication",
           "name": "arc-agi-benchmarking",
@@ -1653,7 +1665,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 136,
+        "position": 137,
         "item": {
           "@type": "SoftwareApplication",
           "name": "VitaBench",
@@ -1665,7 +1677,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 137,
+        "position": 138,
         "item": {
           "@type": "SoftwareApplication",
           "name": "AgencyBench",
@@ -1677,7 +1689,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 138,
+        "position": 139,
         "item": {
           "@type": "SoftwareApplication",
           "name": "letta-evals",
@@ -1689,7 +1701,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 139,
+        "position": 140,
         "item": {
           "@type": "SoftwareApplication",
           "name": "SUPER",
@@ -1701,7 +1713,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 140,
+        "position": 141,
         "item": {
           "@type": "SoftwareApplication",
           "name": "TRAIL",
@@ -1713,7 +1725,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 141,
+        "position": 142,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Langfuse",
@@ -1725,7 +1737,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 142,
+        "position": 143,
         "item": {
           "@type": "SoftwareApplication",
           "name": "MLflow",
@@ -1737,7 +1749,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 143,
+        "position": 144,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Opik",
@@ -1749,7 +1761,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 144,
+        "position": 145,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Arize Phoenix",
@@ -1761,7 +1773,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 145,
+        "position": 146,
         "item": {
           "@type": "SoftwareApplication",
           "name": "DeerFlow",
@@ -1773,7 +1785,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 146,
+        "position": 147,
         "item": {
           "@type": "SoftwareApplication",
           "name": "gpt-researcher",
@@ -1785,7 +1797,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 147,
+        "position": 148,
         "item": {
           "@type": "SoftwareApplication",
           "name": "AutoResearchClaw",
@@ -1797,7 +1809,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 148,
+        "position": 149,
         "item": {
           "@type": "SoftwareApplication",
           "name": "MiroThinker",
@@ -1809,7 +1821,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 149,
+        "position": 150,
         "item": {
           "@type": "SoftwareApplication",
           "name": "openagents",
@@ -1821,7 +1833,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 150,
+        "position": 151,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Daytona",
@@ -1833,7 +1845,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 151,
+        "position": 152,
         "item": {
           "@type": "SoftwareApplication",
           "name": "LiteLLM",
@@ -1845,7 +1857,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 152,
+        "position": 153,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Composio",
@@ -1857,7 +1869,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 153,
+        "position": 154,
         "item": {
           "@type": "SoftwareApplication",
           "name": "smolagents",
@@ -1869,7 +1881,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 154,
+        "position": 155,
         "item": {
           "@type": "SoftwareApplication",
           "name": "deepagents",
@@ -1881,7 +1893,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 155,
+        "position": 156,
         "item": {
           "@type": "SoftwareApplication",
           "name": "vercel/ai",
@@ -1893,7 +1905,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 156,
+        "position": 157,
         "item": {
           "@type": "SoftwareApplication",
           "name": "pydantic-ai",
@@ -1905,7 +1917,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 157,
+        "position": 158,
         "item": {
           "@type": "SoftwareApplication",
           "name": "E2B",
@@ -1917,7 +1929,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 158,
+        "position": 159,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Steel",
@@ -1929,7 +1941,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 159,
+        "position": 160,
         "item": {
           "@type": "SoftwareApplication",
           "name": "strands-agents",
@@ -1941,7 +1953,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 160,
+        "position": 161,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Cloudflare Agents",
@@ -1953,7 +1965,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 161,
+        "position": 162,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Agent Sandbox",
@@ -1965,7 +1977,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 162,
+        "position": 163,
         "item": {
           "@type": "SoftwareApplication",
           "name": "openai-agents-js",
@@ -1977,7 +1989,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 163,
+        "position": 164,
         "item": {
           "@type": "SoftwareApplication",
           "name": "open-harness",
@@ -1989,7 +2001,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 164,
+        "position": 165,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Community-curated agent lists",
