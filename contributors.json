@@ -383,5 +383,25 @@
         "title": "Add YYLO"
       }
     ]
+  },
+  {
+    "login": "AbdulDavids",
+    "contributions": [
+      {
+        "kind": "pr",
+        "number": 112,
+        "title": "Add project: Gram"
+      }
+    ]
+  },
+  {
+    "login": "scgopi",
+    "contributions": [
+      {
+        "kind": "issue",
+        "number": 113,
+        "title": "Add project: GraphCode"
+      }
+    ]
   }
 ]

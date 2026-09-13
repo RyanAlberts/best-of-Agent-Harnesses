@@ -11,7 +11,7 @@
     "name": "Ryan Alberts",
     "url": "https://github.com/RyanAlberts"
   },
-  "dateModified": "2026-09-09",
+  "dateModified": "2026-09-13",
   "keywords": [
     "agent harness",
     "AI agents",
@@ -1620,11 +1620,11 @@
         "position": 133,
         "item": {
           "@type": "SoftwareApplication",
-          "name": "inspect_evals",
-          "url": "https://github.com/UKGovernmentBEIS/inspect_evals",
-          "description": "UK AISI/Arcadia/Vector: GAIA and other evals in Inspect AI; level 1–3, sandboxed, tool-calling solvers.",
+          "name": "Terminal-Bench",
+          "url": "https://github.com/harbor-framework/terminal-bench",
+          "description": "The terminal-task benchmark coding agents now cite next to SWE-bench: hard, containerized terminal tasks scored end to end. Terminal-Bench 2.0 runs on the harbor evaluation framework; the 1.0 tasks live on in the org's terminal-bench-1 repo.",
           "applicationCategory": "DeveloperApplication",
-          "keywords": "evals, sandbox"
+          "keywords": "evals, cli, python"
         }
       },
       {
@@ -1632,11 +1632,11 @@
         "position": 134,
         "item": {
           "@type": "SoftwareApplication",
-          "name": "Terminal-Bench",
-          "url": "https://github.com/harbor-framework/terminal-bench",
-          "description": "The terminal-task benchmark coding agents now cite next to SWE-bench: hard, containerized terminal tasks scored end to end. Terminal-Bench 2.0 runs on the harbor evaluation framework; the 1.0 tasks live on in the org's terminal-bench-1 repo.",
+          "name": "inspect_evals",
+          "url": "https://github.com/UKGovernmentBEIS/inspect_evals",
+          "description": "UK AISI/Arcadia/Vector: GAIA and other evals in Inspect AI; level 1–3, sandboxed, tool-calling solvers.",
           "applicationCategory": "DeveloperApplication",
-          "keywords": "evals, cli, python"
+          "keywords": "evals, sandbox"
         }
       },
       {
@@ -1860,11 +1860,11 @@
         "position": 153,
         "item": {
           "@type": "SoftwareApplication",
-          "name": "smolagents",
-          "url": "https://github.com/huggingface/smolagents",
-          "description": "Code-as-action agents: model outputs Python executed in sandbox (E2B, Modal, etc.); ~1k LOC core.",
+          "name": "deepagents",
+          "url": "https://github.com/langchain-ai/deepagents",
+          "description": "LangChain's Python+TypeScript agent harness on top of LangGraph: planning tool, virtual filesystem, shell sandbox, sub-agent spawning—the \"Claude Code-style\" harness as a reusable library.",
           "applicationCategory": "DeveloperApplication",
-          "keywords": "sandbox, python"
+          "keywords": "multi-agent, sandbox, python, typescript"
         }
       },
       {
@@ -1872,11 +1872,11 @@
         "position": 154,
         "item": {
           "@type": "SoftwareApplication",
-          "name": "deepagents",
-          "url": "https://github.com/langchain-ai/deepagents",
-          "description": "LangChain's Python+TypeScript agent harness on top of LangGraph: planning tool, virtual filesystem, shell sandbox, sub-agent spawning—the \"Claude Code-style\" harness as a reusable library.",
+          "name": "smolagents",
+          "url": "https://github.com/huggingface/smolagents",
+          "description": "Code-as-action agents: model outputs Python executed in sandbox (E2B, Modal, etc.); ~1k LOC core.",
           "applicationCategory": "DeveloperApplication",
-          "keywords": "multi-agent, sandbox, python, typescript"
+          "keywords": "sandbox, python"
         }
       },
       {
