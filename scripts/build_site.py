@@ -15,7 +15,9 @@ Only build-time dependency beyond the stdlib is `markdown` (comparison pages).
 
 import html
 import json
+import re
 import shutil
+import subprocess
 import sys
 from pathlib import Path
 
@@ -32,6 +34,8 @@ OUT = ROOT / "site"
 ORIGIN = g.SITE_ORIGIN
 BASE = g.BASE_PATH  # "/best-of-Agent-Harnesses"
 OG_IMAGE = f"{ORIGIN}{BASE}/assets/social-preview.png"
+GITHUB_REPO = "https://github.com/RyanAlberts/best-of-Agent-Harnesses"
+AUTHOR = {"@type": "Person", "name": "Ryan Alberts", "url": "https://github.com/RyanAlberts"}
 
 
 def esc(s: str) -> str:
@@ -45,6 +49,41 @@ def u(path: str = "") -> str:
 
 def abs_url(path: str = "") -> str:
     return ORIGIN + u(path)
+
+
+def source_dates(rel_path: str) -> "tuple[str, str]":
+    """(datePublished, dateModified) for a source file from git history, so
+    guide pages carry real dates for answer engines; STARS_CAPTURED when the
+    file is not committed yet or git is unavailable (pages.yml checks out
+    with fetch-depth 0 so the history is present at deploy time)."""
+    try:
+        out = subprocess.run(["git", "log", "--follow", "--format=%as", "--", rel_path],
+                             cwd=ROOT, capture_output=True, text=True, check=True).stdout.split()
+    except (OSError, subprocess.CalledProcessError):
+        out = []
+    return (out[-1], out[0]) if out else (g.STARS_CAPTURED, g.STARS_CAPTURED)
+
+
+def breadcrumb_ld(crumbs: "list[tuple[str, str]]") -> dict:
+    return {
+        "@context": "https://schema.org", "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": i, "name": name, "item": url}
+            for i, (name, url) in enumerate(crumbs, 1)
+        ],
+    }
+
+
+def site_links(md: str) -> str:
+    """Rewrite the guides' repo-relative links for the site. Sibling guides go
+    to their site pages, assets to the site copy, and everything else under
+    the repo root (README anchors, mcp/, attributes/) to GitHub, so no guide
+    page links to a .md path that does not exist under /compare/."""
+    md = re.sub(r"\]\(\.\./README\.md(#[^)]*)?\)", lambda m: f"]({GITHUB_REPO}{m.group(1) or ''})", md)
+    md = re.sub(r"\]\(\.\./assets/([^)]+)\)", lambda m: f"]({u()}assets/{m.group(1)})", md)
+    md = re.sub(r"\]\(\.\./([^)#]+?)/?(#[^)]*)?\)", lambda m: f"]({GITHUB_REPO}/tree/main/{m.group(1)}{m.group(2) or ''})", md)
+    md = re.sub(r"\]\(([\w-]+)\.md(#[^)]*)?\)", lambda m: f"](../{m.group(1)}/{m.group(2) or ''})", md)
+    return md
 
 
 # --------------------------------------------------------------------------- #
@@ -80,6 +119,7 @@ def page(title: str, description: str, canonical_path: str, body: str,
 <meta name="description" content="{desc}">
 <link rel="canonical" href="{abs_url(canonical_path)}">
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="Best of Agent Harnesses">
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{desc}">
 <meta property="og:url" content="{abs_url(canonical_path)}">
@@ -215,6 +255,7 @@ def render_index() -> str:
   <ul>
     <li><a href="{u()}harnesses.json">harnesses.json</a> — every project with tier, tags, axes, license, example, and use-case index.</li>
     <li><a href="{u()}llms.txt">llms.txt</a> — the whole list in one agent-readable file.</li>
+    <li><a href="{u()}llms-full.txt">llms-full.txt</a>: llms.txt plus the full text of every decision guide, one file.</li>
     <li><a href="{u()}harnesses.jsonld">harnesses.jsonld</a> — schema.org Dataset + ItemList.</li>
     <li><a href="{u()}feed.json">feed.json</a> — JSON Feed of refreshes.</li>
     <li><strong>MCP server</strong>: <code>uvx agent-harnesses-mcp</code> — pick_harness, search_harnesses, get_harness, comparisons.</li>
@@ -276,10 +317,12 @@ def render_project(p) -> str:
         "keywords": ", ".join(m["tags"]),
         "isPartOf": {"@type": "Dataset", "name": "Best of Agent Harnesses", "url": abs_url()},
     }
+    crumbs = breadcrumb_ld([("Home", abs_url()), (cat_title, abs_url("c/" + m["category_id"])),
+                            (m["name"], abs_url("h/" + m["slug"]))])
     return page(
         f"{m['name']} — agent harness · Best of Agent Harnesses",
         f"{m['name']}: {m['description']}",
-        f"h/{m['slug']}", body, jsonld=jsonld,
+        f"h/{m['slug']}", body, jsonld=[jsonld, crumbs],
     )
 
 
@@ -307,7 +350,8 @@ def render_category(cid: str, title: str, subtitle: str) -> str:
 """
     jsonld = {"@context": "https://schema.org", "@type": "ItemList",
               "name": title, "numberOfItems": len(items), "itemListElement": items}
-    return page(f"{title} — Best of Agent Harnesses", subtitle, f"c/{cid}", body, jsonld=jsonld)
+    crumbs = breadcrumb_ld([("Home", abs_url()), (title, abs_url("c/" + cid))])
+    return page(f"{title} — Best of Agent Harnesses", subtitle, f"c/{cid}", body, jsonld=[jsonld, crumbs])
 
 
 def render_radar_page() -> str:
@@ -333,16 +377,39 @@ descriptions are the projects' own, unvetted. Entries graduate into <a href="{u(
 
 
 def render_comparison(c: dict) -> str:
-    src = (ROOT / "comparisons" / f"{c['slug']}.md").read_text()
+    rel = f"comparisons/{c['slug']}.md"
+    src = site_links((ROOT / rel).read_text())
     html_body = markdown.markdown(src, extensions=["tables", "fenced_code", "toc"])
-    body = f'<nav class="crumbs"><a href="{u()}">Home</a> › Decision guides › {esc(c["title"])}</nav>\n<article class="prose">{html_body}</article>'
-    return page(f"{c['title']} — Best of Agent Harnesses", c["summary"], f"compare/{c['slug']}", body)
+    body = f'<nav class="crumbs"><a href="{u()}">Home</a> › <a href="{u()}#compare">Decision guides</a> › {esc(c["title"])}</nav>\n<article class="prose">{html_body}</article>'
+    published, modified = source_dates(rel)
+    page_url = abs_url("compare/" + c["slug"])
+    article = {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": c["title"],
+        "description": c["summary"],
+        "url": page_url,
+        "mainEntityOfPage": {"@type": "WebPage", "@id": page_url},
+        "datePublished": published,
+        "dateModified": modified,
+        "author": AUTHOR,
+        "publisher": AUTHOR,
+        "image": OG_IMAGE,
+        "inLanguage": "en",
+        "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "isPartOf": {"@type": "Dataset", "name": "Best of Agent Harnesses", "url": abs_url()},
+    }
+    crumbs = breadcrumb_ld([("Home", abs_url()), ("Decision guides", abs_url() + "#compare"), (c["title"], page_url)])
+    return page(f"{c['title']} — Best of Agent Harnesses", c["summary"], f"compare/{c['slug']}", body,
+                jsonld=[article, crumbs])
 
 
 def render_faq() -> str:
     faq = g.build_faq()
     blocks = "".join(
-        f'<section class="qa" id="{item["slug"]}"><h2>{esc(item["q"])}</h2><p>{esc(item["a"])}</p></section>'
+        f'<section class="qa" id="{item["slug"]}"><h2>{esc(item["q"])}</h2><p>{esc(item["a"])}</p>'
+        + (f'<p><a href="{u("compare/" + item["more"])}">Sources and the full argument →</a></p>' if item.get("more") else "")
+        + "</section>"
         for item in faq
     )
     body = f'<nav class="crumbs"><a href="{u()}">Home</a> › FAQ</nav>\n<h1>Frequently asked questions</h1>\n{blocks}'
@@ -432,7 +499,7 @@ def build() -> dict:
         shutil.rmtree(OUT)
     OUT.mkdir(parents=True)
     written = {"projects": 0, "categories": 0, "comparisons": 0, "other": 0}
-    urls = [abs_url()]
+    urls = [(abs_url(), g.STARS_CAPTURED)]
 
     (OUT / "index.html").write_text(render_index())
     (OUT / "styles.css").write_text(STYLES)
@@ -446,32 +513,32 @@ def build() -> dict:
 
     (OUT / "faq").mkdir()
     (OUT / "faq" / "index.html").write_text(render_faq())
-    urls.append(abs_url("faq"))
+    urls.append((abs_url("faq"), g.STARS_CAPTURED))
 
     (OUT / "radar").mkdir()
     (OUT / "radar" / "index.html").write_text(render_radar_page())
-    urls.append(abs_url("radar"))
+    urls.append((abs_url("radar"), g.STARS_CAPTURED))
 
     for p in g.ordered_projects():
         slug = g.project_slug(p.github_id)
         d = OUT / "h" / slug
         d.mkdir(parents=True)
         (d / "index.html").write_text(render_project(p))
-        urls.append(abs_url("h/" + slug))
+        urls.append((abs_url("h/" + slug), g.STARS_CAPTURED))
         written["projects"] += 1
 
     for cid, title, subtitle in g.CATEGORIES:
         d = OUT / "c" / cid
         d.mkdir(parents=True)
         (d / "index.html").write_text(render_category(cid, title, subtitle))
-        urls.append(abs_url("c/" + cid))
+        urls.append((abs_url("c/" + cid), g.STARS_CAPTURED))
         written["categories"] += 1
 
     for c in g.comparisons_index():
         d = OUT / "compare" / c["slug"]
         d.mkdir(parents=True)
         (d / "index.html").write_text(render_comparison(c))
-        urls.append(abs_url("compare/" + c["slug"]))
+        urls.append((abs_url("compare/" + c["slug"]), source_dates(f"comparisons/{c['slug']}.md")[1]))
         written["comparisons"] += 1
 
     # Copy machine-readable surfaces + assets so the site serves them directly.
@@ -481,12 +548,16 @@ def build() -> dict:
             shutil.copy2(src, OUT / f)
             written["other"] += 1
     shutil.copytree(ROOT / "assets", OUT / "assets")
+    guides = "\n\n---\n\n".join((ROOT / "comparisons" / f"{c['slug']}.md").read_text() for c in g.comparisons_index())
+    (OUT / "llms-full.txt").write_text(
+        (ROOT / "llms.txt").read_text() + "\n\n---\n\n# Decision guides, full text\n\n" + guides + "\n")
+    written["other"] += 1
 
     # sitemap.xml + robots.txt
     sm = ['<?xml version="1.0" encoding="UTF-8"?>',
           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
-    for url in urls:
-        sm.append(f"  <url><loc>{url}</loc><lastmod>{g.STARS_CAPTURED}</lastmod></url>")
+    for url, lastmod in urls:
+        sm.append(f"  <url><loc>{url}</loc><lastmod>{lastmod}</lastmod></url>")
     sm.append("</urlset>")
     (OUT / "sitemap.xml").write_text("\n".join(sm) + "\n")
     (OUT / "robots.txt").write_text(

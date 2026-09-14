@@ -70,3 +70,31 @@ def test_main_exits_zero_when_clean(monkeypatch, capsys):
     assert exc_info.value.code == 0
     out = capsys.readouterr().out
     assert "integrity OK" in out
+
+
+def test_intro_sentinel_in_both_generated_intros():
+    assert check_integrity.INTRO_SENTINEL in generate.generate_readme()
+    assert check_integrity.INTRO_SENTINEL in generate.generate_header_md()
+
+
+def test_thesis_faq_carries_its_sources_guide():
+    faq = generate.build_faq()
+    item = next(i for i in faq if i["q"] == "Does the harness matter more than the model?")
+    assert item["kind"] == "concept"
+    assert item["more"] == "why-the-harness-matters"
+    assert all("more" not in i for i in faq if i["kind"] == "use-case")
+
+
+def test_new_guides_index_with_prose_summaries():
+    idx = {c["slug"]: c for c in generate.comparisons_index()}
+    for slug in ("why-the-harness-matters", "managed-vs-self-hosted-always-on-agents",
+                 "best-ai-agent-harnesses-2026"):
+        assert idx[slug]["summary"], slug
+        assert not idx[slug]["summary"].startswith(("[", "<", "|", "_")), slug
+
+
+def test_best_of_page_lists_every_live_category():
+    md = generate.generate_best_harnesses_md()
+    assert md.startswith("# The best AI agent harnesses in 2026")
+    for _, title, _ in generate.CATEGORIES:
+        assert f"## {title}" in md

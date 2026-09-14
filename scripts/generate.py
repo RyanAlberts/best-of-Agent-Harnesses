@@ -174,6 +174,9 @@ PROJECTS: dict[str, list[Project]] = {
                 "mostly simple (compression library/proxy/MCP server)"),
     ],
     "coding-agent-products": [
+        Project("Prime Agent", "PrimeIntellect-ai/prime-agent",
+                "Prime Intellect's self-improving coding and research agent. The **harness** is a recursive language model loop (context as a variable, sub-agents as function calls inside a persistent IPython REPL) plus a Continual Harness that lets the agent create, read, update, and delete its own prompts, skills, memory, and sub-agents mid-run; daemon-backed sessions survive a closed terminal, and autonomous mode runs on turn, token, and time budgets. 95.5% on ARC-AGI-3 with Opus 5; the terminal UI is the shell.",
+                "slightly complex (terminal agent, daemon sessions, RLM + Continual Harness)", labels=["javascript"]),
         Project("oh-my-pi", "can1357/oh-my-pi",
                 "Terminal coding agent (fork of Pi) that wires the IDE into the **harness**: hash-anchored edits, a 32-tool loop tuned per-model, LSP rename/references/diagnostics on every write, a real DAP debugger (lldb/dlv/debugpy), long-lived Python + Bun execution kernels that call back into the agent's tools, browser control, and 40+ providers (Claude/OpenAI/Gemini/local). ~55k-line Rust core.",
                 "slightly complex (terminal agent, LSP/DAP, multi-provider)", labels=["rust"]),
@@ -304,6 +307,12 @@ PROJECTS: dict[str, list[Project]] = {
                 "slightly complex (research reference implementation)", oss="❓"),
     ],
     "personal-agent-runtimes": [
+        Project("QM", "yc-software/qm",
+                "Y Combinator's multiplayer agent **harness** for work, open-sourced from months of internal use: every person and room gets scoped memory, files, credentials, permissions, crons, web apps, and a durable sandbox; sessions, memory, and the work queue live in Postgres, sandboxes are a resource the agent reaches for rather than the place it lives, and Pi, OpenCode, Codex, or Claude Code can drive the same core. Slack and the web app are the shells.",
+                "complex (multi-tenant runtime, Postgres state, sandboxes; product suite)", labels=["javascript"]),
+        Project("OpenJarvis", "open-jarvis/OpenJarvis",
+                "Stanford Hazy Research's local-first personal AI **harness**: on-device model inference (Ollama built in), agent execution, memory, and learning as shared primitives, with on-demand, scheduled, and continuous agents and evaluations that count energy, latency, and dollars alongside accuracy; a cloud model can tune the local configuration once so run time stays on your own hardware.",
+                "slightly complex (local-first runtime, scheduled and continuous agents)", labels=["python"]),
         Project("Talon", "dylanneve1/talon",
                 "Multi-platform personal agent living in Telegram, Discord, Teams, and the terminal. The **harness** is a pluggable-backend loop (Claude, Kilo, OpenCode, Codex, OpenAI Agents) with full MCP tool access and persistent background agents (Goals, Heartbeat, Dream); the chat apps are shells.",
                 "slightly complex (multi-platform, pluggable backends, MCP)", labels=["javascript"]),
@@ -692,6 +701,7 @@ META: dict[str, tuple[int, str, str]] = {
     "headroomlabs-ai/headroom": (71864, "https://github.com/headroomlabs-ai/headroom#readme", "Project README"),
     # coding-agent-products
     "can1357/oh-my-pi": (30931, "https://github.com/can1357/oh-my-pi/blob/main/docs/lsp-config.md", "LSP wired into edits"),
+    "PrimeIntellect-ai/prime-agent": (20762, "https://www.youtube.com/watch?v=n9xKblqyQ28&t=1080s", "YC Paper Club talk (18:00)"),
     "earendil-works/pi": (104621, "https://github.com/earendil-works/pi#readme", "Project README"),
     "madarco/agentbox": (395, "https://github.com/madarco/agentbox#readme", "Parallel agents quick start"),
     "proliferate-ai/proliferate": (500, "https://github.com/proliferate-ai/proliferate#readme", "Product README"),
@@ -755,6 +765,8 @@ META: dict[str, tuple[int, str, str]] = {
     "2FastLabs/agent-squad": (7760, "https://github.com/2FastLabs/agent-squad/tree/main/examples/ecommerce-support-simulator", "E-commerce support sim"),
     "superagentxai/superagentx": (203, "https://github.com/superagentxai/superagentx/blob/master/examples/agents/parallel_agents.py", "Parallel marketing agents"),
     "openclaw/openclaw": (389597, "https://github.com/openclaw/openclaw/blob/main/docs/agent-runtime-architecture.md", "Agent runtime architecture"),
+    "yc-software/qm": (14956, "https://www.youtube.com/watch?v=n9xKblqyQ28&t=2730s", "YC Paper Club talk (45:30)"),
+    "open-jarvis/OpenJarvis": (9728, "https://www.youtube.com/watch?v=n9xKblqyQ28&t=2240s", "YC Paper Club talk (37:20)"),
     "NousResearch/hermes-agent": (245094, "https://github.com/NousResearch/hermes-agent/tree/main/skills", "Built-in skills"),
     "dylanneve1/talon": (76, "https://github.com/dylanneve1/talon#readme", "Multi-platform setup"),
     "openinterpreter/openinterpreter": (68312, "https://github.com/openinterpreter/openinterpreter#readme", "Quick start"),
@@ -1098,6 +1110,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "headroomlabs-ai/headroom": ("n/a", "n/a"),
     # coding-agent-products
     "can1357/oh-my-pi": ("bounded", "resumable"),
+    "PrimeIntellect-ai/prime-agent": ("headless", "resumable"),
     "earendil-works/pi": ("bounded", "resumable"),
     "madarco/agentbox": ("n/a", "n/a"),
     "proliferate-ai/proliferate": ("bounded", "resumable"),
@@ -1166,6 +1179,8 @@ AXES: "dict[str, tuple[str, str]]" = {
     "myshell-ai/AIlice": ("bounded", "none"),
     "howl-anderson/agentsilex": ("bounded", "none"),
     "openclaw/openclaw": ("headless", "resumable"),
+    "yc-software/qm": ("headless", "durable"),
+    "open-jarvis/OpenJarvis": ("headless", "none"),
     "NousResearch/hermes-agent": ("headless", "resumable"),
     "dylanneve1/talon": ("headless", "resumable"),
     "openinterpreter/openinterpreter": ("bounded", "resumable"),
@@ -1322,11 +1337,12 @@ USE_CASES: "list[tuple[str, list[str], str]]" = [
     ("I want a turnkey coding agent today",
      ["anomalyco/opencode", "cline/cline", "openai/codex",
       "google-gemini/gemini-cli", "OpenHands/OpenHands",
-      "charmbracelet/crush"],
+      "charmbracelet/crush", "PrimeIntellect-ai/prime-agent"],
      "Coding agent products (IDEs, CLIs, full suites)"),
     ("I want an always-on personal agent that lives in my chat apps",
      ["openclaw/openclaw", "NousResearch/hermes-agent", "khoj-ai/khoj",
-      "agent0ai/agent-zero", "HKUDS/OpenHarness"],
+      "agent0ai/agent-zero", "HKUDS/OpenHarness", "yc-software/qm",
+      "open-jarvis/OpenJarvis"],
      "Personal agent runtimes"),
     ("I want to extend Claude Code, Codex, or OpenCode with skills and slash commands",
      ["anthropics/skills", "wshobson/agents",
@@ -1559,8 +1575,11 @@ def build_faq() -> list:
     concept so each surface can include the right subset."""
     faq: list = []
 
-    def add(kind: str, q: str, a: str) -> None:
-        faq.append({"kind": kind, "q": q, "a": a, "slug": slug(q)})
+    def add(kind: str, q: str, a: str, more: "str | None" = None) -> None:
+        item = {"kind": kind, "q": q, "a": a, "slug": slug(q)}
+        if more:  # slug of the comparisons/ guide that carries the sources
+            item["more"] = more
+        faq.append(item)
 
     for intent, ids, cat_title in USE_CASES:
         live_ids = [g for g in ids if not is_graveyard(g)]
@@ -1585,6 +1604,18 @@ def build_faq() -> list:
         "The runtime that turns a model into an agent: it decides what the model's reasoning "
         "is allowed to touch, and supplies the orchestration, tool wiring, memory, error "
         "recovery, and guardrails around per-turn inference.")
+    add("concept", "Does the harness matter more than the model?",
+        "Often, yes, and measurably: the same weights scored about 30% on ARC-AGI-3 as a bare model "
+        "and 95.5% inside the Prime Agent harness, and on SWE-bench Pro swapping only the harness moved "
+        "GLM-5.2 from 23% to 52%. Harness rankings barely transfer across models (rank correlation about "
+        "-0.05), so pick the harness and the model as a pair, and re-pick when the model changes.",
+        more="why-the-harness-matters")
+    add("concept", "Is Grok Bot an agent harness?",
+        "Yes, a managed one: xAI owns the loop, the tool wiring, the memory, and the approval rules, and "
+        "every Bot on an account shares one cloud computer. It is not in the ranked list because the list "
+        "ranks open repositories; the managed-vs-self-hosted guide compares it with Claude Managed Agents, "
+        "QM, OpenClaw, Hermes, and OpenJarvis.",
+        more="managed-vs-self-hosted-always-on-agents")
     add("concept", "How is this list ranked?",
         "By relevance to harness concerns (environment, orchestration, lifecycle, guardrails) "
         f"and by GitHub stars (captured {STARS_CAPTURED}); each project also carries an "
@@ -1635,6 +1666,8 @@ def generate_readme() -> str:
         "",
         "The benchmark data now backs this up. On SWE-bench Pro, \"swapping the agent harness changed pass@1 more than many model upgrades do\" ([AINews, Aug 8 2026](https://www.latent.space/p/ainews-zawinskis-law-of-multiagents), citing analysis by [@joelniklaus](https://x.com/joelniklaus/status/2085725862142623875)). Same model, different harness: 23% to 52% pass@1 on GLM-5.2, and 15% to 36% on Gemma 4 26B. Harness rankings barely transfer across models (rank correlation -0.05), so a small model in the right harness can approach a much larger model in the wrong one.",
         "",
+        "The gap is widest on long-horizon work. A bare frontier model was verified at about 30% on ARC-AGI-3; [Prime Agent](https://arxiv.org/abs/2608.23552)'s harness took Opus 5 to 95.5%, and the [YC Paper Club talk on why the harness matters more than the model](https://www.youtube.com/watch?v=n9xKblqyQ28) (September 2026) walks through how. The gains come from a new class of self-improving harnesses, not from piling on scaffolding: the best of them stay thin and expose only what the model cannot do for itself. And because rankings barely transfer across models, the harness choice is a pairing that must be re-asked whenever the model changes. [Who says so, what they measured, and what the claim does not mean](comparisons/why-the-harness-matters.md) is its own page.",
+        "",
         "That is the problem the [MCP server](#for-agents) in this repo solves. Point your agent at it and it can call `recommend` or `pick_harness` to choose a harness matched to your model and task, instead of inheriting whichever harness someone else benchmarked.",
         "",
         "## The landscape at a glance",
@@ -1651,9 +1684,12 @@ def generate_readme() -> str:
         "",
         "_Start with the guide, then the head-to-head decision pages — grounded in the same data as the tables below:_",
         "",
+        "- [**Why the harness matters more than the model**](comparisons/why-the-harness-matters.md): the measurements (ARC-AGI-3 30% to 95.5% on the same weights), who says so, and what the claim does not mean",
         "- [**How to pick a harness**](comparisons/how-to-pick-a-harness.md): six questions that turn this list into a decision, plus the chart to internalize first (the harness moves scores more than the model)",
         "- [**How to test-drive a harness**](comparisons/how-to-test-drive-a-harness.md): the two-week trial protocol, with a fair setup, tasks from your own repos, seven measurements, and the walk-away test",
+        "- [**The best AI agent harnesses in 2026, ranked by category**](comparisons/best-ai-agent-harnesses-2026.md): the top three per category from this week's data, regenerated on every refresh",
         "- [**OpenClaw vs Hermes**](comparisons/openclaw-vs-hermes.md) — the always-on personal-agent debate: presence vs discipline, plus what the field reports actually say",
+        "- [**Managed vs self-hosted always-on agents**](comparisons/managed-vs-self-hosted-always-on-agents.md): Grok Bot, Claude Managed Agents, QM, OpenClaw, Hermes, and OpenJarvis; who owns the computer and who pays for idle time",
         "- [**Terminal coding agents** — opencode vs Codex vs Gemini CLI vs crush vs goose](comparisons/terminal-coding-agents.md)",
         "- [**Multi-agent orchestration** — OpenAI Agents SDK vs CrewAI vs AutoGen vs LangGraph](comparisons/multi-agent-orchestration.md)",
         "- [**Agent memory layers** — Mem0 vs Letta vs claude-mem](comparisons/memory-layers.md)",
@@ -1787,7 +1823,8 @@ def generate_readme() -> str:
     for item in build_faq():
         if item["kind"] == "use-case":
             continue  # use-case Q&A already lives in "Pick by use case"; full set is in llms.txt / harnesses.json
-        body += [f"### {item['q']}", "", item["a"], ""]
+        more = f" [Sources and the full argument](comparisons/{item['more']}.md)" if item.get("more") else ""
+        body += [f"### {item['q']}", "", item["a"] + more, ""]
     body += [
         "<br>",
         "",
@@ -1799,6 +1836,7 @@ def generate_readme() -> str:
         "- [**OpenAI – Harness engineering**](https://openai.com/index/harness-engineering/): Environment design, intent, feedback loops, repo-as-system-of-record",
         "- [**Anthropic – Effective harnesses for long-running agents**](https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents): Session bridging, feature lists, incremental progress, testing",
         "- [**Aakash Gupta (Medium) – 2026 is agent harnesses**](https://aakashgupta.medium.com/2025-was-agents-2026-is-agent-harnesses-heres-why-that-changes-everything-073e9877655e): Harness as moat, minimal intervention, progressive disclosure",
+        "- [**YC Paper Club (video) – Why the harness matters more than the model**](https://www.youtube.com/watch?v=n9xKblqyQ28): September 2026 session with the authors of Prime Agent, OpenJarvis, and QM; the history of harnesses runs from 7:00 to 17:00",
         "- [**LangChain**](https://python.langchain.com/), [**Anthropic**](https://docs.anthropic.com/), [**OpenAI**](https://platform.openai.com/docs): Official docs for major agent platforms",
         "",
         "## 🧡 Thank you, contributors",
@@ -2134,7 +2172,7 @@ def generate_llms_txt() -> str:
     lines = [
         "# Best of Agent Harnesses",
         "",
-        f"> Hand-curated, ranked list of {total} AI agent harnesses — the runtimes that close the loop between a stateless model and the outside world. {n_categories} categories, a 4-tier adoption-surface rating (simplicity ↔ capability), capability tags, a license signal, and one concrete example link per project. Stars captured {STARS_CAPTURED}.",
+        f"> Hand-curated, ranked list of {total} AI agent harnesses — the runtimes that close the loop between a stateless model and the outside world. {n_categories} categories, a 4-tier adoption-surface rating (simplicity ↔ capability), capability tags, a license signal, and one concrete example link per project. Stars captured {STARS_CAPTURED}. The harness matters more than the model: the same weights score about 30% on ARC-AGI-3 bare and 95.5% inside Prime Agent, and harness rankings barely transfer across models, so pick harness and model as a pair (sources: {SITE_URL}compare/why-the-harness-matters/ ; this week's top picks per category: {SITE_URL}compare/best-ai-agent-harnesses-2026/ ).",
         "",
         "Maintained at https://github.com/RyanAlberts/best-of-Agent-Harnesses (CC-BY-SA-4.0).",
         "Structured data: https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/harnesses.json",
@@ -2156,6 +2194,8 @@ def generate_llms_txt() -> str:
     for item in build_faq():
         lines.append(f"### {item['q']}")
         lines.append(item["a"])
+        if item.get("more"):
+            lines.append(f"More: {SITE_URL}compare/{item['more']}/")
         lines.append("")
     for cat_id, title, subtitle in CATEGORIES:
         lines.append(f"## {title} ({len(live_projects(cat_id))} projects)")
@@ -2539,11 +2579,50 @@ Agents can query the same data: the [MCP server](mcp/) (`claude mcp add agent-ha
 """
 
 
+def generate_best_harnesses_md() -> str:
+    """comparisons/best-ai-agent-harnesses-2026.md: the top three live projects
+    per category from the current data, regenerated on every refresh so the
+    page always carries this week's stars and a fresh modified date. Written
+    before anything calls comparisons_index(), so it indexes like a
+    hand-written guide (site, llms.txt, harnesses.json, sitemap, MCP)."""
+    total = count_projects()
+    lines = [
+        "# The best AI agent harnesses in 2026, ranked by category",
+        "",
+        f"These are the top three agent harnesses in each of the {len(CATEGORIES)} categories of best-of-Agent-Harnesses, a hand-curated list of {total} harnesses re-ranked from live GitHub data every week; the stars below were captured {STARS_CAPTURED}, and the page regenerates with every refresh.",
+        "",
+        "<!-- Generated by scripts/generate.py from the list data. Do not edit by hand; edit the Project rows in the generator. -->",
+        "",
+        "## How this page is ranked",
+        "",
+        "Projects enter the list by editorial review against one rubric: does it own the agent loop, the tool wiring, the approval model, or the memory, and is it maintained. Within a category the order is GitHub stars, captured weekly, and each project carries its adoption-surface tier and its autonomy and recovery scores, so a high star count never hides a harness that cannot run unattended or survive a crash. Archived projects move to the graveyard and never appear here. The [six-question guide](how-to-pick-a-harness.md) turns these tables into a decision, and [why the harness matters more than the model](why-the-harness-matters.md) explains why the choice deserves the care.",
+        "",
+    ]
+    for cat_id, title, subtitle in CATEGORIES:
+        top = sorted(live_projects(cat_id), key=lambda p: stars_for(p.github_id), reverse=True)[:3]
+        lines += [f"## {title}", "", f"_{subtitle}_ [Full category →](../README.md#{slug(title)})", ""]
+        for i, p in enumerate(top, 1):
+            a, r = axes_for(p.github_id)
+            axes = f"autonomy {a}, recovery {r}" if a != "n/a" else "not a loop-owning harness (a format, config, or library)"
+            lines.append(f"{i}. **[{p.display_name}](https://github.com/{p.github_id})** ({format_stars(stars_for(p.github_id))} stars, {tier_of(p)}, {axes}): {p.description}")
+        lines.append("")
+    lines += [
+        "---",
+        "",
+        "_Part of [best-of-Agent-Harnesses](https://github.com/RyanAlberts/best-of-Agent-Harnesses). Regenerated from the list data on every weekly refresh._",
+        "",
+        "_Agents can query this page's data directly: `claude mcp add agent-harnesses -- uvx agent-harnesses-mcp` ([MCP server](../mcp/))._",
+        "",
+    ]
+    return "\n".join(lines)
+
+
 def main():
     all_ids = {p.github_id for plist in PROJECTS.values() for p in plist}
     orphans = set(AXES) - all_ids
     if orphans:
         raise KeyError(f"AXES has entries for unknown projects: {sorted(orphans)}")
+    (REPO_ROOT / "comparisons" / "best-ai-agent-harnesses-2026.md").write_text(generate_best_harnesses_md())
     yaml_content = generate_yaml()
     readme_content = generate_readme()
     header_content = generate_header_md()

@@ -9,7 +9,7 @@
     "feed_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/feed.json",
     "license": "CC-BY-SA-4.0",
     "stars_captured": "2026-09-13",
-    "project_count": 164,
+    "project_count": 167,
     "graveyard_count": 3,
     "tiers": [
       "super simple",
@@ -132,7 +132,8 @@
         "openai/codex",
         "google-gemini/gemini-cli",
         "OpenHands/OpenHands",
-        "charmbracelet/crush"
+        "charmbracelet/crush",
+        "PrimeIntellect-ai/prime-agent"
       ],
       "category_title": "Coding agent products (IDEs, CLIs, full suites)"
     },
@@ -143,7 +144,9 @@
         "NousResearch/hermes-agent",
         "khoj-ai/khoj",
         "agent0ai/agent-zero",
-        "HKUDS/OpenHarness"
+        "HKUDS/OpenHarness",
+        "yc-software/qm",
+        "open-jarvis/OpenJarvis"
       ],
       "category_title": "Personal agent runtimes"
     },
@@ -363,19 +366,19 @@
     {
       "kind": "derived",
       "q": "Which agent harnesses can run unattended (headless)?",
-      "a": "Harnesses designed for unattended runs, batches, and fleets: opencode, OpenHands, goose, Symphony, SWE-agent, Claude Agent SDK, RepoMaster, OpenClaw.",
+      "a": "Harnesses designed for unattended runs, batches, and fleets: opencode, OpenHands, goose, Symphony, Prime Agent, SWE-agent, Claude Agent SDK, RepoMaster.",
       "slug": "which-agent-harnesses-can-run-unattended-headless"
     },
     {
       "kind": "derived",
       "q": "Which agent harnesses survive a crash mid-task (durable)?",
-      "a": "Harnesses whose execution state persists across restarts: langgraph-bigtool, n8n, langgraph, mastra, letta, deepagents, pydantic-ai, Cloudflare Agents.",
+      "a": "Harnesses whose execution state persists across restarts: langgraph-bigtool, QM, n8n, langgraph, mastra, letta, deepagents, pydantic-ai.",
       "slug": "which-agent-harnesses-survive-a-crash-mid-task-durable"
     },
     {
       "kind": "derived",
       "q": "How many of these agent harnesses are open source?",
-      "a": "121 of 164 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
+      "a": "124 of 167 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
       "slug": "how-many-of-these-agent-harnesses-are-open-source"
     },
     {
@@ -383,6 +386,20 @@
       "q": "What is an agent harness?",
       "a": "The runtime that turns a model into an agent: it decides what the model's reasoning is allowed to touch, and supplies the orchestration, tool wiring, memory, error recovery, and guardrails around per-turn inference.",
       "slug": "what-is-an-agent-harness"
+    },
+    {
+      "kind": "concept",
+      "q": "Does the harness matter more than the model?",
+      "a": "Often, yes, and measurably: the same weights scored about 30% on ARC-AGI-3 as a bare model and 95.5% inside the Prime Agent harness, and on SWE-bench Pro swapping only the harness moved GLM-5.2 from 23% to 52%. Harness rankings barely transfer across models (rank correlation about -0.05), so pick the harness and the model as a pair, and re-pick when the model changes.",
+      "slug": "does-the-harness-matter-more-than-the-model",
+      "more": "why-the-harness-matters"
+    },
+    {
+      "kind": "concept",
+      "q": "Is Grok Bot an agent harness?",
+      "a": "Yes, a managed one: xAI owns the loop, the tool wiring, the memory, and the approval rules, and every Bot on an account shares one cloud computer. It is not in the ranked list because the list ranks open repositories; the managed-vs-self-hosted guide compares it with Claude Managed Agents, QM, OpenClaw, Hermes, and OpenJarvis.",
+      "slug": "is-grok-bot-an-agent-harness",
+      "more": "managed-vs-self-hosted-always-on-agents"
     },
     {
       "kind": "concept",
@@ -404,6 +421,13 @@
       "summary": "You changed your agent: new model, new prompt, new tools. Did it get better or worse? An eval is how you answer that with a number instead of a feeling. The word covers two different products, and knowing which one you need is most of the decision. A **benchmark** is a fixed public exam with a leade",
       "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/comparisons/agent-eval-harnesses.md",
       "raw_url": "https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/comparisons/agent-eval-harnesses.md"
+    },
+    {
+      "slug": "best-ai-agent-harnesses-2026",
+      "title": "The best AI agent harnesses in 2026, ranked by category",
+      "summary": "These are the top three agent harnesses in each of the 12 categories of best-of-Agent-Harnesses, a hand-curated list of 167 harnesses re-ranked from live GitHub data every week; the stars below were captured 2026-09-13, and the page regenerates with every refresh.",
+      "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/comparisons/best-ai-agent-harnesses-2026.md",
+      "raw_url": "https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/comparisons/best-ai-agent-harnesses-2026.md"
     },
     {
       "slug": "browser-agents",
@@ -448,6 +472,13 @@
       "raw_url": "https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/comparisons/how-to-test-drive-a-harness.md"
     },
     {
+      "slug": "managed-vs-self-hosted-always-on-agents",
+      "title": "Managed vs self-hosted always-on agents",
+      "summary": "An always-on agent keeps working between your messages, and in 2026 you can rent one (Grok Bot, Claude Managed Agents), run one for your whole team (QM), run one for yourself (OpenClaw, Hermes), or keep one on your own laptop (OpenJarvis). This guide says who owns the computer in each case, who pays",
+      "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/comparisons/managed-vs-self-hosted-always-on-agents.md",
+      "raw_url": "https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/comparisons/managed-vs-self-hosted-always-on-agents.md"
+    },
+    {
       "slug": "memory-layers",
       "title": "Agent memory layers: Mem0 vs Zep vs Letta vs claude-mem",
       "summary": "Agents forget. A model keeps nothing between sessions, so anything your agent should still know tomorrow (who the user is, what was decided, what failed last time) has to live in a memory system outside the model. \"Add memory to my agent\" then hides genuinely different products, and picking by star ",
@@ -488,6 +519,13 @@
       "summary": "The most-asked pick in this list: *\"I want a turnkey coding agent in my terminal today.\"* A terminal coding agent is a program you run in your shell that takes a plain-language request, then works in a loop: the model proposes an action (edit this file, run this command, search the repo), the tool e",
       "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/comparisons/terminal-coding-agents.md",
       "raw_url": "https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/comparisons/terminal-coding-agents.md"
+    },
+    {
+      "slug": "why-the-harness-matters",
+      "title": "Why the harness matters more than the model",
+      "summary": "The same model weights score about 30% on ARC-AGI-3 as a bare model and 95.5% inside a good harness, and that gap is the number agent builders keep quoting. This page collects who says the harness matters more than the model, what each of them measured, and what the claim does not mean.",
+      "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/comparisons/why-the-harness-matters.md",
+      "raw_url": "https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/comparisons/why-the-harness-matters.md"
     }
   ],
   "projects": [
@@ -1905,6 +1943,37 @@
           "evidence": "https://github.com/RooCodeInc/Roo-Code"
         }
       }
+    },
+    {
+      "name": "Prime Agent",
+      "github_id": "PrimeIntellect-ai/prime-agent",
+      "url": "https://github.com/PrimeIntellect-ai/prime-agent",
+      "slug": "prime-agent",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#prime-agent",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/prime-agent/",
+      "description": "Prime Intellect's self-improving coding and research agent. The **harness** is a recursive language model loop (context as a variable, sub-agents as function calls inside a persistent IPython REPL) plus a Continual Harness that lets the agent create, read, update, and delete its own prompts, skills, memory, and sub-agents mid-run; daemon-backed sessions survive a closed terminal, and autonomous mode runs on turn, token, and time budgets. 95.5% on ARC-AGI-3 with Opus 5; the terminal UI is the shell.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 20762,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (terminal agent, daemon sessions, RLM + Continual Harness)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "open-source",
+      "tags": [
+        "memory",
+        "multi-agent",
+        "cli",
+        "typescript"
+      ],
+      "example": {
+        "label": "YC Paper Club talk (18:00)",
+        "url": "https://www.youtube.com/watch?v=n9xKblqyQ28&t=1080s"
+      },
+      "deep_dive": null
     },
     {
       "name": "jcode",
@@ -3607,6 +3676,66 @@
           "evidence": "https://github.com/HKUDS/OpenHarness#readme"
         }
       }
+    },
+    {
+      "name": "QM",
+      "github_id": "yc-software/qm",
+      "url": "https://github.com/yc-software/qm",
+      "slug": "qm",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#qm",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/qm/",
+      "description": "Y Combinator's multiplayer agent **harness** for work, open-sourced from months of internal use: every person and room gets scoped memory, files, credentials, permissions, crons, web apps, and a durable sandbox; sessions, memory, and the work queue live in Postgres, sandboxes are a resource the agent reaches for rather than the place it lives, and Pi, OpenCode, Codex, or Claude Code can drive the same core. Slack and the web app are the shells.",
+      "category": "personal-agent-runtimes",
+      "category_title": "Personal agent runtimes",
+      "stars": 14956,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (multi-tenant runtime, Postgres state, sandboxes; product suite)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "durable",
+      "recovery_rank": 4,
+      "license_signal": "open-source",
+      "tags": [
+        "memory",
+        "sandbox",
+        "typescript"
+      ],
+      "example": {
+        "label": "YC Paper Club talk (45:30)",
+        "url": "https://www.youtube.com/watch?v=n9xKblqyQ28&t=2730s"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "OpenJarvis",
+      "github_id": "open-jarvis/OpenJarvis",
+      "url": "https://github.com/open-jarvis/OpenJarvis",
+      "slug": "openjarvis",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#openjarvis",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/openjarvis/",
+      "description": "Stanford Hazy Research's local-first personal AI **harness**: on-device model inference (Ollama built in), agent execution, memory, and learning as shared primitives, with on-demand, scheduled, and continuous agents and evaluations that count energy, latency, and dollars alongside accuracy; a cloud model can tune the local configuration once so run time stays on your own hardware.",
+      "category": "personal-agent-runtimes",
+      "category_title": "Personal agent runtimes",
+      "stars": 9728,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (local-first runtime, scheduled and continuous agents)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "none",
+      "recovery_rank": 1,
+      "license_signal": "open-source",
+      "tags": [
+        "memory",
+        "local",
+        "python"
+      ],
+      "example": {
+        "label": "YC Paper Club talk (37:20)",
+        "url": "https://www.youtube.com/watch?v=n9xKblqyQ28&t=2240s"
+      },
+      "deep_dive": null
     },
     {
       "name": "AIlice",

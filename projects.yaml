@@ -84,6 +84,10 @@ projects:
     github_id: headroomlabs-ai/headroom
     category: "progressive-disclosure"
   # Coding agent products (IDEs, CLIs, full suites)
+  - name: Prime Agent
+    github_id: PrimeIntellect-ai/prime-agent
+    labels: ["javascript"]
+    category: "coding-agent-products"
   - name: oh-my-pi
     github_id: can1357/oh-my-pi
     labels: ["rust"]
@@ -228,6 +232,14 @@ projects:
     github_id: stanford-iris-lab/meta-harness
     category: "coding-harness-configs"
   # Personal agent runtimes
+  - name: QM
+    github_id: yc-software/qm
+    labels: ["javascript"]
+    category: "personal-agent-runtimes"
+  - name: OpenJarvis
+    github_id: open-jarvis/OpenJarvis
+    labels: ["python"]
+    category: "personal-agent-runtimes"
   - name: Talon
     github_id: dylanneve1/talon
     labels: ["javascript"]

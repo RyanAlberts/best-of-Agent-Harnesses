@@ -338,8 +338,11 @@ def _compare_payload(d: dict, projects: list, warnings: list) -> dict:
     name_tokens = [_tokens(p["name"]) for p in projects]
     best_guide, best_hits = None, 1
     for c in d.get("comparisons", []):
+        # A project named in the guide's title counts double, so a head-to-head
+        # page (OpenClaw vs Hermes) outranks a survey that merely lists both.
+        title_hay = _tokens(c["title"])
         hay = _tokens(f"{c['title']} {c.get('summary', '')}")
-        hits = sum(1 for t in name_tokens if _overlap(t, hay))
+        hits = sum(2 if _overlap(t, title_hay) else (1 if _overlap(t, hay) else 0) for t in name_tokens)
         if hits > best_hits:
             best_guide, best_hits = c, hits
     if best_guide:

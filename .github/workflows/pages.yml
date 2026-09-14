@@ -39,6 +39,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0  # build_site.py reads guide dates from git history
       - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
