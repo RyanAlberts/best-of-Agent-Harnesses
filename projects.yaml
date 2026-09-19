@@ -173,6 +173,10 @@ projects:
     github_id: yylo-dev/yylo
     labels: ["javascript"]
     category: "coding-agent-products"
+  - name: PI-Desktop
+    github_id: vastsa/PI-Desktop
+    labels: ["rust"]
+    category: "coding-agent-products"
   # Coding harness configs and SDKs
   - name: LoopTroop
     github_id: looptroop-ai/LoopTroop
@@ -433,6 +437,17 @@ projects:
     github_id: omnigent-ai/omnigent
     labels: ["python"]
     category: "multi-agent"
+  - name: Orkas
+    github_id: Orkas-AI/Orkas
+    labels: ["javascript"]
+    category: "multi-agent"
+  - name: claudexor
+    github_id: razzant/claudexor
+    category: "multi-agent"
+  - name: agent-teams-ai
+    github_id: 777genius/agent-teams-ai
+    labels: ["javascript"]
+    category: "multi-agent"
   # Plugins, MCPs, CLI tools
   - name: aider
     github_id: Aider-AI/aider
@@ -524,6 +539,10 @@ projects:
   - name: beads
     github_id: gastownhall/beads
     category: "memory"
+  - name: deja-vu
+    github_id: vshulcz/deja-vu
+    labels: ["go"]
+    category: "memory"
   # Evaluation and benchmarking harnesses
   - name: agent-qa
     github_id: vostride/agent-qa
@@ -613,6 +632,12 @@ projects:
     github_id: Arize-ai/phoenix
     labels: ["python"]
     category: "observability"
+  - name: openlit
+    github_id: openlit/openlit
+    category: "observability"
+  - name: FailproofAI
+    github_id: FailproofAI/failproofai
+    category: "observability"
   # Research and task-specific harnesses
   - name: gpt-researcher
     github_id: assafelovic/gpt-researcher
@@ -686,4 +711,7 @@ projects:
     category: "libraries-sdks"
   - name: Community-curated agent lists
     github_id: brandonhimpfen/awesome-ai-agents
+    category: "libraries-sdks"
+  - name: HarnessRouter
+    github_id: HarnessRouter/harnessrouter
     category: "libraries-sdks"

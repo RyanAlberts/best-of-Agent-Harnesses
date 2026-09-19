@@ -9,7 +9,7 @@
     "feed_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/feed.json",
     "license": "CC-BY-SA-4.0",
     "stars_captured": "2026-09-13",
-    "project_count": 167,
+    "project_count": 175,
     "graveyard_count": 3,
     "tiers": [
       "super simple",
@@ -378,7 +378,7 @@
     {
       "kind": "derived",
       "q": "How many of these agent harnesses are open source?",
-      "a": "124 of 167 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
+      "a": "125 of 175 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
       "slug": "how-many-of-these-agent-harnesses-are-open-source"
     },
     {
@@ -425,7 +425,7 @@
     {
       "slug": "best-ai-agent-harnesses-2026",
       "title": "The best AI agent harnesses in 2026, ranked by category",
-      "summary": "These are the top three agent harnesses in each of the 12 categories of best-of-Agent-Harnesses, a hand-curated list of 167 harnesses re-ranked from live GitHub data every week; the stars below were captured 2026-09-13, and the page regenerates with every refresh.",
+      "summary": "These are the top three agent harnesses in each of the 12 categories of best-of-Agent-Harnesses, a hand-curated list of 175 harnesses re-ranked from live GitHub data every week; the stars below were captured 2026-09-13, and the page regenerates with every refresh.",
       "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/comparisons/best-ai-agent-harnesses-2026.md",
       "raw_url": "https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/comparisons/best-ai-agent-harnesses-2026.md"
     },
@@ -2063,6 +2063,34 @@
       "example": {
         "label": "Project README",
         "url": "https://github.com/NanmiCoder/cc-haha#readme"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "PI-Desktop",
+      "github_id": "vastsa/PI-Desktop",
+      "url": "https://github.com/vastsa/PI-Desktop",
+      "slug": "pi-desktop",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#pi-desktop",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/pi-desktop/",
+      "description": "Local-first desktop shell around the pi Agent Harness (`earendil-works/pi`, listed above): Electron UI plus a Rust host core, with user-installable plugins. The **harness** is pi underneath; PI-Desktop's own contribution is the cross-platform desktop shell and plugin surface on top of it.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 3269,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (desktop shell over pi Agent Harness)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "unknown",
+      "tags": [
+        "rust"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/vastsa/PI-Desktop#readme"
       },
       "deep_dive": null
     },
@@ -5990,6 +6018,94 @@
       "deep_dive": null
     },
     {
+      "name": "agent-teams-ai",
+      "github_id": "777genius/agent-teams-ai",
+      "url": "https://github.com/777genius/agent-teams-ai",
+      "slug": "agent-teams-ai",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#agent-teams-ai",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/agent-teams-ai/",
+      "description": "Kanban-driven multi-agent **harness**: agents work tasks autonomously, message each other, and review each other's work across 200+ models and 75+ providers (Codex, Claude, OpenCode, Cursor, Copilot, and more); you watch the board and give high-level commands instead of supervising each session.",
+      "category": "multi-agent",
+      "category_title": "Multi-agent and orchestration",
+      "stars": 2108,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (kanban multi-agent teams — product suite)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "unknown",
+      "tags": [
+        "multi-agent",
+        "ide",
+        "typescript"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/777genius/agent-teams-ai#readme"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "Orkas",
+      "github_id": "Orkas-AI/Orkas",
+      "url": "https://github.com/Orkas-AI/Orkas",
+      "slug": "orkas",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#orkas",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/orkas/",
+      "description": "Local-first AI desktop app: a commander LLM directs specialist sub-agents that drive your installed coding CLIs (Claude Code, Codex, OpenCode, OpenClaw, Hermes) as local sessions, with reflection-driven skill crystallization so agents improve between runs; BYO keys, cross-platform.",
+      "category": "multi-agent",
+      "category_title": "Multi-agent and orchestration",
+      "stars": 1964,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (desktop multi-agent orchestration — product suite)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "unknown",
+      "tags": [
+        "memory",
+        "multi-agent",
+        "typescript"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/Orkas-AI/Orkas#readme"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "claudexor",
+      "github_id": "razzant/claudexor",
+      "url": "https://github.com/razzant/claudexor",
+      "slug": "claudexor",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#claudexor",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/claudexor/",
+      "description": "Multi-harness control plane for Claude Code, Codex, Cursor, and OpenCode: quota-aware rotation across multiple Claude/Codex subscriptions, shared thread context, and cross-model review, so the **harness** underneath rotates without losing session continuity.",
+      "category": "multi-agent",
+      "category_title": "Multi-agent and orchestration",
+      "stars": 448,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (quota rotation, cross-model review)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "unknown",
+      "tags": [
+        "ide"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/razzant/claudexor#readme"
+      },
+      "deep_dive": null
+    },
+    {
       "name": "AgentRL",
       "github_id": "THUDM/AgentRL",
       "url": "https://github.com/THUDM/AgentRL",
@@ -6881,6 +6997,36 @@
       }
     },
     {
+      "name": "deja-vu",
+      "github_id": "vshulcz/deja-vu",
+      "url": "https://github.com/vshulcz/deja-vu",
+      "slug": "deja-vu",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#deja-vu",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/deja-vu/",
+      "description": "One memory shared across 20+ coding agents (Claude Code, Codex, Cursor, Copilot CLI, OpenClaw, and more), built entirely from the session history already on disk — a fix found in one agent surfaces in any of them, no LLM or embeddings required, single local Go binary.",
+      "category": "memory",
+      "category_title": "Memory and state",
+      "stars": 804,
+      "tier": "mostly simple",
+      "tier_rank": 2,
+      "axis": "mostly simple (single Go binary, session-derived memory)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "unknown",
+      "tags": [
+        "memory",
+        "cli",
+        "ide"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/vshulcz/deja-vu#readme"
+      },
+      "deep_dive": null
+    },
+    {
       "name": "Agent Lightning",
       "github_id": "microsoft/agent-lightning",
       "url": "https://github.com/microsoft/agent-lightning",
@@ -7553,6 +7699,60 @@
       "deep_dive": null
     },
     {
+      "name": "FailproofAI",
+      "github_id": "FailproofAI/failproofai",
+      "url": "https://github.com/FailproofAI/failproofai",
+      "slug": "failproofai",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#failproofai",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/failproofai/",
+      "description": "Observability and policy-enforcement layer for agent **harnesses**: captures every run, checks it against 40 built-in reliability policies, and surfaces failures on a local dashboard — no account required, with a free hosted tier for teams that want it.",
+      "category": "observability",
+      "category_title": "Observability and eval-ops",
+      "stars": 3117,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (policy enforcement, local dashboard)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "unknown",
+      "tags": [],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/FailproofAI/failproofai#readme"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "openlit",
+      "github_id": "openlit/openlit",
+      "url": "https://github.com/openlit/openlit",
+      "slug": "openlit",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#openlit",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/openlit/",
+      "description": "Open-source observability platform for AI agents and coding agents: traces LLM calls, tool use, prompts, cost, and GPU usage over OpenTelemetry, so teams get production visibility into a **harness**'s tool-call loop without building tracing themselves.",
+      "category": "observability",
+      "category_title": "Observability and eval-ops",
+      "stars": 2761,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (OpenTelemetry tracing + evals)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "unknown",
+      "tags": [
+        "evals"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/openlit/openlit#readme"
+      },
+      "deep_dive": null
+    },
+    {
       "name": "DeerFlow",
       "github_id": "bytedance/deer-flow",
       "url": "https://github.com/bytedance/deer-flow",
@@ -8142,6 +8342,34 @@
       "example": {
         "label": "Financial research agent",
         "url": "https://github.com/openai/openai-agents-js/tree/main/examples/financial-research-agent"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "HarnessRouter",
+      "github_id": "HarnessRouter/harnessrouter",
+      "url": "https://github.com/HarnessRouter/harnessrouter",
+      "slug": "harnessrouter",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#harnessrouter",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/harnessrouter/",
+      "description": "Self-hosted, Apache-2.0 unified API for agent **harnesses**: routes Codex, Claude Code, Hermes, Pi, DSH, and more through one interface — sessions, streaming, file access, cancellation, and failure handling — implementing the open Unified Harness Protocol (UHP). A router in front of harnesses, not a harness of its own.",
+      "category": "libraries-sdks",
+      "category_title": "Libraries and SDKs",
+      "stars": 1342,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (unified API, UHP protocol)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [
+        "memory"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/HarnessRouter/harnessrouter#readme"
       },
       "deep_dive": null
     },
