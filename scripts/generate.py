@@ -249,6 +249,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("YYLO", "yylo-dev/yylo",
                 "Command-line orchestrator for coding agents (drives Pi and Codex subagents): every task gets a dedicated branch/worktree and a typed lifecycle — read-only preflight, risk-scaled merge-queue review, release-readiness gates — with receipt-backed changes. The **harness** contribution is the git-native task/merge orchestration layer on top of whichever agent executes; not an agent loop itself.",
                 "slightly complex (git-native task fleet, merge queue)", labels=["javascript"]),
+        Project("PI-Desktop", "vastsa/PI-Desktop",
+                "Local-first desktop shell around the pi Agent Harness (`earendil-works/pi`, listed above): Electron UI plus a Rust host core, with user-installable plugins. The **harness** is pi underneath; PI-Desktop's own contribution is the cross-platform desktop shell and plugin surface on top of it.",
+                "slightly complex (desktop shell over pi Agent Harness)", oss="❓", labels=["rust"]),
     ],
     "coding-harness-configs": [
         Project("LoopTroop", "looptroop-ai/LoopTroop",
@@ -466,6 +469,15 @@ PROJECTS: dict[str, list[Project]] = {
         Project("omnigent", "omnigent-ai/omnigent",
                 "Open-source meta-**harness**: orchestrates Claude Code, Codex, Cursor, Pi, and custom agents behind one policy/sandboxing layer so teams swap harnesses without rewriting workflows.",
                 "complex (meta-harness, policy + sandboxing — product suite)", oss="❓", labels=["python"]),
+        Project("Orkas", "Orkas-AI/Orkas",
+                "Local-first AI desktop app: a commander LLM directs specialist sub-agents that drive your installed coding CLIs (Claude Code, Codex, OpenCode, OpenClaw, Hermes) as local sessions, with reflection-driven skill crystallization so agents improve between runs; BYO keys, cross-platform.",
+                "complex (desktop multi-agent orchestration — product suite)", oss="❓", labels=["javascript"]),
+        Project("claudexor", "razzant/claudexor",
+                "Multi-harness control plane for Claude Code, Codex, Cursor, and OpenCode: quota-aware rotation across multiple Claude/Codex subscriptions, shared thread context, and cross-model review, so the **harness** underneath rotates without losing session continuity.",
+                "slightly complex (quota rotation, cross-model review)", oss="❓"),
+        Project("agent-teams-ai", "777genius/agent-teams-ai",
+                "Kanban-driven multi-agent **harness**: agents work tasks autonomously, message each other, and review each other's work across 200+ models and 75+ providers (Codex, Claude, OpenCode, Cursor, Copilot, and more); you watch the board and give high-level commands instead of supervising each session.",
+                "complex (kanban multi-agent teams — product suite)", oss="❓", labels=["javascript"]),
     ],
     "plugins-mcp-cli": [
         Project("aider", "Aider-AI/aider",
@@ -542,6 +554,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("beads", "gastownhall/beads",
                 "Portable persistent-memory layer for coding agents: tracks decisions and task state outside the harness's own context window so it survives session resets and model swaps.",
                 "mostly simple (portable memory store)", oss="❓"),
+        Project("deja-vu", "vshulcz/deja-vu",
+                "One memory shared across 20+ coding agents (Claude Code, Codex, Cursor, Copilot CLI, OpenClaw, and more), built entirely from the session history already on disk — a fix found in one agent surfaces in any of them, no LLM or embeddings required, single local Go binary.",
+                "mostly simple (single Go binary, session-derived memory)", oss="❓", labels=["go"]),
     ],
     "evaluation": [
         Project("agent-qa", "vostride/agent-qa",
@@ -615,6 +630,12 @@ PROJECTS: dict[str, list[Project]] = {
         Project("Arize Phoenix", "Arize-ai/phoenix",
                 "Arize's source-available, local-first tracing and eval layer: run it on your laptop or your own infra, and graduate to the managed Arize AX platform only when you need it.",
                 "slightly complex (local-first tracing + evals)", oss="⚠️ Elastic-2.0", labels=["python"]),
+        Project("openlit", "openlit/openlit",
+                "Open-source observability platform for AI agents and coding agents: traces LLM calls, tool use, prompts, cost, and GPU usage over OpenTelemetry, so teams get production visibility into a **harness**'s tool-call loop without building tracing themselves.",
+                "slightly complex (OpenTelemetry tracing + evals)", oss="❓"),
+        Project("FailproofAI", "FailproofAI/failproofai",
+                "Observability and policy-enforcement layer for agent **harnesses**: captures every run, checks it against 40 built-in reliability policies, and surfaces failures on a local dashboard — no account required, with a free hosted tier for teams that want it.",
+                "slightly complex (policy enforcement, local dashboard)", oss="❓"),
     ],
     "research-task": [
         Project("gpt-researcher", "assafelovic/gpt-researcher",
@@ -679,6 +700,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("Community-curated agent lists", "brandonhimpfen/awesome-ai-agents",
                 "Broader directories: e.g. [brandonhimpfen/awesome-ai-agents](https://github.com/brandonhimpfen/awesome-ai-agents), [axioma-ai-labs/awesome-ai-agent-frameworks](https://github.com/axioma-ai-labs/awesome-ai-agent-frameworks), [mb-mal/awesome-ai-agents-frameworks](https://github.com/mb-mal/awesome-ai-agents-frameworks)—differ by scope and update cadence.",
                 "super simple (curated lists)", oss="❓"),
+        Project("HarnessRouter", "HarnessRouter/harnessrouter",
+                "Self-hosted, Apache-2.0 unified API for agent **harnesses**: routes Codex, Claude Code, Hermes, Pi, DSH, and more through one interface — sessions, streaming, file access, cancellation, and failure handling — implementing the open Unified Harness Protocol (UHP). A router in front of harnesses, not a harness of its own.",
+                "slightly complex (unified API, UHP protocol)"),
     ],
 }
 
@@ -724,6 +748,7 @@ META: dict[str, tuple[int, str, str]] = {
     "1jehuang/jcode": (19615, "https://github.com/1jehuang/jcode#readme", "Project README"),
     "NanmiCoder/cc-haha": (14366, "https://github.com/NanmiCoder/cc-haha#readme", "Project README"),
     "yylo-dev/yylo": (59, "https://github.com/yylo-dev/yylo#readme", "Project README"),
+    "vastsa/PI-Desktop": (3269, "https://github.com/vastsa/PI-Desktop#readme", "Project README"),
     # coding-harness-configs
     "looptroop-ai/LoopTroop": (136, "https://github.com/looptroop-ai/LoopTroop#readme", "Council → loop → worktree pipeline"),
     "open-gsd/gsd-core": (9405, "https://github.com/open-gsd/gsd-core/blob/next/commands/gsd/ship.md", "gsd:ship command"),
@@ -795,6 +820,9 @@ META: dict[str, tuple[int, str, str]] = {
     "THUDM/AgentRL": (352, "https://github.com/THUDM/AgentRL/blob/main/examples/training/async_trainer.py", "Async GRPO trainer"),
     "aden-hive/hive": (11040, "https://github.com/aden-hive/hive#readme", "Project README"),
     "omnigent-ai/omnigent": (9904, "https://github.com/omnigent-ai/omnigent#readme", "Project README"),
+    "Orkas-AI/Orkas": (1964, "https://github.com/Orkas-AI/Orkas#readme", "Project README"),
+    "razzant/claudexor": (448, "https://github.com/razzant/claudexor#readme", "Project README"),
+    "777genius/agent-teams-ai": (2108, "https://github.com/777genius/agent-teams-ai#readme", "Project README"),
     # plugins-mcp-cli
     "Aider-AI/aider": (48934, "https://github.com/Aider-AI/aider/blob/main/aider/repomap.py", "Repo map source"),
     "RyanAlberts/agentlog": (1, "https://github.com/RyanAlberts/agentlog/blob/main/example-log/decisions.jsonl", "Sample decisions.jsonl"),
@@ -855,15 +883,19 @@ META: dict[str, tuple[int, str, str]] = {
     "kubernetes-sigs/agent-sandbox": (3828, "https://github.com/kubernetes-sigs/agent-sandbox#readme", "Sandbox resource quickstart"),
     "steel-dev/steel-browser": (7638, "https://docs.steel.dev", "Sessions API docs"),
     "brandonhimpfen/awesome-ai-agents": (15, "https://github.com/brandonhimpfen/awesome-ai-agents#frameworks", "Frameworks section"),
+    "HarnessRouter/harnessrouter": (1342, "https://github.com/HarnessRouter/harnessrouter#readme", "Project README"),
     # memory
     "topoteretes/cognee": (30663, "https://github.com/topoteretes/cognee#readme", "Quickstart"),
     "getzep/graphiti": (30851, "https://github.com/getzep/graphiti#readme", "Temporal graph quickstart"),
     "gastownhall/beads": (27116, "https://github.com/gastownhall/beads#readme", "Project README"),
+    "vshulcz/deja-vu": (804, "https://github.com/vshulcz/deja-vu#readme", "Project README"),
     # observability
     "langfuse/langfuse": (34540, "https://langfuse.com/docs", "Docs"),
     "mlflow/mlflow": (27935, "https://mlflow.org", "Docs"),
     "comet-ml/opik": (21989, "https://www.comet.com/docs/opik/", "Docs"),
     "Arize-ai/phoenix": (11439, "https://arize.com/docs/phoenix", "Docs"),
+    "openlit/openlit": (2761, "https://github.com/openlit/openlit#readme", "Project README"),
+    "FailproofAI/failproofai": (3117, "https://github.com/FailproofAI/failproofai#readme", "Project README"),
     # plugins-mcp-cli (MCP infrastructure)
     "modelcontextprotocol/servers": (90288, "https://github.com/modelcontextprotocol/servers#readme", "Server catalog"),
     "upstash/context7": (61955, "https://context7.com", "Docs"),
@@ -1133,6 +1165,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "1jehuang/jcode": ("n/a", "n/a"),
     "NanmiCoder/cc-haha": ("n/a", "n/a"),
     "yylo-dev/yylo": ("n/a", "n/a"),  # orchestrates Pi/Codex loops; doesn't own one
+    "vastsa/PI-Desktop": ("n/a", "n/a"),  # desktop shell over pi; doesn't own the loop
     # coding-harness-configs
     "looptroop-ai/LoopTroop": ("bounded", "retry"),
     "obra/superpowers": ("n/a", "n/a"),
@@ -1204,6 +1237,9 @@ AXES: "dict[str, tuple[str, str]]" = {
     "THUDM/AgentRL": ("headless", "resumable"),
     "aden-hive/hive": ("bounded", "resumable"),
     "omnigent-ai/omnigent": ("n/a", "n/a"),
+    "Orkas-AI/Orkas": ("n/a", "n/a"),
+    "razzant/claudexor": ("n/a", "n/a"),
+    "777genius/agent-teams-ai": ("n/a", "n/a"),
     # plugins-mcp-cli
     "thedotmack/claude-mem": ("n/a", "n/a"),
     "Aider-AI/aider": ("checkpoint-gated", "resumable"),
@@ -1264,15 +1300,19 @@ AXES: "dict[str, tuple[str, str]]" = {
     "openai/openai-agents-js": ("bounded", "resumable"),
     "MaxGfeller/open-harness": ("bounded", "none"),
     "brandonhimpfen/awesome-ai-agents": ("n/a", "n/a"),
+    "HarnessRouter/harnessrouter": ("n/a", "n/a"),
     # memory (state layers — no agent loop of their own)
     "topoteretes/cognee": ("n/a", "n/a"),
     "getzep/graphiti": ("n/a", "n/a"),
     "gastownhall/beads": ("n/a", "n/a"),
+    "vshulcz/deja-vu": ("n/a", "n/a"),
     # observability (tracing/eval-ops infra — no agent loop of their own)
     "langfuse/langfuse": ("n/a", "n/a"),
     "mlflow/mlflow": ("n/a", "n/a"),
     "comet-ml/opik": ("n/a", "n/a"),
     "Arize-ai/phoenix": ("n/a", "n/a"),
+    "openlit/openlit": ("n/a", "n/a"),
+    "FailproofAI/failproofai": ("n/a", "n/a"),
     # plugins-mcp-cli (MCP infrastructure — tools/servers, not loops)
     "modelcontextprotocol/servers": ("n/a", "n/a"),
     "upstash/context7": ("n/a", "n/a"),
