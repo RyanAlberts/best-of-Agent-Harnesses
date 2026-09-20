@@ -40,7 +40,7 @@
     ]
   },
   {
-    "login": "oldschoola",
+    "login": "abilliontokens",
     "contributions": [
       {
         "kind": "pr",
@@ -126,6 +126,11 @@
         "kind": "issue",
         "number": 48,
         "title": "Atlarix — the open-weight frontier harness"
+      },
+      {
+        "kind": "issue",
+        "number": 116,
+        "title": "Update Atlarix entry — description is out of date"
       }
     ]
   },
@@ -381,6 +386,11 @@
         "kind": "pr",
         "number": 111,
         "title": "Add YYLO"
+      },
+      {
+        "kind": "issue",
+        "number": 117,
+        "title": "Add project: YYLO Benchmark"
       }
     ]
   },
@@ -401,6 +411,21 @@
         "kind": "issue",
         "number": 113,
         "title": "Add project: GraphCode"
+      }
+    ]
+  },
+  {
+    "login": "denggui-ai",
+    "contributions": [
+      {
+        "kind": "issue",
+        "number": 114,
+        "title": "Add project: Minimal Harness"
+      },
+      {
+        "kind": "issue",
+        "number": 115,
+        "title": "Add project: Minimal Harness"
       }
     ]
   }

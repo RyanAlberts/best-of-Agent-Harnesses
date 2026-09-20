@@ -11,7 +11,7 @@
     "name": "Ryan Alberts",
     "url": "https://github.com/RyanAlberts"
   },
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-20",
   "keywords": [
     "agent harness",
     "AI agents",
@@ -156,11 +156,11 @@
         "position": 11,
         "item": {
           "@type": "SoftwareApplication",
-          "name": "Gemini CLI",
-          "url": "https://github.com/google-gemini/gemini-cli",
-          "description": "Google's first-party terminal agent for Gemini. The **harness** is the plugin/MCP tool-call loop; the terminal is the shell—Google's parallel to Claude Code / Codex, not just an API.",
+          "name": "pi",
+          "url": "https://github.com/earendil-works/pi",
+          "description": "The upstream AI agent toolkit behind this list's oh-my-pi fork: a unified multi-provider LLM API, agent loop, and TUI shell providing the **harness** that oh-my-pi's Rust rewrite builds on.",
           "applicationCategory": "DeveloperApplication",
-          "keywords": "mcp, cli, typescript"
+          "keywords": "provider-agnostic, tui, rust"
         }
       },
       {
@@ -168,11 +168,11 @@
         "position": 12,
         "item": {
           "@type": "SoftwareApplication",
-          "name": "pi",
-          "url": "https://github.com/earendil-works/pi",
-          "description": "The upstream AI agent toolkit behind this list's oh-my-pi fork: a unified multi-provider LLM API, agent loop, and TUI shell providing the **harness** that oh-my-pi's Rust rewrite builds on.",
+          "name": "Gemini CLI",
+          "url": "https://github.com/google-gemini/gemini-cli",
+          "description": "Google's first-party terminal agent for Gemini. The **harness** is the plugin/MCP tool-call loop; the terminal is the shell—Google's parallel to Claude Code / Codex, not just an API.",
           "applicationCategory": "DeveloperApplication",
-          "keywords": "provider-agnostic, tui, rust"
+          "keywords": "mcp, cli, typescript"
         }
       },
       {
@@ -192,11 +192,11 @@
         "position": 14,
         "item": {
           "@type": "SoftwareApplication",
-          "name": "Open Interpreter",
-          "url": "https://github.com/openinterpreter/openinterpreter",
-          "description": "Lightweight terminal coding agent oriented to open models (DeepSeek, Kimi, Qwen). The **harness** is a code-execution loop — the model writes code, the harness executes it with confirmation gates; the CLI is the shell. The original \"let the LLM run code on my machine\" project, reborn for open weights.",
+          "name": "Cline",
+          "url": "https://github.com/cline/cline",
+          "description": "VS Code extension whose **harness** is a plan-then-act loop with per-step human approval and cost transparency; the VS Code integration is the UI shell. Open-source counterweight to Cursor.",
           "applicationCategory": "DeveloperApplication",
-          "keywords": "cli, python"
+          "keywords": "ide, typescript"
         }
       },
       {
@@ -204,11 +204,11 @@
         "position": 15,
         "item": {
           "@type": "SoftwareApplication",
-          "name": "Cline",
-          "url": "https://github.com/cline/cline",
-          "description": "VS Code extension whose **harness** is a plan-then-act loop with per-step human approval and cost transparency; the VS Code integration is the UI shell. Open-source counterweight to Cursor.",
+          "name": "Open Interpreter",
+          "url": "https://github.com/openinterpreter/openinterpreter",
+          "description": "Lightweight terminal coding agent oriented to open models (DeepSeek, Kimi, Qwen). The **harness** is a code-execution loop — the model writes code, the harness executes it with confirmation gates; the CLI is the shell. The original \"let the LLM run code on my machine\" project, reborn for open weights.",
           "applicationCategory": "DeveloperApplication",
-          "keywords": "ide, typescript"
+          "keywords": "cli, python"
         }
       },
       {
@@ -252,11 +252,11 @@
         "position": 19,
         "item": {
           "@type": "SoftwareApplication",
-          "name": "vibe-kanban",
-          "url": "https://github.com/BloopAI/vibe-kanban",
-          "description": "Kanban-style fleet manager for running Claude Code, Codex, or any coding agent across many tasks at once. The **harness** contribution is the task-queue/review layer on top of whichever agent executes; not an agent loop itself.",
+          "name": "crush",
+          "url": "https://github.com/charmbracelet/crush",
+          "description": "Charm's terminal coding agent (Charm's fork of the original OpenCode). The **harness** is the tool-calling loop with session persistence; the Bubble Tea TUI is the shell.",
           "applicationCategory": "DeveloperApplication",
-          "keywords": ""
+          "keywords": "memory, cli, tui"
         }
       },
       {
@@ -264,11 +264,11 @@
         "position": 20,
         "item": {
           "@type": "SoftwareApplication",
-          "name": "crush",
-          "url": "https://github.com/charmbracelet/crush",
-          "description": "Charm's terminal coding agent (Charm's fork of the original OpenCode). The **harness** is the tool-calling loop with session persistence; the Bubble Tea TUI is the shell.",
+          "name": "vibe-kanban",
+          "url": "https://github.com/BloopAI/vibe-kanban",
+          "description": "Kanban-style fleet manager for running Claude Code, Codex, or any coding agent across many tasks at once. The **harness** contribution is the task-queue/review layer on top of whichever agent executes; not an agent loop itself.",
           "applicationCategory": "DeveloperApplication",
-          "keywords": "memory, cli, tui"
+          "keywords": ""
         }
       },
       {
@@ -1608,11 +1608,11 @@
         "position": 132,
         "item": {
           "@type": "SoftwareApplication",
-          "name": "swe-smith",
-          "url": "https://github.com/SWE-bench/SWE-smith",
-          "description": "Data generation for SWE agents; 50k+ instances across 128 repos; used for SWE-agent-LM training.",
+          "name": "ClawBench",
+          "url": "https://github.com/TIGER-AI-Lab/ClawBench",
+          "description": "Open web-agent evaluation **harness**: runs selectable agents in isolated Docker containers across 153 live-site tasks (plus 130 in V2), intercepts irreversible requests, and records video, screenshots, HTTP traffic, actions, and agent messages for replayable scoring.",
           "applicationCategory": "DeveloperApplication",
-          "keywords": "training, python"
+          "keywords": "evals, vision, sandbox, python"
         }
       },
       {
@@ -1620,11 +1620,11 @@
         "position": 133,
         "item": {
           "@type": "SoftwareApplication",
-          "name": "ARC-AGI-2",
-          "url": "https://github.com/arcprize/ARC-AGI-2",
-          "description": "ARC Prize task set: grid-based abstraction/reasoning; public and private splits for generalization.",
+          "name": "swe-smith",
+          "url": "https://github.com/SWE-bench/SWE-smith",
+          "description": "Data generation for SWE agents; 50k+ instances across 128 repos; used for SWE-agent-LM training.",
           "applicationCategory": "DeveloperApplication",
-          "keywords": ""
+          "keywords": "training, python"
         }
       },
       {
@@ -1644,11 +1644,11 @@
         "position": 135,
         "item": {
           "@type": "SoftwareApplication",
-          "name": "ClawBench",
-          "url": "https://github.com/TIGER-AI-Lab/ClawBench",
-          "description": "Open web-agent evaluation **harness**: runs selectable agents in isolated Docker containers across 153 live-site tasks (plus 130 in V2), intercepts irreversible requests, and records video, screenshots, HTTP traffic, actions, and agent messages for replayable scoring.",
+          "name": "ARC-AGI-2",
+          "url": "https://github.com/arcprize/ARC-AGI-2",
+          "description": "ARC Prize task set: grid-based abstraction/reasoning; public and private splits for generalization.",
           "applicationCategory": "DeveloperApplication",
-          "keywords": "evals, vision, sandbox, python"
+          "keywords": ""
         }
       },
       {

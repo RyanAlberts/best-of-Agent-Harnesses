@@ -4,7 +4,7 @@ An always-on personal agent is a program that runs all day on your own machine, 
 
 | | [OpenClaw](https://github.com/openclaw/openclaw) | [Hermes](https://github.com/NousResearch/hermes-agent) |
 |---|---|---|
-| ⭐ Stars | 390k | 245k |
+| ⭐ Stars | 390k | 247k |
 | Steward | OpenClaw Foundation (community) | Nous Research |
 | License | MIT | MIT |
 | Core language | TypeScript | Python |
