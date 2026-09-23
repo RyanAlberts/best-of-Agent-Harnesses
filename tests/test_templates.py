@@ -92,3 +92,12 @@ def test_site_pages_for_templates_and_playbooks(tmp_path, monkeypatch):
     assert "/templates/minimal-harness/" in sitemap and "/playbooks/one-agents-md-for-every-coding-agent/" in sitemap
     full = (out / "llms-full.txt").read_text()
     assert "# Playbooks, full text" in full and "# Build your own agent harness" in full
+
+
+def test_every_template_file_is_tracked_by_git():
+    """A .gitignore pattern (.claude/, CLAUDE.md) once kept template files out
+    of the repo, so the published raw URLs 404'd. Catch that locally."""
+    r = subprocess.run(["git", "ls-files", "--others", "--ignored", "--exclude-standard", "templates"],
+                       cwd=ROOT, capture_output=True, text=True)
+    ignored = [line for line in r.stdout.splitlines() if "__pycache__" not in line and not line.endswith(".DS_Store")]
+    assert ignored == []

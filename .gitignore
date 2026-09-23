@@ -109,3 +109,7 @@ history/
 .claude/
 docs/superpowers/
 .superpowers/
+
+# Template files users copy must be tracked even where the patterns above ignore them.
+!templates/*/.claude/
+!templates/*/CLAUDE.md
