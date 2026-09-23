@@ -46,6 +46,9 @@ claude mcp add agent-harnesses -- uv run https://raw.githubusercontent.com/RyanA
 | `get_harness(github_id)` | Full record for one project. |
 | `list_comparisons()` | The head-to-head decision guides (OpenClaw vs Hermes, terminal coding agents, …) with summaries. |
 | `get_comparison(slug)` | Full markdown of one guide — architecture trade-offs, field reports, billing reality. Always current: served from the repo's `main`. |
+| `list_templates()` | Copy-paste setup files (an AGENTS.md every coding agent reads, safe Claude Code settings, a minimal Python harness, …) with the files each contains. |
+| `get_template(slug)` | A template's README plus the full content and target path of every file, so your agent can write them into your project and adapt them. |
+| `list_playbooks()` / `get_playbook(slug)` | Step-by-step setup guides (build your own harness, one AGENTS.md for every agent, …). |
 | `list_categories()` | The 10 categories, use-case intents, and the complexity/autonomy/recovery scales. |
 
 Example: *"recommend('an always-on personal assistant that lives in my chat apps', open_source_only=True)"* → one top pick with the reason, two alternatives, anything to avoid for this need, and the guide to read next.

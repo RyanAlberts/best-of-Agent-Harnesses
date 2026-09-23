@@ -1407,6 +1407,26 @@ def find_project(github_id: str) -> "Project":
     raise KeyError(f"USE_CASES references unknown github_id: {github_id}")
 
 
+def render_templates_and_playbooks() -> list:
+    """README section listing templates/ and playbooks/, generated from the
+    folders so a new template or playbook needs no README edit."""
+    lines = [
+        "## Templates and Playbooks",
+        "",
+        "_The list tells you which harness to use. These tell you how to set it up. **Templates** are files you copy into your project; **Playbooks** walk you through one task, step by step._",
+        "",
+        "**Templates**",
+        "",
+    ]
+    for t in templates_index():
+        lines.append(f"- [**{t['title']}**](templates/{t['slug']}/): {t['summary']}")
+    lines += ["", "**Playbooks**", ""]
+    for pb in playbooks_index():
+        lines.append(f"- [**{pb['title']}**](playbooks/{pb['slug']}.md): {pb['summary']}")
+    lines.append("")
+    return lines
+
+
 def render_use_cases() -> list:
     lines = [
         "## Pick by use case",
@@ -1651,6 +1671,10 @@ def generate_readme() -> str:
         "</p>",
         "",
         "<p align=\"center\">",
+        "    🧰 <strong><a href=\"#templates-and-playbooks\">Templates and Playbooks</a></strong>: copy-paste setup files and step-by-step guides for the harnesses in this list.",
+        "</p>",
+        "",
+        "<p align=\"center\">",
         "    🤖 <strong>Agents can query this list</strong> — an <a href=\"#for-agents\">MCP server</a> (<code>recommend</code>, <code>pick_harness</code>, …), <a href=\"llms.txt\">llms.txt</a> &amp; <a href=\"harnesses.json\">JSON</a>, so your agent recommends harnesses too.",
         "</p>",
         "",
@@ -1702,6 +1726,7 @@ def generate_readme() -> str:
         "- [**Context files for agents** (AGENTS.md vs CLAUDE.md vs skills vs MCP tool search)](comparisons/progressive-disclosure.md)",
         "",
     ]
+    header += render_templates_and_playbooks()
     header += render_use_cases()
     header += [
         "## For agents",
@@ -1710,7 +1735,7 @@ def generate_readme() -> str:
         "",
         "- [**harnesses.json**](harnesses.json) — every project with category, complexity tier, capability tags, stars, license signal, and a concrete example link, plus the full use-case index.",
         "- [**llms.txt**](llms.txt) — the entire list in one agent-readable file. Point any agent at the [raw URL](https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/llms.txt).",
-        "- [**MCP server**](mcp/) — `recommend` (one opinionated pick + alternatives + what to *avoid*, e.g. repos flagged for star manipulation), `compare`/`compare_for` (2–4 harnesses side by side — by id or by task — who leads on which axis incl. researched sandboxing/memory/hooks/prompt-optimization ratings, graveyard warnings, the matching decision guide), `pick_harness` (ranked, with complexity/autonomy/recovery filters), `pick_infrastructure` (picks at any level of the infra stack plus a live GitHub/Hacker News discovery pass, so answers aren't limited to this list), `search_harnesses`, `get_harness`, `list_categories`, plus `list_comparisons`/`get_comparison` for the decision guides. Published to PyPI and the [official MCP registry](https://registry.modelcontextprotocol.io) as `io.github.RyanAlberts/agent-harnesses`. One-line install (needs [uv](https://docs.astral.sh/uv/)):",
+        "- [**MCP server**](mcp/) — `recommend` (one opinionated pick + alternatives + what to *avoid*, e.g. repos flagged for star manipulation), `compare`/`compare_for` (2–4 harnesses side by side — by id or by task — who leads on which axis incl. researched sandboxing/memory/hooks/prompt-optimization ratings, graveyard warnings, the matching decision guide), `pick_harness` (ranked, with complexity/autonomy/recovery filters), `pick_infrastructure` (picks at any level of the infra stack plus a live GitHub/Hacker News discovery pass, so answers aren't limited to this list), `search_harnesses`, `get_harness`, `list_categories`, plus `list_comparisons`/`get_comparison` for the decision guides and `list_templates`/`get_template`/`list_playbooks`/`get_playbook` so your agent can install a template for you. Published to PyPI and the [official MCP registry](https://registry.modelcontextprotocol.io) as `io.github.RyanAlberts/agent-harnesses`. One-line install (needs [uv](https://docs.astral.sh/uv/)):",
         "",
         "```sh",
         "claude mcp add agent-harnesses -- uvx agent-harnesses-mcp",
@@ -1732,6 +1757,7 @@ def generate_readme() -> str:
         "",
         "- [The landscape at a glance](#the-landscape-at-a-glance)",
         "- [How to Pick a Harness](#how-to-pick-a-harness)",
+        "- [Templates and Playbooks](#templates-and-playbooks)",
         "- [Pick by use case](#pick-by-use-case)",
         "- [For agents: harnesses.json, llms.txt, MCP server, agent templates](#for-agents)",
         "- [FAQ](#faq)",
@@ -1987,23 +2013,53 @@ def oss_signal(marker: str) -> str:
     return "unknown"
 
 
+def _guide_entry(f: Path, slug: str) -> dict:
+    """slug, title, first prose line as summary, and GitHub URLs for one
+    markdown page (a guide, a playbook, or a template's README)."""
+    lines = f.read_text().split("\n")
+    title = next((l[2:].strip() for l in lines if l.startswith("# ")), slug)
+    summary = next((l.strip() for l in lines
+                    if l.strip() and not l.startswith(("#", "|", "_", "-", "[", "<", "!", "`"))), "")
+    rel = f.relative_to(REPO_ROOT).as_posix()
+    return {
+        "slug": slug,
+        "title": title,
+        "summary": summary[:300],
+        "url": f"https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/{rel}",
+        "raw_url": f"https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/{rel}",
+    }
+
+
 def comparisons_index() -> list:
     """Index of comparisons/*.md for harnesses.json — slug, title, and first
     prose paragraph as summary — so the MCP server can list and fetch the
     decision guides without hardcoding them."""
+    return [_guide_entry(f, f.stem) for f in sorted((REPO_ROOT / "comparisons").glob("*.md"))]
+
+
+def playbooks_index() -> list:
+    """Index of playbooks/*.md: step-by-step guides for one setup task each."""
+    return [_guide_entry(f, f.stem) for f in sorted((REPO_ROOT / "playbooks").glob("*.md"))]
+
+
+def template_files(d: Path) -> list:
+    """Files a user copies from templates/<slug>/, README.md excluded."""
+    return sorted(f.relative_to(d).as_posix() for f in d.rglob("*")
+                  if f.is_file() and f.name != "README.md" and "__pycache__" not in f.parts
+                  and f.name != ".DS_Store")
+
+
+def templates_index() -> list:
+    """Index of templates/<slug>/: the README describes it, the other files
+    are what a user copies. Each file carries a raw URL so agents can fetch it."""
     out = []
-    for f in sorted((REPO_ROOT / "comparisons").glob("*.md")):
-        lines = f.read_text().split("\n")
-        title = next((l[2:].strip() for l in lines if l.startswith("# ")), f.stem)
-        summary = next((l.strip() for l in lines
-                        if l.strip() and not l.startswith(("#", "|", "_", "-", "[", "<", "!"))), "")
-        out.append({
-            "slug": f.stem,
-            "title": title,
-            "summary": summary[:300],
-            "url": f"https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/comparisons/{f.name}",
-            "raw_url": f"https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/comparisons/{f.name}",
-        })
+    for d in sorted(p for p in (REPO_ROOT / "templates").glob("*") if (p / "README.md").exists()):
+        entry = _guide_entry(d / "README.md", d.name)
+        entry["files"] = [
+            {"path": f, "raw_url": f"https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/templates/{d.name}/{f}"}
+            for f in template_files(d)
+        ]
+        out.append(entry)
     return out
 
 
@@ -2150,6 +2206,8 @@ def generate_harnesses_json() -> str:
         ],
         "faq": build_faq(),
         "comparisons": comparisons_index(),
+        "templates": templates_index(),
+        "playbooks": playbooks_index(),
         "projects": projects,
         "graveyard": [
             {
@@ -2189,6 +2247,15 @@ def generate_llms_txt() -> str:
     lines += ["## Decision guides", ""]
     for c in comparisons_index():
         lines.append(f"- {c['title']}: {SITE_URL}compare/{c['slug']}/ — {c['summary']}")
+    lines.append("")
+    lines += ["## Templates (files to copy)", ""]
+    for t in templates_index():
+        lines.append(f"- {t['title']}: {SITE_URL}templates/{t['slug']}/ — {t['summary']} Files: "
+                     + ", ".join(f["raw_url"] for f in t["files"]))
+    lines.append("")
+    lines += ["## Playbooks (step by step)", ""]
+    for pb in playbooks_index():
+        lines.append(f"- {pb['title']}: {SITE_URL}playbooks/{pb['slug']}/ — {pb['summary']}")
     lines.append("")
     lines += ["## FAQ", ""]
     for item in build_faq():

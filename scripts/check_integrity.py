@@ -99,6 +99,15 @@ def verify() -> "list[str]":
         if not any(line.lstrip().startswith("#") for line in text.splitlines()):
             violations.append(f"comparisons/{f.name} has no markdown heading")
 
+    # 2c. Playbooks and template READMEs meet the same floor as guides.
+    for f in sorted((REPO_ROOT / "playbooks").glob("*.md")) + sorted((REPO_ROOT / "templates").glob("*/README.md")):
+        rel = f.relative_to(REPO_ROOT).as_posix()
+        text = f.read_text(encoding="utf-8")
+        if len(text.encode("utf-8")) < COMPARISON_MIN_BYTES:
+            violations.append(f"{rel} is under {COMPARISON_MIN_BYTES} bytes")
+        if not text.startswith("# "):
+            violations.append(f"{rel} must start with a '# ' title")
+
     # 3. No mass data loss vs the previous commit.
     previous = _previous_totals()
     if previous is None:

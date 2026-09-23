@@ -20,6 +20,10 @@
 </p>
 
 <p align="center">
+    🧰 <strong><a href="#templates-and-playbooks">Templates and Playbooks</a></strong>: copy-paste setup files and step-by-step guides for the harnesses in this list.
+</p>
+
+<p align="center">
     🤖 <strong>Agents can query this list</strong> — an <a href="#for-agents">MCP server</a> (<code>recommend</code>, <code>pick_harness</code>, …), <a href="llms.txt">llms.txt</a> &amp; <a href="harnesses.json">JSON</a>, so your agent recommends harnesses too.
 </p>
 
@@ -70,6 +74,21 @@ _Start with the guide, then the head-to-head decision pages — grounded in the 
 - [**Claude Code skill packs** (superpowers vs GStack vs get-shit-done vs Anthropic Skills)](comparisons/claude-code-skill-packs.md)
 - [**Context files for agents** (AGENTS.md vs CLAUDE.md vs skills vs MCP tool search)](comparisons/progressive-disclosure.md)
 
+## Templates and Playbooks
+
+_The list tells you which harness to use. These tell you how to set it up. **Templates** are files you copy into your project; **Playbooks** walk you through one task, step by step._
+
+**Templates**
+
+- [**One AGENTS.md for every coding agent**](templates/agents-md/): One briefing file that Codex, Claude Code, Cursor, OpenCode, GitHub Copilot, Gemini CLI, and Aider all read, so you write your build commands, conventions, and hard rules once instead of once per tool.
+- [**Safe Claude Code settings: permissions and a guard hook**](templates/claude-code-safe-settings/): Project settings that stop Claude Code from force-pushing, wiping work, reading secrets, or piping downloads into a shell, while leaving everyday commands alone. Two files, copy and commit.
+- [**Minimal agent harness in Python**](templates/minimal-harness/): A working coding-agent harness in about 180 lines of Python: the loop, three tools, a permission gate, a context file, a turn budget, and a transcript you can resume after a crash. Copy it to learn how harnesses work, or as the start of your own.
+
+**Playbooks**
+
+- [**Build your own agent harness**](playbooks/build-your-own-agent-harness.md): Build a working coding agent in about an hour: a loop, three tools, permissions, a context file, a budget, and crash recovery, in one Python file you fully understand. You finish with the minimal harness template running on your own repo.
+- [**Write one AGENTS.md for every coding agent**](playbooks/one-agents-md-for-every-coding-agent.md): Write one briefing file that Codex, Claude Code, Cursor, OpenCode, Copilot, Gemini CLI, and Aider all read, test that each tool actually loaded it, and keep it short enough to help instead of hurt. You finish with the AGENTS.md template filled in for your repo.
+
 ## Pick by use case
 
 _Reader's index: pick by what you want to do, not by category. Tag chips (e.g. <sup>`mcp` · `memory`</sup>) next to each row let you cross-filter by capability — see [TAGS.md](TAGS.md) for the full cross-reference._
@@ -95,7 +114,7 @@ This list is also published in machine-readable form, so coding agents and resea
 
 - [**harnesses.json**](harnesses.json) — every project with category, complexity tier, capability tags, stars, license signal, and a concrete example link, plus the full use-case index.
 - [**llms.txt**](llms.txt) — the entire list in one agent-readable file. Point any agent at the [raw URL](https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/llms.txt).
-- [**MCP server**](mcp/) — `recommend` (one opinionated pick + alternatives + what to *avoid*, e.g. repos flagged for star manipulation), `compare`/`compare_for` (2–4 harnesses side by side — by id or by task — who leads on which axis incl. researched sandboxing/memory/hooks/prompt-optimization ratings, graveyard warnings, the matching decision guide), `pick_harness` (ranked, with complexity/autonomy/recovery filters), `pick_infrastructure` (picks at any level of the infra stack plus a live GitHub/Hacker News discovery pass, so answers aren't limited to this list), `search_harnesses`, `get_harness`, `list_categories`, plus `list_comparisons`/`get_comparison` for the decision guides. Published to PyPI and the [official MCP registry](https://registry.modelcontextprotocol.io) as `io.github.RyanAlberts/agent-harnesses`. One-line install (needs [uv](https://docs.astral.sh/uv/)):
+- [**MCP server**](mcp/) — `recommend` (one opinionated pick + alternatives + what to *avoid*, e.g. repos flagged for star manipulation), `compare`/`compare_for` (2–4 harnesses side by side — by id or by task — who leads on which axis incl. researched sandboxing/memory/hooks/prompt-optimization ratings, graveyard warnings, the matching decision guide), `pick_harness` (ranked, with complexity/autonomy/recovery filters), `pick_infrastructure` (picks at any level of the infra stack plus a live GitHub/Hacker News discovery pass, so answers aren't limited to this list), `search_harnesses`, `get_harness`, `list_categories`, plus `list_comparisons`/`get_comparison` for the decision guides and `list_templates`/`get_template`/`list_playbooks`/`get_playbook` so your agent can install a template for you. Published to PyPI and the [official MCP registry](https://registry.modelcontextprotocol.io) as `io.github.RyanAlberts/agent-harnesses`. One-line install (needs [uv](https://docs.astral.sh/uv/)):
 
 ```sh
 claude mcp add agent-harnesses -- uvx agent-harnesses-mcp
@@ -117,6 +136,7 @@ curl -fsSL https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses
 
 - [The landscape at a glance](#the-landscape-at-a-glance)
 - [How to Pick a Harness](#how-to-pick-a-harness)
+- [Templates and Playbooks](#templates-and-playbooks)
 - [Pick by use case](#pick-by-use-case)
 - [For agents: harnesses.json, llms.txt, MCP server, agent templates](#for-agents)
 - [FAQ](#faq)

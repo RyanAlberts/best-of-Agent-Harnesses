@@ -4,7 +4,8 @@ GitHub's traffic API only retains 14 days, so trend analysis beyond two weeks
 is impossible unless someone records it. This script captures views, clones,
 top paths, top referrers, star count, and MCP PyPI downloads into one JSON
 line per run. Run weekly by .github/workflows/weekly-rescore.yml; needs a
-token with push access (the traffic API requires it) in GH_TOKEN.
+token with push access (the traffic API requires it) in GH_TOKEN. Set
+TRAFFIC_OUT to write somewhere else (the local nightly sweep does this).
 """
 import datetime
 import json
@@ -42,10 +43,10 @@ def main() -> None:
     except Exception:
         snap["mcp_pypi_recent"] = None
 
-    out = REPO_ROOT / "traffic-history.jsonl"
+    out = Path(os.environ.get("TRAFFIC_OUT") or REPO_ROOT / "traffic-history.jsonl")
     with out.open("a") as f:
         f.write(json.dumps(snap, separators=(",", ":")) + "\n")
-    print(f"traffic-history.jsonl: appended snapshot for {snap['captured']} "
+    print(f"{out.name}: appended snapshot for {snap['captured']} "
           f"(views {snap['views']['count']}, stars {snap['stars']})")
 
 

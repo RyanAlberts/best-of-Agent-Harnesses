@@ -81,6 +81,9 @@ def site_links(md: str) -> str:
     page links to a .md path that does not exist under /compare/."""
     md = re.sub(r"\]\(\.\./README\.md(#[^)]*)?\)", lambda m: f"]({GITHUB_REPO}{m.group(1) or ''})", md)
     md = re.sub(r"\]\(\.\./assets/([^)]+)\)", lambda m: f"]({u()}assets/{m.group(1)})", md)
+    md = re.sub(r"\]\(\.\./comparisons/([\w-]+)\.md(#[^)]*)?\)", lambda m: f"]({u('compare/' + m.group(1))}{m.group(2) or ''})", md)
+    md = re.sub(r"\]\(\.\./playbooks/([\w-]+)\.md(#[^)]*)?\)", lambda m: f"]({u('playbooks/' + m.group(1))}{m.group(2) or ''})", md)
+    md = re.sub(r"\]\(\.\./templates/([\w-]+)/?(?:README\.md)?(#[^)]*)?\)", lambda m: f"]({u('templates/' + m.group(1))}{m.group(2) or ''})", md)
     md = re.sub(r"\]\(\.\./([^)#]+?)/?(#[^)]*)?\)", lambda m: f"]({GITHUB_REPO}/tree/main/{m.group(1)}{m.group(2) or ''})", md)
     md = re.sub(r"\]\(([\w-]+)\.md(#[^)]*)?\)", lambda m: f"](../{m.group(1)}/{m.group(2) or ''})", md)
     return md
@@ -105,6 +108,8 @@ def page(title: str, description: str, canonical_path: str, body: str,
         f'<a href="{u("faq")}">FAQ</a>'
         f'<a href="{u("radar")}">Radar</a>'
         f'<a href="{u()}#compare">Compare</a>'
+        f'<a href="{u()}#templates">Templates</a>'
+        f'<a href="{u()}#playbooks">Playbooks</a>'
         f'<a href="{u()}#agents">For agents</a>'
         f'<a href="https://github.com/RyanAlberts/best-of-Agent-Harnesses" title="Star this list on GitHub">'
         f'<img src="https://img.shields.io/github/stars/RyanAlberts/best-of-Agent-Harnesses?style=social&label=Star" '
@@ -206,6 +211,14 @@ def render_index() -> str:
         f'<li><a href="{u("compare/"+c["slug"])}">{esc(c["title"])}</a> — {esc(c["summary"][:140])}</li>'
         for c in g.comparisons_index()
     )
+    templates = "".join(
+        f'<li><a href="{u("templates/"+t["slug"])}">{esc(t["title"])}</a> — {esc(t["summary"][:140])}</li>'
+        for t in g.templates_index()
+    )
+    playbooks = "".join(
+        f'<li><a href="{u("playbooks/"+pb["slug"])}">{esc(pb["title"])}</a> — {esc(pb["summary"][:140])}</li>'
+        for pb in g.playbooks_index()
+    )
     cat_cards = "".join(
         f'<a class="card" href="{u("c/"+cid)}"><strong>{esc(t)}</strong>'
         f'<span>{len(g.live_projects(cid))} projects</span></a>'
@@ -247,6 +260,10 @@ def render_index() -> str:
 <section id="usecases"><h2>Pick by use case</h2><ul class="usecases">{use_cases}</ul></section>
 
 <section id="compare"><h2>Decision guides</h2><ul>{comparisons}</ul></section>
+
+<section id="templates"><h2>Templates</h2><p>Files you copy into your project to set a harness up safely.</p><ul>{templates}</ul></section>
+
+<section id="playbooks"><h2>Playbooks</h2><p>Step-by-step guides, one task each.</p><ul>{playbooks}</ul></section>
 
 <section id="faq-teaser"><h2>FAQ</h2><ul>{faq_teaser}</ul><p><a href="{u("faq")}">All questions →</a></p></section>
 
@@ -404,6 +421,81 @@ def render_comparison(c: dict) -> str:
                 jsonld=[article, crumbs])
 
 
+def render_playbook(pb: dict) -> str:
+    rel = f"playbooks/{pb['slug']}.md"
+    src = site_links((ROOT / rel).read_text())
+    html_body = markdown.markdown(src, extensions=["tables", "fenced_code", "toc"])
+    body = f'<nav class="crumbs"><a href="{u()}">Home</a> › <a href="{u()}#playbooks">Playbooks</a> › {esc(pb["title"])}</nav>\n<article class="prose">{html_body}</article>'
+    published, modified = source_dates(rel)
+    page_url = abs_url("playbooks/" + pb["slug"])
+    steps = [m.group(1).strip() for m in re.finditer(r"^## (.+)$", (ROOT / rel).read_text(), re.M)]
+    howto = {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": pb["title"],
+        "description": pb["summary"],
+        "url": page_url,
+        "datePublished": published,
+        "dateModified": modified,
+        "author": AUTHOR,
+        "inLanguage": "en",
+        "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "step": [{"@type": "HowToStep", "position": i, "name": name, "url": f"{page_url}#{re.sub(r'[^a-z0-9]+', '-', name.lower()).strip('-')}"}
+                 for i, name in enumerate(steps, 1)],
+    }
+    crumbs = breadcrumb_ld([("Home", abs_url()), ("Playbooks", abs_url() + "#playbooks"), (pb["title"], page_url)])
+    return page(f"{pb['title']} — Best of Agent Harnesses", pb["summary"], f"playbooks/{pb['slug']}", body,
+                jsonld=[howto, crumbs])
+
+
+COPY_JS = """<script>
+document.querySelectorAll('button.copy').forEach(function(b){
+ b.addEventListener('click',function(){
+  navigator.clipboard.writeText(document.getElementById(b.dataset.target).textContent).then(function(){
+   b.textContent='Copied';setTimeout(function(){b.textContent='Copy'},1500)});
+ });
+});
+</script>"""
+
+
+def render_template(t: dict) -> str:
+    d = ROOT / "templates" / t["slug"]
+    readme = (d / "README.md").read_text()
+    # Links to the template's own files become anchors to the file blocks below.
+    for f in t["files"]:
+        readme = readme.replace(f"]({f['path']})", f"](#file-{f['path']})")
+    readme = re.sub(r"\]\(\.\./([\w-]+)/?\)", r"](../../templates/\1/)", readme)  # sibling templates
+    src = site_links(readme.replace("](../../", "](../"))
+    html_body = markdown.markdown(src, extensions=["tables", "fenced_code", "toc"])
+    blocks = "".join(
+        f'<section class="tfile" id="file-{esc(f["path"])}"><h2><code>{esc(f["path"])}</code></h2>'
+        f'<p><button class="copy btn" data-target="src-{i}">Copy</button>'
+        f'<a class="btn" href="{esc(f["raw_url"])}">Raw file</a></p>'
+        f'<pre><code id="src-{i}">{esc((d / f["path"]).read_text())}</code></pre></section>'
+        for i, f in enumerate(t["files"])
+    )
+    body = (f'<nav class="crumbs"><a href="{u()}">Home</a> › <a href="{u()}#templates">Templates</a> › {esc(t["title"])}</nav>\n'
+            f'<article class="prose">{html_body}</article>\n{blocks}\n{COPY_JS}')
+    published, modified = source_dates(f"templates/{t['slug']}")
+    page_url = abs_url("templates/" + t["slug"])
+    code = {
+        "@context": "https://schema.org",
+        "@type": "SoftwareSourceCode",
+        "name": t["title"],
+        "description": t["summary"],
+        "url": page_url,
+        "codeRepository": f"{GITHUB_REPO}/tree/main/templates/{t['slug']}",
+        "datePublished": published,
+        "dateModified": modified,
+        "author": AUTHOR,
+        "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "isPartOf": {"@type": "Dataset", "name": "Best of Agent Harnesses", "url": abs_url()},
+    }
+    crumbs = breadcrumb_ld([("Home", abs_url()), ("Templates", abs_url() + "#templates"), (t["title"], page_url)])
+    return page(f"{t['title']} — Best of Agent Harnesses", t["summary"], f"templates/{t['slug']}", body,
+                jsonld=[code, crumbs])
+
+
 def render_faq() -> str:
     faq = g.build_faq()
     blocks = "".join(
@@ -458,6 +550,8 @@ th[data-sort]{cursor:pointer}th[data-sort]:hover{color:var(--accent)}
 .btn{display:inline-block;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:8px 14px;margin:4px 6px 0 0;color:var(--fg)}
 .usecases li,.qa{margin:.4em 0}.qa h2{font-size:1.15rem;border:0;margin-bottom:.2em}
 .prose h1{font-size:1.8rem}.prose table{font-size:14px}
+pre{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:12px;overflow:auto;font-size:13px}
+.tfile h2{font-size:1.05rem}button.btn{cursor:pointer;font:inherit}
 footer{color:var(--sub);font-size:13px;border-top:1px solid var(--line);margin-top:40px;padding:20px}
 """
 
@@ -498,7 +592,7 @@ def build() -> dict:
     if OUT.exists():
         shutil.rmtree(OUT)
     OUT.mkdir(parents=True)
-    written = {"projects": 0, "categories": 0, "comparisons": 0, "other": 0}
+    written = {"projects": 0, "categories": 0, "comparisons": 0, "playbooks": 0, "templates": 0, "other": 0}
     urls = [(abs_url(), g.STARS_CAPTURED)]
 
     (OUT / "index.html").write_text(render_index())
@@ -541,6 +635,20 @@ def build() -> dict:
         urls.append((abs_url("compare/" + c["slug"]), source_dates(f"comparisons/{c['slug']}.md")[1]))
         written["comparisons"] += 1
 
+    for pb in g.playbooks_index():
+        d = OUT / "playbooks" / pb["slug"]
+        d.mkdir(parents=True)
+        (d / "index.html").write_text(render_playbook(pb))
+        urls.append((abs_url("playbooks/" + pb["slug"]), source_dates(f"playbooks/{pb['slug']}.md")[1]))
+        written["playbooks"] += 1
+
+    for t in g.templates_index():
+        d = OUT / "templates" / t["slug"]
+        d.mkdir(parents=True)
+        (d / "index.html").write_text(render_template(t))
+        urls.append((abs_url("templates/" + t["slug"]), source_dates(f"templates/{t['slug']}")[1]))
+        written["templates"] += 1
+
     # Copy machine-readable surfaces + assets so the site serves them directly.
     for f in ["harnesses.json", "harnesses.jsonld", "llms.txt", "feed.json"]:
         src = ROOT / f
@@ -549,8 +657,12 @@ def build() -> dict:
             written["other"] += 1
     shutil.copytree(ROOT / "assets", OUT / "assets")
     guides = "\n\n---\n\n".join((ROOT / "comparisons" / f"{c['slug']}.md").read_text() for c in g.comparisons_index())
+    playbooks = "\n\n---\n\n".join((ROOT / "playbooks" / f"{pb['slug']}.md").read_text() for pb in g.playbooks_index())
+    templates = "\n\n---\n\n".join((ROOT / "templates" / t["slug"] / "README.md").read_text() for t in g.templates_index())
     (OUT / "llms-full.txt").write_text(
-        (ROOT / "llms.txt").read_text() + "\n\n---\n\n# Decision guides, full text\n\n" + guides + "\n")
+        (ROOT / "llms.txt").read_text() + "\n\n---\n\n# Decision guides, full text\n\n" + guides
+        + "\n\n---\n\n# Playbooks, full text\n\n" + playbooks
+        + "\n\n---\n\n# Templates\n\n" + templates + "\n")
     written["other"] += 1
 
     # sitemap.xml + robots.txt
@@ -571,5 +683,6 @@ if __name__ == "__main__":
     stats = build()
     print(f"Site built to {OUT}")
     print(f"  {stats['projects']} project pages, {stats['categories']} category pages, "
-          f"{stats['comparisons']} comparison pages")
+          f"{stats['comparisons']} comparison pages, {stats['playbooks']} playbook pages, "
+          f"{stats['templates']} template pages")
     print(f"  {stats['urls']} URLs in sitemap.xml")

@@ -253,3 +253,17 @@ def test_pick_infrastructure_degrades_offline(server, monkeypatch):
     assert out["live_discovery"]["status"] == "unavailable"
     assert out["live_discovery"]["github_error"].startswith("OSError")
     assert "curated_picks" in out
+
+
+def test_templates_and_playbooks_tools(server):
+    import generate
+    server._data = dict(DATA, templates=generate.templates_index(), playbooks=generate.playbooks_index())
+    listed = json.loads(server.list_templates())["templates"]
+    assert "agents-md" in [t["slug"] for t in listed]
+    t = json.loads(server.get_template("agents-md"))
+    files = {f["path"]: f["content"] for f in t["files"]}
+    assert files["CLAUDE.md"].startswith("@AGENTS.md") and "## Boundaries" in files["AGENTS.md"]
+    assert t["readme"].startswith("# One AGENTS.md")
+    assert "available" in json.loads(server.get_template("nope"))
+    assert json.loads(server.list_playbooks())["playbooks"]
+    assert server.get_playbook("build-your-own-agent-harness").startswith("# Build your own agent harness")

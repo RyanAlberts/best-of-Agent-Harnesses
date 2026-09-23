@@ -1,18 +1,18 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
   "name": "io.github.RyanAlberts/agent-harnesses",
-  "description": "Agent-harness picks and decision guides; pick_infrastructure adds live GitHub/HN discovery.",
+  "description": "Agent-harness picks, decision guides, and setup templates; live GitHub/HN discovery.",
   "repository": {
     "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses",
     "source": "github"
   },
-  "version": "0.5.2",
+  "version": "0.6.0",
   "packages": [
     {
       "registryType": "pypi",
       "registryBaseUrl": "https://pypi.org",
       "identifier": "agent-harnesses-mcp",
-      "version": "0.5.2",
+      "version": "0.6.0",
       "transport": {
         "type": "stdio"
       }

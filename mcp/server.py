@@ -8,7 +8,8 @@
 Serves the curated list (harnesses.json) as tools so agents can recommend
 agent harnesses: recommend, compare, compare_for, pick_harness,
 pick_infrastructure (curated picks plus live GitHub/Hacker News discovery),
-search_harnesses, get_harness, list_categories.
+search_harnesses, get_harness, list_categories, plus the decision guides,
+templates (files to copy), and playbooks (step-by-step setup guides).
 
 Run directly from GitHub (no clone needed):
     uv run https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/mcp/server.py
@@ -632,6 +633,59 @@ def get_comparison(slug: str) -> str:
                 return r.read().decode()
     return json.dumps({"error": f"unknown slug: {slug}",
                        "available": [c["slug"] for c in data().get("comparisons", [])]})
+
+
+def _fetch_text(local: Path, raw_url: str) -> str:
+    if local.exists():
+        return local.read_text()
+    with urllib.request.urlopen(raw_url, timeout=15) as r:
+        return r.read().decode()
+
+
+@mcp.tool()
+def list_templates() -> str:
+    """Copy-paste setup files for agent harnesses (an AGENTS.md that works in
+    every harness, safe Claude Code settings, a minimal harness in Python, ...):
+    slug, title, summary, and file list for each. Fetch the files of one with
+    get_template(slug)."""
+    return json.dumps({"templates": data().get("templates", [])}, indent=2, ensure_ascii=False)
+
+
+@mcp.tool()
+def get_template(slug: str) -> str:
+    """One template by slug (see list_templates): its README plus the full
+    content of every file, each with the path to write it to. Use this when a
+    user asks you to set a harness up: write the files, then adapt them."""
+    root = Path(__file__).resolve().parent.parent / "templates" / slug
+    for t in data().get("templates", []):
+        if t["slug"] == slug:
+            return json.dumps({
+                "slug": slug, "title": t["title"],
+                "readme": _fetch_text(root / "README.md", t["raw_url"]),
+                "files": [{"path": f["path"], "content": _fetch_text(root / f["path"], f["raw_url"])}
+                          for f in t["files"]],
+            }, indent=2, ensure_ascii=False)
+    return json.dumps({"error": f"unknown slug: {slug}",
+                       "available": [t["slug"] for t in data().get("templates", [])]})
+
+
+@mcp.tool()
+def list_playbooks() -> str:
+    """Step-by-step guides for one setup task each (build your own harness,
+    one AGENTS.md for every harness, ...): slug, title, and summary. Fetch the
+    full text with get_playbook(slug)."""
+    return json.dumps({"playbooks": data().get("playbooks", [])}, indent=2, ensure_ascii=False)
+
+
+@mcp.tool()
+def get_playbook(slug: str) -> str:
+    """Full markdown of one playbook by slug (see list_playbooks)."""
+    for pb in data().get("playbooks", []):
+        if pb["slug"] == slug:
+            local = Path(__file__).resolve().parent.parent / "playbooks" / f"{slug}.md"
+            return _fetch_text(local, pb["raw_url"])
+    return json.dumps({"error": f"unknown slug: {slug}",
+                       "available": [pb["slug"] for pb in data().get("playbooks", [])]})
 
 
 @mcp.tool()

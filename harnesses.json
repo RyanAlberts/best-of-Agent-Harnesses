@@ -528,6 +528,83 @@
       "raw_url": "https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/comparisons/why-the-harness-matters.md"
     }
   ],
+  "templates": [
+    {
+      "slug": "agents-md",
+      "title": "One AGENTS.md for every coding agent",
+      "summary": "One briefing file that Codex, Claude Code, Cursor, OpenCode, GitHub Copilot, Gemini CLI, and Aider all read, so you write your build commands, conventions, and hard rules once instead of once per tool.",
+      "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/templates/agents-md/README.md",
+      "raw_url": "https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/templates/agents-md/README.md",
+      "files": [
+        {
+          "path": ".aider.conf.yml",
+          "raw_url": "https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/templates/agents-md/.aider.conf.yml"
+        },
+        {
+          "path": ".gemini/settings.json",
+          "raw_url": "https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/templates/agents-md/.gemini/settings.json"
+        },
+        {
+          "path": "AGENTS.md",
+          "raw_url": "https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/templates/agents-md/AGENTS.md"
+        },
+        {
+          "path": "CLAUDE.md",
+          "raw_url": "https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/templates/agents-md/CLAUDE.md"
+        }
+      ]
+    },
+    {
+      "slug": "claude-code-safe-settings",
+      "title": "Safe Claude Code settings: permissions and a guard hook",
+      "summary": "Project settings that stop Claude Code from force-pushing, wiping work, reading secrets, or piping downloads into a shell, while leaving everyday commands alone. Two files, copy and commit.",
+      "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/templates/claude-code-safe-settings/README.md",
+      "raw_url": "https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/templates/claude-code-safe-settings/README.md",
+      "files": [
+        {
+          "path": ".claude/hooks/guard.sh",
+          "raw_url": "https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/templates/claude-code-safe-settings/.claude/hooks/guard.sh"
+        },
+        {
+          "path": ".claude/settings.json",
+          "raw_url": "https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/templates/claude-code-safe-settings/.claude/settings.json"
+        }
+      ]
+    },
+    {
+      "slug": "minimal-harness",
+      "title": "Minimal agent harness in Python",
+      "summary": "A working coding-agent harness in about 180 lines of Python: the loop, three tools, a permission gate, a context file, a turn budget, and a transcript you can resume after a crash. Copy it to learn how harnesses work, or as the start of your own.",
+      "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/templates/minimal-harness/README.md",
+      "raw_url": "https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/templates/minimal-harness/README.md",
+      "files": [
+        {
+          "path": "harness.py",
+          "raw_url": "https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/templates/minimal-harness/harness.py"
+        },
+        {
+          "path": "test_harness.py",
+          "raw_url": "https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/templates/minimal-harness/test_harness.py"
+        }
+      ]
+    }
+  ],
+  "playbooks": [
+    {
+      "slug": "build-your-own-agent-harness",
+      "title": "Build your own agent harness",
+      "summary": "Build a working coding agent in about an hour: a loop, three tools, permissions, a context file, a budget, and crash recovery, in one Python file you fully understand. You finish with the minimal harness template running on your own repo.",
+      "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/playbooks/build-your-own-agent-harness.md",
+      "raw_url": "https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/playbooks/build-your-own-agent-harness.md"
+    },
+    {
+      "slug": "one-agents-md-for-every-coding-agent",
+      "title": "Write one AGENTS.md for every coding agent",
+      "summary": "Write one briefing file that Codex, Claude Code, Cursor, OpenCode, Copilot, Gemini CLI, and Aider all read, test that each tool actually loaded it, and keep it short enough to help instead of hurt. You finish with the AGENTS.md template filled in for your repo.",
+      "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/playbooks/one-agents-md-for-every-coding-agent.md",
+      "raw_url": "https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/playbooks/one-agents-md-for-every-coding-agent.md"
+    }
+  ],
   "projects": [
     {
       "name": "Headroom",
