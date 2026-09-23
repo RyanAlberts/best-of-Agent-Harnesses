@@ -13,6 +13,8 @@ on:
       - llms.txt
       - feed.json
       - comparisons/**
+      - templates/**
+      - playbooks/**
       - assets/**
       - scripts/build_site.py
       - scripts/generate.py
