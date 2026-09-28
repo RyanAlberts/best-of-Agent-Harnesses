@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-    <a href="#contents" title="Project Count"><img src="https://img.shields.io/badge/projects-167-blue.svg?color=5ac4bf"></a>
+    <a href="#contents" title="Project Count"><img src="https://img.shields.io/badge/projects-168-blue.svg?color=5ac4bf"></a>
     <a href="#for-agents" title="Agents can query this list — MCP server, llms.txt & JSON"><img src="https://img.shields.io/badge/agents-query%20this%20list-5ac4bf.svg"></a>
     <a href="#contribution" title="Contributions welcome"><img src="https://img.shields.io/badge/contributions-welcome-green.svg"></a>
     <a href="https://github.com/RyanAlberts/best-of-Agent-Harnesses/commits/main" title="Updates"><img src="https://img.shields.io/github/last-commit/RyanAlberts/best-of-Agent-Harnesses?color=green&label=updated"></a>
@@ -145,7 +145,7 @@ curl -fsSL https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses
 - [Coding harness configs and SDKs](#coding-harness-configs-and-sdks) _17 projects_
 - [Personal agent runtimes](#personal-agent-runtimes) _13 projects_
 - [Frameworks](#frameworks) _26 projects_
-- [Multi-agent and orchestration](#multi-agent-and-orchestration) _12 projects_
+- [Multi-agent and orchestration](#multi-agent-and-orchestration) _13 projects_
 - [Plugins, MCPs, CLI tools](#plugins-mcps-cli-tools) _19 projects_
 - [Memory and state](#memory-and-state) _5 projects_
 - [Evaluation and benchmarking harnesses](#evaluation-and-benchmarking-harnesses) _19 projects_
@@ -319,7 +319,8 @@ _Harnesses and patterns for multi-agent coordination and handoffs._
 | 9 | <a name="omnigent"></a>[**omnigent**](https://github.com/omnigent-ai/omnigent) | [10.3k](https://github.com/omnigent-ai/omnigent/stargazers) | Open-source meta-**harness**: orchestrates Claude Code, Codex, Cursor, Pi, and custom agents behind one policy/sandboxing layer so teams swap harnesses without rewriting workflows. <sup>`sandbox` · `ide` · `python`</sup> | ❓ | complex (meta-harness, policy + sandboxing — product suite) | [Project README](https://github.com/omnigent-ai/omnigent#readme) |
 | 10 | <a name="praisonai"></a>[**PraisonAI**](https://github.com/MervinPraison/PraisonAI) | [9.1k](https://github.com/MervinPraison/PraisonAI/stargazers) | Autonomous multi-agent teams with a single entry point; emphasis on minimal config. <sup>`multi-agent` · `python`</sup> | ✅ | mostly simple (single entry, minimal config) | [Orchestrator-workers pattern](https://github.com/MervinPraison/PraisonAI/blob/main/examples/python/general/orchestrator-workers.py) |
 | 11 | <a name="ag2"></a>[**AG2**](https://github.com/ag2ai/ag2) | [5k](https://github.com/ag2ai/ag2/stargazers) | AG2 (formerly AutoGen): the community-governed continuation of the original AutoGen project after Microsoft's fork diverged—conversable multi-agent groups, code execution, and human-in-the-loop under an open-source AgentOS banner. Graduated off the radar this cycle. <sup>`multi-agent` · `python`</sup> | ❓ | complex (conversable multi-agent, AgentOS — product suite) | [Project README](https://github.com/ag2ai/ag2#readme) |
-| 12 | <a name="agentrl"></a>[**AgentRL**](https://github.com/THUDM/AgentRL)&#8202;★ | [353](https://github.com/THUDM/AgentRL/stargazers) | Multitask, multiturn RL for LLM agents; Ray-based scaling, rollout/actor workers—for teams that want to train agents, not just run them. <sup>`training` · `python`</sup> | ✅ | complex (RL, Ray, train agents — product suite) | [Async GRPO trainer](https://github.com/THUDM/AgentRL/blob/main/examples/training/async_trainer.py) |
+| 12 | <a name="raven"></a>[**Raven**](https://github.com/EverMind-AI/Raven)&#8202;★ | [4.3k](https://github.com/EverMind-AI/Raven/stargazers) | The **harness** of harnesses, built for recursive self-improvement: a host agent plans complex tasks as DAGs and orchestrates built-in and third-party agents (Claude Code, Codex, OpenClaw, Hermes Agent) over ACP, CLI, or OpenAI-compatible APIs, with EverOS long-term memory and an experimental Curator that installs only verified changes to each agent's strategy modules. <sup>`mcp` · `memory` · `multi-agent` · `cli` · `python`</sup> | ✅ | complex (host agent, multi-agent DAGs, ACP/A2A/MCP — product suite) | [Documentation](https://evermind-ai.github.io/Raven/) |
+| 13 | <a name="agentrl"></a>[**AgentRL**](https://github.com/THUDM/AgentRL)&#8202;★ | [353](https://github.com/THUDM/AgentRL/stargazers) | Multitask, multiturn RL for LLM agents; Ray-based scaling, rollout/actor workers—for teams that want to train agents, not just run them. <sup>`training` · `python`</sup> | ✅ | complex (RL, Ray, train agents — product suite) | [Async GRPO trainer](https://github.com/THUDM/AgentRL/blob/main/examples/training/async_trainer.py) |
 
 ## Plugins, MCPs, CLI tools
 
@@ -495,7 +496,7 @@ Harnesses whose execution state persists across restarts: langgraph-bigtool, QM,
 
 ### How many of these agent harnesses are open source?
 
-124 of 167 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.
+125 of 168 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.
 
 ### What is an agent harness?
 

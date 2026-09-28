@@ -466,6 +466,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("omnigent", "omnigent-ai/omnigent",
                 "Open-source meta-**harness**: orchestrates Claude Code, Codex, Cursor, Pi, and custom agents behind one policy/sandboxing layer so teams swap harnesses without rewriting workflows.",
                 "complex (meta-harness, policy + sandboxing — product suite)", oss="❓", labels=["python"]),
+        Project("Raven", "EverMind-AI/Raven",
+                "The **harness** of harnesses, built for recursive self-improvement: a host agent plans complex tasks as DAGs and orchestrates built-in and third-party agents (Claude Code, Codex, OpenClaw, Hermes Agent) over ACP, CLI, or OpenAI-compatible APIs, with EverOS long-term memory and an experimental Curator that installs only verified changes to each agent's strategy modules.",
+                "complex (host agent, multi-agent DAGs, ACP/A2A/MCP — product suite)", labels=["python"]),
     ],
     "plugins-mcp-cli": [
         Project("aider", "Aider-AI/aider",
@@ -795,6 +798,7 @@ META: dict[str, tuple[int, str, str]] = {
     "THUDM/AgentRL": (353, "https://github.com/THUDM/AgentRL/blob/main/examples/training/async_trainer.py", "Async GRPO trainer"),
     "aden-hive/hive": (11077, "https://github.com/aden-hive/hive#readme", "Project README"),
     "omnigent-ai/omnigent": (10290, "https://github.com/omnigent-ai/omnigent#readme", "Project README"),
+    "EverMind-AI/Raven": (4295, "https://evermind-ai.github.io/Raven/", "Documentation"),
     # plugins-mcp-cli
     "Aider-AI/aider": (49217, "https://github.com/Aider-AI/aider/blob/main/aider/repomap.py", "Repo map source"),
     "RyanAlberts/agentlog": (1, "https://github.com/RyanAlberts/agentlog/blob/main/example-log/decisions.jsonl", "Sample decisions.jsonl"),
@@ -1204,6 +1208,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "THUDM/AgentRL": ("headless", "resumable"),
     "aden-hive/hive": ("bounded", "resumable"),
     "omnigent-ai/omnigent": ("n/a", "n/a"),
+    "EverMind-AI/Raven": ("headless", "resumable"),
     # plugins-mcp-cli
     "thedotmack/claude-mem": ("n/a", "n/a"),
     "Aider-AI/aider": ("checkpoint-gated", "resumable"),
