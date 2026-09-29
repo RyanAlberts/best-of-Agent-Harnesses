@@ -1,6 +1,6 @@
 # Best of Agent Harnesses
 
-> Hand-curated, ranked list of 167 AI agent harnesses — the runtimes that close the loop between a stateless model and the outside world. 12 categories, a 4-tier adoption-surface rating (simplicity ↔ capability), capability tags, a license signal, and one concrete example link per project. Stars captured 2026-09-27. The harness matters more than the model: the same weights score about 30% on ARC-AGI-3 bare and 95.5% inside Prime Agent, and harness rankings barely transfer across models, so pick harness and model as a pair (sources: https://ryanalberts.github.io/best-of-Agent-Harnesses/compare/why-the-harness-matters/ ; this week's top picks per category: https://ryanalberts.github.io/best-of-Agent-Harnesses/compare/best-ai-agent-harnesses-2026/ ).
+> Hand-curated, ranked list of 168 AI agent harnesses — the runtimes that close the loop between a stateless model and the outside world. 12 categories, a 4-tier adoption-surface rating (simplicity ↔ capability), capability tags, a license signal, and one concrete example link per project. Stars captured 2026-09-27. The harness matters more than the model: the same weights score about 30% on ARC-AGI-3 bare and 95.5% inside Prime Agent, and harness rankings barely transfer across models, so pick harness and model as a pair (sources: https://ryanalberts.github.io/best-of-Agent-Harnesses/compare/why-the-harness-matters/ ; this week's top picks per category: https://ryanalberts.github.io/best-of-Agent-Harnesses/compare/best-ai-agent-harnesses-2026/ ).
 
 Maintained at https://github.com/RyanAlberts/best-of-Agent-Harnesses (CC-BY-SA-4.0).
 Structured data: https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/harnesses.json
@@ -26,7 +26,7 @@ Tiers, least to most adoption surface: super simple → mostly simple → slight
 ## Decision guides
 
 - Agent evals: SWE-bench vs inspect_ai vs Terminal-Bench: https://ryanalberts.github.io/best-of-Agent-Harnesses/compare/agent-eval-harnesses/ — You changed your agent: new model, new prompt, new tools. Did it get better or worse? An eval is how you answer that with a number instead of a feeling. The word covers two different products, and knowing which one you need is most of the decision. A **benchmark** is a fixed public exam with a leade
-- The best AI agent harnesses in 2026, ranked by category: https://ryanalberts.github.io/best-of-Agent-Harnesses/compare/best-ai-agent-harnesses-2026/ — These are the top three agent harnesses in each of the 12 categories of best-of-Agent-Harnesses, a hand-curated list of 167 harnesses re-ranked from live GitHub data every week; the stars below were captured 2026-09-27, and the page regenerates with every refresh.
+- The best AI agent harnesses in 2026, ranked by category: https://ryanalberts.github.io/best-of-Agent-Harnesses/compare/best-ai-agent-harnesses-2026/ — These are the top three agent harnesses in each of the 12 categories of best-of-Agent-Harnesses, a hand-curated list of 168 harnesses re-ranked from live GitHub data every week; the stars below were captured 2026-09-27, and the page regenerates with every refresh.
 - Browser agents: browser-use vs Stagehand vs Playwright MCP vs chrome-devtools-mcp: https://ryanalberts.github.io/best-of-Agent-Harnesses/compare/browser-agents/ — "Browser agent" covers three different kinds of product, and most bad picks here come from comparing across the lanes instead of within one. **Agent libraries** own the whole job: you hand them a goal in plain language ("find the cheapest flight, fill the form") and they decide every click. browser-
 - Browser infrastructure for agents: Browserbase vs Steel vs Hyperbrowser: https://ryanalberts.github.io/best-of-Agent-Harnesses/compare/browser-infrastructure/ — Agent libraries like browser-use and Stagehand decide what to click; something still has to run the browsers they click in. At small scale that's Chrome on your own machine. At production scale it becomes its own operations problem: hundreds of concurrent sessions, sites that block automation, CAPTC
 - Claude Code skill packs: superpowers vs GStack vs get-shit-done vs Anthropic Skills: https://ryanalberts.github.io/best-of-Agent-Harnesses/compare/claude-code-skill-packs/ — A skill is a folder of instructions (a SKILL.md file, plus any scripts it needs) that a coding agent loads only when the task matches, instead of carrying every instruction all the time. A skill pack is a curated bundle of them: someone else's working habits for your agent, installed as files. Nothi
@@ -104,7 +104,7 @@ Harnesses designed for unattended runs, batches, and fleets: opencode, OpenHands
 Harnesses whose execution state persists across restarts: langgraph-bigtool, QM, n8n, langgraph, mastra, letta, deepagents, pydantic-ai.
 
 ### How many of these agent harnesses are open source?
-124 of 167 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.
+125 of 168 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.
 
 ### What is an agent harness?
 The runtime that turns a model into an agent: it decides what the model's reasoning is allowed to touch, and supplies the orchestration, tool wiring, memory, error recovery, and guardrails around per-turn inference.
@@ -311,7 +311,7 @@ Agentic eval systems, reasoning benchmarks, and open agent benchmarks.
 - [SUPER](https://github.com/allenai/super-benchmark) — ⭐58, slightly complex, autonomy: headless, recovery: none, open-source: Agents that set up and run ML/NLP from GitHub repos; 45 expert problems, 152 masked tasks, 602 AutoGen tasks; Docker-based. [sandbox, python]
 - [TRAIL](https://github.com/patronus-ai/trail-benchmark) — ⭐24, mostly simple, autonomy: n/a, recovery: n/a, open-source: Trace reasoning and agentic issue localization; 148 long-context traces, 841 errors, 20+ error types; Hugging Face dataset.
 
-## Observability and eval-ops (4 projects)
+## Observability and eval-ops (5 projects)
 
 Tracing, monitoring, and production evaluation for live agent runs: capture every step, tool call, and token, then score and debug in the loop. Distinct from the fixed-task benchmarks above—this is what you run against your own traffic.
 
@@ -319,6 +319,7 @@ Tracing, monitoring, and production evaluation for live agent runs: capture ever
 - [MLflow](https://github.com/mlflow/mlflow) — ⭐28.2k, complex, autonomy: n/a, recovery: n/a, open-source: Mature ML platform now covering GenAI: MLflow Tracing captures every agent step, tool call, and token, with built-in LLM evals and prompt versioning—observability for teams already standardized on MLflow. [evals, python]
 - [Opik](https://github.com/comet-ml/opik) — ⭐22.3k, slightly complex, autonomy: n/a, recovery: n/a, open-source: Comet's open-source agent observability and evaluation platform: tracing, scoring, and experiment comparison with the whole core feature set free to self-host under Apache-2.0. [evals, python]
 - [Arize Phoenix](https://github.com/Arize-ai/phoenix) — ⭐11.6k, slightly complex, autonomy: n/a, recovery: n/a, restricted (Elastic-2.0): Arize's source-available, local-first tracing and eval layer: run it on your laptop or your own infra, and graduate to the managed Arize AX platform only when you need it. [evals, python]
+- [Reef](https://github.com/Human-Agent-Society/reef) — ⭐7.1k, complex, autonomy: n/a, recovery: n/a, open-source: Records live agent traffic and feeds it back as an update: agents call an OpenAI- and Anthropic-compatible endpoint (`/v1/chat/completions`, `/v1/messages`), every response carries a receipt header, and a later report attaches a score or textual feedback to that receipt. Eligible records become a candidate update to either model weights or the agent's **harness** tree of rules, skills, prompts, and extensions, which the configured recipe scores against the version now serving and publishes as a new installable version only if it is selected—no restart, and a rejected candidate leaves the current one serving. The updater, the feedback matching, and the selection policy are operator-defined and fixed across rounds. [evals, training, python]
 
 ## Research and task-specific harnesses (5 projects)
 

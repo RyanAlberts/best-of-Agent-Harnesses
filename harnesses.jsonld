@@ -29,7 +29,7 @@
   ],
   "mainEntity": {
     "@type": "ItemList",
-    "numberOfItems": 167,
+    "numberOfItems": 168,
     "itemListElement": [
       {
         "@type": "ListItem",
@@ -1800,6 +1800,18 @@
         "position": 148,
         "item": {
           "@type": "SoftwareApplication",
+          "name": "Reef",
+          "url": "https://github.com/Human-Agent-Society/reef",
+          "description": "Records live agent traffic and feeds it back as an update: agents call an OpenAI- and Anthropic-compatible endpoint (`/v1/chat/completions`, `/v1/messages`), every response carries a receipt header, and a later report attaches a score or textual feedback to that receipt. Eligible records become a candidate update to either model weights or the agent's **harness** tree of rules, skills, prompts, and extensions, which the configured recipe scores against the version now serving and publishes as a new installable version only if it is selected—no restart, and a rejected candidate leaves the current one serving. The updater, the feedback matching, and the selection policy are operator-defined and fixed across rounds.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "evals, training, python"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 149,
+        "item": {
+          "@type": "SoftwareApplication",
           "name": "DeerFlow",
           "url": "https://github.com/bytedance/deer-flow",
           "description": "ByteDance's long-horizon research **harness**: a LangGraph-based agent loop that researches, codes, and creates using sandboxes, memory, tools, and subagents behind a message gateway—an alternative to the reference gpt-researcher stack for multi-hour tasks.",
@@ -1809,7 +1821,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 149,
+        "position": 150,
         "item": {
           "@type": "SoftwareApplication",
           "name": "gpt-researcher",
@@ -1821,7 +1833,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 150,
+        "position": 151,
         "item": {
           "@type": "SoftwareApplication",
           "name": "AutoResearchClaw",
@@ -1833,7 +1845,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 151,
+        "position": 152,
         "item": {
           "@type": "SoftwareApplication",
           "name": "MiroThinker",
@@ -1845,7 +1857,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 152,
+        "position": 153,
         "item": {
           "@type": "SoftwareApplication",
           "name": "openagents",
@@ -1857,7 +1869,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 153,
+        "position": 154,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Daytona",
@@ -1869,7 +1881,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 154,
+        "position": 155,
         "item": {
           "@type": "SoftwareApplication",
           "name": "LiteLLM",
@@ -1881,7 +1893,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 155,
+        "position": 156,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Composio",
@@ -1893,7 +1905,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 156,
+        "position": 157,
         "item": {
           "@type": "SoftwareApplication",
           "name": "deepagents",
@@ -1905,7 +1917,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 157,
+        "position": 158,
         "item": {
           "@type": "SoftwareApplication",
           "name": "smolagents",
@@ -1917,7 +1929,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 158,
+        "position": 159,
         "item": {
           "@type": "SoftwareApplication",
           "name": "vercel/ai",
@@ -1929,7 +1941,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 159,
+        "position": 160,
         "item": {
           "@type": "SoftwareApplication",
           "name": "pydantic-ai",
@@ -1941,7 +1953,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 160,
+        "position": 161,
         "item": {
           "@type": "SoftwareApplication",
           "name": "E2B",
@@ -1953,7 +1965,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 161,
+        "position": 162,
         "item": {
           "@type": "SoftwareApplication",
           "name": "strands-agents",
@@ -1965,7 +1977,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 162,
+        "position": 163,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Steel",
@@ -1977,7 +1989,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 163,
+        "position": 164,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Cloudflare Agents",
@@ -1989,7 +2001,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 164,
+        "position": 165,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Agent Sandbox",
@@ -2001,7 +2013,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 165,
+        "position": 166,
         "item": {
           "@type": "SoftwareApplication",
           "name": "openai-agents-js",
@@ -2013,7 +2025,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 166,
+        "position": 167,
         "item": {
           "@type": "SoftwareApplication",
           "name": "open-harness",
@@ -2025,7 +2037,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 167,
+        "position": 168,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Community-curated agent lists",

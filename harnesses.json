@@ -9,7 +9,7 @@
     "feed_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/feed.json",
     "license": "CC-BY-SA-4.0",
     "stars_captured": "2026-09-27",
-    "project_count": 167,
+    "project_count": 168,
     "graveyard_count": 3,
     "tiers": [
       "super simple",
@@ -378,7 +378,7 @@
     {
       "kind": "derived",
       "q": "How many of these agent harnesses are open source?",
-      "a": "124 of 167 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
+      "a": "125 of 168 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
       "slug": "how-many-of-these-agent-harnesses-are-open-source"
     },
     {
@@ -425,7 +425,7 @@
     {
       "slug": "best-ai-agent-harnesses-2026",
       "title": "The best AI agent harnesses in 2026, ranked by category",
-      "summary": "These are the top three agent harnesses in each of the 12 categories of best-of-Agent-Harnesses, a hand-curated list of 167 harnesses re-ranked from live GitHub data every week; the stars below were captured 2026-09-27, and the page regenerates with every refresh.",
+      "summary": "These are the top three agent harnesses in each of the 12 categories of best-of-Agent-Harnesses, a hand-curated list of 168 harnesses re-ranked from live GitHub data every week; the stars below were captured 2026-09-27, and the page regenerates with every refresh.",
       "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/comparisons/best-ai-agent-harnesses-2026.md",
       "raw_url": "https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/comparisons/best-ai-agent-harnesses-2026.md"
     },
@@ -7626,6 +7626,36 @@
       "example": {
         "label": "Docs",
         "url": "https://arize.com/docs/phoenix"
+      },
+      "deep_dive": null
+    },
+    {
+      "name": "Reef",
+      "github_id": "Human-Agent-Society/reef",
+      "url": "https://github.com/Human-Agent-Society/reef",
+      "slug": "reef",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#reef",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/reef/",
+      "description": "Records live agent traffic and feeds it back as an update: agents call an OpenAI- and Anthropic-compatible endpoint (`/v1/chat/completions`, `/v1/messages`), every response carries a receipt header, and a later report attaches a score or textual feedback to that receipt. Eligible records become a candidate update to either model weights or the agent's **harness** tree of rules, skills, prompts, and extensions, which the configured recipe scores against the version now serving and publishes as a new installable version only if it is selected—no restart, and a rejected candidate leaves the current one serving. The updater, the feedback matching, and the selection policy are operator-defined and fixed across rounds.",
+      "category": "observability",
+      "category_title": "Observability and eval-ops",
+      "stars": 7090,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (serving, feedback matching, training, and artifact versioning — product suite)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [
+        "evals",
+        "training",
+        "python"
+      ],
+      "example": {
+        "label": "Evolve your harness tutorial",
+        "url": "https://github.com/Human-Agent-Society/reef/tree/main/tutorials/evolve-your-harness"
       },
       "deep_dive": null
     },
