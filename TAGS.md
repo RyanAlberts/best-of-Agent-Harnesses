@@ -1,13 +1,13 @@
 <!-- markdownlint-disable -->
 # Tags — cross-reference
 
-_Auto-generated from `scripts/generate.py`. 167 projects across 22 canonical tags. Edit projects in `generate.py` (not here) and rerun the script._
+_Auto-generated from `scripts/generate.py`. 168 projects across 22 canonical tags. Edit projects in `generate.py` (not here) and rerun the script._
 
 Tag chips appear next to each project in [README.md](README.md). This page lists every tag once with the projects that carry it, grouped by category and sorted by GitHub stars within each category.
 
 ## All tags
 
-[`mcp`](#mcp) (33) · [`memory`](#memory) (38) · [`multi-agent`](#multi-agent) (29) · [`evals`](#evals) (22) · [`voice`](#voice) (2) · [`vision`](#vision) (4) · [`browser`](#browser) (9) · [`sandbox`](#sandbox) (29) · [`low-code`](#low-code) (4) · [`rag`](#rag) (9) · [`tool-discovery`](#tool-discovery) (5) · [`training`](#training) (5) · [`workflow`](#workflow) (10) · [`typed`](#typed) (3) · [`local`](#local) (7) · [`provider-agnostic`](#provider-agnostic) (11) · [`cli`](#cli) (23) · [`ide`](#ide) (13) · [`tui`](#tui) (4) · [`rust`](#rust) (5) · [`python`](#python) (81) · [`typescript`](#typescript) (45)
+[`mcp`](#mcp) (34) · [`memory`](#memory) (39) · [`multi-agent`](#multi-agent) (30) · [`evals`](#evals) (22) · [`voice`](#voice) (2) · [`vision`](#vision) (4) · [`browser`](#browser) (9) · [`sandbox`](#sandbox) (29) · [`low-code`](#low-code) (4) · [`rag`](#rag) (9) · [`tool-discovery`](#tool-discovery) (5) · [`training`](#training) (5) · [`workflow`](#workflow) (10) · [`typed`](#typed) (3) · [`local`](#local) (7) · [`provider-agnostic`](#provider-agnostic) (11) · [`cli`](#cli) (24) · [`ide`](#ide) (13) · [`tui`](#tui) (4) · [`rust`](#rust) (5) · [`python`](#python) (82) · [`typescript`](#typescript) (45)
 
 ---
 
@@ -41,6 +41,10 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 **Frameworks**
 
 - [Bee Agent Framework](https://github.com/i-am-bee/beeai-framework) — ⭐3.4k — Python + TypeScript, LF AI–backed; MCP/ACP, workflows, Requirement Agent; the one that pushes "production multi-agent" without LangChain.
+
+**Multi-agent and orchestration**
+
+- [Raven](https://github.com/EverMind-AI/Raven) — ⭐4.3k — The **harness** of harnesses, built for recursive self-improvement: a host agent plans complex tasks as DAGs and orchestrates built-in and third-party agents (Claude Code, Codex, OpenClaw, Hermes Agent) over ACP, CLI, or OpenAI-compatible APIs, with EverOS long-term memory and an experimental Curator that installs only verified changes to each agent's strategy modules.
 
 **Plugins, MCPs, CLI tools**
 
@@ -114,6 +118,10 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [Haystack](https://github.com/deepset-ai/haystack) — ⭐26.6k — Open-source orchestration framework for context-engineered LLM apps: modular pipelines and agent workflows with explicit control over retrieval, routing, memory, and generation—closer to LangChain's territory than a coding-agent harness.
 - [letta](https://github.com/letta-ai/letta) — ⭐24.9k — Python agent runtime with tool use and control flow; lean API; stateful agents with long-horizon memory.
 
+**Multi-agent and orchestration**
+
+- [Raven](https://github.com/EverMind-AI/Raven) — ⭐4.3k — The **harness** of harnesses, built for recursive self-improvement: a host agent plans complex tasks as DAGs and orchestrates built-in and third-party agents (Claude Code, Codex, OpenClaw, Hermes Agent) over ACP, CLI, or OpenAI-compatible APIs, with EverOS long-term memory and an experimental Curator that installs only verified changes to each agent's strategy modules.
+
 **Plugins, MCPs, CLI tools**
 
 - [MCP Servers](https://github.com/modelcontextprotocol/servers) — ⭐90.6k — The official reference collection of Model Context Protocol servers (filesystem, git, fetch, memory, time, and more)—the canonical, vetted toolset agents connect to, and the pattern every other MCP server is measured against.
@@ -182,6 +190,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [hive](https://github.com/aden-hive/hive) — ⭐11.1k — Self-hosted multi-agent **harness** aimed at production workloads: human-in-the-loop checkpoints and a self-improving agent loop, distinct from single-session coding-agent shells.
 - [PraisonAI](https://github.com/MervinPraison/PraisonAI) — ⭐9.1k — Autonomous multi-agent teams with a single entry point; emphasis on minimal config.
 - [AG2](https://github.com/ag2ai/ag2) — ⭐5k — AG2 (formerly AutoGen): the community-governed continuation of the original AutoGen project after Microsoft's fork diverged—conversable multi-agent groups, code execution, and human-in-the-loop under an open-source AgentOS banner. Graduated off the radar this cycle.
+- [Raven](https://github.com/EverMind-AI/Raven) — ⭐4.3k — The **harness** of harnesses, built for recursive self-improvement: a host agent plans complex tasks as DAGs and orchestrates built-in and third-party agents (Claude Code, Codex, OpenClaw, Hermes Agent) over ACP, CLI, or OpenAI-compatible APIs, with EverOS long-term memory and an experimental Curator that installs only verified changes to each agent's strategy modules.
 
 **Research and task-specific harnesses**
 
@@ -557,6 +566,10 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 - [Talon](https://github.com/dylanneve1/talon) — ⭐83 — Multi-platform personal agent living in Telegram, Discord, Teams, and the terminal. The **harness** is a pluggable-backend loop (Claude, Kilo, OpenCode, Codex, OpenAI Agents) with full MCP tool access and persistent background agents (Goals, Heartbeat, Dream); the chat apps are shells.
 
+**Multi-agent and orchestration**
+
+- [Raven](https://github.com/EverMind-AI/Raven) — ⭐4.3k — The **harness** of harnesses, built for recursive self-improvement: a host agent plans complex tasks as DAGs and orchestrates built-in and third-party agents (Claude Code, Codex, OpenClaw, Hermes Agent) over ACP, CLI, or OpenAI-compatible APIs, with EverOS long-term memory and an experimental Curator that installs only verified changes to each agent's strategy modules.
+
 **Plugins, MCPs, CLI tools**
 
 - [aider](https://github.com/Aider-AI/aider) — ⭐49.2k — Git-aware CLI pair programmer; edits in-repo, supports multiple models and MCP so agents see version control and tools.
@@ -692,6 +705,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [omnigent](https://github.com/omnigent-ai/omnigent) — ⭐10.3k — Open-source meta-**harness**: orchestrates Claude Code, Codex, Cursor, Pi, and custom agents behind one policy/sandboxing layer so teams swap harnesses without rewriting workflows.
 - [PraisonAI](https://github.com/MervinPraison/PraisonAI) — ⭐9.1k — Autonomous multi-agent teams with a single entry point; emphasis on minimal config.
 - [AG2](https://github.com/ag2ai/ag2) — ⭐5k — AG2 (formerly AutoGen): the community-governed continuation of the original AutoGen project after Microsoft's fork diverged—conversable multi-agent groups, code execution, and human-in-the-loop under an open-source AgentOS banner. Graduated off the radar this cycle.
+- [Raven](https://github.com/EverMind-AI/Raven) — ⭐4.3k — The **harness** of harnesses, built for recursive self-improvement: a host agent plans complex tasks as DAGs and orchestrates built-in and third-party agents (Claude Code, Codex, OpenClaw, Hermes Agent) over ACP, CLI, or OpenAI-compatible APIs, with EverOS long-term memory and an experimental Curator that installs only verified changes to each agent's strategy modules.
 - [AgentRL](https://github.com/THUDM/AgentRL) — ⭐353 — Multitask, multiturn RL for LLM agents; Ray-based scaling, rollout/actor workers—for teams that want to train agents, not just run them.
 
 **Plugins, MCPs, CLI tools**
@@ -889,6 +903,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [omnigent](https://github.com/omnigent-ai/omnigent) — ⭐10.3k — Open-source meta-**harness**: orchestrates Claude Code, Codex, Cursor, Pi, and custom agents behind one policy/sandboxing layer so teams swap harnesses without rewriting workflows.
 - [PraisonAI](https://github.com/MervinPraison/PraisonAI) — ⭐9.1k — Autonomous multi-agent teams with a single entry point; emphasis on minimal config.
 - [AG2](https://github.com/ag2ai/ag2) — ⭐5k — AG2 (formerly AutoGen): the community-governed continuation of the original AutoGen project after Microsoft's fork diverged—conversable multi-agent groups, code execution, and human-in-the-loop under an open-source AgentOS banner. Graduated off the radar this cycle.
+- [Raven](https://github.com/EverMind-AI/Raven) — ⭐4.3k — The **harness** of harnesses, built for recursive self-improvement: a host agent plans complex tasks as DAGs and orchestrates built-in and third-party agents (Claude Code, Codex, OpenClaw, Hermes Agent) over ACP, CLI, or OpenAI-compatible APIs, with EverOS long-term memory and an experimental Curator that installs only verified changes to each agent's strategy modules.
 - [AgentRL](https://github.com/THUDM/AgentRL) — ⭐353 — Multitask, multiturn RL for LLM agents; Ray-based scaling, rollout/actor workers—for teams that want to train agents, not just run them.
 
 **Plugins, MCPs, CLI tools**

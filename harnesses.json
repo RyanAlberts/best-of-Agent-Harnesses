@@ -9,7 +9,7 @@
     "feed_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/feed.json",
     "license": "CC-BY-SA-4.0",
     "stars_captured": "2026-09-27",
-    "project_count": 167,
+    "project_count": 168,
     "graveyard_count": 3,
     "tiers": [
       "super simple",
@@ -377,7 +377,7 @@
     {
       "kind": "derived",
       "q": "How many of these agent harnesses are open source?",
-      "a": "124 of 167 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
+      "a": "125 of 168 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
       "slug": "how-many-of-these-agent-harnesses-are-open-source"
     },
     {
@@ -424,7 +424,7 @@
     {
       "slug": "best-ai-agent-harnesses-2026",
       "title": "The best AI agent harnesses in 2026, ranked by category",
-      "summary": "These are the top three agent harnesses in each of the 12 categories of best-of-Agent-Harnesses, a hand-curated list of 167 harnesses re-ranked from live GitHub data every week; the stars below were captured 2026-09-27, and the page regenerates with every refresh.",
+      "summary": "These are the top three agent harnesses in each of the 12 categories of best-of-Agent-Harnesses, a hand-curated list of 168 harnesses re-ranked from live GitHub data every week; the stars below were captured 2026-09-27, and the page regenerates with every refresh.",
       "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/comparisons/best-ai-agent-harnesses-2026.md",
       "raw_url": "https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/comparisons/best-ai-agent-harnesses-2026.md"
     },
@@ -6163,6 +6163,38 @@
       },
       "deep_dive": null,
       "archived": null
+    },
+    {
+      "name": "Raven",
+      "github_id": "EverMind-AI/Raven",
+      "url": "https://github.com/EverMind-AI/Raven",
+      "slug": "raven",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#raven",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/raven/",
+      "description": "The **harness** of harnesses, built for recursive self-improvement: a host agent plans complex tasks as DAGs and orchestrates built-in and third-party agents (Claude Code, Codex, OpenClaw, Hermes Agent) over ACP, CLI, or OpenAI-compatible APIs, with EverOS long-term memory and an experimental Curator that installs only verified changes to each agent's strategy modules.",
+      "category": "multi-agent",
+      "category_title": "Multi-agent and orchestration",
+      "stars": 4295,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (host agent, multi-agent DAGs, ACP/A2A/MCP — product suite)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "open-source",
+      "tags": [
+        "mcp",
+        "memory",
+        "multi-agent",
+        "cli",
+        "python"
+      ],
+      "example": {
+        "label": "Documentation",
+        "url": "https://evermind-ai.github.io/Raven/"
+      },
+      "deep_dive": null
     },
     {
       "name": "AgentRL",
