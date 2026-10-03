@@ -144,6 +144,18 @@ projects:
     github_id: QwenLM/qwen-code
     labels: ["javascript"]
     category: "coding-agent-products"
+  - name: Grok Build
+    github_id: xai-org/grok-build
+    category: "coding-agent-products"
+  - name: ZCode
+    github_id: zai-org/ZCode
+    category: "coding-agent-products"
+  - name: Codewhale
+    github_id: Hmbown/Codewhale
+    category: "coding-agent-products"
+  - name: grok-cli
+    github_id: superagent-ai/grok-cli
+    category: "coding-agent-products"
   - name: Kilo Code
     github_id: Kilo-Org/kilocode
     labels: ["javascript"]
@@ -241,7 +253,7 @@ projects:
     labels: ["python"]
     category: "personal-agent-runtimes"
   - name: Talon
-    github_id: dylanneve1/talon
+    github_id: thefalconry/talon
     labels: ["javascript"]
     category: "personal-agent-runtimes"
   - name: OpenClaw
@@ -388,6 +400,10 @@ projects:
   - name: openai-agents-python
     github_id: openai/openai-agents-python
     labels: ["python"]
+    category: "multi-agent"
+  - name: Agent Teams
+    github_id: 777genius/agent-teams-ai
+    labels: ["typescript"]
     category: "multi-agent"
   - name: crewAI
     github_id: crewAIInc/crewAI

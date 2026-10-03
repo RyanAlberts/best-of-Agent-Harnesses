@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1320 880" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
 <rect width="1320" height="880" fill="#ffffff" rx="8"/>
 <text x="660.0" y="52" text-anchor="middle" font-size="30" font-weight="700" fill="#111827">The Agent Harness Landscape</text>
-<text x="660.0" y="80" text-anchor="middle" font-size="15" fill="#6b7280">167 hand-curated projects · GitHub stars vs. adoption surface area · stars captured 2026-09-27</text>
+<text x="660.0" y="80" text-anchor="middle" font-size="15" fill="#6b7280">172 hand-curated projects · GitHub stars vs. adoption surface area · stars captured 2026-09-27</text>
 <circle cx="80" cy="106" r="6" fill="#8b5cf6"/>
 <text x="91" y="110" font-size="12.5" fill="#374151">Progressive disclosure</text>
 <circle cx="262.2" cy="106" r="6" fill="#ef4444"/>
@@ -41,13 +41,13 @@
 <text x="231.2" y="800" text-anchor="middle" font-size="12" fill="#9ca3af">12 projects</text>
 <line x1="382.5" y1="168" x2="382.5" y2="750" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4 4"/>
 <text x="533.8" y="780" text-anchor="middle" font-size="15" font-weight="600" fill="#111827">mostly simple</text>
-<text x="533.8" y="800" text-anchor="middle" font-size="12" fill="#9ca3af">33 projects</text>
+<text x="533.8" y="800" text-anchor="middle" font-size="12" fill="#9ca3af">34 projects</text>
 <line x1="685.0" y1="168" x2="685.0" y2="750" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4 4"/>
 <text x="836.2" y="780" text-anchor="middle" font-size="15" font-weight="600" fill="#111827">slightly complex</text>
-<text x="836.2" y="800" text-anchor="middle" font-size="12" fill="#9ca3af">68 projects</text>
+<text x="836.2" y="800" text-anchor="middle" font-size="12" fill="#9ca3af">71 projects</text>
 <line x1="987.5" y1="168" x2="987.5" y2="750" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4 4"/>
 <text x="1138.8" y="780" text-anchor="middle" font-size="15" font-weight="600" fill="#111827">complex</text>
-<text x="1138.8" y="800" text-anchor="middle" font-size="12" fill="#9ca3af">54 projects</text>
+<text x="1138.8" y="800" text-anchor="middle" font-size="12" fill="#9ca3af">55 projects</text>
 <line x1="80" y1="750" x2="1290" y2="750" stroke="#d1d5db" stroke-width="1.5"/>
 <text x="685.0" y="830" text-anchor="middle" font-size="13" fill="#6b7280">←  less to adopt: a file format, one concept&#160;&#160;·&#160;&#160;simplicity ↔ capability&#160;&#160;·&#160;&#160;full platforms with their own runtime: more to adopt  →</text>
 <circle cx="316.4" cy="749.9" r="4.5" fill="#10b981" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>agentlog — ⭐1</title></circle>
@@ -60,7 +60,7 @@
 <circle cx="845.0" cy="583.0" r="4.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>SUPER — ⭐58</title></circle>
 <circle cx="865.1" cy="580.5" r="4.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>YYLO — ⭐61</title></circle>
 <circle cx="489.2" cy="565.8" r="4.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>letta-evals — ⭐82</title></circle>
-<circle cx="811.5" cy="565.2" r="4.5" fill="#0ea5e9" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Talon — ⭐83</title></circle>
+<circle cx="902.8" cy="565.2" r="4.5" fill="#0ea5e9" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Talon — ⭐83</title></circle>
 <circle cx="1070.6" cy="555.5" r="4.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>AgencyBench — ⭐101</title></circle>
 <circle cx="495.0" cy="534.6" r="4.5" fill="#f59e0b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>LoopTroop — ⭐154</title></circle>
 <circle cx="1213.3" cy="527.4" r="4.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>VitaBench — ⭐178</title></circle>
@@ -90,11 +90,13 @@
 <circle cx="812.4" cy="419.0" r="4.5" fill="#10b981" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Docker MCP Gateway — ⭐1.6k</title></circle>
 <circle cx="1204.2" cy="418.0" r="4.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>WebArena — ⭐1.6k</title></circle>
 <circle cx="906.1" cy="418.0" r="4.5" fill="#f59e0b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Meta-Harness — ⭐1.6k</title></circle>
+<circle cx="1164.7" cy="403.4" r="4.5" fill="#ec4899" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Agent Teams — ⭐2.2k</title></circle>
 <circle cx="878.6" cy="403.0" r="4.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>AgentStack — ⭐2.2k</title></circle>
 <circle cx="465.6" cy="401.3" r="4.5" fill="#10b981" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>agent-vault — ⭐2.3k</title></circle>
 <circle cx="475.1" cy="392.3" r="4.5" fill="#10b981" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>cocoindex-code — ⭐2.7k</title></circle>
 <circle cx="1200.9" cy="389.7" r="4.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>inspect_ai — ⭐2.9k</title></circle>
 <circle cx="1221.6" cy="381.0" r="4.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Bee Agent Framework — ⭐3.4k</title></circle>
+<circle cx="458.6" cy="380.1" r="4.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>grok-cli — ⭐3.5k</title></circle>
 <circle cx="1200.5" cy="376.3" r="4.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>AgentBench — ⭐3.8k</title></circle>
 <circle cx="765.6" cy="374.9" r="4.5" fill="#a16207" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>openai-agents-js — ⭐3.9k</title></circle>
 <circle cx="917.2" cy="372.6" r="4.5" fill="#a16207" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Agent Sandbox — ⭐4k</title></circle>
@@ -107,6 +109,7 @@
 <circle cx="882.9" cy="353.7" r="4.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>SWE-bench — ⭐5.9k</title></circle>
 <circle cx="565.3" cy="353.0" r="4.5" fill="#f59e0b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>agents-cli — ⭐6k</title></circle>
 <circle cx="859.5" cy="350.3" r="4.5" fill="#10b981" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Agent Governance Toolkit — ⭐6.3k</title></circle>
+<circle cx="837.0" cy="346.2" r="4.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>ZCode — ⭐6.9k</title></circle>
 <circle cx="751.3" cy="343.4" r="4.5" fill="#10b981" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>MCP Registry — ⭐7.3k</title></circle>
 <circle cx="784.9" cy="340.7" r="4.5" fill="#a16207" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Steel — ⭐7.7k</title></circle>
 <circle cx="823.9" cy="340.2" r="4.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>agent-squad — ⭐7.8k</title></circle>
@@ -148,6 +151,7 @@
 <circle cx="884.7" cy="281.5" r="4.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Stagehand — ⭐25.4k</title></circle>
 <circle cx="1172.8" cy="279.3" r="4.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Haystack — ⭐26.6k</title></circle>
 <circle cx="771.8" cy="278.6" r="4.5" fill="#a16207" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>vercel/ai — ⭐27k</title></circle>
+<circle cx="751.8" cy="278.3" r="4.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Grok Build — ⭐27.1k</title></circle>
 <circle cx="587.2" cy="278.3" r="4.5" fill="#f59e0b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>planning-with-files — ⭐27.1k</title></circle>
 <circle cx="820.0" cy="277.8" r="4.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Kilo Code — ⭐27.4k</title></circle>
 <circle cx="1152.3" cy="277.7" r="4.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Symphony — ⭐27.4k</title></circle>
@@ -175,6 +179,7 @@
 <circle cx="452.6" cy="262.1" r="4.5" fill="#10b981" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Playwright MCP — ⭐37.6k</title></circle>
 <circle cx="162.5" cy="259.0" r="6.5" fill="#f59e0b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>wshobson/agents — ⭐40k</title></circle>
 <circle cx="236.7" cy="258.0" r="6.5" fill="#8b5cf6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>awesome-cursorrules — ⭐40.8k</title></circle>
+<circle cx="819.2" cy="257.8" r="4.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Codewhale — ⭐41k</title></circle>
 <circle cx="1206.5" cy="256.2" r="4.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>agno — ⭐42.4k</title></circle>
 <circle cx="924.7" cy="256.2" r="4.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>langgraph — ⭐42.4k</title></circle>
 <circle cx="893.9" cy="250.9" r="4.5" fill="#0ea5e9" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>CowAgent — ⭐47.1k</title></circle>

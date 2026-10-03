@@ -9,7 +9,7 @@
     "feed_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/feed.json",
     "license": "CC-BY-SA-4.0",
     "stars_captured": "2026-09-27",
-    "project_count": 167,
+    "project_count": 172,
     "graveyard_count": 3,
     "tiers": [
       "super simple",
@@ -377,7 +377,7 @@
     {
       "kind": "derived",
       "q": "How many of these agent harnesses are open source?",
-      "a": "124 of 167 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
+      "a": "124 of 172 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
       "slug": "how-many-of-these-agent-harnesses-are-open-source"
     },
     {
@@ -424,7 +424,7 @@
     {
       "slug": "best-ai-agent-harnesses-2026",
       "title": "The best AI agent harnesses in 2026, ranked by category",
-      "summary": "These are the top three agent harnesses in each of the 12 categories of best-of-Agent-Harnesses, a hand-curated list of 167 harnesses re-ranked from live GitHub data every week; the stars below were captured 2026-09-27, and the page regenerates with every refresh.",
+      "summary": "These are the top three agent harnesses in each of the 12 categories of best-of-Agent-Harnesses, a hand-curated list of 172 harnesses re-ranked from live GitHub data every week; the stars below were captured 2026-09-27, and the page regenerates with every refresh.",
       "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/comparisons/best-ai-agent-harnesses-2026.md",
       "raw_url": "https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/comparisons/best-ai-agent-harnesses-2026.md"
     },
@@ -1573,6 +1573,39 @@
       "archived": null
     },
     {
+      "name": "Codewhale",
+      "github_id": "Hmbown/Codewhale",
+      "url": "https://github.com/Hmbown/Codewhale",
+      "slug": "codewhale",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#codewhale",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/codewhale/",
+      "description": "Open-source terminal coding agent built in Rust. The **harness** is a multi-model, MCP-capable agent loop with multi-agent orchestration; the TUI is the shell.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 41030,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (Rust CLI, multi-model, MCP)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "unknown",
+      "tags": [
+        "mcp",
+        "multi-agent",
+        "cli",
+        "tui",
+        "rust"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/Hmbown/Codewhale#readme"
+      },
+      "deep_dive": null,
+      "archived": null
+    },
+    {
       "name": "DeepSeek-Reasonix",
       "github_id": "esengine/DeepSeek-Reasonix",
       "url": "https://github.com/esengine/DeepSeek-Reasonix",
@@ -1981,6 +2014,36 @@
       "archived": null
     },
     {
+      "name": "Grok Build",
+      "github_id": "xai-org/grok-build",
+      "url": "https://github.com/xai-org/grok-build",
+      "slug": "grok-build",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#grok-build",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/grok-build/",
+      "description": "xAI's coding agent **harness** and TUI: a fullscreen, mouse-interactive terminal shell around an extensible agent loop; the TUI is the shell, the loop and its extension points are the harness.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 27125,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (official CLI, extensible TUI)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "unknown",
+      "tags": [
+        "cli",
+        "tui"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/xai-org/grok-build#readme"
+      },
+      "deep_dive": null,
+      "archived": null
+    },
+    {
       "name": "Roo Code",
       "github_id": "RooCodeInc/Roo-Code",
       "url": "https://github.com/RooCodeInc/Roo-Code",
@@ -2166,6 +2229,64 @@
       "example": {
         "label": "Project README",
         "url": "https://github.com/NanmiCoder/cc-haha#readme"
+      },
+      "deep_dive": null,
+      "archived": null
+    },
+    {
+      "name": "ZCode",
+      "github_id": "zai-org/ZCode",
+      "url": "https://github.com/zai-org/ZCode",
+      "slug": "zcode",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#zcode",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/zcode/",
+      "description": "Z.ai's coding agent **harness**: the agent loop behind its coding tools, packaged as an extensible terminal agent.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 6890,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (official CLI, extensible)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "unknown",
+      "tags": [
+        "cli"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/zai-org/ZCode#readme"
+      },
+      "deep_dive": null,
+      "archived": null
+    },
+    {
+      "name": "grok-cli",
+      "github_id": "superagent-ai/grok-cli",
+      "url": "https://github.com/superagent-ai/grok-cli",
+      "slug": "grok-cli",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#grok-cli",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/grok-cli/",
+      "description": "Open-source terminal coding agent for the Grok API; a compact CLI **harness** around xAI's models, with the terminal as the only shell.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 3481,
+      "tier": "mostly simple",
+      "tier_rank": 2,
+      "axis": "mostly simple (single-provider CLI)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "retry",
+      "recovery_rank": 2,
+      "license_signal": "unknown",
+      "tags": [
+        "cli"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/superagent-ai/grok-cli#readme"
       },
       "deep_dive": null,
       "archived": null
@@ -3937,8 +4058,8 @@
     },
     {
       "name": "Talon",
-      "github_id": "dylanneve1/talon",
-      "url": "https://github.com/dylanneve1/talon",
+      "github_id": "thefalconry/talon",
+      "url": "https://github.com/thefalconry/talon",
       "slug": "talon",
       "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#talon",
       "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/talon/",
@@ -3962,7 +4083,7 @@
       ],
       "example": {
         "label": "Multi-platform setup",
-        "url": "https://github.com/dylanneve1/talon#readme"
+        "url": "https://github.com/thefalconry/talon#readme"
       },
       "deep_dive": {
         "researched": "2026-07-19",
@@ -3970,31 +4091,31 @@
           "rating": "basic",
           "rank": 2,
           "detail": "Config-level allowlist via disabledToolTags/disabledTools and an MCP-process boundary for external tool servers, but no container/VM isolation or restricted filesystem enforced by default.",
-          "evidence": "https://raw.githubusercontent.com/dylanneve1/talon/HEAD/README.md"
+          "evidence": "https://raw.githubusercontent.com/thefalconry/talon/HEAD/README.md"
         },
         "context_memory": {
           "rating": "strong",
           "rank": 3,
           "detail": "Persistent cross-session memory via pluggable MemPalace (local vector search) or mem0 (durable semantic fact extraction) backends, plus a Dream agent that runs background memory consolidation and a storage layer that persists sessions/history across restarts.",
-          "evidence": "https://raw.githubusercontent.com/dylanneve1/talon/HEAD/README.md"
+          "evidence": "https://raw.githubusercontent.com/thefalconry/talon/HEAD/README.md"
         },
         "lifecycle_hooks": {
           "rating": "partial",
           "rank": 2,
           "detail": "Plugins expose a handleAction() callback and the internal event bus is a pub-sub spine for task/turn lifecycle events, but this is post-event logging/subscription rather than a documented pre-tool-call blocking or rewriting hook.",
-          "evidence": "https://github.com/dylanneve1/talon/tree/main/docs"
+          "evidence": "https://github.com/thefalconry/talon/tree/main/docs"
         },
         "prompt_optimization": {
           "rating": "configurable",
           "rank": 2,
           "detail": "System prompt is assembled at session start from editable templates in prompts/ and plugins can append content via getSystemPromptAddition(), but there is no automatic/self-tuning prompt optimization loop.",
-          "evidence": "https://raw.githubusercontent.com/dylanneve1/talon/HEAD/README.md"
+          "evidence": "https://raw.githubusercontent.com/thefalconry/talon/HEAD/README.md"
         },
         "build_vs_buy": {
           "tier": 2,
           "label": "blueprint",
           "detail": "Self-hosted, config-driven TypeScript harness (pluggable model backends, memory backends, plugin system) that the user runs as a daemon/binary rather than a hosted service.",
-          "evidence": "https://raw.githubusercontent.com/dylanneve1/talon/HEAD/README.md"
+          "evidence": "https://raw.githubusercontent.com/thefalconry/talon/HEAD/README.md"
         }
       },
       "archived": null
@@ -6160,6 +6281,36 @@
       "example": {
         "label": "Project README",
         "url": "https://github.com/ag2ai/ag2#readme"
+      },
+      "deep_dive": null,
+      "archived": null
+    },
+    {
+      "name": "Agent Teams",
+      "github_id": "777genius/agent-teams-ai",
+      "url": "https://github.com/777genius/agent-teams-ai",
+      "slug": "agent-teams-ai",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#agent-teams-ai",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/agent-teams-ai/",
+      "description": "Electron kanban app for running a team of coding agents (Claude Code, Codex, OpenCode, Cursor, Copilot and others) that take tasks, message each other, and review each other's work; the **harness** is the team-coordination layer over existing agent CLIs, the kanban board is the shell.",
+      "category": "multi-agent",
+      "category_title": "Multi-agent and orchestration",
+      "stars": 2175,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (desktop multi-agent orchestration — product suite)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "unknown",
+      "tags": [
+        "multi-agent",
+        "ide"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/777genius/agent-teams-ai#readme"
       },
       "deep_dive": null,
       "archived": null
@@ -8482,9 +8633,27 @@
       "via": "weekly discovery"
     },
     {
+      "github_id": "micro/go-micro",
+      "stars": 23079,
+      "desc": "A Go agent harness and service framework",
+      "via": "weekly discovery"
+    },
+    {
       "github_id": "RightNow-AI/openfang",
       "stars": 18210,
       "desc": "Open-source Agent Operating System",
+      "via": "weekly discovery"
+    },
+    {
+      "github_id": "HKUDS/DeepCode",
+      "stars": 16652,
+      "desc": "\"DeepCode: Open Agentic Coding (Agent Harness & Loop Engineering & Multi-Agent Orchestration)\"",
+      "via": "weekly discovery"
+    },
+    {
+      "github_id": "mindfold-ai/Trellis",
+      "stars": 14817,
+      "desc": "The best agent harness.",
       "via": "weekly discovery"
     },
     {
@@ -8512,6 +8681,12 @@
       "via": "weekly discovery"
     },
     {
+      "github_id": "truefoundry/trueforge",
+      "stars": 5984,
+      "desc": "The open-source agent harness - the runtime layer that turns an LLM into a working agent.",
+      "via": "weekly discovery"
+    },
+    {
       "github_id": "agentscope-ai/agentscope-java",
       "stars": 5805,
       "desc": "Build distributed, production-grade, long-running agents.",
@@ -8524,9 +8699,27 @@
       "via": "weekly discovery"
     },
     {
+      "github_id": "FailproofAI/failproofai",
+      "stars": 5178,
+      "desc": "Observability and enforcement for AI agent harnesses. Capture every run and runtime reliability with policy enforcement.",
+      "via": "weekly discovery"
+    },
+    {
+      "github_id": "Waishnav/devspace",
+      "stars": 5146,
+      "desc": "Minimal Coding Agent Harness on MCP for ChatGPT, Claude, Hermes, Grok Bot, OpenClaw",
+      "via": "weekly discovery"
+    },
+    {
       "github_id": "FellouAI/eko",
       "stars": 4962,
       "desc": "Eko (Eko Keeps Operating) - Build Production-ready Agentic Workflow with Natural Language - eko.fellou.ai",
+      "via": "weekly discovery"
+    },
+    {
+      "github_id": "CommandCodeAI/command-code",
+      "stars": 4045,
+      "desc": "Command Code AI — the best coding agent for open models.",
       "via": "weekly discovery"
     },
     {
@@ -8542,6 +8735,12 @@
       "via": "weekly discovery"
     },
     {
+      "github_id": "onecli/onecli",
+      "stars": 3520,
+      "desc": "Open-source sandboxed agent harness for teams. Giving every employee a secured personal agent.",
+      "via": "weekly discovery"
+    },
+    {
       "github_id": "Mirix-AI/MIRIX",
       "stars": 3447,
       "desc": "Mirix is a multi-agent personal assistant designed to track on-screen activities and answer user questions intelligently. By capturing real-time visual data…",
@@ -8554,10 +8753,52 @@
       "via": "weekly discovery"
     },
     {
+      "github_id": "Orkas-AI/Orkas",
+      "stars": 2128,
+      "desc": "Orkas is an open-source, local-first AI desktop app: a commander LLM directs specialist sub-agents, and runs your installed coding CLIs — Claude Code, Codex,…",
+      "via": "community · issue #104"
+    },
+    {
+      "github_id": "razzant/ouroboros",
+      "stars": 1383,
+      "desc": "Ouroboros — self-creating AI agent. Born Feb 16, 2026.",
+      "via": "community · issue #65"
+    },
+    {
+      "github_id": "hardness1020/learn-agent-architecture",
+      "stars": 1007,
+      "desc": "Learn AI agents from scratch.",
+      "via": "community · issue #49"
+    },
+    {
+      "github_id": "plasma-ai/fractal",
+      "stars": 777,
+      "desc": "Hierarchical agent loops with recursive self-organization.",
+      "via": "community · issue #58"
+    },
+    {
+      "github_id": "razzant/claudexor",
+      "stars": 488,
+      "desc": "Multi-harness control plane for Claude Code, Codex, Cursor, and OpenCode: quota-aware rotation across multiple Claude/Codex subscriptions, shared thread cont…",
+      "via": "community · issue #55"
+    },
+    {
       "github_id": "Continuum-AI-Corp/OrcaReplay",
       "stars": 178,
       "desc": "Record, replay, fork, and debug any agent run with any model; time travel for AI agents.",
       "via": "community · issue #109"
+    },
+    {
+      "github_id": "scgopi/GraphCode",
+      "stars": 129,
+      "desc": "Graph Engineering, simplified — with GraphCode. #graphcode",
+      "via": "community · issue #113"
+    },
+    {
+      "github_id": "socai-io/jev-social",
+      "stars": 98,
+      "desc": "Open-source, read-only social media research agent for Instagram, TikTok, and LinkedIn. Jev routes bounded steps; local socai CLI captures browser evidence.",
+      "via": "community · issue #121"
     },
     {
       "github_id": "JanYork/llm-wiki-cli",
