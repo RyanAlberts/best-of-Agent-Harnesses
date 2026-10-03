@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-    <a href="#contents" title="Project Count"><img src="https://img.shields.io/badge/projects-167-blue.svg?color=5ac4bf"></a>
+    <a href="#contents" title="Project Count"><img src="https://img.shields.io/badge/projects-168-blue.svg?color=5ac4bf"></a>
     <a href="#for-agents" title="Agents can query this list — MCP server, llms.txt & JSON"><img src="https://img.shields.io/badge/agents-query%20this%20list-5ac4bf.svg"></a>
     <a href="#contribution" title="Contributions welcome"><img src="https://img.shields.io/badge/contributions-welcome-green.svg"></a>
     <a href="https://github.com/RyanAlberts/best-of-Agent-Harnesses/commits/main" title="Updates"><img src="https://img.shields.io/github/last-commit/RyanAlberts/best-of-Agent-Harnesses?color=green&label=updated"></a>
@@ -149,7 +149,7 @@ curl -fsSL https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses
 - [Plugins, MCPs, CLI tools](#plugins-mcps-cli-tools) _19 projects_
 - [Memory and state](#memory-and-state) _5 projects_
 - [Evaluation and benchmarking harnesses](#evaluation-and-benchmarking-harnesses) _19 projects_
-- [Observability and eval-ops](#observability-and-eval-ops) _4 projects_
+- [Observability and eval-ops](#observability-and-eval-ops) _5 projects_
 - [Research and task-specific harnesses](#research-and-task-specific-harnesses) _5 projects_
 - [Libraries and SDKs](#libraries-and-sdks) _15 projects_
 
@@ -404,6 +404,7 @@ _Tracing, monitoring, and production evaluation for live agent runs: capture eve
 | 2 | <a name="mlflow"></a>[**MLflow**](https://github.com/mlflow/mlflow) | [28.2k](https://github.com/mlflow/mlflow/stargazers) | Mature ML platform now covering GenAI: MLflow Tracing captures every agent step, tool call, and token, with built-in LLM evals and prompt versioning—observability for teams already standardized on MLflow. <sup>`evals` · `python`</sup> | ✅ | complex (full ML + GenAI platform) | [Docs](https://mlflow.org) |
 | 3 | <a name="opik"></a>[**Opik**](https://github.com/comet-ml/opik) | [22.3k](https://github.com/comet-ml/opik/stargazers) | Comet's open-source agent observability and evaluation platform: tracing, scoring, and experiment comparison with the whole core feature set free to self-host under Apache-2.0. <sup>`evals` · `python`</sup> | ✅ | slightly complex (tracing + evals platform) | [Docs](https://www.comet.com/docs/opik/) |
 | 4 | <a name="phoenix"></a>[**Arize Phoenix**](https://github.com/Arize-ai/phoenix) | [11.6k](https://github.com/Arize-ai/phoenix/stargazers) | Arize's source-available, local-first tracing and eval layer: run it on your laptop or your own infra, and graduate to the managed Arize AX platform only when you need it. <sup>`evals` · `python`</sup> | ⚠️ Elastic-2.0 | slightly complex (local-first tracing + evals) | [Docs](https://arize.com/docs/phoenix) |
+| 5 | <a name="reef"></a>[**Reef**](https://github.com/Human-Agent-Society/reef) | [7.1k](https://github.com/Human-Agent-Society/reef/stargazers) | Records live agent traffic and feeds it back as an update: agents call an OpenAI- and Anthropic-compatible endpoint (`/v1/chat/completions`, `/v1/messages`), every response carries a receipt header, and a later report attaches a score or textual feedback to that receipt. Eligible records become a candidate update to either model weights or the agent's **harness** tree of rules, skills, prompts, and extensions, which the configured recipe scores against the version now serving and publishes as a new installable version only if it is selected—no restart, and a rejected candidate leaves the current one serving. The updater, the feedback matching, and the selection policy are operator-defined and fixed across rounds. <sup>`evals` · `training` · `python`</sup> | ✅ | complex (serving, feedback matching, training, and artifact versioning — product suite) | [Evolve your harness tutorial](https://github.com/Human-Agent-Society/reef/tree/main/tutorials/evolve-your-harness) |
 
 ## Research and task-specific harnesses
 
@@ -496,7 +497,7 @@ Harnesses whose execution state persists across restarts: langgraph-bigtool, QM,
 
 ### How many of these agent harnesses are open source?
 
-124 of 167 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.
+125 of 168 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.
 
 ### What is an agent harness?
 

@@ -615,6 +615,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("Arize Phoenix", "Arize-ai/phoenix",
                 "Arize's source-available, local-first tracing and eval layer: run it on your laptop or your own infra, and graduate to the managed Arize AX platform only when you need it.",
                 "slightly complex (local-first tracing + evals)", oss="⚠️ Elastic-2.0", labels=["python"]),
+        Project("Reef", "Human-Agent-Society/reef",
+                "Records live agent traffic and feeds it back as an update: agents call an OpenAI- and Anthropic-compatible endpoint (`/v1/chat/completions`, `/v1/messages`), every response carries a receipt header, and a later report attaches a score or textual feedback to that receipt. Eligible records become a candidate update to either model weights or the agent's **harness** tree of rules, skills, prompts, and extensions, which the configured recipe scores against the version now serving and publishes as a new installable version only if it is selected—no restart, and a rejected candidate leaves the current one serving. The updater, the feedback matching, and the selection policy are operator-defined and fixed across rounds.",
+                "complex (serving, feedback matching, training, and artifact versioning — product suite)", labels=["python"]),
     ],
     "research-task": [
         Project("gpt-researcher", "assafelovic/gpt-researcher",
@@ -864,6 +867,7 @@ META: dict[str, tuple[int, str, str]] = {
     "mlflow/mlflow": (28152, "https://mlflow.org", "Docs"),
     "comet-ml/opik": (22259, "https://www.comet.com/docs/opik/", "Docs"),
     "Arize-ai/phoenix": (11635, "https://arize.com/docs/phoenix", "Docs"),
+    "Human-Agent-Society/reef": (7090, "https://github.com/Human-Agent-Society/reef/tree/main/tutorials/evolve-your-harness", "Evolve your harness tutorial"),
     # plugins-mcp-cli (MCP infrastructure)
     "modelcontextprotocol/servers": (90623, "https://github.com/modelcontextprotocol/servers#readme", "Server catalog"),
     "upstash/context7": (62472, "https://context7.com", "Docs"),
@@ -1273,6 +1277,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "mlflow/mlflow": ("n/a", "n/a"),
     "comet-ml/opik": ("n/a", "n/a"),
     "Arize-ai/phoenix": ("n/a", "n/a"),
+    "Human-Agent-Society/reef": ("n/a", "n/a"),
     # plugins-mcp-cli (MCP infrastructure — tools/servers, not loops)
     "modelcontextprotocol/servers": ("n/a", "n/a"),
     "upstash/context7": ("n/a", "n/a"),

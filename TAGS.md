@@ -1,13 +1,13 @@
 <!-- markdownlint-disable -->
 # Tags — cross-reference
 
-_Auto-generated from `scripts/generate.py`. 167 projects across 22 canonical tags. Edit projects in `generate.py` (not here) and rerun the script._
+_Auto-generated from `scripts/generate.py`. 168 projects across 22 canonical tags. Edit projects in `generate.py` (not here) and rerun the script._
 
 Tag chips appear next to each project in [README.md](README.md). This page lists every tag once with the projects that carry it, grouped by category and sorted by GitHub stars within each category.
 
 ## All tags
 
-[`mcp`](#mcp) (33) · [`memory`](#memory) (38) · [`multi-agent`](#multi-agent) (29) · [`evals`](#evals) (22) · [`voice`](#voice) (2) · [`vision`](#vision) (4) · [`browser`](#browser) (9) · [`sandbox`](#sandbox) (29) · [`low-code`](#low-code) (4) · [`rag`](#rag) (9) · [`tool-discovery`](#tool-discovery) (5) · [`training`](#training) (5) · [`workflow`](#workflow) (10) · [`typed`](#typed) (3) · [`local`](#local) (7) · [`provider-agnostic`](#provider-agnostic) (11) · [`cli`](#cli) (23) · [`ide`](#ide) (13) · [`tui`](#tui) (4) · [`rust`](#rust) (5) · [`python`](#python) (81) · [`typescript`](#typescript) (45)
+[`mcp`](#mcp) (33) · [`memory`](#memory) (38) · [`multi-agent`](#multi-agent) (29) · [`evals`](#evals) (23) · [`voice`](#voice) (2) · [`vision`](#vision) (4) · [`browser`](#browser) (9) · [`sandbox`](#sandbox) (29) · [`low-code`](#low-code) (4) · [`rag`](#rag) (9) · [`tool-discovery`](#tool-discovery) (5) · [`training`](#training) (6) · [`workflow`](#workflow) (10) · [`typed`](#typed) (3) · [`local`](#local) (7) · [`provider-agnostic`](#provider-agnostic) (11) · [`cli`](#cli) (23) · [`ide`](#ide) (13) · [`tui`](#tui) (4) · [`rust`](#rust) (5) · [`python`](#python) (82) · [`typescript`](#typescript) (45)
 
 ---
 
@@ -232,6 +232,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [MLflow](https://github.com/mlflow/mlflow) — ⭐28.2k — Mature ML platform now covering GenAI: MLflow Tracing captures every agent step, tool call, and token, with built-in LLM evals and prompt versioning—observability for teams already standardized on MLflow.
 - [Opik](https://github.com/comet-ml/opik) — ⭐22.3k — Comet's open-source agent observability and evaluation platform: tracing, scoring, and experiment comparison with the whole core feature set free to self-host under Apache-2.0.
 - [Arize Phoenix](https://github.com/Arize-ai/phoenix) — ⭐11.6k — Arize's source-available, local-first tracing and eval layer: run it on your laptop or your own infra, and graduate to the managed Arize AX platform only when you need it.
+- [Reef](https://github.com/Human-Agent-Society/reef) — ⭐7.1k — Records live agent traffic and feeds it back as an update: agents call an OpenAI- and Anthropic-compatible endpoint (`/v1/chat/completions`, `/v1/messages`), every response carries a receipt header, and a later report attaches a score or textual feedback to that receipt. Eligible records become a candidate update to either model weights or the agent's **harness** tree of rules, skills, prompts, and extensions, which the configured recipe scores against the version now serving and publishes as a new installable version only if it is selected—no restart, and a rejected candidate leaves the current one serving. The updater, the feedback matching, and the selection policy are operator-defined and fixed across rounds.
 
 **Research and task-specific harnesses**
 
@@ -425,6 +426,10 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [Agent Lightning](https://github.com/microsoft/agent-lightning) — ⭐18.5k — Microsoft's training-oriented harness: optimization loops for agent behavior—when you need to improve policies over rollouts, not only score a fixed prompt.
 - [swe-smith](https://github.com/SWE-bench/SWE-smith) — ⭐789 — Data generation for SWE agents; 50k+ instances across 128 repos; used for SWE-agent-LM training.
 - [SWE-Gym](https://github.com/SWE-Gym/SWE-Gym) — ⭐746 — Training and evaluation for SWE agents and verifiers (ICML 2025).
+
+**Observability and eval-ops**
+
+- [Reef](https://github.com/Human-Agent-Society/reef) — ⭐7.1k — Records live agent traffic and feeds it back as an update: agents call an OpenAI- and Anthropic-compatible endpoint (`/v1/chat/completions`, `/v1/messages`), every response carries a receipt header, and a later report attaches a score or textual feedback to that receipt. Eligible records become a candidate update to either model weights or the agent's **harness** tree of rules, skills, prompts, and extensions, which the configured recipe scores against the version now serving and publishes as a new installable version only if it is selected—no restart, and a rejected candidate leaves the current one serving. The updater, the feedback matching, and the selection policy are operator-defined and fixed across rounds.
 
 ---
 
@@ -729,6 +734,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [MLflow](https://github.com/mlflow/mlflow) — ⭐28.2k — Mature ML platform now covering GenAI: MLflow Tracing captures every agent step, tool call, and token, with built-in LLM evals and prompt versioning—observability for teams already standardized on MLflow.
 - [Opik](https://github.com/comet-ml/opik) — ⭐22.3k — Comet's open-source agent observability and evaluation platform: tracing, scoring, and experiment comparison with the whole core feature set free to self-host under Apache-2.0.
 - [Arize Phoenix](https://github.com/Arize-ai/phoenix) — ⭐11.6k — Arize's source-available, local-first tracing and eval layer: run it on your laptop or your own infra, and graduate to the managed Arize AX platform only when you need it.
+- [Reef](https://github.com/Human-Agent-Society/reef) — ⭐7.1k — Records live agent traffic and feeds it back as an update: agents call an OpenAI- and Anthropic-compatible endpoint (`/v1/chat/completions`, `/v1/messages`), every response carries a receipt header, and a later report attaches a score or textual feedback to that receipt. Eligible records become a candidate update to either model weights or the agent's **harness** tree of rules, skills, prompts, and extensions, which the configured recipe scores against the version now serving and publishes as a new installable version only if it is selected—no restart, and a rejected candidate leaves the current one serving. The updater, the feedback matching, and the selection policy are operator-defined and fixed across rounds.
 
 **Research and task-specific harnesses**
 
@@ -926,6 +932,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [MLflow](https://github.com/mlflow/mlflow) — ⭐28.2k — Mature ML platform now covering GenAI: MLflow Tracing captures every agent step, tool call, and token, with built-in LLM evals and prompt versioning—observability for teams already standardized on MLflow.
 - [Opik](https://github.com/comet-ml/opik) — ⭐22.3k — Comet's open-source agent observability and evaluation platform: tracing, scoring, and experiment comparison with the whole core feature set free to self-host under Apache-2.0.
 - [Arize Phoenix](https://github.com/Arize-ai/phoenix) — ⭐11.6k — Arize's source-available, local-first tracing and eval layer: run it on your laptop or your own infra, and graduate to the managed Arize AX platform only when you need it.
+- [Reef](https://github.com/Human-Agent-Society/reef) — ⭐7.1k — Records live agent traffic and feeds it back as an update: agents call an OpenAI- and Anthropic-compatible endpoint (`/v1/chat/completions`, `/v1/messages`), every response carries a receipt header, and a later report attaches a score or textual feedback to that receipt. Eligible records become a candidate update to either model weights or the agent's **harness** tree of rules, skills, prompts, and extensions, which the configured recipe scores against the version now serving and publishes as a new installable version only if it is selected—no restart, and a rejected candidate leaves the current one serving. The updater, the feedback matching, and the selection policy are operator-defined and fixed across rounds.
 
 **Research and task-specific harnesses**
 

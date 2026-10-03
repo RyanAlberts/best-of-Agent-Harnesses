@@ -613,6 +613,10 @@ projects:
     github_id: Arize-ai/phoenix
     labels: ["python"]
     category: "observability"
+  - name: Reef
+    github_id: Human-Agent-Society/reef
+    labels: ["python"]
+    category: "observability"
   # Research and task-specific harnesses
   - name: gpt-researcher
     github_id: assafelovic/gpt-researcher
