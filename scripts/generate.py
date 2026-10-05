@@ -249,6 +249,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("YYLO", "yylo-dev/yylo",
                 "Command-line orchestrator for coding agents (drives Pi and Codex subagents): every task gets a dedicated branch/worktree and a typed lifecycle — read-only preflight, risk-scaled merge-queue review, release-readiness gates — with receipt-backed changes. The **harness** contribution is the git-native task/merge orchestration layer on top of whichever agent executes; not an agent loop itself.",
                 "slightly complex (git-native task fleet, merge queue)", labels=["javascript"]),
+        Project("Orbi", "orbi-build/orbi",
+                "Self-hosted runner that takes a GitHub issue labeled `ai-ready` to a merged pull request and a tagged release: each run gets its own branch and worktree, Pi writes the change, a separate review session checks the PR against the issue's acceptance criteria, and only the reviewed head merges. GitHub issues are the only state store. The **harness** contribution is the issue-to-release delivery and review gate on top of the Pi agent; not an agent loop itself.",
+                "slightly complex (issue-driven runner, review gate, systemd/launchd timer)", labels=["python"]),
     ],
     "coding-harness-configs": [
         Project("LoopTroop", "looptroop-ai/LoopTroop",
@@ -724,6 +727,7 @@ META: dict[str, tuple[int, str, str]] = {
     "1jehuang/jcode": (20298, "https://github.com/1jehuang/jcode#readme", "Project README"),
     "NanmiCoder/cc-haha": (14862, "https://github.com/NanmiCoder/cc-haha#readme", "Project README"),
     "yylo-dev/yylo": (63, "https://github.com/yylo-dev/yylo#readme", "Project README"),
+    "orbi-build/orbi": (195, "https://github.com/orbi-build/orbi#the-loop-in-35-seconds", "One issue to release, recorded"),
     # coding-harness-configs
     "looptroop-ai/LoopTroop": (157, "https://github.com/looptroop-ai/LoopTroop#readme", "Council → loop → worktree pipeline"),
     "open-gsd/gsd-core": (10165, "https://github.com/open-gsd/gsd-core/blob/next/commands/gsd/ship.md", "gsd:ship command"),
@@ -1134,6 +1138,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "1jehuang/jcode": ("n/a", "n/a"),
     "NanmiCoder/cc-haha": ("n/a", "n/a"),
     "yylo-dev/yylo": ("n/a", "n/a"),  # orchestrates Pi/Codex loops; doesn't own one
+    "orbi-build/orbi": ("n/a", "n/a"),  # orchestrates Pi sessions; doesn't own the loop
     # coding-harness-configs
     "looptroop-ai/LoopTroop": ("bounded", "retry"),
     "obra/superpowers": ("n/a", "n/a"),

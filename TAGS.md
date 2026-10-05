@@ -1,13 +1,13 @@
 <!-- markdownlint-disable -->
 # Tags — cross-reference
 
-_Auto-generated from `scripts/generate.py`. 166 projects across 22 canonical tags. Edit projects in `generate.py` (not here) and rerun the script._
+_Auto-generated from `scripts/generate.py`. 167 projects across 22 canonical tags. Edit projects in `generate.py` (not here) and rerun the script._
 
 Tag chips appear next to each project in [README.md](README.md). This page lists every tag once with the projects that carry it, grouped by category and sorted by GitHub stars within each category.
 
 ## All tags
 
-[`mcp`](#mcp) (33) · [`memory`](#memory) (38) · [`multi-agent`](#multi-agent) (29) · [`evals`](#evals) (22) · [`voice`](#voice) (2) · [`vision`](#vision) (4) · [`browser`](#browser) (9) · [`sandbox`](#sandbox) (28) · [`low-code`](#low-code) (4) · [`rag`](#rag) (9) · [`tool-discovery`](#tool-discovery) (5) · [`training`](#training) (5) · [`workflow`](#workflow) (10) · [`typed`](#typed) (3) · [`local`](#local) (7) · [`provider-agnostic`](#provider-agnostic) (11) · [`cli`](#cli) (23) · [`ide`](#ide) (13) · [`tui`](#tui) (4) · [`rust`](#rust) (5) · [`python`](#python) (81) · [`typescript`](#typescript) (45)
+[`mcp`](#mcp) (33) · [`memory`](#memory) (38) · [`multi-agent`](#multi-agent) (29) · [`evals`](#evals) (22) · [`voice`](#voice) (2) · [`vision`](#vision) (4) · [`browser`](#browser) (9) · [`sandbox`](#sandbox) (28) · [`low-code`](#low-code) (4) · [`rag`](#rag) (9) · [`tool-discovery`](#tool-discovery) (5) · [`training`](#training) (5) · [`workflow`](#workflow) (10) · [`typed`](#typed) (3) · [`local`](#local) (7) · [`provider-agnostic`](#provider-agnostic) (11) · [`cli`](#cli) (23) · [`ide`](#ide) (13) · [`tui`](#tui) (4) · [`rust`](#rust) (5) · [`python`](#python) (82) · [`typescript`](#typescript) (45)
 
 ---
 
@@ -638,6 +638,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [Open Interpreter](https://github.com/openinterpreter/openinterpreter) — ⭐68.5k — Lightweight terminal coding agent oriented to open models (DeepSeek, Kimi, Qwen). The **harness** is a code-execution loop — the model writes code, the harness executes it with confirmation gates; the CLI is the shell. The original "let the LLM run code on my machine" project, reborn for open weights.
 - [oh-my-pi](https://github.com/can1357/oh-my-pi) — ⭐34.3k — Terminal coding agent (fork of Pi) that wires the IDE into the **harness**: hash-anchored edits, a 32-tool loop tuned per-model, LSP rename/references/diagnostics on every write, a real DAP debugger (lldb/dlv/debugpy), long-lived Python + Bun execution kernels that call back into the agent's tools, browser control, and 40+ providers (Claude/OpenAI/Gemini/local). ~55k-line Rust core.
 - [claw-code-agent](https://github.com/HarnessLab/claw-code-agent) — ⭐546 — Python reimplementation of the Claude Code agent architecture with zero external dependencies; interactive chat, streaming, plugin runtime, nested agent delegation, cost tracking, MCP transport—portable harness without the Rust/TS toolchain.
+- [Orbi](https://github.com/orbi-build/orbi) — ⭐195 — Self-hosted runner that takes a GitHub issue labeled `ai-ready` to a merged pull request and a tagged release: each run gets its own branch and worktree, Pi writes the change, a separate review session checks the PR against the issue's acceptance criteria, and only the reviewed head merges. GitHub issues are the only state store. The **harness** contribution is the issue-to-release delivery and review gate on top of the Pi agent; not an agent loop itself.
 
 **Coding harness configs and SDKs**
 
@@ -835,6 +836,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [Open Interpreter](https://github.com/openinterpreter/openinterpreter) — ⭐68.5k — Lightweight terminal coding agent oriented to open models (DeepSeek, Kimi, Qwen). The **harness** is a code-execution loop — the model writes code, the harness executes it with confirmation gates; the CLI is the shell. The original "let the LLM run code on my machine" project, reborn for open weights.
 - [oh-my-pi](https://github.com/can1357/oh-my-pi) — ⭐34.3k — Terminal coding agent (fork of Pi) that wires the IDE into the **harness**: hash-anchored edits, a 32-tool loop tuned per-model, LSP rename/references/diagnostics on every write, a real DAP debugger (lldb/dlv/debugpy), long-lived Python + Bun execution kernels that call back into the agent's tools, browser control, and 40+ providers (Claude/OpenAI/Gemini/local). ~55k-line Rust core.
 - [claw-code-agent](https://github.com/HarnessLab/claw-code-agent) — ⭐546 — Python reimplementation of the Claude Code agent architecture with zero external dependencies; interactive chat, streaming, plugin runtime, nested agent delegation, cost tracking, MCP transport—portable harness without the Rust/TS toolchain.
+- [Orbi](https://github.com/orbi-build/orbi) — ⭐195 — Self-hosted runner that takes a GitHub issue labeled `ai-ready` to a merged pull request and a tagged release: each run gets its own branch and worktree, Pi writes the change, a separate review session checks the PR against the issue's acceptance criteria, and only the reviewed head merges. GitHub issues are the only state store. The **harness** contribution is the issue-to-release delivery and review gate on top of the Pi agent; not an agent loop itself.
 
 **Coding harness configs and SDKs**
 

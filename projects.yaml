@@ -173,6 +173,10 @@ projects:
     github_id: yylo-dev/yylo
     labels: ["javascript"]
     category: "coding-agent-products"
+  - name: Orbi
+    github_id: orbi-build/orbi
+    labels: ["python"]
+    category: "coding-agent-products"
   # Coding harness configs and SDKs
   - name: LoopTroop
     github_id: looptroop-ai/LoopTroop
