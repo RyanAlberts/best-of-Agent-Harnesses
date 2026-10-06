@@ -173,6 +173,10 @@ projects:
     github_id: yylo-dev/yylo
     labels: ["javascript"]
     category: "coding-agent-products"
+  - name: Tianshu Harness
+    github_id: huiliyi37/Tianshu-harness
+    labels: ["javascript"]
+    category: "coding-agent-products"
   # Coding harness configs and SDKs
   - name: LoopTroop
     github_id: looptroop-ai/LoopTroop
