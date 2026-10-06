@@ -1,6 +1,6 @@
 # Best of Agent Harnesses
 
-> Hand-curated, ranked list of 166 AI agent harnesses — the runtimes that close the loop between a stateless model and the outside world. 12 categories, a 4-tier adoption-surface rating (simplicity ↔ capability), capability tags, a license signal, and one concrete example link per project. Stars captured 2026-10-04. The harness matters more than the model: the same weights score about 30% on ARC-AGI-3 bare and 95.5% inside Prime Agent, and harness rankings barely transfer across models, so pick harness and model as a pair (sources: https://ryanalberts.github.io/best-of-Agent-Harnesses/compare/why-the-harness-matters/ ; this week's top picks per category: https://ryanalberts.github.io/best-of-Agent-Harnesses/compare/best-ai-agent-harnesses-2026/ ).
+> Hand-curated, ranked list of 167 AI agent harnesses — the runtimes that close the loop between a stateless model and the outside world. 12 categories, a 4-tier adoption-surface rating (simplicity ↔ capability), capability tags, a license signal, and one concrete example link per project. Stars captured 2026-10-04. The harness matters more than the model: the same weights score about 30% on ARC-AGI-3 bare and 95.5% inside Prime Agent, and harness rankings barely transfer across models, so pick harness and model as a pair (sources: https://ryanalberts.github.io/best-of-Agent-Harnesses/compare/why-the-harness-matters/ ; this week's top picks per category: https://ryanalberts.github.io/best-of-Agent-Harnesses/compare/best-ai-agent-harnesses-2026/ ).
 
 Maintained at https://github.com/RyanAlberts/best-of-Agent-Harnesses (CC-BY-SA-4.0).
 Structured data: https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/harnesses.json
@@ -26,7 +26,7 @@ Tiers, least to most adoption surface: super simple → mostly simple → slight
 ## Decision guides
 
 - Agent evals: SWE-bench vs inspect_ai vs Terminal-Bench: https://ryanalberts.github.io/best-of-Agent-Harnesses/compare/agent-eval-harnesses/ — You changed your agent: new model, new prompt, new tools. Did it get better or worse? An eval is how you answer that with a number instead of a feeling. The word covers two different products, and knowing which one you need is most of the decision. A **benchmark** is a fixed public exam with a leade
-- The best AI agent harnesses in 2026, ranked by category: https://ryanalberts.github.io/best-of-Agent-Harnesses/compare/best-ai-agent-harnesses-2026/ — These are the top three agent harnesses in each of the 12 categories of best-of-Agent-Harnesses, a hand-curated list of 166 harnesses re-ranked from live GitHub data every week; the stars below were captured 2026-10-04, and the page regenerates with every refresh.
+- The best AI agent harnesses in 2026, ranked by category: https://ryanalberts.github.io/best-of-Agent-Harnesses/compare/best-ai-agent-harnesses-2026/ — These are the top three agent harnesses in each of the 12 categories of best-of-Agent-Harnesses, a hand-curated list of 167 harnesses re-ranked from live GitHub data every week; the stars below were captured 2026-10-04, and the page regenerates with every refresh.
 - Browser agents: browser-use vs Stagehand vs Playwright MCP vs chrome-devtools-mcp: https://ryanalberts.github.io/best-of-Agent-Harnesses/compare/browser-agents/ — "Browser agent" covers three different kinds of product, and most bad picks here come from comparing across the lanes instead of within one. **Agent libraries** own the whole job: you hand them a goal in plain language ("find the cheapest flight, fill the form") and they decide every click. browser-
 - Browser infrastructure for agents: Browserbase vs Steel vs Hyperbrowser: https://ryanalberts.github.io/best-of-Agent-Harnesses/compare/browser-infrastructure/ — Agent libraries like browser-use and Stagehand decide what to click; something still has to run the browsers they click in. At small scale that's Chrome on your own machine. At production scale it becomes its own operations problem: hundreds of concurrent sessions, sites that block automation, CAPTC
 - Claude Code skill packs: superpowers vs GStack vs get-shit-done vs Anthropic Skills: https://ryanalberts.github.io/best-of-Agent-Harnesses/compare/claude-code-skill-packs/ — A skill is a folder of instructions (a SKILL.md file, plus any scripts it needs) that a coding agent loads only when the task matches, instead of carrying every instruction all the time. A skill pack is a curated bundle of them: someone else's working habits for your agent, installed as files. Nothi
@@ -104,7 +104,7 @@ Harnesses designed for unattended runs, batches, and fleets: opencode, OpenHands
 Harnesses whose execution state persists across restarts: langgraph-bigtool, QM, n8n, langgraph, mastra, letta, deepagents, pydantic-ai.
 
 ### How many of these agent harnesses are open source?
-123 of 166 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.
+124 of 167 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.
 
 ### What is an agent harness?
 The runtime that turns a model into an agent: it decides what the model's reasoning is allowed to touch, and supplies the orchestration, tool wiring, memory, error recovery, and guardrails around per-turn inference.
@@ -236,7 +236,7 @@ General-purpose agent and LLM application frameworks (the app layer, not harness
 - [AgentSilex](https://github.com/howl-anderson/agentsilex) — ⭐456, super simple, autonomy: bounded, recovery: none, open-source: ~300 lines of readable agent code on top of LiteLLM; the "I want to see the whole loop" option for learning or minimal production. [python]
 - [SuperAgentX](https://github.com/superagentxai/superagentx) — ⭐203, mostly simple, autonomy: bounded, recovery: none, open-source: Lightweight multi-agent orchestrator with an AGI-angle; minimal surface, docs-first, for teams that want orchestration without the kitchen sink. [multi-agent, python]
 
-## Multi-agent and orchestration (12 projects)
+## Multi-agent and orchestration (13 projects)
 
 Harnesses and patterns for multi-agent coordination and handoffs.
 
@@ -251,6 +251,7 @@ Harnesses and patterns for multi-agent coordination and handoffs.
 - [omnigent](https://github.com/omnigent-ai/omnigent) — ⭐10.5k, complex, autonomy: n/a, recovery: n/a, unknown: Open-source meta-**harness**: orchestrates Claude Code, Codex, Cursor, Pi, and custom agents behind one policy/sandboxing layer so teams swap harnesses without rewriting workflows. [sandbox, ide, python]
 - [PraisonAI](https://github.com/MervinPraison/PraisonAI) — ⭐9.1k, mostly simple, autonomy: bounded, recovery: none, open-source: Autonomous multi-agent teams with a single entry point; emphasis on minimal config. [multi-agent, python]
 - [AG2](https://github.com/ag2ai/ag2) — ⭐5k, complex, autonomy: n/a, recovery: n/a, unknown: AG2 (formerly AutoGen): the community-governed continuation of the original AutoGen project after Microsoft's fork diverged—conversable multi-agent groups, code execution, and human-in-the-loop under an open-source AgentOS banner. Graduated off the radar this cycle. [multi-agent, python]
+- [Desplega Agent Swarm](https://github.com/desplega-ai/agent-swarm) — ⭐860, complex, autonomy: headless, recovery: resumable, open-source: Self-hosted multi-agent orchestration **harness** where a lead delegates queued tasks to Claude Code, Codex, and other workers in isolated containers, with persistent memory, review gates, MCP tools, and Slack/GitHub integrations. [mcp, memory, multi-agent, sandbox, typescript]
 - [AgentRL](https://github.com/THUDM/AgentRL) — ⭐354, complex, autonomy: headless, recovery: resumable, open-source: Multitask, multiturn RL for LLM agents; Ray-based scaling, rollout/actor workers—for teams that want to train agents, not just run them. [training, python]
 
 ## Plugins, MCPs, CLI tools (19 projects)
