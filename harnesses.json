@@ -9,7 +9,7 @@
     "feed_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/feed.json",
     "license": "CC-BY-SA-4.0",
     "stars_captured": "2026-10-04",
-    "project_count": 166,
+    "project_count": 167,
     "graveyard_count": 4,
     "tiers": [
       "super simple",
@@ -376,7 +376,7 @@
     {
       "kind": "derived",
       "q": "How many of these agent harnesses are open source?",
-      "a": "123 of 166 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
+      "a": "124 of 167 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
       "slug": "how-many-of-these-agent-harnesses-are-open-source"
     },
     {
@@ -423,7 +423,7 @@
     {
       "slug": "best-ai-agent-harnesses-2026",
       "title": "The best AI agent harnesses in 2026, ranked by category",
-      "summary": "These are the top three agent harnesses in each of the 12 categories of best-of-Agent-Harnesses, a hand-curated list of 166 harnesses re-ranked from live GitHub data every week; the stars below were captured 2026-10-04, and the page regenerates with every refresh.",
+      "summary": "These are the top three agent harnesses in each of the 12 categories of best-of-Agent-Harnesses, a hand-curated list of 167 harnesses re-ranked from live GitHub data every week; the stars below were captured 2026-10-04, and the page regenerates with every refresh.",
       "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/comparisons/best-ai-agent-harnesses-2026.md",
       "raw_url": "https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/comparisons/best-ai-agent-harnesses-2026.md"
     },
@@ -2165,6 +2165,38 @@
       "example": {
         "label": "Project README",
         "url": "https://github.com/NanmiCoder/cc-haha#readme"
+      },
+      "deep_dive": null,
+      "archived": null
+    },
+    {
+      "name": "Tianshu Harness",
+      "github_id": "huiliyi37/Tianshu-harness",
+      "url": "https://github.com/huiliyi37/Tianshu-harness",
+      "slug": "tianshu-harness",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#tianshu-harness",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/tianshu-harness/",
+      "description": "TypeScript coding-agent runtime shared by a terminal TUI and a desktop GUI. The **harness** is a cognitive runtime that externalizes goals, evidence, and completion so a model claim of done is not treated as done; the TUI and desktop app are shells on that same kernel. Includes multi-agent orchestration and a prefix-cache-friendly loop for long runs.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 1042,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (evidence-gated completion, multi-agent, prefix cache)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "open-source",
+      "tags": [
+        "multi-agent",
+        "cli",
+        "tui",
+        "typescript"
+      ],
+      "example": {
+        "label": "English README",
+        "url": "https://github.com/huiliyi37/Tianshu-harness/blob/main/README.en.md"
       },
       "deep_dive": null,
       "archived": null

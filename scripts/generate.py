@@ -249,6 +249,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("YYLO", "yylo-dev/yylo",
                 "Command-line orchestrator for coding agents (drives Pi and Codex subagents): every task gets a dedicated branch/worktree and a typed lifecycle — read-only preflight, risk-scaled merge-queue review, release-readiness gates — with receipt-backed changes. The **harness** contribution is the git-native task/merge orchestration layer on top of whichever agent executes; not an agent loop itself.",
                 "slightly complex (git-native task fleet, merge queue)", labels=["javascript"]),
+        Project("Tianshu Harness", "huiliyi37/Tianshu-harness",
+                "TypeScript coding-agent runtime shared by a terminal TUI and a desktop GUI. The **harness** is a cognitive runtime that externalizes goals, evidence, and completion so a model claim of done is not treated as done; the TUI and desktop app are shells on that same kernel. Includes multi-agent orchestration and a prefix-cache-friendly loop for long runs.",
+                "slightly complex (evidence-gated completion, multi-agent, prefix cache)", labels=["javascript"]),
     ],
     "coding-harness-configs": [
         Project("LoopTroop", "looptroop-ai/LoopTroop",
@@ -724,6 +727,7 @@ META: dict[str, tuple[int, str, str]] = {
     "1jehuang/jcode": (20298, "https://github.com/1jehuang/jcode#readme", "Project README"),
     "NanmiCoder/cc-haha": (14862, "https://github.com/NanmiCoder/cc-haha#readme", "Project README"),
     "yylo-dev/yylo": (63, "https://github.com/yylo-dev/yylo#readme", "Project README"),
+    "huiliyi37/Tianshu-harness": (1042, "https://github.com/huiliyi37/Tianshu-harness/blob/main/README.en.md", "English README"),
     # coding-harness-configs
     "looptroop-ai/LoopTroop": (157, "https://github.com/looptroop-ai/LoopTroop#readme", "Council → loop → worktree pipeline"),
     "open-gsd/gsd-core": (10165, "https://github.com/open-gsd/gsd-core/blob/next/commands/gsd/ship.md", "gsd:ship command"),
@@ -1134,6 +1138,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "1jehuang/jcode": ("n/a", "n/a"),
     "NanmiCoder/cc-haha": ("n/a", "n/a"),
     "yylo-dev/yylo": ("n/a", "n/a"),  # orchestrates Pi/Codex loops; doesn't own one
+    "huiliyi37/Tianshu-harness": ("bounded", "resumable"),
     # coding-harness-configs
     "looptroop-ai/LoopTroop": ("bounded", "retry"),
     "obra/superpowers": ("n/a", "n/a"),
