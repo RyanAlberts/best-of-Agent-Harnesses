@@ -385,6 +385,10 @@ projects:
     labels: ["python"]
     category: "frameworks"
   # Multi-agent and orchestration
+  - name: Desplega Agent Swarm
+    github_id: desplega-ai/agent-swarm
+    labels: ["javascript"]
+    category: "multi-agent"
   - name: openai-agents-python
     github_id: openai/openai-agents-python
     labels: ["python"]

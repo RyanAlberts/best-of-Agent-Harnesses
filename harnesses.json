@@ -9,7 +9,7 @@
     "feed_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/feed.json",
     "license": "CC-BY-SA-4.0",
     "stars_captured": "2026-10-04",
-    "project_count": 166,
+    "project_count": 167,
     "graveyard_count": 4,
     "tiers": [
       "super simple",
@@ -376,7 +376,7 @@
     {
       "kind": "derived",
       "q": "How many of these agent harnesses are open source?",
-      "a": "123 of 166 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
+      "a": "124 of 167 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
       "slug": "how-many-of-these-agent-harnesses-are-open-source"
     },
     {
@@ -423,7 +423,7 @@
     {
       "slug": "best-ai-agent-harnesses-2026",
       "title": "The best AI agent harnesses in 2026, ranked by category",
-      "summary": "These are the top three agent harnesses in each of the 12 categories of best-of-Agent-Harnesses, a hand-curated list of 166 harnesses re-ranked from live GitHub data every week; the stars below were captured 2026-10-04, and the page regenerates with every refresh.",
+      "summary": "These are the top three agent harnesses in each of the 12 categories of best-of-Agent-Harnesses, a hand-curated list of 167 harnesses re-ranked from live GitHub data every week; the stars below were captured 2026-10-04, and the page regenerates with every refresh.",
       "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/comparisons/best-ai-agent-harnesses-2026.md",
       "raw_url": "https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/comparisons/best-ai-agent-harnesses-2026.md"
     },
@@ -6159,6 +6159,39 @@
       "example": {
         "label": "Project README",
         "url": "https://github.com/ag2ai/ag2#readme"
+      },
+      "deep_dive": null,
+      "archived": null
+    },
+    {
+      "name": "Desplega Agent Swarm",
+      "github_id": "desplega-ai/agent-swarm",
+      "url": "https://github.com/desplega-ai/agent-swarm",
+      "slug": "agent-swarm",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#agent-swarm",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/agent-swarm/",
+      "description": "Self-hosted multi-agent orchestration **harness** where a lead delegates queued tasks to Claude Code, Codex, and other workers in isolated containers, with persistent memory, review gates, MCP tools, and Slack/GitHub integrations.",
+      "category": "multi-agent",
+      "category_title": "Multi-agent and orchestration",
+      "stars": 860,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (task queue, isolated workers, persistent memory)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "open-source",
+      "tags": [
+        "mcp",
+        "memory",
+        "multi-agent",
+        "sandbox",
+        "typescript"
+      ],
+      "example": {
+        "label": "Self-hosted swarm quick start",
+        "url": "https://github.com/desplega-ai/agent-swarm#quick-start"
       },
       "deep_dive": null,
       "archived": null

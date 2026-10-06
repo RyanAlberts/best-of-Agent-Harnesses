@@ -430,6 +430,9 @@ PROJECTS: dict[str, list[Project]] = {
                 "complex (modular pipelines, RAG + agents — product suite)", labels=["python"]),
     ],
     "multi-agent": [
+        Project("Desplega Agent Swarm", "desplega-ai/agent-swarm",
+                "Self-hosted multi-agent orchestration **harness** where a lead delegates queued tasks to Claude Code, Codex, and other workers in isolated containers, with persistent memory, review gates, MCP tools, and Slack/GitHub integrations.",
+                "complex (task queue, isolated workers, persistent memory)", labels=["javascript"]),
         Project("openai-agents-python", "openai/openai-agents-python",
                 "Handoffs, guardrails, and multi-LLM routing; minimal surface so you own the loop.",
                 "mostly simple (minimal surface)", labels=["python"]),
@@ -788,6 +791,7 @@ META: dict[str, tuple[int, str, str]] = {
     "deepset-ai/haystack": (26650, "https://github.com/deepset-ai/haystack#readme", "Project README"),
     "ag2ai/ag2": (4977, "https://github.com/ag2ai/ag2#readme", "Project README"),
     # multi-agent
+    "desplega-ai/agent-swarm": (860, "https://github.com/desplega-ai/agent-swarm#quick-start", "Self-hosted swarm quick start"),
     "openai/openai-agents-python": (29832, "https://github.com/openai/openai-agents-python/blob/main/examples/customer_service/main.py", "Airline customer service handoffs"),
     "crewAIInc/crewAI": (59344, "https://github.com/crewAIInc/crewAI-examples/blob/main/crews/trip_planner/trip_agents.py", "Trip planner crew"),
     "microsoft/autogen": (61255, "https://github.com/microsoft/autogen/tree/main/python/samples/core_distributed-group-chat", "Distributed group chat"),
@@ -1198,6 +1202,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "deepset-ai/haystack": ("n/a", "n/a"),
     "ag2ai/ag2": ("n/a", "n/a"),
     # multi-agent
+    "desplega-ai/agent-swarm": ("headless", "resumable"),
     "microsoft/autogen": ("bounded", "resumable"),
     "crewAIInc/crewAI": ("bounded", "resumable"),
     "openai/openai-agents-python": ("bounded", "resumable"),
