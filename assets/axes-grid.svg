@@ -25,7 +25,7 @@
 <text x="44" y="395" font-size="13" fill="#6b7280" transform="rotate(-90 44 395)" text-anchor="middle">recovery: crash = start over&#160;&#160;→&#160;&#160;survives restarts</text>
 <text x="832.5" y="652.0" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">10</text>
 <text x="832.5" y="254.5" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">4</text>
-<text x="1050.0" y="387.0" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">25</text>
+<text x="1050.0" y="387.0" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">26</text>
 <text x="832.5" y="387.0" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">21</text>
 <text x="397.5" y="387.0" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">3</text>
 <text x="615.0" y="652.0" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">1</text>
@@ -67,6 +67,7 @@
 <circle cx="678.2" cy="321.4" r="5.5" fill="#a16207" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>openai-agents-js — ⭐3.9k</title></circle>
 <circle cx="787.6" cy="423.6" r="5.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>youtu-agent — ⭐4.6k</title></circle>
 <circle cx="998.1" cy="585.3" r="5.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>AgentVerse — ⭐5.2k</title></circle>
+<circle cx="920.5" cy="322.1" r="5.5" fill="#ec4899" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Raven — ⭐5.2k</title></circle>
 <circle cx="1025.5" cy="230.4" r="5.5" fill="#a16207" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Cloudflare Agents — ⭐5.8k</title></circle>
 <circle cx="987.9" cy="290.7" r="5.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>SWE-bench — ⭐6k</title></circle>
 <circle cx="724.0" cy="355.5" r="5.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>agent-squad — ⭐7.8k</title></circle>
@@ -146,5 +147,5 @@
 <text x="993.7" y="164.6" text-anchor="end" font-size="12.5" font-weight="600" fill="#1f2937">n8n</text>
 <text x="913.1" y="500.7" text-anchor="start" font-size="12.5" font-weight="600" fill="#1f2937">Dify</text>
 <text x="534.2" y="313.2" text-anchor="start" font-size="12.5" font-weight="600" fill="#1f2937">aider</text>
-<text x="1060" y="784" text-anchor="end" font-size="12" fill="#9ca3af">101 loop-owning projects shown · 65 format/component entries (n/a) omitted · full tiers in harnesses.json</text>
+<text x="1060" y="784" text-anchor="end" font-size="12" fill="#9ca3af">102 loop-owning projects shown · 65 format/component entries (n/a) omitted · full tiers in harnesses.json</text>
 </svg>

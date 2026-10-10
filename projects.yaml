@@ -433,6 +433,10 @@ projects:
     github_id: omnigent-ai/omnigent
     labels: ["python"]
     category: "multi-agent"
+  - name: Raven
+    github_id: EverMind-AI/Raven
+    labels: ["python"]
+    category: "multi-agent"
   # Plugins, MCPs, CLI tools
   - name: aider
     github_id: Aider-AI/aider
