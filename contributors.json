@@ -461,6 +461,11 @@
         "kind": "issue",
         "number": 121,
         "title": "Add project: Jev Social"
+      },
+      {
+        "kind": "issue",
+        "number": 137,
+        "title": "Add project: Jet Browser"
       }
     ]
   },
@@ -576,6 +581,46 @@
         "kind": "issue",
         "number": 136,
         "title": "Add project: workkit"
+      }
+    ]
+  },
+  {
+    "login": "gaurav-aai",
+    "contributions": [
+      {
+        "kind": "issue",
+        "number": 138,
+        "title": "Project suggestion: Agent Barn - open-source control plane for AI agent teams"
+      }
+    ]
+  },
+  {
+    "login": "jaroslavsoucek-art",
+    "contributions": [
+      {
+        "kind": "issue",
+        "number": 139,
+        "title": "Add project: Giovanni"
+      }
+    ]
+  },
+  {
+    "login": "syntaxwanderer",
+    "contributions": [
+      {
+        "kind": "issue",
+        "number": 140,
+        "title": "Add project: laravel-ai-verify"
+      }
+    ]
+  },
+  {
+    "login": "bigfish1913",
+    "contributions": [
+      {
+        "kind": "pr",
+        "number": 142,
+        "title": "Add rpi embeddable Rust coding-agent harness"
       }
     ]
   }
