@@ -9,7 +9,7 @@
     "feed_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/feed.json",
     "license": "CC-BY-SA-4.0",
     "stars_captured": "2026-10-11",
-    "project_count": 166,
+    "project_count": 167,
     "graveyard_count": 4,
     "tiers": [
       "super simple",
@@ -364,19 +364,19 @@
     {
       "kind": "derived",
       "q": "Which agent harnesses can run unattended (headless)?",
-      "a": "Harnesses designed for unattended runs, batches, and fleets: opencode, OpenHands, goose, Symphony, Prime Agent, SWE-agent, Claude Agent SDK, RepoMaster.",
+      "a": "Harnesses designed for unattended runs, batches, and fleets: opencode, OpenHands, goose, Symphony, Prime Agent, rpi, SWE-agent, Claude Agent SDK.",
       "slug": "which-agent-harnesses-can-run-unattended-headless"
     },
     {
       "kind": "derived",
       "q": "Which agent harnesses survive a crash mid-task (durable)?",
-      "a": "Harnesses whose execution state persists across restarts: langgraph-bigtool, QM, n8n, langgraph, mastra, letta, deepagents, pydantic-ai.",
+      "a": "Harnesses whose execution state persists across restarts: langgraph-bigtool, rpi, QM, n8n, langgraph, mastra, letta, deepagents.",
       "slug": "which-agent-harnesses-survive-a-crash-mid-task-durable"
     },
     {
       "kind": "derived",
       "q": "How many of these agent harnesses are open source?",
-      "a": "123 of 166 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
+      "a": "124 of 167 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
       "slug": "how-many-of-these-agent-harnesses-are-open-source"
     },
     {
@@ -423,7 +423,7 @@
     {
       "slug": "best-ai-agent-harnesses-2026",
       "title": "The best AI agent harnesses in 2026, ranked by category",
-      "summary": "These are the top three agent harnesses in each of the 12 categories of best-of-Agent-Harnesses, a hand-curated list of 166 harnesses re-ranked from live GitHub data every week; the stars below were captured 2026-10-11, and the page regenerates with every refresh.",
+      "summary": "These are the top three agent harnesses in each of the 12 categories of best-of-Agent-Harnesses, a hand-curated list of 167 harnesses re-ranked from live GitHub data every week; the stars below were captured 2026-10-11, and the page regenerates with every refresh.",
       "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/comparisons/best-ai-agent-harnesses-2026.md",
       "raw_url": "https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/comparisons/best-ai-agent-harnesses-2026.md"
     },
@@ -2927,6 +2927,39 @@
           "evidence": "https://raw.githubusercontent.com/proliferate-ai/proliferate/main/README.md"
         }
       },
+      "archived": null
+    },
+    {
+      "name": "rpi",
+      "github_id": "bigfish1913/pi-rust",
+      "url": "https://github.com/bigfish1913/pi-rust",
+      "slug": "pi-rust",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#pi-rust",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/pi-rust/",
+      "description": "Rust coding agent originating as a reimplementation of Pi and now evolving independently: the embeddable **harness** owns the provider-agnostic streaming agent loop, tool execution, crash-recoverable JSONL sessions, and native plugin ABI; the terminal TUI is a shell over the same libraries, with a deterministic provider for offline tests.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 114,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (embeddable Rust runtime, terminal agent, native plugins)",
+      "autonomy": "headless",
+      "autonomy_rank": 4,
+      "recovery": "durable",
+      "recovery_rank": 4,
+      "license_signal": "open-source",
+      "tags": [
+        "memory",
+        "provider-agnostic",
+        "cli",
+        "tui",
+        "rust"
+      ],
+      "example": {
+        "label": "Offline embedded agent example",
+        "url": "https://github.com/bigfish1913/pi-rust/tree/main/examples/minimal"
+      },
+      "deep_dive": null,
       "archived": null
     },
     {

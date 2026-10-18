@@ -1,13 +1,13 @@
 <!-- markdownlint-disable -->
 # Tags — cross-reference
 
-_Auto-generated from `scripts/generate.py`. 166 projects across 22 canonical tags. Edit projects in `generate.py` (not here) and rerun the script._
+_Auto-generated from `scripts/generate.py`. 167 projects across 22 canonical tags. Edit projects in `generate.py` (not here) and rerun the script._
 
 Tag chips appear next to each project in [README.md](README.md). This page lists every tag once with the projects that carry it, grouped by category and sorted by GitHub stars within each category.
 
 ## All tags
 
-[`mcp`](#mcp) (33) · [`memory`](#memory) (38) · [`multi-agent`](#multi-agent) (29) · [`evals`](#evals) (22) · [`voice`](#voice) (2) · [`vision`](#vision) (4) · [`browser`](#browser) (9) · [`sandbox`](#sandbox) (28) · [`low-code`](#low-code) (4) · [`rag`](#rag) (9) · [`tool-discovery`](#tool-discovery) (5) · [`training`](#training) (5) · [`workflow`](#workflow) (10) · [`typed`](#typed) (3) · [`local`](#local) (7) · [`provider-agnostic`](#provider-agnostic) (11) · [`cli`](#cli) (23) · [`ide`](#ide) (13) · [`tui`](#tui) (4) · [`rust`](#rust) (5) · [`python`](#python) (81) · [`typescript`](#typescript) (45)
+[`mcp`](#mcp) (33) · [`memory`](#memory) (39) · [`multi-agent`](#multi-agent) (29) · [`evals`](#evals) (22) · [`voice`](#voice) (2) · [`vision`](#vision) (4) · [`browser`](#browser) (9) · [`sandbox`](#sandbox) (28) · [`low-code`](#low-code) (4) · [`rag`](#rag) (9) · [`tool-discovery`](#tool-discovery) (5) · [`training`](#training) (5) · [`workflow`](#workflow) (10) · [`typed`](#typed) (3) · [`local`](#local) (7) · [`provider-agnostic`](#provider-agnostic) (12) · [`cli`](#cli) (24) · [`ide`](#ide) (13) · [`tui`](#tui) (5) · [`rust`](#rust) (6) · [`python`](#python) (81) · [`typescript`](#typescript) (45)
 
 ---
 
@@ -86,6 +86,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [Prime Agent](https://github.com/PrimeIntellect-ai/prime-agent) — ⭐21.9k — Prime Intellect's self-improving coding and research agent. The **harness** is a recursive language model loop (context as a variable, sub-agents as function calls inside a persistent IPython REPL) plus a Continual Harness that lets the agent create, read, update, and delete its own prompts, skills, memory, and sub-agents mid-run; daemon-backed sessions survive a closed terminal, and autonomous mode runs on turn, token, and time budgets. 95.5% on ARC-AGI-3 with Opus 5; the terminal UI is the shell.
 - [jcode](https://github.com/1jehuang/jcode) — ⭐20.4k — Rust terminal coding agent pitched as the most RAM-efficient **harness** in its class; MCP support, multi-provider (Claude/OpenAI).
 - [cc-haha](https://github.com/NanmiCoder/cc-haha) — ⭐15k — Local-first desktop workspace **harness** for Claude Code and other agents: multi-agent sessions, Git worktrees, code diffs, a skill marketplace, and chat-app access (WeChat, Telegram, WhatsApp).
+- [rpi](https://github.com/bigfish1913/pi-rust) — ⭐114 — Rust coding agent originating as a reimplementation of Pi and now evolving independently: the embeddable **harness** owns the provider-agnostic streaming agent loop, tool execution, crash-recoverable JSONL sessions, and native plugin ABI; the terminal TUI is a shell over the same libraries, with a deterministic provider for offline tests.
 
 **Coding harness configs and SDKs**
 
@@ -507,6 +508,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [pi](https://github.com/earendil-works/pi) — ⭐114k — The upstream AI agent toolkit behind this list's oh-my-pi fork: a unified multi-provider LLM API, agent loop, and TUI shell providing the **harness** that oh-my-pi's Rust rewrite builds on.
 - [oh-my-pi](https://github.com/can1357/oh-my-pi) — ⭐35k — Terminal coding agent (fork of Pi) that wires the IDE into the **harness**: hash-anchored edits, a 32-tool loop tuned per-model, LSP rename/references/diagnostics on every write, a real DAP debugger (lldb/dlv/debugpy), long-lived Python + Bun execution kernels that call back into the agent's tools, browser control, and 40+ providers (Claude/OpenAI/Gemini/local). ~55k-line Rust core.
 - [jcode](https://github.com/1jehuang/jcode) — ⭐20.4k — Rust terminal coding agent pitched as the most RAM-efficient **harness** in its class; MCP support, multi-provider (Claude/OpenAI).
+- [rpi](https://github.com/bigfish1913/pi-rust) — ⭐114 — Rust coding agent originating as a reimplementation of Pi and now evolving independently: the embeddable **harness** owns the provider-agnostic streaming agent loop, tool execution, crash-recoverable JSONL sessions, and native plugin ABI; the terminal TUI is a shell over the same libraries, with a deterministic provider for offline tests.
 
 **Coding harness configs and SDKs**
 
@@ -543,6 +545,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [Kilo Code](https://github.com/Kilo-Org/kilocode) — ⭐27.6k — VS Code extension and CLI in the Cline/Roo-Code lineage — a natural pick now that Roo-Code is archived upstream. The **harness** is an approval-gated autonomous-mode loop with a provider/tool marketplace; the IDE is the shell.
 - [Prime Agent](https://github.com/PrimeIntellect-ai/prime-agent) — ⭐21.9k — Prime Intellect's self-improving coding and research agent. The **harness** is a recursive language model loop (context as a variable, sub-agents as function calls inside a persistent IPython REPL) plus a Continual Harness that lets the agent create, read, update, and delete its own prompts, skills, memory, and sub-agents mid-run; daemon-backed sessions survive a closed terminal, and autonomous mode runs on turn, token, and time budgets. 95.5% on ARC-AGI-3 with Opus 5; the terminal UI is the shell.
 - [jcode](https://github.com/1jehuang/jcode) — ⭐20.4k — Rust terminal coding agent pitched as the most RAM-efficient **harness** in its class; MCP support, multi-provider (Claude/OpenAI).
+- [rpi](https://github.com/bigfish1913/pi-rust) — ⭐114 — Rust coding agent originating as a reimplementation of Pi and now evolving independently: the embeddable **harness** owns the provider-agnostic streaming agent loop, tool execution, crash-recoverable JSONL sessions, and native plugin ABI; the terminal TUI is a shell over the same libraries, with a deterministic provider for offline tests.
 
 **Coding harness configs and SDKs**
 
@@ -610,6 +613,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [pi](https://github.com/earendil-works/pi) — ⭐114k — The upstream AI agent toolkit behind this list's oh-my-pi fork: a unified multi-provider LLM API, agent loop, and TUI shell providing the **harness** that oh-my-pi's Rust rewrite builds on.
 - [DeepSeek-Reasonix](https://github.com/esengine/DeepSeek-Reasonix) — ⭐35.8k — DeepSeek-native terminal coding agent. The **harness** is engineered around prefix-cache stability for long-running sessions; the TUI is the shell.
 - [crush](https://github.com/charmbracelet/crush) — ⭐28.6k — Charm's terminal coding agent (Charm's fork of the original OpenCode). The **harness** is the tool-calling loop with session persistence; the Bubble Tea TUI is the shell.
+- [rpi](https://github.com/bigfish1913/pi-rust) — ⭐114 — Rust coding agent originating as a reimplementation of Pi and now evolving independently: the embeddable **harness** owns the provider-agnostic streaming agent loop, tool execution, crash-recoverable JSONL sessions, and native plugin ABI; the terminal TUI is a shell over the same libraries, with a deterministic provider for offline tests.
 
 ---
 
@@ -622,6 +626,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [oh-my-pi](https://github.com/can1357/oh-my-pi) — ⭐35k — Terminal coding agent (fork of Pi) that wires the IDE into the **harness**: hash-anchored edits, a 32-tool loop tuned per-model, LSP rename/references/diagnostics on every write, a real DAP debugger (lldb/dlv/debugpy), long-lived Python + Bun execution kernels that call back into the agent's tools, browser control, and 40+ providers (Claude/OpenAI/Gemini/local). ~55k-line Rust core.
 - [jcode](https://github.com/1jehuang/jcode) — ⭐20.4k — Rust terminal coding agent pitched as the most RAM-efficient **harness** in its class; MCP support, multi-provider (Claude/OpenAI).
 - [claw-code-agent](https://github.com/HarnessLab/claw-code-agent) — ⭐546 — Python reimplementation of the Claude Code agent architecture with zero external dependencies; interactive chat, streaming, plugin runtime, nested agent delegation, cost tracking, MCP transport—portable harness without the Rust/TS toolchain.
+- [rpi](https://github.com/bigfish1913/pi-rust) — ⭐114 — Rust coding agent originating as a reimplementation of Pi and now evolving independently: the embeddable **harness** owns the provider-agnostic streaming agent loop, tool execution, crash-recoverable JSONL sessions, and native plugin ABI; the terminal TUI is a shell over the same libraries, with a deterministic provider for offline tests.
 
 ---
 

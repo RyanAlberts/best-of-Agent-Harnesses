@@ -95,6 +95,10 @@ projects:
   - name: pi
     github_id: earendil-works/pi
     category: "coding-agent-products"
+  - name: rpi
+    github_id: bigfish1913/pi-rust
+    labels: ["rust"]
+    category: "coding-agent-products"
   - name: AgentBox
     github_id: madarco/agentbox
     labels: ["javascript"]
