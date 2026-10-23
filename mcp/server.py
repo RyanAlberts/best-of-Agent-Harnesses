@@ -8,9 +8,10 @@
 Serves the curated list (harnesses.json) as tools so agents can recommend
 agent harnesses: recommend, compare, compare_for, pick_harness,
 pick_infrastructure (curated picks plus live GitHub/Hacker News discovery),
-search_harnesses, get_harness, list_categories, plus the decision guides,
-templates (files to copy), playbooks (step-by-step setup guides), and skills
-(folders an agent installs to check its own setup).
+search_harnesses, get_harness, list_categories, whats_new (the weekly
+digest), plus the decision guides, templates (files to copy), playbooks
+(step-by-step setup guides), and skills (folders an agent installs to check
+its own setup).
 
 Run directly from GitHub (no clone needed):
     uv run https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/mcp/server.py
@@ -25,6 +26,7 @@ from mcp.server.fastmcp import FastMCP
 from mcp.types import ToolAnnotations
 
 DATA_URL = "https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/harnesses.json"
+CHANGES_URL = "https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/changes.json"
 
 mcp = FastMCP("agent-harnesses")
 
@@ -734,7 +736,7 @@ def get_skill(name: str, target: str = "claude-code") -> str:
 
 @mcp.tool(annotations=_READ_ONLY)
 def list_categories() -> str:
-    """The list's 10 categories and 14 curated use-case intents, with project counts."""
+    """The list's categories and curated use-case intents, with project counts."""
     d = data()
     counts: dict = {}
     for p in d["projects"]:
@@ -748,6 +750,20 @@ def list_categories() -> str:
         "deep_dive_vocab": d["meta"].get("deep_dive_vocab", {}),
         "deep_dive_help": d["meta"].get("deep_dive_help", ""),
     }, indent=2, ensure_ascii=False)
+
+
+@mcp.tool(annotations=_READ_ONLY)
+def whats_new(since: str = "", limit: int = 4) -> str:
+    """What changed in the list, week by week: harnesses added or removed,
+    the biggest star gains, the fastest growers, projects archived upstream,
+    and new guides, skills, and templates. Pass since=YYYY-MM-DD for every
+    week after that date, or omit it for the latest `limit` weeks. Use it to
+    answer "what's new in agent harnesses" or to check whether an earlier
+    recommendation is out of date."""
+    local = Path(__file__).resolve().parent.parent / "changes.json"
+    weeks = json.loads(_fetch_text(local, CHANGES_URL)).get("weeks", [])
+    weeks = [w for w in weeks if w.get("date", "") > since] if since else weeks[:max(1, limit)]
+    return json.dumps({"weeks": weeks}, indent=2, ensure_ascii=False)
 
 
 def main():

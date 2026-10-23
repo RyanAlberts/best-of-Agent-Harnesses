@@ -51,7 +51,8 @@ claude mcp add agent-harnesses -- uv run https://raw.githubusercontent.com/RyanA
 | `list_playbooks()` / `get_playbook(slug)` | Step-by-step setup guides (build your own harness, one AGENTS.md for every agent, …). |
 | `list_skills()` | Agent skills that check your own setup (what your agent can reach, whether its "tests pass" claims hold, where your tokens go, which guardrails leak, …), each with its install command. |
 | `get_skill(name, target)` | Every file of one skill with the path to write it to, under `.claude/skills/` or `.agents/skills/`, so your agent can install it for you. |
-| `list_categories()` | The 10 categories, use-case intents, and the complexity/autonomy/recovery scales. |
+| `list_categories()` | The categories, use-case intents, and the complexity/autonomy/recovery scales. |
+| `whats_new(since?, limit?)` | The weekly digest: harnesses added or removed, the biggest star gains, the fastest growers, projects archived upstream, and new guides, skills, and templates. Pass `since` (YYYY-MM-DD) to catch up on everything after a date. |
 
 Example: *"recommend('an always-on personal assistant that lives in my chat apps', open_source_only=True)"* → one top pick with the reason, two alternatives, anything to avoid for this need, and the guide to read next.
 

@@ -292,6 +292,16 @@ def test_ranked_skips_archived_projects(server):
     assert "Flowise" not in names
 
 
+def test_whats_new(server, tmp_path, monkeypatch):
+    weeks = [{"date": "2026-10-25"}, {"date": "2026-10-18"}, {"date": "2026-10-11"}]
+    changes = tmp_path / "changes.json"
+    changes.write_text(json.dumps({"weeks": weeks}))
+    monkeypatch.setattr(server, "_fetch_text", lambda local, url: changes.read_text())
+    assert [w["date"] for w in json.loads(server.whats_new())["weeks"]] == ["2026-10-25", "2026-10-18", "2026-10-11"]
+    assert [w["date"] for w in json.loads(server.whats_new(limit=1))["weeks"]] == ["2026-10-25"]
+    assert [w["date"] for w in json.loads(server.whats_new(since="2026-10-11"))["weeks"]] == ["2026-10-25", "2026-10-18"]
+
+
 def test_skills_tools(server):
     import generate
     server._data = DATA  # a harnesses.json from before skills existed

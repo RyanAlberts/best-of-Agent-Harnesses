@@ -25,6 +25,17 @@ def test_full_build_succeeds(tmp_path, monkeypatch):
     assert stats["projects"] == generate.count_projects()
 
 
+def test_badge_and_weekly_changes_page(tmp_path, monkeypatch):
+    out, _ = _build(tmp_path, monkeypatch)
+    p = generate.ordered_projects()[0]
+    project_page = (out / "h" / generate.project_slug(p.github_id) / "index.html").read_text()
+    assert "Agent_Harnesses-5ac4bf)](https://github.com/RyanAlberts/best-of-Agent-Harnesses)" in project_page
+    assert build_site.BADGE_MD in (generate.REPO_ROOT / "CONTRIBUTING.md").read_text()
+    if (generate.REPO_ROOT / "changes.json").exists():
+        assert "What changed" in (out / "changes" / "index.html").read_text()
+        assert "/changes/</loc>" in (out / "sitemap.xml").read_text()
+
+
 def test_graveyard_projects_have_no_pages_and_no_links(tmp_path, monkeypatch):
     out, _ = _build(tmp_path, monkeypatch)
     index = (out / "index.html").read_text()

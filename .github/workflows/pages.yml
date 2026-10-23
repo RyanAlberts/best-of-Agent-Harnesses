@@ -12,6 +12,8 @@ on:
       - harnesses.jsonld
       - llms.txt
       - feed.json
+      - changes.json
+      - latest-changes.md
       - comparisons/**
       - templates/**
       - playbooks/**

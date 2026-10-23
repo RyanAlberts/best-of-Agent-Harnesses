@@ -41,6 +41,8 @@ jobs:
           TZ: America/Chicago
         run: |
           set -euo pipefail
+          # last week's data, for the digest diff after generate.py rewrites it
+          cp harnesses.json /tmp/harnesses.before.json
           python3 scripts/refresh_stars.py | tee /tmp/refresh.log
           # contributors refresh keeps the intro's "Meet the N" roster live,
           # so the count can never go stale between hand edits.
@@ -63,6 +65,9 @@ jobs:
           # hydrates from this week's queue, not last week's.
           python3 scripts/discover_candidates.py
           python3 scripts/generate.py
+          # latest-changes.md + changes.json; prints the release title, or
+          # nothing on a quiet week
+          python3 scripts/weekly_digest.py /tmp/harnesses.before.json > /tmp/release-title.txt
           TODAY="$(TZ=America/Chicago date +%F)"
           python3 - "$TODAY" <<'PY'
           import json, sys
@@ -104,3 +109,24 @@ jobs:
             -m "weekly rescore ${TODAY}" \
             -m "$(head -40 /tmp/refresh.log)"
           git push origin HEAD:main
+
+      # A release per refresh puts the digest in every stargazer's GitHub feed
+      # and notifies anyone watching releases: the best-of-lists pattern this
+      # repo dropped when it left best-of-update-action.
+      - name: Publish the weekly digest as a release
+        if: github.ref == 'refs/heads/main'
+        env:
+          GH_TOKEN: ${{ secrets.RESCORE_PAT || secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          TITLE="$(cat /tmp/release-title.txt 2>/dev/null || true)"
+          if [ -z "$TITLE" ]; then
+            echo "Quiet week: no digest, no release."
+            exit 0
+          fi
+          TAG="digest-$(TZ=America/Chicago date +%F)"
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            echo "Release $TAG already exists."
+            exit 0
+          fi
+          gh release create "$TAG" --title "$TITLE" --notes-file latest-changes.md --target main --latest

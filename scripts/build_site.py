@@ -36,6 +36,10 @@ BASE = g.BASE_PATH  # "/best-of-Agent-Harnesses"
 OG_IMAGE = f"{ORIGIN}{BASE}/assets/social-preview.png"
 GITHUB_REPO = "https://github.com/RyanAlberts/best-of-Agent-Harnesses"
 AUTHOR = {"@type": "Person", "name": "Ryan Alberts", "url": "https://github.com/RyanAlberts"}
+# The CONTRIBUTING.md "Show your listing" badge, offered on every project page:
+# each one in a listed project's README is a link back to the list.
+BADGE_IMG = "https://img.shields.io/badge/%F0%9F%8F%86_Best_of-Agent_Harnesses-5ac4bf"
+BADGE_MD = f"[![Best of Agent Harnesses]({BADGE_IMG})]({GITHUB_REPO})"
 
 
 def esc(s: str) -> str:
@@ -107,6 +111,7 @@ def page(title: str, description: str, canonical_path: str, body: str,
     nav = (
         f'<a href="{u()}">Home</a>'
         f'<a href="{u("faq")}">FAQ</a>'
+        f'<a href="{u("changes")}">This week</a>'
         f'<a href="{u("radar")}">Radar</a>'
         f'<a href="{u()}#compare">Compare</a>'
         f'<a href="{u()}#templates">Templates</a>'
@@ -330,7 +335,13 @@ def render_project(p) -> str:
   </p>
   <h2>Related in {esc(cat_title)}</h2>
   <ul>{related}</ul>
+  <h2>Maintain {esc(m["name"])}? Add the badge</h2>
+  <p><img src="{BADGE_IMG}" alt="Best of Agent Harnesses" height="20"></p>
+  <p>Paste this into your README so readers can find the list and see how {esc(m["name"])} compares:</p>
+  <pre><code id="badge-md">{esc(BADGE_MD)}</code></pre>
+  <p><button class="copy btn" data-target="badge-md">Copy</button></p>
 </article>
+{COPY_JS}
 """
     jsonld = {
         "@context": "https://schema.org",
@@ -400,6 +411,17 @@ descriptions are the projects' own, unvetted. Entries graduate into <a href="{u(
     return page("On the radar — Best of Agent Harnesses",
                 "Up-and-coming agent-harness candidates being watched before they enter the ranked list.",
                 "radar", body)
+
+
+def render_changes(md: str) -> str:
+    """The weekly digest (latest-changes.md from weekly_digest.py): one dated
+    page that changes every week, with the history in changes.json."""
+    title = md.splitlines()[0].lstrip("# ").strip()
+    summary = md.splitlines()[2].strip()
+    body = (f'<nav class="crumbs"><a href="{u()}">Home</a> › This week</nav>\n'
+            f'<article class="prose">{markdown.markdown(md, extensions=["tables"])}'
+            f'<p>Every week since the digest started: <a href="{u()}changes.json">changes.json</a>.</p></article>')
+    return page(f"{title} · Best of Agent Harnesses", summary, "changes", body)
 
 
 def render_comparison(c: dict) -> str:
@@ -676,6 +698,13 @@ def build() -> dict:
     )
     (OUT / ".nojekyll").write_text("")
 
+    digest = ROOT / "latest-changes.md"
+    if digest.exists() and (ROOT / "changes.json").exists():
+        (OUT / "changes").mkdir()
+        (OUT / "changes" / "index.html").write_text(render_changes(digest.read_text()))
+        week = json.loads((ROOT / "changes.json").read_text())["weeks"][0]
+        urls.append((abs_url("changes"), week["date"]))
+
     (OUT / "faq").mkdir()
     (OUT / "faq" / "index.html").write_text(render_faq())
     urls.append((abs_url("faq"), g.STARS_CAPTURED))
@@ -728,7 +757,7 @@ def build() -> dict:
         written["skills"] += 1
 
     # Copy machine-readable surfaces + assets so the site serves them directly.
-    for f in ["harnesses.json", "harnesses.jsonld", "llms.txt", "feed.json"]:
+    for f in ["harnesses.json", "harnesses.jsonld", "llms.txt", "feed.json", "changes.json"]:
         src = ROOT / f
         if src.exists():
             shutil.copy2(src, OUT / f)
