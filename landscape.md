@@ -1,6 +1,6 @@
 # The agent harness landscape, in two charts
 
-Both charts plot every project in [best-of-Agent-Harnesses](README.md), a curated list of 166 agent harnesses: the runtimes that turn an AI model into a working agent. They regenerate from the list data on every weekly refresh, so what you see is current.
+Both charts plot every project in [best-of-Agent-Harnesses](README.md), a curated list of 187 agent harnesses: the runtimes that turn an AI model into a working agent. They regenerate from the list data on every weekly refresh, so what you see is current.
 
 ## Adoption surface vs. stars
 
@@ -21,7 +21,7 @@ Start with [How to pick a harness](comparisons/how-to-pick-a-harness.md), or jum
 - [Agent evals: SWE-bench vs inspect_ai vs Terminal-Bench](comparisons/agent-eval-harnesses.md)
 - [The best AI agent harnesses in 2026, ranked by category](comparisons/best-ai-agent-harnesses-2026.md)
 - [Browser agents: browser-use vs Stagehand vs Playwright MCP vs chrome-devtools-mcp](comparisons/browser-agents.md)
-- [Browser infrastructure for agents: Browserbase vs Steel vs Hyperbrowser](comparisons/browser-infrastructure.md)
+- [Browser infrastructure for agents: Browser Use vs Browserbase vs Steel vs Hyperbrowser](comparisons/browser-infrastructure.md)
 - [Claude Code skill packs: superpowers vs GStack vs get-shit-done vs Anthropic Skills](comparisons/claude-code-skill-packs.md)
 - [Eval and observability platforms: Langfuse vs LangSmith vs Braintrust vs Phoenix](comparisons/eval-platforms.md)
 - [How to pick a harness](comparisons/how-to-pick-a-harness.md)

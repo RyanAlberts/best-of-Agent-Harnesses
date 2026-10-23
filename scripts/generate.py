@@ -249,6 +249,35 @@ PROJECTS: dict[str, list[Project]] = {
         Project("YYLO", "yylo-dev/yylo",
                 "Command-line orchestrator for coding agents (drives Pi and Codex subagents): every task gets a dedicated branch/worktree and a typed lifecycle — read-only preflight, risk-scaled merge-queue review, release-readiness gates — with receipt-backed changes. The **harness** contribution is the git-native task/merge orchestration layer on top of whichever agent executes; not an agent loop itself.",
                 "slightly complex (git-native task fleet, merge queue)", labels=["javascript"]),
+        # Promoted from RADAR 2026-10-23 after the star-velocity re-check due
+        # 2026-10-07: official deepseek-ai org, history since 2026-06-10, 57
+        # contributors, 23.9k commits, weekly releases, 1.73M npm downloads of
+        # @deepseek-ai/dsh in 30 days; watchers 0.42% and forks 12% of stars,
+        # in line with opencode and hermes-agent; weekly star adds decayed
+        # 58.6k -> 4-6k after launch. Issues are off because the README routes
+        # feedback to Discussions; the dsh/cordis topic cluster is its
+        # `dsh-plugin` ecosystem, which the README asks plugin authors to tag.
+        Project("DeepSeek Harness", "deepseek-ai/deepseek-harness",
+                "DeepSeek's official open-source agent **harness** (`dsh`), built so that everything is a plugin: the model adapter, tool registry, session log, sandbox and approval policy, and the agent loop itself are Cordis plugins you replace from configuration, and one plugin tree boots as a Web UI, a headless runner, a desktop app, an SDK server, or an ACP server. Developer preview, with breaking changes expected.",
+                "slightly complex (plugin-tree runtime, Web UI, headless, SDK)", labels=["javascript"]),
+        Project("Grok Build", "xai-org/grok-build",
+                "SpaceXAI's terminal coding agent. The **harness** is a Rust agent runtime that edits files, runs shell commands, searches the web, and keeps workspace checkpoints; it runs in a full-screen TUI, headless for scripts and CI, or inside editors over the Agent Client Protocol. The public repo is synced from the company monorepo.",
+                "slightly complex (official CLI, Rust runtime, headless and ACP)", labels=["rust"]),
+        Project("Codewhale", "codewhale-hq/Codewhale",
+                "Open-source Rust terminal coding agent for any model (40+ providers, local models included). The **harness** pairs a goal-driven work loop with permission modes (Ask, Auto-Review by a reviewer model, Full Access) and an optional workspace-write sandbox, and `/receipts` lists every file it changed, command it ran, and web or MCP call it made; the TUI is the shell.",
+                "slightly complex (Rust CLI, any model, permission modes, MCP)", labels=["rust"]),
+        Project("Empryo", "proxysoul/Empryo",
+                "Coding agent for the desktop, the terminal, and CI. The **harness** builds a repo map before each task (tree-sitter symbols, import graph, git co-change), edits by symbol through AST and LSP, then runs typecheck, lint, and tests in the same turn. This repo holds the public SoulForge v2 core under BUSL-1.1; the current Empryo v3 app is developed privately under its own license.",
+                "slightly complex (repo map, AST/LSP symbol edits, any model)", oss="⚠️ BUSL-1.1", labels=["javascript"]),
+        Project("Tianshu Harness", "huiliyi37/Tianshu-harness",
+                "TypeScript coding-agent runtime shared by a terminal TUI, a desktop app, and a VS Code extension. The **harness** keeps each task's goal, scope, and success criteria in a task contract outside the chat history, blocks a claim of done until tests, a diff, or a verification command back it, and takes a git checkpoint before each turn's first edit. The main README is Chinese; an English README is linked.",
+                "slightly complex (evidence-gated completion, task contracts, multi-surface)", labels=["javascript"]),
+        Project("Orbi", "orbi-build/orbi",
+                "Self-hosted runner that takes a GitHub issue labeled `ai-ready` to a reviewed, merged pull request and a tagged release: each run gets its own branch and worktree, Pi writes the change, a separate review session checks it against the issue's acceptance criteria, and only the reviewed head merges. The **harness** contribution is the issue-to-release delivery and review gate on top of Pi; it does not own an agent loop.",
+                "slightly complex (issue-driven runner, review gate, systemd/launchd timer)", labels=["python"]),
+        Project("rpi", "bigfish1913/pi-rust",
+                "Rust coding-agent runtime that began as a reimplementation of Pi and now develops on its own. The embeddable **harness** owns a provider-agnostic streaming agent loop, tool execution, JSONL sessions that resume after a crash from the last committed frame, and a native plugin ABI; the terminal TUI is a shell over the same crates, and a deterministic offline provider covers tests.",
+                "slightly complex (embeddable Rust runtime, terminal agent, native plugins)", labels=["rust"]),
     ],
     "coding-harness-configs": [
         Project("LoopTroop", "looptroop-ai/LoopTroop",
@@ -305,6 +334,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("Meta-Harness", "stanford-iris-lab/meta-harness",
                 "Reference implementation from the Meta-Harness paper: an academic testbed for harness-engineering research, not a product—useful as a citation-grade baseline rather than something you'd run in production.",
                 "slightly complex (research reference implementation)", oss="❓"),
+        Project("Ouroboros (Q00)", "Q00/ouroboros",
+                "Spec-first layer that wraps an existing coding agent (Claude Code, Codex CLI, OpenCode, and ten more runtime families) instead of replacing it. The **harness** pins an acceptance spec before the run and checks it afterwards itself, keeps verify commands and expected outputs out of the worker's contract so the agent is asked for the outcome rather than handed the test, and runs its evolution loop unattended, with lineage kept in an event store that survives restarts.",
+                "slightly complex (MCP server, spec, run, evaluate, evolve loop)", labels=["python"]),
     ],
     "personal-agent-runtimes": [
         Project("QM", "yc-software/qm",
@@ -313,7 +345,7 @@ PROJECTS: dict[str, list[Project]] = {
         Project("OpenJarvis", "open-jarvis/OpenJarvis",
                 "Stanford Hazy Research's local-first personal AI **harness**: on-device model inference (Ollama built in), agent execution, memory, and learning as shared primitives, with on-demand, scheduled, and continuous agents and evaluations that count energy, latency, and dollars alongside accuracy; a cloud model can tune the local configuration once so run time stays on your own hardware.",
                 "slightly complex (local-first runtime, scheduled and continuous agents)", labels=["python"]),
-        Project("Talon", "dylanneve1/talon",
+        Project("Talon", "thefalconry/talon",
                 "Multi-platform personal agent living in Telegram, Discord, Teams, and the terminal. The **harness** is a pluggable-backend loop (Claude, Kilo, OpenCode, Codex, OpenAI Agents) with full MCP tool access and persistent background agents (Goals, Heartbeat, Dream); the chat apps are shells.",
                 "slightly complex (multi-platform, pluggable backends, MCP)", labels=["javascript"]),
         Project("OpenClaw", "openclaw/openclaw",
@@ -348,6 +380,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("AnythingLLM", "Mintplex-Labs/anything-llm",
                 "Self-hosted \"AI second brain\" **harness**: chat with your documents, run built-in agent skills (web search, code execution, browsing), and manage multi-user workspaces with a bundled vector DB, so there is no separate RAG stack to wire up.",
                 "complex (server + desktop + multi-user; product suite)", labels=["javascript"]),
+        Project("Ouroboros (razzant)", "razzant/ouroboros",
+                "Self-modifying personal agent that keeps its identity, durable memory, and history across tasks and restarts. The **harness** owns the agent loop, tool execution, and specialist-subagent coordination, and it changes its own code only through review gates, with restart checks and rollback kept in git history; the desktop app and headless CLI are interfaces to the same runtime.",
+                "slightly complex (self-modifying runtime, desktop + headless)", labels=["python"]),
     ],
     "frameworks": [
         Project("langgraph", "langchain-ai/langgraph",
@@ -466,6 +501,36 @@ PROJECTS: dict[str, list[Project]] = {
         Project("omnigent", "omnigent-ai/omnigent",
                 "Open-source meta-**harness**: orchestrates Claude Code, Codex, Cursor, Pi, and custom agents behind one policy/sandboxing layer so teams swap harnesses without rewriting workflows.",
                 "complex (meta-harness, policy + sandboxing — product suite)", oss="❓", labels=["python"]),
+        Project("Agent Teams AI", "777genius/agent-teams-ai",
+                "Desktop app that runs a team of coding agents (Claude Code, Codex, OpenCode, Cursor, Copilot, and others) on a kanban board: agents take tasks, message each other, and review each other's work before it is accepted. The **harness** contribution is the team-coordination layer over existing agent CLIs, with per-action approval or full autonomy; the kanban board is the shell.",
+                "complex (desktop multi-agent orchestration, product suite)", labels=["javascript"]),
+        Project("Open Multi-Agent", "open-multi-agent/open-multi-agent",
+                "Self-hosted TypeScript multi-agent runtime. The **harness** is a coordinator that plans a task DAG from one goal at runtime and a deterministic scheduler that runs specialized agents, with durable approvals that pause before a plan, task, or tool call, PostgreSQL-backed checkpoints for restart recovery, and a verifiable run journal for replay; `runTasks()` keeps the graph fixed when the topology must not change.",
+                "slightly complex (TypeScript runtime, task DAGs, durable approvals)", labels=["javascript"]),
+        Project("Orkas", "Orkas-AI/Orkas",
+                "Local-first desktop AI team. The **harness** is a Commander agent that turns one chat goal into a plan and runs specialist agents in parallel or in sequence, with tool approvals, session checkpoints, tool-round budgets and idle watchdogs for stalled runs, durable per-agent memory, and support for built-in or external agent runtimes.",
+                "complex (desktop multi-agent team, product suite)", labels=["javascript"]),
+        Project("fractal", "plasma-ai/fractal",
+                "Hierarchical coding-agent **harness**: each autonomous loop works in its own git worktree and can delegate separable subtasks to child loops, so the execution tree grows recursively, with five coding-agent CLIs wired into per-node loops, shared SQLite run state, operator controls, and depth, cost, and time limits.",
+                "slightly complex (recursive loop tree, worktrees, SQLite state)", labels=["python"]),
+        Project("Claudexor", "razzant/claudexor",
+                "Local-first control plane that routes one coding thread across Claude Code, Codex, Cursor, and OpenCode. The **harness** contribution is the layer around those agents: quota-aware rotation across isolated subscription profiles, bounded context handoffs between agents and accounts, best-of-N races, cross-family review, and typed apply gates.",
+                "slightly complex (multi-harness control plane, best-of-N, apply gates)", labels=["javascript"]),
+        Project("GraphCode", "scgopi/GraphCode",
+                "macOS canvas that runs Claude Code, Codex CLI, Copilot CLI, and OpenCode sessions as nodes on a graph. The **harness** is the graph itself: each loop is typed by what ends it (a turn, a shell predicate or declared goal, a cadence, or a sub-graph), hand-off and spawn edges fire when a loop resolves, and a launchd daemon keeps sessions alive across app quits and reboots; the agent CLIs own their inner loops.",
+                "slightly complex (macOS app + daemon, typed loops, graph edges)", oss="⚠️ FSL-1.1-MIT"),
+        Project("HarnessRouter", "HarnessRouter/harnessrouter",
+                "Self-hostable Community Edition of a unified interface for complete agent harnesses. The **harness** contribution is the layer around them: each task runs a full harness (Codex, Claude Code, Hermes, Pi, DeepSeek Harness, and others) in its own on-demand sandbox, the harness is a request parameter behind an OpenAI Responses-compatible API (the open Unified Harness Protocol), and the layer handles sessions, streaming, files, and traces.",
+                "complex (sandbox-per-run router across harnesses, product suite)", labels=["python"]),
+        Project("Desplega Agent Swarm", "desplega-ai/agent-swarm",
+                "Self-hosted multi-agent orchestration service: a lead agent delegates queued tasks to Claude Code, Codex, and other workers in isolated containers. The **harness** contribution is the lead-to-worker hierarchy, the task queue, shared memory, and review gates, with MCP tools and Slack and GitHub integrations; the workers own their inner loops.",
+                "complex (task queue, isolated workers, shared memory)", labels=["javascript"]),
+        Project("Agent Barn", "aai-labs/agent-barn",
+                "Control plane for teams of agents on your own Kubernetes cluster, deployed with Helm. The **harness** contribution is the layer around runtimes such as Hermes and OpenClaw: chat front ends (Slack, Teams, Telegram, Discord, email), tool wiring to Jira, GitHub, and Confluence, a model key per agent, and an audit record of every conversation, tool call, and cost.",
+                "complex (Kubernetes control plane, multi-channel, audit, product suite)", labels=["python"]),
+        Project("Raven", "EverMind-AI/Raven",
+                "EverMind's host agent, with its loop split into memory, planning, capability, and action modules. The **harness** plans complex tasks as DAGs and orchestrates built-in research, coding, design, and on-call agents plus third-party agents (Claude Code, Codex, OpenClaw, Hermes Agent) over ACP, CLI, or OpenAI-compatible APIs, with long-term memory; labeled pre-alpha, with tagged releases since v0.1.0.",
+                "complex (host agent, multi-agent DAGs, ACP/MCP, product suite)", labels=["python"]),
     ],
     "plugins-mcp-cli": [
         Project("aider", "Aider-AI/aider",
@@ -542,6 +607,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("beads", "gastownhall/beads",
                 "Portable persistent-memory layer for coding agents: tracks decisions and task state outside the harness's own context window so it survives session resets and model swaps.",
                 "mostly simple (portable memory store)", oss="❓"),
+        Project("deja", "vshulcz/deja-vu",
+                "Memory layer built from the session transcripts that Claude Code, Codex, Cursor, and 39 other agents already write to disk, so recall starts with history from before it was installed. It wires recall into each **harness** the way that harness supports: hooks at session start, before an edit or command, and after a command fails, plus an MCP tool; local BM25 search in one Go binary, with credentials redacted as the index is built.",
+                "mostly simple (single Go binary, local index, hooks + MCP)"),
     ],
     "evaluation": [
         Project("agent-qa", "vostride/agent-qa",
@@ -632,6 +700,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("AutoResearchClaw", "aiming-lab/AutoResearchClaw",
                 "Fully autonomous, self-evolving research **harness**: multi-agent debate and citation verification carry a project from idea to a written paper without a human in the loop.",
                 "complex (autonomous research, multi-agent debate — product suite)", oss="❓"),
+        Project("Jev Social", "socai-io/jev-social",
+                "Local-first social media research agent for Instagram, TikTok, and LinkedIn. The **harness** is a bounded decide-act-observe loop: the agent picks a typed, read-only operation from the currently valid candidates, the socai CLI runs it in the user's own Chrome session and returns evidence, and the run ends on an explicit finish or a step cap, keeping partial evidence and recoverable checkpoints when access is blocked.",
+                "mostly simple (bounded loop, read-only actions, local browser session)", labels=["javascript"]),
     ],
     "libraries-sdks": [
         Project("deepagents", "langchain-ai/deepagents",
@@ -724,6 +795,14 @@ META: dict[str, tuple[int, str, str]] = {
     "1jehuang/jcode": (21002, "https://github.com/1jehuang/jcode#readme", "Project README"),
     "NanmiCoder/cc-haha": (15060, "https://github.com/NanmiCoder/cc-haha#readme", "Project README"),
     "yylo-dev/yylo": (64, "https://github.com/yylo-dev/yylo#readme", "Project README"),
+    # added 2026-10-23 curation pass (stars read from the GitHub API that day)
+    "deepseek-ai/deepseek-harness": (259258, "https://github.com/deepseek-ai/deepseek-harness/blob/master/docs/architecture.md", "Plugin architecture"),
+    "xai-org/grok-build": (27515, "https://github.com/xai-org/grok-build#readme", "Project README"),
+    "codewhale-hq/Codewhale": (41111, "https://github.com/codewhale-hq/Codewhale/blob/main/docs/MODES.md", "Modes and permissions"),
+    "proxysoul/Empryo": (1450, "https://empryo.com/docs/concepts/genome", "Repo map concept"),
+    "huiliyi37/Tianshu-harness": (1151, "https://github.com/huiliyi37/Tianshu-harness/blob/main/README.en.md", "English README"),
+    "orbi-build/orbi": (225, "https://github.com/orbi-build/orbi#the-loop-in-35-seconds", "One issue to release, recorded"),
+    "bigfish1913/pi-rust": (144, "https://github.com/bigfish1913/pi-rust/tree/main/examples/minimal", "Offline embedded agent example"),
     # coding-harness-configs
     "looptroop-ai/LoopTroop": (163, "https://github.com/looptroop-ai/LoopTroop#readme", "Council → loop → worktree pipeline"),
     "open-gsd/gsd-core": (10649, "https://github.com/open-gsd/gsd-core/blob/next/commands/gsd/ship.md", "gsd:ship command"),
@@ -743,6 +822,7 @@ META: dict[str, tuple[int, str, str]] = {
     "addyosmani/agent-skills": (108090, "https://github.com/addyosmani/agent-skills#readme", "Project README"),
     "OthmanAdi/planning-with-files": (27506, "https://github.com/OthmanAdi/planning-with-files#readme", "Project README"),
     "stanford-iris-lab/meta-harness": (1677, "https://github.com/stanford-iris-lab/meta-harness#readme", "Project README"),
+    "Q00/ouroboros": (6265, "https://github.com/Q00/ouroboros#readme", "Project README"),
     # frameworks
     "langchain-ai/langgraph": (43449, "https://github.com/langchain-ai/langgraph/blob/main/examples/customer-support/customer-support.ipynb", "Customer support agent"),
     "langchain-ai/langchain": (148027, "https://github.com/langchain-ai/langchain-academy/blob/main/module-1/agent.ipynb", "Build an agent notebook"),
@@ -768,7 +848,8 @@ META: dict[str, tuple[int, str, str]] = {
     "yc-software/qm": (15438, "https://www.youtube.com/watch?v=n9xKblqyQ28&t=2730s", "YC Paper Club talk (45:30)"),
     "open-jarvis/OpenJarvis": (11520, "https://www.youtube.com/watch?v=n9xKblqyQ28&t=2240s", "YC Paper Club talk (37:20)"),
     "NousResearch/hermes-agent": (254879, "https://github.com/NousResearch/hermes-agent/tree/main/skills", "Built-in skills"),
-    "dylanneve1/talon": (79, "https://github.com/dylanneve1/talon#readme", "Multi-platform setup"),
+    "thefalconry/talon": (79, "https://github.com/thefalconry/talon#readme", "Multi-platform setup"),
+    "razzant/ouroboros": (1576, "https://ouroboros-agent.ai/benchmarks/", "Benchmarks"),
     "openinterpreter/openinterpreter": (68604, "https://github.com/openinterpreter/openinterpreter#readme", "Quick start"),
     "FoundationAgents/MetaGPT": (70908, "https://github.com/FoundationAgents/MetaGPT/blob/main/examples/build_customized_agent.py", "Build a customized agent"),
     "OpenBMB/ChatDev": (34546, "https://github.com/OpenBMB/ChatDev#readme", "Company simulation quickstart"),
@@ -795,6 +876,16 @@ META: dict[str, tuple[int, str, str]] = {
     "THUDM/AgentRL": (360, "https://github.com/THUDM/AgentRL/blob/main/examples/training/async_trainer.py", "Async GRPO trainer"),
     "aden-hive/hive": (11108, "https://github.com/aden-hive/hive#readme", "Project README"),
     "omnigent-ai/omnigent": (10874, "https://github.com/omnigent-ai/omnigent#readme", "Project README"),
+    "777genius/agent-teams-ai": (2297, "https://agentteams.live/", "Product tour"),
+    "open-multi-agent/open-multi-agent": (7018, "https://open-multi-agent.com/getting-started/quick-start/", "Quick start"),
+    "Orkas-AI/Orkas": (2155, "https://github.com/Orkas-AI/Orkas#readme", "Project README"),
+    "plasma-ai/fractal": (787, "https://docs.plasma.ai/fractal/guide/getting-started.html", "Getting started"),
+    "razzant/claudexor": (518, "https://github.com/razzant/claudexor#quickstart", "Quickstart"),
+    "scgopi/GraphCode": (145, "https://graphcode.app/#loops", "Loop types"),
+    "HarnessRouter/harnessrouter": (3263, "https://harnessrouter.ai/benchmarks", "Same-task benchmark"),
+    "desplega-ai/agent-swarm": (931, "https://github.com/desplega-ai/agent-swarm#readme", "Project README"),
+    "aai-labs/agent-barn": (110, "https://agentbarn.dev", "Product site"),
+    "EverMind-AI/Raven": (5738, "https://evermind-ai.github.io/Raven/", "Documentation"),
     # plugins-mcp-cli
     "Aider-AI/aider": (49614, "https://github.com/Aider-AI/aider/blob/main/aider/repomap.py", "Repo map source"),
     "RyanAlberts/agentlog": (1, "https://github.com/RyanAlberts/agentlog/blob/main/example-log/decisions.jsonl", "Sample decisions.jsonl"),
@@ -838,6 +929,7 @@ META: dict[str, tuple[int, str, str]] = {
     "bytedance/deer-flow": (84071, "https://github.com/bytedance/deer-flow#readme", "Project README"),
     "MiroMindAI/MiroThinker": (8420, "https://github.com/MiroMindAI/MiroThinker#readme", "Project README"),
     "aiming-lab/AutoResearchClaw": (14701, "https://github.com/aiming-lab/AutoResearchClaw#readme", "Project README"),
+    "socai-io/jev-social": (176, "https://github.com/socai-io/jev-social/blob/main/docs/example-report.md", "Example report"),
     # libraries-sdks
     "langchain-ai/deepagents": (30390, "https://github.com/langchain-ai/deepagents/tree/main/examples/deep_research", "Deep research agent"),
     "pydantic/pydantic-ai": (20709, "https://github.com/pydantic/pydantic-ai/blob/main/examples/pydantic_ai_examples/bank_support.py", "Bank support agent"),
@@ -859,6 +951,7 @@ META: dict[str, tuple[int, str, str]] = {
     "topoteretes/cognee": (32478, "https://github.com/topoteretes/cognee#readme", "Quickstart"),
     "getzep/graphiti": (31970, "https://github.com/getzep/graphiti#readme", "Temporal graph quickstart"),
     "gastownhall/beads": (27986, "https://github.com/gastownhall/beads#readme", "Project README"),
+    "vshulcz/deja-vu": (1293, "https://github.com/vshulcz/deja-vu#readme", "Project README"),
     # observability
     "langfuse/langfuse": (35996, "https://langfuse.com/docs", "Docs"),
     "mlflow/mlflow": (28439, "https://mlflow.org", "Docs"),
@@ -997,18 +1090,16 @@ RADAR: "list[dict]" = [
     {"id": "EvoMap/evolver", "via": "weekly discovery"},
     {"id": "crestalnetwork/intentkit", "via": "weekly discovery"},
     {"id": "agentscope-ai/agentscope-java", "via": "weekly discovery"},
-    {"id": "open-multi-agent/open-multi-agent", "via": "weekly discovery"},
     {"id": "Fosowl/agenticSeek", "via": "weekly discovery"},
     {"id": "Mirix-AI/MIRIX", "via": "weekly discovery"},
     {"id": "cloudflare/vibesdk", "via": "weekly discovery"},
     {"id": "algorithmicsuperintelligence/openevolve", "via": "weekly discovery"},
     # Added 2026-09-07 biweekly curation pass.
     {"id": "google-antigravity/antigravity-sdk-python", "via": "weekly discovery"},
-    # 2026-09-09 maintainer decision: radar, not ranked. 217k stars in 27 days
-    # on 930 watchers with issues disabled, and its dsh/cordis topic cluster
-    # spans 7 other high-star candidates. Re-check star velocity on 2026-10-07
-    # before promoting it or moving it to INTEGRITY_FLAGGED.
-    {"id": "deepseek-ai/deepseek-harness", "via": "weekly discovery"},
+    # 2026-10-23 pass: Z.ai's official source drop has 8.2k stars but 6
+    # commits (a squashed mirror) and issues disabled; rank it once its public
+    # history clears the 10-commit bar.
+    {"id": "zai-org/ZCode", "via": "weekly discovery"},
     # Community submissions below the ranked-table bar (2026-09-09 triage).
     {"id": "rxdt/loopgate_harness", "via": "community · PR #69", "stars": 21,
      "desc": "Run any CLI agent in a loop against specs: fresh context each iteration, the repo as durable memory, lint/types/tests/security enforced by git hooks so bad changes never land."},
@@ -1026,8 +1117,45 @@ RADAR: "list[dict]" = [
      "desc": "MCP tool search for large catalogs: 1,000 tools behind 2 schemas, exact-schema calls, allow/deny controls."},
     {"id": "S1LV3RJ1NX/mcp-guardian", "via": "community · issue #46", "stars": 0,
      "desc": "MCP proxy for tool scoping and context compression: progressive discovery with 3 meta-tools."},
-    {"id": "AmariahAK/atlarix-releases", "via": "community · issue #48", "stars": 8,
-     "desc": "Atlarix: open-weight frontier harness, release repository."},
+    # Community submissions below the ranked-table bar (2026-10-23 triage).
+    # Reef clears the star and commit bar but has no weekly star history to
+    # check velocity, 545 watchers (7% of stars, against 0.4-0.9% for
+    # comparable repos), and 469 PyPI downloads a month; re-check before
+    # ranking. PlaceCall has 105 stars, but the repo is plugin manifests and
+    # a skill over a closed hosted MCP server.
+    {"id": "Human-Agent-Society/reef", "via": "community · PR #125", "stars": 7752,
+     "desc": "Infrastructure for continually self-improving agents: records live traffic and feedback, then ships a scored update to model weights or the harness."},
+    {"id": "5dive-ai/5dive", "via": "community · issue #129", "stars": 73,
+     "desc": "Run a company of agents on a server you own: each agent is an official CLI (Claude Code, Codex, Pi) as a systemd service, sharing one task queue."},
+    {"id": "yylo-dev/yylo-benchmark", "via": "community · issue #117", "stars": 2,
+     "desc": "Longitudinal benchmark for coding-agent runs: sandboxed fresh-repo attempts, deterministic and blinded LLM judging, hash-bound evidence."},
+    {"id": "JakeSelby/model-citizen", "via": "community · issue #119", "stars": 24,
+     "desc": "Control plane for Claude Code and Codex: one checkout of rules, skills, and roles projected into each runtime, with hook guardrails and cost records."},
+    {"id": "mnemoverse/mcp-memory-server", "via": "community · issue #120", "stars": 27,
+     "desc": "MCP memory server backed by a hosted engine: recall that re-ranks on helped or misled feedback, plus shared rooms for multi-agent work."},
+    {"id": "rusharlabs/house-party-protocol", "via": "community · issue #124", "stars": 5,
+     "desc": "Evidence and approval contracts around Claude Code and Codex CLI: done is a recorded exit code, and a verdict from the builder's own lane is refused."},
+    {"id": "demeyer1/Autobot", "via": "community · issue #126", "stars": 23,
+     "desc": "AGENTS.md operating contract, on-disk memory, and an independent completion validator for ChatGPT and Codex local projects on a Mac."},
+    {"id": "ITW-Creative-Works/workkit", "via": "community · issue #136", "stars": 4,
+     "desc": "Claude Code plugin that runs work through GitHub Issues: an accepted spec gates each build, a blind verifier reviews, and hooks enforce the test gate."},
+    {"id": "masakaai/jet-browser", "via": "community · issue #137", "stars": 2,
+     "desc": "Portable WPE WebKit browser runtime for agents: one isolated process driven by ordered JSONL or MCP commands, with native input and screenshots."},
+    {"id": "jaroslavsoucek-art/Giovanni", "via": "community · issue #139", "stars": 2,
+     "desc": "Claude Code plugin for a daily digest loop: parallel source pulls by subagents, drift checks against a constitution in git, and lint limits on memory."},
+    {"id": "semitexa/laravel-ai-verify", "via": "community · issue #140", "stars": 3,
+     "desc": "Verification gate for coding agents on Laravel 12/13: runs only the checks a diff needs, fails weakened tests, and blocks Claude Code from stopping early."},
+    {"id": "voygr-tech/placecall", "via": "community · issue #143", "stars": 105,
+     "desc": "Skill and plugins that give Claude Code, Codex, Cursor, and Gemini CLI a hosted MCP server for phone calls to US businesses."},
+    {"id": "reefbarman/agentlink", "via": "community · issue #145", "stars": 2,
+     "desc": "Coding-agent harness inside VS Code: editor code intelligence as tools, reviewable diffs, an approval policy, sandboxed commands, resumable sessions."},
+    {"id": "wippa-studios/wippaAGENT", "via": "community · PR #147", "stars": 1,
+     "desc": "Install-once OpenCode config: one orchestrator with edit and shell denied delegates to 12 specialist subagents behind audit and review gates."},
+    {"id": "denggui-ai/minimal-harness", "via": "community · issue #115", "stars": 0,
+     "desc": "Dependency-free acceptance and handoff kernel for coding agents: runs configured checks and fails closed when Git or contract evidence goes stale."},
+    # Description updated 2026-10-23 at the maintainer's request (issue #116).
+    {"id": "AmariahAK/atlarix-releases", "via": "community · issue #48", "stars": 9,
+     "desc": "Atlarix: proprietary desktop agent workstation; hunk-by-hunk diff approval, per-OS sandboxed shell, lexical retrieval, any model. Release repo only."},
 ]
 
 
@@ -1134,6 +1262,13 @@ AXES: "dict[str, tuple[str, str]]" = {
     "1jehuang/jcode": ("n/a", "n/a"),
     "NanmiCoder/cc-haha": ("n/a", "n/a"),
     "yylo-dev/yylo": ("n/a", "n/a"),  # orchestrates Pi/Codex loops; doesn't own one
+    "deepseek-ai/deepseek-harness": ("bounded", "resumable"),
+    "xai-org/grok-build": ("bounded", "resumable"),
+    "codewhale-hq/Codewhale": ("bounded", "resumable"),
+    "proxysoul/Empryo": ("bounded", "resumable"),
+    "huiliyi37/Tianshu-harness": ("bounded", "resumable"),
+    "orbi-build/orbi": ("n/a", "n/a"),  # orchestrates Pi sessions; doesn't own the loop
+    "bigfish1913/pi-rust": ("bounded", "durable"),
     # coding-harness-configs
     "looptroop-ai/LoopTroop": ("bounded", "retry"),
     "obra/superpowers": ("n/a", "n/a"),
@@ -1153,6 +1288,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "RyanAlberts/pmstack": ("n/a", "n/a"),
     "OthmanAdi/planning-with-files": ("n/a", "n/a"),
     "stanford-iris-lab/meta-harness": ("n/a", "n/a"),
+    "Q00/ouroboros": ("headless", "durable"),
     # frameworks
     "n8n-io/n8n": ("headless", "durable"),
     "Significant-Gravitas/AutoGPT": ("headless", "resumable"),
@@ -1183,7 +1319,8 @@ AXES: "dict[str, tuple[str, str]]" = {
     "yc-software/qm": ("headless", "durable"),
     "open-jarvis/OpenJarvis": ("headless", "none"),
     "NousResearch/hermes-agent": ("headless", "resumable"),
-    "dylanneve1/talon": ("headless", "resumable"),
+    "thefalconry/talon": ("headless", "resumable"),
+    "razzant/ouroboros": ("headless", "resumable"),
     "openinterpreter/openinterpreter": ("bounded", "resumable"),
     "FoundationAgents/MetaGPT": ("headless", "resumable"),
     "OpenBMB/ChatDev": ("headless", "none"),
@@ -1205,6 +1342,19 @@ AXES: "dict[str, tuple[str, str]]" = {
     "THUDM/AgentRL": ("headless", "resumable"),
     "aden-hive/hive": ("bounded", "resumable"),
     "omnigent-ai/omnigent": ("n/a", "n/a"),
+    # layers over other agents' loops (no loop of their own): n/a, like omnigent
+    "777genius/agent-teams-ai": ("n/a", "n/a"),
+    "plasma-ai/fractal": ("n/a", "n/a"),
+    "razzant/claudexor": ("n/a", "n/a"),
+    "scgopi/GraphCode": ("n/a", "n/a"),
+    "HarnessRouter/harnessrouter": ("n/a", "n/a"),
+    "desplega-ai/agent-swarm": ("n/a", "n/a"),
+    "aai-labs/agent-barn": ("n/a", "n/a"),
+    "open-multi-agent/open-multi-agent": ("checkpoint-gated", "durable"),
+    "Orkas-AI/Orkas": ("bounded", "resumable"),
+    # README documents unattended Raven-Oncall runs but no resume after a
+    # restart; re-score if the maintainers point at a doc.
+    "EverMind-AI/Raven": ("headless", "none"),
     # plugins-mcp-cli
     "thedotmack/claude-mem": ("n/a", "n/a"),
     "Aider-AI/aider": ("checkpoint-gated", "resumable"),
@@ -1248,6 +1398,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "bytedance/deer-flow": ("headless", "resumable"),
     "MiroMindAI/MiroThinker": ("headless", "retry"),
     "aiming-lab/AutoResearchClaw": ("n/a", "n/a"),
+    "socai-io/jev-social": ("bounded", "resumable"),
     # libraries-sdks
     "daytonaio/daytona": ("n/a", "n/a"),
     "kubernetes-sigs/agent-sandbox": ("n/a", "n/a"),
@@ -1269,6 +1420,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "topoteretes/cognee": ("n/a", "n/a"),
     "getzep/graphiti": ("n/a", "n/a"),
     "gastownhall/beads": ("n/a", "n/a"),
+    "vshulcz/deja-vu": ("n/a", "n/a"),
     # observability (tracing/eval-ops infra — no agent loop of their own)
     "langfuse/langfuse": ("n/a", "n/a"),
     "mlflow/mlflow": ("n/a", "n/a"),
@@ -1922,6 +2074,7 @@ def generate_readme() -> str:
         "- [**Anthropic – Effective harnesses for long-running agents**](https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents): Session bridging, feature lists, incremental progress, testing",
         "- [**Aakash Gupta (Medium) – 2026 is agent harnesses**](https://aakashgupta.medium.com/2025-was-agents-2026-is-agent-harnesses-heres-why-that-changes-everything-073e9877655e): Harness as moat, minimal intervention, progressive disclosure",
         "- [**YC Paper Club (video) – Why the harness matters more than the model**](https://www.youtube.com/watch?v=n9xKblqyQ28): September 2026 session with the authors of Prime Agent, OpenJarvis, and QM; the history of harnesses runs from 7:00 to 17:00",
+        "- [**learn-agent-architecture**](https://github.com/hardness1020/learn-agent-architecture): Section-by-section teardown of how Claude Code and Hermes Agent structure the agent loop, tools, permissions, context, and memory, with a small runnable Python demo per mechanism",
         "- [**LangChain**](https://python.langchain.com/), [**Anthropic**](https://docs.anthropic.com/), [**OpenAI**](https://platform.openai.com/docs): Official docs for major agent platforms",
         "",
         "## 🧡 Thank you, contributors",

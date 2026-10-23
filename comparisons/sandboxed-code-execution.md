@@ -45,6 +45,7 @@ The wider field includes closed products, and in this category they matter. Isol
 | [Modal](https://modal.com) | Hosted API | gVisor | The pick when the sandbox side needs GPUs; E2B's [most-compared rival](https://northflank.com/blog/e2b-vs-modal) |
 | [Daytona](https://github.com/daytonaio/daytona) | Hosted | Containers, optional stronger runtimes | Fastest measured cold starts; ⚠️ public repo unmaintained since June 2026 (below) |
 | [Vercel Sandbox](https://vercel.com/docs/vercel-sandbox) | Hosted | Firecracker microVMs | Bills active CPU time rather than sandbox lifetime |
+| [Runtime](https://withruntime.com/docs/pricing) | Hosted API | Firecracker microVMs | Bills active CPU ($0.025 per vCPU-hour) plus memory, with no plan fee; idle sandboxes pause with memory kept, and E2B SDK code runs after [one import change](https://withruntime.com/docs/e2b-alternative) (checked 2026-10-23) |
 | [Cloudflare Sandboxes](https://developers.cloudflare.com/sandbox) | Hosted (edge) | Containers | Sandboxes next to Workers, for edge-shaped apps |
 | [AWS Bedrock AgentCore](https://aws.amazon.com/bedrock/agentcore/) | Managed, your AWS account | Managed sandbox | The enterprise-AWS answer, code interpreter included |
 | [GKE Agent Sandbox](https://cloud.google.com/blog/products/containers-kubernetes/agentic-ai-on-kubernetes-and-gke/) | Your GKE cluster | gVisor | GA May 2026; Google's launch claims 300 sandbox starts per second |
@@ -65,7 +66,7 @@ Newer hosted entrants (Blaxel, Runloop, Morph, Beam) compete mostly on idle pric
 - **You're a platform team and the code must stay on your infrastructure** → **Agent Sandbox** on any Kubernetes, **GKE Agent Sandbox** on Google, or **AgentCore** on AWS.
 - **You want to run Claude Code or Codex unsupervised on your own machine** → **Docker Sandboxes**, or **microsandbox** if you want it open source.
 - **You were evaluating Daytona** → read the [repo banner](https://github.com/daytonaio/daytona#readme) first. Core development moved to a private codebase in June 2026 and the public repo gets no further updates. The 72k stars measure what it was. Choose it today only as the hosted product, or fork v0.190.0 and accept AGPL plus sole maintenance.
-- **Watch the bill shape**, not just the price: E2B and Daytona bill the full time a sandbox is alive; Vercel bills active CPU only. An agent that thinks for minutes between commands pays very differently on each.
+- **Watch the bill shape**, not just the price: E2B and Daytona bill the full time a sandbox is alive; Vercel bills active CPU only, and Runtime bills active CPU plus memory. An agent that thinks for minutes between commands pays very differently on each.
 
 ---
 

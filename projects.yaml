@@ -173,6 +173,34 @@ projects:
     github_id: yylo-dev/yylo
     labels: ["javascript"]
     category: "coding-agent-products"
+  - name: DeepSeek Harness
+    github_id: deepseek-ai/deepseek-harness
+    labels: ["javascript"]
+    category: "coding-agent-products"
+  - name: Grok Build
+    github_id: xai-org/grok-build
+    labels: ["rust"]
+    category: "coding-agent-products"
+  - name: Codewhale
+    github_id: codewhale-hq/Codewhale
+    labels: ["rust"]
+    category: "coding-agent-products"
+  - name: Empryo
+    github_id: proxysoul/Empryo
+    labels: ["javascript"]
+    category: "coding-agent-products"
+  - name: Tianshu Harness
+    github_id: huiliyi37/Tianshu-harness
+    labels: ["javascript"]
+    category: "coding-agent-products"
+  - name: Orbi
+    github_id: orbi-build/orbi
+    labels: ["python"]
+    category: "coding-agent-products"
+  - name: rpi
+    github_id: bigfish1913/pi-rust
+    labels: ["rust"]
+    category: "coding-agent-products"
   # Coding harness configs and SDKs
   - name: LoopTroop
     github_id: looptroop-ai/LoopTroop
@@ -231,6 +259,10 @@ projects:
   - name: Meta-Harness
     github_id: stanford-iris-lab/meta-harness
     category: "coding-harness-configs"
+  - name: Ouroboros (Q00)
+    github_id: Q00/ouroboros
+    labels: ["python"]
+    category: "coding-harness-configs"
   # Personal agent runtimes
   - name: QM
     github_id: yc-software/qm
@@ -241,7 +273,7 @@ projects:
     labels: ["python"]
     category: "personal-agent-runtimes"
   - name: Talon
-    github_id: dylanneve1/talon
+    github_id: thefalconry/talon
     labels: ["javascript"]
     category: "personal-agent-runtimes"
   - name: OpenClaw
@@ -282,6 +314,10 @@ projects:
   - name: AnythingLLM
     github_id: Mintplex-Labs/anything-llm
     labels: ["javascript"]
+    category: "personal-agent-runtimes"
+  - name: Ouroboros (razzant)
+    github_id: razzant/ouroboros
+    labels: ["python"]
     category: "personal-agent-runtimes"
   # Frameworks
   - name: langgraph
@@ -433,6 +469,45 @@ projects:
     github_id: omnigent-ai/omnigent
     labels: ["python"]
     category: "multi-agent"
+  - name: Agent Teams AI
+    github_id: 777genius/agent-teams-ai
+    labels: ["javascript"]
+    category: "multi-agent"
+  - name: Open Multi-Agent
+    github_id: open-multi-agent/open-multi-agent
+    labels: ["javascript"]
+    category: "multi-agent"
+  - name: Orkas
+    github_id: Orkas-AI/Orkas
+    labels: ["javascript"]
+    category: "multi-agent"
+  - name: fractal
+    github_id: plasma-ai/fractal
+    labels: ["python"]
+    category: "multi-agent"
+  - name: Claudexor
+    github_id: razzant/claudexor
+    labels: ["javascript"]
+    category: "multi-agent"
+  - name: GraphCode
+    github_id: scgopi/GraphCode
+    category: "multi-agent"
+  - name: HarnessRouter
+    github_id: HarnessRouter/harnessrouter
+    labels: ["python"]
+    category: "multi-agent"
+  - name: Desplega Agent Swarm
+    github_id: desplega-ai/agent-swarm
+    labels: ["javascript"]
+    category: "multi-agent"
+  - name: Agent Barn
+    github_id: aai-labs/agent-barn
+    labels: ["python"]
+    category: "multi-agent"
+  - name: Raven
+    github_id: EverMind-AI/Raven
+    labels: ["python"]
+    category: "multi-agent"
   # Plugins, MCPs, CLI tools
   - name: aider
     github_id: Aider-AI/aider
@@ -523,6 +598,9 @@ projects:
     category: "memory"
   - name: beads
     github_id: gastownhall/beads
+    category: "memory"
+  - name: deja
+    github_id: vshulcz/deja-vu
     category: "memory"
   # Evaluation and benchmarking harnesses
   - name: agent-qa
@@ -630,6 +708,10 @@ projects:
     category: "research-task"
   - name: AutoResearchClaw
     github_id: aiming-lab/AutoResearchClaw
+    category: "research-task"
+  - name: Jev Social
+    github_id: socai-io/jev-social
+    labels: ["javascript"]
     category: "research-task"
   # Libraries and SDKs
   - name: deepagents
