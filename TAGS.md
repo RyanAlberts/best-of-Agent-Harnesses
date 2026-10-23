@@ -1,13 +1,13 @@
 <!-- markdownlint-disable -->
 # Tags — cross-reference
 
-_Auto-generated from `scripts/generate.py`. 166 projects across 22 canonical tags. Edit projects in `generate.py` (not here) and rerun the script._
+_Auto-generated from `scripts/generate.py`. 167 projects across 22 canonical tags. Edit projects in `generate.py` (not here) and rerun the script._
 
 Tag chips appear next to each project in [README.md](README.md). This page lists every tag once with the projects that carry it, grouped by category and sorted by GitHub stars within each category.
 
 ## All tags
 
-[`mcp`](#mcp) (33) · [`memory`](#memory) (38) · [`multi-agent`](#multi-agent) (29) · [`evals`](#evals) (22) · [`voice`](#voice) (2) · [`vision`](#vision) (4) · [`browser`](#browser) (9) · [`sandbox`](#sandbox) (28) · [`low-code`](#low-code) (4) · [`rag`](#rag) (9) · [`tool-discovery`](#tool-discovery) (5) · [`training`](#training) (5) · [`workflow`](#workflow) (10) · [`typed`](#typed) (3) · [`local`](#local) (7) · [`provider-agnostic`](#provider-agnostic) (11) · [`cli`](#cli) (23) · [`ide`](#ide) (13) · [`tui`](#tui) (4) · [`rust`](#rust) (5) · [`python`](#python) (81) · [`typescript`](#typescript) (45)
+[`mcp`](#mcp) (34) · [`memory`](#memory) (39) · [`multi-agent`](#multi-agent) (30) · [`evals`](#evals) (22) · [`voice`](#voice) (2) · [`vision`](#vision) (4) · [`browser`](#browser) (9) · [`sandbox`](#sandbox) (28) · [`low-code`](#low-code) (4) · [`rag`](#rag) (9) · [`tool-discovery`](#tool-discovery) (5) · [`training`](#training) (5) · [`workflow`](#workflow) (10) · [`typed`](#typed) (3) · [`local`](#local) (7) · [`provider-agnostic`](#provider-agnostic) (11) · [`cli`](#cli) (23) · [`ide`](#ide) (13) · [`tui`](#tui) (4) · [`rust`](#rust) (5) · [`python`](#python) (81) · [`typescript`](#typescript) (46)
 
 ---
 
@@ -32,6 +32,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 **Coding harness configs and SDKs**
 
 - [Claude Agent SDK](https://github.com/anthropics/claude-agent-sdk-python) — ⭐8.3k — Official Anthropic SDK (Python + [TypeScript](https://github.com/anthropics/claude-agent-sdk-typescript), [demos](https://github.com/anthropics/claude-agent-sdk-demos), [quickstarts](https://github.com/anthropics/claude-quickstarts)): built-in tools, MCP, long-running coding agents with session bridging.
+- [wippaAGENT](https://github.com/wippa-studios/wippaAGENT) — ⭐1 — Install-once OpenCode fleet config: one primary orchestrator (edit and shell denied by design) plans and delegates to twelve specialist subagents across ten categories, and nothing is reported done before an audit pass, a reviewer-approved diff, and a bounded verify tool returning a real zero exit code. The **harness** contribution is the delegation topology with mandatory audit/review gates, the persistent plan ledger (survives the session), and the bounded `wippa_verify` tool; OpenCode itself provides the agent loop and shell, with three MCP servers pre-wired around it.
 
 **Personal agent runtimes**
 
@@ -94,6 +95,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [SWE-agent](https://github.com/SWE-agent/SWE-agent) — ⭐20.6k — LM-driven harness built for SWE-bench: edit state, command execution, and issue-focused loop—the reference agent stack next to the benchmark itself.
 - [Claude Agent SDK](https://github.com/anthropics/claude-agent-sdk-python) — ⭐8.3k — Official Anthropic SDK (Python + [TypeScript](https://github.com/anthropics/claude-agent-sdk-typescript), [demos](https://github.com/anthropics/claude-agent-sdk-demos), [quickstarts](https://github.com/anthropics/claude-quickstarts)): built-in tools, MCP, long-running coding agents with session bridging.
 - [AutoHarness](https://github.com/aiming-lab/AutoHarness) — ⭐452 — Lightweight governance harness: wraps any LLM client in ~2 lines for automated harness engineering—6–14 step pipeline, YAML constitution, risk-pattern matching, session persistence with cost tracking, multi-agent profiles.
+- [wippaAGENT](https://github.com/wippa-studios/wippaAGENT) — ⭐1 — Install-once OpenCode fleet config: one primary orchestrator (edit and shell denied by design) plans and delegates to twelve specialist subagents across ten categories, and nothing is reported done before an audit pass, a reviewer-approved diff, and a bounded verify tool returning a real zero exit code. The **harness** contribution is the delegation topology with mandatory audit/review gates, the persistent plan ledger (survives the session), and the bounded `wippa_verify` tool; OpenCode itself provides the agent loop and shell, with three MCP servers pre-wired around it.
 
 **Personal agent runtimes**
 
@@ -158,6 +160,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 - [wshobson/agents](https://github.com/wshobson/agents) — ⭐41k — Cross-harness marketplace of drop-in subagents and skills for Claude Code, Codex CLI, Cursor, OpenCode, and Copilot; specialized, production-ready agent definitions you install rather than hand-write.
 - [AutoHarness](https://github.com/aiming-lab/AutoHarness) — ⭐452 — Lightweight governance harness: wraps any LLM client in ~2 lines for automated harness engineering—6–14 step pipeline, YAML constitution, risk-pattern matching, session persistence with cost tracking, multi-agent profiles.
+- [wippaAGENT](https://github.com/wippa-studios/wippaAGENT) — ⭐1 — Install-once OpenCode fleet config: one primary orchestrator (edit and shell denied by design) plans and delegates to twelve specialist subagents across ten categories, and nothing is reported done before an audit pass, a reviewer-approved diff, and a bounded verify tool returning a real zero exit code. The **harness** contribution is the delegation topology with mandatory audit/review gates, the persistent plan ledger (survives the session), and the bounded `wippa_verify` tool; OpenCode itself provides the agent loop and shell, with three MCP servers pre-wired around it.
 
 **Personal agent runtimes**
 
@@ -773,6 +776,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [GStack](https://github.com/garrytan/gstack) — ⭐137k — Garry Tan's Claude Code skill stack: 23 slash-command modes (CEO/eng/design review, QA, ship, browse, retro, …) that structure one assistant as a virtual engineering team. Daily driver while running YC.
 - [Claude Agent SDK](https://github.com/anthropics/claude-agent-sdk-python) — ⭐8.3k — Official Anthropic SDK (Python + [TypeScript](https://github.com/anthropics/claude-agent-sdk-typescript), [demos](https://github.com/anthropics/claude-agent-sdk-demos), [quickstarts](https://github.com/anthropics/claude-quickstarts)): built-in tools, MCP, long-running coding agents with session bridging.
 - [LoopTroop](https://github.com/looptroop-ai/LoopTroop) — ⭐163 — Config layer that chains LLM councils for planning, Ralph loops for iterative refinement, and OpenCode worktrees for shipping. The **harness** contribution is the council → loop → worktree pipeline; OpenCode underneath executes.
+- [wippaAGENT](https://github.com/wippa-studios/wippaAGENT) — ⭐1 — Install-once OpenCode fleet config: one primary orchestrator (edit and shell denied by design) plans and delegates to twelve specialist subagents across ten categories, and nothing is reported done before an audit pass, a reviewer-approved diff, and a bounded verify tool returning a real zero exit code. The **harness** contribution is the delegation topology with mandatory audit/review gates, the persistent plan ledger (survives the session), and the bounded `wippa_verify` tool; OpenCode itself provides the agent loop and shell, with three MCP servers pre-wired around it.
 
 **Personal agent runtimes**
 
@@ -970,6 +974,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [GStack](https://github.com/garrytan/gstack) — ⭐137k — Garry Tan's Claude Code skill stack: 23 slash-command modes (CEO/eng/design review, QA, ship, browse, retro, …) that structure one assistant as a virtual engineering team. Daily driver while running YC.
 - [Claude Agent SDK](https://github.com/anthropics/claude-agent-sdk-python) — ⭐8.3k — Official Anthropic SDK (Python + [TypeScript](https://github.com/anthropics/claude-agent-sdk-typescript), [demos](https://github.com/anthropics/claude-agent-sdk-demos), [quickstarts](https://github.com/anthropics/claude-quickstarts)): built-in tools, MCP, long-running coding agents with session bridging.
 - [LoopTroop](https://github.com/looptroop-ai/LoopTroop) — ⭐163 — Config layer that chains LLM councils for planning, Ralph loops for iterative refinement, and OpenCode worktrees for shipping. The **harness** contribution is the council → loop → worktree pipeline; OpenCode underneath executes.
+- [wippaAGENT](https://github.com/wippa-studios/wippaAGENT) — ⭐1 — Install-once OpenCode fleet config: one primary orchestrator (edit and shell denied by design) plans and delegates to twelve specialist subagents across ten categories, and nothing is reported done before an audit pass, a reviewer-approved diff, and a bounded verify tool returning a real zero exit code. The **harness** contribution is the delegation topology with mandatory audit/review gates, the persistent plan ledger (survives the session), and the bounded `wippa_verify` tool; OpenCode itself provides the agent loop and shell, with three MCP servers pre-wired around it.
 
 **Personal agent runtimes**
 

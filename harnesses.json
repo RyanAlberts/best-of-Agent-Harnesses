@@ -9,7 +9,7 @@
     "feed_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/feed.json",
     "license": "CC-BY-SA-4.0",
     "stars_captured": "2026-10-18",
-    "project_count": 166,
+    "project_count": 167,
     "graveyard_count": 4,
     "tiers": [
       "super simple",
@@ -376,7 +376,7 @@
     {
       "kind": "derived",
       "q": "How many of these agent harnesses are open source?",
-      "a": "123 of 166 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
+      "a": "124 of 167 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
       "slug": "how-many-of-these-agent-harnesses-are-open-source"
     },
     {
@@ -423,7 +423,7 @@
     {
       "slug": "best-ai-agent-harnesses-2026",
       "title": "The best AI agent harnesses in 2026, ranked by category",
-      "summary": "These are the top three agent harnesses in each of the 12 categories of best-of-Agent-Harnesses, a hand-curated list of 166 harnesses re-ranked from live GitHub data every week; the stars below were captured 2026-10-18, and the page regenerates with every refresh.",
+      "summary": "These are the top three agent harnesses in each of the 12 categories of best-of-Agent-Harnesses, a hand-curated list of 167 harnesses re-ranked from live GitHub data every week; the stars below were captured 2026-10-18, and the page regenerates with every refresh.",
       "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/comparisons/best-ai-agent-harnesses-2026.md",
       "raw_url": "https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/comparisons/best-ai-agent-harnesses-2026.md"
     },
@@ -3910,6 +3910,38 @@
           "evidence": "https://github.com/RyanAlberts/pmstack#readme"
         }
       },
+      "archived": null
+    },
+    {
+      "name": "wippaAGENT",
+      "github_id": "wippa-studios/wippaAGENT",
+      "url": "https://github.com/wippa-studios/wippaAGENT",
+      "slug": "wippaagent",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#wippaagent",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/wippaagent/",
+      "description": "Install-once OpenCode fleet config: one primary orchestrator (edit and shell denied by design) plans and delegates to twelve specialist subagents across ten categories, and nothing is reported done before an audit pass, a reviewer-approved diff, and a bounded verify tool returning a real zero exit code. The **harness** contribution is the delegation topology with mandatory audit/review gates, the persistent plan ledger (survives the session), and the bounded `wippa_verify` tool; OpenCode itself provides the agent loop and shell, with three MCP servers pre-wired around it.",
+      "category": "coding-harness-configs",
+      "category_title": "Coding harness configs and SDKs",
+      "stars": 1,
+      "tier": "mostly simple",
+      "tier_rank": 2,
+      "axis": "mostly simple (install-once config over OpenCode)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "open-source",
+      "tags": [
+        "mcp",
+        "memory",
+        "multi-agent",
+        "typescript"
+      ],
+      "example": {
+        "label": "Architecture and trust model",
+        "url": "https://github.com/wippa-studios/wippaAGENT#architecture"
+      },
+      "deep_dive": null,
       "archived": null
     },
     {

@@ -254,6 +254,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("LoopTroop", "looptroop-ai/LoopTroop",
                 "Config layer that chains LLM councils for planning, Ralph loops for iterative refinement, and OpenCode worktrees for shipping. The **harness** contribution is the council → loop → worktree pipeline; OpenCode underneath executes.",
                 "mostly simple (config pipeline over OpenCode)", labels=["javascript"]),
+        Project("wippaAGENT", "wippa-studios/wippaAGENT",
+                "Install-once OpenCode fleet config: one primary orchestrator (edit and shell denied by design) plans and delegates to twelve specialist subagents across ten categories, and nothing is reported done before an audit pass, a reviewer-approved diff, and a bounded verify tool returning a real zero exit code. The **harness** contribution is the delegation topology with mandatory audit/review gates, the persistent plan ledger (survives the session), and the bounded `wippa_verify` tool; OpenCode itself provides the agent loop and shell, with three MCP servers pre-wired around it.",
+                "mostly simple (install-once config over OpenCode)", labels=["javascript"]),
         Project("get-shit-done", "open-gsd/gsd-core",
                 "Goal-backward planning and wave-based execution over fresh context windows; avoids context rot by design. Python/JS meta-prompting for Claude Code, OpenCode, Gemini CLI.",
                 "mostly simple (meta-prompting, you own stack)"),
@@ -726,6 +729,7 @@ META: dict[str, tuple[int, str, str]] = {
     "yylo-dev/yylo": (64, "https://github.com/yylo-dev/yylo#readme", "Project README"),
     # coding-harness-configs
     "looptroop-ai/LoopTroop": (163, "https://github.com/looptroop-ai/LoopTroop#readme", "Council → loop → worktree pipeline"),
+    "wippa-studios/wippaAGENT": (1, "https://github.com/wippa-studios/wippaAGENT#architecture", "Architecture and trust model"),
     "open-gsd/gsd-core": (10649, "https://github.com/open-gsd/gsd-core/blob/next/commands/gsd/ship.md", "gsd:ship command"),
     "garrytan/gstack": (136831, "https://github.com/garrytan/gstack/blob/main/ship/SKILL.md", "/ship SKILL.md"),
     "affaan-m/ECC": (283086, "https://github.com/affaan-m/ECC/blob/main/skills/autonomous-agent-harness/SKILL.md", "autonomous-agent-harness skill"),
@@ -1136,6 +1140,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "yylo-dev/yylo": ("n/a", "n/a"),  # orchestrates Pi/Codex loops; doesn't own one
     # coding-harness-configs
     "looptroop-ai/LoopTroop": ("bounded", "retry"),
+    "wippa-studios/wippaAGENT": ("bounded", "resumable"),
     "obra/superpowers": ("n/a", "n/a"),
     "affaan-m/ECC": ("n/a", "n/a"),
     "anthropics/skills": ("n/a", "n/a"),

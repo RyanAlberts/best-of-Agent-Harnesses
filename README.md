@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-    <a href="#contents" title="Project Count"><img src="https://img.shields.io/badge/projects-166-blue.svg?color=5ac4bf"></a>
+    <a href="#contents" title="Project Count"><img src="https://img.shields.io/badge/projects-167-blue.svg?color=5ac4bf"></a>
     <a href="#skills" title="Installable agent skills"><img src="https://img.shields.io/badge/skills-10-5ac4bf.svg"></a>
     <a href="#for-agents" title="Agents can query this list — MCP server, llms.txt & JSON"><img src="https://img.shields.io/badge/agents-query%20this%20list-5ac4bf.svg"></a>
     <a href="#contribution" title="Contributions welcome"><img src="https://img.shields.io/badge/contributions-welcome-green.svg"></a>
@@ -192,7 +192,7 @@ curl -fsSL https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses
 - [FAQ](#faq)
 - [Progressive disclosure harnesses](#progressive-disclosure-harnesses) _8 projects_
 - [Coding agent products (IDEs, CLIs, full suites)](#coding-agent-products-ides-clis-full-suites) _24 projects_
-- [Coding harness configs and SDKs](#coding-harness-configs-and-sdks) _17 projects_
+- [Coding harness configs and SDKs](#coding-harness-configs-and-sdks) _18 projects_
 - [Personal agent runtimes](#personal-agent-runtimes) _13 projects_
 - [Frameworks](#frameworks) _26 projects_
 - [Multi-agent and orchestration](#multi-agent-and-orchestration) _12 projects_
@@ -293,6 +293,7 @@ _Skill packs, slash-command libraries, meta-prompting frameworks, and official S
 | 15 | <a name="autoharness"></a>[**AutoHarness**](https://github.com/aiming-lab/AutoHarness) | [452](https://github.com/aiming-lab/AutoHarness/stargazers) | Lightweight governance harness: wraps any LLM client in ~2 lines for automated harness engineering—6–14 step pipeline, YAML constitution, risk-pattern matching, session persistence with cost tracking, multi-agent profiles. <sup>`memory` · `multi-agent` · `provider-agnostic` · `python`</sup> | ✅ | super simple (2-line wrapper, YAML gov) | [Full pipeline demo](https://github.com/aiming-lab/AutoHarness/blob/main/examples/full_pipeline_demo.py) |
 | 16 | <a name="looptroop"></a>[**LoopTroop**](https://github.com/looptroop-ai/LoopTroop) | [163](https://github.com/looptroop-ai/LoopTroop/stargazers) | Config layer that chains LLM councils for planning, Ralph loops for iterative refinement, and OpenCode worktrees for shipping. The **harness** contribution is the council → loop → worktree pipeline; OpenCode underneath executes. <sup>`typescript`</sup> | ✅ | mostly simple (config pipeline over OpenCode) | [Council → loop → worktree pipeline](https://github.com/looptroop-ai/LoopTroop#readme) |
 | 17 | <a name="pmstack"></a>[**pmstack**](https://github.com/RyanAlberts/pmstack) | [9](https://github.com/RyanAlberts/pmstack/stargazers) | Claude Code config for AI product managers: CLAUDE.md plus skills for competitive analysis, PRD-from-signal, metric frameworks, stakeholder briefs, and agent eval design. "GStack for PMs." <sup>`evals`</sup> | ✅ | super simple (skills bundle, PM-focused) | [PRD-from-signal skill](https://github.com/RyanAlberts/pmstack/blob/main/skills/prd-from-signal.md) |
+| 18 | <a name="wippaagent"></a>[**wippaAGENT**](https://github.com/wippa-studios/wippaAGENT) | [1](https://github.com/wippa-studios/wippaAGENT/stargazers) | Install-once OpenCode fleet config: one primary orchestrator (edit and shell denied by design) plans and delegates to twelve specialist subagents across ten categories, and nothing is reported done before an audit pass, a reviewer-approved diff, and a bounded verify tool returning a real zero exit code. The **harness** contribution is the delegation topology with mandatory audit/review gates, the persistent plan ledger (survives the session), and the bounded `wippa_verify` tool; OpenCode itself provides the agent loop and shell, with three MCP servers pre-wired around it. <sup>`mcp` · `memory` · `multi-agent` · `typescript`</sup> | ✅ | mostly simple (install-once config over OpenCode) | [Architecture and trust model](https://github.com/wippa-studios/wippaAGENT#architecture) |
 
 ## Personal agent runtimes
 
@@ -546,7 +547,7 @@ Harnesses whose execution state persists across restarts: langgraph-bigtool, QM,
 
 ### How many of these agent harnesses are open source?
 
-123 of 166 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.
+124 of 167 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.
 
 ### What is an agent harness?
 

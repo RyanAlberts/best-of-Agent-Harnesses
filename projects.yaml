@@ -178,6 +178,10 @@ projects:
     github_id: looptroop-ai/LoopTroop
     labels: ["javascript"]
     category: "coding-harness-configs"
+  - name: wippaAGENT
+    github_id: wippa-studios/wippaAGENT
+    labels: ["javascript"]
+    category: "coding-harness-configs"
   - name: get-shit-done
     github_id: open-gsd/gsd-core
     category: "coding-harness-configs"
