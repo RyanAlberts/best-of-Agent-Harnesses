@@ -19,5 +19,5 @@ jobs:
       - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
-      - run: pip install pytest markdown
+      - run: pip install pytest markdown "mcp>=1.7,<2"  # mcp: tests/test_mcp_http.py starts the real server
       - run: python -m pytest tests/ -q

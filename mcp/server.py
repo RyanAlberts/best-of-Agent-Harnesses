@@ -15,10 +15,15 @@ its own setup).
 
 Run directly from GitHub (no clone needed):
     uv run https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/mcp/server.py
+
+Serve it over Streamable HTTP at http://HOST:PORT/mcp (defaults 127.0.0.1:8000),
+the way the hosted connector runs it:
+    uv run mcp/server.py --http
 """
 
 import json
 import re
+import time
 import urllib.request
 from pathlib import Path
 
@@ -35,17 +40,27 @@ mcp = FastMCP("agent-harnesses")
 _READ_ONLY = ToolAnnotations(readOnlyHint=True, openWorldHint=True)
 
 _data: dict | None = None
+_fetched_at: float | None = None  # set only when the data came from GitHub
+# A hosted server runs for days and the list is rescored weekly, so data
+# fetched from GitHub is refetched hourly; a failed refetch keeps the last copy.
+_REFETCH_AFTER = 3600
 
 
 def data() -> dict:
-    global _data
-    if _data is None:
+    global _data, _fetched_at
+    stale = _fetched_at is not None and time.monotonic() - _fetched_at > _REFETCH_AFTER
+    if _data is None or stale:
         local = Path(__file__).resolve().parent.parent / "harnesses.json"
         if local.exists():
             _data = json.loads(local.read_text())
         else:
-            with urllib.request.urlopen(DATA_URL, timeout=15) as r:
-                _data = json.loads(r.read().decode())
+            try:
+                with urllib.request.urlopen(DATA_URL, timeout=15) as r:
+                    _data = json.loads(r.read().decode())
+            except OSError:
+                if _data is None:
+                    raise
+            _fetched_at = time.monotonic()
     return _data
 
 
@@ -766,8 +781,26 @@ def whats_new(since: str = "", limit: int = 4) -> str:
     return json.dumps({"weeks": weeks}, indent=2, ensure_ascii=False)
 
 
+def http_app():
+    """The server as a stateless Streamable HTTP ASGI app, served at /mcp.
+    Stateless, so any instance can answer any request (serverless hosts)."""
+    from mcp.server.transport_security import TransportSecuritySettings
+    mcp.settings.stateless_http = True
+    # The SDK's default Host check only admits localhost, which would reject
+    # the public hostname. Nothing here is private: every tool is read-only.
+    mcp.settings.transport_security = TransportSecuritySettings(enable_dns_rebinding_protection=False)
+    return mcp.streamable_http_app()
+
+
 def main():
-    mcp.run()
+    import sys
+    if "--http" in sys.argv[1:]:
+        import os
+        import uvicorn
+        uvicorn.run(http_app(), host=os.environ.get("HOST", "127.0.0.1"),
+                    port=int(os.environ.get("PORT", "8000")))
+    else:
+        mcp.run()
 
 
 if __name__ == "__main__":

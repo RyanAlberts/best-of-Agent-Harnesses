@@ -22,3 +22,7 @@ Documentation = "https://github.com/RyanAlberts/best-of-Agent-Harnesses/tree/mai
 
 [tool.hatch.build.targets.wheel.force-include]
 "server.py" = "agent_harnesses_mcp/__init__.py"
+
+# The hosted connector: a Vercel project whose root directory is mcp/.
+[tool.vercel]
+entrypoint = "app:app"

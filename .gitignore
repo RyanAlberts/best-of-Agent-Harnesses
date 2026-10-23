@@ -103,6 +103,8 @@ history/
 .env
 .env.*
 !.env.example
+# Vercel CLI project link (vercel link in mcp/)
+.vercel/
 
 
 # Operator-internal — kept local, not for public view

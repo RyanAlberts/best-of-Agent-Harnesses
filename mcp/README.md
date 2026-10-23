@@ -6,6 +6,26 @@ The [best-of-Agent-Harnesses](https://github.com/RyanAlberts/best-of-Agent-Harne
 
 Single file, stdio transport, no clone needed — it fetches [harnesses.json](../harnesses.json) from this repo at startup (or reads it locally from a checkout). Requires [uv](https://docs.astral.sh/uv/).
 
+<!-- HOSTED-URL-PENDING: hidden until the hosted address answers; see "Hosted connector (maintainer runbook)" below.
+## Use it without installing
+
+Add the server to your AI app by its web address. There is nothing to install and no sign-in.
+
+Address: `https://HOSTED_URL/mcp`
+
+- **Claude.ai and Claude Desktop:** open Settings, then Connectors, then Add custom connector. Paste the address and choose no sign-in. Free plans allow one custom connector.
+- **ChatGPT:** add a custom MCP server, paste the address (it ends in `/mcp`), and choose no authentication. Your plan or workspace settings decide whether custom servers are allowed.
+- **Cursor:** add this to `.cursor/mcp.json`:
+
+  ```json
+  {"mcpServers": {"agent-harnesses": {"url": "https://HOSTED_URL/mcp"}}}
+  ```
+
+- **Claude Code:** `claude mcp add --transport http agent-harnesses https://HOSTED_URL/mcp`
+
+The hosted server runs the same `server.py` as the package, with the same tools. It reads the list from this repo's `main` branch and refreshes it every hour.
+HOSTED-URL-PENDING -->
+
 ## Install
 
 Published on [PyPI](https://pypi.org/project/agent-harnesses-mcp/) and the [official MCP registry](https://registry.modelcontextprotocol.io) as `io.github.RyanAlberts/agent-harnesses`. Claude Code:
@@ -81,3 +101,27 @@ One-time setup, then never again:
 Per release: bump the version in `mcp/pyproject.toml` **and** `server.json` (the workflow fails loudly on mismatch), then `git tag mcp-v<version> && git push origin mcp-v<version>`.
 
 Directories like Glama, PulseMCP, and mcpservers.org crawl the official registry — no per-directory submissions needed. (Smithery's current publish flow takes hosted-HTTP servers or `.mcpb` bundles, not stdio-from-GitHub, so this server isn't listed there by design.)
+
+## Hosted connector (maintainer runbook)
+
+The address in "Use it without installing" is a free Vercel Hobby project whose root directory is `mcp/`. Vercel imports `app` from [`app.py`](app.py) (set by `[tool.vercel]` in `pyproject.toml`), which serves `server.py` as a stateless Streamable HTTP app at `/mcp`. With no checkout around it, `server.py` fetches the list from `main` and refetches it every hour, so list updates need no redeploy. Hobby never bills: past its limits the project pauses.
+
+Run the same mode locally with `uv run mcp/server.py --http`, then point a client at `http://127.0.0.1:8000/mcp`. [`tests/test_mcp_http.py`](../tests/test_mcp_http.py) starts it this way, lists the tools, and calls one.
+
+First deploy, from this directory:
+
+```sh
+vercel login
+vercel link --yes --project agent-harnesses-mcp
+vercel deploy --prod
+```
+
+`vercel deploy --prod` prints the production address. Check that it answers:
+
+```sh
+curl -s -X POST https://<address>/mcp -H 'Content-Type: application/json' -H 'Accept: application/json, text/event-stream' -d '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | head -c 200
+```
+
+A reply that starts with `event: message` and lists tools means it works. A Vercel login page means Deployment Protection covers the address: set it to Standard, which leaves production public. Then put the address into the hidden "Use it without installing" section at the top of this file and remove the two comment lines around it.
+
+Run `vercel deploy --prod` again only when `server.py` or `app.py` changes.
