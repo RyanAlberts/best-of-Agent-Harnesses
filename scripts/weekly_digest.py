@@ -111,7 +111,7 @@ def render_md(week: dict) -> str:
         out += ["## New on the list", ""]
         for p in week["added"]:
             first = p["description"].split(". ")[0].rstrip(".")
-            out.append(f"- **{_link(p)}** ({p['category']}, {g.format_stars(p['stars'])} stars): {first}.")
+            out.append(f"- **{_link(p)}**, {g.format_stars(p['stars'])} stars, {p['category']}: {first}.")
         out.append("")
     if week["gainers"]:
         out += ["## Biggest star gains", "", "| Harness | Category | Stars | Gain |", "|---|---|---:|---:|"]

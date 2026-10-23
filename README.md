@@ -21,6 +21,10 @@
 </p>
 
 <p align="center">
+    📰 <strong><a href="latest-changes.md">This week</a></strong>: new harnesses and the biggest star gains, every Sunday. To get it as a GitHub notification, click Watch, then Custom, then Releases.
+</p>
+
+<p align="center">
     🧰 <strong><a href="#templates-and-playbooks">Templates and Playbooks</a></strong>: copy-paste setup files and step-by-step guides for the harnesses in this list.
 </p>
 
@@ -163,7 +167,7 @@ This list is also published in machine-readable form, so coding agents and resea
 
 - [**harnesses.json**](harnesses.json) — every project with category, complexity tier, capability tags, stars, license signal, and a concrete example link, plus the full use-case index.
 - [**llms.txt**](llms.txt) — the entire list in one agent-readable file. Point any agent at the [raw URL](https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/llms.txt).
-- [**MCP server**](mcp/) — `recommend` (one opinionated pick + alternatives + what to *avoid*, e.g. repos flagged for star manipulation), `compare`/`compare_for` (2–4 harnesses side by side — by id or by task — who leads on which axis incl. researched sandboxing/memory/hooks/prompt-optimization ratings, graveyard warnings, the matching decision guide), `pick_harness` (ranked, with complexity/autonomy/recovery filters), `pick_infrastructure` (picks at any level of the infra stack plus a live GitHub/Hacker News discovery pass, so answers aren't limited to this list), `search_harnesses`, `get_harness`, `list_categories`, plus `list_comparisons`/`get_comparison` for the decision guides and `list_templates`/`get_template`/`list_playbooks`/`get_playbook`/`list_skills`/`get_skill` so your agent can install a template or a skill for you. Published to PyPI and the [official MCP registry](https://registry.modelcontextprotocol.io) as `io.github.RyanAlberts/agent-harnesses`. One-line install (needs [uv](https://docs.astral.sh/uv/)):
+- [**MCP server**](mcp/) — `recommend` (one opinionated pick + alternatives + what to *avoid*, e.g. repos flagged for star manipulation), `compare`/`compare_for` (2–4 harnesses side by side — by id or by task — who leads on which axis incl. researched sandboxing/memory/hooks/prompt-optimization ratings, graveyard warnings, the matching decision guide), `pick_harness` (ranked, with complexity/autonomy/recovery filters), `pick_infrastructure` (picks at any level of the infra stack plus a live GitHub/Hacker News discovery pass, so answers aren't limited to this list), `search_harnesses`, `get_harness`, `list_categories`, `whats_new` (the weekly digest), plus `list_comparisons`/`get_comparison` for the decision guides and `list_templates`/`get_template`/`list_playbooks`/`get_playbook`/`list_skills`/`get_skill` so your agent can install a template or a skill for you. Published to PyPI and the [official MCP registry](https://registry.modelcontextprotocol.io) as `io.github.RyanAlberts/agent-harnesses`. One-line install (needs [uv](https://docs.astral.sh/uv/)):
 
 ```sh
 claude mcp add agent-harnesses -- uvx agent-harnesses-mcp

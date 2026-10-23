@@ -47,7 +47,7 @@ def test_markdown_is_plain_and_line_three_is_prose():
     assert lines[0] == "# What changed in agent harnesses: 2026-10-25"
     assert lines[2][0].isalpha()
     assert "\u2014" not in md
-    assert "**[new](https://x/h/new/)** (Coding agent products, 900 stars): new runs the loop." in md
+    assert "**[new](https://x/h/new/)**, 900 stars, Coding agent products: new runs the loop." in md
     assert "archived upstream 2026-10-20" in md
 
 

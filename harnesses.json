@@ -456,6 +456,13 @@
       "raw_url": "https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/comparisons/eval-platforms.md"
     },
     {
+      "slug": "harness-engineering",
+      "title": "Harness engineering: what it is, and the tools for each practice",
+      "summary": "Harness engineering means building everything around an AI model that turns it into a dependable agent: what it sees, which tools it gets, what it may do without asking, and how it checks its work. The model stays the same; you change its surroundings until a mistake it made once stops happening.",
+      "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/comparisons/harness-engineering.md",
+      "raw_url": "https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/comparisons/harness-engineering.md"
+    },
+    {
       "slug": "how-to-pick-a-harness",
       "title": "How to pick a harness",
       "summary": "This is the decision guide for [best-of-Agent-Harnesses](../README.md), a curated, ranked list of the runtimes that turn an AI model into a working agent: the software that decides what the model's thinking is allowed to touch. Six questions, in order. Each one eliminates most of the list; by the en",

@@ -24,6 +24,7 @@ Start with [How to pick a harness](comparisons/how-to-pick-a-harness.md), or jum
 - [Browser infrastructure for agents: Browser Use vs Browserbase vs Steel vs Hyperbrowser](comparisons/browser-infrastructure.md)
 - [Claude Code skill packs: superpowers vs GStack vs get-shit-done vs Anthropic Skills](comparisons/claude-code-skill-packs.md)
 - [Eval and observability platforms: Langfuse vs LangSmith vs Braintrust vs Phoenix](comparisons/eval-platforms.md)
+- [Harness engineering: what it is, and the tools for each practice](comparisons/harness-engineering.md)
 - [How to pick a harness](comparisons/how-to-pick-a-harness.md)
 - [How to test-drive a harness](comparisons/how-to-test-drive-a-harness.md)
 - [Managed vs self-hosted always-on agents](comparisons/managed-vs-self-hosted-always-on-agents.md)
