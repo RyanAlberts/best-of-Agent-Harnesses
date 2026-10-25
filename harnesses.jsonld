@@ -11,7 +11,7 @@
     "name": "Ryan Alberts",
     "url": "https://github.com/RyanAlberts"
   },
-  "dateModified": "2026-10-18",
+  "dateModified": "2026-10-25",
   "keywords": [
     "agent harness",
     "AI agents",
@@ -252,11 +252,11 @@
         "position": 19,
         "item": {
           "@type": "SoftwareApplication",
-          "name": "DeepSeek-Reasonix",
-          "url": "https://github.com/esengine/DeepSeek-Reasonix",
-          "description": "DeepSeek-native terminal coding agent. The **harness** is engineered around prefix-cache stability for long-running sessions; the TUI is the shell.",
+          "name": "oh-my-pi",
+          "url": "https://github.com/can1357/oh-my-pi",
+          "description": "Terminal coding agent (fork of Pi) that wires the IDE into the **harness**: hash-anchored edits, a 32-tool loop tuned per-model, LSP rename/references/diagnostics on every write, a real DAP debugger (lldb/dlv/debugpy), long-lived Python + Bun execution kernels that call back into the agent's tools, browser control, and 40+ providers (Claude/OpenAI/Gemini/local). ~55k-line Rust core.",
           "applicationCategory": "DeveloperApplication",
-          "keywords": "memory, cli, tui, typescript"
+          "keywords": "browser, provider-agnostic, cli, ide, rust, python"
         }
       },
       {
@@ -264,11 +264,11 @@
         "position": 20,
         "item": {
           "@type": "SoftwareApplication",
-          "name": "oh-my-pi",
-          "url": "https://github.com/can1357/oh-my-pi",
-          "description": "Terminal coding agent (fork of Pi) that wires the IDE into the **harness**: hash-anchored edits, a 32-tool loop tuned per-model, LSP rename/references/diagnostics on every write, a real DAP debugger (lldb/dlv/debugpy), long-lived Python + Bun execution kernels that call back into the agent's tools, browser control, and 40+ providers (Claude/OpenAI/Gemini/local). ~55k-line Rust core.",
+          "name": "DeepSeek-Reasonix",
+          "url": "https://github.com/esengine/DeepSeek-Reasonix",
+          "description": "DeepSeek-native terminal coding agent. The **harness** is engineered around prefix-cache stability for long-running sessions; the TUI is the shell.",
           "applicationCategory": "DeveloperApplication",
-          "keywords": "browser, provider-agnostic, cli, ide, rust, python"
+          "keywords": "memory, cli, tui, typescript"
         }
       },
       {
@@ -432,11 +432,11 @@
         "position": 34,
         "item": {
           "@type": "SoftwareApplication",
-          "name": "claw-code-agent",
-          "url": "https://github.com/HarnessLab/claw-code-agent",
-          "description": "Python reimplementation of the Claude Code agent architecture with zero external dependencies; interactive chat, streaming, plugin runtime, nested agent delegation, cost tracking, MCP transport—portable harness without the Rust/TS toolchain.",
+          "name": "AgentBox",
+          "url": "https://github.com/madarco/agentbox",
+          "description": "Runs multiple coding agents in parallel, each in its own sandboxed VM, locally or in the cloud, from one command. The **harness** contribution is the VM-per-agent isolation and fleet fan-out layer; whichever agent runs inside owns the loop.",
           "applicationCategory": "DeveloperApplication",
-          "keywords": "mcp, rust, python, typescript"
+          "keywords": "sandbox, typescript"
         }
       },
       {
@@ -444,11 +444,11 @@
         "position": 35,
         "item": {
           "@type": "SoftwareApplication",
-          "name": "AgentBox",
-          "url": "https://github.com/madarco/agentbox",
-          "description": "Runs multiple coding agents in parallel, each in its own sandboxed VM, locally or in the cloud, from one command. The **harness** contribution is the VM-per-agent isolation and fleet fan-out layer; whichever agent runs inside owns the loop.",
+          "name": "claw-code-agent",
+          "url": "https://github.com/HarnessLab/claw-code-agent",
+          "description": "Python reimplementation of the Claude Code agent architecture with zero external dependencies; interactive chat, streaming, plugin runtime, nested agent delegation, cost tracking, MCP transport—portable harness without the Rust/TS toolchain.",
           "applicationCategory": "DeveloperApplication",
-          "keywords": "sandbox, typescript"
+          "keywords": "mcp, rust, python, typescript"
         }
       },
       {

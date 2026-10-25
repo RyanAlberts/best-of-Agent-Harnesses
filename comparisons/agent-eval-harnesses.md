@@ -6,7 +6,7 @@ Why it matters: shipping on a public number alone has burned people. OpenAI [sto
 
 | | [SWE-bench](https://github.com/SWE-bench/SWE-bench) | [inspect_ai](https://github.com/UKGovernmentBEIS/inspect_ai) | [Terminal-Bench](https://github.com/harbor-framework/terminal-bench) |
 |---|---|---|---|
-| ⭐ Stars | 6k | 3k | 925 |
+| ⭐ Stars | 6.1k | 3.1k | 970 |
 | Shape | Benchmark: real GitHub issues, Docker harness | Framework: write tasks, attach scorers, run sandboxed across models | Benchmark: hard terminal tasks in containers |
 | The question it answers | Can this agent fix real reported bugs in real repos? | Whatever question you write a task for | Can this agent do real work in a command-line shell? |
 | Steward | The SWE-bench org (Princeton and Stanford researchers) | UK AI Security Institute, the UK government body that tests frontier models | The harbor-framework org |

@@ -2,6 +2,146 @@
  "description": "Week-by-week changes to best-of-Agent-Harnesses, newest first.",
  "weeks": [
   {
+   "date": "2026-10-25",
+   "since": "2026-10-18",
+   "project_count": 187,
+   "added": [],
+   "removed": [],
+   "gainers": [
+    {
+     "github_id": "anomalyco/opencode",
+     "name": "opencode",
+     "category": "Coding agent products (IDEs, CLIs, full suites)",
+     "stars": 221461,
+     "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/opencode/",
+     "delta": 5228
+    },
+    {
+     "github_id": "obra/superpowers",
+     "name": "superpowers",
+     "category": "Coding harness configs and SDKs",
+     "stars": 304934,
+     "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/superpowers/",
+     "delta": 3403
+    },
+    {
+     "github_id": "addyosmani/agent-skills",
+     "name": "addyosmani/agent-skills",
+     "category": "Coding harness configs and SDKs",
+     "stars": 110423,
+     "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/agent-skills/",
+     "delta": 2333
+    },
+    {
+     "github_id": "NousResearch/hermes-agent",
+     "name": "Hermes",
+     "category": "Personal agent runtimes",
+     "stars": 257003,
+     "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/hermes-agent/",
+     "delta": 2124
+    },
+    {
+     "github_id": "deepseek-ai/deepseek-harness",
+     "name": "DeepSeek Harness",
+     "category": "Coding agent products (IDEs, CLIs, full suites)",
+     "stars": 261294,
+     "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/deepseek-harness/",
+     "delta": 2036
+    },
+    {
+     "github_id": "headroomlabs-ai/headroom",
+     "name": "Headroom",
+     "category": "Progressive disclosure harnesses",
+     "stars": 77794,
+     "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/headroom/",
+     "delta": 2005
+    },
+    {
+     "github_id": "anthropics/skills",
+     "name": "Anthropic Skills",
+     "category": "Coding harness configs and SDKs",
+     "stars": 183702,
+     "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/skills/",
+     "delta": 1762
+    },
+    {
+     "github_id": "earendil-works/pi",
+     "name": "pi",
+     "category": "Coding agent products (IDEs, CLIs, full suites)",
+     "stars": 117753,
+     "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/pi/",
+     "delta": 1658
+    },
+    {
+     "github_id": "mksglu/context-mode",
+     "name": "context-mode",
+     "category": "Progressive disclosure harnesses",
+     "stars": 32206,
+     "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/context-mode/",
+     "delta": 1535
+    },
+    {
+     "github_id": "thedotmack/claude-mem",
+     "name": "claude-mem",
+     "category": "Memory and state",
+     "stars": 103033,
+     "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/claude-mem/",
+     "delta": 1463
+    }
+   ],
+   "fastest": [
+    {
+     "github_id": "HarnessRouter/harnessrouter",
+     "name": "HarnessRouter",
+     "category": "Multi-agent and orchestration",
+     "stars": 3618,
+     "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/harnessrouter/",
+     "previous_stars": 3263,
+     "pct": 10.9
+    },
+    {
+     "github_id": "mksglu/context-mode",
+     "name": "context-mode",
+     "category": "Progressive disclosure harnesses",
+     "stars": 32206,
+     "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/context-mode/",
+     "previous_stars": 30671,
+     "pct": 5.0
+    },
+    {
+     "github_id": "harbor-framework/terminal-bench",
+     "name": "Terminal-Bench",
+     "category": "Evaluation and benchmarking harnesses",
+     "stars": 970,
+     "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/terminal-bench/",
+     "previous_stars": 925,
+     "pct": 4.9
+    },
+    {
+     "github_id": "open-jarvis/OpenJarvis",
+     "name": "OpenJarvis",
+     "category": "Personal agent runtimes",
+     "stars": 12036,
+     "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/openjarvis/",
+     "previous_stars": 11520,
+     "pct": 4.5
+    },
+    {
+     "github_id": "TIGER-AI-Lab/ClawBench",
+     "name": "ClawBench",
+     "category": "Evaluation and benchmarking harnesses",
+     "stars": 1113,
+     "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/clawbench/",
+     "previous_stars": 1071,
+     "pct": 3.9
+    }
+   ],
+   "archived": [],
+   "new_guides": [],
+   "new_skills": [],
+   "new_templates": []
+  },
+  {
    "date": "2026-10-18",
    "since": "2026-09-13",
    "project_count": 187,

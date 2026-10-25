@@ -623,5 +623,65 @@
         "title": "Add rpi embeddable Rust coding-agent harness"
       }
     ]
+  },
+  {
+    "login": "borzelo",
+    "contributions": [
+      {
+        "kind": "issue",
+        "number": 143,
+        "title": "Add project: PlaceCall"
+      }
+    ]
+  },
+  {
+    "login": "gregpr07",
+    "contributions": [
+      {
+        "kind": "pr",
+        "number": 144,
+        "title": "Add Browser Use Cloud to browser infrastructure comparison"
+      }
+    ]
+  },
+  {
+    "login": "reefbarman",
+    "contributions": [
+      {
+        "kind": "issue",
+        "number": 145,
+        "title": "Add project: AgentLink"
+      }
+    ]
+  },
+  {
+    "login": "runtimeteam",
+    "contributions": [
+      {
+        "kind": "issue",
+        "number": 146,
+        "title": "Sandboxed code execution: add Runtime"
+      }
+    ]
+  },
+  {
+    "login": "wippa-studios",
+    "contributions": [
+      {
+        "kind": "pr",
+        "number": 147,
+        "title": "Add project: wippaAGENT"
+      }
+    ]
+  },
+  {
+    "login": "nishantchoudhary-sketch",
+    "contributions": [
+      {
+        "kind": "pr",
+        "number": 148,
+        "title": "Add Scalekit to Libraries and SDKs"
+      }
+    ]
   }
 ]
