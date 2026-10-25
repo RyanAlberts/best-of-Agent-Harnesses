@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-    <a href="#contents" title="Project Count"><img src="https://img.shields.io/badge/projects-187-blue.svg?color=5ac4bf"></a>
+    <a href="#contents" title="Project Count"><img src="https://img.shields.io/badge/projects-188-blue.svg?color=5ac4bf"></a>
     <a href="#skills" title="Installable agent skills"><img src="https://img.shields.io/badge/skills-10-5ac4bf.svg"></a>
     <a href="#for-agents" title="Agents can query this list — MCP server, llms.txt & JSON"><img src="https://img.shields.io/badge/agents-query%20this%20list-5ac4bf.svg"></a>
     <a href="#contribution" title="Contributions welcome"><img src="https://img.shields.io/badge/contributions-welcome-green.svg"></a>
@@ -205,7 +205,7 @@ curl -fsSL https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses
 - [Evaluation and benchmarking harnesses](#evaluation-and-benchmarking-harnesses) _19 projects_
 - [Observability and eval-ops](#observability-and-eval-ops) _4 projects_
 - [Research and task-specific harnesses](#research-and-task-specific-harnesses) _6 projects_
-- [Libraries and SDKs](#libraries-and-sdks) _14 projects_
+- [Libraries and SDKs](#libraries-and-sdks) _15 projects_
 
 ## Guide to rankings
 
@@ -515,7 +515,8 @@ _Lightweight runtimes, tool loops, and provider-agnostic harness primitives._
 | 11 | <a name="agent-sandbox"></a>[**Agent Sandbox**](https://github.com/kubernetes-sigs/agent-sandbox) | [4.3k](https://github.com/kubernetes-sigs/agent-sandbox/stargazers) | Kubernetes-native sandbox primitive for agent runtimes: a Sandbox resource plus warm pools and claims for fast-start, isolated, stateful workloads. The self-hosted answer to hosted sandbox APIs, from the Kubernetes SIGs org. <sup>`memory` · `sandbox` · `local`</sup> | ✅ | slightly complex (Kubernetes resource, warm pools) | [Sandbox resource quickstart](https://github.com/kubernetes-sigs/agent-sandbox#readme) |
 | 12 | <a name="openai-agents-js"></a>[**openai-agents-js**](https://github.com/openai/openai-agents-js) | [3.9k](https://github.com/openai/openai-agents-js/stargazers) | Official OpenAI Agents SDK for Node/TS: handoffs, guardrails, voice; the JS counterpart to openai-agents-python. <sup>`multi-agent` · `voice` · `typescript`</sup> | ✅ | slightly complex (handoffs, guardrails, voice) | [Financial research agent](https://github.com/openai/openai-agents-js/tree/main/examples/financial-research-agent) |
 | 13 | <a name="open-harness"></a>[**open-harness**](https://github.com/MaxGfeller/open-harness) | [619](https://github.com/MaxGfeller/open-harness/stargazers) | TypeScript Agent class on Vercel AI SDK; streaming events, filesystem/bash tools, MCP, and subagent delegation. <sup>`mcp` · `multi-agent` · `typescript`</sup> | ✅ | slightly complex (streaming, tools, subagents) | [Terminal CLI agent](https://github.com/MaxGfeller/open-harness/tree/main/examples/cli) |
-| 14 | <a name="awesome-ai-agents"></a>[**Community-curated agent lists**](https://github.com/brandonhimpfen/awesome-ai-agents) | [16](https://github.com/brandonhimpfen/awesome-ai-agents/stargazers) | Broader directories: e.g. [brandonhimpfen/awesome-ai-agents](https://github.com/brandonhimpfen/awesome-ai-agents), [axioma-ai-labs/awesome-ai-agent-frameworks](https://github.com/axioma-ai-labs/awesome-ai-agent-frameworks), [mb-mal/awesome-ai-agents-frameworks](https://github.com/mb-mal/awesome-ai-agents-frameworks)—differ by scope and update cadence. | ❓ | super simple (curated lists) | [Frameworks section](https://github.com/brandonhimpfen/awesome-ai-agents#frameworks) |
+| 14 | <a name="scalekit-sdk-python"></a>[**Scalekit**](https://github.com/scalekit-inc/scalekit-sdk-python) | [43](https://github.com/scalekit-inc/scalekit-sdk-python/stargazers) | Python SDK for Scalekit's hosted AI agent integration platform: agents call 20,000+ tools across 500+ connectors as each end user, with OAuth, API key, and RSA key-pair credentials kept in a token vault (bring your own KMS key). Admin-configured virtual MCP servers expose only the tools each team needs, and every tool call is audit-logged (SOC 2 Type II, HIPAA BAA). The **harness** contribution is the per-user tool-auth layer; the agent loop stays in your framework (LangChain and Google ADK adapters included). <sup>`mcp` · `python`</sup> | ✅ | complex (500+ connectors, per-user auth, virtual MCP servers — product suite) | [First per-user tool call quickstart](https://docs.scalekit.com/agentkit/quickstart/) |
+| 15 | <a name="awesome-ai-agents"></a>[**Community-curated agent lists**](https://github.com/brandonhimpfen/awesome-ai-agents) | [16](https://github.com/brandonhimpfen/awesome-ai-agents/stargazers) | Broader directories: e.g. [brandonhimpfen/awesome-ai-agents](https://github.com/brandonhimpfen/awesome-ai-agents), [axioma-ai-labs/awesome-ai-agent-frameworks](https://github.com/axioma-ai-labs/awesome-ai-agent-frameworks), [mb-mal/awesome-ai-agents-frameworks](https://github.com/mb-mal/awesome-ai-agents-frameworks)—differ by scope and update cadence. | ❓ | super simple (curated lists) | [Frameworks section](https://github.com/brandonhimpfen/awesome-ai-agents#frameworks) |
 
 ## ⚰️ Graveyard
 
@@ -585,7 +586,7 @@ Harnesses whose execution state persists across restarts: langgraph-bigtool, rpi
 
 ### How many of these agent harnesses are open source?
 
-142 of 187 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.
+143 of 188 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.
 
 ### What is an agent harness?
 
