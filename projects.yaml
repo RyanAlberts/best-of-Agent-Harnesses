@@ -749,6 +749,10 @@ projects:
   - name: Composio
     github_id: ComposioHQ/composio
     category: "libraries-sdks"
+  - name: Scalekit
+    github_id: scalekit-inc/scalekit-sdk-python
+    labels: ["python"]
+    category: "libraries-sdks"
   - name: Cloudflare Agents
     github_id: cloudflare/agents
     labels: ["javascript"]

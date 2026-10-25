@@ -29,7 +29,7 @@
   ],
   "mainEntity": {
     "@type": "ItemList",
-    "numberOfItems": 187,
+    "numberOfItems": 188,
     "itemListElement": [
       {
         "@type": "ListItem",
@@ -2266,6 +2266,18 @@
       {
         "@type": "ListItem",
         "position": 187,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "Scalekit",
+          "url": "https://github.com/scalekit-inc/scalekit-sdk-python",
+          "description": "Python SDK for Scalekit's hosted AI agent integration platform: agents call 20,000+ tools across 500+ connectors as each end user, with OAuth, API key, and RSA key-pair credentials kept in a token vault (bring your own KMS key). Admin-configured virtual MCP servers expose only the tools each team needs, and every tool call is audit-logged (SOC 2 Type II, HIPAA BAA). The **harness** contribution is the per-user tool-auth layer; the agent loop stays in your framework (LangChain and Google ADK adapters included).",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "mcp, python"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 188,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Community-curated agent lists",

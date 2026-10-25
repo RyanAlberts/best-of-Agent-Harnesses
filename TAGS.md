@@ -1,13 +1,13 @@
 <!-- markdownlint-disable -->
 # Tags — cross-reference
 
-_Auto-generated from `scripts/generate.py`. 187 projects across 22 canonical tags. Edit projects in `generate.py` (not here) and rerun the script._
+_Auto-generated from `scripts/generate.py`. 188 projects across 22 canonical tags. Edit projects in `generate.py` (not here) and rerun the script._
 
 Tag chips appear next to each project in [README.md](README.md). This page lists every tag once with the projects that carry it, grouped by category and sorted by GitHub stars within each category.
 
 ## All tags
 
-[`mcp`](#mcp) (38) · [`memory`](#memory) (45) · [`multi-agent`](#multi-agent) (36) · [`evals`](#evals) (22) · [`voice`](#voice) (2) · [`vision`](#vision) (4) · [`browser`](#browser) (13) · [`sandbox`](#sandbox) (33) · [`low-code`](#low-code) (5) · [`rag`](#rag) (9) · [`tool-discovery`](#tool-discovery) (5) · [`training`](#training) (5) · [`workflow`](#workflow) (13) · [`typed`](#typed) (3) · [`local`](#local) (7) · [`provider-agnostic`](#provider-agnostic) (12) · [`cli`](#cli) (33) · [`ide`](#ide) (17) · [`tui`](#tui) (8) · [`rust`](#rust) (8) · [`python`](#python) (88) · [`typescript`](#typescript) (54)
+[`mcp`](#mcp) (39) · [`memory`](#memory) (45) · [`multi-agent`](#multi-agent) (36) · [`evals`](#evals) (22) · [`voice`](#voice) (2) · [`vision`](#vision) (4) · [`browser`](#browser) (13) · [`sandbox`](#sandbox) (33) · [`low-code`](#low-code) (5) · [`rag`](#rag) (9) · [`tool-discovery`](#tool-discovery) (5) · [`training`](#training) (5) · [`workflow`](#workflow) (13) · [`typed`](#typed) (3) · [`local`](#local) (7) · [`provider-agnostic`](#provider-agnostic) (12) · [`cli`](#cli) (33) · [`ide`](#ide) (17) · [`tui`](#tui) (8) · [`rust`](#rust) (8) · [`python`](#python) (89) · [`typescript`](#typescript) (54)
 
 ---
 
@@ -80,6 +80,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [pydantic-ai](https://github.com/pydantic/pydantic-ai) — ⭐20.7k — Type-safe Python agents with Pydantic I/O; multi-provider, MCP, Logfire observability, and human-in-the-loop.
 - [strands-agents](https://github.com/strands-agents/harness-sdk) — ⭐8.9k — Model-driven Python SDK; decorators for tools, native MCP, multi-agent; "minimal code" without sacrificing provider choice.
 - [open-harness](https://github.com/MaxGfeller/open-harness) — ⭐619 — TypeScript Agent class on Vercel AI SDK; streaming events, filesystem/bash tools, MCP, and subagent delegation.
+- [Scalekit](https://github.com/scalekit-inc/scalekit-sdk-python) — ⭐43 — Python SDK for Scalekit's hosted AI agent integration platform: agents call 20,000+ tools across 500+ connectors as each end user, with OAuth, API key, and RSA key-pair credentials kept in a token vault (bring your own KMS key). Admin-configured virtual MCP servers expose only the tools each team needs, and every tool call is audit-logged (SOC 2 Type II, HIPAA BAA). The **harness** contribution is the per-user tool-auth layer; the agent loop stays in your framework (LangChain and Google ADK adapters included).
 
 ---
 
@@ -828,6 +829,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [pydantic-ai](https://github.com/pydantic/pydantic-ai) — ⭐20.7k — Type-safe Python agents with Pydantic I/O; multi-provider, MCP, Logfire observability, and human-in-the-loop.
 - [E2B](https://github.com/e2b-dev/E2B) — ⭐14.4k — Firecracker sandboxes for executing agent-generated code; the hosted isolation layer many tool-calling demos use instead of running arbitrary LLM output on your laptop.
 - [strands-agents](https://github.com/strands-agents/harness-sdk) — ⭐8.9k — Model-driven Python SDK; decorators for tools, native MCP, multi-agent; "minimal code" without sacrificing provider choice.
+- [Scalekit](https://github.com/scalekit-inc/scalekit-sdk-python) — ⭐43 — Python SDK for Scalekit's hosted AI agent integration platform: agents call 20,000+ tools across 500+ connectors as each end user, with OAuth, API key, and RSA key-pair credentials kept in a token vault (bring your own KMS key). Admin-configured virtual MCP servers expose only the tools each team needs, and every tool call is audit-logged (SOC 2 Type II, HIPAA BAA). The **harness** contribution is the per-user tool-auth layer; the agent loop stays in your framework (LangChain and Google ADK adapters included).
 
 ---
 
@@ -1047,6 +1049,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [pydantic-ai](https://github.com/pydantic/pydantic-ai) — ⭐20.7k — Type-safe Python agents with Pydantic I/O; multi-provider, MCP, Logfire observability, and human-in-the-loop.
 - [E2B](https://github.com/e2b-dev/E2B) — ⭐14.4k — Firecracker sandboxes for executing agent-generated code; the hosted isolation layer many tool-calling demos use instead of running arbitrary LLM output on your laptop.
 - [strands-agents](https://github.com/strands-agents/harness-sdk) — ⭐8.9k — Model-driven Python SDK; decorators for tools, native MCP, multi-agent; "minimal code" without sacrificing provider choice.
+- [Scalekit](https://github.com/scalekit-inc/scalekit-sdk-python) — ⭐43 — Python SDK for Scalekit's hosted AI agent integration platform: agents call 20,000+ tools across 500+ connectors as each end user, with OAuth, API key, and RSA key-pair credentials kept in a token vault (bring your own KMS key). Admin-configured virtual MCP servers expose only the tools each team needs, and every tool call is audit-logged (SOC 2 Type II, HIPAA BAA). The **harness** contribution is the per-user tool-auth layer; the agent loop stays in your framework (LangChain and Google ADK adapters included).
 
 ---
 
