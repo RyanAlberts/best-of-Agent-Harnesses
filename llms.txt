@@ -1,6 +1,6 @@
 # Best of Agent Harnesses
 
-> Hand-curated, ranked list of 187 AI agent harnesses — the runtimes that close the loop between a stateless model and the outside world. 12 categories, a 4-tier adoption-surface rating (simplicity ↔ capability), capability tags, a license signal, and one concrete example link per project. Stars captured 2026-10-25. The harness matters more than the model: the same weights score about 30% on ARC-AGI-3 bare and 95.5% inside Prime Agent, and harness rankings barely transfer across models, so pick harness and model as a pair (sources: https://ryanalberts.github.io/best-of-Agent-Harnesses/compare/why-the-harness-matters/ ; this week's top picks per category: https://ryanalberts.github.io/best-of-Agent-Harnesses/compare/best-ai-agent-harnesses-2026/ ).
+> Hand-curated, ranked list of 188 AI agent harnesses — the runtimes that close the loop between a stateless model and the outside world. 12 categories, a 4-tier adoption-surface rating (simplicity ↔ capability), capability tags, a license signal, and one concrete example link per project. Stars captured 2026-10-25. The harness matters more than the model: the same weights score about 30% on ARC-AGI-3 bare and 95.5% inside Prime Agent, and harness rankings barely transfer across models, so pick harness and model as a pair (sources: https://ryanalberts.github.io/best-of-Agent-Harnesses/compare/why-the-harness-matters/ ; this week's top picks per category: https://ryanalberts.github.io/best-of-Agent-Harnesses/compare/best-ai-agent-harnesses-2026/ ).
 
 Maintained at https://github.com/RyanAlberts/best-of-Agent-Harnesses (CC-BY-SA-4.0).
 Structured data: https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/harnesses.json
@@ -26,7 +26,7 @@ Tiers, least to most adoption surface: super simple → mostly simple → slight
 ## Decision guides
 
 - Agent evals: SWE-bench vs inspect_ai vs Terminal-Bench: https://ryanalberts.github.io/best-of-Agent-Harnesses/compare/agent-eval-harnesses/ — You changed your agent: new model, new prompt, new tools. Did it get better or worse? An eval is how you answer that with a number instead of a feeling. The word covers two different products, and knowing which one you need is most of the decision. A **benchmark** is a fixed public exam with a leade
-- The best AI agent harnesses in 2026, ranked by category: https://ryanalberts.github.io/best-of-Agent-Harnesses/compare/best-ai-agent-harnesses-2026/ — These are the top three agent harnesses in each of the 12 categories of best-of-Agent-Harnesses, a hand-curated list of 187 harnesses re-ranked from live GitHub data every week; the stars below were captured 2026-10-25, and the page regenerates with every refresh.
+- The best AI agent harnesses in 2026, ranked by category: https://ryanalberts.github.io/best-of-Agent-Harnesses/compare/best-ai-agent-harnesses-2026/ — These are the top three agent harnesses in each of the 12 categories of best-of-Agent-Harnesses, a hand-curated list of 188 harnesses re-ranked from live GitHub data every week; the stars below were captured 2026-10-25, and the page regenerates with every refresh.
 - Browser agents: browser-use vs Stagehand vs Playwright MCP vs chrome-devtools-mcp: https://ryanalberts.github.io/best-of-Agent-Harnesses/compare/browser-agents/ — "Browser agent" covers three different kinds of product, and most bad picks here come from comparing across the lanes instead of within one. **Agent libraries** own the whole job: you hand them a goal in plain language ("find the cheapest flight, fill the form") and they decide every click. browser-
 - Browser infrastructure for agents: Browser Use vs Browserbase vs Steel vs Hyperbrowser: https://ryanalberts.github.io/best-of-Agent-Harnesses/compare/browser-infrastructure/ — Agent libraries like browser-use and Stagehand decide what to click; something still has to run the browsers they click in. At small scale that's Chrome on your own machine. At production scale it becomes its own operations problem: hundreds of concurrent sessions, sites that block automation, CAPTC
 - Claude Code skill packs: superpowers vs GStack vs get-shit-done vs Anthropic Skills: https://ryanalberts.github.io/best-of-Agent-Harnesses/compare/claude-code-skill-packs/ — A skill is a folder of instructions (a SKILL.md file, plus any scripts it needs) that a coding agent loads only when the task matches, instead of carrying every instruction all the time. A skill pack is a curated bundle of them: someone else's working habits for your agent, installed as files. Nothi
@@ -115,10 +115,10 @@ Top picks: LiteLLM, vercel/ai. See the “Libraries and SDKs” category for the
 Harnesses designed for unattended runs, batches, and fleets: opencode, OpenHands, goose, Symphony, Prime Agent, SWE-agent, Claude Agent SDK, Ouroboros (Q00).
 
 ### Which agent harnesses survive a crash mid-task (durable)?
-Harnesses whose execution state persists across restarts: langgraph-bigtool, rpi, Ouroboros (Q00), QM, n8n, langgraph, mastra, letta.
+Harnesses whose execution state persists across restarts: langgraph-bigtool, rpi, Mercury CLI, Ouroboros (Q00), QM, n8n, langgraph, mastra.
 
 ### How many of these agent harnesses are open source?
-142 of 187 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.
+143 of 188 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.
 
 ### What is an agent harness?
 The runtime that turns a model into an agent: it decides what the model's reasoning is allowed to touch, and supplies the orchestration, tool wiring, memory, error recovery, and guardrails around per-turn inference.
@@ -150,7 +150,7 @@ Formats, runtimes, and patterns that reveal context, tools, or instructions in l
 - [ToolGen](https://github.com/Reason-Wang/ToolGen) — ⭐184, complex, autonomy: n/a, recovery: n/a, unknown: ICLR 2025: unified tool retrieval and calling via generation; 47k+ tools without context stuffing—retrieval and invocation in one generative step. [tool-discovery, python]
 - [ToolRAG](https://github.com/antl3x/ToolRAG) — ⭐35, mostly simple, autonomy: n/a, recovery: n/a, open-source: Semantic tool retrieval for LLMs; serves only the tools the user query demands (MCP-compatible), unlimited tool sets with zero context penalty. [mcp, tool-discovery]
 
-## Coding agent products (IDEs, CLIs, full suites) (31 projects)
+## Coding agent products (IDEs, CLIs, full suites) (32 projects)
 
 Turnkey coding agents you install and run: IDE extensions, terminal CLIs, Dockerized workspaces. Each entry notes which part is the harness (the agent loop, tool wiring, approval model) versus the UI shell (VS Code extension, TUI, browser client).
 
@@ -185,6 +185,7 @@ Turnkey coding agents you install and run: IDE extensions, terminal CLIs, Docker
 - [Orbi](https://github.com/orbi-build/orbi) — ⭐231, slightly complex, autonomy: n/a, recovery: n/a, open-source: Self-hosted runner that takes a GitHub issue labeled `ai-ready` to a reviewed, merged pull request and a tagged release: each run gets its own branch and worktree, Pi writes the change, a separate review session checks it against the issue's acceptance criteria, and only the reviewed head merges. The **harness** contribution is the issue-to-release delivery and review gate on top of Pi; it does not own an agent loop. [python]
 - [rpi](https://github.com/bigfish1913/pi-rust) — ⭐148, slightly complex, autonomy: bounded, recovery: durable, open-source: Rust coding-agent runtime that began as a reimplementation of Pi and now develops on its own. The embeddable **harness** owns a provider-agnostic streaming agent loop, tool execution, JSONL sessions that resume after a crash from the last committed frame, and a native plugin ABI; the terminal TUI is a shell over the same crates, and a deterministic offline provider covers tests. [memory, provider-agnostic, cli, tui, rust]
 - [YYLO](https://github.com/yylo-dev/yylo) — ⭐66, slightly complex, autonomy: n/a, recovery: n/a, open-source: Command-line orchestrator for coding agents (drives Pi and Codex subagents): every task gets a dedicated branch/worktree and a typed lifecycle — read-only preflight, risk-scaled merge-queue review, release-readiness gates — with receipt-backed changes. The **harness** contribution is the git-native task/merge orchestration layer on top of whichever agent executes; not an agent loop itself. [multi-agent, typescript]
+- [Mercury CLI](https://github.com/Whq02/MercuryCLI) — ⭐21, slightly complex, autonomy: bounded, recovery: durable, open-source: Open-source TypeScript terminal coding agent for macOS, Linux, and Windows. The **harness** combines anchored multi-file edits, LSP navigation/refactoring, 23-language tree-sitter search/rewrites, a DAP debugger, hybrid RAG project memory with session handoff notes, and cross-provider crewmates in isolated git worktrees with file leases across 22 model providers plus local/rented GPU weights; the TUI, headless CLI (`mercury run` / `mercury runner`), and ACP server (`mercury acp`) are the shells. [memory, multi-agent, browser, sandbox, rag, cli, tui, typescript]
 
 ## Coding harness configs and SDKs (18 projects)
 

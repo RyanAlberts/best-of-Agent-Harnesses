@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-    <a href="#contents" title="Project Count"><img src="https://img.shields.io/badge/projects-187-blue.svg?color=5ac4bf"></a>
+    <a href="#contents" title="Project Count"><img src="https://img.shields.io/badge/projects-188-blue.svg?color=5ac4bf"></a>
     <a href="#skills" title="Installable agent skills"><img src="https://img.shields.io/badge/skills-10-5ac4bf.svg"></a>
     <a href="#for-agents" title="Agents can query this list — MCP server, llms.txt & JSON"><img src="https://img.shields.io/badge/agents-query%20this%20list-5ac4bf.svg"></a>
     <a href="#contribution" title="Contributions welcome"><img src="https://img.shields.io/badge/contributions-welcome-green.svg"></a>
@@ -195,7 +195,7 @@ curl -fsSL https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses
 - [For agents: harnesses.json, llms.txt, MCP server, agent templates](#for-agents)
 - [FAQ](#faq)
 - [Progressive disclosure harnesses](#progressive-disclosure-harnesses) _8 projects_
-- [Coding agent products (IDEs, CLIs, full suites)](#coding-agent-products-ides-clis-full-suites) _31 projects_
+- [Coding agent products (IDEs, CLIs, full suites)](#coding-agent-products-ides-clis-full-suites) _32 projects_
 - [Coding harness configs and SDKs](#coding-harness-configs-and-sdks) _18 projects_
 - [Personal agent runtimes](#personal-agent-runtimes) _14 projects_
 - [Frameworks](#frameworks) _26 projects_
@@ -278,6 +278,7 @@ _Turnkey coding agents you install and run: IDE extensions, terminal CLIs, Docke
 | 29 | <a name="orbi"></a>[**Orbi**](https://github.com/orbi-build/orbi) | [231](https://github.com/orbi-build/orbi/stargazers) | Self-hosted runner that takes a GitHub issue labeled `ai-ready` to a reviewed, merged pull request and a tagged release: each run gets its own branch and worktree, Pi writes the change, a separate review session checks it against the issue's acceptance criteria, and only the reviewed head merges. The **harness** contribution is the issue-to-release delivery and review gate on top of Pi; it does not own an agent loop. <sup>`python`</sup> | ✅ | slightly complex (issue-driven runner, review gate, systemd/launchd timer) | [One issue to release, recorded](https://github.com/orbi-build/orbi#the-loop-in-35-seconds) |
 | 30 | <a name="pi-rust"></a>[**rpi**](https://github.com/bigfish1913/pi-rust)&#8202;✱ | [148](https://github.com/bigfish1913/pi-rust/stargazers) | Rust coding-agent runtime that began as a reimplementation of Pi and now develops on its own. The embeddable **harness** owns a provider-agnostic streaming agent loop, tool execution, JSONL sessions that resume after a crash from the last committed frame, and a native plugin ABI; the terminal TUI is a shell over the same crates, and a deterministic offline provider covers tests. <sup>`memory` · `provider-agnostic` · `cli` · `tui` · `rust`</sup> | ✅ | slightly complex (embeddable Rust runtime, terminal agent, native plugins) | [Offline embedded agent example](https://github.com/bigfish1913/pi-rust/tree/main/examples/minimal) |
 | 31 | <a name="yylo"></a>[**YYLO**](https://github.com/yylo-dev/yylo) | [66](https://github.com/yylo-dev/yylo/stargazers) | Command-line orchestrator for coding agents (drives Pi and Codex subagents): every task gets a dedicated branch/worktree and a typed lifecycle — read-only preflight, risk-scaled merge-queue review, release-readiness gates — with receipt-backed changes. The **harness** contribution is the git-native task/merge orchestration layer on top of whichever agent executes; not an agent loop itself. <sup>`multi-agent` · `typescript`</sup> | ✅ | slightly complex (git-native task fleet, merge queue) | [Project README](https://github.com/yylo-dev/yylo#readme) |
+| 32 | <a name="mercurycli"></a>[**Mercury CLI**](https://github.com/Whq02/MercuryCLI)&#8202;✱ | [21](https://github.com/Whq02/MercuryCLI/stargazers) | Open-source TypeScript terminal coding agent for macOS, Linux, and Windows. The **harness** combines anchored multi-file edits, LSP navigation/refactoring, 23-language tree-sitter search/rewrites, a DAP debugger, hybrid RAG project memory with session handoff notes, and cross-provider crewmates in isolated git worktrees with file leases across 22 model providers plus local/rented GPU weights; the TUI, headless CLI (`mercury run` / `mercury runner`), and ACP server (`mercury acp`) are the shells. <sup>`memory` · `multi-agent` · `browser` · `sandbox` · `rag`</sup> | ✅ | slightly complex (terminal agent, worktree crewmates + file leases, LSP/DAP, 22 providers) | [Crewmates and git worktree isolation](https://github.com/Whq02/MercuryCLI/blob/main/docs/CREW.md) |
 
 ## Coding harness configs and SDKs
 
@@ -581,11 +582,11 @@ Harnesses designed for unattended runs, batches, and fleets: opencode, OpenHands
 
 ### Which agent harnesses survive a crash mid-task (durable)?
 
-Harnesses whose execution state persists across restarts: langgraph-bigtool, rpi, Ouroboros (Q00), QM, n8n, langgraph, mastra, letta.
+Harnesses whose execution state persists across restarts: langgraph-bigtool, rpi, Mercury CLI, Ouroboros (Q00), QM, n8n, langgraph, mastra.
 
 ### How many of these agent harnesses are open source?
 
-142 of 187 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.
+143 of 188 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.
 
 ### What is an agent harness?
 

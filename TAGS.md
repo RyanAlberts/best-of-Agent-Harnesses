@@ -1,13 +1,13 @@
 <!-- markdownlint-disable -->
 # Tags — cross-reference
 
-_Auto-generated from `scripts/generate.py`. 187 projects across 22 canonical tags. Edit projects in `generate.py` (not here) and rerun the script._
+_Auto-generated from `scripts/generate.py`. 188 projects across 22 canonical tags. Edit projects in `generate.py` (not here) and rerun the script._
 
 Tag chips appear next to each project in [README.md](README.md). This page lists every tag once with the projects that carry it, grouped by category and sorted by GitHub stars within each category.
 
 ## All tags
 
-[`mcp`](#mcp) (38) · [`memory`](#memory) (45) · [`multi-agent`](#multi-agent) (36) · [`evals`](#evals) (22) · [`voice`](#voice) (2) · [`vision`](#vision) (4) · [`browser`](#browser) (13) · [`sandbox`](#sandbox) (33) · [`low-code`](#low-code) (5) · [`rag`](#rag) (9) · [`tool-discovery`](#tool-discovery) (5) · [`training`](#training) (5) · [`workflow`](#workflow) (13) · [`typed`](#typed) (3) · [`local`](#local) (7) · [`provider-agnostic`](#provider-agnostic) (12) · [`cli`](#cli) (33) · [`ide`](#ide) (17) · [`tui`](#tui) (8) · [`rust`](#rust) (8) · [`python`](#python) (88) · [`typescript`](#typescript) (54)
+[`mcp`](#mcp) (38) · [`memory`](#memory) (46) · [`multi-agent`](#multi-agent) (37) · [`evals`](#evals) (22) · [`voice`](#voice) (2) · [`vision`](#vision) (4) · [`browser`](#browser) (14) · [`sandbox`](#sandbox) (34) · [`low-code`](#low-code) (5) · [`rag`](#rag) (10) · [`tool-discovery`](#tool-discovery) (5) · [`training`](#training) (5) · [`workflow`](#workflow) (13) · [`typed`](#typed) (3) · [`local`](#local) (7) · [`provider-agnostic`](#provider-agnostic) (12) · [`cli`](#cli) (34) · [`ide`](#ide) (17) · [`tui`](#tui) (9) · [`rust`](#rust) (8) · [`python`](#python) (88) · [`typescript`](#typescript) (55)
 
 ---
 
@@ -98,6 +98,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [jcode](https://github.com/1jehuang/jcode) — ⭐21.2k — Rust terminal coding agent pitched as the most RAM-efficient **harness** in its class; MCP support, multi-provider (Claude/OpenAI).
 - [cc-haha](https://github.com/NanmiCoder/cc-haha) — ⭐15.2k — Local-first desktop workspace **harness** for Claude Code and other agents: multi-agent sessions, Git worktrees, code diffs, a skill marketplace, and chat-app access (WeChat, Telegram, WhatsApp).
 - [rpi](https://github.com/bigfish1913/pi-rust) — ⭐148 — Rust coding-agent runtime that began as a reimplementation of Pi and now develops on its own. The embeddable **harness** owns a provider-agnostic streaming agent loop, tool execution, JSONL sessions that resume after a crash from the last committed frame, and a native plugin ABI; the terminal TUI is a shell over the same crates, and a deterministic offline provider covers tests.
+- [Mercury CLI](https://github.com/Whq02/MercuryCLI) — ⭐21 — Open-source TypeScript terminal coding agent for macOS, Linux, and Windows. The **harness** combines anchored multi-file edits, LSP navigation/refactoring, 23-language tree-sitter search/rewrites, a DAP debugger, hybrid RAG project memory with session handoff notes, and cross-provider crewmates in isolated git worktrees with file leases across 22 model providers plus local/rented GPU weights; the TUI, headless CLI (`mercury run` / `mercury runner`), and ACP server (`mercury acp`) are the shells.
 
 **Coding harness configs and SDKs**
 
@@ -174,6 +175,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [cc-haha](https://github.com/NanmiCoder/cc-haha) — ⭐15.2k — Local-first desktop workspace **harness** for Claude Code and other agents: multi-agent sessions, Git worktrees, code diffs, a skill marketplace, and chat-app access (WeChat, Telegram, WhatsApp).
 - [Proliferate](https://github.com/proliferate-ai/proliferate) — ⭐518 — Open-source AI IDE for Claude Code, Codex, OpenCode, and more. The **harness** contribution is the workspace/session orchestration layer: run multiple coding agents in parallel, locally or in the cloud, with isolated workspaces, reusable workflows, and shared team context.
 - [YYLO](https://github.com/yylo-dev/yylo) — ⭐66 — Command-line orchestrator for coding agents (drives Pi and Codex subagents): every task gets a dedicated branch/worktree and a typed lifecycle — read-only preflight, risk-scaled merge-queue review, release-readiness gates — with receipt-backed changes. The **harness** contribution is the git-native task/merge orchestration layer on top of whichever agent executes; not an agent loop itself.
+- [Mercury CLI](https://github.com/Whq02/MercuryCLI) — ⭐21 — Open-source TypeScript terminal coding agent for macOS, Linux, and Windows. The **harness** combines anchored multi-file edits, LSP navigation/refactoring, 23-language tree-sitter search/rewrites, a DAP debugger, hybrid RAG project memory with session handoff notes, and cross-provider crewmates in isolated git worktrees with file leases across 22 model providers plus local/rented GPU weights; the TUI, headless CLI (`mercury run` / `mercury runner`), and ACP server (`mercury acp`) are the shells.
 
 **Coding harness configs and SDKs**
 
@@ -304,6 +306,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [OpenHands](https://github.com/OpenHands/OpenHands) — ⭐91.8k — Dockerized software-engineering agent. The **harness** is the bash/editor/browser toolset with micro-agents and event-stream session bridging; Docker is the sandbox. Main OSS choice for teams self-hosting autonomous repo work.
 - [oh-my-pi](https://github.com/can1357/oh-my-pi) — ⭐36.6k — Terminal coding agent (fork of Pi) that wires the IDE into the **harness**: hash-anchored edits, a 32-tool loop tuned per-model, LSP rename/references/diagnostics on every write, a real DAP debugger (lldb/dlv/debugpy), long-lived Python + Bun execution kernels that call back into the agent's tools, browser control, and 40+ providers (Claude/OpenAI/Gemini/local). ~55k-line Rust core.
 - [Grok Build](https://github.com/xai-org/grok-build) — ⭐27.5k — SpaceXAI's terminal coding agent. The **harness** is a Rust agent runtime that edits files, runs shell commands, searches the web, and keeps workspace checkpoints; it runs in a full-screen TUI, headless for scripts and CI, or inside editors over the Agent Client Protocol. The public repo is synced from the company monorepo.
+- [Mercury CLI](https://github.com/Whq02/MercuryCLI) — ⭐21 — Open-source TypeScript terminal coding agent for macOS, Linux, and Windows. The **harness** combines anchored multi-file edits, LSP navigation/refactoring, 23-language tree-sitter search/rewrites, a DAP debugger, hybrid RAG project memory with session handoff notes, and cross-provider crewmates in isolated git worktrees with file leases across 22 model providers plus local/rented GPU weights; the TUI, headless CLI (`mercury run` / `mercury runner`), and ACP server (`mercury acp`) are the shells.
 
 **Personal agent runtimes**
 
@@ -347,6 +350,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [Symphony](https://github.com/openai/symphony) — ⭐27.8k — OpenAI's harness for fanning a task out into many isolated, autonomous coding-agent implementation runs and surfacing the ones that pass, so a team manages outcomes instead of supervising each session.
 - [AgentBox](https://github.com/madarco/agentbox) — ⭐558 — Runs multiple coding agents in parallel, each in its own sandboxed VM, locally or in the cloud, from one command. The **harness** contribution is the VM-per-agent isolation and fleet fan-out layer; whichever agent runs inside owns the loop.
 - [Proliferate](https://github.com/proliferate-ai/proliferate) — ⭐518 — Open-source AI IDE for Claude Code, Codex, OpenCode, and more. The **harness** contribution is the workspace/session orchestration layer: run multiple coding agents in parallel, locally or in the cloud, with isolated workspaces, reusable workflows, and shared team context.
+- [Mercury CLI](https://github.com/Whq02/MercuryCLI) — ⭐21 — Open-source TypeScript terminal coding agent for macOS, Linux, and Windows. The **harness** combines anchored multi-file edits, LSP navigation/refactoring, 23-language tree-sitter search/rewrites, a DAP debugger, hybrid RAG project memory with session handoff notes, and cross-provider crewmates in isolated git worktrees with file leases across 22 model providers plus local/rented GPU weights; the TUI, headless CLI (`mercury run` / `mercury runner`), and ACP server (`mercury acp`) are the shells.
 
 **Personal agent runtimes**
 
@@ -415,6 +419,10 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 **Progressive disclosure harnesses**
 
 - [Headroom](https://github.com/headroomlabs-ai/headroom) — ⭐77.8k — Compresses tool outputs, logs, files, and RAG chunks with content-aware compressors before they reach the model—claimed 20% fewer tokens for coding agents and 60–95% fewer for JSON, same answers. Ships as a library, HTTP proxy, or MCP server, so it drops in front of whatever harness you already run.
+
+**Coding agent products (IDEs, CLIs, full suites)**
+
+- [Mercury CLI](https://github.com/Whq02/MercuryCLI) — ⭐21 — Open-source TypeScript terminal coding agent for macOS, Linux, and Windows. The **harness** combines anchored multi-file edits, LSP navigation/refactoring, 23-language tree-sitter search/rewrites, a DAP debugger, hybrid RAG project memory with session handoff notes, and cross-provider crewmates in isolated git worktrees with file leases across 22 model providers plus local/rented GPU weights; the TUI, headless CLI (`mercury run` / `mercury runner`), and ACP server (`mercury acp`) are the shells.
 
 **Personal agent runtimes**
 
@@ -596,6 +604,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [Empryo](https://github.com/proxysoul/Empryo) — ⭐1.5k — Coding agent for the desktop, the terminal, and CI. The **harness** builds a repo map before each task (tree-sitter symbols, import graph, git co-change), edits by symbol through AST and LSP, then runs typecheck, lint, and tests in the same turn. This repo holds the public SoulForge v2 core under BUSL-1.1; the current Empryo v3 app is developed privately under its own license.
 - [Tianshu Harness](https://github.com/huiliyi37/Tianshu-harness) — ⭐1.2k — TypeScript coding-agent runtime shared by a terminal TUI, a desktop app, and a VS Code extension. The **harness** keeps each task's goal, scope, and success criteria in a task contract outside the chat history, blocks a claim of done until tests, a diff, or a verification command back it, and takes a git checkpoint before each turn's first edit. The main README is Chinese; an English README is linked.
 - [rpi](https://github.com/bigfish1913/pi-rust) — ⭐148 — Rust coding-agent runtime that began as a reimplementation of Pi and now develops on its own. The embeddable **harness** owns a provider-agnostic streaming agent loop, tool execution, JSONL sessions that resume after a crash from the last committed frame, and a native plugin ABI; the terminal TUI is a shell over the same crates, and a deterministic offline provider covers tests.
+- [Mercury CLI](https://github.com/Whq02/MercuryCLI) — ⭐21 — Open-source TypeScript terminal coding agent for macOS, Linux, and Windows. The **harness** combines anchored multi-file edits, LSP navigation/refactoring, 23-language tree-sitter search/rewrites, a DAP debugger, hybrid RAG project memory with session handoff notes, and cross-provider crewmates in isolated git worktrees with file leases across 22 model providers plus local/rented GPU weights; the TUI, headless CLI (`mercury run` / `mercury runner`), and ACP server (`mercury acp`) are the shells.
 
 **Coding harness configs and SDKs**
 
@@ -685,6 +694,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [Grok Build](https://github.com/xai-org/grok-build) — ⭐27.5k — SpaceXAI's terminal coding agent. The **harness** is a Rust agent runtime that edits files, runs shell commands, searches the web, and keeps workspace checkpoints; it runs in a full-screen TUI, headless for scripts and CI, or inside editors over the Agent Client Protocol. The public repo is synced from the company monorepo.
 - [Tianshu Harness](https://github.com/huiliyi37/Tianshu-harness) — ⭐1.2k — TypeScript coding-agent runtime shared by a terminal TUI, a desktop app, and a VS Code extension. The **harness** keeps each task's goal, scope, and success criteria in a task contract outside the chat history, blocks a claim of done until tests, a diff, or a verification command back it, and takes a git checkpoint before each turn's first edit. The main README is Chinese; an English README is linked.
 - [rpi](https://github.com/bigfish1913/pi-rust) — ⭐148 — Rust coding-agent runtime that began as a reimplementation of Pi and now develops on its own. The embeddable **harness** owns a provider-agnostic streaming agent loop, tool execution, JSONL sessions that resume after a crash from the last committed frame, and a native plugin ABI; the terminal TUI is a shell over the same crates, and a deterministic offline provider covers tests.
+- [Mercury CLI](https://github.com/Whq02/MercuryCLI) — ⭐21 — Open-source TypeScript terminal coding agent for macOS, Linux, and Windows. The **harness** combines anchored multi-file edits, LSP navigation/refactoring, 23-language tree-sitter search/rewrites, a DAP debugger, hybrid RAG project memory with session handoff notes, and cross-provider crewmates in isolated git worktrees with file leases across 22 model providers plus local/rented GPU weights; the TUI, headless CLI (`mercury run` / `mercury runner`), and ACP server (`mercury acp`) are the shells.
 
 ---
 
@@ -855,6 +865,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [claw-code-agent](https://github.com/HarnessLab/claw-code-agent) — ⭐547 — Python reimplementation of the Claude Code agent architecture with zero external dependencies; interactive chat, streaming, plugin runtime, nested agent delegation, cost tracking, MCP transport—portable harness without the Rust/TS toolchain.
 - [Proliferate](https://github.com/proliferate-ai/proliferate) — ⭐518 — Open-source AI IDE for Claude Code, Codex, OpenCode, and more. The **harness** contribution is the workspace/session orchestration layer: run multiple coding agents in parallel, locally or in the cloud, with isolated workspaces, reusable workflows, and shared team context.
 - [YYLO](https://github.com/yylo-dev/yylo) — ⭐66 — Command-line orchestrator for coding agents (drives Pi and Codex subagents): every task gets a dedicated branch/worktree and a typed lifecycle — read-only preflight, risk-scaled merge-queue review, release-readiness gates — with receipt-backed changes. The **harness** contribution is the git-native task/merge orchestration layer on top of whichever agent executes; not an agent loop itself.
+- [Mercury CLI](https://github.com/Whq02/MercuryCLI) — ⭐21 — Open-source TypeScript terminal coding agent for macOS, Linux, and Windows. The **harness** combines anchored multi-file edits, LSP navigation/refactoring, 23-language tree-sitter search/rewrites, a DAP debugger, hybrid RAG project memory with session handoff notes, and cross-provider crewmates in isolated git worktrees with file leases across 22 model providers plus local/rented GPU weights; the TUI, headless CLI (`mercury run` / `mercury runner`), and ACP server (`mercury acp`) are the shells.
 
 **Coding harness configs and SDKs**
 
@@ -1074,6 +1085,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [claw-code-agent](https://github.com/HarnessLab/claw-code-agent) — ⭐547 — Python reimplementation of the Claude Code agent architecture with zero external dependencies; interactive chat, streaming, plugin runtime, nested agent delegation, cost tracking, MCP transport—portable harness without the Rust/TS toolchain.
 - [Proliferate](https://github.com/proliferate-ai/proliferate) — ⭐518 — Open-source AI IDE for Claude Code, Codex, OpenCode, and more. The **harness** contribution is the workspace/session orchestration layer: run multiple coding agents in parallel, locally or in the cloud, with isolated workspaces, reusable workflows, and shared team context.
 - [YYLO](https://github.com/yylo-dev/yylo) — ⭐66 — Command-line orchestrator for coding agents (drives Pi and Codex subagents): every task gets a dedicated branch/worktree and a typed lifecycle — read-only preflight, risk-scaled merge-queue review, release-readiness gates — with receipt-backed changes. The **harness** contribution is the git-native task/merge orchestration layer on top of whichever agent executes; not an agent loop itself.
+- [Mercury CLI](https://github.com/Whq02/MercuryCLI) — ⭐21 — Open-source TypeScript terminal coding agent for macOS, Linux, and Windows. The **harness** combines anchored multi-file edits, LSP navigation/refactoring, 23-language tree-sitter search/rewrites, a DAP debugger, hybrid RAG project memory with session handoff notes, and cross-provider crewmates in isolated git worktrees with file leases across 22 model providers plus local/rented GPU weights; the TUI, headless CLI (`mercury run` / `mercury runner`), and ACP server (`mercury acp`) are the shells.
 
 **Coding harness configs and SDKs**
 
