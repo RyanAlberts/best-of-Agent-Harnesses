@@ -201,6 +201,10 @@ projects:
     github_id: bigfish1913/pi-rust
     labels: ["rust"]
     category: "coding-agent-products"
+  - name: Mercury CLI
+    github_id: Whq02/MercuryCLI
+    labels: ["javascript"]
+    category: "coding-agent-products"
   # Coding harness configs and SDKs
   - name: LoopTroop
     github_id: looptroop-ai/LoopTroop

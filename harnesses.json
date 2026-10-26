@@ -9,7 +9,7 @@
     "feed_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/feed.json",
     "license": "CC-BY-SA-4.0",
     "stars_captured": "2026-10-25",
-    "project_count": 187,
+    "project_count": 188,
     "graveyard_count": 4,
     "tiers": [
       "super simple",
@@ -370,13 +370,13 @@
     {
       "kind": "derived",
       "q": "Which agent harnesses survive a crash mid-task (durable)?",
-      "a": "Harnesses whose execution state persists across restarts: langgraph-bigtool, rpi, Ouroboros (Q00), QM, n8n, langgraph, mastra, letta.",
+      "a": "Harnesses whose execution state persists across restarts: langgraph-bigtool, rpi, Mercury CLI, Ouroboros (Q00), QM, n8n, langgraph, mastra.",
       "slug": "which-agent-harnesses-survive-a-crash-mid-task-durable"
     },
     {
       "kind": "derived",
       "q": "How many of these agent harnesses are open source?",
-      "a": "142 of 187 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
+      "a": "143 of 188 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
       "slug": "how-many-of-these-agent-harnesses-are-open-source"
     },
     {
@@ -423,7 +423,7 @@
     {
       "slug": "best-ai-agent-harnesses-2026",
       "title": "The best AI agent harnesses in 2026, ranked by category",
-      "summary": "These are the top three agent harnesses in each of the 12 categories of best-of-Agent-Harnesses, a hand-curated list of 187 harnesses re-ranked from live GitHub data every week; the stars below were captured 2026-10-25, and the page regenerates with every refresh.",
+      "summary": "These are the top three agent harnesses in each of the 12 categories of best-of-Agent-Harnesses, a hand-curated list of 188 harnesses re-ranked from live GitHub data every week; the stars below were captured 2026-10-25, and the page regenerates with every refresh.",
       "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/comparisons/best-ai-agent-harnesses-2026.md",
       "raw_url": "https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/comparisons/best-ai-agent-harnesses-2026.md"
     },
@@ -3183,6 +3183,42 @@
       "example": {
         "label": "Project README",
         "url": "https://github.com/yylo-dev/yylo#readme"
+      },
+      "deep_dive": null,
+      "archived": null
+    },
+    {
+      "name": "Mercury CLI",
+      "github_id": "Whq02/MercuryCLI",
+      "url": "https://github.com/Whq02/MercuryCLI",
+      "slug": "mercurycli",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#mercurycli",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/mercurycli/",
+      "description": "Open-source TypeScript terminal coding agent for macOS, Linux, and Windows. The **harness** combines anchored multi-file edits, LSP navigation/refactoring, 23-language tree-sitter search/rewrites, a DAP debugger, hybrid RAG project memory with session handoff notes, and cross-provider crewmates in isolated git worktrees with file leases across 22 model providers plus local/rented GPU weights; the TUI, headless CLI (`mercury run` / `mercury runner`), and ACP server (`mercury acp`) are the shells.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 21,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (terminal agent, worktree crewmates + file leases, LSP/DAP, 22 providers)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "durable",
+      "recovery_rank": 4,
+      "license_signal": "open-source",
+      "tags": [
+        "memory",
+        "multi-agent",
+        "browser",
+        "sandbox",
+        "rag",
+        "cli",
+        "tui",
+        "typescript"
+      ],
+      "example": {
+        "label": "Crewmates and git worktree isolation",
+        "url": "https://github.com/Whq02/MercuryCLI/blob/main/docs/CREW.md"
       },
       "deep_dive": null,
       "archived": null
