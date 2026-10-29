@@ -41,13 +41,13 @@
 <text x="231.2" y="800" text-anchor="middle" font-size="12" fill="#9ca3af">12 projects</text>
 <line x1="382.5" y1="168" x2="382.5" y2="750" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4 4"/>
 <text x="533.8" y="780" text-anchor="middle" font-size="15" font-weight="600" fill="#111827">mostly simple</text>
-<text x="533.8" y="800" text-anchor="middle" font-size="12" fill="#9ca3af">35 projects</text>
+<text x="533.8" y="800" text-anchor="middle" font-size="12" fill="#9ca3af">36 projects</text>
 <line x1="685.0" y1="168" x2="685.0" y2="750" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4 4"/>
 <text x="836.2" y="780" text-anchor="middle" font-size="15" font-weight="600" fill="#111827">slightly complex</text>
 <text x="836.2" y="800" text-anchor="middle" font-size="12" fill="#9ca3af">80 projects</text>
 <line x1="987.5" y1="168" x2="987.5" y2="750" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4 4"/>
 <text x="1138.8" y="780" text-anchor="middle" font-size="15" font-weight="600" fill="#111827">complex</text>
-<text x="1138.8" y="800" text-anchor="middle" font-size="12" fill="#9ca3af">61 projects</text>
+<text x="1138.8" y="800" text-anchor="middle" font-size="12" fill="#9ca3af">60 projects</text>
 <line x1="80" y1="750" x2="1290" y2="750" stroke="#d1d5db" stroke-width="1.5"/>
 <text x="685.0" y="830" text-anchor="middle" font-size="13" fill="#6b7280">←  less to adopt: a file format, one concept&#160;&#160;·&#160;&#160;simplicity ↔ capability&#160;&#160;·&#160;&#160;full platforms with their own runtime: more to adopt  →</text>
 <circle cx="316.4" cy="749.9" r="4.5" fill="#10b981" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>agentlog — ⭐1</title></circle>
@@ -92,7 +92,7 @@
 <circle cx="809.7" cy="447.4" r="4.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>agent-qa — ⭐894</title></circle>
 <circle cx="1213.3" cy="444.8" r="4.5" fill="#ec4899" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Desplega Agent Swarm — ⭐942</title></circle>
 <circle cx="747.4" cy="443.4" r="4.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Terminal-Bench — ⭐970</title></circle>
-<circle cx="1178.1" cy="439.2" r="4.5" fill="#ec4899" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>CUGA — ⭐1.1k</title></circle>
+<circle cx="573.1" cy="439.2" r="4.5" fill="#ec4899" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>CUGA — ⭐1.1k</title></circle>
 <circle cx="1201.3" cy="436.6" r="4.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>ClawBench — ⭐1.1k</title></circle>
 <circle cx="919.5" cy="436.0" r="4.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>WebVoyager — ⭐1.1k</title></circle>
 <circle cx="810.5" cy="434.8" r="4.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Tianshu Harness — ⭐1.2k</title></circle>

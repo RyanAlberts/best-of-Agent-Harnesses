@@ -500,7 +500,7 @@ PROJECTS: dict[str, list[Project]] = {
                 "complex (multi-agent, human-in-the-loop — product suite)", oss="❓", labels=["python"]),
         Project("CUGA", "cuga-project/cuga-agent",
                 "Open-source enterprise agent **harness**: a code-act loop in which the model writes Python that calls MCP, OpenAPI, and LangChain tools as functions inside a restricted sandbox, with results kept as variables, pre-execution verification, reflection, and tool shortlisting; CugaSupervisor coordinates multi-agent teams locally or over A2A, and runtime-enforced policies (intent guards, tool approvals, ToolGuard checks) gate what agents may do. Previously ranked #1 on the AppWorld and WebArena leaderboards; runs on open-weight or hosted models, including air-gapped deployments. Maintained by IBM and open to community contributions.",
-                "complex (code-act loop, supervisor, policies — product suite)", labels=["python"]),
+                "mostly simple (bring tools and policies; the harness runs the loop)", labels=["python"]),
         Project("omnigent", "omnigent-ai/omnigent",
                 "Open-source meta-**harness**: orchestrates Claude Code, Codex, Cursor, Pi, and custom agents behind one policy/sandboxing layer so teams swap harnesses without rewriting workflows.",
                 "complex (meta-harness, policy + sandboxing — product suite)", oss="❓", labels=["python"]),
