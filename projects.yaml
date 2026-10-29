@@ -465,6 +465,10 @@ projects:
     github_id: aden-hive/hive
     labels: ["python"]
     category: "multi-agent"
+  - name: CUGA
+    github_id: cuga-project/cuga-agent
+    labels: ["python"]
+    category: "multi-agent"
   - name: omnigent
     github_id: omnigent-ai/omnigent
     labels: ["python"]

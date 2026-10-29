@@ -9,7 +9,7 @@
     "feed_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/feed.json",
     "license": "CC-BY-SA-4.0",
     "stars_captured": "2026-10-25",
-    "project_count": 187,
+    "project_count": 188,
     "graveyard_count": 4,
     "tiers": [
       "super simple",
@@ -376,7 +376,7 @@
     {
       "kind": "derived",
       "q": "How many of these agent harnesses are open source?",
-      "a": "142 of 187 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
+      "a": "143 of 188 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
       "slug": "how-many-of-these-agent-harnesses-are-open-source"
     },
     {
@@ -423,7 +423,7 @@
     {
       "slug": "best-ai-agent-harnesses-2026",
       "title": "The best AI agent harnesses in 2026, ranked by category",
-      "summary": "These are the top three agent harnesses in each of the 12 categories of best-of-Agent-Harnesses, a hand-curated list of 187 harnesses re-ranked from live GitHub data every week; the stars below were captured 2026-10-25, and the page regenerates with every refresh.",
+      "summary": "These are the top three agent harnesses in each of the 12 categories of best-of-Agent-Harnesses, a hand-curated list of 188 harnesses re-ranked from live GitHub data every week; the stars below were captured 2026-10-25, and the page regenerates with every refresh.",
       "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/comparisons/best-ai-agent-harnesses-2026.md",
       "raw_url": "https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/comparisons/best-ai-agent-harnesses-2026.md"
     },
@@ -7179,6 +7179,38 @@
       "example": {
         "label": "Project README",
         "url": "https://github.com/Orkas-AI/Orkas#readme"
+      },
+      "deep_dive": null,
+      "archived": null
+    },
+    {
+      "name": "CUGA",
+      "github_id": "cuga-project/cuga-agent",
+      "url": "https://github.com/cuga-project/cuga-agent",
+      "slug": "cuga-agent",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#cuga-agent",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/cuga-agent/",
+      "description": "Open-source enterprise agent **harness**: a code-act loop in which the model writes Python that calls MCP, OpenAPI, and LangChain tools as functions inside a restricted sandbox, with results kept as variables, pre-execution verification, reflection, and tool shortlisting; CugaSupervisor coordinates multi-agent teams locally or over A2A, and runtime-enforced policies (intent guards, tool approvals, ToolGuard checks) gate what agents may do. Previously ranked #1 on the AppWorld and WebArena leaderboards; runs on open-weight or hosted models, including air-gapped deployments. Maintained by IBM and open to community contributions.",
+      "category": "multi-agent",
+      "category_title": "Multi-agent and orchestration",
+      "stars": 1055,
+      "tier": "complex",
+      "tier_rank": 4,
+      "axis": "complex (code-act loop, supervisor, policies — product suite)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "open-source",
+      "tags": [
+        "mcp",
+        "multi-agent",
+        "sandbox",
+        "python"
+      ],
+      "example": {
+        "label": "Example apps",
+        "url": "https://github.com/cuga-project/cuga-apps"
       },
       "deep_dive": null,
       "archived": null
