@@ -11,7 +11,7 @@
     "name": "Ryan Alberts",
     "url": "https://github.com/RyanAlberts"
   },
-  "dateModified": "2026-10-25",
+  "dateModified": "2026-11-01",
   "keywords": [
     "agent harness",
     "AI agents",
@@ -1284,11 +1284,11 @@
         "position": 105,
         "item": {
           "@type": "SoftwareApplication",
-          "name": "hive",
-          "url": "https://github.com/aden-hive/hive",
-          "description": "Self-hosted multi-agent **harness** aimed at production workloads: human-in-the-loop checkpoints and a self-improving agent loop, distinct from single-session coding-agent shells.",
+          "name": "omnigent",
+          "url": "https://github.com/omnigent-ai/omnigent",
+          "description": "Open-source meta-**harness**: orchestrates Claude Code, Codex, Cursor, Pi, and custom agents behind one policy/sandboxing layer so teams swap harnesses without rewriting workflows.",
           "applicationCategory": "DeveloperApplication",
-          "keywords": "multi-agent, python"
+          "keywords": "sandbox, ide, python"
         }
       },
       {
@@ -1296,11 +1296,11 @@
         "position": 106,
         "item": {
           "@type": "SoftwareApplication",
-          "name": "omnigent",
-          "url": "https://github.com/omnigent-ai/omnigent",
-          "description": "Open-source meta-**harness**: orchestrates Claude Code, Codex, Cursor, Pi, and custom agents behind one policy/sandboxing layer so teams swap harnesses without rewriting workflows.",
+          "name": "hive",
+          "url": "https://github.com/aden-hive/hive",
+          "description": "Self-hosted multi-agent **harness** aimed at production workloads: human-in-the-loop checkpoints and a self-improving agent loop, distinct from single-session coding-agent shells.",
           "applicationCategory": "DeveloperApplication",
-          "keywords": "sandbox, ide, python"
+          "keywords": "multi-agent, python"
         }
       },
       {
@@ -1320,6 +1320,18 @@
         "position": 108,
         "item": {
           "@type": "SoftwareApplication",
+          "name": "Orkas",
+          "url": "https://github.com/Orkas-AI/Orkas",
+          "description": "Local-first desktop AI team. The **harness** is a Commander agent that turns one chat goal into a plan and runs specialist agents in parallel or in sequence, with tool approvals, session checkpoints, tool-round budgets and idle watchdogs for stalled runs, durable per-agent memory, and support for built-in or external agent runtimes.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "memory, multi-agent, typescript"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 109,
+        "item": {
+          "@type": "SoftwareApplication",
           "name": "Open Multi-Agent",
           "url": "https://github.com/open-multi-agent/open-multi-agent",
           "description": "Self-hosted TypeScript multi-agent runtime. The **harness** is a coordinator that plans a task DAG from one goal at runtime and a deterministic scheduler that runs specialized agents, with durable approvals that pause before a plan, task, or tool call, PostgreSQL-backed checkpoints for restart recovery, and a verifiable run journal for replay; `runTasks()` keeps the graph fixed when the topology must not change.",
@@ -1329,7 +1341,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 109,
+        "position": 110,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Raven",
@@ -1341,7 +1353,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 110,
+        "position": 111,
         "item": {
           "@type": "SoftwareApplication",
           "name": "AG2",
@@ -1353,7 +1365,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 111,
+        "position": 112,
         "item": {
           "@type": "SoftwareApplication",
           "name": "HarnessRouter",
@@ -1365,7 +1377,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 112,
+        "position": 113,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Agent Teams AI",
@@ -1373,18 +1385,6 @@
           "description": "Desktop app that runs a team of coding agents (Claude Code, Codex, OpenCode, Cursor, Copilot, and others) on a kanban board: agents take tasks, message each other, and review each other's work before it is accepted. The **harness** contribution is the team-coordination layer over existing agent CLIs, with per-action approval or full autonomy; the kanban board is the shell.",
           "applicationCategory": "DeveloperApplication",
           "keywords": "multi-agent, ide, typescript"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 113,
-        "item": {
-          "@type": "SoftwareApplication",
-          "name": "Orkas",
-          "url": "https://github.com/Orkas-AI/Orkas",
-          "description": "Local-first desktop AI team. The **harness** is a Commander agent that turns one chat goal into a plan and runs specialist agents in parallel or in sequence, with tool approvals, session checkpoints, tool-round budgets and idle watchdogs for stalled runs, durable per-agent memory, and support for built-in or external agent runtimes.",
-          "applicationCategory": "DeveloperApplication",
-          "keywords": "memory, multi-agent, typescript"
         }
       },
       {
@@ -1824,11 +1824,11 @@
         "position": 150,
         "item": {
           "@type": "SoftwareApplication",
-          "name": "WebVoyager",
-          "url": "https://github.com/MinorJerry/WebVoyager",
-          "description": "End-to-end web agent with LMMs: screenshots + actions on real sites; benchmark on 15 sites, GPT-4V for automatic eval.",
+          "name": "ClawBench",
+          "url": "https://github.com/TIGER-AI-Lab/ClawBench",
+          "description": "Open web-agent evaluation **harness**: runs selectable agents in isolated Docker containers across 153 live-site tasks (plus 130 in V2), intercepts irreversible requests, and records video, screenshots, HTTP traffic, actions, and agent messages for replayable scoring.",
           "applicationCategory": "DeveloperApplication",
-          "keywords": "evals, vision"
+          "keywords": "evals, vision, sandbox, python"
         }
       },
       {
@@ -1836,11 +1836,11 @@
         "position": 151,
         "item": {
           "@type": "SoftwareApplication",
-          "name": "ClawBench",
-          "url": "https://github.com/TIGER-AI-Lab/ClawBench",
-          "description": "Open web-agent evaluation **harness**: runs selectable agents in isolated Docker containers across 153 live-site tasks (plus 130 in V2), intercepts irreversible requests, and records video, screenshots, HTTP traffic, actions, and agent messages for replayable scoring.",
+          "name": "WebVoyager",
+          "url": "https://github.com/MinorJerry/WebVoyager",
+          "description": "End-to-end web agent with LMMs: screenshots + actions on real sites; benchmark on 15 sites, GPT-4V for automatic eval.",
           "applicationCategory": "DeveloperApplication",
-          "keywords": "evals, vision, sandbox, python"
+          "keywords": "evals, vision"
         }
       },
       {

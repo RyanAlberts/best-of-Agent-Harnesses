@@ -60,6 +60,16 @@
     ]
   },
   {
+    "login": "claudiusthebot",
+    "contributions": [
+      {
+        "kind": "pr",
+        "number": 38,
+        "title": "Add Talon"
+      }
+    ]
+  },
+  {
     "login": "madarco",
     "contributions": [
       {
@@ -201,6 +211,31 @@
         "kind": "pr",
         "number": 61,
         "title": "Pin mcp<2 to retain pre-2.0 fastmcp import path"
+      }
+    ]
+  },
+  {
+    "login": "Ben-Home",
+    "contributions": [
+      {
+        "kind": "issue",
+        "number": 62,
+        "title": "Add CorpusIQ — MCP server for business data (Stripe, GA4, Shopify, 36 APIs)"
+      },
+      {
+        "kind": "issue",
+        "number": 63,
+        "title": "Add CorpusIQ — MCP server for business data (Stripe, GA4, Shopify, 36 APIs)"
+      },
+      {
+        "kind": "issue",
+        "number": 77,
+        "title": "Add project: CorpusIQ"
+      },
+      {
+        "kind": "issue",
+        "number": 85,
+        "title": "Add CorpusIQ — MCP server for business data (Stripe, GA4, Shopify, 36 APIs)"
       }
     ]
   },
@@ -681,6 +716,66 @@
         "kind": "pr",
         "number": 148,
         "title": "Add Scalekit to Libraries and SDKs"
+      }
+    ]
+  },
+  {
+    "login": "nmamano",
+    "contributions": [
+      {
+        "kind": "issue",
+        "number": 149,
+        "title": "Add project: Isomux"
+      }
+    ]
+  },
+  {
+    "login": "Whq02",
+    "contributions": [
+      {
+        "kind": "pr",
+        "number": 150,
+        "title": "Add project: Mercury CLI"
+      }
+    ]
+  },
+  {
+    "login": "naman485",
+    "contributions": [
+      {
+        "kind": "pr",
+        "number": 151,
+        "title": "docs: add CreateOS Sandbox to sandboxed code execution comparison"
+      }
+    ]
+  },
+  {
+    "login": "ArtAndrew",
+    "contributions": [
+      {
+        "kind": "issue",
+        "number": 152,
+        "title": "Add project: RunVerge"
+      }
+    ]
+  },
+  {
+    "login": "laredo",
+    "contributions": [
+      {
+        "kind": "pr",
+        "number": 153,
+        "title": "Add CUGA (cuga-project/cuga-agent) to Multi-agent and orchestration"
+      }
+    ]
+  },
+  {
+    "login": "lanbass869-cell",
+    "contributions": [
+      {
+        "kind": "issue",
+        "number": 154,
+        "title": "Add MemTether — governed cross-client memory MCP server (audit chain, bi-temporal, local SQLite)"
       }
     ]
   }
