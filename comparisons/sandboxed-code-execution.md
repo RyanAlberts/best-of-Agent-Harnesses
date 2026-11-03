@@ -46,6 +46,7 @@ The wider field includes closed products, and in this category they matter. Isol
 | [Daytona](https://github.com/daytonaio/daytona) | Hosted | Containers, optional stronger runtimes | Fastest measured cold starts; ⚠️ public repo unmaintained since June 2026 (below) |
 | [Vercel Sandbox](https://vercel.com/docs/vercel-sandbox) | Hosted | Firecracker microVMs | Bills active CPU time rather than sandbox lifetime |
 | [Runtime](https://withruntime.com/docs/pricing) | Hosted API | Firecracker microVMs | Bills active CPU ($0.025 per vCPU-hour) plus memory, with no plan fee; idle sandboxes pause with memory kept, and E2B SDK code runs after [one import change](https://withruntime.com/docs/e2b-alternative) (checked 2026-10-23) |
+| [CreateOS Sandbox](https://createos.sh) | Hosted API (NodeOps) | Firecracker microVMs | Agent sandboxes with pause/resume, private networking, egress controls, SDK/CLI/MCP |
 | [Cloudflare Sandboxes](https://developers.cloudflare.com/sandbox) | Hosted (edge) | Containers | Sandboxes next to Workers, for edge-shaped apps |
 | [AWS Bedrock AgentCore](https://aws.amazon.com/bedrock/agentcore/) | Managed, your AWS account | Managed sandbox | The enterprise-AWS answer, code interpreter included |
 | [GKE Agent Sandbox](https://cloud.google.com/blog/products/containers-kubernetes/agentic-ai-on-kubernetes-and-gke/) | Your GKE cluster | gVisor | GA May 2026; Google's launch claims 300 sandbox starts per second |
