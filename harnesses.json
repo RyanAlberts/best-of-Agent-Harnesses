@@ -9,8 +9,8 @@
     "feed_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/feed.json",
     "license": "CC-BY-SA-4.0",
     "stars_captured": "2026-11-01",
-    "project_count": 188,
-    "graveyard_count": 4,
+    "project_count": 192,
+    "graveyard_count": 3,
     "tiers": [
       "super simple",
       "mostly simple",
@@ -376,7 +376,7 @@
     {
       "kind": "derived",
       "q": "How many of these agent harnesses are open source?",
-      "a": "143 of 188 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
+      "a": "147 of 192 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
       "slug": "how-many-of-these-agent-harnesses-are-open-source"
     },
     {
@@ -423,7 +423,7 @@
     {
       "slug": "best-ai-agent-harnesses-2026",
       "title": "The best AI agent harnesses in 2026, ranked by category",
-      "summary": "These are the top three agent harnesses in each of the 12 categories of best-of-Agent-Harnesses, a hand-curated list of 188 harnesses re-ranked from live GitHub data every week; the stars below were captured 2026-11-01, and the page regenerates with every refresh.",
+      "summary": "These are the top three agent harnesses in each of the 12 categories of best-of-Agent-Harnesses, a hand-curated list of 192 harnesses re-ranked from live GitHub data every week; the stars below were captured 2026-11-01, and the page regenerates with every refresh.",
       "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/comparisons/best-ai-agent-harnesses-2026.md",
       "raw_url": "https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/comparisons/best-ai-agent-harnesses-2026.md"
     },
@@ -3396,6 +3396,36 @@
       "example": {
         "label": "Project README",
         "url": "https://github.com/addyosmani/agent-skills#readme"
+      },
+      "deep_dive": null,
+      "archived": null
+    },
+    {
+      "name": "oh-my-openagent",
+      "github_id": "code-yeongyu/oh-my-openagent",
+      "url": "https://github.com/code-yeongyu/oh-my-openagent",
+      "slug": "oh-my-openagent",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#oh-my-openagent",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/oh-my-openagent/",
+      "description": "Orchestration layer over OpenCode: multi-model agent roles, skills, and an ultrawork (\"ulw\") keyword that fans a prompt into planned, parallel agent runs. The **harness** contribution is the role/skill pipeline; OpenCode's TUI is the shell.",
+      "category": "coding-harness-configs",
+      "category_title": "Coding harness configs and SDKs",
+      "stars": 70576,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (config + orchestration over OpenCode)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "none",
+      "recovery_rank": 1,
+      "license_signal": "open-source",
+      "tags": [
+        "tui",
+        "typescript"
+      ],
+      "example": {
+        "label": "OmO README",
+        "url": "https://github.com/code-yeongyu/oh-my-openagent#readme"
       },
       "deep_dive": null,
       "archived": null
@@ -6656,6 +6686,36 @@
       "archived": null
     },
     {
+      "name": "herdr",
+      "github_id": "herdrdev/herdr",
+      "url": "https://github.com/herdrdev/herdr",
+      "slug": "herdr",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#herdr",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/herdr/",
+      "description": "Rust terminal multiplexer that acts as the runtime your coding agents live on: the **harness** is whichever CLI agent you run (Claude Code, Codex, etc.), and herdr supplies the session, pane, and orchestration shell around many of them in parallel.",
+      "category": "multi-agent",
+      "category_title": "Multi-agent and orchestration",
+      "stars": 47279,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (terminal runtime for parallel CLI agents)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [
+        "cli",
+        "rust"
+      ],
+      "example": {
+        "label": "Herdr README",
+        "url": "https://github.com/herdrdev/herdr#readme"
+      },
+      "deep_dive": null,
+      "archived": null
+    },
+    {
       "name": "ChatDev",
       "github_id": "OpenBMB/ChatDev",
       "url": "https://github.com/OpenBMB/ChatDev",
@@ -6775,6 +6835,35 @@
           "evidence": "https://raw.githubusercontent.com/openai/openai-agents-python/main/README.md"
         }
       },
+      "archived": null
+    },
+    {
+      "name": "cmux",
+      "github_id": "manaflow-ai/cmux",
+      "url": "https://github.com/manaflow-ai/cmux",
+      "slug": "cmux",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#cmux",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/cmux/",
+      "description": "Ghostty-based macOS terminal with vertical tabs and notifications for running many coding agents side by side. Pure UI shell: the agent **harness** is whichever CLI (Claude Code, Codex, Gemini, OpenCode) you launch inside it.",
+      "category": "multi-agent",
+      "category_title": "Multi-agent and orchestration",
+      "stars": 28633,
+      "tier": "mostly simple",
+      "tier_rank": 2,
+      "axis": "mostly simple (terminal shell, macOS)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [
+        "cli"
+      ],
+      "example": {
+        "label": "cmux README",
+        "url": "https://github.com/manaflow-ai/cmux#readme"
+      },
+      "deep_dive": null,
       "archived": null
     },
     {
@@ -9253,6 +9342,35 @@
       "archived": null
     },
     {
+      "name": "Daytona",
+      "github_id": "daytonaio/daytona",
+      "url": "https://github.com/daytonaio/daytona",
+      "slug": "daytona",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#daytona",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/daytona/",
+      "description": "Elastic dev environments for AI-generated code: workspaces, Git, previews—infra harness between \"the model wrote a patch\" and \"it ran in a real machine.\" ⚠️ Public repo unmaintained since June 2026: core development moved to a private codebase (final open release v0.190.0, AGPL-3.0).",
+      "category": "libraries-sdks",
+      "category_title": "Libraries and SDKs",
+      "stars": 71407,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (dev env API, isolation)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [
+        "sandbox"
+      ],
+      "example": {
+        "label": "Charts in sandbox",
+        "url": "https://github.com/daytonaio/daytona/tree/main/examples/python/charts"
+      },
+      "deep_dive": null,
+      "archived": "2026-10-04"
+    },
+    {
       "name": "LiteLLM",
       "github_id": "BerriAI/litellm",
       "url": "https://github.com/BerriAI/litellm",
@@ -9691,13 +9809,6 @@
       "reason": "suspected star manipulation — ~228k stars / ~35k forks on a repo created 2026-01 with no matching install base, dependents, or discussion; fork-to-star ratio and growth curve are inconsistent with organic adoption"
     },
     {
-      "github_id": "daytonaio/daytona",
-      "name": "Daytona",
-      "last_stars": 71407,
-      "since": "2026-10-04",
-      "reason": "archived upstream — kept for citation"
-    },
-    {
       "github_id": "spring-ai-community/spring-ai-tool-search-tool",
       "name": "spring-ai-tool-search-tool",
       "last_stars": 77,
@@ -9714,6 +9825,18 @@
   ],
   "radar": [
     {
+      "github_id": "stablyai/orca",
+      "stars": 112327,
+      "desc": "Orca is the place for working with a fleet of agents (e.g. Grok Bot, Claude Code). Run any coding agent with your own subscription. Available on desktop, mob…",
+      "via": "weekly discovery"
+    },
+    {
+      "github_id": "paperclipai/paperclip",
+      "stars": 109828,
+      "desc": "The open-source app everyone uses to manage agents at work",
+      "via": "weekly discovery"
+    },
+    {
       "github_id": "Fosowl/agenticSeek",
       "stars": 27596,
       "desc": "Fully Local Manus AI. No APIs, No $200 monthly bills. Enjoy an autonomous agent that thinks, browses the web, and code for the sole cost of electricity.",
@@ -9723,6 +9846,18 @@
       "github_id": "RightNow-AI/openfang",
       "stars": 18244,
       "desc": "Open-source Agent Operating System",
+      "via": "weekly discovery"
+    },
+    {
+      "github_id": "HKUDS/DeepCode",
+      "stars": 16781,
+      "desc": "\"DeepCode: Open Agentic Coding (Agent Harness & Loop Engineering & Multi-Agent Orchestration)\"",
+      "via": "weekly discovery"
+    },
+    {
+      "github_id": "mindfold-ai/Trellis",
+      "stars": 15078,
+      "desc": "The best agent harness.",
       "via": "weekly discovery"
     },
     {
@@ -9756,6 +9891,12 @@
       "via": "weekly discovery"
     },
     {
+      "github_id": "truefoundry/trueforge",
+      "stars": 6414,
+      "desc": "The open-source agent harness - the runtime layer that turns an LLM into a working agent.",
+      "via": "weekly discovery"
+    },
+    {
       "github_id": "agentscope-ai/agentscope-java",
       "stars": 6205,
       "desc": "Build distributed, production-grade, long-running agents.",
@@ -9765,6 +9906,12 @@
       "github_id": "cloudflare/vibesdk",
       "stars": 5446,
       "desc": "An open-source vibe coding platform that helps you build your own vibe-coding platform, built entirely on Cloudflare stack",
+      "via": "weekly discovery"
+    },
+    {
+      "github_id": "Waishnav/devspace",
+      "stars": 5357,
+      "desc": "Minimal Coding Agent Harness on MCP for ChatGPT, Claude, Hermes, Grok Bot, OpenClaw",
       "via": "weekly discovery"
     },
     {
@@ -9814,6 +9961,12 @@
       "stars": 53,
       "desc": "Proactive memory CLI for AI agents: recall, maintain, and evolve persistent, source-grounded knowledge across sessions.",
       "via": "community · issue #79"
+    },
+    {
+      "github_id": "nmamano/isomux",
+      "stars": 42,
+      "desc": "Multi-device, multi-user, multi-agent collaboration UI for Claude Code agents.",
+      "via": "community · issue #149"
     },
     {
       "github_id": "msaleme/red-team-blue-team-agent-fabric",

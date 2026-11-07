@@ -280,6 +280,9 @@ PROJECTS: dict[str, list[Project]] = {
                 "slightly complex (embeddable Rust runtime, terminal agent, native plugins)", labels=["rust"]),
     ],
     "coding-harness-configs": [
+        Project("oh-my-openagent", "code-yeongyu/oh-my-openagent",
+                "Orchestration layer over OpenCode: multi-model agent roles, skills, and an ultrawork (\"ulw\") keyword that fans a prompt into planned, parallel agent runs. The **harness** contribution is the role/skill pipeline; OpenCode's TUI is the shell.",
+                "slightly complex (config + orchestration over OpenCode)", labels=["javascript"]),
         Project("LoopTroop", "looptroop-ai/LoopTroop",
                 "Config layer that chains LLM councils for planning, Ralph loops for iterative refinement, and OpenCode worktrees for shipping. The **harness** contribution is the council → loop → worktree pipeline; OpenCode underneath executes.",
                 "mostly simple (config pipeline over OpenCode)", labels=["javascript"]),
@@ -465,6 +468,12 @@ PROJECTS: dict[str, list[Project]] = {
                 "complex (modular pipelines, RAG + agents — product suite)", labels=["python"]),
     ],
     "multi-agent": [
+        Project("herdr", "herdrdev/herdr",
+                "Rust terminal multiplexer that acts as the runtime your coding agents live on: the **harness** is whichever CLI agent you run (Claude Code, Codex, etc.), and herdr supplies the session, pane, and orchestration shell around many of them in parallel.",
+                "slightly complex (terminal runtime for parallel CLI agents)", labels=[]),
+        Project("cmux", "manaflow-ai/cmux",
+                "Ghostty-based macOS terminal with vertical tabs and notifications for running many coding agents side by side. Pure UI shell: the agent **harness** is whichever CLI (Claude Code, Codex, Gemini, OpenCode) you launch inside it.",
+                "mostly simple (terminal shell, macOS)", labels=[]),
         Project("openai-agents-python", "openai/openai-agents-python",
                 "Handoffs, guardrails, and multi-LLM routing; minimal surface so you own the loop.",
                 "mostly simple (minimal surface)", labels=["python"]),
@@ -763,6 +772,9 @@ PROJECTS: dict[str, list[Project]] = {
 # Examples link: official docs, examples folder, leaderboard, or paper —
 # whichever is the most useful "show me it in action" link for that project.
 META: dict[str, tuple[int, str, str]] = {
+    "herdrdev/herdr": (47279, "https://github.com/herdrdev/herdr#readme", "Herdr README"),
+    "manaflow-ai/cmux": (28633, "https://github.com/manaflow-ai/cmux#readme", "cmux README"),
+    "code-yeongyu/oh-my-openagent": (70576, "https://github.com/code-yeongyu/oh-my-openagent#readme", "OmO README"),
     # progressive-disclosure
     "agentsmd/agents.md": (25262, "https://github.com/agentsmd/agents.md/blob/main/AGENTS.md", "Self-hosting AGENTS.md"),
     "PatrickJS/awesome-cursorrules": (41078, "https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/pytorch-scikit-learn-cursorrules-prompt-file.mdc", "PyTorch cursorrules"),
@@ -995,6 +1007,10 @@ KEEP_DESPITE_ARCHIVED: "set[str]" = {
     # widely referenced/forked (see Kilo Code, its direct successor, added
     # this cycle). Historically important enough to keep out of the Graveyard.
     "RooCodeInc/Roo-Code",
+    # 71k+ stars; the open-source cloud sandbox runtime many agent harnesses
+    # target for isolated execution; archived upstream 2026-10-04 but still
+    # the reference point in the sandboxed-code-execution comparison.
+    "daytonaio/daytona",
     # 55k+ stars, the low-code sibling to Langflow and one of the most
     # widely deployed drag-and-drop LLM/agent builders; archived upstream
     # 2026-08-16 but still the reference point for the "no-code flow" genre.
@@ -1080,6 +1096,15 @@ CONTRIBUTORS: "list[tuple[str, str]]" = load_contributors()
 # graduates by becoming a Project above (it then drops off the radar
 # automatically) or gets unpinned.
 RADAR: "list[dict]" = [
+    # 2026-11-07 pass: submissions and candidates not yet clearing the bar.
+    {"id": "nmamano/isomux", "via": "community · issue #149", "stars": 42,
+     "desc": "Multi-device, multi-user, multi-agent collaboration UI for Claude Code agents."},
+    {"id": "paperclipai/paperclip", "via": "weekly discovery"},
+    {"id": "stablyai/orca", "via": "weekly discovery"},
+    {"id": "mindfold-ai/Trellis", "via": "weekly discovery"},
+    {"id": "truefoundry/trueforge", "via": "weekly discovery"},
+    {"id": "Waishnav/devspace", "via": "weekly discovery"},
+    {"id": "HKUDS/DeepCode", "via": "weekly discovery"},
     {"id": "bytedance/deer-flow", "via": "weekly discovery"},
     {"id": "plandex-ai/plandex", "via": "weekly discovery"},
     {"id": "evalstate/fast-agent", "via": "weekly discovery"},
@@ -1234,6 +1259,9 @@ AXES: "dict[str, tuple[str, str]]" = {
     # progressive-disclosure
     "PatrickJS/awesome-cursorrules": ("n/a", "n/a"),
     "agentsmd/agents.md": ("n/a", "n/a"),
+    "herdrdev/herdr": ("n/a", "n/a"),
+    "manaflow-ai/cmux": ("n/a", "n/a"),
+    "code-yeongyu/oh-my-openagent": ("bounded", "none"),
     "langchain-ai/langgraph-bigtool": ("bounded", "durable"),
     "xfey/MCP-Zero": ("bounded", "none"),
     "Reason-Wang/ToolGen": ("n/a", "n/a"),
