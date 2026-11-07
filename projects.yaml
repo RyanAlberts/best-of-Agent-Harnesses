@@ -202,6 +202,10 @@ projects:
     labels: ["rust"]
     category: "coding-agent-products"
   # Coding harness configs and SDKs
+  - name: oh-my-openagent
+    github_id: code-yeongyu/oh-my-openagent
+    labels: ["javascript"]
+    category: "coding-harness-configs"
   - name: LoopTroop
     github_id: looptroop-ai/LoopTroop
     labels: ["javascript"]
@@ -421,6 +425,12 @@ projects:
     labels: ["python"]
     category: "frameworks"
   # Multi-agent and orchestration
+  - name: herdr
+    github_id: herdrdev/herdr
+    category: "multi-agent"
+  - name: cmux
+    github_id: manaflow-ai/cmux
+    category: "multi-agent"
   - name: openai-agents-python
     github_id: openai/openai-agents-python
     labels: ["python"]
@@ -766,6 +776,9 @@ projects:
     category: "libraries-sdks"
   - name: Agent Sandbox
     github_id: kubernetes-sigs/agent-sandbox
+    category: "libraries-sdks"
+  - name: Daytona
+    github_id: daytonaio/daytona
     category: "libraries-sdks"
   - name: Community-curated agent lists
     github_id: brandonhimpfen/awesome-ai-agents

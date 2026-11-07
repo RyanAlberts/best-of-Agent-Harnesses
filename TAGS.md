@@ -1,13 +1,13 @@
 <!-- markdownlint-disable -->
 # Tags — cross-reference
 
-_Auto-generated from `scripts/generate.py`. 188 projects across 22 canonical tags. Edit projects in `generate.py` (not here) and rerun the script._
+_Auto-generated from `scripts/generate.py`. 192 projects across 22 canonical tags. Edit projects in `generate.py` (not here) and rerun the script._
 
 Tag chips appear next to each project in [README.md](README.md). This page lists every tag once with the projects that carry it, grouped by category and sorted by GitHub stars within each category.
 
 ## All tags
 
-[`mcp`](#mcp) (39) · [`memory`](#memory) (45) · [`multi-agent`](#multi-agent) (37) · [`evals`](#evals) (22) · [`voice`](#voice) (2) · [`vision`](#vision) (4) · [`browser`](#browser) (13) · [`sandbox`](#sandbox) (34) · [`low-code`](#low-code) (5) · [`rag`](#rag) (9) · [`tool-discovery`](#tool-discovery) (5) · [`training`](#training) (5) · [`workflow`](#workflow) (13) · [`typed`](#typed) (3) · [`local`](#local) (7) · [`provider-agnostic`](#provider-agnostic) (12) · [`cli`](#cli) (33) · [`ide`](#ide) (17) · [`tui`](#tui) (8) · [`rust`](#rust) (8) · [`python`](#python) (89) · [`typescript`](#typescript) (54)
+[`mcp`](#mcp) (39) · [`memory`](#memory) (45) · [`multi-agent`](#multi-agent) (37) · [`evals`](#evals) (22) · [`voice`](#voice) (2) · [`vision`](#vision) (4) · [`browser`](#browser) (13) · [`sandbox`](#sandbox) (35) · [`low-code`](#low-code) (5) · [`rag`](#rag) (9) · [`tool-discovery`](#tool-discovery) (5) · [`training`](#training) (5) · [`workflow`](#workflow) (13) · [`typed`](#typed) (3) · [`local`](#local) (7) · [`provider-agnostic`](#provider-agnostic) (12) · [`cli`](#cli) (35) · [`ide`](#ide) (17) · [`tui`](#tui) (9) · [`rust`](#rust) (9) · [`python`](#python) (89) · [`typescript`](#typescript) (55)
 
 ---
 
@@ -390,6 +390,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 **Libraries and SDKs**
 
+- [Daytona](https://github.com/daytonaio/daytona) — ⭐71.4k — Elastic dev environments for AI-generated code: workspaces, Git, previews—infra harness between "the model wrote a patch" and "it ran in a real machine." ⚠️ Public repo unmaintained since June 2026: core development moved to a private codebase (final open release v0.190.0, AGPL-3.0).
 - [Composio](https://github.com/ComposioHQ/composio) — ⭐30.9k — 1,000+ toolkits with auth, tool search, and a sandboxed workbench—drop-in tool layer so agents stop reinventing OAuth + integrations. Python and TypeScript.
 - [deepagents](https://github.com/langchain-ai/deepagents) — ⭐30.9k — LangChain's Python+TypeScript agent harness on top of LangGraph: planning tool, virtual filesystem, shell sandbox, sub-agent spawning—the "Claude Code-style" harness as a reusable library.
 - [smolagents](https://github.com/huggingface/smolagents) — ⭐30.2k — Code-as-action agents: model outputs Python executed in sandbox (E2B, Modal, etc.); ~1k LOC core.
@@ -616,6 +617,8 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 **Multi-agent and orchestration**
 
+- [herdr](https://github.com/herdrdev/herdr) — ⭐47.3k — Rust terminal multiplexer that acts as the runtime your coding agents live on: the **harness** is whichever CLI agent you run (Claude Code, Codex, etc.), and herdr supplies the session, pane, and orchestration shell around many of them in parallel.
+- [cmux](https://github.com/manaflow-ai/cmux) — ⭐28.6k — Ghostty-based macOS terminal with vertical tabs and notifications for running many coding agents side by side. Pure UI shell: the agent **harness** is whichever CLI (Claude Code, Codex, Gemini, OpenCode) you launch inside it.
 - [Raven](https://github.com/EverMind-AI/Raven) — ⭐6k — EverMind's host agent, with its loop split into memory, planning, capability, and action modules. The **harness** plans complex tasks as DAGs and orchestrates built-in research, coding, design, and on-call agents plus third-party agents (Claude Code, Codex, OpenClaw, Hermes Agent) over ACP, CLI, or OpenAI-compatible APIs, with long-term memory; labeled pre-alpha, with tagged releases since v0.1.0.
 - [GraphCode](https://github.com/scgopi/GraphCode) — ⭐149 — macOS canvas that runs Claude Code, Codex CLI, Copilot CLI, and OpenCode sessions as nodes on a graph. The **harness** is the graph itself: each loop is typed by what ends it (a turn, a shell predicate or declared goal, a cadence, or a sub-graph), hand-off and spawn edges fire when a loop resolves, and a launchd daemon keeps sessions alive across app quits and reboots; the agent CLIs own their inner loops.
 
@@ -689,6 +692,10 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [Tianshu Harness](https://github.com/huiliyi37/Tianshu-harness) — ⭐1.2k — TypeScript coding-agent runtime shared by a terminal TUI, a desktop app, and a VS Code extension. The **harness** keeps each task's goal, scope, and success criteria in a task contract outside the chat history, blocks a claim of done until tests, a diff, or a verification command back it, and takes a git checkpoint before each turn's first edit. The main README is Chinese; an English README is linked.
 - [rpi](https://github.com/bigfish1913/pi-rust) — ⭐179 — Rust coding-agent runtime that began as a reimplementation of Pi and now develops on its own. The embeddable **harness** owns a provider-agnostic streaming agent loop, tool execution, JSONL sessions that resume after a crash from the last committed frame, and a native plugin ABI; the terminal TUI is a shell over the same crates, and a deterministic offline provider covers tests.
 
+**Coding harness configs and SDKs**
+
+- [oh-my-openagent](https://github.com/code-yeongyu/oh-my-openagent) — ⭐70.6k — Orchestration layer over OpenCode: multi-model agent roles, skills, and an ultrawork ("ulw") keyword that fans a prompt into planned, parallel agent runs. The **harness** contribution is the role/skill pipeline; OpenCode's TUI is the shell.
+
 ---
 
 ## `rust`
@@ -703,6 +710,10 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [jcode](https://github.com/1jehuang/jcode) — ⭐21.4k — Rust terminal coding agent pitched as the most RAM-efficient **harness** in its class; MCP support, multi-provider (Claude/OpenAI).
 - [claw-code-agent](https://github.com/HarnessLab/claw-code-agent) — ⭐547 — Python reimplementation of the Claude Code agent architecture with zero external dependencies; interactive chat, streaming, plugin runtime, nested agent delegation, cost tracking, MCP transport—portable harness without the Rust/TS toolchain.
 - [rpi](https://github.com/bigfish1913/pi-rust) — ⭐179 — Rust coding-agent runtime that began as a reimplementation of Pi and now develops on its own. The embeddable **harness** owns a provider-agnostic streaming agent loop, tool execution, JSONL sessions that resume after a crash from the last committed frame, and a native plugin ABI; the terminal TUI is a shell over the same crates, and a deterministic offline provider covers tests.
+
+**Multi-agent and orchestration**
+
+- [herdr](https://github.com/herdrdev/herdr) — ⭐47.3k — Rust terminal multiplexer that acts as the runtime your coding agents live on: the **harness** is whichever CLI agent you run (Claude Code, Codex, etc.), and herdr supplies the session, pane, and orchestration shell around many of them in parallel.
 
 ---
 
@@ -863,6 +874,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 **Coding harness configs and SDKs**
 
 - [GStack](https://github.com/garrytan/gstack) — ⭐139k — Garry Tan's Claude Code skill stack: 23 slash-command modes (CEO/eng/design review, QA, ship, browse, retro, …) that structure one assistant as a virtual engineering team. Daily driver while running YC.
+- [oh-my-openagent](https://github.com/code-yeongyu/oh-my-openagent) — ⭐70.6k — Orchestration layer over OpenCode: multi-model agent roles, skills, and an ultrawork ("ulw") keyword that fans a prompt into planned, parallel agent runs. The **harness** contribution is the role/skill pipeline; OpenCode's TUI is the shell.
 - [Claude Agent SDK](https://github.com/anthropics/claude-agent-sdk-python) — ⭐8.4k — Official Anthropic SDK (Python + [TypeScript](https://github.com/anthropics/claude-agent-sdk-typescript), [demos](https://github.com/anthropics/claude-agent-sdk-demos), [quickstarts](https://github.com/anthropics/claude-quickstarts)): built-in tools, MCP, long-running coding agents with session bridging.
 - [LoopTroop](https://github.com/looptroop-ai/LoopTroop) — ⭐167 — Config layer that chains LLM councils for planning, Ralph loops for iterative refinement, and OpenCode worktrees for shipping. The **harness** contribution is the council → loop → worktree pipeline; OpenCode underneath executes.
 
@@ -1083,6 +1095,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 **Coding harness configs and SDKs**
 
 - [GStack](https://github.com/garrytan/gstack) — ⭐139k — Garry Tan's Claude Code skill stack: 23 slash-command modes (CEO/eng/design review, QA, ship, browse, retro, …) that structure one assistant as a virtual engineering team. Daily driver while running YC.
+- [oh-my-openagent](https://github.com/code-yeongyu/oh-my-openagent) — ⭐70.6k — Orchestration layer over OpenCode: multi-model agent roles, skills, and an ultrawork ("ulw") keyword that fans a prompt into planned, parallel agent runs. The **harness** contribution is the role/skill pipeline; OpenCode's TUI is the shell.
 - [Claude Agent SDK](https://github.com/anthropics/claude-agent-sdk-python) — ⭐8.4k — Official Anthropic SDK (Python + [TypeScript](https://github.com/anthropics/claude-agent-sdk-typescript), [demos](https://github.com/anthropics/claude-agent-sdk-demos), [quickstarts](https://github.com/anthropics/claude-quickstarts)): built-in tools, MCP, long-running coding agents with session bridging.
 - [LoopTroop](https://github.com/looptroop-ai/LoopTroop) — ⭐167 — Config layer that chains LLM councils for planning, Ralph loops for iterative refinement, and OpenCode worktrees for shipping. The **harness** contribution is the council → loop → worktree pipeline; OpenCode underneath executes.
 
