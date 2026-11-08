@@ -11,7 +11,7 @@
     "name": "Ryan Alberts",
     "url": "https://github.com/RyanAlberts"
   },
-  "dateModified": "2026-11-01",
+  "dateModified": "2026-11-08",
   "keywords": [
     "agent harness",
     "AI agents",
@@ -276,11 +276,11 @@
         "position": 21,
         "item": {
           "@type": "SoftwareApplication",
-          "name": "crush",
-          "url": "https://github.com/charmbracelet/crush",
-          "description": "Charm's terminal coding agent (Charm's fork of the original OpenCode). The **harness** is the tool-calling loop with session persistence; the Bubble Tea TUI is the shell.",
+          "name": "qwen-code",
+          "url": "https://github.com/QwenLM/qwen-code",
+          "description": "Alibaba's official terminal coding agent, forked from Gemini CLI's agent loop and retuned for Qwen models. The **harness** is the same sandboxed tool-call loop as its upstream; the terminal is the shell.",
           "applicationCategory": "DeveloperApplication",
-          "keywords": "memory, cli, tui"
+          "keywords": "sandbox, cli, typescript"
         }
       },
       {
@@ -288,11 +288,11 @@
         "position": 22,
         "item": {
           "@type": "SoftwareApplication",
-          "name": "qwen-code",
-          "url": "https://github.com/QwenLM/qwen-code",
-          "description": "Alibaba's official terminal coding agent, forked from Gemini CLI's agent loop and retuned for Qwen models. The **harness** is the same sandboxed tool-call loop as its upstream; the terminal is the shell.",
+          "name": "crush",
+          "url": "https://github.com/charmbracelet/crush",
+          "description": "Charm's terminal coding agent (Charm's fork of the original OpenCode). The **harness** is the tool-calling loop with session persistence; the Bubble Tea TUI is the shell.",
           "applicationCategory": "DeveloperApplication",
-          "keywords": "sandbox, cli, typescript"
+          "keywords": "memory, cli, tui"
         }
       },
       {
@@ -792,11 +792,11 @@
         "position": 64,
         "item": {
           "@type": "SoftwareApplication",
-          "name": "Eliza",
-          "url": "https://github.com/elizaOS/eliza",
-          "description": "Open \"agentic operating system\" (elizaOS): persistent multi-agent runtime with character files, a plugin ecosystem, and social/platform integrations — the harness behind a large share of autonomous social agents.",
+          "name": "Agent Zero",
+          "url": "https://github.com/agent0ai/agent-zero",
+          "description": "Organic, prompt-defined personal agent framework: hierarchical sub-agents, persistent memory, browser and code tools, and self-modifying behavior; runs in Docker with a web UI.",
           "applicationCategory": "DeveloperApplication",
-          "keywords": "memory, multi-agent, typescript"
+          "keywords": "memory, multi-agent, browser, sandbox, python"
         }
       },
       {
@@ -804,11 +804,11 @@
         "position": 65,
         "item": {
           "@type": "SoftwareApplication",
-          "name": "Agent Zero",
-          "url": "https://github.com/agent0ai/agent-zero",
-          "description": "Organic, prompt-defined personal agent framework: hierarchical sub-agents, persistent memory, browser and code tools, and self-modifying behavior; runs in Docker with a web UI.",
+          "name": "Eliza",
+          "url": "https://github.com/elizaOS/eliza",
+          "description": "Open \"agentic operating system\" (elizaOS): persistent multi-agent runtime with character files, a plugin ecosystem, and social/platform integrations — the harness behind a large share of autonomous social agents.",
           "applicationCategory": "DeveloperApplication",
-          "keywords": "memory, multi-agent, browser, sandbox, python"
+          "keywords": "memory, multi-agent, typescript"
         }
       },
       {
@@ -2136,11 +2136,11 @@
         "position": 176,
         "item": {
           "@type": "SoftwareApplication",
-          "name": "Composio",
-          "url": "https://github.com/ComposioHQ/composio",
-          "description": "1,000+ toolkits with auth, tool search, and a sandboxed workbench—drop-in tool layer so agents stop reinventing OAuth + integrations. Python and TypeScript.",
+          "name": "deepagents",
+          "url": "https://github.com/langchain-ai/deepagents",
+          "description": "LangChain's Python+TypeScript agent harness on top of LangGraph: planning tool, virtual filesystem, shell sandbox, sub-agent spawning—the \"Claude Code-style\" harness as a reusable library.",
           "applicationCategory": "DeveloperApplication",
-          "keywords": "sandbox, tool-discovery, python, typescript"
+          "keywords": "multi-agent, sandbox, python, typescript"
         }
       },
       {
@@ -2148,11 +2148,11 @@
         "position": 177,
         "item": {
           "@type": "SoftwareApplication",
-          "name": "deepagents",
-          "url": "https://github.com/langchain-ai/deepagents",
-          "description": "LangChain's Python+TypeScript agent harness on top of LangGraph: planning tool, virtual filesystem, shell sandbox, sub-agent spawning—the \"Claude Code-style\" harness as a reusable library.",
+          "name": "Composio",
+          "url": "https://github.com/ComposioHQ/composio",
+          "description": "1,000+ toolkits with auth, tool search, and a sandboxed workbench—drop-in tool layer so agents stop reinventing OAuth + integrations. Python and TypeScript.",
           "applicationCategory": "DeveloperApplication",
-          "keywords": "multi-agent, sandbox, python, typescript"
+          "keywords": "sandbox, tool-discovery, python, typescript"
         }
       },
       {

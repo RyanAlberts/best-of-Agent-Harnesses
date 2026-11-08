@@ -778,5 +778,15 @@
         "title": "Add MemTether — governed cross-client memory MCP server (audit chain, bi-temporal, local SQLite)"
       }
     ]
+  },
+  {
+    "login": "Kortix-seo",
+    "contributions": [
+      {
+        "kind": "issue",
+        "number": 155,
+        "title": "Add project: Kortix"
+      }
+    ]
   }
 ]

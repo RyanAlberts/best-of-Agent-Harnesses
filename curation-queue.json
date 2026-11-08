@@ -1,865 +1,875 @@
 {
-  "generated": "2026-11-01",
+  "generated": "2026-11-08",
   "movers": [
     {
       "id": "agentsmd/agents.md",
-      "from": 25104,
-      "to": 25262
+      "from": 25262,
+      "to": 25395
     },
     {
       "id": "PatrickJS/awesome-cursorrules",
-      "from": 41022,
-      "to": 41078
+      "from": 41078,
+      "to": 41134
     },
     {
-      "id": "mksglu/context-mode",
-      "from": 32206,
-      "to": 33125
-    },
-    {
-      "id": "headroomlabs-ai/headroom",
-      "from": 77794,
-      "to": 78540
-    },
-    {
-      "id": "can1357/oh-my-pi",
-      "from": 36563,
-      "to": 37418
-    },
-    {
-      "id": "PrimeIntellect-ai/prime-agent",
-      "from": 22322,
-      "to": 22490
-    },
-    {
-      "id": "earendil-works/pi",
-      "from": 117753,
-      "to": 119319
-    },
-    {
-      "id": "madarco/agentbox",
-      "from": 558,
-      "to": 565
-    },
-    {
-      "id": "proliferate-ai/proliferate",
-      "from": 518,
+      "id": "xfey/MCP-Zero",
+      "from": 517,
       "to": 519
     },
     {
+      "id": "spring-ai-community/spring-ai-tool-search-tool",
+      "from": 77,
+      "to": 78
+    },
+    {
+      "id": "Reason-Wang/ToolGen",
+      "from": 184,
+      "to": 185
+    },
+    {
+      "id": "mksglu/context-mode",
+      "from": 33125,
+      "to": 33692
+    },
+    {
+      "id": "headroomlabs-ai/headroom",
+      "from": 78540,
+      "to": 79145
+    },
+    {
+      "id": "can1357/oh-my-pi",
+      "from": 37418,
+      "to": 38237
+    },
+    {
+      "id": "PrimeIntellect-ai/prime-agent",
+      "from": 22490,
+      "to": 22620
+    },
+    {
+      "id": "earendil-works/pi",
+      "from": 119319,
+      "to": 120805
+    },
+    {
+      "id": "madarco/agentbox",
+      "from": 565,
+      "to": 572
+    },
+    {
       "id": "cline/cline",
-      "from": 70854,
-      "to": 71169
+      "from": 71169,
+      "to": 71463
     },
     {
       "id": "RooCodeInc/Roo-Code",
-      "from": 24263,
-      "to": 24256
+      "from": 24256,
+      "to": 24237
     },
     {
       "id": "openai/codex",
-      "from": 130875,
-      "to": 132701
+      "from": 132701,
+      "to": 133775
     },
     {
       "id": "google-gemini/gemini-cli",
-      "from": 108379,
-      "to": 108650
+      "from": 108650,
+      "to": 108780
     },
     {
       "id": "charmbracelet/crush",
-      "from": 28808,
-      "to": 28908
+      "from": 28908,
+      "to": 29000
     },
     {
       "id": "anomalyco/opencode",
-      "from": 221461,
-      "to": 223782
+      "from": 223782,
+      "to": 225476
     },
     {
       "id": "OpenHands/OpenHands",
-      "from": 91806,
-      "to": 92425
+      "from": 92425,
+      "to": 92961
     },
     {
       "id": "aaif-goose/goose",
-      "from": 55696,
-      "to": 56078
+      "from": 56078,
+      "to": 56362
+    },
+    {
+      "id": "HarnessLab/claw-code-agent",
+      "from": 547,
+      "to": 548
     },
     {
       "id": "QwenLM/qwen-code",
-      "from": 28712,
-      "to": 28857
+      "from": 28857,
+      "to": 29098
     },
     {
       "id": "Kilo-Org/kilocode",
-      "from": 27748,
-      "to": 27827
+      "from": 27827,
+      "to": 27906
     },
     {
       "id": "openai/symphony",
-      "from": 27812,
-      "to": 27887
+      "from": 27887,
+      "to": 27977
     },
     {
       "id": "BloopAI/vibe-kanban",
-      "from": 28448,
-      "to": 28551
+      "from": 28551,
+      "to": 28620
     },
     {
       "id": "eigent-ai/eigent",
-      "from": 15658,
-      "to": 15710
+      "from": 15710,
+      "to": 15770
     },
     {
       "id": "esengine/DeepSeek-Reasonix",
-      "from": 35960,
-      "to": 36027
+      "from": 36027,
+      "to": 36135
     },
     {
       "id": "1jehuang/jcode",
-      "from": 21199,
-      "to": 21392
+      "from": 21392,
+      "to": 21617
     },
     {
       "id": "NanmiCoder/cc-haha",
-      "from": 15163,
-      "to": 15262
+      "from": 15262,
+      "to": 15353
     },
     {
       "id": "deepseek-ai/deepseek-harness",
-      "from": 261294,
-      "to": 268228
+      "from": 268228,
+      "to": 276370
     },
     {
       "id": "xai-org/grok-build",
-      "from": 27543,
-      "to": 27649
+      "from": 27649,
+      "to": 27713
     },
     {
       "id": "codewhale-hq/Codewhale",
-      "from": 41116,
-      "to": 41165
+      "from": 41165,
+      "to": 41157
     },
     {
       "id": "proxysoul/Empryo",
-      "from": 1453,
-      "to": 1509
+      "from": 1509,
+      "to": 1581
     },
     {
       "id": "huiliyi37/Tianshu-harness",
-      "from": 1153,
-      "to": 1244
+      "from": 1244,
+      "to": 1325
     },
     {
       "id": "orbi-build/orbi",
-      "from": 231,
-      "to": 240
+      "from": 240,
+      "to": 247
     },
     {
       "id": "bigfish1913/pi-rust",
-      "from": 148,
-      "to": 179
+      "from": 179,
+      "to": 228
     },
     {
       "id": "looptroop-ai/LoopTroop",
-      "from": 164,
-      "to": 167
+      "from": 167,
+      "to": 171
     },
     {
       "id": "open-gsd/gsd-core",
-      "from": 10848,
-      "to": 11124
+      "from": 11124,
+      "to": 11350
     },
     {
       "id": "garrytan/gstack",
-      "from": 137660,
-      "to": 138569
+      "from": 138569,
+      "to": 140756
     },
     {
       "id": "affaan-m/ECC",
-      "from": 288630,
-      "to": 294628
+      "from": 294628,
+      "to": 299570
     },
     {
       "id": "obra/superpowers",
-      "from": 304934,
-      "to": 310514
+      "from": 310514,
+      "to": 314487
     },
     {
       "id": "anthropics/claude-agent-sdk-python",
-      "from": 8346,
-      "to": 8402
+      "from": 8402,
+      "to": 8489
     },
     {
       "id": "aiming-lab/AutoHarness",
-      "from": 456,
-      "to": 465
+      "from": 465,
+      "to": 468
+    },
+    {
+      "id": "QuantaAlpha/RepoMaster",
+      "from": 556,
+      "to": 555
     },
     {
       "id": "SWE-agent/SWE-agent",
-      "from": 20635,
-      "to": 20703
+      "from": 20703,
+      "to": 20760
     },
     {
       "id": "HKUDS/OpenHarness",
-      "from": 16090,
-      "to": 16149
+      "from": 16149,
+      "to": 16189
     },
     {
       "id": "anthropics/skills",
-      "from": 183702,
-      "to": 186253
+      "from": 186253,
+      "to": 189403
     },
     {
       "id": "google/agents-cli",
-      "from": 6172,
-      "to": 6275
+      "from": 6275,
+      "to": 6319
     },
     {
       "id": "iflytek/skillhub",
-      "from": 5287,
-      "to": 5351
+      "from": 5351,
+      "to": 5376
     },
     {
       "id": "hesreallyhim/awesome-claude-code",
-      "from": 56506,
-      "to": 57037
+      "from": 57037,
+      "to": 57536
     },
     {
       "id": "addyosmani/agent-skills",
-      "from": 110423,
-      "to": 112492
+      "from": 112492,
+      "to": 114062
     },
     {
       "id": "OthmanAdi/planning-with-files",
-      "from": 27638,
-      "to": 27804
+      "from": 27804,
+      "to": 27951
     },
     {
       "id": "stanford-iris-lab/meta-harness",
-      "from": 1713,
-      "to": 1735
+      "from": 1735,
+      "to": 1757
     },
     {
       "id": "Q00/ouroboros",
-      "from": 6274,
-      "to": 6302
+      "from": 6302,
+      "to": 6336
     },
     {
       "id": "langchain-ai/langgraph",
-      "from": 43876,
-      "to": 44275
+      "from": 44275,
+      "to": 44656
     },
     {
       "id": "langchain-ai/langchain",
-      "from": 148421,
-      "to": 148824
+      "from": 148824,
+      "to": 149204
     },
     {
       "id": "run-llama/llama_index",
-      "from": 52660,
-      "to": 52771
+      "from": 52771,
+      "to": 52847
     },
     {
       "id": "microsoft/semantic-kernel",
-      "from": 28697,
-      "to": 28725
+      "from": 28725,
+      "to": 28747
     },
     {
       "id": "mastra-ai/mastra",
-      "from": 29067,
-      "to": 29256
+      "from": 29256,
+      "to": 29411
     },
     {
       "id": "agno-agi/agno",
-      "from": 42886,
-      "to": 43007
+      "from": 43007,
+      "to": 43109
     },
     {
       "id": "letta-ai/letta",
-      "from": 25253,
-      "to": 25316
+      "from": 25316,
+      "to": 25388
     },
     {
       "id": "langflow-ai/langflow",
-      "from": 156014,
-      "to": 156223
+      "from": 156223,
+      "to": 156441
     },
     {
       "id": "RasaHQ/rasa",
-      "from": 21357,
-      "to": 21364
+      "from": 21364,
+      "to": 21374
     },
     {
       "id": "botpress/botpress",
-      "from": 14967,
-      "to": 14973
+      "from": 14973,
+      "to": 14985
     },
     {
       "id": "langgenius/dify",
-      "from": 159505,
-      "to": 160166
+      "from": 160166,
+      "to": 160676
     },
     {
       "id": "n8n-io/n8n",
-      "from": 208562,
-      "to": 209286
+      "from": 209286,
+      "to": 209832
     },
     {
       "id": "Significant-Gravitas/AutoGPT",
-      "from": 187746,
-      "to": 187856
+      "from": 187856,
+      "to": 187945
     },
     {
       "id": "myshell-ai/AIlice",
-      "from": 1418,
-      "to": 1421
+      "from": 1421,
+      "to": 1419
     },
     {
       "id": "HKUDS/nanobot",
-      "from": 49345,
-      "to": 49729
+      "from": 49729,
+      "to": 49932
     },
     {
       "id": "zhayujie/CowAgent",
-      "from": 47579,
-      "to": 47732
+      "from": 47732,
+      "to": 47836
     },
     {
       "id": "Mintplex-Labs/anything-llm",
-      "from": 67538,
-      "to": 67819
+      "from": 67819,
+      "to": 68066
     },
     {
       "id": "i-am-bee/beeai-framework",
-      "from": 3443,
-      "to": 3447
+      "from": 3447,
+      "to": 3454
     },
     {
       "id": "2FastLabs/agent-squad",
-      "from": 7794,
-      "to": 7795
+      "from": 7795,
+      "to": 7802
     },
     {
       "id": "superagentxai/superagentx",
-      "from": 202,
-      "to": 203
+      "from": 203,
+      "to": 207
     },
     {
       "id": "openclaw/openclaw",
-      "from": 393027,
-      "to": 393633
+      "from": 393633,
+      "to": 394198
     },
     {
       "id": "yc-software/qm",
-      "from": 15533,
-      "to": 15597
+      "from": 15597,
+      "to": 15655
     },
     {
       "id": "open-jarvis/OpenJarvis",
-      "from": 12036,
-      "to": 12853
+      "from": 12853,
+      "to": 13916
     },
     {
       "id": "NousResearch/hermes-agent",
-      "from": 257003,
-      "to": 259442
+      "from": 259442,
+      "to": 261691
     },
     {
       "id": "thefalconry/talon",
-      "from": 74,
-      "to": 77
+      "from": 77,
+      "to": 70
     },
     {
       "id": "razzant/ouroboros",
-      "from": 1585,
-      "to": 1596
+      "from": 1596,
+      "to": 1620
     },
     {
       "id": "openinterpreter/openinterpreter",
-      "from": 68671,
-      "to": 68772
+      "from": 68772,
+      "to": 68839
     },
     {
       "id": "FoundationAgents/MetaGPT",
-      "from": 71014,
-      "to": 71125
+      "from": 71125,
+      "to": 71218
     },
     {
       "id": "OpenBMB/ChatDev",
-      "from": 34587,
-      "to": 34637
+      "from": 34637,
+      "to": 34706
     },
     {
       "id": "microsoft/agent-framework",
-      "from": 14313,
-      "to": 14476
+      "from": 14476,
+      "to": 14589
     },
     {
       "id": "khoj-ai/khoj",
-      "from": 37822,
-      "to": 37930
+      "from": 37930,
+      "to": 38068
     },
     {
       "id": "elizaOS/eliza",
-      "from": 19652,
-      "to": 19748
+      "from": 19748,
+      "to": 19792
     },
     {
       "id": "agent0ai/agent-zero",
-      "from": 19563,
-      "to": 19626
-    },
-    {
-      "id": "OpenBMB/AgentVerse",
-      "from": 5159,
-      "to": 5167
+      "from": 19626,
+      "to": 19799
     },
     {
       "id": "SciPhi-AI/R2R",
-      "from": 8043,
-      "to": 8054
+      "from": 8054,
+      "to": 8072
     },
     {
       "id": "google/adk-python",
-      "from": 22003,
-      "to": 22072
+      "from": 22072,
+      "to": 22145
     },
     {
       "id": "agentstack-ai/AgentStack",
-      "from": 2196,
-      "to": 2198
+      "from": 2198,
+      "to": 2199
     },
     {
       "id": "howl-anderson/agentsilex",
-      "from": 458,
-      "to": 459
+      "from": 459,
+      "to": 458
     },
     {
       "id": "FlowiseAI/Flowise",
-      "from": 55527,
-      "to": 55541
+      "from": 55541,
+      "to": 55564
     },
     {
       "id": "browser-use/browser-use",
-      "from": 119106,
-      "to": 119757
+      "from": 119757,
+      "to": 120328
     },
     {
       "id": "browserbase/stagehand",
-      "from": 25806,
-      "to": 25898
+      "from": 25898,
+      "to": 25983
     },
     {
       "id": "TencentCloudADP/youtu-agent",
-      "from": 4628,
-      "to": 4630
+      "from": 4630,
+      "to": 4634
     },
     {
       "id": "deepset-ai/haystack",
-      "from": 26841,
-      "to": 26900
+      "from": 26900,
+      "to": 26942
     },
     {
       "id": "ag2ai/ag2",
-      "from": 5020,
-      "to": 5038
+      "from": 5038,
+      "to": 5053
     },
     {
       "id": "openai/openai-agents-python",
-      "from": 30274,
-      "to": 30435
+      "from": 30435,
+      "to": 30558
     },
     {
       "id": "crewAIInc/crewAI",
-      "from": 60089,
-      "to": 60384
+      "from": 60384,
+      "to": 60649
     },
     {
       "id": "microsoft/autogen",
-      "from": 61558,
-      "to": 61662
+      "from": 61662,
+      "to": 61749
     },
     {
       "id": "MervinPraison/PraisonAI",
-      "from": 9292,
-      "to": 9312
+      "from": 9312,
+      "to": 9327
     },
     {
       "id": "THUDM/AgentRL",
-      "from": 361,
-      "to": 364
+      "from": 364,
+      "to": 366
     },
     {
       "id": "aden-hive/hive",
-      "from": 11122,
-      "to": 11132
+      "from": 11132,
+      "to": 11145
+    },
+    {
+      "id": "cuga-project/cuga-agent",
+      "from": 1055,
+      "to": 1140
     },
     {
       "id": "omnigent-ai/omnigent",
-      "from": 11039,
-      "to": 11157
+      "from": 11157,
+      "to": 11285
     },
     {
       "id": "777genius/agent-teams-ai",
-      "from": 2322,
-      "to": 2383
+      "from": 2383,
+      "to": 2447
     },
     {
       "id": "open-multi-agent/open-multi-agent",
-      "from": 7023,
-      "to": 7041
+      "from": 7041,
+      "to": 7051
     },
     {
       "id": "Orkas-AI/Orkas",
-      "from": 2169,
-      "to": 7154
-    },
-    {
-      "id": "plasma-ai/fractal",
-      "from": 786,
-      "to": 789
+      "from": 7154,
+      "to": 9106
     },
     {
       "id": "razzant/claudexor",
-      "from": 517,
-      "to": 520
+      "from": 520,
+      "to": 523
     },
     {
       "id": "scgopi/GraphCode",
-      "from": 145,
-      "to": 149
+      "from": 149,
+      "to": 155
     },
     {
       "id": "HarnessRouter/harnessrouter",
-      "from": 3618,
-      "to": 3823
+      "from": 3823,
+      "to": 4292
     },
     {
       "id": "desplega-ai/agent-swarm",
-      "from": 942,
-      "to": 980
+      "from": 980,
+      "to": 1030
+    },
+    {
+      "id": "aai-labs/agent-barn",
+      "from": 110,
+      "to": 111
     },
     {
       "id": "EverMind-AI/Raven",
-      "from": 5815,
-      "to": 5958
+      "from": 5958,
+      "to": 6114
     },
     {
       "id": "Aider-AI/aider",
-      "from": 49748,
-      "to": 49882
+      "from": 49882,
+      "to": 50023
     },
     {
       "id": "thedotmack/claude-mem",
-      "from": 103033,
-      "to": 108935
+      "from": 108935,
+      "to": 114804
     },
     {
       "id": "modelcontextprotocol/python-sdk",
-      "from": 24666,
-      "to": 24728
+      "from": 24728,
+      "to": 24801
     },
     {
       "id": "modelcontextprotocol/typescript-sdk",
-      "from": 13651,
-      "to": 13693
+      "from": 13693,
+      "to": 13730
     },
     {
       "id": "continuedev/continue",
-      "from": 36320,
-      "to": 36395
+      "from": 36395,
+      "to": 36430
     },
     {
       "id": "modelcontextprotocol/inspector",
-      "from": 11145,
-      "to": 11207
+      "from": 11207,
+      "to": 11255
     },
     {
       "id": "github/github-mcp-server",
-      "from": 33942,
-      "to": 34138
+      "from": 34138,
+      "to": 34322
     },
     {
       "id": "modelcontextprotocol/registry",
-      "from": 7409,
-      "to": 7424
+      "from": 7424,
+      "to": 7454
     },
     {
       "id": "docker/mcp-gateway",
-      "from": 1615,
-      "to": 1619
+      "from": 1619,
+      "to": 1626
     },
     {
       "id": "Infisical/agent-vault",
-      "from": 2424,
-      "to": 2462
+      "from": 2462,
+      "to": 2490
     },
     {
       "id": "microsoft/agent-governance-toolkit",
-      "from": 6468,
-      "to": 6504
+      "from": 6504,
+      "to": 6541
     },
     {
       "id": "cocoindex-io/cocoindex-code",
-      "from": 2947,
-      "to": 2957
+      "from": 2957,
+      "to": 2970
     },
     {
       "id": "IBM/mcp-context-forge",
-      "from": 4687,
-      "to": 4736
+      "from": 4736,
+      "to": 4770
     },
     {
       "id": "vostride/agent-qa",
-      "from": 894,
-      "to": 915
+      "from": 915,
+      "to": 856
     },
     {
-      "id": "GAIR-NLP/AgencyBench",
-      "from": 103,
-      "to": 105
+      "id": "arcprize/ARC-AGI-2",
+      "from": 746,
+      "to": 747
     },
     {
       "id": "THUDM/AgentBench",
-      "from": 3790,
-      "to": 3805
+      "from": 3805,
+      "to": 3817
     },
     {
       "id": "web-arena-x/webarena",
-      "from": 1635,
-      "to": 1639
+      "from": 1639,
+      "to": 1643
     },
     {
       "id": "SWE-bench/SWE-bench",
-      "from": 6083,
-      "to": 6128
+      "from": 6128,
+      "to": 6160
     },
     {
       "id": "harbor-framework/terminal-bench",
-      "from": 970,
-      "to": 999
+      "from": 999,
+      "to": 1022
     },
     {
       "id": "TIGER-AI-Lab/ClawBench",
-      "from": 1113,
-      "to": 1179
+      "from": 1179,
+      "to": 1235
     },
     {
       "id": "SWE-Gym/SWE-Gym",
-      "from": 752,
-      "to": 754
+      "from": 754,
+      "to": 758
     },
     {
       "id": "SWE-bench/SWE-smith",
-      "from": 814,
-      "to": 820
-    },
-    {
-      "id": "meituan-longcat/vitabench",
-      "from": 182,
-      "to": 183
+      "from": 820,
+      "to": 827
     },
     {
       "id": "letta-ai/letta-evals",
-      "from": 82,
-      "to": 83
+      "from": 83,
+      "to": 84
     },
     {
       "id": "MinorJerry/WebVoyager",
-      "from": 1127,
-      "to": 1128
+      "from": 1128,
+      "to": 1129
     },
     {
       "id": "UKGovernmentBEIS/inspect_evals",
-      "from": 716,
-      "to": 730
+      "from": 730,
+      "to": 735
     },
     {
       "id": "UKGovernmentBEIS/inspect_ai",
-      "from": 3092,
-      "to": 3150
+      "from": 3150,
+      "to": 3204
     },
     {
       "id": "microsoft/agent-lightning",
-      "from": 18810,
-      "to": 18864
+      "from": 18864,
+      "to": 18925
     },
     {
       "id": "assafelovic/gpt-researcher",
-      "from": 30289,
-      "to": 30416
-    },
-    {
-      "id": "OpenAgentsInc/openagents",
-      "from": 458,
-      "to": 461
+      "from": 30416,
+      "to": 30574
     },
     {
       "id": "bytedance/deer-flow",
-      "from": 84413,
-      "to": 84838
+      "from": 84838,
+      "to": 85135
     },
     {
       "id": "MiroMindAI/MiroThinker",
-      "from": 8426,
-      "to": 8432
+      "from": 8432,
+      "to": 8448
     },
     {
       "id": "aiming-lab/AutoResearchClaw",
-      "from": 14746,
-      "to": 14798
+      "from": 14798,
+      "to": 14836
     },
     {
       "id": "socai-io/jev-social",
-      "from": 179,
-      "to": 194
+      "from": 194,
+      "to": 205
     },
     {
       "id": "langchain-ai/deepagents",
-      "from": 30574,
-      "to": 30856
+      "from": 30856,
+      "to": 31101
     },
     {
       "id": "pydantic/pydantic-ai",
-      "from": 20862,
-      "to": 20981
-    },
-    {
-      "id": "MaxGfeller/open-harness",
-      "from": 619,
-      "to": 622
+      "from": 20981,
+      "to": 21089
     },
     {
       "id": "vercel/ai",
-      "from": 27510,
-      "to": 27676
+      "from": 27676,
+      "to": 27814
     },
     {
       "id": "huggingface/smolagents",
-      "from": 30046,
-      "to": 30175
+      "from": 30175,
+      "to": 30267
     },
     {
       "id": "strands-agents/harness-sdk",
-      "from": 8948,
-      "to": 9023
+      "from": 9023,
+      "to": 9077
     },
     {
       "id": "openai/openai-agents-js",
-      "from": 3942,
-      "to": 3957
+      "from": 3957,
+      "to": 3991
     },
     {
       "id": "BerriAI/litellm",
-      "from": 62019,
-      "to": 62495
+      "from": 62495,
+      "to": 62912
     },
     {
       "id": "ComposioHQ/composio",
-      "from": 30745,
-      "to": 30864
+      "from": 30864,
+      "to": 30981
     },
     {
       "id": "mem0ai/mem0",
-      "from": 67787,
-      "to": 68233
+      "from": 68233,
+      "to": 68639
     },
     {
       "id": "cloudflare/agents",
-      "from": 5885,
-      "to": 5930
+      "from": 5930,
+      "to": 5971
     },
     {
       "id": "e2b-dev/E2B",
-      "from": 14548,
-      "to": 14651
+      "from": 14651,
+      "to": 14769
     },
     {
       "id": "daytonaio/daytona",
-      "from": 71486,
-      "to": 71407
+      "from": 71407,
+      "to": 71348
     },
     {
       "id": "kubernetes-sigs/agent-sandbox",
-      "from": 4383,
-      "to": 4472
+      "from": 4472,
+      "to": 4551
     },
     {
       "id": "steel-dev/steel-browser",
-      "from": 7865,
-      "to": 7900
+      "from": 7900,
+      "to": 7941
+    },
+    {
+      "id": "brandonhimpfen/awesome-ai-agents",
+      "from": 16,
+      "to": 17
     },
     {
       "id": "topoteretes/cognee",
-      "from": 32736,
-      "to": 32980
+      "from": 32980,
+      "to": 33136
     },
     {
       "id": "getzep/graphiti",
-      "from": 32204,
-      "to": 32412
+      "from": 32412,
+      "to": 32653
     },
     {
       "id": "gastownhall/beads",
-      "from": 28199,
-      "to": 28391
+      "from": 28391,
+      "to": 28595
     },
     {
       "id": "vshulcz/deja-vu",
-      "from": 1303,
-      "to": 1348
+      "from": 1348,
+      "to": 1441
     },
     {
       "id": "langfuse/langfuse",
-      "from": 36456,
-      "to": 36839
+      "from": 36839,
+      "to": 37157
     },
     {
       "id": "mlflow/mlflow",
-      "from": 28527,
-      "to": 28617
+      "from": 28617,
+      "to": 28725
     },
     {
       "id": "comet-ml/opik",
-      "from": 22912,
-      "to": 23093
+      "from": 23093,
+      "to": 23260
     },
     {
       "id": "Arize-ai/phoenix",
-      "from": 11995,
-      "to": 12094
+      "from": 12094,
+      "to": 12202
     },
     {
       "id": "modelcontextprotocol/servers",
-      "from": 91552,
-      "to": 91733
+      "from": 91733,
+      "to": 91873
     },
     {
       "id": "upstash/context7",
-      "from": 63652,
-      "to": 64045
+      "from": 64045,
+      "to": 64358
     },
     {
       "id": "ChromeDevTools/chrome-devtools-mcp",
-      "from": 54118,
-      "to": 54612
+      "from": 54612,
+      "to": 54969
     },
     {
       "id": "microsoft/playwright-mcp",
-      "from": 38617,
-      "to": 38944
+      "from": 38944,
+      "to": 39336
     },
     {
       "id": "FoundationAgents/OpenManus",
-      "from": 58776,
-      "to": 58853
+      "from": 58853,
+      "to": 58924
     },
     {
       "id": "wshobson/agents",
-      "from": 41687,
-      "to": 42075
+      "from": 42075,
+      "to": 42305
     }
   ],
   "moved": [],
@@ -867,12 +877,12 @@
     {
       "id": "spring-ai-community/spring-ai-tool-search-tool",
       "since": "2026-07-03",
-      "stars": 77
+      "stars": 78
     },
     {
       "id": "RooCodeInc/Roo-Code",
       "since": "2026-07-03",
-      "stars": 24256
+      "stars": 24237
     },
     {
       "id": "SeanHogg/BuilderForceAgents",
@@ -882,16 +892,33 @@
     {
       "id": "FlowiseAI/Flowise",
       "since": "2026-08-16",
-      "stars": 55541
+      "stars": 55564
     },
     {
       "id": "daytonaio/daytona",
       "since": "2026-10-04",
-      "stars": 71407
+      "stars": 71348
     }
   ],
   "failed": [],
   "candidates": [
+    {
+      "id": "kortix-ai/CompanyOS",
+      "stars": 20573,
+      "topics": [
+        "ai",
+        "ai-agents",
+        "company-as-code",
+        "company-operating-system",
+        "company-os",
+        "companyos",
+        "llm",
+        "open-source",
+        "self-hosted"
+      ],
+      "desc": "Kortix CompanyOS \u2013 the open-source operating system for your company. Multiplayer AI agents, your company as code, sovereign on your infrastructure or ours.",
+      "via": "issue #155"
+    },
     {
       "id": "ArtAndrew/RunVerge",
       "stars": 0,
@@ -906,7 +933,7 @@
     },
     {
       "id": "nmamano/isomux",
-      "stars": 42,
+      "stars": 43,
       "topics": [
         "agent-orchestration",
         "agentic-ai",
@@ -918,7 +945,7 @@
     },
     {
       "id": "CorpusIQ/corpusiq-docs",
-      "stars": 29,
+      "stars": 28,
       "topics": [
         "agent-skills",
         "ai-agents",
@@ -941,7 +968,7 @@
     },
     {
       "id": "firecrawl/firecrawl",
-      "stars": 197620,
+      "stars": 199732,
       "topics": [
         "ai",
         "ai-agents",
@@ -967,7 +994,7 @@
     },
     {
       "id": "DietrichGebert/ponytail",
-      "stars": 181997,
+      "stars": 186803,
       "topics": [
         "agent-skills",
         "ai-agents",
@@ -984,7 +1011,7 @@
     },
     {
       "id": "Graphify-Labs/graphify",
-      "stars": 140440,
+      "stars": 144378,
       "topics": [
         "ai-agents",
         "antigravity",
@@ -1011,9 +1038,8 @@
     },
     {
       "id": "stablyai/orca",
-      "stars": 112327,
+      "stars": 119134,
       "topics": [
-        "ade",
         "agent-ide",
         "ai-agents",
         "automation",
@@ -1030,15 +1056,16 @@
         "orchestration",
         "pi",
         "runtime",
+        "swarm",
         "terminal",
         "worktrees",
         "yc-backed"
       ],
-      "desc": "Orca is the place for working with a fleet of agents (e.g. Grok Bot, Claude Code). Run any coding agent with your own subscription. Available on desktop, mobile and remote runtime."
+      "desc": "Orca lets you run a fleet of coding agents (e.g. Claude Code, Codex) with your own subscription. Available on desktop, mobile and remote runtime."
     },
     {
       "id": "paperclipai/paperclip",
-      "stars": 109828,
+      "stars": 112270,
       "topics": [
         "acpx",
         "agent-orchestration",
@@ -1065,7 +1092,7 @@
     },
     {
       "id": "Leonxlnx/taste-skill",
-      "stars": 107603,
+      "stars": 111958,
       "topics": [
         "agent-skills",
         "ai-agents",
@@ -1082,30 +1109,8 @@
       "desc": "Agent skills that give coding agents taste: art direction, reference images and a browser check instead of generic AI pages"
     },
     {
-      "id": "infiniflow/ragflow",
-      "stars": 93296,
-      "topics": [
-        "agent-harness",
-        "agentic-ai",
-        "agentic-nagive",
-        "agentic-retrieval",
-        "agentic-search",
-        "ai",
-        "ai-agents",
-        "context-engine",
-        "context-engineering",
-        "context-management",
-        "harness-engineering",
-        "knowledge-compilation",
-        "rag",
-        "retrieval-augmented-generation",
-        "search-harness"
-      ],
-      "desc": "RAGFlow is a leading open-source Retrieval-Augmented Generation (RAG) engine that fuses cutting-edge RAG with Agent capabilities to create a superior context layer for LLMs"
-    },
-    {
       "id": "tt-a1i/archify",
-      "stars": 92341,
+      "stars": 94684,
       "topics": [
         "agent-skills",
         "ai-agents",
@@ -1131,11 +1136,35 @@
       "desc": "Turn any idea, plan, or codebase into a beautiful interactive diagram. An agent skill for Claude Code, Codex, and more."
     },
     {
+      "id": "infiniflow/ragflow",
+      "stars": 93777,
+      "topics": [
+        "agent-harness",
+        "agent-native-database",
+        "agentic-ai",
+        "agentic-retrieval",
+        "agentic-search",
+        "ai",
+        "ai-agents",
+        "context-engine",
+        "context-engineering",
+        "context-management",
+        "harness-engineering",
+        "knowledge-compilation",
+        "rag",
+        "retrieval-augmented-generation",
+        "retrieval-harness",
+        "search-harness"
+      ],
+      "desc": "RAGFlow is an agent-native database: a Retrieval-Augmented Generation (RAG) engine that grew into context infrastructure."
+    },
+    {
       "id": "unclecode/crawl4ai",
-      "stars": 86712,
+      "stars": 87095,
       "topics": [
         "ai",
         "ai-agents",
+        "crawl4ai-cloud",
         "crawler",
         "data-extraction",
         "llm",
@@ -1150,11 +1179,11 @@
         "web-crawling",
         "web-scraping"
       ],
-      "desc": "Open-source web crawler and scraper for LLMs and AI agents: any website into clean, LLM-ready Markdown. Run it yourself, or use Crawl4AI Cloud with one key. Join our Discord https://discord.gg/VuxzM8mtf"
+      "desc": "Official Crawl4AI Cloud: a hosted web scraping, extraction, and search API for AI agents. Free API key, 1,000 credits a month, no card. Fully open source: this repo is the Apache-2.0 crawler that powers it, and you can self-host it."
     },
     {
       "id": "cheaper-inference/OmniRoute",
-      "stars": 83553,
+      "stars": 85638,
       "topics": [
         "a2a",
         "ai-agents",
@@ -1181,7 +1210,7 @@
     },
     {
       "id": "ruvnet/ruflo",
-      "stars": 80515,
+      "stars": 81244,
       "topics": [
         "agentic-ai",
         "agentic-framework",
@@ -1207,8 +1236,30 @@
       "desc": "\ud83c\udf0a The original agent harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, federation, vector RAG integration, and native Claude Code / Codex / Hermes and many more Integrated"
     },
     {
+      "id": "heygen-com/hyperframes",
+      "stars": 80962,
+      "topics": [
+        "ai",
+        "ai-agents",
+        "animation",
+        "claude-code",
+        "ffmpeg",
+        "framework",
+        "gsap",
+        "html",
+        "html-to-video",
+        "mcp",
+        "motion-graphics",
+        "puppeteer",
+        "rendering",
+        "typescript",
+        "video-editor"
+      ],
+      "desc": "Write HTML. Render video. Built for agents."
+    },
+    {
       "id": "dair-ai/Prompt-Engineering-Guide",
-      "stars": 79738,
+      "stars": 79912,
       "topics": [
         "agent",
         "agents",
@@ -1226,7 +1277,7 @@
     },
     {
       "id": "microsoft/ai-agents-for-beginners",
-      "stars": 78605,
+      "stars": 79200,
       "topics": [
         "agentic-ai",
         "agentic-framework",
@@ -1244,7 +1295,7 @@
     },
     {
       "id": "ComposioHQ/awesome-claude-skills",
-      "stars": 78508,
+      "stars": 79053,
       "topics": [
         "agent-skills",
         "ai-agents",
@@ -1267,30 +1318,8 @@
       "desc": "A curated list of awesome Claude Skills, resources, and tools for customizing Claude AI workflows"
     },
     {
-      "id": "heygen-com/hyperframes",
-      "stars": 76999,
-      "topics": [
-        "ai",
-        "ai-agents",
-        "animation",
-        "claude-code",
-        "ffmpeg",
-        "framework",
-        "gsap",
-        "html",
-        "html-to-video",
-        "mcp",
-        "motion-graphics",
-        "puppeteer",
-        "rendering",
-        "typescript",
-        "video-editor"
-      ],
-      "desc": "Write HTML. Render video. Built for agents."
-    },
-    {
       "id": "rohitg00/ai-engineering-from-scratch",
-      "stars": 76224,
+      "stars": 77767,
       "topics": [
         "agents",
         "ai",
@@ -1317,7 +1346,7 @@
     },
     {
       "id": "thedaviddias/Front-End-Checklist",
-      "stars": 74620,
+      "stars": 74676,
       "topics": [
         "ai-agent",
         "ai-agents",
@@ -1339,7 +1368,7 @@
     },
     {
       "id": "asgeirtj/system_prompts_leaks",
-      "stars": 70580,
+      "stars": 71033,
       "topics": [
         "ai",
         "ai-agents",
@@ -1362,11 +1391,11 @@
         "system-prompt",
         "system-prompts"
       ],
-      "desc": "Documented system prompts from Anthropic - Claude Fable 5.1, Opus 5.5, Claude Design, Claude Code. OpenAI - ChatGPT GPT-6-Astra, Codex. Google - Gemini 3.8 Flash, 3.1 Pro, Antigravity. xAI - Grok, Grok Bot, Cursor, Kimi and more! Updated regularly."
+      "desc": "Leaked system prompts of ChatGPT, Claude, Gemini and more. The hidden system prompt of every popular chatbot, in full, every version since May 2025. Also Anthropic Claude Code, OpenAI Codex, Google Antigravity, xAI Grok, Meta Muse, Moonshot Kimi, Alibaba Qwen, Z.ai GLM ZCode, MiniMax, Cursor, Perplexity, DeepSeek and 30+ others. Updated daily."
     },
     {
       "id": "code-yeongyu/oh-my-openagent",
-      "stars": 70576,
+      "stars": 70783,
       "topics": [
         "ai",
         "ai-agents",
@@ -1388,7 +1417,7 @@
     },
     {
       "id": "ai-job-search-dev/ai-job-search",
-      "stars": 68670,
+      "stars": 70478,
       "topics": [
         "ai",
         "ai-agents",
@@ -1407,7 +1436,7 @@
     },
     {
       "id": "shanraisshan/claude-code-best-practice",
-      "stars": 68417,
+      "stars": 68820,
       "topics": [
         "agentic-ai",
         "agentic-coding",
@@ -1434,7 +1463,7 @@
     },
     {
       "id": "chatanywhere/GPT_API_free",
-      "stars": 45220,
+      "stars": 45631,
       "topics": [
         "api",
         "chatgpt",
@@ -1448,35 +1477,8 @@
       "desc": "\u514d\u8d39\u5927\u6a21\u578bAPI\uff0c\u652f\u6301\u514d\u8d39\u8c03\u7528GPT\u3001DeepSeek\u7b49\u4e3b\u6d41\u6a21\u578b\uff0c\u514d\u8d39\u989d\u5ea610000\u70b9\uff0c\u6bcf\u65e5\u5237\u65b0\uff01\u53e6\u4ed8\u8d39\u4ef7\u683c\u6700\u4f4e\u5b98\u65b91-2\u6298\uff01"
     },
     {
-      "id": "feder-cr/invisible_dots",
-      "stars": 32338,
-      "topics": [
-        "agent-skills",
-        "agentic-ai",
-        "ai-agent",
-        "ai-agents",
-        "ai-assistant",
-        "antidetect-browser",
-        "automation",
-        "autonomous-agents",
-        "browser-automation",
-        "claude-cowork",
-        "computer-use",
-        "computer-use-agent",
-        "llm-agents",
-        "local-first",
-        "manus",
-        "mcp",
-        "open-source-alternative",
-        "playwright",
-        "self-hosted",
-        "stealth-browser"
-      ],
-      "desc": "Open-source, self-hosted alternative to OpenAI Dots, Grok Bot. Built to be undetectable by anti-bot systems."
-    },
-    {
       "id": "Fosowl/agenticSeek",
-      "stars": 27596,
+      "stars": 27641,
       "topics": [
         "agentic-ai",
         "agents",
@@ -1491,7 +1493,7 @@
     },
     {
       "id": "The-Pocket/PocketFlow-Tutorial-Codebase-Knowledge",
-      "stars": 12729,
+      "stars": 12744,
       "topics": [
         "coding",
         "large-language-model",
@@ -1511,7 +1513,7 @@
     },
     {
       "id": "tigerless-labs/autoharness",
-      "stars": 10583,
+      "stars": 10831,
       "topics": [
         "agent-skills",
         "claude-code",
@@ -1523,7 +1525,7 @@
     },
     {
       "id": "WenyuChiou/awesome-agentic-ai-zh",
-      "stars": 8366,
+      "stars": 8696,
       "topics": [
         "agentic-ai",
         "agentic-workflows",
@@ -1548,8 +1550,33 @@
       "desc": "A trilingual (\u7e41\u4e2d / English / \u7b80\u4e2d) learning roadmap for agentic AI: from LLM basics to multi-agent systems, with 240+ curated resources and hands-on examples. \u4e2d\u6587 AI agent \u5b78\u7fd2\u5730\u5716\u3002"
     },
     {
+      "id": "gepa-ai/gepa",
+      "stars": 7336,
+      "topics": [
+        "agent-skills",
+        "coding-agent",
+        "discovery",
+        "distributed-evolutionary-algorithms",
+        "evolutionary-algorithms",
+        "genetic-algorithm",
+        "harness",
+        "harness-ai",
+        "harness-engineering",
+        "iterative-methods",
+        "iterative-refinement",
+        "llm-agents",
+        "llm-evaluation",
+        "optimization",
+        "optimization-algorithms",
+        "optimizer",
+        "prompt-engineering",
+        "prompt-optimization"
+      ],
+      "desc": "Optimize prompts, code, and more with AI-powered Reflective Optimization"
+    },
+    {
       "id": "beenuar/AiSOC",
-      "stars": 6060,
+      "stars": 6749,
       "topics": [
         "agentic-ai",
         "ai-security",
@@ -1576,7 +1603,7 @@
     },
     {
       "id": "camel-ai/oasis",
-      "stars": 5372,
+      "stars": 5404,
       "topics": [
         "agent-based-framework",
         "agent-based-simulation",
@@ -1592,7 +1619,7 @@
     },
     {
       "id": "FellouAI/eko",
-      "stars": 4961,
+      "stars": 4963,
       "topics": [
         "agent",
         "agentic-ai",
@@ -1619,7 +1646,7 @@
     },
     {
       "id": "google-antigravity/antigravity-sdk-python",
-      "stars": 3908,
+      "stars": 3972,
       "topics": [
         "ai-agents",
         "antigravity",
@@ -1635,7 +1662,7 @@
     },
     {
       "id": "HKUDS/Paper2Slides",
-      "stars": 3852,
+      "stars": 3854,
       "topics": [
         "agentic-ai",
         "llm-agents",
@@ -1646,7 +1673,7 @@
     },
     {
       "id": "strukto-ai/mirage",
-      "stars": 3761,
+      "stars": 3775,
       "topics": [
         "agent-sandbox",
         "agent-tools",
@@ -1672,7 +1699,7 @@
     },
     {
       "id": "Mirix-AI/MIRIX",
-      "stars": 3456,
+      "stars": 3459,
       "topics": [
         "llm-agents",
         "llm-memory",
@@ -1683,7 +1710,7 @@
     },
     {
       "id": "samugit83/redamon",
-      "stars": 3261,
+      "stars": 3331,
       "topics": [
         "agentic-ai",
         "ai",
@@ -1737,7 +1764,7 @@
     },
     {
       "id": "mll-lab-nu/RAGEN",
-      "stars": 2832,
+      "stars": 2840,
       "topics": [
         "agent-rl",
         "agentic-ai",
@@ -1750,7 +1777,7 @@
     },
     {
       "id": "webfuse-com/awesome-autoresearch",
-      "stars": 2582,
+      "stars": 2591,
       "topics": [
         "agentic-systems",
         "ai-agents",
@@ -1772,7 +1799,7 @@
     },
     {
       "id": "langfengQ/verl-agent",
-      "stars": 2416,
+      "stars": 2431,
       "topics": [
         "agent-framework",
         "deepseek-r1",
@@ -1787,7 +1814,7 @@
     },
     {
       "id": "IBM/AssetOpsBench",
-      "stars": 2410,
+      "stars": 2414,
       "topics": [
         "ai-for-physical-assets",
         "condition-based-maintenance",
@@ -1801,8 +1828,21 @@
       "desc": "AssetOpsBench - Industry 4.0: A unified benchmark and framework for building, orchestrating, and evaluating domain-specific AI agents for Industry 4.0 asset operations and maintenance, with 460+ scenarios, 5 specialist agents (IoT, FMSR, TSFM, Work Order,...), and multi-agent orchestration blueprints (MetaAgent, AgentHive) over MCP."
     },
     {
+      "id": "soumatheusgomes/vibe-coding-toolkit",
+      "stars": 2310,
+      "topics": [
+        "ai-agents",
+        "ai-coding",
+        "claude-code",
+        "developer-tools",
+        "llm-agents",
+        "prompts"
+      ],
+      "desc": "A curated, battle-tested AI-coding toolkit: Claude Code plugins, subagent orchestration, quality gates, and ready-to-copy prompts, extracted from real production use."
+    },
+    {
       "id": "trypromptly/LLMStack",
-      "stars": 2309,
+      "stars": 2307,
       "topics": [
         "agents",
         "ai",
@@ -1820,7 +1860,7 @@
     },
     {
       "id": "Lumiwealth/lumibot",
-      "stars": 2193,
+      "stars": 2218,
       "topics": [
         "agentic-trading",
         "ai-agents",
@@ -1846,35 +1886,8 @@
       "desc": "Python trading framework with AI agents that actually place the trade. Backtest, paper and live trade on 12 brokers: stocks, options, futures, forex, crypto and prediction markets."
     },
     {
-      "id": "soumatheusgomes/vibe-coding-toolkit",
-      "stars": 2183,
-      "topics": [
-        "ai-agents",
-        "ai-coding",
-        "claude-code",
-        "developer-tools",
-        "llm-agents",
-        "prompts"
-      ],
-      "desc": "A curated, battle-tested AI-coding toolkit: Claude Code plugins, subagent orchestration, quality gates, and ready-to-copy prompts, extracted from real production use."
-    },
-    {
-      "id": "vonzosten/awesome-LangGraph",
-      "stars": 2034,
-      "topics": [
-        "ai",
-        "awesome",
-        "awesome-list",
-        "langchain",
-        "langgraph",
-        "llm",
-        "llm-agents"
-      ],
-      "desc": "An index of the LangChain + LangGraph ecosystem: concepts, projects, tools, templates, and guides for LLM & multi-agent apps."
-    },
-    {
       "id": "stripe/ai",
-      "stars": 2025,
+      "stars": 2050,
       "topics": [
         "ai",
         "gemini-cli-extension",
@@ -1888,8 +1901,22 @@
       "desc": "One-stop shop for building AI-powered products and businesses with Stripe."
     },
     {
+      "id": "vonzosten/awesome-LangGraph",
+      "stars": 2040,
+      "topics": [
+        "ai",
+        "awesome",
+        "awesome-list",
+        "langchain",
+        "langgraph",
+        "llm",
+        "llm-agents"
+      ],
+      "desc": "An index of the LangChain + LangGraph ecosystem: concepts, projects, tools, templates, and guides for LLM & multi-agent apps."
+    },
+    {
       "id": "HKUDS/VideoAgent",
-      "stars": 1993,
+      "stars": 2020,
       "topics": [
         "agents",
         "audio-editing",
@@ -1904,7 +1931,7 @@
     },
     {
       "id": "SqueezeAILab/LLMCompiler",
-      "stars": 1900,
+      "stars": 1903,
       "topics": [
         "efficient-inference",
         "function-calling",
@@ -1925,7 +1952,7 @@
     },
     {
       "id": "666ghj/BettaFish",
-      "stars": 42562,
+      "stars": 42610,
       "topics": [
         "agent-framework",
         "data-analysis",
@@ -1942,7 +1969,7 @@
     },
     {
       "id": "NirDiamant/agents-towards-production",
-      "stars": 21806,
+      "stars": 21851,
       "topics": [
         "agent",
         "agent-framework",
@@ -1968,7 +1995,7 @@
     },
     {
       "id": "RightNow-AI/openfang",
-      "stars": 18244,
+      "stars": 18243,
       "topics": [
         "agent-framework",
         "ai-agents",
@@ -1983,7 +2010,7 @@
     },
     {
       "id": "EvoMap/evolver",
-      "stars": 8716,
+      "stars": 8729,
       "topics": [
         "a2a",
         "agent-evolution",
@@ -2010,7 +2037,7 @@
     },
     {
       "id": "Upsonic/Upsonic",
-      "stars": 7969,
+      "stars": 7968,
       "topics": [
         "agent",
         "agent-framework",
@@ -2031,8 +2058,27 @@
       "desc": "Build autonomous AI agents in Python."
     },
     {
+      "id": "BuilderIO/agent-native",
+      "stars": 7647,
+      "topics": [
+        "agent-framework",
+        "agent-native",
+        "agentic-ai",
+        "agents",
+        "ai",
+        "ai-agents",
+        "framework",
+        "generative-ui",
+        "mcp",
+        "open-source",
+        "react",
+        "typescript"
+      ],
+      "desc": "A framework for building agentic apps"
+    },
+    {
       "id": "crestalnetwork/intentkit",
-      "stars": 6521,
+      "stars": 6519,
       "topics": [
         "agent-framework",
         "agentic",
@@ -2048,7 +2094,7 @@
     },
     {
       "id": "agentscope-ai/agentscope-java",
-      "stars": 6205,
+      "stars": 6294,
       "topics": [
         "adk",
         "agent",
@@ -2064,7 +2110,7 @@
     },
     {
       "id": "rllm-org/rllm",
-      "stars": 5905,
+      "stars": 5912,
       "topics": [
         "agent-framework",
         "agentic-workflow",
@@ -2085,7 +2131,7 @@
     },
     {
       "id": "didilili/ai-agents-from-zero",
-      "stars": 5740,
+      "stars": 5888,
       "topics": [
         "agent",
         "agent-framework",
@@ -2108,8 +2154,25 @@
       "desc": " \ud83d\ude80 2026 \u6700\u7cfb\u7edf\u7684 AI Agent \u901f\u6210\u6307\u5357\uff5c\u667a\u80fd\u4f53\u5b9e\u6218\u6559\u7a0b \u00b7 \u5b8c\u6574\u5b66\u4e60\u8def\u5f84  + \u5b9e\u6218\u9879\u76ee + \u9762\u8bd5\u9898\u5e93 \u00b7 \u5bf9\u6807\u5927\u6a21\u578b\u5e94\u7528\u5f00\u53d1\u5de5\u7a0b\u5e08\u5c97\u4f4d \u00b7 \u8986\u76d6LangChain / LangGraph / Coze / Dify / MCP / skills / LLM / RAG / \u63d0\u793a\u8bcd \u00b7 \u4f01\u4e1a\u7ea7\u90e8\u7f72\u4e0e\u5fae\u8c03 \u00b7 \u4ece0\u5230\u4f01\u4e1a\u7ea7\u843d\u5730 + \u4ece\u5b66\u4e60\u5230\u4e0a\u7ebf\u9879\u76ee + \u9762\u8bd5\u51c6\u5907\u4e00\u4f53\u5316 "
     },
     {
+      "id": "alchaincyf/hermes-agent-orange-book",
+      "stars": 5057,
+      "topics": [
+        "agent-framework",
+        "ai-agents",
+        "ebook",
+        "guide",
+        "hermes-agent",
+        "llm",
+        "nous-research",
+        "orange-book",
+        "pdf",
+        "tutorial"
+      ],
+      "desc": "Hermes Agent \u4ece\u5165\u95e8\u5230\u7cbe\u901a \u00b7 \u6a59\u76ae\u4e66\u7cfb\u5217 \u00b7 Nous Research \u5f00\u6e90 AI Agent \u6846\u67b6\u5b9e\u6218\u6307\u5357"
+    },
+    {
       "id": "kungfu-systems/kungfu",
-      "stars": 4538,
+      "stars": 4542,
       "topics": [
         "agent",
         "agent-framework",
@@ -2120,7 +2183,7 @@
     },
     {
       "id": "crmne/ruby_llm",
-      "stars": 4490,
+      "stars": 4498,
       "topics": [
         "agent-framework",
         "agentic-ai",
@@ -2147,7 +2210,7 @@
     },
     {
       "id": "evalstate/fast-agent",
-      "stars": 3954,
+      "stars": 3960,
       "topics": [
         "a2a",
         "acp",
@@ -2165,53 +2228,8 @@
       "desc": "Code, Build and Evaluate agents - excellent Model and Skills/MCP/ACP/A2A Support"
     },
     {
-      "id": "foryourhealth111-pixel/Vibe-Skills",
-      "stars": 3789,
-      "topics": [
-        "agent-framework",
-        "agent-skills",
-        "agentic-coding",
-        "ai-agents",
-        "ai-scientist",
-        "ai-skills",
-        "ai-workflow",
-        "automation",
-        "claude-code",
-        "codex",
-        "context-engineering",
-        "developer-tools",
-        "dsh-plugin",
-        "llm",
-        "multi-agent",
-        "prompt-engineering",
-        "skills",
-        "vibe-coding",
-        "vibecoding",
-        "workflow-automation"
-      ],
-      "desc": "Intelligent Skill routing and workflow orchestration for AI agents \u2014 +21.12 pp reward, \u221229.6% tokens on SkillsBench with DeepSeekV4Flash-VE."
-    },
-    {
-      "id": "MiroMindAI/MiroFlow",
-      "stars": 3125,
-      "topics": [
-        "agent-framework",
-        "agents",
-        "browsecomp",
-        "claude",
-        "deep-research",
-        "futurex",
-        "gaia",
-        "gpt-5",
-        "hle",
-        "research-agent",
-        "xbench"
-      ],
-      "desc": "\ud83c\udfc6 Top-1 on 5+ benchmarks | Web UI | Supports MiroThinker, Claude, Kimi, OpenAI"
-    },
-    {
       "id": "bojieli/ai-agent-book",
-      "stars": 56843,
+      "stars": 57465,
       "topics": [
         "agent",
         "agent-memory",
@@ -2230,8 +2248,26 @@
       "desc": "\u300a\u6df1\u5165\u7406\u89e3 AI Agent\uff1a\u8bbe\u8ba1\u539f\u7406\u4e0e\u5de5\u7a0b\u5b9e\u8df5\u300b\uff08\u674e\u535a\u6770 \u8457\uff09\u5f00\u6e90\u4e3b\u4ed3\u5e93\uff1a\u5168\u4e66\u6b63\u6587\u3001\u7f16\u8bd1\u7248 PDF \u4e0e\u6309\u7ae0\u914d\u5957\u4ee3\u7801"
     },
     {
+      "id": "ccch1mneyyy/dsh-Go",
+      "stars": 15934,
+      "topics": [
+        "ai-agent",
+        "android",
+        "android-app",
+        "coding-agent",
+        "deepseek",
+        "deepseek-harness",
+        "dsh",
+        "dsh-plugin",
+        "dsh-tui",
+        "flutter",
+        "llm"
+      ],
+      "desc": "dsh-go \u2014 DeepSeek Harness \u88c5\u8fdb\u53e3\u888b\uff1a\u624b\u673a\u672c\u673a\u8fd0\u884c\uff0c\u4e5f\u80fd\u9065\u63a7\u4f60\u7684\u7535\u8111\u3002"
+    },
+    {
       "id": "YaoApp/yao",
-      "stars": 8242,
+      "stars": 8283,
       "topics": [
         "agent-harness",
         "agent-orchestration",
@@ -2254,8 +2290,30 @@
       "desc": "\u2728 All your agents and workspaces in one place, on every device you own. Track tasks on a board, accessible from desktop, mobile, browser, or API. Self-hosted."
     },
     {
+      "id": "vastsa/PI-Desktop",
+      "stars": 7784,
+      "topics": [
+        "ai-agent",
+        "coding-agent",
+        "desktop-app",
+        "electron",
+        "global",
+        "i18n",
+        "local-first",
+        "mcp",
+        "pi",
+        "pi-agent",
+        "pi-desktop",
+        "plugins",
+        "react",
+        "rust",
+        "typescript"
+      ],
+      "desc": "Local-first AI coding agent desktop: Electron + Rust host core + pi Agent Harness + user-installable plugins"
+    },
+    {
       "id": "algorithmicsuperintelligence/openevolve",
-      "stars": 7686,
+      "stars": 7737,
       "topics": [
         "alpha-evolve",
         "alphacode",
@@ -2280,46 +2338,8 @@
       "desc": "Open-source implementation of AlphaEvolve"
     },
     {
-      "id": "vastsa/PI-Desktop",
-      "stars": 7573,
-      "topics": [
-        "ai-agent",
-        "coding-agent",
-        "desktop-app",
-        "electron",
-        "global",
-        "i18n",
-        "local-first",
-        "mcp",
-        "pi",
-        "pi-agent",
-        "pi-desktop",
-        "plugins",
-        "react",
-        "rust",
-        "typescript"
-      ],
-      "desc": "Local-first AI coding agent desktop: Electron + Rust host core + pi Agent Harness + user-installable plugins"
-    },
-    {
-      "id": "anus-dev/ANUS",
-      "stars": 6555,
-      "topics": [
-        "ai-agent",
-        "claude-code-alternative",
-        "cli",
-        "coding-agent",
-        "free-models",
-        "llm",
-        "openrouter",
-        "spec-driven-company",
-        "terminal"
-      ],
-      "desc": "A free coding agent in your terminal. It runs on the smartest free model that is up today."
-    },
-    {
       "id": "ccch1mneyyy/dsh-TUI",
-      "stars": 6513,
+      "stars": 7226,
       "topics": [
         "claude-code",
         "coding-agent",
@@ -2334,8 +2354,24 @@
       "desc": "DSH's officially top-recommended TUI plugin \u2014 high performance, low overhead, cute pixel whale, smooth mouse interaction. One-command install via npm. / DSH \u5b98\u65b9\u9996\u63a8\u7684 TUI \u63d2\u4ef6\uff0c\u9ad8\u6027\u80fd\u4f4e\u5360\u7528\uff0c\u53ef\u7231\u50cf\u7d20\u9cb8\u9c7c\uff0c\u6d41\u7545\u9f20\u6807\u4ea4\u4e92\uff0cnpm \u4e00\u952e\u5b89\u88c5"
     },
     {
+      "id": "anus-dev/ANUS",
+      "stars": 6562,
+      "topics": [
+        "ai-agent",
+        "claude-code-alternative",
+        "cli",
+        "coding-agent",
+        "free-models",
+        "llm",
+        "openrouter",
+        "spec-driven-company",
+        "terminal"
+      ],
+      "desc": "A free coding agent in your terminal. It runs on the smartest free model that is up today."
+    },
+    {
       "id": "KunAgent/Kun",
-      "stars": 6361,
+      "stars": 6379,
       "topics": [
         "agentic-workflow",
         "ai-agent",
@@ -2361,7 +2397,7 @@
     },
     {
       "id": "cloudflare/vibesdk",
-      "stars": 5446,
+      "stars": 5462,
       "topics": [
         "ai",
         "cloudflare-workers",
@@ -2373,8 +2409,34 @@
       "desc": "An open-source vibe coding platform that helps you build your own vibe-coding platform, built entirely on Cloudflare stack "
     },
     {
+      "id": "microsoft/TokenEconomizer",
+      "stars": 5196,
+      "topics": [
+        "agentic-ai",
+        "agentic-coding",
+        "ai-coding",
+        "ai-coding-assistant",
+        "anthropic",
+        "artificial-intelligence",
+        "claude-code",
+        "codex",
+        "coding-agent",
+        "coding-agents",
+        "cost-optimization",
+        "cost-reduction",
+        "developer-tools",
+        "github-copilot",
+        "llm",
+        "open-source",
+        "openai",
+        "productivity",
+        "token-optimization"
+      ],
+      "desc": "Experience-Driven Black-Box Cost Control for Coding Agents"
+    },
+    {
       "id": "nexu-io/html-video",
-      "stars": 4791,
+      "stars": 4818,
       "topics": [
         "ai-agent",
         "apache-2",
@@ -2395,26 +2457,8 @@
       "desc": "Programmatic video for coding agents \u2014 HTML to video on your laptop. Turn HTML, CSS & data into real MP4s with pluggable render engines, 21 templates, AI soundtrack. Apache-2.0, no per-render fees. An official project by the Open Design team."
     },
     {
-      "id": "ccch1mneyyy/dsh-Go",
-      "stars": 4544,
-      "topics": [
-        "ai-agent",
-        "android",
-        "android-app",
-        "coding-agent",
-        "deepseek",
-        "deepseek-harness",
-        "dsh",
-        "dsh-plugin",
-        "dsh-tui",
-        "flutter",
-        "llm"
-      ],
-      "desc": "dsh-go \u2014 DeepSeek Harness \u88c5\u8fdb\u53e3\u888b\uff1a\u624b\u673a\u672c\u673a\u8fd0\u884c\uff0c\u4e5f\u80fd\u9065\u63a7\u4f60\u7684\u7535\u8111\u3002"
-    },
-    {
       "id": "kajisho5/ffmpeg-skill",
-      "stars": 4265,
+      "stars": 4810,
       "topics": [
         "agent-skills",
         "ai-agents",
@@ -2441,7 +2485,7 @@
     },
     {
       "id": "CommandCodeAI/command-code",
-      "stars": 4206,
+      "stars": 4227,
       "topics": [
         "ai",
         "ai-agent",
@@ -2461,7 +2505,7 @@
     },
     {
       "id": "JetBrains/go-modern-guidelines",
-      "stars": 3911,
+      "stars": 3958,
       "topics": [
         "ai-agents",
         "coding-agent",
@@ -2474,7 +2518,7 @@
     },
     {
       "id": "tutti-os/tutti",
-      "stars": 3884,
+      "stars": 3898,
       "topics": [
         "agent-collaboration",
         "agent-orchestration",
@@ -2501,7 +2545,7 @@
     },
     {
       "id": "Windy3f3f3f3f/how-claude-code-works",
-      "stars": 3796,
+      "stars": 3816,
       "topics": [
         "ai",
         "ai-agent",
@@ -2517,61 +2561,8 @@
       "desc": "Deep dive into Claude Code internals \u2014 architecture, agent loop, context engineering, and more. / \u6df1\u5165\u89e3\u6790 Claude Code \u6e90\u7801\uff1a\u67b6\u6784\u3001Agent \u5faa\u73af\u3001\u4e0a\u4e0b\u6587\u5de5\u7a0b\u3001\u5de5\u5177\u7cfb\u7edf\u7b49"
     },
     {
-      "id": "microsoft/TokenEconomizer",
-      "stars": 3724,
-      "topics": [
-        "agentic-ai",
-        "agentic-coding",
-        "ai-coding",
-        "ai-coding-assistant",
-        "anthropic",
-        "artificial-intelligence",
-        "claude-code",
-        "codex",
-        "coding-agent",
-        "coding-agents",
-        "cost-optimization",
-        "cost-reduction",
-        "developer-tools",
-        "github-copilot",
-        "llm",
-        "open-source",
-        "openai",
-        "productivity",
-        "token-optimization"
-      ],
-      "desc": "Experience-Driven Black-Box Cost Control for Coding Agents"
-    },
-    {
-      "id": "michael-denyer/pstack-claude",
-      "stars": 3722,
-      "topics": [
-        "agent-plugin",
-        "agent-skills",
-        "agentic-ai",
-        "anthropic",
-        "chatgpt",
-        "claude",
-        "claude-code",
-        "claude-code-skills",
-        "claude-plugin",
-        "claude-skills",
-        "code-review",
-        "codex",
-        "codex-cli",
-        "codex-plugin",
-        "codex-skills",
-        "coding-agent",
-        "gemini-cli",
-        "muse-plugin",
-        "opencode",
-        "pstack"
-      ],
-      "desc": "Claude Code, Codex, Copilot, Pi, OpenCode, Muse, Gemini, and Prime Agent versions of Poteto's pstack. Rigorous agent workflows with Cursor primitives translated for other harnesses."
-    },
-    {
       "id": "SeemSeam/claude_codex_bridge",
-      "stars": 3604,
+      "stars": 3615,
       "topics": [
         "ai-coding",
         "ai-collaboration",
@@ -2598,7 +2589,7 @@
     },
     {
       "id": "shareAI-lab/learn-claude-code",
-      "stars": 79681,
+      "stars": 80054,
       "topics": [
         "agent",
         "agent-development",
@@ -2615,7 +2606,7 @@
     },
     {
       "id": "tinyhumansai/openhuman",
-      "stars": 42476,
+      "stars": 42594,
       "topics": [
         "agent-orchestration",
         "ai-agents",
@@ -2634,7 +2625,7 @@
     },
     {
       "id": "HKUDS/DeepCode",
-      "stars": 16781,
+      "stars": 16823,
       "topics": [
         "agentic-coding",
         "harness-engineering",
@@ -2644,7 +2635,7 @@
     },
     {
       "id": "mindfold-ai/Trellis",
-      "stars": 15078,
+      "stars": 15111,
       "topics": [
         "agentic-coding",
         "ai-workflow",
@@ -2655,8 +2646,29 @@
       "desc": "The best agent harness."
     },
     {
+      "id": "adongwanai/AgentGuide",
+      "stars": 11753,
+      "topics": [
+        "agentic-rl",
+        "agenticrag",
+        "ai-agent",
+        "claude-code",
+        "crewai",
+        "graphrag",
+        "grpo",
+        "harness",
+        "interview",
+        "job-hunting",
+        "llm",
+        "rag",
+        "sft",
+        "tutorial"
+      ],
+      "desc": "AI Agent \u5f00\u53d1\u6307\u5357 | Agent Harness | \u4e0a\u4e0b\u6587\u5de5\u7a0b | \u9ad8\u7ea7 RAG | MCP | Agentic RL \u5f3a\u5316\u5b66\u4e60 | LangGraph \u5b9e\u6218 | 1.2 \u4e07+ \u5927\u6a21\u578b\u9762\u8bd5\u9898 | \u7b97\u6cd5\u5c97 / \u5f00\u53d1\u5c97\u6c42\u804c | \u8f6c\u884c\u5927\u6a21\u578b"
+    },
+    {
       "id": "ai-boost/awesome-prompts",
-      "stars": 9164,
+      "stars": 9198,
       "topics": [
         "agents",
         "awesome",
@@ -2672,13 +2684,13 @@
     },
     {
       "id": "zai-org/ZCode",
-      "stars": 8409,
+      "stars": 8558,
       "topics": [],
       "desc": "Z.ai's coding agent harness. Powerful, intelligent, extensible."
     },
     {
       "id": "FailproofAI/failproofai",
-      "stars": 7271,
+      "stars": 8241,
       "topics": [
         "agent-failure",
         "agent-harness",
@@ -2705,7 +2717,7 @@
     },
     {
       "id": "truefoundry/trueforge",
-      "stars": 6414,
+      "stars": 6452,
       "topics": [
         "agent",
         "agentic-ai",
@@ -2716,8 +2728,14 @@
       "desc": "The open-source agent harness - the runtime layer that turns an LLM into a working agent."
     },
     {
+      "id": "amosblomqvist/learnharness",
+      "stars": 6395,
+      "topics": [],
+      "desc": "Agent harness for learning difficult things."
+    },
+    {
       "id": "Waishnav/devspace",
-      "stars": 5357,
+      "stars": 5428,
       "topics": [
         "agent-orchestration",
         "chatgpt",
@@ -2731,7 +2749,7 @@
     },
     {
       "id": "ai-boost/awesome-harness-engineering",
-      "stars": 5021,
+      "stars": 5101,
       "topics": [
         "agent-harness",
         "agent-memory",
@@ -2746,14 +2764,8 @@
       "desc": "Awesome list for AI agent harness engineering: tools, patterns, evals, memory, MCP, permissions, observability, and orchestration."
     },
     {
-      "id": "amosblomqvist/learnharness",
-      "stars": 4683,
-      "topics": [],
-      "desc": "Agent harness for learning difficult things."
-    },
-    {
       "id": "lintsinghua/claude-code-book",
-      "stars": 4348,
+      "stars": 4359,
       "topics": [
         "agent",
         "agent-architecture",
@@ -2768,8 +2780,36 @@
       "desc": "\u300a\u5fa1\u8206\uff1a\u89e3\u7801 Agent Harness\u300b42\u4e07\u5b57\u62c6\u89e3 AI Agent \u7684Harness\u9aa8\u67b6\u4e0e\u795e\u7ecf \u2014\u2014 Claude Code \u67b6\u6784\u6df1\u5ea6\u5256\u6790\uff0c15 \u7ae0\u4ece\u5bf9\u8bdd\u5faa\u73af\u5230\u6784\u5efa\u4f60\u81ea\u5df1\u7684 Agent Harness\u3002\u5728\u7ebf\u9605\u8bfb\u7f51\u7ad9\uff1a"
     },
     {
+      "id": "sandbox-quantum/switch",
+      "stars": 4250,
+      "topics": [
+        "agent-orchestration",
+        "ai",
+        "ai-agents",
+        "chatops",
+        "discord",
+        "langchain",
+        "mcp",
+        "microsoft-teams",
+        "multi-agent",
+        "open-source",
+        "openai",
+        "self-hosted",
+        "slack"
+      ],
+      "desc": "Open-source AI teammates in Slack, Teams, Discord, Telegram and Mattermost. Self-host it, with any agent harness and any model."
+    },
+    {
+      "id": "peteromallet/desloppify",
+      "stars": 4106,
+      "topics": [
+        "agent-harness"
+      ],
+      "desc": "Agent harness to make your slop code well-engineered and beautiful."
+    },
+    {
       "id": "code-yeongyu/lazycodex",
-      "stars": 3861,
+      "stars": 3889,
       "topics": [
         "ai",
         "ai-agents",
@@ -2789,22 +2829,14 @@
       "desc": "The one and only agent harness for complex codebases. Project memory, planning, execution, and verified completion inside Codex."
     },
     {
-      "id": "peteromallet/desloppify",
-      "stars": 3702,
-      "topics": [
-        "agent-harness"
-      ],
-      "desc": "Agent harness to make your slop code well-engineered and beautiful."
-    },
-    {
       "id": "NVlabs/SoL-Pi",
-      "stars": 3619,
+      "stars": 3648,
       "topics": [],
       "desc": "SoL-Pi: Scaling Auto-Research Loops for Efficient Agent Harnesses"
     },
     {
       "id": "onecli/onecli",
-      "stars": 3612,
+      "stars": 3629,
       "topics": [
         "ai-agents",
         "cli",
@@ -2820,20 +2852,8 @@
       "desc": "Open-source sandboxed agent harness for teams. Giving every employee a secured personal agent."
     },
     {
-      "id": "QwenLM/Qwen-MM-Plugins",
-      "stars": 3166,
-      "topics": [],
-      "desc": "Make any agent harness multimodal-native."
-    },
-    {
-      "id": "visa/visa-vulnerability-agentic-harness",
-      "stars": 3033,
-      "topics": [],
-      "desc": "Visa Vulnerability Agentic Harness"
-    },
-    {
       "id": "VoltAgent/awesome-design-md",
-      "stars": 125060,
+      "stars": 126137,
       "topics": [
         "awesome-list",
         "design-md",
@@ -2849,7 +2869,7 @@
     },
     {
       "id": "JuliusBrussee/caveman",
-      "stars": 116656,
+      "stars": 118315,
       "topics": [
         "ai",
         "anthropic",
@@ -2866,7 +2886,7 @@
     },
     {
       "id": "pbakaus/impeccable",
-      "stars": 99141,
+      "stars": 106058,
       "topics": [
         "agent-skills",
         "ai",
@@ -2877,8 +2897,14 @@
       "desc": "The design vocabulary for your coding agent. Steer with polish and bolder, review with critique and audit, catch AI slop before it ships."
     },
     {
+      "id": "cloudflare/security-audit-skill",
+      "stars": 66618,
+      "topics": [],
+      "desc": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings"
+    },
+    {
       "id": "ayghri/i-have-adhd",
-      "stars": 59676,
+      "stars": 60516,
       "topics": [
         "adhd",
         "claude-",
@@ -2890,14 +2916,8 @@
       "desc": "A skill to stop your coding agent from burying the answer. ADHD-friendly output."
     },
     {
-      "id": "cloudflare/security-audit-skill",
-      "stars": 56166,
-      "topics": [],
-      "desc": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings"
-    },
-    {
       "id": "herdrdev/herdr",
-      "stars": 47279,
+      "stars": 49354,
       "topics": [
         "agent",
         "agent-orchestration",
@@ -2922,7 +2942,7 @@
     },
     {
       "id": "JCodesMore/ai-website-cloner-template",
-      "stars": 38359,
+      "stars": 38851,
       "topics": [
         "ai",
         "ai-agents",
@@ -2948,7 +2968,7 @@
     },
     {
       "id": "zarazhangrui/frontend-slides",
-      "stars": 31693,
+      "stars": 32077,
       "topics": [
         "ai-slides",
         "anthropic",
@@ -2964,14 +2984,26 @@
       "desc": "Create beautiful slides on the web using a coding agent's frontend skills"
     },
     {
+      "id": "vercel/turborepo",
+      "stars": 31312,
+      "topics": [
+        "build-system",
+        "build-tool",
+        "javascript",
+        "monorepo",
+        "typescript"
+      ],
+      "desc": "The build system for coding agents."
+    },
+    {
       "id": "browser-use/video-use",
-      "stars": 30316,
+      "stars": 30747,
       "topics": [],
       "desc": "Edit videos with coding agents"
     },
     {
       "id": "rohitg00/agentmemory",
-      "stars": 30069,
+      "stars": 30206,
       "topics": [
         "agentmemory",
         "agents",
@@ -2994,7 +3026,7 @@
     },
     {
       "id": "alirezarezvani/claude-skills",
-      "stars": 29113,
+      "stars": 29481,
       "topics": [
         "agent-plugins",
         "agent-skills",
@@ -3017,17 +3049,17 @@
         "openclaw-skills",
         "prompt-engineering"
       ],
-      "desc": "380 Claude Code skills & agent skills & plugins (30+ Agents, 70+ custom commands, 380+ skills, customizable references, scripts)for Claude Code, Codex, Gemini CLI, Cursor, and 8 more coding agents \u2014 engineering, marketing, product, compliance, C-level advisory, research, business operations, commercial & finance, and your daily productivity skills."
+      "desc": "410 Claude Code skills & agent skills & plugins (120+ Agents, custom commands, 410+ skills, customizable references, scripts)for Claude Code, Codex, Gemini CLI, Cursor, and 8 more coding agents \u2014 engineering, marketing, product, compliance, C-level advisory, research, business operations, commercial & finance, and your daily productivity skills."
     },
     {
       "id": "google-labs-code/design.md",
-      "stars": 28679,
+      "stars": 28778,
       "topics": [],
       "desc": "A format specification for describing a visual identity to coding agents. DESIGN.md gives agents a persistent, structured understanding of a design system."
     },
     {
       "id": "manaflow-ai/cmux",
-      "stars": 28633,
+      "stars": 28747,
       "topics": [
         "amp",
         "claude-code",
