@@ -9,7 +9,7 @@
     "feed_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/feed.json",
     "license": "CC-BY-SA-4.0",
     "stars_captured": "2026-11-08",
-    "project_count": 188,
+    "project_count": 189,
     "graveyard_count": 4,
     "tiers": [
       "super simple",
@@ -376,7 +376,7 @@
     {
       "kind": "derived",
       "q": "How many of these agent harnesses are open source?",
-      "a": "143 of 188 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
+      "a": "144 of 189 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
       "slug": "how-many-of-these-agent-harnesses-are-open-source"
     },
     {
@@ -423,7 +423,7 @@
     {
       "slug": "best-ai-agent-harnesses-2026",
       "title": "The best AI agent harnesses in 2026, ranked by category",
-      "summary": "These are the top three agent harnesses in each of the 12 categories of best-of-Agent-Harnesses, a hand-curated list of 188 harnesses re-ranked from live GitHub data every week; the stars below were captured 2026-11-08, and the page regenerates with every refresh.",
+      "summary": "These are the top three agent harnesses in each of the 12 categories of best-of-Agent-Harnesses, a hand-curated list of 189 harnesses re-ranked from live GitHub data every week; the stars below were captured 2026-11-08, and the page regenerates with every refresh.",
       "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/comparisons/best-ai-agent-harnesses-2026.md",
       "raw_url": "https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/comparisons/best-ai-agent-harnesses-2026.md"
     },
@@ -3183,6 +3183,41 @@
       "example": {
         "label": "Project README",
         "url": "https://github.com/yylo-dev/yylo#readme"
+      },
+      "deep_dive": null,
+      "archived": null
+    },
+    {
+      "name": "kamchatka",
+      "github_id": "ljedrz/nachalnik",
+      "url": "https://github.com/ljedrz/nachalnik",
+      "slug": "nachalnik",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#nachalnik",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/nachalnik/",
+      "description": "Linux terminal coding agent built on the `nachalnik` runtime, where the context, tools, permissions, and requests are explicit state. The **harness** asks before every action, reading a file included, with permissions granted per domain and operation rather than per tool; runs shell commands in a kernel sandbox (Landlock for files, a seccomp gate holding each network connection until answered); sends no system prompt of its own; and compacts by placeholders and removals you can see and `/restore`, never by model summaries. `/step` advances the loop one state transition at a time; the TUI, web view, and headless mode are shells over the same session.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 11,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (Rust CLI, kernel sandbox, step-through state machine, MCP)",
+      "autonomy": "step-gated",
+      "autonomy_rank": 1,
+      "recovery": "resumable",
+      "recovery_rank": 3,
+      "license_signal": "open-source",
+      "tags": [
+        "mcp",
+        "browser",
+        "sandbox",
+        "workflow",
+        "cli",
+        "tui",
+        "rust"
+      ],
+      "example": {
+        "label": "Session transcripts",
+        "url": "https://ljedrz.github.io/nachalnik/"
       },
       "deep_dive": null,
       "archived": null
