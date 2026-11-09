@@ -278,6 +278,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("rpi", "bigfish1913/pi-rust",
                 "Rust coding-agent runtime that began as a reimplementation of Pi and now develops on its own. The embeddable **harness** owns a provider-agnostic streaming agent loop, tool execution, JSONL sessions that resume after a crash from the last committed frame, and a native plugin ABI; the terminal TUI is a shell over the same crates, and a deterministic offline provider covers tests.",
                 "slightly complex (embeddable Rust runtime, terminal agent, native plugins)", labels=["rust"]),
+        Project("kamchatka", "ljedrz/nachalnik",
+                "Linux terminal coding agent built on the `nachalnik` runtime, where the context, tools, permissions, and requests are explicit state. The **harness** asks before every action, reading a file included, with permissions granted per domain and operation rather than per tool; runs shell commands in a kernel sandbox (Landlock for files, a seccomp gate holding each network connection until answered); sends no system prompt of its own; and compacts by placeholders and removals you can see and `/restore`, never by model summaries. `/step` advances the loop one state transition at a time; the TUI, web view, and headless mode are shells over the same session.",
+                "slightly complex (Rust CLI, kernel sandbox, step-through state machine, MCP)", labels=["rust"]),
     ],
     "coding-harness-configs": [
         Project("LoopTroop", "looptroop-ai/LoopTroop",
@@ -806,6 +809,7 @@ META: dict[str, tuple[int, str, str]] = {
     "huiliyi37/Tianshu-harness": (1325, "https://github.com/huiliyi37/Tianshu-harness/blob/main/README.en.md", "English README"),
     "orbi-build/orbi": (247, "https://github.com/orbi-build/orbi#the-loop-in-35-seconds", "One issue to release, recorded"),
     "bigfish1913/pi-rust": (228, "https://github.com/bigfish1913/pi-rust/tree/main/examples/minimal", "Offline embedded agent example"),
+    "ljedrz/nachalnik": (11, "https://ljedrz.github.io/nachalnik/", "Session transcripts"),
     # coding-harness-configs
     "looptroop-ai/LoopTroop": (171, "https://github.com/looptroop-ai/LoopTroop#readme", "Council → loop → worktree pipeline"),
     "open-gsd/gsd-core": (11350, "https://github.com/open-gsd/gsd-core/blob/next/commands/gsd/ship.md", "gsd:ship command"),
@@ -1273,6 +1277,7 @@ AXES: "dict[str, tuple[str, str]]" = {
     "huiliyi37/Tianshu-harness": ("bounded", "resumable"),
     "orbi-build/orbi": ("n/a", "n/a"),  # orchestrates Pi sessions; doesn't own the loop
     "bigfish1913/pi-rust": ("bounded", "durable"),
+    "ljedrz/nachalnik": ("step-gated", "resumable"),
     # coding-harness-configs
     "looptroop-ai/LoopTroop": ("bounded", "retry"),
     "obra/superpowers": ("n/a", "n/a"),

@@ -201,6 +201,10 @@ projects:
     github_id: bigfish1913/pi-rust
     labels: ["rust"]
     category: "coding-agent-products"
+  - name: kamchatka
+    github_id: ljedrz/nachalnik
+    labels: ["rust"]
+    category: "coding-agent-products"
   # Coding harness configs and SDKs
   - name: LoopTroop
     github_id: looptroop-ai/LoopTroop

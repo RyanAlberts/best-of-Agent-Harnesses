@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-    <a href="#contents" title="Project Count"><img src="https://img.shields.io/badge/projects-188-blue.svg?color=5ac4bf"></a>
+    <a href="#contents" title="Project Count"><img src="https://img.shields.io/badge/projects-189-blue.svg?color=5ac4bf"></a>
     <a href="#skills" title="Installable agent skills"><img src="https://img.shields.io/badge/skills-10-5ac4bf.svg"></a>
     <a href="#for-agents" title="Agents can query this list — MCP server, llms.txt & JSON"><img src="https://img.shields.io/badge/agents-query%20this%20list-5ac4bf.svg"></a>
     <a href="#contribution" title="Contributions welcome"><img src="https://img.shields.io/badge/contributions-welcome-green.svg"></a>
@@ -195,7 +195,7 @@ curl -fsSL https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses
 - [For agents: harnesses.json, llms.txt, MCP server, agent templates](#for-agents)
 - [FAQ](#faq)
 - [Progressive disclosure harnesses](#progressive-disclosure-harnesses) _8 projects_
-- [Coding agent products (IDEs, CLIs, full suites)](#coding-agent-products-ides-clis-full-suites) _31 projects_
+- [Coding agent products (IDEs, CLIs, full suites)](#coding-agent-products-ides-clis-full-suites) _32 projects_
 - [Coding harness configs and SDKs](#coding-harness-configs-and-sdks) _18 projects_
 - [Personal agent runtimes](#personal-agent-runtimes) _14 projects_
 - [Frameworks](#frameworks) _26 projects_
@@ -278,6 +278,7 @@ _Turnkey coding agents you install and run: IDE extensions, terminal CLIs, Docke
 | 29 | <a name="orbi"></a>[**Orbi**](https://github.com/orbi-build/orbi) | [247](https://github.com/orbi-build/orbi/stargazers) | Self-hosted runner that takes a GitHub issue labeled `ai-ready` to a reviewed, merged pull request and a tagged release: each run gets its own branch and worktree, Pi writes the change, a separate review session checks it against the issue's acceptance criteria, and only the reviewed head merges. The **harness** contribution is the issue-to-release delivery and review gate on top of Pi; it does not own an agent loop. <sup>`python`</sup> | ✅ | slightly complex (issue-driven runner, review gate, systemd/launchd timer) | [One issue to release, recorded](https://github.com/orbi-build/orbi#the-loop-in-35-seconds) |
 | 30 | <a name="pi-rust"></a>[**rpi**](https://github.com/bigfish1913/pi-rust)&#8202;✱ | [228](https://github.com/bigfish1913/pi-rust/stargazers) | Rust coding-agent runtime that began as a reimplementation of Pi and now develops on its own. The embeddable **harness** owns a provider-agnostic streaming agent loop, tool execution, JSONL sessions that resume after a crash from the last committed frame, and a native plugin ABI; the terminal TUI is a shell over the same crates, and a deterministic offline provider covers tests. <sup>`memory` · `provider-agnostic` · `cli` · `tui` · `rust`</sup> | ✅ | slightly complex (embeddable Rust runtime, terminal agent, native plugins) | [Offline embedded agent example](https://github.com/bigfish1913/pi-rust/tree/main/examples/minimal) |
 | 31 | <a name="yylo"></a>[**YYLO**](https://github.com/yylo-dev/yylo) | [66](https://github.com/yylo-dev/yylo/stargazers) | Command-line orchestrator for coding agents (drives Pi and Codex subagents): every task gets a dedicated branch/worktree and a typed lifecycle — read-only preflight, risk-scaled merge-queue review, release-readiness gates — with receipt-backed changes. The **harness** contribution is the git-native task/merge orchestration layer on top of whichever agent executes; not an agent loop itself. <sup>`multi-agent` · `typescript`</sup> | ✅ | slightly complex (git-native task fleet, merge queue) | [Project README](https://github.com/yylo-dev/yylo#readme) |
+| 32 | <a name="nachalnik"></a>[**kamchatka**](https://github.com/ljedrz/nachalnik) | [11](https://github.com/ljedrz/nachalnik/stargazers) | Linux terminal coding agent built on the `nachalnik` runtime, where the context, tools, permissions, and requests are explicit state. The **harness** asks before every action, reading a file included, with permissions granted per domain and operation rather than per tool; runs shell commands in a kernel sandbox (Landlock for files, a seccomp gate holding each network connection until answered); sends no system prompt of its own; and compacts by placeholders and removals you can see and `/restore`, never by model summaries. `/step` advances the loop one state transition at a time; the TUI, web view, and headless mode are shells over the same session. <sup>`mcp` · `browser` · `sandbox` · `workflow` · `cli`</sup> | ✅ | slightly complex (Rust CLI, kernel sandbox, step-through state machine, MCP) | [Session transcripts](https://ljedrz.github.io/nachalnik/) |
 
 ## Coding harness configs and SDKs
 
@@ -585,7 +586,7 @@ Harnesses whose execution state persists across restarts: langgraph-bigtool, rpi
 
 ### How many of these agent harnesses are open source?
 
-143 of 188 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.
+144 of 189 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.
 
 ### What is an agent harness?
 
