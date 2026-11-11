@@ -27,11 +27,11 @@
 <text x="832.5" y="254.5" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">5</text>
 <text x="1050.0" y="387.0" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">26</text>
 <text x="832.5" y="387.0" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">29</text>
+<text x="1050.0" y="254.5" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">7</text>
 <text x="397.5" y="387.0" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">3</text>
 <text x="615.0" y="652.0" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">1</text>
 <text x="832.5" y="519.5" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">8</text>
 <text x="1050.0" y="652.0" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">16</text>
-<text x="1050.0" y="254.5" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">6</text>
 <text x="1050.0" y="519.5" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">7</text>
 <text x="615.0" y="254.5" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">1</text>
 <text x="615.0" y="387.0" text-anchor="end" font-size="12" fill="#d1d5db" font-weight="700">2</text>
@@ -68,6 +68,7 @@
 <circle cx="733.0" cy="295.6" r="5.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Empryo — ⭐1.6k</title></circle>
 <circle cx="1003.9" cy="300.1" r="5.5" fill="#0ea5e9" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Ouroboros (razzant) — ⭐1.6k</title></circle>
 <circle cx="1002.7" cy="580.0" r="5.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>WebArena — ⭐1.6k</title></circle>
+<circle cx="1022.8" cy="232.1" r="5.5" fill="#ef4444" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Unreal Agent — ⭐2.2k</title></circle>
 <circle cx="1000.1" cy="367.1" r="5.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>inspect_ai — ⭐3.2k</title></circle>
 <circle cx="798.9" cy="291.5" r="5.5" fill="#3b82f6" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>Bee Agent Framework — ⭐3.5k</title></circle>
 <circle cx="999.8" cy="590.5" r="5.5" fill="#64748b" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.2"><title>AgentBench — ⭐3.8k</title></circle>
@@ -153,13 +154,13 @@
 <text x="750.2" y="212.0" text-anchor="end" font-size="12.5" font-weight="600" fill="#1f2937">deepagents</text>
 <text x="972.1" y="362.4" text-anchor="end" font-size="12.5" font-weight="600" fill="#1f2937">OpenClaw</text>
 <text x="771.9" y="349.1" text-anchor="end" font-size="12.5" font-weight="600" fill="#1f2937">DeepSeek Harness</text>
+<text x="993.7" y="164.6" text-anchor="end" font-size="12.5" font-weight="600" fill="#1f2937">n8n</text>
 <text x="270.3" y="327.9" text-anchor="start" font-size="12.5" font-weight="600" fill="#1f2937">Cline</text>
 <text x="539.2" y="598.0" text-anchor="end" font-size="12.5" font-weight="600" fill="#1f2937">claw-code-agent</text>
 <text x="767.1" y="501.0" text-anchor="end" font-size="12.5" font-weight="600" fill="#1f2937">langchain</text>
 <text x="987.6" y="633.5" text-anchor="end" font-size="12.5" font-weight="600" fill="#1f2937">ChatDev</text>
-<text x="993.7" y="164.6" text-anchor="end" font-size="12.5" font-weight="600" fill="#1f2937">n8n</text>
 <text x="913.1" y="500.7" text-anchor="start" font-size="12.5" font-weight="600" fill="#1f2937">Dify</text>
 <text x="543.3" y="169.0" text-anchor="end" font-size="12.5" font-weight="600" fill="#1f2937">Open Multi-Agent</text>
 <text x="534.2" y="313.2" text-anchor="start" font-size="12.5" font-weight="600" fill="#1f2937">aider</text>
-<text x="1060" y="784" text-anchor="end" font-size="12" fill="#9ca3af">114 loop-owning projects shown · 74 format/component entries (n/a) omitted · full tiers in harnesses.json</text>
+<text x="1060" y="784" text-anchor="end" font-size="12" fill="#9ca3af">115 loop-owning projects shown · 74 format/component entries (n/a) omitted · full tiers in harnesses.json</text>
 </svg>
