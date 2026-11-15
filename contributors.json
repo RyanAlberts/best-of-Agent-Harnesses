@@ -788,5 +788,75 @@
         "title": "Add project: Kortix"
       }
     ]
+  },
+  {
+    "login": "somewherelostt",
+    "contributions": [
+      {
+        "kind": "issue",
+        "number": 157,
+        "title": "Add project: Orchestrator"
+      }
+    ]
+  },
+  {
+    "login": "ljedrz",
+    "contributions": [
+      {
+        "kind": "pr",
+        "number": 158,
+        "title": "Add project: kamchatka"
+      }
+    ]
+  },
+  {
+    "login": "kormoran",
+    "contributions": [
+      {
+        "kind": "issue",
+        "number": 159,
+        "title": "Add project: HAGAR the Harness"
+      }
+    ]
+  },
+  {
+    "login": "ichorid",
+    "contributions": [
+      {
+        "kind": "pr",
+        "number": 160,
+        "title": "Add project: Unreal Agent"
+      }
+    ]
+  },
+  {
+    "login": "OrionArchitekton",
+    "contributions": [
+      {
+        "kind": "issue",
+        "number": 161,
+        "title": "Add project: Orion Browser"
+      }
+    ]
+  },
+  {
+    "login": "PAMulligan",
+    "contributions": [
+      {
+        "kind": "issue",
+        "number": 162,
+        "title": "Add project: Flavian"
+      }
+    ]
+  },
+  {
+    "login": "EivMeyer",
+    "contributions": [
+      {
+        "kind": "issue",
+        "number": 163,
+        "title": "Add project: zeroshot"
+      }
+    ]
   }
 ]

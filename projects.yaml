@@ -157,10 +157,6 @@ projects:
   - name: eigent
     github_id: eigent-ai/eigent
     category: "coding-agent-products"
-  - name: DeepSeek-Reasonix
-    github_id: esengine/DeepSeek-Reasonix
-    labels: ["javascript"]
-    category: "coding-agent-products"
   - name: jcode
     github_id: 1jehuang/jcode
     labels: ["rust"]

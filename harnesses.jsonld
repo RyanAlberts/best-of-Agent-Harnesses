@@ -11,7 +11,7 @@
     "name": "Ryan Alberts",
     "url": "https://github.com/RyanAlberts"
   },
-  "dateModified": "2026-11-08",
+  "dateModified": "2026-11-15",
   "keywords": [
     "agent harness",
     "AI agents",
@@ -29,7 +29,7 @@
   ],
   "mainEntity": {
     "@type": "ItemList",
-    "numberOfItems": 188,
+    "numberOfItems": 187,
     "itemListElement": [
       {
         "@type": "ListItem",
@@ -264,18 +264,6 @@
         "position": 20,
         "item": {
           "@type": "SoftwareApplication",
-          "name": "DeepSeek-Reasonix",
-          "url": "https://github.com/esengine/DeepSeek-Reasonix",
-          "description": "DeepSeek-native terminal coding agent. The **harness** is engineered around prefix-cache stability for long-running sessions; the TUI is the shell.",
-          "applicationCategory": "DeveloperApplication",
-          "keywords": "memory, cli, tui, typescript"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 21,
-        "item": {
-          "@type": "SoftwareApplication",
           "name": "qwen-code",
           "url": "https://github.com/QwenLM/qwen-code",
           "description": "Alibaba's official terminal coding agent, forked from Gemini CLI's agent loop and retuned for Qwen models. The **harness** is the same sandboxed tool-call loop as its upstream; the terminal is the shell.",
@@ -285,7 +273,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 22,
+        "position": 21,
         "item": {
           "@type": "SoftwareApplication",
           "name": "crush",
@@ -297,7 +285,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 23,
+        "position": 22,
         "item": {
           "@type": "SoftwareApplication",
           "name": "vibe-kanban",
@@ -309,7 +297,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 24,
+        "position": 23,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Symphony",
@@ -321,7 +309,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 25,
+        "position": 24,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Kilo Code",
@@ -333,7 +321,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 26,
+        "position": 25,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Grok Build",
@@ -345,7 +333,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 27,
+        "position": 26,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Roo Code",
@@ -357,7 +345,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 28,
+        "position": 27,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Prime Agent",
@@ -369,7 +357,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 29,
+        "position": 28,
         "item": {
           "@type": "SoftwareApplication",
           "name": "jcode",
@@ -381,7 +369,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 30,
+        "position": 29,
         "item": {
           "@type": "SoftwareApplication",
           "name": "eigent",
@@ -393,7 +381,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 31,
+        "position": 30,
         "item": {
           "@type": "SoftwareApplication",
           "name": "cc-haha",
@@ -405,7 +393,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 32,
+        "position": 31,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Empryo",
@@ -417,7 +405,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 33,
+        "position": 32,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Tianshu Harness",
@@ -429,7 +417,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 34,
+        "position": 33,
         "item": {
           "@type": "SoftwareApplication",
           "name": "AgentBox",
@@ -441,7 +429,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 35,
+        "position": 34,
         "item": {
           "@type": "SoftwareApplication",
           "name": "claw-code-agent",
@@ -453,7 +441,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 36,
+        "position": 35,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Proliferate",
@@ -461,6 +449,18 @@
           "description": "Open-source AI IDE for Claude Code, Codex, OpenCode, and more. The **harness** contribution is the workspace/session orchestration layer: run multiple coding agents in parallel, locally or in the cloud, with isolated workspaces, reusable workflows, and shared team context.",
           "applicationCategory": "DeveloperApplication",
           "keywords": "multi-agent, sandbox, ide, typescript"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 36,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "rpi",
+          "url": "https://github.com/bigfish1913/pi-rust",
+          "description": "Rust coding-agent runtime that began as a reimplementation of Pi and now develops on its own. The embeddable **harness** owns a provider-agnostic streaming agent loop, tool execution, JSONL sessions that resume after a crash from the last committed frame, and a native plugin ABI; the terminal TUI is a shell over the same crates, and a deterministic offline provider covers tests.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "memory, provider-agnostic, cli, tui, rust"
         }
       },
       {
@@ -480,18 +480,6 @@
         "position": 38,
         "item": {
           "@type": "SoftwareApplication",
-          "name": "rpi",
-          "url": "https://github.com/bigfish1913/pi-rust",
-          "description": "Rust coding-agent runtime that began as a reimplementation of Pi and now develops on its own. The embeddable **harness** owns a provider-agnostic streaming agent loop, tool execution, JSONL sessions that resume after a crash from the last committed frame, and a native plugin ABI; the terminal TUI is a shell over the same crates, and a deterministic offline provider covers tests.",
-          "applicationCategory": "DeveloperApplication",
-          "keywords": "memory, provider-agnostic, cli, tui, rust"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 39,
-        "item": {
-          "@type": "SoftwareApplication",
           "name": "YYLO",
           "url": "https://github.com/yylo-dev/yylo",
           "description": "Command-line orchestrator for coding agents (drives Pi and Codex subagents): every task gets a dedicated branch/worktree and a typed lifecycle — read-only preflight, risk-scaled merge-queue review, release-readiness gates — with receipt-backed changes. The **harness** contribution is the git-native task/merge orchestration layer on top of whichever agent executes; not an agent loop itself.",
@@ -501,7 +489,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 40,
+        "position": 39,
         "item": {
           "@type": "SoftwareApplication",
           "name": "superpowers",
@@ -513,7 +501,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 41,
+        "position": 40,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Anthropic Skills",
@@ -525,7 +513,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 42,
+        "position": 41,
         "item": {
           "@type": "SoftwareApplication",
           "name": "GStack",
@@ -537,7 +525,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 43,
+        "position": 42,
         "item": {
           "@type": "SoftwareApplication",
           "name": "addyosmani/agent-skills",
@@ -549,7 +537,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 44,
+        "position": 43,
         "item": {
           "@type": "SoftwareApplication",
           "name": "awesome-claude-code",
@@ -561,7 +549,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 45,
+        "position": 44,
         "item": {
           "@type": "SoftwareApplication",
           "name": "wshobson/agents",
@@ -573,7 +561,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 46,
+        "position": 45,
         "item": {
           "@type": "SoftwareApplication",
           "name": "planning-with-files",
@@ -585,7 +573,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 47,
+        "position": 46,
         "item": {
           "@type": "SoftwareApplication",
           "name": "SWE-agent",
@@ -597,7 +585,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 48,
+        "position": 47,
         "item": {
           "@type": "SoftwareApplication",
           "name": "get-shit-done",
@@ -609,7 +597,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 49,
+        "position": 48,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Claude Agent SDK",
@@ -621,7 +609,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 50,
+        "position": 49,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Ouroboros (Q00)",
@@ -633,7 +621,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 51,
+        "position": 50,
         "item": {
           "@type": "SoftwareApplication",
           "name": "agents-cli",
@@ -645,7 +633,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 52,
+        "position": 51,
         "item": {
           "@type": "SoftwareApplication",
           "name": "skillhub",
@@ -657,7 +645,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 53,
+        "position": 52,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Meta-Harness",
@@ -669,7 +657,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 54,
+        "position": 53,
         "item": {
           "@type": "SoftwareApplication",
           "name": "RepoMaster",
@@ -681,7 +669,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 55,
+        "position": 54,
         "item": {
           "@type": "SoftwareApplication",
           "name": "AutoHarness",
@@ -693,7 +681,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 56,
+        "position": 55,
         "item": {
           "@type": "SoftwareApplication",
           "name": "LoopTroop",
@@ -705,7 +693,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 57,
+        "position": 56,
         "item": {
           "@type": "SoftwareApplication",
           "name": "pmstack",
@@ -717,7 +705,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 58,
+        "position": 57,
         "item": {
           "@type": "SoftwareApplication",
           "name": "OpenClaw",
@@ -729,7 +717,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 59,
+        "position": 58,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Hermes",
@@ -741,7 +729,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 60,
+        "position": 59,
         "item": {
           "@type": "SoftwareApplication",
           "name": "AnythingLLM",
@@ -753,7 +741,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 61,
+        "position": 60,
         "item": {
           "@type": "SoftwareApplication",
           "name": "nanobot",
@@ -765,7 +753,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 62,
+        "position": 61,
         "item": {
           "@type": "SoftwareApplication",
           "name": "CowAgent",
@@ -777,7 +765,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 63,
+        "position": 62,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Khoj",
@@ -785,6 +773,18 @@
           "description": "Self-hostable \"AI second brain\": answers over your docs and the web, custom agents, scheduled automations, and multi-client reach (web, Obsidian, Emacs, WhatsApp). A personal-agent harness with retrieval at the core.",
           "applicationCategory": "DeveloperApplication",
           "keywords": "python"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 63,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "Eliza",
+          "url": "https://github.com/elizaOS/eliza",
+          "description": "Open \"agentic operating system\" (elizaOS): persistent multi-agent runtime with character files, a plugin ecosystem, and social/platform integrations — the harness behind a large share of autonomous social agents.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "memory, multi-agent, typescript"
         }
       },
       {
@@ -804,18 +804,6 @@
         "position": 65,
         "item": {
           "@type": "SoftwareApplication",
-          "name": "Eliza",
-          "url": "https://github.com/elizaOS/eliza",
-          "description": "Open \"agentic operating system\" (elizaOS): persistent multi-agent runtime with character files, a plugin ecosystem, and social/platform integrations — the harness behind a large share of autonomous social agents.",
-          "applicationCategory": "DeveloperApplication",
-          "keywords": "memory, multi-agent, typescript"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 66,
-        "item": {
-          "@type": "SoftwareApplication",
           "name": "OpenHarness (HKUDS)",
           "url": "https://github.com/HKUDS/OpenHarness",
           "description": "Open agent harness with a built-in personal agent (\"Ohmo\") that runs across Feishu, Slack, Telegram, and Discord; core tool-use, skills, memory, multi-agent coordination with auto-compaction for multi-day sessions.",
@@ -825,7 +813,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 67,
+        "position": 66,
         "item": {
           "@type": "SoftwareApplication",
           "name": "QM",
@@ -837,7 +825,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 68,
+        "position": 67,
         "item": {
           "@type": "SoftwareApplication",
           "name": "OpenJarvis",
@@ -849,7 +837,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 69,
+        "position": 68,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Ouroboros (razzant)",
@@ -861,7 +849,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 70,
+        "position": 69,
         "item": {
           "@type": "SoftwareApplication",
           "name": "AIlice",
@@ -873,7 +861,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 71,
+        "position": 70,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Talon",
@@ -885,7 +873,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 72,
+        "position": 71,
         "item": {
           "@type": "SoftwareApplication",
           "name": "n8n",
@@ -897,7 +885,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 73,
+        "position": 72,
         "item": {
           "@type": "SoftwareApplication",
           "name": "AutoGPT",
@@ -909,7 +897,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 74,
+        "position": 73,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Dify",
@@ -921,7 +909,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 75,
+        "position": 74,
         "item": {
           "@type": "SoftwareApplication",
           "name": "langflow",
@@ -933,7 +921,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 76,
+        "position": 75,
         "item": {
           "@type": "SoftwareApplication",
           "name": "langchain",
@@ -945,7 +933,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 77,
+        "position": 76,
         "item": {
           "@type": "SoftwareApplication",
           "name": "browser-use",
@@ -957,7 +945,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 78,
+        "position": 77,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Flowise",
@@ -969,7 +957,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 79,
+        "position": 78,
         "item": {
           "@type": "SoftwareApplication",
           "name": "llama-index",
@@ -981,7 +969,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 80,
+        "position": 79,
         "item": {
           "@type": "SoftwareApplication",
           "name": "langgraph",
@@ -993,7 +981,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 81,
+        "position": 80,
         "item": {
           "@type": "SoftwareApplication",
           "name": "agno",
@@ -1005,7 +993,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 82,
+        "position": 81,
         "item": {
           "@type": "SoftwareApplication",
           "name": "mastra",
@@ -1017,7 +1005,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 83,
+        "position": 82,
         "item": {
           "@type": "SoftwareApplication",
           "name": "semantic-kernel",
@@ -1029,7 +1017,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 84,
+        "position": 83,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Haystack",
@@ -1041,7 +1029,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 85,
+        "position": 84,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Stagehand",
@@ -1053,7 +1041,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 86,
+        "position": 85,
         "item": {
           "@type": "SoftwareApplication",
           "name": "letta",
@@ -1065,7 +1053,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 87,
+        "position": 86,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Google ADK",
@@ -1077,7 +1065,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 88,
+        "position": 87,
         "item": {
           "@type": "SoftwareApplication",
           "name": "rasa",
@@ -1089,7 +1077,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 89,
+        "position": 88,
         "item": {
           "@type": "SoftwareApplication",
           "name": "botpress",
@@ -1101,7 +1089,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 90,
+        "position": 89,
         "item": {
           "@type": "SoftwareApplication",
           "name": "R2R",
@@ -1113,7 +1101,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 91,
+        "position": 90,
         "item": {
           "@type": "SoftwareApplication",
           "name": "agent-squad",
@@ -1125,7 +1113,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 92,
+        "position": 91,
         "item": {
           "@type": "SoftwareApplication",
           "name": "AgentVerse",
@@ -1137,7 +1125,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 93,
+        "position": 92,
         "item": {
           "@type": "SoftwareApplication",
           "name": "youtu-agent",
@@ -1149,7 +1137,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 94,
+        "position": 93,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Bee Agent Framework",
@@ -1161,7 +1149,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 95,
+        "position": 94,
         "item": {
           "@type": "SoftwareApplication",
           "name": "AgentStack",
@@ -1173,7 +1161,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 96,
+        "position": 95,
         "item": {
           "@type": "SoftwareApplication",
           "name": "AgentSilex",
@@ -1185,7 +1173,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 97,
+        "position": 96,
         "item": {
           "@type": "SoftwareApplication",
           "name": "SuperAgentX",
@@ -1197,7 +1185,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 98,
+        "position": 97,
         "item": {
           "@type": "SoftwareApplication",
           "name": "MetaGPT",
@@ -1209,7 +1197,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 99,
+        "position": 98,
         "item": {
           "@type": "SoftwareApplication",
           "name": "autogen",
@@ -1221,7 +1209,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 100,
+        "position": 99,
         "item": {
           "@type": "SoftwareApplication",
           "name": "crewAI",
@@ -1233,7 +1221,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 101,
+        "position": 100,
         "item": {
           "@type": "SoftwareApplication",
           "name": "OpenManus",
@@ -1245,7 +1233,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 102,
+        "position": 101,
         "item": {
           "@type": "SoftwareApplication",
           "name": "ChatDev",
@@ -1257,7 +1245,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 103,
+        "position": 102,
         "item": {
           "@type": "SoftwareApplication",
           "name": "openai-agents-python",
@@ -1269,7 +1257,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 104,
+        "position": 103,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Microsoft Agent Framework",
@@ -1281,7 +1269,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 105,
+        "position": 104,
         "item": {
           "@type": "SoftwareApplication",
           "name": "omnigent",
@@ -1293,7 +1281,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 106,
+        "position": 105,
         "item": {
           "@type": "SoftwareApplication",
           "name": "hive",
@@ -1301,6 +1289,18 @@
           "description": "Self-hosted multi-agent **harness** aimed at production workloads: human-in-the-loop checkpoints and a self-improving agent loop, distinct from single-session coding-agent shells.",
           "applicationCategory": "DeveloperApplication",
           "keywords": "multi-agent, python"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 106,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "Orkas",
+          "url": "https://github.com/Orkas-AI/Orkas",
+          "description": "Local-first desktop AI team. The **harness** is a Commander agent that turns one chat goal into a plan and runs specialist agents in parallel or in sequence, with tool approvals, session checkpoints, tool-round budgets and idle watchdogs for stalled runs, durable per-agent memory, and support for built-in or external agent runtimes.",
+          "applicationCategory": "DeveloperApplication",
+          "keywords": "memory, multi-agent, typescript"
         }
       },
       {
@@ -1320,18 +1320,6 @@
         "position": 108,
         "item": {
           "@type": "SoftwareApplication",
-          "name": "Orkas",
-          "url": "https://github.com/Orkas-AI/Orkas",
-          "description": "Local-first desktop AI team. The **harness** is a Commander agent that turns one chat goal into a plan and runs specialist agents in parallel or in sequence, with tool approvals, session checkpoints, tool-round budgets and idle watchdogs for stalled runs, durable per-agent memory, and support for built-in or external agent runtimes.",
-          "applicationCategory": "DeveloperApplication",
-          "keywords": "memory, multi-agent, typescript"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 109,
-        "item": {
-          "@type": "SoftwareApplication",
           "name": "Open Multi-Agent",
           "url": "https://github.com/open-multi-agent/open-multi-agent",
           "description": "Self-hosted TypeScript multi-agent runtime. The **harness** is a coordinator that plans a task DAG from one goal at runtime and a deterministic scheduler that runs specialized agents, with durable approvals that pause before a plan, task, or tool call, PostgreSQL-backed checkpoints for restart recovery, and a verifiable run journal for replay; `runTasks()` keeps the graph fixed when the topology must not change.",
@@ -1341,7 +1329,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 110,
+        "position": 109,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Raven",
@@ -1353,7 +1341,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 111,
+        "position": 110,
         "item": {
           "@type": "SoftwareApplication",
           "name": "AG2",
@@ -1365,7 +1353,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 112,
+        "position": 111,
         "item": {
           "@type": "SoftwareApplication",
           "name": "HarnessRouter",
@@ -1377,7 +1365,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 113,
+        "position": 112,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Agent Teams AI",
@@ -1389,7 +1377,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 114,
+        "position": 113,
         "item": {
           "@type": "SoftwareApplication",
           "name": "CUGA",
@@ -1401,7 +1389,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 115,
+        "position": 114,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Desplega Agent Swarm",
@@ -1413,7 +1401,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 116,
+        "position": 115,
         "item": {
           "@type": "SoftwareApplication",
           "name": "fractal",
@@ -1425,7 +1413,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 117,
+        "position": 116,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Claudexor",
@@ -1437,7 +1425,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 118,
+        "position": 117,
         "item": {
           "@type": "SoftwareApplication",
           "name": "AgentRL",
@@ -1449,7 +1437,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 119,
+        "position": 118,
         "item": {
           "@type": "SoftwareApplication",
           "name": "GraphCode",
@@ -1461,7 +1449,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 120,
+        "position": 119,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Agent Barn",
@@ -1473,7 +1461,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 121,
+        "position": 120,
         "item": {
           "@type": "SoftwareApplication",
           "name": "MCP Servers",
@@ -1485,7 +1473,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 122,
+        "position": 121,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Context7",
@@ -1497,7 +1485,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 123,
+        "position": 122,
         "item": {
           "@type": "SoftwareApplication",
           "name": "chrome-devtools-mcp",
@@ -1509,7 +1497,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 124,
+        "position": 123,
         "item": {
           "@type": "SoftwareApplication",
           "name": "aider",
@@ -1521,7 +1509,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 125,
+        "position": 124,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Playwright MCP",
@@ -1533,7 +1521,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 126,
+        "position": 125,
         "item": {
           "@type": "SoftwareApplication",
           "name": "continue",
@@ -1545,7 +1533,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 127,
+        "position": 126,
         "item": {
           "@type": "SoftwareApplication",
           "name": "github-mcp-server",
@@ -1557,7 +1545,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 128,
+        "position": 127,
         "item": {
           "@type": "SoftwareApplication",
           "name": "MCP Python SDK",
@@ -1569,7 +1557,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 129,
+        "position": 128,
         "item": {
           "@type": "SoftwareApplication",
           "name": "MCP TypeScript SDK",
@@ -1581,7 +1569,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 130,
+        "position": 129,
         "item": {
           "@type": "SoftwareApplication",
           "name": "MCP Inspector",
@@ -1593,7 +1581,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 131,
+        "position": 130,
         "item": {
           "@type": "SoftwareApplication",
           "name": "MCP Registry",
@@ -1605,7 +1593,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 132,
+        "position": 131,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Agent Governance Toolkit",
@@ -1617,7 +1605,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 133,
+        "position": 132,
         "item": {
           "@type": "SoftwareApplication",
           "name": "mcp-context-forge",
@@ -1629,7 +1617,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 134,
+        "position": 133,
         "item": {
           "@type": "SoftwareApplication",
           "name": "cocoindex-code",
@@ -1641,7 +1629,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 135,
+        "position": 134,
         "item": {
           "@type": "SoftwareApplication",
           "name": "agent-vault",
@@ -1653,7 +1641,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 136,
+        "position": 135,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Docker MCP Gateway",
@@ -1665,7 +1653,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 137,
+        "position": 136,
         "item": {
           "@type": "SoftwareApplication",
           "name": "puppeteer-real-browser-mcp",
@@ -1677,7 +1665,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 138,
+        "position": 137,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Better-OpenCodeMCP",
@@ -1689,7 +1677,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 139,
+        "position": 138,
         "item": {
           "@type": "SoftwareApplication",
           "name": "agentlog",
@@ -1701,7 +1689,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 140,
+        "position": 139,
         "item": {
           "@type": "SoftwareApplication",
           "name": "claude-mem",
@@ -1713,7 +1701,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 141,
+        "position": 140,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Mem0",
@@ -1725,7 +1713,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 142,
+        "position": 141,
         "item": {
           "@type": "SoftwareApplication",
           "name": "cognee",
@@ -1737,7 +1725,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 143,
+        "position": 142,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Graphiti (Zep)",
@@ -1749,7 +1737,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 144,
+        "position": 143,
         "item": {
           "@type": "SoftwareApplication",
           "name": "beads",
@@ -1761,7 +1749,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 145,
+        "position": 144,
         "item": {
           "@type": "SoftwareApplication",
           "name": "deja",
@@ -1773,7 +1761,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 146,
+        "position": 145,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Agent Lightning",
@@ -1785,7 +1773,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 147,
+        "position": 146,
         "item": {
           "@type": "SoftwareApplication",
           "name": "SWE-bench",
@@ -1797,7 +1785,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 148,
+        "position": 147,
         "item": {
           "@type": "SoftwareApplication",
           "name": "AgentBench",
@@ -1809,7 +1797,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 149,
+        "position": 148,
         "item": {
           "@type": "SoftwareApplication",
           "name": "inspect_ai",
@@ -1821,7 +1809,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 150,
+        "position": 149,
         "item": {
           "@type": "SoftwareApplication",
           "name": "WebArena",
@@ -1833,7 +1821,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 151,
+        "position": 150,
         "item": {
           "@type": "SoftwareApplication",
           "name": "ClawBench",
@@ -1845,7 +1833,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 152,
+        "position": 151,
         "item": {
           "@type": "SoftwareApplication",
           "name": "WebVoyager",
@@ -1857,7 +1845,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 153,
+        "position": 152,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Terminal-Bench",
@@ -1869,7 +1857,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 154,
+        "position": 153,
         "item": {
           "@type": "SoftwareApplication",
           "name": "agent-qa",
@@ -1881,7 +1869,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 155,
+        "position": 154,
         "item": {
           "@type": "SoftwareApplication",
           "name": "swe-smith",
@@ -1893,7 +1881,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 156,
+        "position": 155,
         "item": {
           "@type": "SoftwareApplication",
           "name": "SWE-Gym",
@@ -1905,7 +1893,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 157,
+        "position": 156,
         "item": {
           "@type": "SoftwareApplication",
           "name": "ARC-AGI-2",
@@ -1917,7 +1905,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 158,
+        "position": 157,
         "item": {
           "@type": "SoftwareApplication",
           "name": "inspect_evals",
@@ -1929,7 +1917,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 159,
+        "position": 158,
         "item": {
           "@type": "SoftwareApplication",
           "name": "arc-agi-benchmarking",
@@ -1941,7 +1929,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 160,
+        "position": 159,
         "item": {
           "@type": "SoftwareApplication",
           "name": "VitaBench",
@@ -1953,7 +1941,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 161,
+        "position": 160,
         "item": {
           "@type": "SoftwareApplication",
           "name": "AgencyBench",
@@ -1965,7 +1953,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 162,
+        "position": 161,
         "item": {
           "@type": "SoftwareApplication",
           "name": "letta-evals",
@@ -1977,7 +1965,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 163,
+        "position": 162,
         "item": {
           "@type": "SoftwareApplication",
           "name": "SUPER",
@@ -1989,7 +1977,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 164,
+        "position": 163,
         "item": {
           "@type": "SoftwareApplication",
           "name": "TRAIL",
@@ -2001,7 +1989,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 165,
+        "position": 164,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Langfuse",
@@ -2013,7 +2001,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 166,
+        "position": 165,
         "item": {
           "@type": "SoftwareApplication",
           "name": "MLflow",
@@ -2025,7 +2013,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 167,
+        "position": 166,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Opik",
@@ -2037,7 +2025,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 168,
+        "position": 167,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Arize Phoenix",
@@ -2049,7 +2037,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 169,
+        "position": 168,
         "item": {
           "@type": "SoftwareApplication",
           "name": "DeerFlow",
@@ -2061,7 +2049,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 170,
+        "position": 169,
         "item": {
           "@type": "SoftwareApplication",
           "name": "gpt-researcher",
@@ -2073,7 +2061,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 171,
+        "position": 170,
         "item": {
           "@type": "SoftwareApplication",
           "name": "AutoResearchClaw",
@@ -2085,7 +2073,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 172,
+        "position": 171,
         "item": {
           "@type": "SoftwareApplication",
           "name": "MiroThinker",
@@ -2097,7 +2085,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 173,
+        "position": 172,
         "item": {
           "@type": "SoftwareApplication",
           "name": "openagents",
@@ -2109,7 +2097,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 174,
+        "position": 173,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Jev Social",
@@ -2121,7 +2109,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 175,
+        "position": 174,
         "item": {
           "@type": "SoftwareApplication",
           "name": "LiteLLM",
@@ -2133,7 +2121,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 176,
+        "position": 175,
         "item": {
           "@type": "SoftwareApplication",
           "name": "deepagents",
@@ -2145,7 +2133,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 177,
+        "position": 176,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Composio",
@@ -2157,7 +2145,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 178,
+        "position": 177,
         "item": {
           "@type": "SoftwareApplication",
           "name": "smolagents",
@@ -2169,7 +2157,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 179,
+        "position": 178,
         "item": {
           "@type": "SoftwareApplication",
           "name": "vercel/ai",
@@ -2181,7 +2169,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 180,
+        "position": 179,
         "item": {
           "@type": "SoftwareApplication",
           "name": "pydantic-ai",
@@ -2193,7 +2181,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 181,
+        "position": 180,
         "item": {
           "@type": "SoftwareApplication",
           "name": "E2B",
@@ -2205,7 +2193,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 182,
+        "position": 181,
         "item": {
           "@type": "SoftwareApplication",
           "name": "strands-agents",
@@ -2217,7 +2205,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 183,
+        "position": 182,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Steel",
@@ -2229,7 +2217,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 184,
+        "position": 183,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Cloudflare Agents",
@@ -2241,7 +2229,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 185,
+        "position": 184,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Agent Sandbox",
@@ -2253,7 +2241,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 186,
+        "position": 185,
         "item": {
           "@type": "SoftwareApplication",
           "name": "openai-agents-js",
@@ -2265,7 +2253,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 187,
+        "position": 186,
         "item": {
           "@type": "SoftwareApplication",
           "name": "open-harness",
@@ -2277,7 +2265,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 188,
+        "position": 187,
         "item": {
           "@type": "SoftwareApplication",
           "name": "Community-curated agent lists",
