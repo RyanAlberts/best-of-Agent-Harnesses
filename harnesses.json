@@ -9,8 +9,8 @@
     "feed_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/feed.json",
     "license": "CC-BY-SA-4.0",
     "stars_captured": "2026-11-15",
-    "project_count": 187,
-    "graveyard_count": 5,
+    "project_count": 194,
+    "graveyard_count": 4,
     "tiers": [
       "super simple",
       "mostly simple",
@@ -376,7 +376,7 @@
     {
       "kind": "derived",
       "q": "How many of these agent harnesses are open source?",
-      "a": "143 of 187 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
+      "a": "149 of 194 carry a standard open-source license; the rest are source-available or unclear, and flagged per row.",
       "slug": "how-many-of-these-agent-harnesses-are-open-source"
     },
     {
@@ -423,7 +423,7 @@
     {
       "slug": "best-ai-agent-harnesses-2026",
       "title": "The best AI agent harnesses in 2026, ranked by category",
-      "summary": "These are the top three agent harnesses in each of the 12 categories of best-of-Agent-Harnesses, a hand-curated list of 187 harnesses re-ranked from live GitHub data every week; the stars below were captured 2026-11-15, and the page regenerates with every refresh.",
+      "summary": "These are the top three agent harnesses in each of the 12 categories of best-of-Agent-Harnesses, a hand-curated list of 194 harnesses re-ranked from live GitHub data every week; the stars below were captured 2026-11-15, and the page regenerates with every refresh.",
       "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/comparisons/best-ai-agent-harnesses-2026.md",
       "raw_url": "https://raw.githubusercontent.com/RyanAlberts/best-of-Agent-Harnesses/main/comparisons/best-ai-agent-harnesses-2026.md"
     },
@@ -2811,6 +2811,35 @@
       "archived": null
     },
     {
+      "name": "Orchestrator",
+      "github_id": "OrchestratorInc/agent-orchestrator",
+      "url": "https://github.com/OrchestratorInc/agent-orchestrator",
+      "slug": "agent-orchestrator",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#agent-orchestrator",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/agent-orchestrator/",
+      "description": "Supervises fleets of existing coding agents (Claude Code, Codex, and others) from task to merged PR: an orchestrator agent splits the work and starts one worker per piece, each in its own git worktree. The **harness** contribution is the feedback layer that routes failed CI checks, review comments, and merge conflicts back to the worker that owns the PR; the desktop and mobile apps are the shell, and each agent CLI still owns its loop.",
+      "category": "coding-agent-products",
+      "category_title": "Coding agent products (IDEs, CLIs, full suites)",
+      "stars": 14725,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (worktree-per-worker fleet supervisor)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [
+        "cli"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/OrchestratorInc/agent-orchestrator#readme"
+      },
+      "deep_dive": null,
+      "archived": null
+    },
+    {
       "name": "Empryo",
       "github_id": "proxysoul/Empryo",
       "url": "https://github.com/proxysoul/Empryo",
@@ -3364,6 +3393,36 @@
       "example": {
         "label": "Project README",
         "url": "https://github.com/addyosmani/agent-skills#readme"
+      },
+      "deep_dive": null,
+      "archived": null
+    },
+    {
+      "name": "oh-my-openagent",
+      "github_id": "code-yeongyu/oh-my-openagent",
+      "url": "https://github.com/code-yeongyu/oh-my-openagent",
+      "slug": "oh-my-openagent",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#oh-my-openagent",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/oh-my-openagent/",
+      "description": "Orchestration layer over OpenCode: multi-model agent roles, skills, and an ultrawork (\"ulw\") keyword that fans a prompt into planned, parallel agent runs. The **harness** contribution is the role/skill pipeline; OpenCode's TUI is the shell.",
+      "category": "coding-harness-configs",
+      "category_title": "Coding harness configs and SDKs",
+      "stars": 70922,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (config + orchestration over OpenCode)",
+      "autonomy": "bounded",
+      "autonomy_rank": 3,
+      "recovery": "none",
+      "recovery_rank": 1,
+      "license_signal": "open-source",
+      "tags": [
+        "tui",
+        "typescript"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/code-yeongyu/oh-my-openagent#readme"
       },
       "deep_dive": null,
       "archived": null
@@ -6624,6 +6683,35 @@
       "archived": null
     },
     {
+      "name": "herdr",
+      "github_id": "herdrdev/herdr",
+      "url": "https://github.com/herdrdev/herdr",
+      "slug": "herdr",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#herdr",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/herdr/",
+      "description": "Terminal runtime for running many coding agents in parallel: the **harness** is whichever CLI agent you run (Claude Code, Codex, etc.), and herdr supplies the session, pane, and orchestration shell around them.",
+      "category": "multi-agent",
+      "category_title": "Multi-agent and orchestration",
+      "stars": 51152,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (terminal runtime for parallel CLI agents)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [
+        "cli"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/herdrdev/herdr#readme"
+      },
+      "deep_dive": null,
+      "archived": null
+    },
+    {
       "name": "ChatDev",
       "github_id": "OpenBMB/ChatDev",
       "url": "https://github.com/OpenBMB/ChatDev",
@@ -6743,6 +6831,35 @@
           "evidence": "https://raw.githubusercontent.com/openai/openai-agents-python/main/README.md"
         }
       },
+      "archived": null
+    },
+    {
+      "name": "cmux",
+      "github_id": "manaflow-ai/cmux",
+      "url": "https://github.com/manaflow-ai/cmux",
+      "slug": "cmux",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#cmux",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/cmux/",
+      "description": "Ghostty-based macOS terminal with vertical tabs and notifications for running many coding agents side by side. Pure UI shell: the agent **harness** is whichever CLI (Claude Code, Codex, Gemini, OpenCode) you launch inside it.",
+      "category": "multi-agent",
+      "category_title": "Multi-agent and orchestration",
+      "stars": 28791,
+      "tier": "mostly simple",
+      "tier_rank": 2,
+      "axis": "mostly simple (terminal shell, macOS)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [
+        "cli"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/manaflow-ai/cmux#readme"
+      },
+      "deep_dive": null,
       "archived": null
     },
     {
@@ -7090,6 +7207,37 @@
       "archived": null
     },
     {
+      "name": "Switch",
+      "github_id": "sandbox-quantum/switch",
+      "url": "https://github.com/sandbox-quantum/switch",
+      "slug": "switch",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#switch",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/switch/",
+      "description": "Self-hosted AI teammates that join Slack, Teams, Discord, Telegram, or Mattermost channels over a WebSocket bridge, so people and several agents share one channel and its history. The **harness** contribution is the room layer (room tools over MCP, an ACP adapter for Cursor and Antigravity); each agent CLI still owns its loop.",
+      "category": "multi-agent",
+      "category_title": "Multi-agent and orchestration",
+      "stars": 4537,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (chat-room layer for agent CLIs)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "restricted (Commons Clause)",
+      "tags": [
+        "mcp",
+        "cli",
+        "ide"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/sandbox-quantum/switch#readme"
+      },
+      "deep_dive": null,
+      "archived": null
+    },
+    {
       "name": "HarnessRouter",
       "github_id": "HarnessRouter/harnessrouter",
       "url": "https://github.com/HarnessRouter/harnessrouter",
@@ -7147,6 +7295,36 @@
       "example": {
         "label": "Product tour",
         "url": "https://agentteams.live/"
+      },
+      "deep_dive": null,
+      "archived": null
+    },
+    {
+      "name": "zeroshot",
+      "github_id": "the-open-engine/zeroshot",
+      "url": "https://github.com/the-open-engine/zeroshot",
+      "slug": "zeroshot",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#zeroshot",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/zeroshot/",
+      "description": "Graph engine around existing coding agents (Claude Code, Codex, Copilot CLI, Pi): you declare writer, reviewer, and test steps with bounded loops, and the engine validates the graph before any agent starts. The **harness** contribution is that the engine, not the agent, decides what happens after a review, and failed work is routed back for repair; each agent CLI still owns its loop.",
+      "category": "multi-agent",
+      "category_title": "Multi-agent and orchestration",
+      "stars": 2170,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (validated agent graph, bounded review loops)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [
+        "workflow",
+        "cli"
+      ],
+      "example": {
+        "label": "Project README",
+        "url": "https://github.com/the-open-engine/zeroshot#readme"
       },
       "deep_dive": null,
       "archived": null
@@ -9221,6 +9399,35 @@
       "archived": null
     },
     {
+      "name": "Daytona",
+      "github_id": "daytonaio/daytona",
+      "url": "https://github.com/daytonaio/daytona",
+      "slug": "daytona",
+      "anchor_url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses#daytona",
+      "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/daytona/",
+      "description": "Elastic dev environments for AI-generated code: workspaces, Git, previews—infra harness between \"the model wrote a patch\" and \"it ran in a real machine.\" ⚠️ Public repo unmaintained since June 2026: core development moved to a private codebase (final open release v0.190.0, AGPL-3.0).",
+      "category": "libraries-sdks",
+      "category_title": "Libraries and SDKs",
+      "stars": 71313,
+      "tier": "slightly complex",
+      "tier_rank": 3,
+      "axis": "slightly complex (dev env API, isolation)",
+      "autonomy": "n/a",
+      "autonomy_rank": 0,
+      "recovery": "n/a",
+      "recovery_rank": 0,
+      "license_signal": "open-source",
+      "tags": [
+        "sandbox"
+      ],
+      "example": {
+        "label": "Charts in sandbox",
+        "url": "https://github.com/daytonaio/daytona/tree/main/examples/python/charts"
+      },
+      "deep_dive": null,
+      "archived": "2026-10-04"
+    },
+    {
       "name": "LiteLLM",
       "github_id": "BerriAI/litellm",
       "url": "https://github.com/BerriAI/litellm",
@@ -9659,13 +9866,6 @@
       "reason": "suspected star manipulation — ~228k stars / ~35k forks on a repo created 2026-01 with no matching install base, dependents, or discussion; fork-to-star ratio and growth curve are inconsistent with organic adoption"
     },
     {
-      "github_id": "daytonaio/daytona",
-      "name": "Daytona",
-      "last_stars": 71313,
-      "since": "2026-10-04",
-      "reason": "archived upstream — kept for citation"
-    },
-    {
       "github_id": "esengine/DeepSeek-Reasonix",
       "name": "DeepSeek-Reasonix",
       "last_stars": 36122,
@@ -9689,15 +9889,69 @@
   ],
   "radar": [
     {
+      "github_id": "stablyai/orca",
+      "stars": 125642,
+      "desc": "Orca lets you run a fleet of coding agents (e.g. Claude Code, Codex) with your own subscription. Available on desktop, mobile and remote runtime.",
+      "via": "weekly discovery"
+    },
+    {
+      "github_id": "paperclipai/paperclip",
+      "stars": 114107,
+      "desc": "The open-source app everyone uses to manage agents at work",
+      "via": "weekly discovery"
+    },
+    {
+      "github_id": "ruvnet/ruflo",
+      "stars": 81802,
+      "desc": "🌊 The original agent harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive…",
+      "via": "weekly discovery"
+    },
+    {
+      "github_id": "shareAI-lab/learn-claude-code",
+      "stars": 80443,
+      "desc": "Bash is all you need -  A nano claude code–like 「agent harness」, built from 0 to 1",
+      "via": "weekly discovery"
+    },
+    {
+      "github_id": "tinyhumansai/openhuman",
+      "stars": 42709,
+      "desc": "The fastest, cheapest, most efficient open-source agent harness. Run more than 500 agents on a $10 VPS.",
+      "via": "weekly discovery"
+    },
+    {
       "github_id": "Fosowl/agenticSeek",
       "stars": 27663,
       "desc": "Fully Local Manus AI. No APIs, No $200 monthly bills. Enjoy an autonomous agent that thinks, browses the web, and code for the sole cost of electricity.",
       "via": "weekly discovery"
     },
     {
+      "github_id": "kortix-ai/CompanyOS",
+      "stars": 20737,
+      "desc": "Open-source company platform whose agent runtime keeps the harness behind an adapter contract: one sandbox runs one harness, and a swap restores the session…",
+      "via": "community · issue #155"
+    },
+    {
       "github_id": "RightNow-AI/openfang",
       "stars": 18249,
       "desc": "Open-source Agent Operating System",
+      "via": "weekly discovery"
+    },
+    {
+      "github_id": "HKUDS/DeepCode",
+      "stars": 16845,
+      "desc": "\"DeepCode: Open Agentic Coding (Agent Harness & Loop Engineering & Multi-Agent Orchestration)\"",
+      "via": "weekly discovery"
+    },
+    {
+      "github_id": "mindfold-ai/Trellis",
+      "stars": 15139,
+      "desc": "The best agent harness.",
+      "via": "weekly discovery"
+    },
+    {
+      "github_id": "FailproofAI/failproofai",
+      "stars": 9075,
+      "desc": "Observability and enforcement for AI agent harnesses. Capture every run and runtime reliability with policy enforcement.",
       "via": "weekly discovery"
     },
     {
@@ -9710,6 +9964,12 @@
       "github_id": "zai-org/ZCode",
       "stars": 8700,
       "desc": "Z.ai's coding agent harness. Powerful, intelligent, extensible.",
+      "via": "weekly discovery"
+    },
+    {
+      "github_id": "osaurus-ai/osaurus",
+      "stars": 8168,
+      "desc": "Own your AI. The open-source agent harness for macOS. Run local or cloud models with persistent memory, skills, tools, and autonomous execution. Built in Swift.",
       "via": "weekly discovery"
     },
     {
@@ -9731,9 +9991,21 @@
       "via": "weekly discovery"
     },
     {
+      "github_id": "truefoundry/trueforge",
+      "stars": 6490,
+      "desc": "The open-source agent harness - the runtime layer that turns an LLM into a working agent.",
+      "via": "weekly discovery"
+    },
+    {
       "github_id": "agentscope-ai/agentscope-java",
       "stars": 6374,
       "desc": "Build distributed, production-grade, long-running agents.",
+      "via": "weekly discovery"
+    },
+    {
+      "github_id": "Waishnav/devspace",
+      "stars": 5504,
+      "desc": "Minimal Coding Agent Harness on MCP for ChatGPT, Claude, Hermes, Grok Bot, OpenClaw",
       "via": "weekly discovery"
     },
     {
@@ -9758,6 +10030,12 @@
       "github_id": "evalstate/fast-agent",
       "stars": 3969,
       "desc": "Code, Build and Evaluate agents - excellent Model and Skills/MCP/ACP/A2A Support",
+      "via": "weekly discovery"
+    },
+    {
+      "github_id": "code-yeongyu/lazycodex",
+      "stars": 3918,
+      "desc": "The one and only agent harness for complex codebases. Project memory, planning, execution, and verified completion inside Codex.",
       "via": "weekly discovery"
     },
     {
@@ -9791,6 +10069,12 @@
       "via": "community · issue #79"
     },
     {
+      "github_id": "nmamano/isomux",
+      "stars": 43,
+      "desc": "Layer around each agent CLI: fixed identity and memory across sessions, messages between agents, a shared task board, schedules, and pre-tool-call hooks.",
+      "via": "community · issue #149"
+    },
+    {
       "github_id": "msaleme/red-team-blue-team-agent-fabric",
       "stars": 30,
       "desc": "AI agent security harness for adversarial testing: 600+ executable tests across MCP, A2A, x402/L402, and decision governance.",
@@ -9819,6 +10103,12 @@
       "stars": 21,
       "desc": "Run any CLI agent in a loop against specs: fresh context each iteration, the repo as durable memory, lint/types/tests/security enforced by git hooks so bad c…",
       "via": "community · PR #69"
+    },
+    {
+      "github_id": "PMDevSolutions/Flavian",
+      "stars": 20,
+      "desc": "Claude Code configuration for WordPress: a Figma-to-block-theme pipeline ending in screenshot and Lighthouse QA, with hooks that guard theme paths and deploys.",
+      "via": "community · issue #162"
     },
     {
       "github_id": "hjqcan/GoodMemory",
@@ -9863,6 +10153,12 @@
       "via": "community · issue #136"
     },
     {
+      "github_id": "OrionArchitekton/orion-browser-oss",
+      "stars": 3,
+      "desc": "Local pool of signed-in Chrome browsers, one per identity, leased to one agent at a time through a CLI or MCP server; a coordination layer, not a harness.",
+      "via": "community · issue #161"
+    },
+    {
       "github_id": "semitexa/laravel-ai-verify",
       "stars": 3,
       "desc": "Verification gate for coding agents on Laravel 12/13: runs only the checks a diff needs, fails weakened tests, and blocks Claude Code from stopping early.",
@@ -9897,6 +10193,12 @@
       "stars": 1,
       "desc": "Install-once OpenCode config: one orchestrator with edit and shell denied delegates to 12 specialist subagents behind audit and review gates.",
       "via": "community · PR #147"
+    },
+    {
+      "github_id": "ArtAndrew/RunVerge",
+      "stars": 0,
+      "desc": "Self-hosted Go/PostgreSQL task runtime for agents: permission and budget admission, human review and revision as separate actions, immutable prior results. A…",
+      "via": "community · issue #152"
     },
     {
       "github_id": "S1LV3RJ1NX/mcp-guardian",

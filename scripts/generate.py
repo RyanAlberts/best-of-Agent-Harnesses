@@ -234,6 +234,9 @@ PROJECTS: dict[str, list[Project]] = {
         Project("vibe-kanban", "BloopAI/vibe-kanban",
                 "Kanban-style fleet manager for running Claude Code, Codex, or any coding agent across many tasks at once. The **harness** contribution is the task-queue/review layer on top of whichever agent executes; not an agent loop itself.",
                 "slightly complex (task-fleet manager)", oss="❓"),
+        Project("Orchestrator", "OrchestratorInc/agent-orchestrator",
+                "Supervises fleets of existing coding agents (Claude Code, Codex, and others) from task to merged PR: an orchestrator agent splits the work and starts one worker per piece, each in its own git worktree. The **harness** contribution is the feedback layer that routes failed CI checks, review comments, and merge conflicts back to the worker that owns the PR; the desktop and mobile apps are the shell, and each agent CLI still owns its loop.",
+                "slightly complex (worktree-per-worker fleet supervisor)"),
         Project("eigent", "eigent-ai/eigent",
                 "Open-source desktop **harness** positioned as a local, free alternative to Claude Cowork and Codex: multi-agent workspace orchestration in a self-hosted app rather than a hosted product.",
                 "complex (desktop multi-agent workspace — product suite)", oss="❓"),
@@ -280,6 +283,9 @@ PROJECTS: dict[str, list[Project]] = {
                 "slightly complex (embeddable Rust runtime, terminal agent, native plugins)", labels=["rust"]),
     ],
     "coding-harness-configs": [
+        Project("oh-my-openagent", "code-yeongyu/oh-my-openagent",
+                "Orchestration layer over OpenCode: multi-model agent roles, skills, and an ultrawork (\"ulw\") keyword that fans a prompt into planned, parallel agent runs. The **harness** contribution is the role/skill pipeline; OpenCode's TUI is the shell.",
+                "slightly complex (config + orchestration over OpenCode)", labels=["javascript"]),
         Project("LoopTroop", "looptroop-ai/LoopTroop",
                 "Config layer that chains LLM councils for planning, Ralph loops for iterative refinement, and OpenCode worktrees for shipping. The **harness** contribution is the council → loop → worktree pipeline; OpenCode underneath executes.",
                 "mostly simple (config pipeline over OpenCode)", labels=["javascript"]),
@@ -465,6 +471,18 @@ PROJECTS: dict[str, list[Project]] = {
                 "complex (modular pipelines, RAG + agents — product suite)", labels=["python"]),
     ],
     "multi-agent": [
+        Project("zeroshot", "the-open-engine/zeroshot",
+                "Graph engine around existing coding agents (Claude Code, Codex, Copilot CLI, Pi): you declare writer, reviewer, and test steps with bounded loops, and the engine validates the graph before any agent starts. The **harness** contribution is that the engine, not the agent, decides what happens after a review, and failed work is routed back for repair; each agent CLI still owns its loop.",
+                "slightly complex (validated agent graph, bounded review loops)"),
+        Project("Switch", "sandbox-quantum/switch",
+                "Self-hosted AI teammates that join Slack, Teams, Discord, Telegram, or Mattermost channels over a WebSocket bridge, so people and several agents share one channel and its history. The **harness** contribution is the room layer (room tools over MCP, an ACP adapter for Cursor and Antigravity); each agent CLI still owns its loop.",
+                "slightly complex (chat-room layer for agent CLIs)", oss="⚠️ Commons Clause"),
+        Project("herdr", "herdrdev/herdr",
+                "Terminal runtime for running many coding agents in parallel: the **harness** is whichever CLI agent you run (Claude Code, Codex, etc.), and herdr supplies the session, pane, and orchestration shell around them.",
+                "slightly complex (terminal runtime for parallel CLI agents)"),
+        Project("cmux", "manaflow-ai/cmux",
+                "Ghostty-based macOS terminal with vertical tabs and notifications for running many coding agents side by side. Pure UI shell: the agent **harness** is whichever CLI (Claude Code, Codex, Gemini, OpenCode) you launch inside it.",
+                "mostly simple (terminal shell, macOS)"),
         Project("openai-agents-python", "openai/openai-agents-python",
                 "Handoffs, guardrails, and multi-LLM routing; minimal surface so you own the loop.",
                 "mostly simple (minimal surface)", labels=["python"]),
@@ -763,6 +781,12 @@ PROJECTS: dict[str, list[Project]] = {
 # Examples link: official docs, examples folder, leaderboard, or paper —
 # whichever is the most useful "show me it in action" link for that project.
 META: dict[str, tuple[int, str, str]] = {
+    "OrchestratorInc/agent-orchestrator": (14725, "https://github.com/OrchestratorInc/agent-orchestrator#readme", "Project README"),
+    "the-open-engine/zeroshot": (2170, "https://github.com/the-open-engine/zeroshot#readme", "Project README"),
+    "sandbox-quantum/switch": (4537, "https://github.com/sandbox-quantum/switch#readme", "Project README"),
+    "herdrdev/herdr": (51152, "https://github.com/herdrdev/herdr#readme", "Project README"),
+    "manaflow-ai/cmux": (28791, "https://github.com/manaflow-ai/cmux#readme", "Project README"),
+    "code-yeongyu/oh-my-openagent": (70922, "https://github.com/code-yeongyu/oh-my-openagent#readme", "Project README"),
     # progressive-disclosure
     "agentsmd/agents.md": (25507, "https://github.com/agentsmd/agents.md/blob/main/AGENTS.md", "Self-hosting AGENTS.md"),
     "PatrickJS/awesome-cursorrules": (41162, "https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/pytorch-scikit-learn-cursorrules-prompt-file.mdc", "PyTorch cursorrules"),
@@ -996,6 +1020,10 @@ KEEP_DESPITE_ARCHIVED: "set[str]" = {
     # widely referenced/forked (see Kilo Code, its direct successor, added
     # this cycle). Historically important enough to keep out of the Graveyard.
     "RooCodeInc/Roo-Code",
+    # 71k+ stars; the open-source cloud sandbox runtime many agent harnesses
+    # target for isolated execution; archived upstream 2026-10-04 but still
+    # the reference point in the sandboxed-code-execution comparison.
+    "daytonaio/daytona",
     # 55k+ stars, the low-code sibling to Langflow and one of the most
     # widely deployed drag-and-drop LLM/agent builders; archived upstream
     # 2026-08-16 but still the reference point for the "no-code flow" genre.
@@ -1081,6 +1109,32 @@ CONTRIBUTORS: "list[tuple[str, str]]" = load_contributors()
 # graduates by becoming a Project above (it then drops off the radar
 # automatically) or gets unpinned.
 RADAR: "list[dict]" = [
+    # 2026-11-21 pass: submissions and candidates not yet clearing the bar.
+    # Kortix clears the star bar, but the queue describes a company platform
+    # rather than a harness and the submission names categories this list
+    # does not have; pinned for a decision.
+    {"id": "kortix-ai/CompanyOS", "via": "community · issue #155", "stars": 20737,
+     "desc": "Open-source company platform whose agent runtime keeps the harness behind an adapter contract: one sandbox runs one harness, and a swap restores the session log."},
+    {"id": "nmamano/isomux", "via": "community · issue #149", "stars": 43,
+     "desc": "Layer around each agent CLI: fixed identity and memory across sessions, messages between agents, a shared task board, schedules, and pre-tool-call hooks."},
+    {"id": "PMDevSolutions/Flavian", "via": "community · issue #162", "stars": 20,
+     "desc": "Claude Code configuration for WordPress: a Figma-to-block-theme pipeline ending in screenshot and Lighthouse QA, with hooks that guard theme paths and deploys."},
+    {"id": "OrionArchitekton/orion-browser-oss", "via": "community · issue #161", "stars": 3,
+     "desc": "Local pool of signed-in Chrome browsers, one per identity, leased to one agent at a time through a CLI or MCP server; a coordination layer, not a harness."},
+    {"id": "ArtAndrew/RunVerge", "via": "community · issue #152", "stars": 0,
+     "desc": "Self-hosted Go/PostgreSQL task runtime for agents: permission and budget admission, human review and revision as separate actions, immutable prior results. Alpha."},
+    {"id": "paperclipai/paperclip", "via": "weekly discovery"},
+    {"id": "stablyai/orca", "via": "weekly discovery"},
+    {"id": "mindfold-ai/Trellis", "via": "weekly discovery"},
+    {"id": "truefoundry/trueforge", "via": "weekly discovery"},
+    {"id": "Waishnav/devspace", "via": "weekly discovery"},
+    {"id": "HKUDS/DeepCode", "via": "weekly discovery"},
+    {"id": "ruvnet/ruflo", "via": "weekly discovery"},
+    {"id": "shareAI-lab/learn-claude-code", "via": "weekly discovery"},
+    {"id": "tinyhumansai/openhuman", "via": "weekly discovery"},
+    {"id": "FailproofAI/failproofai", "via": "weekly discovery"},
+    {"id": "osaurus-ai/osaurus", "via": "weekly discovery"},
+    {"id": "code-yeongyu/lazycodex", "via": "weekly discovery"},
     {"id": "bytedance/deer-flow", "via": "weekly discovery"},
     {"id": "plandex-ai/plandex", "via": "weekly discovery"},
     {"id": "evalstate/fast-agent", "via": "weekly discovery"},
@@ -1232,6 +1286,13 @@ AUTONOMY_TIERS = ["step-gated", "checkpoint-gated", "bounded", "headless"]
 RECOVERY_TIERS = ["none", "retry", "resumable", "durable"]
 
 AXES: "dict[str, tuple[str, str]]" = {
+    # 2026-11-21 pass. The first five wrap other agents' loops, so n/a.
+    "OrchestratorInc/agent-orchestrator": ("n/a", "n/a"),
+    "the-open-engine/zeroshot": ("n/a", "n/a"),
+    "sandbox-quantum/switch": ("n/a", "n/a"),
+    "herdrdev/herdr": ("n/a", "n/a"),
+    "manaflow-ai/cmux": ("n/a", "n/a"),
+    "code-yeongyu/oh-my-openagent": ("bounded", "none"),
     # progressive-disclosure
     "PatrickJS/awesome-cursorrules": ("n/a", "n/a"),
     "agentsmd/agents.md": ("n/a", "n/a"),
