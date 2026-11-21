@@ -1,13 +1,13 @@
 <!-- markdownlint-disable -->
 # Tags — cross-reference
 
-_Auto-generated from `scripts/generate.py`. 187 projects across 22 canonical tags. Edit projects in `generate.py` (not here) and rerun the script._
+_Auto-generated from `scripts/generate.py`. 194 projects across 22 canonical tags. Edit projects in `generate.py` (not here) and rerun the script._
 
 Tag chips appear next to each project in [README.md](README.md). This page lists every tag once with the projects that carry it, grouped by category and sorted by GitHub stars within each category.
 
 ## All tags
 
-[`mcp`](#mcp) (39) · [`memory`](#memory) (44) · [`multi-agent`](#multi-agent) (37) · [`evals`](#evals) (22) · [`voice`](#voice) (2) · [`vision`](#vision) (4) · [`browser`](#browser) (13) · [`sandbox`](#sandbox) (34) · [`low-code`](#low-code) (5) · [`rag`](#rag) (9) · [`tool-discovery`](#tool-discovery) (5) · [`training`](#training) (5) · [`workflow`](#workflow) (13) · [`typed`](#typed) (3) · [`local`](#local) (7) · [`provider-agnostic`](#provider-agnostic) (12) · [`cli`](#cli) (32) · [`ide`](#ide) (17) · [`tui`](#tui) (7) · [`rust`](#rust) (8) · [`python`](#python) (89) · [`typescript`](#typescript) (53)
+[`mcp`](#mcp) (40) · [`memory`](#memory) (44) · [`multi-agent`](#multi-agent) (37) · [`evals`](#evals) (22) · [`voice`](#voice) (2) · [`vision`](#vision) (4) · [`browser`](#browser) (13) · [`sandbox`](#sandbox) (35) · [`low-code`](#low-code) (5) · [`rag`](#rag) (9) · [`tool-discovery`](#tool-discovery) (5) · [`training`](#training) (5) · [`workflow`](#workflow) (14) · [`typed`](#typed) (3) · [`local`](#local) (7) · [`provider-agnostic`](#provider-agnostic) (12) · [`cli`](#cli) (37) · [`ide`](#ide) (18) · [`tui`](#tui) (8) · [`rust`](#rust) (8) · [`python`](#python) (89) · [`typescript`](#typescript) (54)
 
 ---
 
@@ -47,6 +47,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 **Multi-agent and orchestration**
 
 - [Raven](https://github.com/EverMind-AI/Raven) — ⭐6.2k — EverMind's host agent, with its loop split into memory, planning, capability, and action modules. The **harness** plans complex tasks as DAGs and orchestrates built-in research, coding, design, and on-call agents plus third-party agents (Claude Code, Codex, OpenClaw, Hermes Agent) over ACP, CLI, or OpenAI-compatible APIs, with long-term memory; labeled pre-alpha, with tagged releases since v0.1.0.
+- [Switch](https://github.com/sandbox-quantum/switch) — ⭐4.5k — Self-hosted AI teammates that join Slack, Teams, Discord, Telegram, or Mattermost channels over a WebSocket bridge, so people and several agents share one channel and its history. The **harness** contribution is the room layer (room tools over MCP, an ACP adapter for Cursor and Antigravity); each agent CLI still owns its loop.
 - [CUGA](https://github.com/cuga-project/cuga-agent) — ⭐1.2k — Open-source enterprise agent **harness**: a code-act loop in which the model writes Python that calls MCP, OpenAPI, and LangChain tools as functions inside a restricted sandbox, with results kept as variables, pre-execution verification, reflection, and tool shortlisting; CugaSupervisor coordinates multi-agent teams locally or over A2A, and runtime-enforced policies (intent guards, tool approvals, ToolGuard checks) gate what agents may do. Previously ranked #1 on the AppWorld and WebArena leaderboards; runs on open-weight or hosted models, including air-gapped deployments. Maintained by IBM and open to community contributions.
 - [Desplega Agent Swarm](https://github.com/desplega-ai/agent-swarm) — ⭐1.1k — Self-hosted multi-agent orchestration service: a lead agent delegates queued tasks to Claude Code, Codex, and other workers in isolated containers. The **harness** contribution is the lead-to-worker hierarchy, the task queue, shared memory, and review gates, with MCP tools and Slack and GitHub integrations; the workers own their inner loops.
 
@@ -389,6 +390,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 **Libraries and SDKs**
 
+- [Daytona](https://github.com/daytonaio/daytona) — ⭐71.3k — Elastic dev environments for AI-generated code: workspaces, Git, previews—infra harness between "the model wrote a patch" and "it ran in a real machine." ⚠️ Public repo unmaintained since June 2026: core development moved to a private codebase (final open release v0.190.0, AGPL-3.0).
 - [deepagents](https://github.com/langchain-ai/deepagents) — ⭐31.3k — LangChain's Python+TypeScript agent harness on top of LangGraph: planning tool, virtual filesystem, shell sandbox, sub-agent spawning—the "Claude Code-style" harness as a reusable library.
 - [Composio](https://github.com/ComposioHQ/composio) — ⭐31.1k — 1,000+ toolkits with auth, tool search, and a sandboxed workbench—drop-in tool layer so agents stop reinventing OAuth + integrations. Python and TypeScript.
 - [smolagents](https://github.com/huggingface/smolagents) — ⭐30.4k — Code-as-action agents: model outputs Python executed in sandbox (E2B, Modal, etc.); ~1k LOC core.
@@ -495,6 +497,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 - [Microsoft Agent Framework](https://github.com/microsoft/agent-framework) — ⭐14.7k — Microsoft's convergence of AutoGen and Semantic Kernel: build, orchestrate, and deploy agents and multi-agent workflows in Python and .NET, with graph-based workflows and checkpointing — the designated successor harness for both lines.
 - [Open Multi-Agent](https://github.com/open-multi-agent/open-multi-agent) — ⭐7.1k — Self-hosted TypeScript multi-agent runtime. The **harness** is a coordinator that plans a task DAG from one goal at runtime and a deterministic scheduler that runs specialized agents, with durable approvals that pause before a plan, task, or tool call, PostgreSQL-backed checkpoints for restart recovery, and a verifiable run journal for replay; `runTasks()` keeps the graph fixed when the topology must not change.
+- [zeroshot](https://github.com/the-open-engine/zeroshot) — ⭐2.2k — Graph engine around existing coding agents (Claude Code, Codex, Copilot CLI, Pi): you declare writer, reviewer, and test steps with bounded loops, and the engine validates the graph before any agent starts. The **harness** contribution is that the engine, not the agent, decides what happens after a review, and failed work is routed back for repair; each agent CLI still owns its loop.
 - [GraphCode](https://github.com/scgopi/GraphCode) — ⭐158 — macOS canvas that runs Claude Code, Codex CLI, Copilot CLI, and OpenCode sessions as nodes on a graph. The **harness** is the graph itself: each loop is typed by what ends it (a turn, a shell predicate or declared goal, a cadence, or a sub-graph), hand-off and spawn edges fire when a loop resolves, and a launchd daemon keeps sessions alive across app quits and reboots; the agent CLIs own their inner loops.
 
 **Memory and state**
@@ -594,6 +597,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [Grok Build](https://github.com/xai-org/grok-build) — ⭐27.8k — SpaceXAI's terminal coding agent. The **harness** is a Rust agent runtime that edits files, runs shell commands, searches the web, and keeps workspace checkpoints; it runs in a full-screen TUI, headless for scripts and CI, or inside editors over the Agent Client Protocol. The public repo is synced from the company monorepo.
 - [Prime Agent](https://github.com/PrimeIntellect-ai/prime-agent) — ⭐22.7k — Prime Intellect's self-improving coding and research agent. The **harness** is a recursive language model loop (context as a variable, sub-agents as function calls inside a persistent IPython REPL) plus a Continual Harness that lets the agent create, read, update, and delete its own prompts, skills, memory, and sub-agents mid-run; daemon-backed sessions survive a closed terminal, and autonomous mode runs on turn, token, and time budgets. 95.5% on ARC-AGI-3 with Opus 5; the terminal UI is the shell.
 - [jcode](https://github.com/1jehuang/jcode) — ⭐21.8k — Rust terminal coding agent pitched as the most RAM-efficient **harness** in its class; MCP support, multi-provider (Claude/OpenAI).
+- [Orchestrator](https://github.com/OrchestratorInc/agent-orchestrator) — ⭐14.7k — Supervises fleets of existing coding agents (Claude Code, Codex, and others) from task to merged PR: an orchestrator agent splits the work and starts one worker per piece, each in its own git worktree. The **harness** contribution is the feedback layer that routes failed CI checks, review comments, and merge conflicts back to the worker that owns the PR; the desktop and mobile apps are the shell, and each agent CLI still owns its loop.
 - [Empryo](https://github.com/proxysoul/Empryo) — ⭐1.6k — Coding agent for the desktop, the terminal, and CI. The **harness** builds a repo map before each task (tree-sitter symbols, import graph, git co-change), edits by symbol through AST and LSP, then runs typecheck, lint, and tests in the same turn. This repo holds the public SoulForge v2 core under BUSL-1.1; the current Empryo v3 app is developed privately under its own license.
 - [Tianshu Harness](https://github.com/huiliyi37/Tianshu-harness) — ⭐1.3k — TypeScript coding-agent runtime shared by a terminal TUI, a desktop app, and a VS Code extension. The **harness** keeps each task's goal, scope, and success criteria in a task contract outside the chat history, blocks a claim of done until tests, a diff, or a verification command back it, and takes a git checkpoint before each turn's first edit. The main README is Chinese; an English README is linked.
 - [rpi](https://github.com/bigfish1913/pi-rust) — ⭐268 — Rust coding-agent runtime that began as a reimplementation of Pi and now develops on its own. The embeddable **harness** owns a provider-agnostic streaming agent loop, tool execution, JSONL sessions that resume after a crash from the last committed frame, and a native plugin ABI; the terminal TUI is a shell over the same crates, and a deterministic offline provider covers tests.
@@ -614,7 +618,11 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 
 **Multi-agent and orchestration**
 
+- [herdr](https://github.com/herdrdev/herdr) — ⭐51.2k — Terminal runtime for running many coding agents in parallel: the **harness** is whichever CLI agent you run (Claude Code, Codex, etc.), and herdr supplies the session, pane, and orchestration shell around them.
+- [cmux](https://github.com/manaflow-ai/cmux) — ⭐28.8k — Ghostty-based macOS terminal with vertical tabs and notifications for running many coding agents side by side. Pure UI shell: the agent **harness** is whichever CLI (Claude Code, Codex, Gemini, OpenCode) you launch inside it.
 - [Raven](https://github.com/EverMind-AI/Raven) — ⭐6.2k — EverMind's host agent, with its loop split into memory, planning, capability, and action modules. The **harness** plans complex tasks as DAGs and orchestrates built-in research, coding, design, and on-call agents plus third-party agents (Claude Code, Codex, OpenClaw, Hermes Agent) over ACP, CLI, or OpenAI-compatible APIs, with long-term memory; labeled pre-alpha, with tagged releases since v0.1.0.
+- [Switch](https://github.com/sandbox-quantum/switch) — ⭐4.5k — Self-hosted AI teammates that join Slack, Teams, Discord, Telegram, or Mattermost channels over a WebSocket bridge, so people and several agents share one channel and its history. The **harness** contribution is the room layer (room tools over MCP, an ACP adapter for Cursor and Antigravity); each agent CLI still owns its loop.
+- [zeroshot](https://github.com/the-open-engine/zeroshot) — ⭐2.2k — Graph engine around existing coding agents (Claude Code, Codex, Copilot CLI, Pi): you declare writer, reviewer, and test steps with bounded loops, and the engine validates the graph before any agent starts. The **harness** contribution is that the engine, not the agent, decides what happens after a review, and failed work is routed back for repair; each agent CLI still owns its loop.
 - [GraphCode](https://github.com/scgopi/GraphCode) — ⭐158 — macOS canvas that runs Claude Code, Codex CLI, Copilot CLI, and OpenCode sessions as nodes on a graph. The **harness** is the graph itself: each loop is typed by what ends it (a turn, a shell predicate or declared goal, a cadence, or a sub-graph), hand-off and spawn edges fire when a loop resolves, and a launchd daemon keeps sessions alive across app quits and reboots; the agent CLIs own their inner loops.
 
 **Plugins, MCPs, CLI tools**
@@ -661,6 +669,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 **Multi-agent and orchestration**
 
 - [omnigent](https://github.com/omnigent-ai/omnigent) — ⭐11.4k — Open-source meta-**harness**: orchestrates Claude Code, Codex, Cursor, Pi, and custom agents behind one policy/sandboxing layer so teams swap harnesses without rewriting workflows.
+- [Switch](https://github.com/sandbox-quantum/switch) — ⭐4.5k — Self-hosted AI teammates that join Slack, Teams, Discord, Telegram, or Mattermost channels over a WebSocket bridge, so people and several agents share one channel and its history. The **harness** contribution is the room layer (room tools over MCP, an ACP adapter for Cursor and Antigravity); each agent CLI still owns its loop.
 - [Agent Teams AI](https://github.com/777genius/agent-teams-ai) — ⭐2.5k — Desktop app that runs a team of coding agents (Claude Code, Codex, OpenCode, Cursor, Copilot, and others) on a kanban board: agents take tasks, message each other, and review each other's work before it is accepted. The **harness** contribution is the team-coordination layer over existing agent CLIs, with per-action approval or full autonomy; the kanban board is the shell.
 - [Claudexor](https://github.com/razzant/claudexor) — ⭐525 — Local-first control plane that routes one coding thread across Claude Code, Codex, Cursor, and OpenCode. The **harness** contribution is the layer around those agents: quota-aware rotation across isolated subscription profiles, bounded context handoffs between agents and accounts, best-of-N races, cross-family review, and typed apply gates.
 
@@ -685,6 +694,10 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 - [Grok Build](https://github.com/xai-org/grok-build) — ⭐27.8k — SpaceXAI's terminal coding agent. The **harness** is a Rust agent runtime that edits files, runs shell commands, searches the web, and keeps workspace checkpoints; it runs in a full-screen TUI, headless for scripts and CI, or inside editors over the Agent Client Protocol. The public repo is synced from the company monorepo.
 - [Tianshu Harness](https://github.com/huiliyi37/Tianshu-harness) — ⭐1.3k — TypeScript coding-agent runtime shared by a terminal TUI, a desktop app, and a VS Code extension. The **harness** keeps each task's goal, scope, and success criteria in a task contract outside the chat history, blocks a claim of done until tests, a diff, or a verification command back it, and takes a git checkpoint before each turn's first edit. The main README is Chinese; an English README is linked.
 - [rpi](https://github.com/bigfish1913/pi-rust) — ⭐268 — Rust coding-agent runtime that began as a reimplementation of Pi and now develops on its own. The embeddable **harness** owns a provider-agnostic streaming agent loop, tool execution, JSONL sessions that resume after a crash from the last committed frame, and a native plugin ABI; the terminal TUI is a shell over the same crates, and a deterministic offline provider covers tests.
+
+**Coding harness configs and SDKs**
+
+- [oh-my-openagent](https://github.com/code-yeongyu/oh-my-openagent) — ⭐70.9k — Orchestration layer over OpenCode: multi-model agent roles, skills, and an ultrawork ("ulw") keyword that fans a prompt into planned, parallel agent runs. The **harness** contribution is the role/skill pipeline; OpenCode's TUI is the shell.
 
 ---
 
@@ -859,6 +872,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 **Coding harness configs and SDKs**
 
 - [GStack](https://github.com/garrytan/gstack) — ⭐142k — Garry Tan's Claude Code skill stack: 23 slash-command modes (CEO/eng/design review, QA, ship, browse, retro, …) that structure one assistant as a virtual engineering team. Daily driver while running YC.
+- [oh-my-openagent](https://github.com/code-yeongyu/oh-my-openagent) — ⭐70.9k — Orchestration layer over OpenCode: multi-model agent roles, skills, and an ultrawork ("ulw") keyword that fans a prompt into planned, parallel agent runs. The **harness** contribution is the role/skill pipeline; OpenCode's TUI is the shell.
 - [Claude Agent SDK](https://github.com/anthropics/claude-agent-sdk-python) — ⭐8.6k — Official Anthropic SDK (Python + [TypeScript](https://github.com/anthropics/claude-agent-sdk-typescript), [demos](https://github.com/anthropics/claude-agent-sdk-demos), [quickstarts](https://github.com/anthropics/claude-quickstarts)): built-in tools, MCP, long-running coding agents with session bridging.
 - [LoopTroop](https://github.com/looptroop-ai/LoopTroop) — ⭐176 — Config layer that chains LLM councils for planning, Ralph loops for iterative refinement, and OpenCode worktrees for shipping. The **harness** contribution is the council → loop → worktree pipeline; OpenCode underneath executes.
 
@@ -1078,6 +1092,7 @@ Tag chips appear next to each project in [README.md](README.md). This page lists
 **Coding harness configs and SDKs**
 
 - [GStack](https://github.com/garrytan/gstack) — ⭐142k — Garry Tan's Claude Code skill stack: 23 slash-command modes (CEO/eng/design review, QA, ship, browse, retro, …) that structure one assistant as a virtual engineering team. Daily driver while running YC.
+- [oh-my-openagent](https://github.com/code-yeongyu/oh-my-openagent) — ⭐70.9k — Orchestration layer over OpenCode: multi-model agent roles, skills, and an ultrawork ("ulw") keyword that fans a prompt into planned, parallel agent runs. The **harness** contribution is the role/skill pipeline; OpenCode's TUI is the shell.
 - [Claude Agent SDK](https://github.com/anthropics/claude-agent-sdk-python) — ⭐8.6k — Official Anthropic SDK (Python + [TypeScript](https://github.com/anthropics/claude-agent-sdk-typescript), [demos](https://github.com/anthropics/claude-agent-sdk-demos), [quickstarts](https://github.com/anthropics/claude-quickstarts)): built-in tools, MCP, long-running coding agents with session bridging.
 - [LoopTroop](https://github.com/looptroop-ai/LoopTroop) — ⭐176 — Config layer that chains LLM councils for planning, Ralph loops for iterative refinement, and OpenCode worktrees for shipping. The **harness** contribution is the council → loop → worktree pipeline; OpenCode underneath executes.
 
