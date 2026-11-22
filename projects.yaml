@@ -425,10 +425,6 @@ projects:
     github_id: crewAIInc/crewAI
     labels: ["python"]
     category: "multi-agent"
-  - name: autogen
-    github_id: microsoft/autogen
-    labels: ["python"]
-    category: "multi-agent"
   - name: AG2
     github_id: ag2ai/ag2
     labels: ["python"]

@@ -2,6 +2,154 @@
  "description": "Week-by-week changes to best-of-Agent-Harnesses, newest first.",
  "weeks": [
   {
+   "date": "2026-11-22",
+   "since": "2026-11-15",
+   "project_count": 186,
+   "added": [],
+   "removed": [
+    {
+     "github_id": "microsoft/autogen",
+     "name": "autogen",
+     "category": "Multi-agent and orchestration",
+     "stars": 61855,
+     "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/autogen/"
+    }
+   ],
+   "gainers": [
+    {
+     "github_id": "obra/superpowers",
+     "name": "superpowers",
+     "category": "Coding harness configs and SDKs",
+     "stars": 324055,
+     "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/superpowers/",
+     "delta": 6062
+    },
+    {
+     "github_id": "deepseek-ai/deepseek-harness",
+     "name": "DeepSeek Harness",
+     "category": "Coding agent products (IDEs, CLIs, full suites)",
+     "stars": 285511,
+     "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/deepseek-harness/",
+     "delta": 3953
+    },
+    {
+     "github_id": "anthropics/skills",
+     "name": "Anthropic Skills",
+     "category": "Coding harness configs and SDKs",
+     "stars": 198936,
+     "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/skills/",
+     "delta": 3673
+    },
+    {
+     "github_id": "open-jarvis/OpenJarvis",
+     "name": "OpenJarvis",
+     "category": "Personal agent runtimes",
+     "stars": 18000,
+     "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/openjarvis/",
+     "delta": 2354
+    },
+    {
+     "github_id": "ChromeDevTools/chrome-devtools-mcp",
+     "name": "chrome-devtools-mcp",
+     "category": "Plugins, MCPs, CLI tools",
+     "stars": 58820,
+     "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/chrome-devtools-mcp/",
+     "delta": 2006
+    },
+    {
+     "github_id": "addyosmani/agent-skills",
+     "name": "addyosmani/agent-skills",
+     "category": "Coding harness configs and SDKs",
+     "stars": 119746,
+     "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/agent-skills/",
+     "delta": 1882
+    },
+    {
+     "github_id": "NousResearch/hermes-agent",
+     "name": "Hermes",
+     "category": "Personal agent runtimes",
+     "stars": 265399,
+     "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/hermes-agent/",
+     "delta": 1800
+    },
+    {
+     "github_id": "thedotmack/claude-mem",
+     "name": "claude-mem",
+     "category": "Memory and state",
+     "stars": 119044,
+     "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/claude-mem/",
+     "delta": 1723
+    },
+    {
+     "github_id": "anomalyco/opencode",
+     "name": "opencode",
+     "category": "Coding agent products (IDEs, CLIs, full suites)",
+     "stars": 228579,
+     "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/opencode/",
+     "delta": 1561
+    },
+    {
+     "github_id": "n8n-io/n8n",
+     "name": "n8n",
+     "category": "Frameworks",
+     "stars": 211824,
+     "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/n8n/",
+     "delta": 1256
+    }
+   ],
+   "fastest": [
+    {
+     "github_id": "open-jarvis/OpenJarvis",
+     "name": "OpenJarvis",
+     "category": "Personal agent runtimes",
+     "stars": 18000,
+     "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/openjarvis/",
+     "previous_stars": 15646,
+     "pct": 15.0
+    },
+    {
+     "github_id": "vshulcz/deja-vu",
+     "name": "deja",
+     "category": "Memory and state",
+     "stars": 1651,
+     "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/deja-vu/",
+     "previous_stars": 1563,
+     "pct": 5.6
+    },
+    {
+     "github_id": "harbor-framework/terminal-bench",
+     "name": "Terminal-Bench",
+     "category": "Evaluation and benchmarking harnesses",
+     "stars": 1117,
+     "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/terminal-bench/",
+     "previous_stars": 1059,
+     "pct": 5.5
+    },
+    {
+     "github_id": "desplega-ai/agent-swarm",
+     "name": "Desplega Agent Swarm",
+     "category": "Multi-agent and orchestration",
+     "stars": 1101,
+     "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/agent-swarm/",
+     "previous_stars": 1059,
+     "pct": 4.0
+    },
+    {
+     "github_id": "ChromeDevTools/chrome-devtools-mcp",
+     "name": "chrome-devtools-mcp",
+     "category": "Plugins, MCPs, CLI tools",
+     "stars": 58820,
+     "page_url": "https://ryanalberts.github.io/best-of-Agent-Harnesses/h/chrome-devtools-mcp/",
+     "previous_stars": 56814,
+     "pct": 3.5
+    }
+   ],
+   "archived": [],
+   "new_guides": [],
+   "new_skills": [],
+   "new_templates": []
+  },
+  {
    "date": "2026-11-15",
    "since": "2026-11-08",
    "project_count": 187,

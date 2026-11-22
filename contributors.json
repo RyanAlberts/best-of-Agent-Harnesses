@@ -858,5 +858,45 @@
         "title": "Add project: zeroshot"
       }
     ]
+  },
+  {
+    "login": "dmoka",
+    "contributions": [
+      {
+        "kind": "issue",
+        "number": 164,
+        "title": "Add project: Switch"
+      }
+    ]
+  },
+  {
+    "login": "ThalesNotTychus",
+    "contributions": [
+      {
+        "kind": "issue",
+        "number": 166,
+        "title": "Add project: Hyperion"
+      }
+    ]
+  },
+  {
+    "login": "kitfunso",
+    "contributions": [
+      {
+        "kind": "issue",
+        "number": 169,
+        "title": "Add project: Hippo"
+      }
+    ]
+  },
+  {
+    "login": "Max17190",
+    "contributions": [
+      {
+        "kind": "issue",
+        "number": 170,
+        "title": "Add project: Open Max"
+      }
+    ]
   }
 ]
