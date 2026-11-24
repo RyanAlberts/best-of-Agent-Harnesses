@@ -24,7 +24,7 @@ Three independent comparison write-ups ([APIScout](https://apiscout.dev/guides/b
 - **Openness or self-hosting is a buying criterion** → **Steel**. The only one whose core you can read, run in your own Docker, and walk away from without losing the integration; the hosted product is the same code with the ops handled. This is also the pick when procurement rules out closed infra handling logged-in sessions.
 - **You're scraping or crawling at volume, agent-first** → **Hyperbrowser**. Credit pricing that meters agent steps rather than plans, stealth as the headline feature, and built-in support for driving it from browser-use and the major model providers.
 
-Also in the lane, one tier out: [Browserless](https://www.browserless.io/comparison), the long-running self-hosted headless-Chrome standard, and Anchor Browser, a newer managed entrant focused on agent identity. Neither shows up in buyer comparisons as often as these three yet.
+Also in the lane, one tier out: [Browserless](https://www.browserless.io/comparison), the long-running self-hosted headless-Chrome standard, and [Anchor Browser](https://anchorbrowser.io), a newer managed entrant focused on agent identity: [identities](https://docs.anchorbrowser.io/essentials/authenticated-applications) store an account's credentials, MFA secrets, and signed-in browser profile so sessions start logged in, with [proxies, stealth, and CAPTCHA solving](https://docs.anchorbrowser.io/network-and-stealth/overview) on paid plans and [$0.01 per browser plus $0.05 per browser-hour](https://docs.anchorbrowser.io/pricing) (checked 2026-11-24). Neither shows up in buyer comparisons as often as these three yet.
 
 ## The question to ask first
 
